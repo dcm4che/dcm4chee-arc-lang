@@ -1,3 +1,4 @@
+"property","title","description"
 "","Network Connection","Describes one TCP/UDP port on one network device."
 "cn","Name","Arbitrary/Meaningful name for the Network Connection object"
 "dicomHostname","Hostname","DNS name for this particular connection"

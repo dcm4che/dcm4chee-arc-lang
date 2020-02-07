@@ -1,3 +1,4 @@
+"property","title","description"
 "","PDQ Service","PDQ Service Descriptor"
 "dcmPDQServiceID","PDQ Service ID","PDQ Service ID"
 "dcmURI","PDQ Service URI","PDQ Service URI, e.g. 'pdq-dicom:FINDSCP'."

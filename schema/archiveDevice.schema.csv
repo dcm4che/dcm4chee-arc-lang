@@ -1,3 +1,4 @@
+"property","title","description"
 "","Archive Device","DICOM Archive Device related information"
 "dcmFuzzyAlgorithmClass","Fuzzy Algorithm Class","Specifies Fuzzy Algorithm Implementation Class."
 "dcmBulkDataDescriptorID","Bulk Data Descriptor ID","ID of Bulk Data Descriptor applied by all services providing Metadata of archived instances. If absent, only Attributes specified by the Composite Instance Retrieve Without Bulk Data Service Class are treated as Bulk Data. May be overwritten by configured values for particular Archive Network AEs."

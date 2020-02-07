@@ -1,3 +1,4 @@
+"property","title","description"
 "","Archive Compression rule","Archive Compression rule"
 "cn","Name","Arbitrary/Meaningful name of the Archive Compression Rule"
 "dicomTransferSyntax","DICOM Transfer Syntax UID","A Transfer Syntax UID"

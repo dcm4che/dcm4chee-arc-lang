@@ -1,3 +1,4 @@
+"property","title","description"
 "","Device Extension","dcm4che proprietary Device Attributes"
 "dcmRoleSelectionNegotiationLenient","Role Selection Negotiation Lenient","Indicates to disable check for required SCP/SCU role selection negotiation on sending of DIMSE-RQs. May be overwritten by configured value for particular Network AEs."
 "dcmLimitOpenAssociations","Association Limit","Maximal number of open DICOM connections; rejects Association requests if the limit is exceeded; 0 = unlimited."

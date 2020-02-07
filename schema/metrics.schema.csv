@@ -1,3 +1,4 @@
+"property","title","description"
 "","Metrics Descriptor","Metrics Descriptor"
 "dcmMetricsName","Metrics Name","Metrics Name"
 "dicomDescription","Metrics Description","Unconstrained text description of the metrics"

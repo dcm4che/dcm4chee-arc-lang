@@ -1,3 +1,4 @@
+"property","title","description"
 "","HL7 Prefetch Rule","HL7 Prefetch Rule"
 "cn","Name","Arbitrary/Meaningful name of the Prefetch Rule"
 "dcmQueueName","Queue Name","Name of JMS Queue used for scheduling retrieve tasks triggered by this Prefetch Rule"

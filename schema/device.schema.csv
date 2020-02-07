@@ -1,3 +1,4 @@
+"property","title","description"
 "","Device","DICOM Device related information"
 "dicomDeviceName","Device Name","A unique name for this device"
 "dicomDescription","Device Description","Unconstrained text description of the device"

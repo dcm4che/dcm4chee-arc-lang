@@ -1,3 +1,4 @@
+"property","title","description"
 "","Network AE","Application entity that provides services on a network"
 "dicomAETitle","AE Title","Unique AE title for this Network AE"
 "dicomNetworkConnectionReference","Network Connection Reference","JSON Pointers to the Network Connection objects for this AE"

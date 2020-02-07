@@ -1,3 +1,4 @@
+"property","title","description"
 "","UPS on Store","Create/Update Workitem in unified Worklist on receive of Composite Object"
 "cn","Name","Arbitrary/Meaningful name of UPS on Store Rule"
 "dcmProperty","Conditions","Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}"

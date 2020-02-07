@@ -1,3 +1,4 @@
+"property","title","description"
 "","Transfer Capability Extension","dcm4che proprietary Transfer Capability Attributes"
 "dcmPreferredTransferSyntax","PreferredTransferSyntax","Preferred Transfer Syntax for selection of Transfer Syntax within a Presentation Context, ordered by priority. Overwrites values specified on AE level."
 "dcmRelationalQueries","Relational Queries","Enable/disable relational queries."

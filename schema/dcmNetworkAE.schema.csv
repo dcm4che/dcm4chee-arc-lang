@@ -1,3 +1,4 @@
+"property","title","description"
 "","Network AE Extension","dcm4che proprietary Attributes of Network AE"
 "dcmRoleSelectionNegotiationLenient","Role Selection Negotiation Lenient","Indicates to disable check for required SCP/SCU role selection negotiation on sending of DIMSE-RQs. Overwrites value specified on Device level."
 "dcmAcceptedCallingAETitle","Accepted Calling AE Title","Prohibit accepting associations from unlisted AE. If not present, any AE will be accepted"

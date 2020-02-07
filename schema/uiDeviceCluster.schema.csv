@@ -1,3 +1,4 @@
+"property","title","description"
 "","UI Cluster Configuration","Configuration of Device URL to use beside the main UI URL"
 "dcmuiDeviceClusterName","Name","Cluster Name"
 "dcmuiDeviceClusterDescription","Description","Cluster Description"

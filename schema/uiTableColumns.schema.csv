@@ -1,3 +1,4 @@
+"property","title","description"
 "","UI Study Table Columns Configuration","Study Table Columns"
 "dcmuiColumnName","Column Name","The Name of the Column in the Study Table"
 "dcmuiColumnTitle","Column Description","Description of the Column, shown on hover"

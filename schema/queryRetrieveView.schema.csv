@@ -1,3 +1,4 @@
+"property","title","description"
 "","Query Retrieve View","Specifies behavior on Rejection Note Stored"
 "dcmQueryRetrieveViewID","Query/Retrieve View ID","Query/Retrieve View Identifier"
 "dcmShowInstancesRejectedByCode","Show Instances Rejected By Code","Indicates if the Q/R Services shall show instances rejected by the specified code in format (CV, CSD, 'CM'')"

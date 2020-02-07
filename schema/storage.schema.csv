@@ -1,3 +1,4 @@
+"property","title","description"
 "","Storage","Storage Descriptor"
 "dcmStorageID","Storage ID","Storage ID"
 "dcmURI","Storage URI","RFC2079: Uniform Resource Identifier"

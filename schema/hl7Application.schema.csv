@@ -1,3 +1,4 @@
+"property","title","description"
 "","HL7 Application","HL7 Application information"
 "hl7ApplicationName","HL7 Application name","HL7 Application and Facility name (Application|Facility)"
 "dicomNetworkConnectionReference","Network Connection Reference","The JSON Pointers to the Network Connection objects for this HL7 Application"

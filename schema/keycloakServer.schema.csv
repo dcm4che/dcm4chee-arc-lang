@@ -1,3 +1,4 @@
+"property","title","description"
 "","Keycloak Server","Keycloak Server"
 "dcmKeycloakServerID","Keycloak Server ID","Identifier for this Keycloak Server."
 "dcmURI","Server URL","The base URL of the Keycloak server."

@@ -1,3 +1,4 @@
+"property","title","description"
 "","Archive HL7 Application","DICOM Archive HL7 Application related information"
 "dicomAETitle","AE Title","Archive AE Title associated with this HL7 Application."
 "dcmRecordAttributeModification","Record Attribute Modification","Indicates if modifications of attributes of stored objects by this HL7 Application are recorded in Items of the Original Attributes Sequence. Overwrites value specified on Device level."

@@ -1,3 +1,4 @@
+"property","title","description"
 "","UI Elasticsearch URL Configuration","Elasticsearch URL"
 "dcmuiElasticsearchURLName","Elasticsearch URL Name","UI Elasticsearch URL Name"
 "dcmuiElasticsearchURL","Elasticsearch URL","Access URL of Elastic Search. E.g. http(s)://<elasticsearch-host>:<elasticsearch-port>"

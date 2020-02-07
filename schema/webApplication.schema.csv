@@ -1,3 +1,4 @@
+"property","title","description"
 "","Web Application","Web Application information"
 "dcmWebAppName","Web Application name","Name of the Web Application"
 "dicomNetworkConnectionReference","Web Application Network Connection(s)","Network Connection(s) on which the services of the Web application are available"

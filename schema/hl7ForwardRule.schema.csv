@@ -1,3 +1,4 @@
+"property","title","description"
 "","HL7 Forward Rule","HL7 Forward Rule"
 "cn","Name","Arbitrary/Meaningful name of the HL7 Forward Rule"
 "hl7FwdApplicationName","HL7 Forward Application Name","HL7 Forward Destination Application and Facility name (Application|Facility)"

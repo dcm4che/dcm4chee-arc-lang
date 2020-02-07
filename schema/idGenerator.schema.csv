@@ -1,3 +1,4 @@
+"property","title","description"
 "","ID Generator","ID Generator"
 "dcmIDGeneratorName","ID Generator Name","ID Generator Name."
 "dcmIDGeneratorFormat","ID Generator Format","Format string used by this ID Generator. %0<width>d will be replaced by a sequential number with leading zeros according the given width"

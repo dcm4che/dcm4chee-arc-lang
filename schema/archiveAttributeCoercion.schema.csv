@@ -1,3 +1,4 @@
+"property","title","description"
 "","Archive Attribute Coercion","Archive Attribute Coercion of received/sent DIMSE"
 "cn","Name","Arbitrary/Meaningful name of the Archive Attribute Coercion"
 "dcmRulePriority","Rule Priority","Rule Priority."

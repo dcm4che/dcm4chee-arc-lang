@@ -1,3 +1,4 @@
+"property","title","description"
 "","Rejection Note","Specifies behavior on Rejection Note Stored"
 "dcmRejectionNoteLabel","Rejection Note Label","Rejection Note Label"
 "dcmRejectionNoteType","Rejection Note Type","Type of Rejection Note."

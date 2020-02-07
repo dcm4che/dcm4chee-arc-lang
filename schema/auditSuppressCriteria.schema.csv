@@ -1,3 +1,4 @@
+"property","title","description"
 "","Audit Suppress Criteria","Audit Suppress Criteria"
 "cn","Name","Arbitrary/Meaningful name of the Audit Suppress Criteria"
 "dcmAuditEventID","Audit Event ID","RFC 3881 Audit Event ID code and codeSystemName in format (CV, CSD, ""CM"")"

@@ -1,3 +1,4 @@
+"property","title","description"
 "","Audit Logger","Audit Logger related information"
 "cn","Name","Arbitrary/Meaningful name for the Audit Logger object"
 "dicomNetworkConnectionReference","Network Connection Reference","The JSON Pointers to the Network Connection objects used by this Audit Logger"

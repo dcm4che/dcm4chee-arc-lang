@@ -1,3 +1,4 @@
+"property","title","description"
 "","Keycloak Client","Keycloak Client"
 "dcmKeycloakClientID","Keycloak Client ID","Client ID used in token requests."
 "dcmURI","Server URL","The base URL of the Keycloak server."

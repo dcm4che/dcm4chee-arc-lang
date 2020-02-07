@@ -1,3 +1,4 @@
+"property","title","description"
 "","Image Reader","Specifies Java Image IO Image Readers used for decompressing compressed DICOM images"
 "dicomTransferSyntax","Transfer Syntax","Transfer Syntax of compressed DICOM image"
 "dcmIIOFormatName","Image IO Reader Format Name","Image IO Reader Format Name"

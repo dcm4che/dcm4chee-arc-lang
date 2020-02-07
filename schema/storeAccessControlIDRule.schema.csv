@@ -1,3 +1,4 @@
+"property","title","description"
 "","Store Access Control ID Rule","Store Access Control ID Rule"
 "cn","Name","Arbitrary/Meaningful name of the Store Access Control ID Rule"
 "dcmStoreAccessControlID","Store Access Control ID","Access Control ID assigned to Studies which attributes match all conditions"

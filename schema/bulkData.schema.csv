@@ -1,3 +1,4 @@
+"property","title","description"
 "","Bulk Data Descriptor","Bulk Data Descriptor"
 "dcmBulkDataDescriptorID","Bulk Data Descriptor ID","Bulk Data Descriptor ID"
 "dcmBulkDataExcludeDefaults","Exclude Defaults","Indicates if Attributes specified by the 'Composite Instance Retrieve Without Bulk Data Service Class' shall be implicitly treated as Bulk Data (=false) or not (=true)."

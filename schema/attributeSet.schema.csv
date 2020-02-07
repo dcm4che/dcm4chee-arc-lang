@@ -1,3 +1,4 @@
+"property","title","description"
 "","Attribute Set","Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."
 "dicomDescription","Attribute Set Description","Unconstrained text description of this Attribute Set"
 "dcmAttributeSetType","Attribute Set Type","Specifies if this Attribute Set is used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests."

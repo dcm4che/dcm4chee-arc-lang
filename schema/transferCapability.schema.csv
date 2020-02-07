@@ -1,3 +1,4 @@
+"property","title","description"
 "","Transfer Capability","Each transfer capability specifies the SOP class that the Network AE can support, the mode that it can utilize (SCP or SCU), and the Transfer Syntax(es) that it can utilize"
 "cn","Name","Arbitrary/Meaningful name for the Transfer Capability object"
 "dicomSOPClass","SOP Class","SOP Class UID"

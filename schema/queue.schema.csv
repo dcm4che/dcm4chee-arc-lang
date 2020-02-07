@@ -1,3 +1,4 @@
+"property","title","description"
 "","Queue","Managed JMS Queue"
 "dcmQueueName","Queue Name","JMS Queue Name"
 "dcmJndiName","JNDI Name","JNDI Name"

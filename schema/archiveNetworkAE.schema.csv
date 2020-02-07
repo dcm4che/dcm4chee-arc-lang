@@ -1,3 +1,4 @@
+"property","title","description"
 "","Archive Network AE","DICOM Archive Network AE related information"
 "dcmObjectStorageID","Object Storage ID","ID of Storage System on which received DICOM composite objects are stored. Multiple Storage Systems may be configured."
 "dcmObjectStorageCount","Object Storage Count","Number of Storage Systems which are filled in parallel."
