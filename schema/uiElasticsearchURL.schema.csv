@@ -1,0 +1,7 @@
+"","UI Elasticsearch URL Configuration","Elasticsearch URL"
+"dcmuiElasticsearchURLName","Elasticsearch URL Name","UI Elasticsearch URL Name"
+"dcmuiElasticsearchURL","Elasticsearch URL","Access URL of Elastic Search. E.g. http(s)://<elasticsearch-host>:<elasticsearch-port>"
+"dcmuiElasticsearchURLKeycloakServer","Keycloak Server","Select Keycloak Server from where to get the bearer token for accessing the Elasticsearch"
+"dcmuiAuditEnterpriseSiteID","Audit Enterprise SiteID","Set Audit Enterprise SiteID which should be used on Elasticsearch queries"
+"dcmuiElasticsearchIsDefault","Is Default","Set this URL to the default one. (Make sure that only one of the urls - siblings child is set to default)."
+"dcmuiElasticsearchInstalled","Installed","Use this URL in the UI"

@@ -1,0 +1,7 @@
+"","PDQ Service","PDQ Service Descriptor"
+"dcmPDQServiceID","PDQ Service ID","PDQ Service ID"
+"dcmURI","PDQ Service URI","PDQ Service URI, e.g. 'pdq-dicom:FINDSCP'."
+"dicomDescription","PDQ Service Description","Unconstrained text description of the PDQ Service"
+"dcmTag","Patient Attributes","Queried Patient Attributes - if not specified all available Patient attributes will be queried"
+"dcmEntity","Query Entity","Indicates if the C-FIND SCP is queried for a particular Patient or for Studies of a particular Patient. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle})."
+"dcmProperty","PDQ Service Property","Property in format <name>=<value>, e.g. 'LocalAET=DCM4CHEE'"

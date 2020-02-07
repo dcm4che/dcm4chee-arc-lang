@@ -1,0 +1,7 @@
+"","Archive Compression rule","Archive Compression rule"
+"cn","Name","Arbitrary/Meaningful name of the Archive Compression Rule"
+"dicomTransferSyntax","DICOM Transfer Syntax UID","A Transfer Syntax UID"
+"dcmRulePriority","Rule Priority","Rule Priority"
+"dcmProperty","Conditions","Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}"
+"dcmImageWriteParam","Image Write Param","Image Write Parameter(s) (name=value) set at on Image Writer before compression"
+"dcmCompressionDelay","Compression Delay","Compression delay in ISO-8601 duration format PnDTnHnMn.nS. Compress on receive if absent."

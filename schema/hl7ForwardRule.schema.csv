@@ -1,0 +1,4 @@
+"","HL7 Forward Rule","HL7 Forward Rule"
+"cn","Name","Arbitrary/Meaningful name of the HL7 Forward Rule"
+"hl7FwdApplicationName","HL7 Forward Application Name","HL7 Forward Destination Application and Facility name (Application|Facility)"
+"dcmProperty","Conditions","Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\^A28\^ADT_A05"

@@ -1,0 +1,5 @@
+"","Metrics Descriptor","Metrics Descriptor"
+"dcmMetricsName","Metrics Name","Metrics Name"
+"dicomDescription","Metrics Description","Unconstrained text description of the metrics"
+"dcmMetricsRetentionPeriod","Metrics Retention Period","Metrics Retention Period in minutes"
+"dcmUnit","Metrics Unit","Unit of metrics data"

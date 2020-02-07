@@ -1,0 +1,6 @@
+"","Image Writer","Specifies Java Image IO Image Writer and Write Parameter used for compressing DICOM images"
+"dicomTransferSyntax","Transfer Syntax","Transfer Syntax to which to compress the DICOM image"
+"dcmIIOFormatName","Image IO Writer Format Name","Image IO Writer Format Name"
+"dcmJavaClassName","Java Class Name","Fully qualified Java class of Image IO Writer. If absent, use any Image Writer found for specified Format Name"
+"dcmPatchJPEGLS","Patch JPEG-LS","Patch JPEG-LS after compressing"
+"dcmImageWriteParam","Image Write Param","Image Write Parameter(s) (name=value) set at on Image Writer before compression"

@@ -1,0 +1,5 @@
+"","Scheduled Station for HL7 Order","Scheduled Station selected on MWL HL7 Order Feed"
+"cn","Name","Arbitrary/Meaningful name for the Scheduled Station Order Mapping"
+"hl7OrderScheduledStationDeviceName","Scheduled Station Device Name","Device name of Scheduled Station used for HL7 Order Messages."
+"dcmRulePriority","Mapping Priority","Mapping Priority."
+"dcmProperty","Conditions","Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\^A28\^ADT_A05"

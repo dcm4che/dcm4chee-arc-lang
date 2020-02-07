@@ -1,0 +1,3 @@
+"","Metadata Filter","Named Attribute Filter for WADO-RS Metadata requests."
+"dcmMetadataFilterName","Metadata Filter Name","Metadata Filter Name referenced by proprietary 'includefields' Query Parameter of WADO-RS Metadata requests."
+"dcmTag","Attribute Tag","DICOM Tag as hex string"

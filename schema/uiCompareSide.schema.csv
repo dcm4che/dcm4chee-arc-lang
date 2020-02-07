@@ -1,0 +1,7 @@
+"","Compare Side","Compare Side"
+"dcmuiCompareSideName","Name","Compare Side Name"
+"dcmuiCompareSideDescription","Description","A short description about this Group"
+"dcmuiCompareSideCluster","Cluster","Select a Cluster"
+"dcmuiCompareSideElasticsearch","Elasticsearch","Select an Elasticsearch URL"
+"dcmuiCompareSideQueueName","Queue","Select the QueueName that should be used for the compare side"
+"dcmuiCompareSideInstalled","Installed","If true this Compare side is active in the dashboard"

@@ -1,0 +1,7 @@
+"","RESTful Forward Rule","RESTful Forward Rule"
+"cn","Name","Arbitrary/Meaningful name of the RESTful Forward Rule"
+"dcmWebAppName","Web Application name","Name of the Web Application"
+"dcmTLSAllowAnyHostname","TLS Allow Any Hostname","If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done."
+"dcmTLSDisableTrustManager","TLS Disable Trust Manager","If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore"
+"dcmURIPattern","Request URL Pattern","Only forward requests which match the given Regular Expression. If prefixed with !, only forward requests which does not match the given Regular Expression."
+"dcmRSOperation","RESTful Operation","Name of RESTful Operation which shall be forwarded to another archive instance."

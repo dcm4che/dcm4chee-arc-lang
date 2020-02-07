@@ -1,0 +1,7 @@
+"","Network Connection","Describes one TCP/UDP port on one network device."
+"cn","Name","Arbitrary/Meaningful name for the Network Connection object"
+"dicomHostname","Hostname","DNS name for this particular connection"
+"dicomPort","Port","TCP/UDP port that a service is listening on. May be missing if this network connection is only used for outbound connections"
+"dicomTLSCipherSuite","TLS CipherSuites","The TLS CipherSuites that are supported on this particular connection. If not present TLS is disabled"
+"dicomInstalled","installed","True if the Network Connection is installed on the network. If not present, information about the installed status of the Network Connection is inherited from the device"
+"dcmNetworkConnection","Network Connection Extension","dcm4che proprietary Network Connection Attributes"
