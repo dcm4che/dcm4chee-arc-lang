@@ -1,6 +1,6 @@
 ## Resources for providing different languages for the Web UI of dcm4chee-arc-light
 
-### `/schema` 
+### `schema/*.csv` 
 
 Defines configuration attribute names and descriptions
 
