@@ -64,6 +64,8 @@
 "dcmExportTaskFetchSize","Export Task Fetch Size","Limit result set of DB query for Export Tasks ready for processing."
 "dcmRetrieveTaskPollingInterval","Retrieve Task Polling Interval","Retrieve Task Polling Interval in ISO-8601 duration format PnDTnHnMnS."
 "dcmRetrieveTaskFetchSize","Retrieve Task Fetch Size","Limit result set of DB query for Retrieve Tasks ready for processing."
+"dcmRetrieveTaskWarningOnNoMatch","Retrieve Task Warning on no Match","Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. May be overwritten by configured values for particular Archive HL7 Application."","
+"dcmRetrieveTaskWarningOnWarnings","Retrieve Task Warning on Warnings","Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. May be overwritten by configured values for particular Archive HL7 Application."","
 "dcmPurgeStoragePollingInterval","Purge Storage Polling Interval","Polling Interval for deleting objects in ISO-8601 duration format PnDTnHnMnS."
 "dcmPurgeStorageFetchSize","Purge Storage Fetch Size","Maximal number of objects to delete in one task."
 "dcmFailedToDeletePollingInterval","Failed to delete Polling Interval","Polling Interval for resolving deletion failures in ISO-8601 duration format PnDTnHnMnS."
