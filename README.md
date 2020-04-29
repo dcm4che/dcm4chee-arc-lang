@@ -9,7 +9,7 @@ First are located under `src/main/webapp/asserts/##.json`, with `##` as the
 [ISO 639-1 two-letter code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) of the language
 (e.g. `es` for Spain, `pt` for Portuguese, `ru` for Russian). 
 
-The second are located under `src/main/webapp/asserts/schema/`. For other languages then English, a
+The second are located under `src/main/webapp/asserts/schema/`. For other languages than English, a
 subdirectory  with the [ISO 639-1 two-letter code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) of the
 language has to be created, including copies of that JSON Schema files with translated values for
 `"title"` and `"description"` JSON properties.
@@ -48,5 +48,5 @@ src/main/webapp/assets/schema/hi/hl7OrderScheduledStation.schema.json=>src/csv/h
 :
 src/main/webapp/assets/schema/hi/metrics.schema.json=>src/csv/hi/metrics.schema.csv
 ```
-will add the previous missing entries in the CSV files, were they can be replaced by translated values for `title`
+will add the previous missing entries in the CSV files, where they can be replaced by translated values for `title`
 and `description`.
