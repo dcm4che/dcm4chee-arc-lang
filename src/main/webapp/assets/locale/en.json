@@ -1143,6 +1143,7 @@
     "statistics.setting_time_range_failed_on_docker_stats_memory_rss": "Setting time range failed on  Docker Stats - Memory RSS",
     "statistics.setting_time_range_failed_on_docker_stats_memory_usage": "Setting time range failed on  Docker Stats - Memory Usage",
     "statistics.setting_time_range_failed_on_docker_stats_network_transmitted_packets": "Setting time range failed on  Docker Stats - Network Transmitted packets",
+    "statistics.setting_time_range_failed_on_docker_stats_reads_p_second": "Setting time range failed on  Docker Stats - Reads p. second",
     "statistics.setting_time_range_failed_on_docker_stats_writes_p_second": "Setting time range failed on  Docker Stats - Writes p. second",
     "statistics.setting_time_range_failed_on_error_counts_": "Setting time range failed on Error Counts ",
     "statistics.setting_time_range_failed_on_queries_counts_": "Setting time range failed on Queries Counts ",
