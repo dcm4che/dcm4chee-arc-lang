@@ -5,6 +5,7 @@
   "required": [
     "dcmStorageID",
     "dcmURI",
+    "dcmMaxRetries",
     "dcmInstanceAvailability",
     "dcmRetrieveCacheMaxParallel",
     "dcmReadOnly",
@@ -41,6 +42,19 @@
         "MD5",
         "SHA-1"
       ]
+    },
+    "dcmMaxRetries": {
+      "title": "Maximum Number of Retries",
+      "description": "Maximum number of retries to store an object on the storage system.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmRetryDelay": {
+      "title": "Retry Delay",
+      "description": "Delay to retry to store an object on the storage system in ISO-8601 duration format PnDTnHnMn.nS. Retry immediately if absent.",
+      "type": "string",
+      "format": "dcmDuration"
     },
     "dcmInstanceAvailability": {
       "title": "Instance Availability",

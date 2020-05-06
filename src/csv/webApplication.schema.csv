@@ -8,5 +8,5 @@
 "dcmKeycloakClientID","Keycloak Client ID","Keycloak Client ID for the Web application"
 "dicomAETitle","AE Title","AE title of Network AE associated with this Web Application"
 "dicomApplicationCluster","Application Cluster","Locally defined names for a subset of related applications"
-"dcmProperty","Property","Property in format <name>=<value>. E.g.: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={} or IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={}"
+"dcmProperty","Property","Property in format <name>=<value>. E.g.: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} or IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}}, ( Other valid parameters are: 'patientBirthDate' and 'accessionNumber' ) , you could define the target of the Url by setting it to the parameter 'IID_URL_TARGET=_blank|_self'"
 "dicomInstalled","installed","True if the Web Application is installed on network. If not present, information about the installed status of the Web Application is inherited from the device"
