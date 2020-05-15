@@ -14,6 +14,8 @@
 "dcmUPSScheduledStationNameCode","Scheduled Station Name Code","Process Workitems with matching Code in Scheduled Station Name Code Sequence (0040,4025) in format (CV, CSD, ""CM""). If absent, process Workitems with any Scheduled Station Name Code."
 "dcmUPSScheduledStationClassCode","Scheduled Station Class Code","Process Workitems with matching Code in Scheduled Station Name Class Sequence (0040,4026) in format (CV, CSD, ""CM""). If absent, process Workitems with any Scheduled Station Class Code."
 "dcmUPSScheduledStationLocationCode","Scheduled Station Geographic Location Code","Process Workitems with matching Code in Scheduled Station Geographic Location Class Sequence (0040,4027) in format (CV, CSD, ""CM""). If absent, process Workitems with any Scheduled Station Geographic Location Code."
+"dcmUPSPerformedWorkitemCode","Performed Workitem Code","Item of Performed Workitem Code Sequence (0040,4019) in processed UPS in format (CV, CSD, ""CM"")."
+"dcmUPSPerformedStationNameCode","Performed Station Name Code","Item of Performed Station Name Code Sequence (0040,4028) in processed UPS in format (CV, CSD, ""CM"")."
 "dcmMaxRetries","Maximum Number of Rescheduling","Maximal number a Workitem which processing failed is rescheduled."
 "dcmRetryDelay","Reschedule Delay","Delay to reschedule a Workitem which processing failed in ISO-8601 duration format PnDTnHnMn.nS."
 "dcmMaxRetryDelay","Maximum Reschedule Delay","Maximal Delay to reschedule a Workitem which processing failed in ISO-8601 duration format PnDTnHnMn.nS. Infinite if absent."
