@@ -20,4 +20,3 @@
 "dcmRetryDelay","Reschedule Delay","Delay to reschedule a Workitem which processing failed in ISO-8601 duration format PnDTnHnMn.nS."
 "dcmMaxRetryDelay","Maximum Reschedule Delay","Maximal Delay to reschedule a Workitem which processing failed in ISO-8601 duration format PnDTnHnMn.nS. Infinite if absent."
 "dcmRetryDelayMultiplier","Reschedule Delay Multiplier","Multiplier in % that will take effect on top of Reschedule Delay with Maximum Reschedule Delay to be taken into account."
-"dcmRetryOnWarning","Reschedule on Warning","Enables reschedule of Workitems not only on processing failure but also on a warning outcome status."

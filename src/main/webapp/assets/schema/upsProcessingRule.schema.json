@@ -10,7 +10,6 @@
     "dcmUPSPerformedWorkitemCode",
     "dcmUPSPerformedStationNameCode",
     "dcmRetryDelay",
-    "dcmRetryOnWarning",
     "dcmRetryDelayMultiplier",
     "dcmMaxRetries",
     "dcmMaxThreads"
@@ -141,12 +140,6 @@
       "type": "integer",
       "minimum": 100,
       "default": 100
-    },
-    "dcmRetryOnWarning": {
-      "title": "Reschedule on Warning",
-      "description": "Enables reschedule of Workitems not only on processing failure but also on a warning outcome status.",
-      "type": "boolean",
-      "default": false
     }
   }
 }
