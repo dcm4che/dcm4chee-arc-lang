@@ -1,6 +1,6 @@
 "property","title","description"
 "","UPS on HL7","Create/Update Workitem in unified Worklist on receive of HL7v2 message"
-"cn","Name","Arbitrary/Meaningful name of UPS on HL7 Rule"
+"hl7UPSOnHL7ID","UPS on HL7 ID","ID of UPS on HL7 Rule"
 "dcmProperty","Conditions","Conditions in format <SEG>-<Seq#>[.<Comp#>[.<SubComp#>]][!]=<regEx>. Example: MSH-9=ORM\^O01"
 "dcmSchedule","Time Conditions","Apply this rule only within specified time ranges."
 "dcmUPSLabel","Procedure Step Label","Value of Procedure Step Label (0074,1204) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message."

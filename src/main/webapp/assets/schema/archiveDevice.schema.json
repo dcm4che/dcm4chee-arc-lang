@@ -1722,7 +1722,7 @@
       "title": "UPS on Store Rules",
       "description": "UPS on Store Rules applied to DICOM objects received by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs.",
       "type": "array",
-      "titleKey": "{cn}",
+      "titleKey": "{dcmUPSOnStoreID}",
       "items": {
         "$ref": "upsOnStore.schema.json"
       }
@@ -1731,7 +1731,7 @@
       "title": "UPS on HL7 Rules",
       "description": "UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured UPS on HL7 Rules for particular HL7 Applications.",
       "type": "array",
-      "titleKey": "{cn}",
+      "titleKey": "{hl7UPSOnHL7ID}",
       "items": {
         "$ref": "upsOnHL7.schema.json"
       }
@@ -1740,7 +1740,7 @@
       "title": "UPS Processing Rules",
       "description": "UPS Processing Rules.",
       "type": "array",
-      "titleKey": "{cn}",
+      "titleKey": "{dcmUPSProcessingRuleID}",
       "items": {
         "$ref": "upsProcessingRule.schema.json"
       }

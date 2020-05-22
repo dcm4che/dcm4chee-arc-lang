@@ -1,6 +1,6 @@
 "property","title","description"
 "","UPS Processing Rule","Process matching Workitems in unified Worklist"
-"cn","Name","Arbitrary/Meaningful name of UPS Processing Rule"
+"dcmUPSProcessingRuleID","UPS Processing Rule ID","ID of UPS Processing Rule"
 "dicomAETitle","Application Entity (AE) title","Application Entity (AE) title"
 "dcmURI","UPS Processor URI","Identifies UPS Processor for processing matching Workitems"
 "dcmProperty","Processing Property","UPS Processor dependent property in format <name>=<value>"

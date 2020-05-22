@@ -3,7 +3,7 @@
   "description": "Create/Update Workitem in unified Worklist on receive of Composite Object",
   "type": "object",
   "required": [
-    "cn",
+    "dcmUPSOnStoreID",
     "dcmUPSLabel",
     "dcmUPSPriority",
     "dcmUPSInputReadinessState",
@@ -14,9 +14,9 @@
     "dcmNoKeywords"
   ],
   "properties": {
-    "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of UPS on Store Rule",
+    "dcmUPSOnStoreID": {
+      "title": "UPS on Store ID",
+      "description": "ID of UPS on Store Rule",
       "type": "string"
     },
     "dcmProperty": {

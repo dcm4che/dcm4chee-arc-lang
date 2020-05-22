@@ -3,7 +3,7 @@
   "description": "Process matching Workitems in unified Worklist",
   "type": "object",
   "required": [
-    "cn",
+    "dcmUPSProcessingRuleID",
     "dcmUPSInputReadinessState",
     "dcmURI",
     "dicomAETitle",
@@ -15,9 +15,9 @@
     "dcmMaxThreads"
   ],
   "properties": {
-    "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of UPS Processing Rule",
+    "dcmUPSProcessingRuleID": {
+      "title": "UPS Processing Rule ID",
+      "description": "ID of UPS Processing Rule",
       "type": "string"
     },
     "dicomAETitle": {

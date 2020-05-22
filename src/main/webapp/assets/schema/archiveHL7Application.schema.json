@@ -155,7 +155,7 @@
       "title": "UPS on HL7 Rules",
       "description": "UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. Supplements UPS on HL7 Rules specified on Device level.",
       "type": "array",
-      "titleKey": "{cn}",
+      "titleKey": "{hl7UPSOnHL7ID}",
       "items": {
         "$ref": "upsOnHL7.schema.json"
       }

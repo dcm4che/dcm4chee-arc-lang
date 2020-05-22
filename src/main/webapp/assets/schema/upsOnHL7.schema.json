@@ -10,9 +10,9 @@
     "dcmURI"
   ],
   "properties": {
-    "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of UPS on HL7 Rule",
+    "hl7UPSOnHL7ID": {
+      "title": "UPS on HL7 ID",
+      "description": "ID of UPS on HL7 Rule",
       "type": "string"
     },
     "dcmProperty": {
