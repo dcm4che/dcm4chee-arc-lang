@@ -99,6 +99,12 @@
         "APPEND_OR_CREATE"
       ]
     },
+    "dcmDestinationAE": {
+      "title": "Destination AE",
+      "description": "Title of a DICOM Application Entity to which Instances will be stored.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
     "dcmUPSScheduledWorkitemCode": {
       "title": "Scheduled Workitem Code",
       "description": "Item of Scheduled Workitem Code Sequence (0040,4018) in created UPS in format (CV, CSD, \"CM\").",

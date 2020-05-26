@@ -82,6 +82,12 @@
       "description": "Value used to generate name based SOP Instance UID (0008,0018) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent, a random generated SOP Instance UID (0008,0018) will be used.",
       "type": "string"
     },
+    "dcmDestinationAE": {
+      "title": "Destination AE",
+      "description": "Title of a DICOM Application Entity to which Instances will be stored.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
     "dcmUPSScheduledWorkitemCode": {
       "title": "Scheduled Workitem Code",
       "description": "Item of Scheduled Workitem Code Sequence (0040,4018) in created UPS in format (CV, CSD, \"CM\").",
