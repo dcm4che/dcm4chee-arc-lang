@@ -1235,7 +1235,6 @@
     "study.create_mwl": "Neue MWL anlegen",
     "study.create_new_patient": "Neuen Patienten anlegen",
     "study.create_patient": "Patienten anlegen",
-    "study.custom_icon_csv_icon_black": "custom_icon csv_icon_black",
     "study.delete_mwl": "MWL löschen",
     "study.delete_object": "Delete selected studies, series or instances permanently",
     "study.delete_study_permanently": "Delete study permanently",
