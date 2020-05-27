@@ -5,11 +5,11 @@ There are two different types of language specific resources:
 - various [JSON Schema](https://json-schema.org/) files, specifying the name, type, description, default value
   of configuration attributes of various configuration entities.
 
-First are located under `src/main/webapp/asserts/##.json`, with `##` as the
+First are located under `src/main/webapp/assets/locale/##.json`, with `##` as the
 [ISO 639-1 two-letter code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) of the language
 (e.g. `es` for Spain, `pt` for Portuguese, `ru` for Russian). 
 
-The second are located under `src/main/webapp/asserts/schema/`. For other languages than English, a
+The second are located under `src/main/webapp/assets/schema/`. For other languages than English, a
 subdirectory  with the [ISO 639-1 two-letter code](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes) of the
 language has to be created, including copies of that JSON Schema files with translated values for
 `"title"` and `"description"` JSON properties.
