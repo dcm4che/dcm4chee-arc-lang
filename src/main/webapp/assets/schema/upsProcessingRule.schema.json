@@ -114,6 +114,22 @@
       "type": "string",
       "default": "(NO_STATION_NAME, 99DCM4CHEE, \"No Station Name specified\")"
     },
+    "dcmUPSIgnoreDiscontinuationReasonCode": {
+      "title": "Ignore Discontinuation Reason Code",
+      "description": "Specifies Discontinuation Reason Code in format (CV, CSD, \"CM\") to ignore and change UPS State to COMPLETED - instead to CANCELED.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSRescheduleDiscontinuationReasonCode": {
+      "title": "Reschedule Discontinuation Reason Code",
+      "description": "Specifies Discontinuation Reason Code in format (CV, CSD, \"CM\") to reschedule the canceled UPS. If absent, UPS canceled with any Discontinuation Reason Code with be rescheduled according specified Maximum Number of Rescheduling.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "dcmMaxRetries": {
       "title": "Maximum Number of Rescheduling",
       "description": "Maximal number a Workitem which processing failed is rescheduled.",

@@ -105,6 +105,16 @@
       "type": "string",
       "format": "dcmAETitle"
     },
+    "dcmEntity": {
+      "title": "Scope of Accumulation",
+      "description": "Scope of Accumulation",
+      "type": "string",
+      "enum": [
+        "Study",
+        "Series",
+        "MPPS"
+      ]
+    },
     "dcmUPSScheduledWorkitemCode": {
       "title": "Scheduled Workitem Code",
       "description": "Item of Scheduled Workitem Code Sequence (0040,4018) in created UPS in format (CV, CSD, \"CM\").",
