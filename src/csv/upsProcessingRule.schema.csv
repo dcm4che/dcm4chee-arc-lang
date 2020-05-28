@@ -16,6 +16,8 @@
 "dcmUPSScheduledStationLocationCode","Scheduled Station Geographic Location Code","Process Workitems with matching Code in Scheduled Station Geographic Location Class Sequence (0040,4027) in format (CV, CSD, ""CM""). If absent, process Workitems with any Scheduled Station Geographic Location Code."
 "dcmUPSPerformedWorkitemCode","Performed Workitem Code","Item of Performed Workitem Code Sequence (0040,4019) in processed UPS in format (CV, CSD, ""CM"")."
 "dcmUPSPerformedStationNameCode","Performed Station Name Code","Item of Performed Station Name Code Sequence (0040,4028) in processed UPS in format (CV, CSD, ""CM"")."
+"dcmUPSIgnoreDiscontinuationReasonCode","Ignore Discontinuation Reason Code","Specifies Discontinuation Reason Code in format (CV, CSD, ""CM"") to ignore and change UPS State to COMPLETED - instead to CANCELED."
+"dcmUPSRescheduleDiscontinuationReasonCode","Reschedule Discontinuation Reason Code","Specifies Discontinuation Reason Code in format (CV, CSD, ""CM"") to reschedule the canceled UPS. If absent, UPS canceled with any Discontinuation Reason Code with be rescheduled according specified Maximum Number of Rescheduling."
 "dcmMaxRetries","Maximum Number of Rescheduling","Maximal number a Workitem which processing failed is rescheduled."
 "dcmRetryDelay","Reschedule Delay","Delay to reschedule a Workitem which processing failed in ISO-8601 duration format PnDTnHnMn.nS."
 "dcmMaxRetryDelay","Maximum Reschedule Delay","Maximal Delay to reschedule a Workitem which processing failed in ISO-8601 duration format PnDTnHnMn.nS. Infinite if absent."
