@@ -210,7 +210,7 @@
     },
     "dcmDeleteMWLDelay": {
       "title": "Delete MWL Delay",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting MWL items. Status specific delays can be specified by prefix 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELLED:', 'DISCONTINUED:', 'COMPLETED:'. If absent, MWL Items will not get deleted.",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting MWL items. Status specific delays can be specified by prefix 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. If absent, MWL Items will not get deleted.",
       "type": "array",
       "items" : { "type": "string" }
     },
@@ -299,7 +299,7 @@
           "READY",
           "STARTED",
           "DEPARTED",
-          "CANCELLED",
+          "CANCELED",
           "DISCONTINUED",
           "COMPLETED"
         ]

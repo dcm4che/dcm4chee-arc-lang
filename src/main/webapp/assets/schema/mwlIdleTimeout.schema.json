@@ -34,7 +34,7 @@
       "description": "Change Status of idle Scheduled Procedure Steps to specified value.",
       "type": "string",
       "enum":[
-        "CANCELLED",
+        "CANCELED",
         "DISCONTINUED",
         "COMPLETED"
       ]
