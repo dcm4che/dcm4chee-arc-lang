@@ -775,6 +775,7 @@
     "no_aets_found": "एइटी नहीं मिले, कृपया डिवाइस कॉन्फिगरटोर या एल डाप ब्राउज़र से कॉन्फ़िगर करें!",
     "no_data_found": "डेटा नहीं मिला!",
     "no_device_was_accessible": "कोई भी डिवाइस उपलब्ध नहीं है!",
+    "no_date_restriction_specified_continue": "No date restriction specified, are you sure you want to continue?",
     "no_diff_res": "तुलना नतीजे नहीं मिले!",
     "no_diffs": " ( तुलना अनुपलभ्य )",
     "no_elements_found": " तत्व नहीं मिले ",
