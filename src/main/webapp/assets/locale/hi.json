@@ -945,6 +945,7 @@
     "remove_filter_template": "क्या आप निस्चय ही इस फ़िल्टर टेम्पलेट को निकालना चाहते हैं?",
     "remove_part_selector.remove_from_device": "डिवाइस से निकाले",
     "remove_part_selector.title": "चुने गए तत्त्व को डिवाइस से निकाले",
+    "replace": "Replace",
     "request_instance_availability_of_instance_to_external_instance_availability_scp": "दृष्टांत के दृष्टांत उपलब्धता को बाहरी दृष्टांत उपलब्धता एससीपी से अनुरोध करें",
     "request_instance_availability_of_series_to_external_instance_availability_scp": "सीरीज के दृष्टांत उपलब्धता को बाहरी दृष्टांत उपलब्धता एससीपी से अनुरोध करें",
     "request_instance_availability_of_study_to_external_instance_availability_scp": "स्टडी के दृष्टांत उपलब्धता को बाहरी दृष्टांत उपलब्धता एससीपी से अनुरोध करें",

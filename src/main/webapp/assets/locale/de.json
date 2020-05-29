@@ -945,6 +945,7 @@
     "remove_filter_template": "Are you sure you want to remove this filter-template?",
     "remove_part_selector.remove_from_device": "REMOVE FROM DEVICE",
     "remove_part_selector.title": "Select element to remove from device",
+    "replace": "Replace",
     "request_instance_availability_of_instance_to_external_instance_availability_scp": "Request Instance Availability of Instance to external Instance Availability SCP",
     "request_instance_availability_of_series_to_external_instance_availability_scp": "Request Instance Availability of Series to external Instance Availability SCP",
     "request_instance_availability_of_study_to_external_instance_availability_scp": "Request Instance Availability of Study to external Instance Availability SCP",
