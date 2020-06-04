@@ -1,0 +1,8 @@
+"property","title","description"
+"","RESTful Forward Rule","RESTful Forward Rule"
+"cn","Name","Arbitrary/Meaningful का नाम the RESTful Forward Rule"
+"dcmWebAppName","Web Application name","का नाम the Web Application"
+"dcmTLSAllowAnyHostname","TLS Allow Any Hostname","If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done."
+"dcmTLSDisableTrustManager","TLS Disable Trust Manager","If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore"
+"dcmURIPattern","Request URL Pattern","Only forward requests which match thउदाहरण के तौर पेven Regular Expression. If prefixed with !, only forward requests which does not match thउदाहरण के तौर पेven Regular Expression."
+"dcmRSOperation","RESTful Operation","का नाम RESTful Operation which shall be forwarded to another archive instance."

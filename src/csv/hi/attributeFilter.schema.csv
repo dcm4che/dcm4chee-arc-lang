@@ -1,0 +1,8 @@
+"property","title","description"
+"","गुण फ़िल्टर","डेटाबेस में सहेजे गए गुण"
+"dcmEntity","गुण तत्त्व","गुण फ़िल्टर ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL') का तत्त्व"
+"dcmTag","गुण टैग","डाइकोम टैग as hex string"
+"dcmCustomAttribute1","कस्टम गुण 1","Configure any गुण from the डाइकोम object which shall be inserted in database as कस्टम गुण 1. Eg. DicomAttribute[@tag=""00200070""]/Value[@number=""1""] or for a Private गुण DicomAttribute[@tag=""00E10024"" and @privateCreator=""ELSCINT1""]/Value[@number=""1""]"
+"dcmCustomAttribute2","कस्टम गुण 2","Configure any गुण from the डाइकोम object which shall be inserted in database as कस्टम गुण 2. Eg. DicomAttribute[@tag=""00200070""]/Value[@number=""1""] or for a Private गुण DicomAttribute[@tag=""00E10024"" and @privateCreator=""ELSCINT1""]/Value[@number=""1""]"
+"dcmCustomAttribute3","कस्टम गुण 3","Configure any गुण from the डाइकोम object which shall be inserted in database as कस्टम गुण 3. Eg. DicomAttribute[@tag=""00200070""]/Value[@number=""1""] or for a Private गुण DicomAttribute[@tag=""00E10024"" and @privateCreator=""ELSCINT1""]/Value[@number=""1""]"
+"dcmAttributeUpdatePolicy","गुण अपडेट नीति","निर्दिष्ट करता है update policy for extracted attributes into the DB on Series, Study & Patient level on receive of further instance of the entity. PRESERVE (= nullify attributes in the new dataset which are not present in the original dataset), SUPPLEMENT (= attributes not present in original dataset will be supplemented), REPLACE (= original dataset is completely replaced), MERGE (= गुण values will be written from new dataset), OVERWRITE (= गुण values if null in new dataset, will be nullified in original dataset). If absent, PRESERVE will be applied"

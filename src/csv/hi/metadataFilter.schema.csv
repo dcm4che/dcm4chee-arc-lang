@@ -1,0 +1,4 @@
+"property","title","description"
+"","Metadata Filter","Named गुण फ़िल्टर for WADO-RS Metadata requests."
+"dcmMetadataFilterName","Metadata फ़िल्टर Name","Metadata फ़िल्टर Name referenced by proprietary 'includefields' Query Parameter of WADO-RS Metadata requests."
+"dcmTag","गुण टैग","डाइकोम टैग as hex string"

@@ -1,0 +1,8 @@
+"property","title","description"
+"","आर्काइव संपीड़न नियम","आर्काइव संपीड़न नियम"
+"cn","Name","आर्काइव संपीड़न नियम का मनमाना/सार्थक नाम"
+"dicomTransferSyntax","डाइकोम स्थानांतरण सिंटैक्स यूआईडी","स्थानांतरण सिंटैक्स यूआईडी"
+"dcmRulePriority","नियम प्राथमिकता","नियम प्राथमिकता"
+"dcmProperty","नियम","नियम इस फॉर्मेट में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}"
+"dcmImageWriteParam","इमेज लेखन मापदण्ड","संपीड़न होने से पहले इमेज लेखन पे कॉन्फ़िगर किए गए इमेज लेखन मापदण्ड (नाम=मूल्य)"
+"dcmCompressionDelay","संपीड़न विलंभ","आईएसओ-८६०१ कलविधि फॉर्मेट PnDTnHnMn.nS में संपीड़न विलंभ. अगर कॉन्फ़िगर ना किया हो तो, प्राप्त होने पे संपीडित करें"

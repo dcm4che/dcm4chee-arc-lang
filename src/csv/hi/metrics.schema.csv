@@ -1,0 +1,6 @@
+"property","title","description"
+"","Metrics Descriptor","Metrics Descriptor"
+"dcmMetricsName","Metrics Name","Metrics Name"
+"dicomDescription","Metrics का वर्णन","Unconstrained text का वर्णन of the metrics"
+"dcmMetricsRetentionPeriod","Metrics Retention Period","Metrics Retention Period in minutes"
+"dcmUnit","Metrics Unit","Unit of metrics data"

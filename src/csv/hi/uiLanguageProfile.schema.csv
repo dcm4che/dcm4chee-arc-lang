@@ -1,0 +1,6 @@
+"property","title","description"
+"","UI Elasticsearch URL Configuration","Elasticsearch URL"
+"dcmuiLanguageProfileName","Name","Language profile name"
+"dcmDefaultLanguage","Default language","Select default language for the UI"
+"dcmuiLanguageProfileRole","Role","Username भूमिका that this language profile should लागू करें to"
+"dcmuiLanguageProfileUsername","Username","Username for the language profile"

@@ -1,0 +1,7 @@
+"property","title","description"
+"","UI Study Table Configuration","Study Table configuration for the pro version"
+"dcmuiStudyTableConfigName","Configuration Name","UI Study Table Configuration Name"
+"dcmuiStudyTableConfigUsername","Username","Username to which this set should be available"
+"dcmuiStudyTableConfigRoles","Role","Username भूमिका that can use this Set ( If you set the username, the भूमिका will be ignored )"
+"dcmuiStudyTableConfigIsDefault","Is Default","Set this Column-Set to the default one. (Make sure that only one of the Set - siblings child is set to default)."
+"dcmuiStudyTableColumnConfigObjects","Study Table Columns","Define Study Table Columns"

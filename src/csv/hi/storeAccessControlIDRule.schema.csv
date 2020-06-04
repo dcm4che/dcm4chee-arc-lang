@@ -1,0 +1,6 @@
+"property","title","description"
+"","Store Access Control ID Rule","Store Access Control ID Rule"
+"cn","Name","Arbitrary/Meaningful का नाम the Store Access Control ID Rule"
+"dcmStoreAccessControlID","Store Access Control ID","Access Control ID assigned to Studies which attributes match all नियम"
+"dcmRulePriority","नियम प्राथमिकता","नियम प्राथमिकता."
+"dcmProperty","नियम","नियम इस फॉर्मेट में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}"

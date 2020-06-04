@@ -1,0 +1,7 @@
+"property","title","description"
+"","Image Reader","निर्दिष्ट करता है Java Image IO Image Readers used for decompressing compressed डाइकोम images"
+"dicomTransferSyntax","Transfer Syntax","Transfer Syntax of compressed डाइकोम image"
+"dcmIIOFormatName","Image IO Reader Format Name","Image IO Reader Format Name"
+"dcmJavaClassName","Java Class Name","Fully qualified Java class of Image IO Reader. If absent, use any Image Reader found for specified Format Name"
+"dcmPatchJPEGLS","Patch JPEG-LS","Patch JPEG-LS before decompressing"
+"dcmImageReadParam","Image Read Param","Image Read Parameter(s) (name=value)"

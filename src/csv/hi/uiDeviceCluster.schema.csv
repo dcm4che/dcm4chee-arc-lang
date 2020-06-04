@@ -1,0 +1,8 @@
+"property","title","description"
+"","UI Cluster Configuration","Configuration of Device URL to use beside the main UI URL"
+"dcmuiDeviceClusterName","Name","Cluster Name"
+"dcmuiDeviceClusterDescription","Description","Cluster का वर्णन"
+"dcmuiDeviceClusterLoadBalancer","Load Balancer","Select the Load Balancer"
+"dcmuiDeviceClusterKeycloakServer","Keycloak Server","If this cluster doesn't use the same Keycloak select the configured Keycloak"
+"dcmuiDeviceClusterDevices","Device","Add the का नाम the configured devices"
+"dcmuiDeviceClusterInstalled","Installed","Use this URL in the UI"

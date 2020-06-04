@@ -1,0 +1,8 @@
+"property","title","description"
+"","Web App drop-down list","Web App drop-down list"
+"dcmuiWebAppListName","List Name","Define a name for this config"
+"dcmuiWebAppListDescription","Description","Web Application List का वर्णन"
+"dcmuiMode","List mode","You have two possibilities how to show the defined list: 1.) On top on the rest of list 'separated' with a line, 2.) Show only those hir defined ( 'exclusive' )."
+"dcmuiWebApps","WebApps","Web Application"
+"dcmAcceptedUserRole","Accepted User Role","Define the roles for which this config should be available, use 'user' to be available for all roles ( You should either define a username ( following गुण ) or user भूमिका ( this गुण ))"
+"dcmAcceptedUserName","Accepted User Name","Define the Username for which this config should be available ( You should either define a username ( this गुण ) or user भूमिका ( previous गुण ))"

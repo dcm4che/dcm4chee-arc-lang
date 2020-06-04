@@ -1,0 +1,6 @@
+"property","title","description"
+"","Query Retrieve View","निर्दिष्ट करता है behavior on Rejection Note Stored"
+"dcmQueryRetrieveViewID","Query/Retrieve View ID","Query/Retrieve View Identifier"
+"dcmShowInstancesRejectedByCode","Show Instances Rejected By Code","Indicates if the Q/R Services shall show instances rejected by the specified code इस फॉर्मेट में (CV, CSD, 'CM'')"
+"dcmHideRejectionNoteWithCode","Hide Rejection Note With Code","Indicates if the Q/R Services shall hide Rejection Notes with the specified code इस फॉर्मेट में (CV, CSD, 'CM'')"
+"dcmHideNotRejectedInstances","Hide Not Rejected Instances","Indicates if the Q/R Services shall hide instances not rejected by any reason."
