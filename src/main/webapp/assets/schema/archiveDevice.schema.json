@@ -369,7 +369,7 @@
       "title": "Wado ZIP Entry Name Format",
       "description": "Format of entry names in ZIP archive returned by WADO-RS. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string",
-      "default": "DICOM/{0020000D,hash}/{0020000E,hash}/{00080018,hash}"
+      "default": "DICOM/{0020000D,hash}/{0020000E,hash}/{00080018,hash}.dcm"
     },
     "dcmQueryFetchSize": {
       "title": "Query Fetch Size",
