@@ -1555,6 +1555,7 @@
     "web_application_service": "वेब अनुप्रयोग सेवा",
     "web_apps_list": "वेब अनुप्रयोग की सूचि",
     "webapp_with_MOVE_MATCHING_not_found": "'मूव मैचिंग' वेब सेवा क्लास के वेब अनुप्रयोग नहीं मिले!",
+    "webapp_with_service_class_not_found": "Web Application Service with the web service class {$@@webServiceClass} not found!",
     "wednesday": "बुधवार",
     "week": "सप्ताह:",
     "week_plural": "कुछ सप्ताह",

@@ -1555,6 +1555,7 @@
     "web_application_service": "Web Приложение Служба",
     "web_apps_list": "Список веб приложений",
     "webapp_with_MOVE_MATCHING_not_found": "Web Приложение Служба with the web service class 'MOVE_MATCHING' not found!",
+    "webapp_with_service_class_not_found": "Web Application Service with the web service class {$@@webServiceClass} not found!",
     "wednesday": "Wednesday",
     "week": "week:",
     "week_plural": "weeks",
