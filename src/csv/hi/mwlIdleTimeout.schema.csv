@@ -2,6 +2,6 @@
 "","MWL Idle Timeout","MWL Idle Timeout"
 "cn","Name","Arbitrary/Meaningful का नाम the MWL Idle Timeout."
 "dicomAETitle","MWL SCP AE Title","Archive AE Title of MWL SCP on which the MWL Idle Timeout shall be applied."
-"dcmAETitle","Scheduled Station AE Title","Scheduled Station AE Title(s) of Scheduled Procedure Steps for which the MWL Idle Timeout shall be applied. If none is specified, the MWL Idle Timeout is applied to all Scheduled Procedure Steps provided by the MWL SCP."
+"dcmAETitle","Scheduled Station AE Title","Scheduled Station AE Title(s) of Scheduled Procedure Steps for which the MWL Idle Timeout shall be applied. If none is specified, the MWL Idle Timeout is applied to MWL SCP द्वारा उपलब्ध कराये गए all Scheduled Procedure Steps ."
 "dcmMWLStatusOnIdle","MWL Status on Idle","Change Status of idle Scheduled Procedure Steps to specified value."
 "dcmDuration","Idle Timeout","Timeout after which the Status of matching Scheduled Procedure Steps is changed to the specified final status."

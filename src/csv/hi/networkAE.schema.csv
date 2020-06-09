@@ -10,5 +10,5 @@
 "dicomPreferredCallingAETitle","Preferred Calling AE Title","AE Title(s) that are preferred for accepting associations"
 "dicomSupportedCharacterSet","Supported Character Set","Character Set(s) supported by the Network AE for data sets it receives"
 "dicomInstalled","installed","True if the AE is installed on network. If not present, information about the installed status of the AE is inherited from the device"
-"dicomTransferCapability","Transfer Capabilities","Transfer capabilities provided by the application entity"
-"dcmNetworkAE","Network AE Extension","dcm4che proprietary Attributes of Network AE"
+"dicomTransferCapability","Transfer Capabilities","application entity द्वारा उपलब्ध कराये गए Transfer capabilities"
+"dcmNetworkAE","नेटवर्क ए.इ. एक्सटेंशन","डीसीएम्४ची मालिकाना नेटवर्क ए.इ. के गुण ।"

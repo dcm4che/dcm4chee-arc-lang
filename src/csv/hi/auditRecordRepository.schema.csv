@@ -1,4 +1,4 @@
 "property","title","description"
-"","Audit Record Repository","Audit Record Repository related information"
-"dicomNetworkConnectionReference","Network Connection Reference","The JSON Pointers to the Network Connection objects of this Audit Record Repository"
-"dicomInstalled","installed","True if the ARR is installed on network. If not present, information about the installed status of the ARR is inherited from the device"
+"","ऑडिट रेकॉर्ड रिपोसिटोरी","ऑडिट रेकॉर्ड रिपोसिटोरी से संबंधित जानकारी ।"
+"dicomNetworkConnectionReference","नेटवर्क संपर्क रेफेरेंस","इस ऑडिट रेकॉर्ड रिपोसिटोरी द्वारा इस्तमाल किए गए नेटवर्क संपर्क ऑब्जेक्ट के जेसन पॉइंटर्स ।"
+"dicomInstalled","स्थापित","हाँ अगर यह ऑडिट रेकॉर्ड रिपोसिटोरी इस नेटवर्क पे स्थापित है । अनुपलभ्य हो तो, ऑडिट रेकॉर्ड रिपोसिटोरी के स्थापित स्थिति की जानकारी डिवाइस से ली जाएगी ।"
