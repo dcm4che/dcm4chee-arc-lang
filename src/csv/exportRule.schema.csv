@@ -3,6 +3,7 @@
 "cn","Name","Arbitrary/Meaningful name of the Export Rule"
 "dcmEntity","Export Entity","Entity of Export"
 "dcmExporterID","Exporter ID","Exporter ID"
+"dicomDeviceName","Device Name","Specifies Device on which the Export Task shall be scheduled. If not specified, the Export Task is scheduled on the Device which received the objects. Attention: the specified Device must (also) have an Exporter with the specified ID configured!"
 "dcmExportPreviousEntity","Export Previous Entity","Specifies if the previous Entity of a replaced Instance shall be also exported."
 "dcmProperty","Attribute Conditions","Attribute Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}."
 "dcmSchedule","Time Conditions","Apply this rule only within specified time ranges."

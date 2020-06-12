@@ -32,6 +32,12 @@
       "items" : { "type": "string" },
       "format": "dcmExporterID"
     },
+    "dicomDeviceName": {
+      "title": "Device Name",
+      "description": "Specifies Device on which the Export Task shall be scheduled. If not specified, the Export Task is scheduled on the Device which received the objects. Attention: the specified Device must (also) have an Exporter with the specified ID configured!",
+      "type": "string",
+      "format": "dicomDeviceName"
+    },
     "dcmExportPreviousEntity": {
       "title": "Export Previous Entity",
       "description": "Specifies if the previous Entity of a replaced Instance shall be also exported.",
