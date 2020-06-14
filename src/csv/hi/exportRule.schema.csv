@@ -3,6 +3,7 @@
 "cn","Name","Arbitrary/Meaningful का नाम the Export Rule"
 "dcmEntity","Export Entity","Entity of Export"
 "dcmExporterID","Exporter ID","Exporter ID"
+"dicomDeviceName","Exporter Device Name","Specifies Device on which the Export Task(s) shall be scheduled. If not specified, the Export Task(s) is/are scheduled on the Device which received the objects. Attention: the specified Device must (also) have Exporters with the specified IDs configured!"
 "dcmExportPreviousEntity","Export Previous Entity","निर्दिष्ट करता है if the previous Entity of a replaced Instance shall be also exported."
 "dcmProperty","गुण नियम","गुण नियम इस फॉर्मेट में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}."
 "dcmSchedule","Time नियम","लागू करें this rule only within specified time ranges."

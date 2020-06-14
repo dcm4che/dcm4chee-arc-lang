@@ -4,5 +4,5 @@
 "dcmuiColumnTitle","Column का वर्णन","Description of the Column, shown on hover"
 "dcmuiValuePath","Value path","Value (json-Object) Path of the column (for उदाहरण के तौर पे: '00100010.Value[0].Alphabetic' for Patient's Name or '00100020.Value[0]' for Patient ID"
 "dcmuiValueType","Type of the value","Type of the column how to get the value, default should be 'value'"
-"dcmuiColumnWidth","Column width in wउदाहरण के तौर पेt","Width of the column in wउदाहरण के तौर पेt ( x > 0.1 - x < infinite ) default 1"
-"dcmuiColumnOrder","Column width in wउदाहरण के तौर पेt","Width of the column in wउदाहरण के तौर पेt ( x > 0.1 - x < infinite ) default 1"
+"dcmuiColumnWidth","Column width in weight","Width of the column in wउदाहरण के तौर पेt ( x > 0.1 - x < infinite ) default 1"
+"dcmuiColumnOrder","Column width in weight","Width of the column in wउदाहरण के तौर पेt ( x > 0.1 - x < infinite ) default 1"
