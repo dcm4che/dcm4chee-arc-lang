@@ -1146,7 +1146,7 @@
     },
     "dcmStorageVerificationPeriod": {
       "title": "Storage Verification Period",
-      "description": "Period between successive Storage Verifications of one Series.",
+      "description": "Period in which the storage of individual Series is verified. If absent, storage of individual Series are only verified once after configured Storage Verification Initial Delay.",
       "type": "string",
       "format": "dcmPeriod"
     },

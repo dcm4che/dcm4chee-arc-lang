@@ -147,7 +147,7 @@
 "dcmStorageVerificationAETitle","Storage Verification AE Title","Archive AE Title used for scheduled Storage Verifications."
 "dcmStorageVerificationBatchID","Storage Verification Batch ID","Batch ID of Storage Verification Tasks triggered by scheduler."
 "dcmStorageVerificationInitialDelay","Storage Verification Initial Delay","Delay of first Storage Verification of a Series after it was received. May be overwritten by configured values for particular Archive Network AEs."
-"dcmStorageVerificationPeriod","Storage Verification Period","Period between successive Storage Verifications of one Series."
+"dcmStorageVerificationPeriod","Storage Verification Period","Period in which the storage of individual Series is verified. If absent, storage of individual Series are only verified once after configured Storage Verification Initial Delay."
 "dcmStorageVerificationMaxScheduled","Maximal scheduled Storage Verifications","Maximal number of scheduled Storage Verification tasks on this device. Shall be set > 0 to distribute tasks over nodes of a clustered archive."
 "dcmStorageVerificationPollingInterval","Storage Verification Polling Interval","Polling Interval for Series scheduled for Storage Verification in ISO-8601 duration format PnDTnHnMnS."
 "dcmStorageVerificationSchedule","Storage Verification Schedule","Limits Storage Verification to specified times in format 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)."
