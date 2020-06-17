@@ -87,6 +87,14 @@
         "type": "string"
       }
     },
+    "hl7PatientArrivalMessageType": {
+      "title": "HL7 Patient Arrival Message Type",
+      "description": "Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. Overwrite value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "ADT^A10"
+      ]
+    },
     "hl7UseNullValue": {
       "title": "Use HL7 Null Value",
       "description": "Specifies if HL7 v2 null values (specified in segment field as |\"\"|) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.",
