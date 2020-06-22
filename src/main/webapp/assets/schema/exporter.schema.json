@@ -9,6 +9,7 @@
     "dcmExportPriority",
     "dcmInstanceAvailability",
     "dicomAETitle",
+    "dcmExportAsSourceAE",
     "dcmRejectForDataRetentionExpiry"
   ],
   "properties": {
@@ -62,10 +63,16 @@
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "Application Entity (AE) title",
-      "description": "Application Entity (AE) title",
+      "title": "Archive Application Entity (AE) title",
+      "description": "Archive Application Entity (AE) title",
       "type": "string",
       "format": "dcmArchiveAETitle"
+    },
+    "dcmExportAsSourceAE": {
+      "title": "Export as Source Application Entity (AE)",
+      "description": "Mask the Archive Application Entity (AE) title by the title of the Application Entity (AE) from which a Series was received on establishing the Association to the Destination Application Entity (AE).",
+      "type": "boolean",
+      "default": false
     },
     "dcmDeleteStudyFromStorageID": {
       "title": "Delete Study From Storage ID",

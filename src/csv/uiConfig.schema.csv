@@ -4,7 +4,6 @@
 "dcmuiModalities","Statistic Modalities","Preselected Modalities that should show in the Statistic page"
 "dcmuiLanguageConfig","Language Config","Config the languages of the UI"
 "dcmuiWidgetAets","Widget AETs","Select the AETs that you wan't to see in the AET widget, where you can select in which of them the newly added AET should be as `Accepted Calling AE Title`"
-"dcmuiXDSInterfaceURL","XDS Interface URL","Base URL used for the XDS Services. E.g. http(s)://<xds-server-host>:<xds-server-port>"
 "dcmuiBackgroundURL","Background URL","Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px "
 "dcmuiLogoURL","Logo URL","Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background"
 "dcmuiDefaultWidgetAets","Default Widget AETs","Select the AETs that should be preselected on Widget AETs"
