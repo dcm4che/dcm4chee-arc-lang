@@ -1,0 +1,54 @@
+{
+  "title": "पी.डी.क्यू सेवा",
+  "description": "पी.डी.क्यू सेवा वर्णनकर्ता ।",
+  "type": "object",
+  "required": [
+    "dcmPDQServiceID",
+    "dcmURI",
+    "dcmEntity"
+  ],
+  "properties": {
+    "dcmPDQServiceID": {
+      "title": "पी.डी.क्यू सेवा आई.डी.",
+      "description": "पी.डी.क्यू सेवा आई.डी. ।",
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
+      ]
+    },
+    "dcmURI": {
+      "title": "पी.डी.क्यू सेवा यू.आर.आई.",
+      "description": "पी.डी.क्यू सेवा यू.आर.आई., उदाहरण के तौर पे 'pdq-dicom:FINDSCP' ।",
+      "type": "string"
+    },
+    "dicomDescription": {
+      "title": "पी.डी.क्यू सेवा का वर्णन",
+      "description": "पी.डी.क्यू सेवा का स्वैछिक विषय वर्णन ।",
+      "type": "string"
+    },
+    "dcmTag": {
+      "title": "मरीज़ रेकॉर्ड के गुण",
+      "description": "प्राप्त किए गए मरीज़ के रेकॉर्ड के गुण, अगर निर्दिष्ट न किया हो तो मरीज़ के रेकॉर्ड के सारे मौजूद गुणों को प्राप्त किया जाएगा ।",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmTag"
+    },
+    "dcmEntity": {
+      "title": "तत्त्व प्राप्ति",
+      "description": "सी-फाइंड एस.सी.पी. से मरीज़ के रेकॉर्ड या मरीज़ के स्टडीज की प्राप्ति का संकेत करता है। सिर्फ डाइकोम पी.डी.क्यू सेवाओं के लिए प्रभावशाली (URI: pdq-dicom:{AETitle}) ।",
+      "type": "string",
+      "enum": [ "Patient", "Study" ],
+      "default": "Patient"
+    },
+    "dcmProperty": {
+      "title": "पी.डी.क्यू सेवा गुण",
+      "description": "गुण इस प्रारूप में <नाम>=<मूल्य>, उदाहरण के तौर पे 'LocalAET=DCM4CHEE' ।",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "title": "कतार",
+  "description": "व्यवस्थापित जे.एम्.एस. कतार ।",
+  "type": "object",
+  "required": [
+    "dcmQueueName",
+    "dcmJndiName",
+    "dcmRetryDelay",
+    "dcmRetryOnWarning",
+    "dcmRetryInProcessOnStartup",
+    "dcmRetryDelayMultiplier",
+    "dcmMaxRetries",
+    "dcmMaxQueueSize"
+  ],
+  "properties": {
+    "dcmQueueName": {
+      "title": "कतार का नाम",
+      "description": "जे.एम्.एस. कतार का नाम ।",
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiQueueName[*]",
+        "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiCompareSideObjects[*].dcmuiCompareSideQueueName"
+      ]
+    },
+    "dcmJndiName": {
+      "title": "जे.एन.डी.आई. का नाम",
+      "description": "जे.एन.डी.आई. का नाम ।",
+      "type": "string"
+    },
+    "dicomDescription": {
+      "title": "डाइकोम का वर्णन",
+      "description": "डाइकोम तत्त्व का विषयक वर्णन ।",
+      "type": "string"
+    },
+    "dcmMaxRetries": {
+      "title": "पुनःपरीक्षण की अधिकतम संख्या",
+      "description": "विनिर्दिष्ट कतार में अनुसूचित किए गए कार्यों पे पुनःपरीक्षण प्रक्रिया करने की अधिकतम संख्या ।",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmRetryDelay": {
+      "title": "पुनःपरीक्षण विलम्ब",
+      "description": "निर्दिष्ट कतार में अनुसूचित कार्यों की प्रक्रिया करने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में पुनःपरीक्षण का विलम्ब. ।",
+      "type": "string",
+      "default": "PT1M",
+      "format": "dcmDuration"
+    },
+    "dcmMaxRetryDelay": {
+      "title": "अधिकतम पुनःपरीक्षण विलम्ब",
+      "description": "निर्दिष्ट कतार में अनुसूचित कार्यों की प्रक्रिया पुनःपरीक्षण करने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में अधिकतम विलम्ब ।यदि निर्दिष्ट नहीं किया गया है, तो अनन्त ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmRetryDelayMultiplier": {
+      "title": "पुनःपरीक्षण विलम्ब गुणक",
+      "description": "% में गुणक जो अधिकतम पुनःपरीक्षण विलम्ब के साथ पुनःपरीक्षण विलम्ब के शीर्ष पर प्रभावी होगा ।",
+      "type": "integer",
+      "minimum": 100,
+      "default": 100
+    },
+    "dcmRetryOnWarning": {
+      "title": "चेतावनी पे पुनःपरीक्षण करें",
+      "description": "निर्दिष्ट कतार में असफल तथा चेतावनी स्थिति के कार्यों के प्रक्रिया का पुनःपरीक्षण करने में सक्षम बनाता है ।",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmRetryInProcessOnStartup": {
+      "title": "स्टार्टअप पे 'प्रक्रिया जारी' स्थिति के कार्यों का पुनःपरीक्षण करें",
+      "description": "सिस्टम स्टार्टअप पे 'प्रक्रिया जारी' स्थिति के कार्यों का पुनःपरीक्षण करने का संकेत करता है ।",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmPurgeQueueMessageCompletedDelay": {
+      "title": "पूर्ण स्थिति के कतार संदेशों का परिष्करण करने का विलम्ब",
+      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब जिसके बाद पूर्ण स्थिति के कतार संदेशों का परिष्करण किया जाएगा ।यदि निर्दिष्ट नहीं किया है, तो उस कतार के लिए परिष्करण नहीं होगा ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmPurgeQueueMessageFailedDelay": {
+      "title": "असफल स्थिति के कतार संदेशों का परिष्करण करने का विलम्ब",
+      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब जिसके बाद असफल स्थिति के कतार संदेशों का परिष्करण किया जाएगा ।यदि निर्दिष्ट नहीं किया है, तो उस कतार के लिए परिष्करण नहीं होगा ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmPurgeQueueMessageWarningDelay": {
+      "title": "चेतावनी स्थिति के कतार संदेशों का परिष्करण करने का विलम्ब",
+      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब जिसके बाद चेतावनी स्थिति के कतार संदेशों का परिष्करण किया जाएगा ।यदि निर्दिष्ट नहीं किया है, तो उस कतार के लिए परिष्करण नहीं होगा ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmPurgeQueueMessageCanceledDelay": {
+      "title": "रद्द स्थिति के कतार संदेशों का परिष्करण करने का विलम्ब",
+      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब जिसके बाद रद्द स्थिति के कतार संदेशों का परिष्करण किया जाएगा ।यदि निर्दिष्ट नहीं किया है, तो उस कतार के लिए परिष्करण नहीं होगा ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmMaxQueueSize": {
+      "title": "कतार का अधिकतम माप",
+      "description": "कतार में अनुसूचित कार्यों की अधिकतम संख्या ।यदि अनुसूचित कार्यों की संख्या सीमा तक पहुँच जाती है, अन्य कार्यों को अनुसूचित करने का प्रयास असफल होगा ।0 = कोई सीमा नहीं ।",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    }
+  }
+}

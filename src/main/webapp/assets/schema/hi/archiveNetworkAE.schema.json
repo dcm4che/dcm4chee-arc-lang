@@ -1,0 +1,698 @@
+{
+  "title": "आर्काइव नेटवर्क ए.इ.",
+  "description": "डाइकोम आर्काइव नेटवर्क ए.इ. से सम्बंधित जानकारी ।",
+  "type": "object",
+  "required": [
+    "dcmQueryRetrieveViewID",
+    "dcmObjectStorageCount"
+  ],
+  "properties": {
+    "dcmObjectStorageID": {
+      "title": "Object स्टोरेज आई.डी.",
+      "description": "ID of Storage System on which received डाइकोम composite objects are stored ।Multiple Storage Systems may be configured ।",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      },
+      "format": "dcmStorageID"
+    },
+    "dcmObjectStorageCount": {
+      "title": "Object Storage Count",
+      "description": "Number of Storage Systems which are filled in parallel ।",
+      "type": "integer",
+      "default": 1,
+      "minimum": 1
+    },
+    "dcmMetadataStorageID": {
+      "title": "मेटाडेटा स्टोरेज आई.डी.",
+      "description": "ID of Storage on which Metadata is stored in JSON format - additionally to the complete डाइकोम composite object ।Multiple Storage Systems may be configured. If absent, metadata is not stored additionally ।",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      },
+      "format": "dcmStorageID"
+    },
+    "dcmBulkDataDescriptorID": {
+      "title": "अधिकांश डेटा वर्णनकर्ता की आई.डी.",
+      "description": "संगृहीत दृष्टांतों के मेटाडेटा उपलब्ध करानेवाले सारे सेवाओं द्वारा लागू की गई अधिकांश डेटा वर्णनकर्ता की आई.डी. । अगर कॉन्फ़िगर न किया हो तो, सिर्फ वही गुण अधिकांश डेटा के तौर पे माने जाएंगे जो 'बिना अधिकांश डेटा के मिश्र दृष्टांत की प्राप्ति' सेवा वर्ग द्वारा निर्दिष्ट किए है. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string",
+      "format": "dcmBulkDataDescriptorID"
+    },
+    "dcmSeriesMetadataDelay": {
+      "title": "कुल सीरीज मेटाडेटा विलम्ब",
+      "description": "इस ए.इ. से प्राप्त हुए ऑब्जेक्ट्स के कुल सीरीज मेटाडेटा को स्टोरेज पे सहेजने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में विलम्ब ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmPurgeInstanceRecordsDelay": {
+      "title": "दृष्टांतों के रिकार्ड्स को निकालने का विलम्ब",
+      "description": "इस ए.इ. से प्राप्त हुए दृष्टांतों के रेकॉर्ड्स को डेटाबेस से निकालने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में विलम्ब ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे Only effective, if Purge Instance Records on Device Level = true ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmStoreAccessControlID": {
+      "title": "Store Access Control ID",
+      "description": "Access Control ID assigned to Studies received by this AE ।",
+      "type": "string"
+    },
+    "dcmAccessControlID": {
+      "title": "Access Control ID",
+      "description": "Access Control IDs assigned to Query/Retrieve requests received by this AE ।",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "dcmAcceptedMoveDestination": {
+      "title": "Accepted Move Destination",
+      "description": "Accepted Move Destination in C-MOVE requests; any if absent ।",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmOverwritePolicy": {
+      "title": "अधिलेखन नीति",
+      "description": "इस ए.इ. से प्राप्त हुए ऑब्जेक्ट्स के लिए अधिलेखन नीति ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string",
+      "enum": [
+        "NEVER",
+        "ALWAYS",
+        "SAME_SOURCE",
+        "SAME_SERIES",
+        "SAME_SOURCE_AND_SERIES"
+      ]
+    },
+    "dcmRecordAttributeModification": {
+      "title": "गुण के परिवर्तन को रेकॉर्ड करें",
+      "description": "इस ए.इ. से प्राप्त हुए सहेजे गए ऑब्जेक्ट्स के गुणों के परिवर्तन को मूल गुणों के क्रम के आइटम्स में रेकॉर्ड करने का संकेत करता है ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "boolean"
+    },
+    "dcmAcceptMissingPatientID": {
+      "title": "अनुपस्थित मरीज़ की आई.डी. स्वीकार करें",
+      "description": "दृष्टांतों में अनुपस्थित मरीज़ की आई.डी. को स्वीकार कर मरीज़ के लिए नई आई.डी. निर्माण करने का संकेत करता है ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string",
+      "enum": [
+        "YES",
+        "NO",
+        "CREATE"
+      ]
+    },
+    "dcmAcceptConflictingPatientID": {
+      "title": "परस्पर विरोधी मरीज़ की आई.डी. स्वीकार करें",
+      "description": "अगर प्राप्त हुए दृष्टांतों में मरीज़ की आई.डी. पहले से प्राप्त हुए स्टडी के दृष्टांतों में मरीज़ की आई.डी. के साथ परस्पर विरोधी हो तो, ऐसे दृष्टांतों को स्वीकार करने का संकेत करता है ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string",
+      "enum": [
+        "YES",
+        "NO",
+        "MERGED"
+      ]
+    },
+    "dcmQueryRetrieveViewID": {
+      "title": "प्राप्ति व्यू आई.डी.",
+      "description": "प्राप्ति व्यूव का पहचानकर्ता ।",
+      "type": "string",
+      "format": "dcmQueryRetrieveViewID"
+    },
+    "dcmBulkDataSpoolDirectory": {
+      "title": "अधिकांश डेटा स्पूल निर्देशिका",
+      "description": "अधिकांश डेटा स्पूल निर्देशिका का पथ ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string"
+    },
+    "dcmHideSPSWithStatusFromMWL": {
+      "title": "इन स्थिति के एसपीएस को छिपाए",
+      "description": "एम्.डब्ल्यू.एल. एससीपी से न वापस की जानेवाले एम्.डब्ल्यू.एल. आइटम्स के अनुसूचित प्रक्रिया स्टेप कोड ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "SCHEDULED",
+          "ARRIVED",
+          "READY",
+          "STARTED",
+          "DEPARTED",
+          "CANCELED",
+          "DISCONTINUED",
+          "COMPLETED"
+        ]
+      }
+    },
+    "dcmValidateCallingAEHostname": {
+      "title": "आह्वान ए.इ. के मेज़बान नाम को मान्य करें",
+      "description": "इस ए.इ. के लिए संपर्क निवेदनकर्ता के आह्वान ए.इ. के मेज़बान नाम या आईपी एड्रेस को मान्य करें ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "boolean"
+    },
+    "dcmPersonNameComponentOrderInsensitiveMatching": {
+      "title": "व्यक्ति के नाम के कम्पोनेंट ऑर्डर असंवेदनशील मिलान",
+      "description": "इस ए.इ. द्वारा व्यक्तियों के नामों के फजी सिमेंटिक मिलान पे नाम के कम्पोनेंट ऑर्डर पे असंवेदनशील मिलान की प्रक्रिया का संकेत करता है ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "boolean"
+    },
+    "dcmSendPendingCGet": {
+      "title": "अनिर्णीत सी-गेट भेजे",
+      "description": "अनिर्णीत सी-गेट प्रतिक्रिया सक्षम करता है ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "boolean"
+    },
+    "dcmSendPendingCMoveInterval": {
+      "title": "अनिर्णीत सी-मूव भेजने का अंतराल",
+      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में अनिर्णीत सी-मूव प्रतिक्रियाओं का अंतराल ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmWadoSR2HtmlTemplateURI": {
+      "title": "वाडो एस.आर. से एच.टी.एम्.एल. फर्मा यू.आर.आई.",
+      "description": "एच.टी.एम्.एल. में स्ट्रक्चर्ड रिपोर्टों को प्रस्तुत करने के लिए इस्तमाल किए गए स्टाइलशीट के यू.आर.आई. को निर्दिष्ट करता है ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string"
+    },
+    "dcmWadoSR2TextTemplateURI": {
+      "title": "वाडो एस.आर. से टेक्स्ट फर्मा यू.आर.आई.",
+      "description": "साधारण टेक्स्ट में स्ट्रक्चर्ड रिपोर्टों को प्रस्तुत करने के लिए इस्तमाल किए गए स्टाइलशीट के यू.आर.आई. को निर्दिष्ट करता है । डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string"
+    },
+    "dcmWadoCDA2HtmlTemplateURI": {
+      "title": "वाडो सी.डी.ए. से एच.टी.एम्.एल. फर्मा यू.आर.आई.",
+      "description": "वाडो-यू.आर.आई. सेवा से प्राप्त हुए सी.डी.ए. डॉक्यूमेंटों में इस रूप <?xml-stylesheet type=\"text/xsl\" href=\"<url>\" > में निवेशन किए जानेवाले एक्स.एस.एल. स्टाइलशीट के यू.आर.एल. को निर्दिष्ट करता है ।अगर कॉन्फ़िगर न किया हो तो, अंत:स्थापित सी.डी.आई. डॉक्यूमेंट को शब्दशः वापस किया जाएगा ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string"
+    },
+    "dcmWadoThumbnailViewport": {
+      "title": "वाडो थंबनेल व्युवपोर्ट",
+      "description": "यदि अनुरोध में किसी वयुवपोर्ट को निर्दिष्ट न किया हो तो, वाडो प्राप्ति सेवा द्वारा वापस किए गए दृष्टांतों के थंबनेलों के आयाम ।प्रारूप : <width>,<height> ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string",
+      "format": "dcmWadoThumbnailViewport"
+    },
+    "dcmWadoZIPEntryNameFormat": {
+      "title": "वाडो ज़िप एंट्री के नाम का प्रारूप",
+      "description": "वाडो-आर.एस. सेवाओं द्वारा प्राप्त हुए ज़िप आर्काइव में एंट्रियों के नामों का प्रारूप ।डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "dcmQueryMaxNumberOfResults": {
+      "title": "Query Max Number Of Results",
+      "description": "Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "integer",
+      "minimum": 0
+    },
+    "dcmQidoMaxNumberOfResults": {
+      "title": "Qido Max Number Of Results",
+      "description": "Maximal number of return results by QIDO-RS Service. 0 = unlimited. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "integer",
+      "minimum": 0
+    },
+    "dcmFwdMppsDestination": {
+      "title": "Mpps Forward Destination",
+      "description": "Destination to forward MPPS N-CREATE RQ and N-SET RQ. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "array",
+      "items" : { "type": "string" },
+      "format": "dcmAETitle"
+    },
+    "dcmIanDestination": {
+      "title": "Ian Destination",
+      "description": "Destination to send IAN N-CREATE RQ. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "array",
+      "items" : { "type": "string" },
+      "format": "dcmAETitle"
+    },
+    "dcmIanDelay": {
+      "title": "IAN Delay",
+      "description": "Delay in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में after which an IAN for a received study is sent to configured IAN destinations. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmIanTimeout": {
+      "title": "IAN Timeout",
+      "description": "Timeout in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में for waiting on receive of instances referenced in MPPS. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmIanOnTimeout": {
+      "title": "IAN On Timeout",
+      "description": "निर्दिष्ट करता है if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "dcmSpanningCFindSCP": {
+      "title": "Spanning C-Find SCP",
+      "description": "AE Title of external C-FIND SCP to forward C-FIND RQs and backward responses according configured Spanning C-Find SCP Policy. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmSpanningCFindSCPPolicy": {
+      "title": "Spanning C-Find SCP Policy",
+      "description": "निर्दिष्ट करता है policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "enum": [
+        "SUPPLEMENT",
+        "MERGE",
+        "REPLACE"
+      ]
+    },
+    "dcmSpanningCFindSCPRetrieveAET": {
+      "title": "Spanning C-Find SCP Retrieve AE Title",
+      "description": "निर्दिष्ट करता है Retrieve AE Title(s) in returned matches from Spanning C-Find SCP. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmFallbackCMoveSCP": {
+      "title": "Fallback C-Move SCP",
+      "description": "AE Title of external C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not managed by this archive. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmFallbackCMoveSCPStudyOlderThan": {
+      "title": "Fallback C-Move SCP Study Older Than",
+      "description": "निर्दिष्ट करता है threshold for Study Date इस प्रारूप में YYYYMMDD for marking received Studies as (potential) incomplete to enforce the retrieve from configured dcmFallbackCMoveSCP. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "dcmFallbackCMoveSCPDestination": {
+      "title": "Fallback C-Move SCP Destination",
+      "description": "AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to the external C-MOVE SCP specified by dcmFallbackCMoveSCP. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmFallbackCMoveSCPLeadingCFindSCP": {
+      "title": "Fallback C-Move SCP Leading C-Find SCP",
+      "description": "AE Title of external C-FIND SCP for Verification of Number of Instances retrieved from external C-MOVE SCP specified by dcmFallbackCMoveSCP. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmFallbackCMoveSCPRetries": {
+      "title": "Fallback C-Move SCP Retries",
+      "description": "Maximal number of retries to retrieve not available objects from C-MOVE SCP configured by dcmFallbackCMoveSCP. -1 = forever. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "integer"
+    },
+    "dcmFallbackWadoURIWebAppName": {
+      "title": "Fallback WADO-URI Web Application Name",
+      "description": "का नाम external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmWebAppName"
+    },
+    "dcmFallbackWadoURIHttpStatusCode": {
+      "title": "Fallback WADO-URI HTTP Status Code",
+      "description": "HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "integer",
+      "default": 303,
+      "enum": [
+        301,
+        302,
+        303,
+        307
+      ]
+    },
+    "dcmAltCMoveSCP": {
+      "title": "Alternative C-Move SCP",
+      "description": "AE Title of alternative C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not located on a local attached Storage. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmStorePermissionServiceURL": {
+      "title": "Store Permission Service URL",
+      "description": "URL of Store Permission Service which will be invoked on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the गुण in the object. उदाहरण के तौर पे http(s)://<store-permission-service-provider-host>:<store-permission-service-provider-port>/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "dcmStorePermissionServiceResponse": {
+      "title": "Store Permission Service Response",
+      "description": "Emulate Store Permission Service Response on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the गुण in the object. Only effective if no Store Permission Service Response is configured. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "dcmStorePermissionServiceResponsePattern": {
+      "title": "Store Permission Service Response Pattern",
+      "description": "Regular Expression applied to responses from Store Permission Service to determine agreement for storage. उदाहरण के तौर पे \"validation\"\\s*:\\s*\"true\". डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "dcmStorePermissionServiceErrorCommentPattern": {
+      "title": "Store Permission Service Error Comment Pattern",
+      "description": "Regular Expression applied to responses from Store Permission Service to extract Error Comment. उदाहरण के तौर पे \"errorcomment\"\\s*:\\s*\"(.*)\". डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "dcmStorePermissionServiceErrorCodePattern": {
+      "title": "Store Permission Service Error Code Pattern",
+      "description": "Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. उदाहरण के तौर पे \"errorcode\"\\s*:\\s*\"(\\p{XDigit}{4})\". डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "dcmStorePermissionServiceExpirationDatePattern": {
+      "title": "Store Permission Service Expiration Date Pattern",
+      "description": "Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. उदाहरण के तौर पे \"expirationdate\"\\s*:\\s*\"([0-9]{8})\". डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "dcmAllowRejectionForDataRetentionPolicyExpired": {
+      "title": "Allow Rejection For Data Retention Policy Expired",
+      "description": "Allow Rejection For Data Retention Policy Expired. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "enum": [
+        "NEVER",
+        "ALWAYS",
+        "EXPIRED_UNSET",
+        "ONLY_EXPIRED"
+      ]
+    },
+    "dcmAllowDeleteStudyPermanently": {
+      "title": "Allow Delete Study permanently",
+      "description": "Allow to delete Study permanently. REJECTED = only already rejected Studies. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "enum": [
+        "ALWAYS",
+        "REJECTED"
+      ]
+    },
+    "dcmAllowDeletePatient": {
+      "title": "Allow Delete Patient",
+      "description": "Allow permanent deletion of Patients. Enumerated values: NEVER, ALWAYS, WITHOUT_STUDIES. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "enum": [
+        "NEVER",
+        "ALWAYS",
+        "WITHOUT_STUDIES"
+      ]
+    },
+    "dcmDefaultCharacterSet": {
+      "title": "Default Character Set",
+      "description": "Value of Specific Character Set (0008,0005) added to Data Sets of C-STORE RQs and pending C-FIND RSPs without Specific Character Set (0008,0005) गुण received by this Network AE. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmCharset"
+    },
+    "dcmUPSWorklistLabel": {
+      "title": "UPS Worklist Label",
+      "description": "Value of Worklist Label (0074,1202) of created UPS by this Network AE, if the UPS Push SCU or UPS-RS User Agent does not provide a value for this attribute. If absent, the AE Title of the receiving AE will be used. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "dcmUPSEventSCU": {
+      "title": "UPS Event SCU",
+      "description": "AE Title of UPS Event एस.ओ.पी. वर्ग SCU, to which UPS Event Reports are sent for subscriptions created on this Network AE  - independently if the subscription was created by the N-ACTION DIMSE service, or by a corresponding UPS RESTful service. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmUPSEventSCUKeepAlive": {
+      "title": "UPS Event SCU Keep Alive",
+      "description": "Timeout in ms to keep associations to UPS Event SCUs alive. If absent, associations will not be reused for sending multiple UPS Event Reports to one UPS Event SCU. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "integer",
+      "minimum": 100
+    },
+    "dcmRetrieveAET": {
+      "title": "Retrieve AE Title",
+      "description": "निर्दिष्ट करता है Retrieve AE Titles associated with डाइकोम objects received by this Network AE. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmReturnRetrieveAET": {
+      "title": "Return Retrieve AE Title",
+      "description": "Retrieve AE Title returned in C-FIND and QIDO responses. If absent, the Retrieve AET associated with the archived entity will be returned. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmMultipleStoreAssociations": {
+      "title": "Multiple Store Associations",
+      "description": "Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. Supplements Multiple Store Associations specified on Device level.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmMultipleStoreAssociations"
+    },
+    "dcmExternalRetrieveAEDestination": {
+      "title": "External Retrieve AE Destination",
+      "description": "AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to external retrieve AE. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmCopyMoveUpdatePolicy": {
+      "title": "Copy Move Update Policy",
+      "description": "निर्दिष्ट करता है update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "enum": [
+        "PRESERVE",
+        "SUPPLEMENT",
+        "MERGE",
+        "OVERWRITE",
+        "REPLACE"
+      ]
+    },
+    "dcmLinkMWLEntryUpdatePolicy": {
+      "title": "Link MWL Entry Update Policy",
+      "description": "निर्दिष्ट करता है update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "enum": [
+        "PRESERVE",
+        "SUPPLEMENT",
+        "MERGE",
+        "OVERWRITE",
+        "REPLACE"
+      ]
+    },
+    "dcmStorageVerificationPolicy": {
+      "title": "Storage Verification Policy",
+      "description": "DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "enum": [
+        "DB_RECORD_EXISTS",
+        "OBJECT_EXISTS",
+        "OBJECT_SIZE",
+        "OBJECT_FETCH",
+        "OBJECT_CHECKSUM",
+        "S3_MD5SUM"
+      ]
+    },
+    "dcmStorageVerificationUpdateLocationStatus": {
+      "title": "Storage Verification Update Location Status",
+      "description": "Indicates if the Status of the Location DB record shall be updated on Storage Verification accordingly. Not effective with Storage Verification Policy: DB_RECORD_EXISTS. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "dcmStorageVerificationStorageID": {
+      "title": "Storage Verification स्टोरेज आई.डी.s",
+      "description": "Only accept Storage Verification if the validation of the storage of the object on one of the specified Storage Systems is successful. Not effective with Storage Verification Policy: DB_RECORD_EXISTS. Overwrites values specified on Device level.",
+      "type": "array",
+      "items" : { "type": "string" },
+      "format": "dcmStorageID"
+    },
+    "dcmStorageVerificationInitialDelay": {
+      "title": "Storage Verification Initial Delay",
+      "description": "Delay in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnYnMnD or PnW में of first Storage Verification of a Series after it was received. Overwrites values specified on Device level.",
+      "type": "string",
+      "format": "dcmPeriod"
+    },
+    "dcmUpdateLocationStatusOnRetrieve": {
+      "title": "Update Location Status on Retrieve",
+      "description": "Indicates if the Status of the Location DB record shall be updated for objects failed to get fetched from storage on retrieve to MISSING_OBJECT or FAILED_TO_FETCH_OBJECT. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "dcmStorageVerificationOnRetrieve": {
+      "title": "Storage Verification on Retrieve",
+      "description": "Indicates if failures to fetch an object from Storage on retrieve shall trigger a Storage Verification of the whole Series. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "hl7PSUSendingApplication": {
+      "title": "एच.एल.७. Procedure Status Update Sending Application",
+      "description": "Application|Facility का नाम Sending Application for एच.एल.७. Procedure Status Update. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "hl7ApplicationName"
+    },
+    "hl7PSUReceivingApplication": {
+      "title": "एच.एल.७. Procedure Status Update Receiving Application",
+      "description": "Application|Facility का नाम Receiving Application for एच.एल.७. Procedure Status Update. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "array",
+      "items" : { "type": "string" },
+      "format": "hl7ApplicationName"
+    },
+    "hl7PSUDelay": {
+      "title": "एच.एल.७. Procedure Status Update Delay",
+      "description": "Delay in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में after which an एच.एल.७. Procedure Status Update for a received study is sent to configured एच.एल.७. receivers. If absent, एच.एल.७. Procedure Status Update is triggered by received MPPS. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUConditions": {
+      "title": "HL7 Procedure Status Update Attribute Conditions",
+      "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}. Overwrites value specified on Device level.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmProperty"
+    },
+    "hl7PSUForRequestedProcedure": {
+      "title": "एच.एल.७. Procedure Status Update for Requested Procedure",
+      "description": "Restrict notification of configured एच.एल.७. Procedure Status Update Receiving Applications about Procedure Status Update to existence of Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching स्टडी दृष्टांत यू.आई.डी.. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "hl7PSURequestedProcedureID": {
+      "title": "एच.एल.७. Procedure Status Update Requested Procedure ID",
+      "description": "Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching स्टडी दृष्टांत यू.आई.डी.. {<attributeID>} will be replaced by the value of गुण in the received study. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "hl7PSUAccessionNumber": {
+      "title": "एच.एल.७. Procedure Status Accession Number",
+      "description": "Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching स्टडी दृष्टांत यू.आई.डी.. {<attributeID>} will be replaced by the value of गुण in the received study. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "hl7PSUFillerOrderNumber": {
+      "title": "एच.एल.७. Procedure Status Filler Order Number",
+      "description": "Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching स्टडी दृष्टांत यू.आई.डी.. {<attributeID>} will be replaced by the value of गुण in the received study. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "hl7PSUPlacerOrderNumber": {
+      "title": "एच.एल.७. Procedure Status Placer Order Number",
+      "description": "Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching स्टडी दृष्टांत यू.आई.डी.. {<attributeID>} will be replaced by the value of गुण in the received study. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string"
+    },
+    "hl7PSUMessageType": {
+      "title": "एच.एल.७. Procedure Status Message Type",
+      "description": "Message Type of एच.एल.७. Procedure Status Update message. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "enum": [
+        "OMG_O19",
+        "ORU_R01"
+      ]
+    },
+    "hl7PSUPIDPV1": {
+      "title": "एच.एल.७. Procedure Status Update PID PV1",
+      "description": "Indicates to include a Patient Identification (PID) and a Patient Visit (PV1) segment in the एच.एल.७. Procedure Status Update message. Implicitly set, if एच.एल.७. Procedure Status Message Type = ORU_R01. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "hl7PSUMWL": {
+      "title": "एच.एल.७. Procedure Status Update MWL",
+      "description": "निर्दिष्ट करता है if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured एच.एल.७. Procedure Status Update Delay or for received MPPS after configured एच.एल.७. Procedure Status Update Timeout. Implicitly set to true, if notification of एच.एल.७. receivers is configured. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "hl7PSUTimeout": {
+      "title": "एच.एल.७. Procedure Status Update Timeout",
+      "description": "Timeout in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में for waiting on receive of instances referenced in MPPS. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUOnTimeout": {
+      "title": "एच.एल.७. Procedure Status Update On Timeout",
+      "description": "निर्दिष्ट करता है if the एच.एल.७. Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "dcmRelationalQueryNegotiationLenient": {
+      "title": "Relational Query Negotiation Lenient",
+      "description": "Indicates to accept C-FIND RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "dcmRelationalRetrieveNegotiationLenient": {
+      "title": "Relational Retrieve Negotiation Lenient",
+      "description": "Indicates to accept C-MOVE and C-GET RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "dcmRestrictRetrieveSilently": {
+      "title": "Restrict Retrieve Silently",
+      "description": "Indicates if the set of requested objects to retrieve shall be silently (=without counting not transferred object as failures) restricted according the Transfer Capabilities of the Retrieve Destination. Otherwise the number of requested objects for which no Transfer Capability is configured for the Retrieve Destination and therefore are not retrieved is counted as failures. Only effective, if the Retrieve Destination has configured at least one Transfer Capability with SCP role. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "dcmRejectConflictingPatientAttribute": {
+      "title": "Reject Conflicting Patient Attribute",
+      "description": "डाइकोम टैग of Patient गुण which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "array",
+      "items" : { "type": "string" },
+      "format": "dcmTag"
+    },
+    "dcmStowRetiredTransferSyntax": {
+      "title": "STOW Retired Transfer Syntax",
+      "description": "Store received JPEG Full Progression, Non-Hierarchical JPEG images in डाइकोम images with corresponding (retired) Transfer Syntax UID 1.2.840.10008.1.2.4.55. Otherwise set 1.2.840.10008.1.2.4.50 (= JPEG Baseline) or 1.2.840.10008.1.2.4.51 (= JPEG Extended) as Transfer Syntax UID of the stored डाइकोम image, without transcoding to JPEG Baseline or JPEG Extended, but including the JPEG image as received. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "dcmStowExcludeAPPMarkers": {
+      "title": "STOW Exclude Application Markers",
+      "description": "Indicates if APP markers in JPEG images received in STOW-RS Metadata and Bulkdata requests shall be excluded from the JPEG bit streams encapsulated in created डाइकोम instances. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "dcmStowQuicktime2MP4": {
+      "title": "STOW Quicktime to MP4",
+      "description": "Indicates if QuickTime containers received in STOW-RS Metadata and Bulkdata requests shall be converted to MP4 containers encapsulated in created डाइकोम instances. The conversion requires that ffmpeg is installed and the ffmpeg CLI utility is available in the PATH. Otherwise Quicktime containers will get encapsulated in the stored डाइकोम object verbatim, with a declared डाइकोम MPEG-4 Transfer Syntax which reflects the encoding of the video stream in the container, but contradicts the actual container format. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "dcmRetrieveTaskWarningOnNoMatch": {
+      "title": "Retrieve Task Warning on no Match",
+      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "boolean"
+    },
+    "dcmRetrieveTaskWarningOnWarnings": {
+      "title": "Retrieve Task Warning on Warnings",
+      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. Overwrites value specified on Device level",
+      "type": "boolean"
+    },
+    "dcmFallbackCMoveSCPCallingAET": {
+      "title": "Fallback C-Move SCP Calling AE title",
+      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmExportRule": {
+      "title": "Export Rule",
+      "description": "Export Rules applied to डाइकोम objects received by this AE. Supplements Export Rules specified on Device level.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "exportRule.schema.json"
+      }
+    },
+    "dcmExportPriorsRule": {
+      "title": "Export Priors Rule",
+      "description": "Export Priors Rules applied to डाइकोम objects received by this AE. Supplements Export Priors Rules specified on Device level.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "exportPriorsRule.schema.json"
+      }
+    },
+    "dcmRSForwardRule": {
+      "title": "RESTful Forward Rule",
+      "description": "RESTful Forward Rules. Supplements RESTful Forward rules specified on Device level.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "rsForwardRule.schema.json"
+      }
+    },
+    "dcmArchiveCompressionRule": {
+      "title": "Compression rule",
+      "description": "Compression rules. Supplements Compression rules specified on Device level.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "archiveCompressionRule.schema.json"
+      }
+    },
+    "dcmArchiveAttributeCoercion": {
+      "title": "गुण Coercion",
+      "description": "गुण Coercion of received/sent DIMSE. Supplements गुण Coercions specified on Device level.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "archiveAttributeCoercion.schema.json"
+      }
+    },
+    "dcmStudyRetentionPolicy": {
+      "title": "स्टडी धारण नीति",
+      "description": "Study Retention Policies. Supplements Study Retention Policies specified on Device level.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "studyRetentionPolicy.schema.json"
+      }
+    },
+    "dcmStoreAccessControlIDRule": {
+      "title": "संचय प्रवेश निरीक्षण आई.डी. नियम",
+      "description": "संचय प्रवेश निरीक्षण आई.डी. नियम जो इस ए.इ. द्वारा सहेजे गए स्टडीज पे लागू होंगे ।आर्काइव डिवाइस स्तर पे निर्दिष्ट संचय प्रवेश निरीक्षण आई.डी. नियम पूरक होंगे । Supplements Store Access Control Rules specified on Device level.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "storeAccessControlIDRule.schema.json"
+      }
+    },
+    "dcmUPSOnStore": {
+      "title": "UPS on Store Rule",
+      "description": "UPS on Store Rules applied to डाइकोम objects received by this AE. Supplements UPS on Store Rules specified on Device level.",
+      "type": "array",
+      "titleKey":"{dcmUPSOnStoreID}",
+      "items" : {
+        "$ref": "upsOnStore.schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "title": "यू.आई. स्टडी सारिणी कॉलम विन्यास",
+  "description": "स्टडी सारिणी कॉलम ।",
+  "type": "object",
+  "required": [
+    "dcmuiColumnName",
+    "dcmuiValuePath",
+    "dcmuiValueType"
+  ],
+  "properties": {
+    "dcmuiColumnName": {
+      "title": "कॉलम का नाम",
+      "description": "स्टडी सारिणी में कॉलम का नाम ।",
+      "type": "string"
+    },
+    "dcmuiColumnTitle": {
+      "title": "कॉलम का वर्णन",
+      "description": "मंडराने पे दिखाए जानेवाला कॉलम का वर्णन ।",
+      "type": "string"
+    },
+    "dcmuiValuePath": {
+      "title": "मूल्य का पथ",
+      "description": "कॉलम के मूल्य (json-Object) का पथ (उदाहरण के तौर पे: मरीज़ के नाम के लिए '00100010.Value[0].Alphabetic' या मरीज़़ के आई.डी. के लिए '00100020.Value[0]') ।",
+      "type": "string"
+    },
+    "dcmuiValueType": {
+      "title": "मूल्य का प्रकार",
+      "description": "मूल्य प्राप्त करने के लिए कॉलम का प्रकार, डिफ़ॉल्ट 'value' होगा ।",
+      "type": "string",
+      "enum": [
+        "value",
+        "pipe"
+      ]
+    },
+    "dcmuiColumnWidth": {
+      "title": "Column width in weight",
+      "description": "Width of the column in weight ( x > 0.1 - x < infinite ) default 1",
+      "type":  "string"
+    },
+    "dcmuiColumnOrder": {
+      "title": "Column width in weight",
+      "description": "Width of the column in weight ( x > 0.1 - x < infinite ) default 1",
+      "type":  "string"
+    }
+  }
+}

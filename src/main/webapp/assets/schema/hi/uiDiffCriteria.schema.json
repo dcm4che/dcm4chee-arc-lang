@@ -1,0 +1,66 @@
+{
+  "title": "यू.आई. तुलना मानदण्ड",
+  "description": "यू.आई. तुलना मानदण्ड ।",
+  "type": "object",
+  "required": [
+    "dcmuiDiffCriteriaTitle",
+    "dcmuiDiffIncludeMissing"
+  ],
+  "properties": {
+    "dcmuiDiffCriteriaTitle": {
+      "title": "यू.आई. तुलना मानदण्ड का नाम",
+      "description": "तुलना मानदण्ड का नाम ।",
+      "type": "string"
+    },
+    "dicomDescription": {
+      "title": "यू.आई. तुलना मानदण्ड का वर्णन",
+      "description": "इस यू.आई. तुलना मानदण्ड का स्वैच्छिक विषय वर्णन ।",
+      "type": "string"
+    },
+    "dcmuiDiffCriteriaNumber": {
+      "title": "यू.आई. तुलना मानदण्ड की संख्या",
+      "description": "गुण Set Number used to order गुण Sets ।",
+      "type": "integer",
+      "minimum": 1
+    },
+    "dcmuiDiffIncludeMissing": {
+      "title": "यू.आई. अनुपस्थित का समावेश",
+      "description": "अनुपस्थित स्टडीज को समावेश करने का संकेत करता है ।",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmAttributeSetID": {
+      "title": "गुण सेट का आई.डी.",
+      "description": "तुलना किए गए गुणों को निर्दिष्ट करनेवाले गुण सेट का आई.डी. ।",
+      "type": "string",
+      "format": "dcmAttributeSetID"
+    },
+    "dcmuiDiffGroupButton": {
+      "title": "यू.आई. तुलना समूह बटन",
+      "description": "यू.आई. तुलना समूह बटन ।",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "synchronize",
+          "export",
+          "reject"
+        ]
+      }
+    },
+    "dcmuiDiffAction": {
+      "title": "यू.आई. तुलना क्रिया",
+      "description": "यू.आई. तुलना क्रिया ।",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "patient-update",
+          "study-reject-export",
+          "study-reject",
+          "study-export"
+        ]
+      }
+    }
+  }
+}

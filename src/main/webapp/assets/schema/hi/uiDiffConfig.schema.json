@@ -1,0 +1,66 @@
+{
+  "title": "यू.आई. तुलना विन्यास",
+  "description": "यू.आई. तुलना विन्यास ।",
+  "type": "object",
+  "required": [
+    "dcmuiDiffConfigName"
+  ],
+  "properties": {
+    "dcmuiDiffConfigName": {
+      "title": "यू.आई. तुलना विन्यास का नाम",
+      "description": "यू.आई. तुलना विन्यास का नाम ।",
+      "type": "string"
+    },
+    "dcmuiDiffCallingAET": {
+      "title": "तुलना आह्वान ए.इ.टी.",
+      "description": "तुलना आह्वान ए.इ.टी. ।",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmuiDiffPrimaryCFindSCP": {
+      "title": "यू.आई. तुलना प्राथमिक सी-फाइंड एस.सी.पी.",
+      "description": "यू.आई. तुलना प्राथमिक सी-फाइंड एस.सी.पी. ।",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffPrimaryCMoveSCP": {
+      "title": "यू.आई. तुलना प्राथमिक सी-मूव एस.सी.पी.",
+      "description": "यू.आई. तुलना प्राथमिक सी-मूव एस.सी.पी. ।",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffPrimaryCStoreSCP": {
+      "title": "यू.आई. तुलना प्राथमिक सी-स्टोर एस.सी.पी.",
+      "description": "यू.आई. तुलना प्राथमिक सी-स्टोर एस.सी.पी. ।",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffSecondaryCFindSCP": {
+      "title": "यू.आई. तुलना द्वितीयक सी-फाइंड एस.सी.पी.",
+      "description": "यू.आई. तुलना द्वितीयक सी-फाइंड एस.सी.पी. ।",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffSecondaryCMoveSCP": {
+      "title": "यू.आई. तुलना द्वितीयक सी-मूव एस.सी.पी.",
+      "description": "यू.आई. तुलना द्वितीयक सी-मूव एस.सी.पी. ।",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffSecondaryCStoreSCP": {
+      "title": "यू.आई. तुलना द्वितीयक सी-स्टोर एस.सी.पी.",
+      "description": "यू.आई. तुलना द्वितीयक सी-स्टोर एस.सी.पी. ।",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffCriteria": {
+      "title": "यू.आई. तुलना मानदण्ड",
+      "description": "यू.आई. तुलना मानदण्ड ।",
+      "titleKey":"{dcmuiDiffCriteriaTitle}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDiffCriteria.schema.json"
+      }
+    }
+  }
+}

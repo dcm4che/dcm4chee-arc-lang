@@ -1,0 +1,46 @@
+{
+  "title": "हस्तांतरण क्षमता",
+  "description": "प्रत्येक हस्तांतरण क्षमता एस.ओ.पी. वर्ग को निर्दिष्ट करती है जिसे नेटवर्क ए.इ. समर्थन कर सकता है, प्रकार (SCP या SCU) और हस्तांतरण वाक्यविन्यास जो वह उपयोग कर सकता है ।",
+  "type": "object",
+  "required": [
+    "dicomSOPClass",
+    "dicomTransferRole",
+    "dicomTransferSyntax"
+  ],
+  "properties": {
+    "cn": {
+      "title": "नाम",
+      "description": "हस्तांतरण क्षमता का मनमाना/सार्थक नाम ।",
+      "type": "string"
+    },
+    "dicomSOPClass": {
+      "title": "एस.ओ.पी. वर्ग",
+      "description": "एस.ओ.पी. वर्ग यू.आई.डी. ।",
+      "type": "string",
+      "format": "dcmSOPClass"
+    },
+    "dicomTransferRole": {
+      "title": "डाइकोम हस्तांतरण भूमिका",
+      "description": "डाइकोम हस्तांतरण भूमिका ।",
+      "type": "string",
+      "enum": [
+        "SCP",
+        "SCU"
+      ]
+    },
+    "dicomTransferSyntax": {
+      "title": "हस्तांतरण वाक्यविन्यास",
+      "description": "हस्तांतरण वाक्यविन्यास जिन्हें SCU के रूप में अनुरोध किया जा सकता है या जिन्हें SCP के रूप में पेश किया जाता है ।",
+      "type": "array",
+      "format": "dcmTransferSyntax",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmTransferCapability": {
+      "title": "हस्तांतरण क्षमता एक्सटेंशन",
+      "description": "डीसीएम्४ची मालिकाना हस्तांतरण क्षमताओं के गुण ।",
+      "$ref": "dcmTransferCapability.schema.json"
+    }
+  }
+}

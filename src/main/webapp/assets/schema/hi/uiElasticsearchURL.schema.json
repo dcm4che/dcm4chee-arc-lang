@@ -1,0 +1,45 @@
+{
+  "title": "यू.आई. इलास्टिकसर्च यू.आर.एल. विन्यास",
+  "description": "इलास्टिकसर्च यू.आर.एल. ।",
+  "type": "object",
+  "required": [
+    "dcmuiElasticsearchURLName",
+    "dcmuiElasticsearchURL",
+    "dcmuiElasticsearchIsDefault",
+    "dcmuiElasticsearchInstalled"
+  ],
+  "properties": {
+    "dcmuiElasticsearchURLName": {
+      "title": "इलास्टिकसर्च यू.आर.एल. का नाम",
+      "description": "यू.आई. इलास्टिकसर्च यू.आर.एल. का नाम ।",
+      "type": "string"
+    },
+    "dcmuiElasticsearchURL": {
+      "title": "इलास्टिकसर्च यू.आर.एल.",
+      "description": "इलास्टिकसर्च का प्रवेश यू.आर.एल., उदाहरण के तौर पे http(s)://<elasticsearch-host>:<elasticsearch-port> ।",
+      "type": "string"
+    },
+    "dcmuiElasticsearchURLKeycloakServer": {
+      "title": "कीक्लोक सर्वर",
+      "description": "इलास्टिकसर्च से संपर्क करने के लिए कीक्लोक सर्वर को चुने जहा से बेरर टोकन को प्राप्त करें ।",
+      "type":  "string",
+      "format": "dcmKeycloakServer"
+    },"dcmuiAuditEnterpriseSiteID": {
+      "title": "Audit Enterprise SiteID",
+      "description": "Set Audit Enterprise SiteID which should be used on Elasticsearch queries",
+      "type": "string"
+    },
+    "dcmuiElasticsearchIsDefault": {
+      "title": "डिफ़ॉल्ट है",
+      "description": "इस यू.आर.एल. विन्यास को डिफ़ॉल्ट के रूप में सेट करें ।(सुनिश्चित करें की सिर्फ किसी एक यू.आर.एल. विन्यास को डिफ़ॉल्ट के रूप में सेट करें) ।",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiElasticsearchInstalled": {
+      "title": "स्थापित",
+      "description": "इस यू.आर.एल. को यू.आई. में इस्तमाल करें ।",
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

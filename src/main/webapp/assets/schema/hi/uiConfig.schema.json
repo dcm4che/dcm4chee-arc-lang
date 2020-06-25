@@ -1,0 +1,149 @@
+{
+  "title": "यू.आई. विन्यास",
+  "description": "यू.आई. विन्यास",
+  "type": "object",
+  "required": [
+    "dcmuiConfigName"
+  ],
+  "properties": {
+    "dcmuiConfigName": {
+      "title": "यू.आई. विन्यास का नाम",
+      "description": "यू.आई. विन्यास का नाम",
+      "type": "string"
+    },
+    "dcmuiModalities": {
+      "title": "स्टेटिस्टिक मोडेलिटीज़",
+      "description": "पूर्व चुने हुए मोडेलिटीज़ जो स्टेटिस्टिक पेज में दिखने चाहिए",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiLanguageConfig":{
+      "title": "Language Config",
+      "description": "Config the languages of the UI",
+      "titleKey":"{dcmuiLanguageConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiLanguage.schema.json"
+      }
+    },
+    "dcmuiWidgetAets": {
+      "title": "विजेट ए.इ.टी.",
+      "description": "उन ए.इ.टी. को चुने जो ए.इ.टी. विजेट में दिखने चाहिए, जिसमें कौनसे नए जोड़े गए ए.इ.टी. को स्वीकृत आह्वान ए.इ.टी. के रूप में इस्तमाल किया जाए, यह आप चुन सकते है ।",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiBackgroundURL": {
+      "title": "पृष्ठभूमि का यू.आर.एल.",
+      "description": "यू.आई. का पृष्ठभूमि बदलने के लिए पृष्ठभूमि का यू.आर.एल., यह सापेक्ष या निरपेक्ष यू.आर.एल. हो सकता है, छवि की चौड़ाई कम से कम १०२४px होनी चाहिए ।",
+      "type": "string"
+    },
+    "dcmuiLogoURL": {
+      "title": "प्रतीक चिन्ह का यू.आर.एल.",
+      "description": "यू.आई. का प्रतीक चिन्ह बदलने के लिए प्रतीक चिन्ह का यू.आर.एल., यह सापेक्ष या निरपेक्ष यू.आर.एल. हो सकता है, छवि की चौड़ाई १४०px होनी चाहिए और पारदर्शी पृष्ठभूमि के साथ png प्रारूप में होनी चाहिए ।",
+      "type": "string"
+    },
+    "dcmuiDefaultWidgetAets": {
+      "title": "डिफ़ॉल्ट विजेट ए.इ.टी.",
+      "description": "उन ए.इ.टी. का चयन करें, जिन्हें विजेट ए.इ.टी. पर पूर्व चुने जाने चाहिए ।",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiAetConfig": {
+      "title": "ए.इ.टी. की सूची",
+      "description": "यू.आई. में ए.इ.टी. की सूची के शीर्ष पर जो ए.इ.टी. दिखने चाहिए, परिभाषित करें ।",
+      "titleKey":"{dcmuiAetListName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiAet.schema.json"
+      }
+    },
+    "dcmuiWebAppConfig": {
+      "title": "वेब अनुप्रयोगों की सूची",
+      "description": "यू.आई. में वेब अनुप्रयोगों की सूची के शीर्ष पर जो वेब अनुप्रयोग दिखने चाहिए, परिभाषित करें ।",
+      "titleKey":"{dcmuiWebAppListName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiWebApp.schema.json"
+      }
+    },
+    "dcmuiPermission": {
+      "title": "अनुमति",
+      "description": "अनुमति ।",
+      "titleKey":"{dcmuiPermissionName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiPermission.schema.json"
+      }
+    },"dcmuiFilterTemplateObject": {
+      "title": "UI Filter Template",
+      "description": "Defined filter template",
+      "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
+      "type": "array",
+      "items" : {
+        "$ref": "uiFilterTemplate.schema.json"
+      }
+    },
+    "dcmuiDiffConfig": {
+      "title": "स्टडी तुलना विन्यास",
+      "description": "स्टडी तुलना विन्यास ।",
+      "titleKey":"{dcmuiDiffConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDiffConfig.schema.json"
+      }
+    },
+    "dcmuiDashboardConfig": {
+      "title": "यू.आई. डैशबोर्ड विन्यास",
+      "description": "यू.आई. डैशबोर्ड विन्यास ।",
+      "titleKey":"{dcmuiDashboardConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDashboard.schema.json"
+      }
+    },
+    "dcmuiStudyTableConfig": {
+      "title": "यू.आई. स्टडी सारिणी विन्यास",
+      "description": "सारिणी का विन्यास ।",
+      "titleKey":"{dcmuiStudyTableConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiTable.schema.json"
+      }
+    },
+    "dcmuiElasticsearchConfig": {
+      "title": "यू.आई. इलास्टिकसर्च विन्यास",
+      "description": "प्रो संस्करण के लिए इलास्टिकसर्च विन्यास ।",
+      "titleKey":"{dcmuiElasticsearchConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiElasticsearch.schema.json"
+      }
+    },
+    "dcmuiDeviceURLObject": {
+      "title": "यू.आई. डिवाइस यू.आर.एल.",
+      "description": "अन्य यू.आई. डिवाइस यू.आर.एल. ।",
+      "titleKey":"{dcmuiDeviceURLName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDeviceURL.schema.json"
+      }
+    },
+    "dcmuiDeviceClusterObject": {
+      "title": "यू.आई. क्लस्टर विन्यास",
+      "description": "डिवाइसेस को क्लस्टर में समूहित करें ।",
+      "titleKey":"{dcmuiDeviceClusterName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDeviceCluster.schema.json"
+      }
+    }
+  }
+}

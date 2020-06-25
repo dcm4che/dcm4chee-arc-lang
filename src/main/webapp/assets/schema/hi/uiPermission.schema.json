@@ -1,0 +1,110 @@
+{
+  "title": "यू.आई. अनुमति",
+  "description": "यू.आई. अनुमति ।",
+  "type": "object",
+  "required": [
+    "dcmuiPermissionName",
+    "dcmuiAction"
+  ],
+  "properties": {
+    "dcmuiPermissionName": {
+      "title": "यू.आई. अनुमति का नाम",
+      "description": "यू.आई. क्रिया के लिए अनुमति का नाम ।",
+      "type": "string"
+    },
+    "dcmuiAction": {
+      "title": "यू.आई. क्रिया",
+      "description": "यू.आई. क्रिया ।",
+      "type": "string",
+      "enum": [
+        "menu-studies",
+        "menu-dashboard",
+        "menu-correct_data",
+        "menu-lifecycle_management",
+        "menu-audit_record_repository",
+        "menu-configuration",
+        "menu-move_data",
+        "menu-statistics",
+        "menu-monitoring",
+        "menu-study",
+        "menu-xds",
+        "tab-study-study",
+        "tab-monitoring->queues",
+        "tab-monitoring->export",
+        "tab-monitoring->external_retrieve",
+        "tab-monitoring->control",
+        "tab-monitoring->associations",
+        "tab-monitoring->storage_commitments",
+        "tab-monitoring->storage_systems",
+        "tab-monitoring->diff",
+        "tab-statistics->statistics",
+        "tab-statistics->studies-stored",
+        "tab-configuration->devices",
+        "tab-configuration->ae_list",
+        "tab-configuration->hl7_applications",
+        "tab-configuration->permission",
+        "tab-correct_data->diff",
+        "tab-correct_data->patient_data",
+        "tab-move_data->retrieve",
+        "tab-move_data->export",
+        "tab-audit-record-repository->all",
+        "tab-audit-record-repository->audit_errors",
+        "tab-audit-record-repository->app_errors",
+        "tab-audit-record-repository->authentication",
+        "tab-study-study",
+        "tab-study-patient",
+        "tab-study-mwl",
+        "tab-study-diff",
+        "action-devicelist-device_configuration",
+        "action-studies-patient",
+        "action-studies-mwl",
+        "action-studies-study",
+        "action-studies-serie",
+        "action-studies-instance",
+        "action-studies-copy_merge_move",
+        "action-studies-more_function",
+        "action-studies-diff",
+        "action-studies-count",
+        "action-studies-size",
+        "action-studies-viewer",
+        "action-studies-verify_storage_commitment",
+        "action-studies-download",
+        "action-monitoring->queues-all_action",
+        "action-monitoring->export-all_action",
+        "action-monitoring->external_retrieve-all_action",
+        "action-monitoring->queues-single_action",
+        "action-monitoring->export-single_action",
+        "action-monitoring->diff_monitor-all_action",
+        "action-monitoring->external_retrieve-single_action"
+      ]
+    },
+    "dcmuiActionParam": {
+      "title": "यू.आई. क्रिया मापदण्ड",
+      "description": "यू.आई. क्रिया मापदण्ड ।",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum":[
+          "edit",
+          "create",
+          "delete",
+          "export",
+          "accessible",
+          "visible",
+          "merge",
+          "upload",
+          "reject",
+          "restore"
+        ]
+      }
+    },
+    "dcmAcceptedUserRole": {
+      "title": "स्वीकृत उपभोक्ता की भूमिका",
+      "description": "स्वीकृत उपभोक्ता की भूमिका ।",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    }
+  }
+}

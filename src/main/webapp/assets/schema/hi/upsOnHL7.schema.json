@@ -1,0 +1,138 @@
+{
+  "title": "एच.एल.७. पे यू.पी.एस. नियम",
+  "description": "एच.एल.७.v2 संदेश प्राप्त होने पे एकीकृत कार्यसूची में वर्क आइटम को निर्माण या अपडेट करें ।",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmUPSLabel",
+    "dcmUPSPriority",
+    "dcmUPSInputReadinessState",
+    "dcmURI"
+  ],
+  "properties": {
+    "hl7UPSOnHL7ID": {
+      "title": "एच.एल.७. पे यू.पी.एस. नियम की आई.डी.",
+      "description": "एच.एल.७. पे यू.पी.एस. नियम की आई.डी. ।",
+      "type": "string"
+    },
+    "dcmProperty": {
+      "title": "नियम",
+      "description": "नियम इस प्रारूप में <SEG>-<Seq#>[.<Comp#>[.<SubComp#>]][!]=<regEx> ।उदाहरण के तौर पे: MSH-9=ORM\\^O01 ।",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmProperty"
+    },
+    "dcmSchedule": {
+      "title": "समय नियम",
+      "description": "सिर्फ निर्दिष्ट समय रेंजों में नियम को लागू करें ।",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSchedule"
+    },
+    "dcmUPSLabel": {
+      "title": "प्रक्रिया स्टेप लेबल",
+      "description": "निर्माण किए गए यू.पी.एस. में प्रक्रिया स्टेप लेबल (००७४,१२०४) का मूल्य ।प्राप्त हुए एच.एल.७. संदेश में {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} गुण के मूल्य के साथ बदला जाएगा ।",
+      "type": "string"
+    },
+    "dcmUPSWorklistLabel": {
+      "title": "कार्यसूची लेबल",
+      "description": "निर्माण किए गए यू.पी.एस. में कार्यसूची लेबल (००७४,१२०२) का मूल्य ।प्राप्त हुए एच.एल.७. संदेश में {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} गुण के मूल्य के साथ बदला जाएगा । If absent or if value could not be found in एच.एल.७. Message, एच.एल.७. Application का नाम the receiving एच.एल.७. Application will be used.",
+      "type": "string"
+    },
+    "dcmUPSPriority": {
+      "title": "प्राथमिकता",
+      "description": "निर्माण किए गए यू.पी.एस. में अनुसूचित प्रक्रिया स्टेप प्राथमिकता (००७४,१२००) का मूल्य ।प्रगणित मूल्य: HIGH, MEDIUM, LOW ।यदि निर्दिष्ट नहीं किया गया है, तो MEDIUM लागू होगा ।",
+      "type": "string",
+      "default": "MEDIUM",
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "dcmUPSInputReadinessState": {
+      "title": "इनपुट तत्परता स्थिति",
+      "description": "निर्माण किए गए यू.पी.एस. में इनपुट तत्परता स्थिति (००४०,४०४१) का मूल्य ।",
+      "type": "string",
+      "default": "READY",
+      "enum": [
+        "INCOMPLETE",
+        "UNAVAILABLE",
+        "READY"
+      ]
+    },
+    "dcmUPSStartDateTimeDelay": {
+      "title": "अनुसूचित प्रक्रिया स्टेप प्रारंभ तारीख समय विलम्ब",
+      "description": "प्राप्त समय से निर्माण किए गए यू.पी.एस. में अनुसूचित प्रक्रिया स्टेप प्रारंभ तारीख समय (००४०,४००५) का विलम्ब, इस प्रारूप में PnDTnHnMn.nS ।सिर्फ प्रभावशाली अगर, एच.एल.७. संदेश में अनुसूचित प्रक्रिया स्टेप प्रारंभ तारीख समय नहीं पाया गया ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmUPSCompletionDateTimeDelay": {
+      "title": "अपेक्षित समाप्ति तारीख समय विलम्ब",
+      "description": "प्राप्त समय से निर्माण किए गए यू.पी.एस. में अपेक्षित समाप्ति तारीख समय (००४०,४०११) का विलम्ब, इस प्रारूप में PnDTnHnMn.nS ।यदि निर्दिष्ट नहीं किया गया है, तो कोई अपेक्षित समाप्ति तारीख समय लागू नहीं होगा ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmUPSInstanceUIDBasedOnName": {
+      "title": "नाम पर आधारित यू.पी.एस. दृष्टांत यू.आई.डी.",
+      "description": "निर्माण किए गए यू.पी.एस. में नाम पर आधारित यू.पी.एस. एस.ओ.पी. दृष्टांत यू.आई.डी. (०००८,००१८) को मिर्माण करने का मूल्य ।प्राप्त हुए एच.एल.७. संदेश में {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} गुण के मूल्य के साथ बदला जाएगा ।यदि निर्दिष्ट नहीं किया गया है, तो यादृच्छिक रूप से निर्माण किया गया एस.ओ.पी. दृष्टांत यू.आई.डी. (०००८,००१८) का उपयोग किया जाएगा ।",
+      "type": "string"
+    },
+    "dcmDestinationAE": {
+      "title": "गंतव्य ए.इ.",
+      "description": "डाइकोम अनुप्रयोग तत्त्व का नाम जिसपे दृष्टांत सहेजे जाएंगे ।",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmUPSScheduledWorkitemCode": {
+      "title": "अनुसूचित वर्क आइटम कोड",
+      "description": "निर्माण किए गए यू.पी.एस. में अनुसूचित वर्क आइटम कोड क्रम (००४०,४०१८) का आइटम, इस प्रारूप में (CV, CSD, \"CM\") ।",
+      "type": "string"
+    },
+    "dcmUPSScheduledStationNameCode": {
+      "title": "अनुसूचित स्टेशन नाम कोड",
+      "description": "निर्माण किए गए यू.पी.एस. में अनुसूचित स्टेशन नाम कोड क्रम (००४०,४०२५) का आइटम, इस प्रारूप में (CV, CSD, \"CM\") ।",
+      "type": "string"
+    },
+    "dcmUPSScheduledStationClassCode": {
+      "title": "अनुसूचित स्टेशन वर्ग कोड",
+      "description": "निर्माण किए गए यू.पी.एस. में अनुसूचित स्टेशन वर्ग कोड क्रम (००४०,४०२६) का आइटम, इस प्रारूप में (CV, CSD, \"CM\") ।",
+      "type": "string"
+    },
+    "dcmUPSScheduledStationLocationCode": {
+      "title": "अनुसूचित स्टेशन भौगोलिक स्थान कोड",
+      "description": "निर्माण किए गए यू.पी.एस. में अनुसूचित स्टेशन भौगोलिक स्थान कोड क्रम (००४०,४०२७) का आइटम, इस प्रारूप में (CV, CSD, \"CM\") ।",
+      "type": "string"
+    },
+    "dcmUPSScheduledHumanPerformerCode": {
+      "title": "अनुसूचित मनुष्य कर्ता कोड",
+      "description": "निर्माण किए गए यू.पी.एस. में अनुसूचित मनुष्य कर्ता कोड क्रम (००४०,४०३४) में मनुष्य कर्ता कोड क्रम (००४०,४००९) का आइटम, इस प्रारूप में (CV, CSD, \"CM\") ।",
+      "type": "string"
+    },
+    "dcmUPSScheduledHumanPerformerName": {
+      "title": "अनुसूचित मनुष्य कर्ता का नाम",
+      "description": "निर्माण किए गए यू.पी.एस. में अनुसूचित मनुष्य कर्ता कोड क्रम (००४०,४०३४) के आइटम में मनुष्य कर्ता का नाम (००४०,४०३७) ।प्राप्त हुए एच.एल.७. संदेश में {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} गुण के मूल्य के साथ बदला जाएगा ।",
+      "type": "string"
+    },
+    "dcmUPSScheduledHumanPerformerOrganization": {
+      "title": "अनुसूचित मनुष्य कर्ता संस्था",
+      "description": "निर्माण किए गए यू.पी.एस. में अनुसूचित मनुष्य कर्ता कोड क्रम (००४०,४०३४) के आइटम में मनुष्य संस्था का नाम (००४०,४०३६) ।प्राप्त हुए एच.एल.७. संदेश में {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} गुण के मूल्य के साथ बदला जाएगा ।",
+      "type": "string"
+    },
+    "dcmRequestingService": {
+      "title": "अनुरोध करनेवाला सेवा",
+      "description": "निर्माण किए गए यू.पी.एस. के संदर्भित अनुरोध क्रम (००४०,ए३७०) के आइटम में अनुरोध करनेवाला सेवा (००३२,१०३३) का मूल्य ।प्राप्त हुए एच.एल.७. संदेश में {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} गुण के मूल्य के साथ बदला जाएगा ।",
+      "type": "string"
+    },
+    "dcmURI": {
+      "title": "एक्स.एस.एल. स्टाइलशीट यू.आर.आई.",
+      "description": "प्राप्त हुए एच.एल.७. संदेश से निर्माण किए गए यू.पी.एस. के गुणों में शामिल कर ट्रांसकोड करनेवाले एक्स.एस.एल. स्टाइलशीट यू.आर.आई. निर्दिष्ट करता है ।",
+      "type": "string",
+      "default": "${jboss.server.temp.url}/dcm4chee-arc/hl7-order2ups.xsl"
+    }
+  }
+}

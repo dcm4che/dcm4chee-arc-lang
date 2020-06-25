@@ -1,0 +1,52 @@
+{
+  "title": "आर्काइव संपीड़न नियम",
+  "description": "आर्काइव संपीड़न नियम ।",
+  "type": "object",
+  "required": [
+    "cn",
+    "dicomTransferSyntax",
+    "dcmRulePriority"
+  ],
+  "properties": {
+    "cn": {
+      "title": "नाम",
+      "description": "आर्काइव संपीड़न नियम का मनमाना/सार्थक नाम ।",
+      "type": "string"
+    },
+    "dicomTransferSyntax": {
+      "title": "डाइकोम स्थानांतरण वाक्यविन्यास यू.आई.डी.",
+      "description": "स्थानांतरण वाक्यविन्यास यू.आई.डी. ।",
+      "type": "string",
+      "format": "dcmTransferSyntax"
+    },
+    "dcmRulePriority": {
+      "title": "नियम प्राथमिकता",
+      "description": "नियम प्राथमिकता ।",
+      "type": "integer",
+      "default" : 0,
+      "minimum": 0
+    },
+    "dcmProperty": {
+      "title": "नियम",
+      "description": "नियम इस प्रारूप में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx} ।",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmImageWriteParam": {
+      "title": "इमेज लेखन मापदण्ड",
+      "description": "संपीड़न होने से पहले इमेज लेखन पे कॉन्फ़िगर किए गए इमेज लेखन मापदण्ड (नाम=मूल्य) ।",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmCompressionDelay": {
+      "title": "संपीड़न विलंभ",
+      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में संपीड़न विलंभ ।अगर कॉन्फ़िगर ना किया हो तो, प्राप्त होने पे संपीडित करें ।",
+      "type": "string",
+      "format": "dcmDuration"
+    }
+  }
+}

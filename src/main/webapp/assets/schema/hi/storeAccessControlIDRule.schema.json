@@ -1,0 +1,37 @@
+{
+  "title": "संचय प्रवेश निरीक्षण आई.डी. नियम",
+  "description": "संचय प्रवेश निरीक्षण आई.डी. नियम ।",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmStoreAccessControlID",
+    "dcmRulePriority"
+  ],
+  "properties": {
+    "cn": {
+      "title": "नाम",
+      "description": "संचय प्रवेश निरीक्षण आई.डी. नियम का मनमाना/सार्थक नाम ।",
+      "type": "string"
+    },
+    "dcmStoreAccessControlID": {
+      "title": "संचय प्रवेश निरीक्षण आई.डी.",
+      "description": "सारे गुणों के नियम मिलने पे स्टडीज पे निरूपण किया गया प्रवेश निरीक्षण आई.डी. ।",
+      "type": "string"
+    },
+    "dcmRulePriority": {
+      "title": "नियम प्राथमिकता",
+      "description": "नियम प्राथमिकता ।",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmProperty": {
+      "title": "नियम",
+      "description": "नियम इस प्रारूप में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx} ।",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
