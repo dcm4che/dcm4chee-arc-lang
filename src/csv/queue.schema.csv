@@ -14,3 +14,4 @@
 "dcmPurgeQueueMessageWarningDelay","Delay for purging warning queue messages","Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning queue messages are purged. If absent, there is no deletion for that particular queue"
 "dcmPurgeQueueMessageCanceledDelay","Delay for purging canceled queue messages","Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled queue messages are purged. If absent, there is no deletion for that particular queue"
 "dcmMaxQueueSize","Maximum Queue Size","Maximal number of scheduled tasks in the queue. If the number of scheduled tasks reaches the limit, an attempt to schedule another tasks will fail. 0 = no limitation."
+"dcmSchedule","Restrict Scheduling","Restrict Scheduling to specified time ranges. Use Maximum Queue Size to control maximal number of Tasks processed between specified time ranges. Only effective for scheduling Retrieve Tasks."
