@@ -1574,7 +1574,7 @@
     "xds.import": "आयातित",
     "xds.mime_type": "माइम प्रकार",
     "xds.no_documents_fond": "दस्तावेज़ नहीं मिले!",
-    "xds.patient_id_and_affinity_domain_filters_are_required": "मरीज़ आई.डी. और समानता क्षेत्र फ़िल्टर जरूरी है!",
+    "xds.patient_id_and_affinity_domain_filters_are_required": "मरीज़ की आई.डी. और समानता क्षेत्र फ़िल्टर जरूरी है!",
     "xds.show_file": "फाइल दिखाये",
     "xds.unique_id": "अनन्य आई.डी.",
     "xds.you_want_to_delete_selected_document": "क्या आप निस्चय ही चुने गए संलेख मिटाना चाहते हैं?",
