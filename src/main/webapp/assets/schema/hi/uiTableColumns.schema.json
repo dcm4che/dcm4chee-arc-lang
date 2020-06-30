@@ -38,8 +38,8 @@
       "type":  "string"
     },
     "dcmuiColumnOrder": {
-      "title": "Column width in weight",
-      "description": "Width of the column in weight ( x > 0.1 - x < infinite ) default 1",
+      "title": "Order of the Column",
+      "description": "Order of the Column",
       "type":  "string"
     }
   }
