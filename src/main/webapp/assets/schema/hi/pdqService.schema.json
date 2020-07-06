@@ -1,6 +1,6 @@
 {
-  "title": "पी.डी.क्यू सेवा",
-  "description": "पी.डी.क्यू सेवा वर्णनकर्ता ।",
+  "title": "पी.डी.क्यू. (PDQ) सेवा",
+  "description": "पी.डी.क्यू. (PDQ) सेवा वर्णनकर्ता ।",
   "type": "object",
   "required": [
     "dcmPDQServiceID",
@@ -9,21 +9,21 @@
   ],
   "properties": {
     "dcmPDQServiceID": {
-      "title": "पी.डी.क्यू सेवा आई.डी.",
-      "description": "पी.डी.क्यू सेवा आई.डी. ।",
+      "title": "पी.डी.क्यू. (PDQ) सेवा आई.डी.",
+      "description": "पी.डी.क्यू. (PDQ) सेवा आई.डी. ।",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
       ]
     },
     "dcmURI": {
-      "title": "पी.डी.क्यू सेवा यू.आर.आई.",
-      "description": "पी.डी.क्यू सेवा यू.आर.आई., उदाहरण के तौर पे 'pdq-dicom:FINDSCP' ।",
+      "title": "पी.डी.क्यू. (PDQ) सेवा यू.आर.आई. (URI)",
+      "description": "पी.डी.क्यू. (PDQ) सेवा यू.आर.आई. (URI), उदाहरण के तौर पे 'pdq-dicom:FINDSCP' ।",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "पी.डी.क्यू सेवा का वर्णन",
-      "description": "पी.डी.क्यू सेवा का स्वैछिक विषय वर्णन ।",
+      "title": "पी.डी.क्यू. (PDQ) सेवा का वर्णन",
+      "description": "पी.डी.क्यू. (PDQ) सेवा का स्वैछिक विषय वर्णन ।",
       "type": "string"
     },
     "dcmTag": {
@@ -37,13 +37,13 @@
     },
     "dcmEntity": {
       "title": "तत्त्व प्राप्ति",
-      "description": "सी-फाइंड एस.सी.पी. से मरीज़ के रेकॉर्ड या मरीज़ के स्टडीज की प्राप्ति का संकेत करता है। सिर्फ डाइकोम पी.डी.क्यू सेवाओं के लिए प्रभावशाली (URI: pdq-dicom:{AETitle}) ।",
+      "description": "सी-फाइंड एस.सी.पी. (C-FIND SCP) से मरीज़ के रेकॉर्ड या मरीज़ के स्टडीज की प्राप्ति का संकेत करता है ।सिर्फ डाइकोम (DICOM) पी.डी.क्यू. (PDQ) सेवाओं के लिए प्रभावशाली (URI: pdq-dicom:{AETitle}) ।",
       "type": "string",
       "enum": [ "Patient", "Study" ],
       "default": "Patient"
     },
     "dcmProperty": {
-      "title": "पी.डी.क्यू सेवा गुण",
+      "title": "पी.डी.क्यू. (PDQ) सेवा गुण",
       "description": "गुण इस प्रारूप में <नाम>=<मूल्य>, उदाहरण के तौर पे 'LocalAET=DCM4CHEE' ।",
       "type": "array",
       "items": {

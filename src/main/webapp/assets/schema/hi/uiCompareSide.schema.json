@@ -27,7 +27,7 @@
     },
     "dcmuiCompareSideElasticsearch": {
       "title": "इलास्टिकसर्च",
-      "description": "इलास्टिकसर्च यू.आर.एल. को चुने ।",
+      "description": "इलास्टिकसर्च यू.आर.एल. (URL) को चुने ।",
       "type": "string",
       "format":"dcmuiElasticsearchConfig"
     },

@@ -1,6 +1,6 @@
 {
   "title": "आर्काइव डिवाइस",
-  "description": "डाइकोम आर्काइव डिवाइस से सम्बंधित जानकारी ।",
+  "description": "डाइकोम (DICOM) आर्काइव डिवाइस से सम्बंधित जानकारी ।",
   "type": "object",
   "required": [
     "dcmFuzzyAlgorithmClass",
@@ -113,14 +113,14 @@
       ]
     },
     "dcmBulkDataDescriptorID": {
-      "title": "अधिकांश डेटा वर्णनकर्ता की आई.डी.",
-      "description": "संगृहीत दृष्टांतों के मेटाडेटा उपलब्ध करानेवाले सारे सेवाओं द्वारा लागू की गई अधिकांश डेटा वर्णनकर्ता की आई.डी. ।अगर कॉन्फ़िगर न किया हो तो, सिर्फ वही गुण अधिकांश डेटा के तौर पे माने जाएंगे जो 'बिना अधिकांश डेटा के मिश्र दृष्टांत की प्राप्ति' सेवा वर्ग द्वारा निर्दिष्ट किए है ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "अधिकांश डेटा वर्णनकर्ता की आई.डी. (ID)",
+      "description": "संगृहीत दृष्टांतों के मेटाडेटा उपलब्ध करानेवाले सारे सेवाओं द्वारा लागू की गई अधिकांश डेटा वर्णनकर्ता की आई.डी. (ID) ।यदि कॉन्फ़िगर न किया हो तो, सिर्फ वही गुण अधिकांश डेटा के तौर पे माने जाएंगे जो 'बिना अधिकांश डेटा के मिश्र दृष्टांत की प्राप्ति' सेवा वर्ग द्वारा निर्दिष्ट किए है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmBulkDataDescriptorID"
     },
     "dcmSeriesMetadataStorageID": {
-      "title": "सीरीज मेटाडेटा स्टोरेज आई.डी.",
-      "description": "स्टोरेज की आई.डी. जिसमें हर एक सीरीज के सारे दृष्टांतों के कुल मेटाडेटा को ज़िप फाइल के रूप में सहेजा जाएगा ।एक से ज़्यादा स्टोरेज सिस्टम्स कॉन्फ़िगर किए जा सकते है ।अगर कॉन्फ़िगर न किया हो तो, कुल सीरीज मेटाडेटा नहीं सहेजा जाएगा ।",
+      "title": "सीरीज मेटाडेटा स्टोरेज आई.डी. (ID)",
+      "description": "स्टोरेज की आई.डी. (ID) जिसमें हर एक सीरीज के सारे दृष्टांतों के कुल मेटाडेटा को ज़िप फाइल के रूप में सहेजा जाएगा ।एक से ज़्यादा स्टोरेज सिस्टम्स कॉन्फ़िगर किए जा सकते है ।यदि कॉन्फ़िगर न किया हो तो, कुल सीरीज मेटाडेटा नहीं सहेजा जाएगा ।",
       "type": "array",
       "items" : {
         "type": "string"
@@ -129,13 +129,13 @@
     },
     "dcmSeriesMetadataDelay": {
       "title": "कुल सीरीज मेटाडेटा विलम्ब",
-      "description": "कुल सीरीज मेटाडेटा को स्टोरेज पे सहेजने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में विलम्ब ।अगर कॉन्फ़िगर न किया हो तो, कुल सीरीज मेटाडेटा नहीं सहेजा जाएगा ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "description": "कुल सीरीज मेटाडेटा को स्टोरेज पे सहेजने के लिए आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में विलम्ब ।यदि कॉन्फ़िगर न किया हो तो, कुल सीरीज मेटाडेटा नहीं सहेजा जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmSeriesMetadataPollingInterval": {
       "title": "अपडेट सीरीज मेटाडेटा पोलिंग अंतराल",
-      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में अनुसूचित हुए सीरीज के मेटाडेटा अपडेट के लिए पोलिंग अंतराल ।अगर कॉन्फ़िगर न किया हो तो, कुल सीरीज मेटाडेटा नहीं सहेजा जाएगा ।",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में अनुसूचित हुए सीरीज के मेटाडेटा अपडेट के लिए पोलिंग अंतराल ।यदि कॉन्फ़िगर न किया हो तो, कुल सीरीज मेटाडेटा नहीं सहेजा जाएगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -157,14 +157,14 @@
     },
     "dcmSeriesMetadataMaxRetries": {
       "title": "अपडेट सीरीज मेटाडेटा पुनःपरीक्षण की अधिकतम संख्या",
-      "description": "कुल सीरीज मेटाडेटा के निर्माण या अपडेट के पुनःपरीक्षण की अधिकतम संख्या ।सिर्फ प्रभावशाली अगर अपडेट सीरीज मेटाडेटा पुनःपरीक्षण अंतराल को निर्दिष्ट किया है. -1 = हमेशा ।",
+      "description": "कुल सीरीज मेटाडेटा के निर्माण या अपडेट के पुनःपरीक्षण की अधिकतम संख्या ।सिर्फ प्रभावशाली यदि अपडेट सीरीज मेटाडेटा पुनःपरीक्षण अंतराल को निर्दिष्ट किया है. -1 = हमेशा ।",
       "type": "integer",
       "default": 0,
       "minimum": -1
     },
     "dcmSeriesMetadataRetryInterval": {
       "title": "अपडेट सीरीज मेटाडेटा पुनःपरीक्षण अंतराल",
-      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में अंतराल जिसमें कुल सीरीज मेटाडेटा के निर्माण या अपडेट के असफल प्रयासों का पुनःपरीक्षण किया जाएगा ।सिर्फ प्रभावशाली अगर अपडेट सीरीज मेटाडेटा पुनःपरीक्षण की अधिकतम संख्या != 0 ।अगर कॉन्फ़िगर न किया हो तो, असफल प्रयासों का पुनःपरीक्षण नहीं होगा ।",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में अंतराल जिसमें कुल सीरीज मेटाडेटा के निर्माण या अपडेट के असफल प्रयासों का पुनःपरीक्षण किया जाएगा ।सिर्फ प्रभावशाली यदि अपडेट सीरीज मेटाडेटा पुनःपरीक्षण की अधिकतम संख्या != 0 ।यदि कॉन्फ़िगर न किया हो तो, असफल प्रयासों का पुनःपरीक्षण नहीं होगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -176,19 +176,19 @@
     },
     "dcmPurgeInstanceRecordsDelay": {
       "title": "दृष्टांतों के रिकार्ड्स को निकालने का विलम्ब",
-      "description": "डेटाबेस से दृष्टांतों के रेकॉर्ड्स को निकालने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में विलम्ब । किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है सिर्फ प्रभावशाली अगर 'दृष्टांतों के रिकार्ड्स को निकाले = सही' ।",
+      "description": "डेटाबेस से दृष्टांतों के रेकॉर्ड्स को निकालने के लिए आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में विलम्ब । किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है सिर्फ प्रभावशाली यदि 'दृष्टांतों के रिकार्ड्स को निकाले = सही' ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeInstanceRecordsPollingInterval": {
       "title": "दृष्टांतों के रिकार्ड्स को निकालने का पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल अनुसूचित हुए सीरीज के दृष्टांतों के रेकॉर्ड्स को डेटाबेस से निकालने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS ।सिर्फ प्रभावशाली अगर 'दृष्टांतों के रिकार्ड्स को निकाले = सही' ।",
+      "description": "पोलिंग अंतराल अनुसूचित हुए सीरीज के दृष्टांतों के रेकॉर्ड्स को डेटाबेस से निकालने के लिए आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS ।सिर्फ प्रभावशाली यदि 'दृष्टांतों के रिकार्ड्स को निकाले = सही' ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeInstanceRecordsFetchSize": {
       "title": "दृष्टांतों के रिकार्ड्स को निकालने के प्राप्ति का माप",
-      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए अनुसूचित हुए सीरीज के दृष्टांतों के रेकॉर्ड्स को डेटाबेस से निकालने की अधिकतम संख्या ।सिर्फ प्रभावशाली अगर 'दृष्टांतों के रिकार्ड्स को निकाले = सही' ।",
+      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए अनुसूचित हुए सीरीज के दृष्टांतों के रेकॉर्ड्स को डेटाबेस से निकालने की अधिकतम संख्या ।सिर्फ प्रभावशाली यदि 'दृष्टांतों के रिकार्ड्स को निकाले = सही' ।",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
@@ -196,7 +196,7 @@
     },
     "dcmMWLPollingInterval": {
       "title": "एम्.डब्ल्यू.एल. पोलिंग अंतराल",
-      "description": "निष्क्रिय एम्.डब्ल्यू.एल. आइटम्स के स्थिति को अपडेट या एम्.डब्ल्यू.एल. आइटम्स को मिटाने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में पोलिंग अंतराल ।अगर कॉन्फ़िगर न किया हो तो, एम्.डब्ल्यू.एल. आइटम्स नहीं अपडेट किए जाएंगे या नहीं मिटेंगे ।",
+      "description": "निष्क्रिय एम्.डब्ल्यू.एल. आइटम्स के स्थिति को अपडेट या एम्.डब्ल्यू.एल. आइटम्स को मिटाने के लिए आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में पोलिंग अंतराल ।यदि कॉन्फ़िगर न किया हो तो, एम्.डब्ल्यू.एल. आइटम्स नहीं अपडेट किए जाएंगे या नहीं मिटेंगे ।",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -210,19 +210,19 @@
     },
     "dcmDeleteMWLDelay": {
       "title": "एम्.डब्ल्यू.एल. को मिटाने का विलम्ब",
-      "description": "एम्.डब्ल्यू.एल. आइटम्स को मिटाने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब ।स्थिति विशिष्ट विलम्ब उपसर्ग द्वारा निर्दिष्ट की जा सकती है 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:' ।अगर कॉन्फ़िगर न किया हो तो, एम्.डब्ल्यू.एल. आइटम्स नहीं मिटेंगे ।",
+      "description": "एम्.डब्ल्यू.एल. आइटम्स को मिटाने के लिए आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब ।स्थिति विशिष्ट विलम्ब उपसर्ग द्वारा निर्दिष्ट की जा सकती है 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:' ।यदि कॉन्फ़िगर न किया हो तो, एम्.डब्ल्यू.एल. आइटम्स नहीं मिटेंगे ।",
       "type": "array",
       "items" : { "type": "string" }
     },
     "dcmDeleteUPSPollingInterval": {
       "title": "यू.पी.एस. को मिटाने का पोलिंग अंतराल",
-      "description": "एकीकृत प्रक्रिया स्टेप्स (यू.पी.एस.) को मिटाने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में पोलिंग अंतराल ।अगर कॉन्फ़िगर न किया हो तो, एकीकृत प्रक्रिया स्टेप्स नहीं मिटेंगे ।",
+      "description": "एकीकृत प्रक्रिया स्टेप्स (यू.पी.एस.) को मिटाने के लिए आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में पोलिंग अंतराल ।यदि कॉन्फ़िगर न किया हो तो, एकीकृत प्रक्रिया स्टेप्स नहीं मिटेंगे ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmDeleteUPSFetchSize": {
       "title": "यू.पी.एस. को मिटाने के प्राप्ति का माप",
-      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए एकीकृत प्रक्रिया स्टेप्स (UPS) को मिटाने की अधिकतम संख्या ।",
+      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए एकीकृत प्रक्रिया स्टेप्स (यू.पी.एस.) को मिटाने की अधिकतम संख्या ।",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
@@ -230,19 +230,19 @@
     },
     "dcmDeleteUPSCompletedDelay": {
       "title": "पूर्ण हुए यू.पी.एस. को मिटाने का विलम्ब",
-      "description": "विलोपन ताले के बिना पूर्ण हुए एकीकृत प्रक्रिया स्टेप्स को मिटाने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब ।अगर कॉन्फ़िगर न किया हो तो, विलोपन ताले के बिना पूर्ण हुए एकीकृत प्रक्रिया स्टेप्स को तुरंत ही मिटाए जाएंगे ।",
+      "description": "विलोपन ताले के बिना पूर्ण हुए एकीकृत प्रक्रिया स्टेप्स को मिटाने के लिए आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब ।यदि कॉन्फ़िगर न किया हो तो, विलोपन ताले के बिना पूर्ण हुए एकीकृत प्रक्रिया स्टेप्स को तुरंत ही मिटाए जाएंगे ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmDeleteUPSCanceledDelay": {
       "title": "रद्द हुए यू.पी.एस. को मिटाने का विलम्ब",
-      "description": "विलोपन ताले के बिना रद्द हुए एकीकृत प्रक्रिया स्टेप्स को मिटाने के लिए आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब ।अगर कॉन्फ़िगर न किया हो तो, विलोपन ताले के बिना रद्द हुए एकीकृत प्रक्रिया स्टेप्स को तुरंत ही मिटाए जाएंगे ।",
+      "description": "विलोपन ताले के बिना रद्द हुए एकीकृत प्रक्रिया स्टेप्स को मिटाने के लिए आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब ।यदि कॉन्फ़िगर न किया हो तो, विलोपन ताले के बिना रद्द हुए एकीकृत प्रक्रिया स्टेप्स को तुरंत ही मिटाए जाएंगे ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmOverwritePolicy": {
       "title": "अधिलेखन नीति",
-      "description": "अधिलेखन नीति ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "description": "अधिलेखन नीति ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "NEVER",
       "enum": [
@@ -255,13 +255,13 @@
     },
     "dcmRecordAttributeModification": {
       "title": "गुण के परिवर्तन को रेकॉर्ड करें",
-      "description": "सहेजे गए ऑब्जेक्ट्स के गुणों के परिवर्तन को मूल गुणों के क्रम के आइटम्स में रेकॉर्ड करने का संकेत करता है ।किसी आर्काइव नेटवर्क ए.इ. या आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "description": "सहेजे गए ऑब्जेक्ट्स के गुणों के परिवर्तन को मूल गुणों के क्रम के आइटम्स में रेकॉर्ड करने का संकेत करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) या आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": true
     },
     "dcmAcceptMissingPatientID": {
-      "title": "अनुपस्थित मरीज़ की आई.डी. स्वीकार करें",
-      "description": "दृष्टांतों में अनुपस्थित मरीज़ की आई.डी. को स्वीकार कर मरीज़ के लिए नई आई.डी. निर्माण करने का संकेत करता है ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "अनुपस्थित मरीज़ की आई.डी. (ID) स्वीकार करें",
+      "description": "दृष्टांतों में अनुपस्थित मरीज़ की आई.डी. (ID) को स्वीकार कर मरीज़ के लिए नई आई.डी. (ID) निर्माण करने का संकेत करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "CREATE",
       "enum": [
@@ -271,8 +271,8 @@
       ]
     },
     "dcmAcceptConflictingPatientID": {
-      "title": "परस्पर विरोधी मरीज़ की आई.डी. स्वीकार करें",
-      "description": "अगर प्राप्त हुए दृष्टांतों में मरीज़ की आई.डी. पहले से प्राप्त हुए स्टडी के दृष्टांतों में मरीज़ की आई.डी. के साथ परस्पर विरोधी हो तो, ऐसे दृष्टांतों को स्वीकार करने का संकेत करता है ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "परस्पर विरोधी मरीज़ की आई.डी. (ID) स्वीकार करें",
+      "description": "यदि प्राप्त हुए दृष्टांतों में मरीज़ की आई.डी. (ID) पहले से प्राप्त हुए स्टडी के दृष्टांतों में मरीज़ की आई.डी. (ID) के साथ परस्पर विरोधी हो तो, ऐसे दृष्टांतों को स्वीकार करने का संकेत करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "MERGED",
       "enum": [
@@ -283,13 +283,13 @@
     },
     "dcmBulkDataSpoolDirectory": {
       "title": "अधिकांश डेटा स्पूल निर्देशिका",
-      "description": "अधिकांश डेटा स्पूल निर्देशिका का पथ ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "description": "अधिकांश डेटा स्पूल निर्देशिका का पथ ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "${jboss.server.temp.dir}"
     },
     "dcmHideSPSWithStatusFromMWL": {
       "title": "इन स्थिति के एसपीएस को छिपाए",
-      "description": "एम्.डब्ल्यू.एल. एससीपी से न वापस की जानेवाले एम्.डब्ल्यू.एल. आइटम्स के अनुसूचित प्रक्रिया स्टेप कोड ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "description": "एम्.डब्ल्यू.एल. एससीपी से न वापस की जानेवाले एम्.डब्ल्यू.एल. आइटम्स के अनुसूचित प्रक्रिया स्टेप कोड ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items" : {
         "type": "string",
@@ -306,68 +306,68 @@
       }
     },
     "dcmValidateCallingAEHostname": {
-      "title": "आह्वान ए.इ. के मेज़बान नाम को मान्य करें",
-      "description": "संपर्क निवेदनकर्ता के आह्वान ए.इ. के मेज़बान नाम या आईपी एड्रेस को मान्य करें ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "आह्वान ए.इ. (AE) के मेज़बान नाम को मान्य करें",
+      "description": "संपर्क निवेदनकर्ता के आह्वान ए.इ. (AE) के मेज़बान नाम या आईपी एड्रेस को मान्य करें ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmPersonNameComponentOrderInsensitiveMatching": {
       "title": "व्यक्ति के नाम के कम्पोनेंट ऑर्डर असंवेदनशील मिलान",
-      "description": "व्यक्तियों के नामों के फजी सिमेंटिक मिलान पे नाम के कम्पोनेंट ऑर्डर पे असंवेदनशील मिलान की प्रक्रिया का संकेत करता है ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "description": "व्यक्तियों के नामों के फजी सिमेंटिक मिलान पे नाम के कम्पोनेंट ऑर्डर पे असंवेदनशील मिलान की प्रक्रिया का संकेत करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmSendPendingCGet": {
       "title": "अनिर्णीत सी-गेट भेजे",
-      "description": "अनिर्णीत सी-गेट प्रतिक्रिया सक्षम करता है ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "description": "अनिर्णीत सी-गेट प्रतिक्रिया सक्षम करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmSendPendingCMoveInterval": {
       "title": "अनिर्णीत सी-मूव भेजने का अंतराल",
-      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में अनिर्णीत सी-मूव प्रतिक्रियाओं का अंतराल; अनुपलभ्य हो तो असक्षम ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में अनिर्णीत सी-मूव प्रतिक्रियाओं का अंतराल; अनुपलभ्य हो तो असक्षम ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmWadoSupportedSRClasses": {
-      "title": "वाडो समर्थित एस.आर. वर्ग",
-      "description": "वाडो प्राप्ति के लिए समर्थित एस.आर. एस.ओ.पी. वर्ग ।",
+      "title": "वाडो समर्थित एस.आर. (SR) वर्ग",
+      "description": "वाडो प्राप्ति के लिए समर्थित एस.आर. (SR) एस.ओ.पी. (SOP) वर्ग ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmSOPClass"
     },
     "dcmWadoSupportedPRClasses": {
       "title": "वाडो समर्थित पी.आर. वर्ग",
-      "description": "वाडो प्राप्ति के लिए समर्थित पी.आर. एस.ओ.पी. वर्ग ।",
+      "description": "वाडो प्राप्ति के लिए समर्थित पी.आर. एस.ओ.पी. (SOP) वर्ग ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmSOPClass"
     },
     "dcmWadoSR2HtmlTemplateURI": {
-      "title": "वाडो एस.आर. से एच.टी.एम्.एल. फर्मा यू.आर.आई.",
-      "description": "एच.टी.एम्.एल. में स्ट्रक्चर्ड रिपोर्टों को प्रस्तुत करने के लिए इस्तमाल किए गए स्टाइलशीट के यू.आर.आई. को निर्दिष्ट करता है ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "वाडो एस.आर. (SR) से एच.टी.एम्.एल. (HTML) फर्मा यू.आर.आई. (URI)",
+      "description": "एच.टी.एम्.एल. (HTML) में स्ट्रक्चर्ड रिपोर्टों को प्रस्तुत करने के लिए इस्तमाल किए गए स्टाइलशीट के यू.आर.आई. (URI) को निर्दिष्ट करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "dcmWadoSR2TextTemplateURI": {
-      "title": "वाडो एस.आर. से टेक्स्ट फर्मा यू.आर.आई.",
-      "description": "साधारण टेक्स्ट में स्ट्रक्चर्ड रिपोर्टों को प्रस्तुत करने के लिए इस्तमाल किए गए स्टाइलशीट के यू.आर.आई. को निर्दिष्ट करता है ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "वाडो एस.आर. (SR) से टेक्स्ट फर्मा यू.आर.आई. (URI)",
+      "description": "साधारण टेक्स्ट में स्ट्रक्चर्ड रिपोर्टों को प्रस्तुत करने के लिए इस्तमाल किए गए स्टाइलशीट के यू.आर.आई. (URI) को निर्दिष्ट करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "dcmWadoCDA2HtmlTemplateURI": {
-      "title": "वाडो सी.डी.ए. से एच.टी.एम्.एल. फर्मा यू.आर.आई.",
-      "description": "वाडो-यू.आर.आई. सेवा से प्राप्त हुए सी.डी.ए. डॉक्यूमेंटों में इस रूप <?xml-stylesheet type=\"text/xsl\" href=\"<url>\" > में निवेशन किए जानेवाले एक्स.एस.एल. स्टाइलशीट के यू.आर.एल. को निर्दिष्ट करता है ।अगर कॉन्फ़िगर न किया हो तो, अंत:स्थापित सी.डी.आई. डॉक्यूमेंट को शब्दशः वापस किया जाएगा ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "वाडो सी.डी.ए. (CDA) से एच.टी.एम्.एल. (HTML) फर्मा यू.आर.आई. (URI)",
+      "description": "वाडो-यू.आर.आई. (URI) सेवा से प्राप्त हुए सी.डी.ए. (CDA) डॉक्यूमेंटों में इस रूप <?xml-stylesheet type=\"text/xsl\" href=\"<url>\" > में निवेशन किए जानेवाले एक्स.एस.एल. स्टाइलशीट के यू.आर.एल. को निर्दिष्ट करता है ।यदि कॉन्फ़िगर न किया हो तो, अंत:स्थापित सी.डी.आई. डॉक्यूमेंट को शब्दशः वापस किया जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "dcmWadoThumbnailViewport": {
       "title": "वाडो थंबनेल व्युवपोर्ट",
-      "description": "यदि अनुरोध में किसी वयुवपोर्ट को निर्दिष्ट न किया हो तो, वाडो प्राप्ति सेवा द्वारा वापस किए गए दृष्टांतों के थंबनेलों के आयाम ।प्रारूप : <width>,<height> ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "description": "यदि अनुरोध में किसी वयुवपोर्ट को निर्दिष्ट न किया हो तो, वाडो प्राप्ति सेवा द्वारा वापस किए गए दृष्टांतों के थंबनेलों के आयाम ।प्रारूप : <width>,<height> ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "64,64",
       "format": "dcmWadoThumbnailViewport"
     },
     "dcmWadoZIPEntryNameFormat": {
       "title": "वाडो ज़िप एंट्री के नाम का प्रारूप",
-      "description": "वाडो-आर.एस. सेवाओं द्वारा प्राप्त हुए ज़िप आर्काइव में एंट्रियों के नामों का प्रारूप ।किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "description": "वाडो-आर.एस. सेवाओं द्वारा प्राप्त हुए ज़िप आर्काइव में एंट्रियों के नामों का प्रारूप ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "DICOM/{0020000D,hash}/{0020000E,hash}/{00080018,hash}.dcm"
     },
@@ -379,74 +379,74 @@
       "minimum": 0
     },
     "dcmQueryMaxNumberOfResults": {
-      "title": "Query Max Number Of Results",
-      "description": "Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "प्राप्ति नतीजों की अधिकतम संख्या",
+      "description": "सी-फाइंड एस.सी.पी. (C-Find SCP) द्वारा वापस किए गए नतीजों की अधिकतम संख्या ।यदि नतीजों की संख्या सीमा पार कर जाए, तो सी-फाइंड अनुरोध अस्वीकार होंगे ।० = असीमित ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "integer",
       "default": 0,
       "minimum": 0
     },
     "dcmQidoMaxNumberOfResults": {
-      "title": "Qido Max Number Of Results",
-      "description": "Maximal number of return results by QIDO-RS Service. 0 = no limitation. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "क्यू.आई.डी. (UID)ओ. (QIDO) नतीजों की अधिकतम संख्या",
+      "description": "क्यू.आई.डी.ओ.-आर.एस. (QIDO-RS) सेवा द्वारा वापस किए गए नतीजों की अधिकतम संख्या ।० = असीमित ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "integer",
       "default": 0,
       "minimum": 0
     },
     "dcmFwdMppsDestination": {
-      "title": "Mpps Forward Destination",
-      "description": "Destination to forward MPPS N-CREATE RQ and N-SET RQ. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "एम्.पी.पी.एस. (MPPS) आगे भेजने का गंतव्य",
+      "description": "एम्.पी.पी.एस. (MPPS) एन-क्रिएट आर.क्यू. (N-CREATE RQ) और एन-सेट आर.क्यू. (N-SET RQ) अनुरोधों को आगे भेजने का गंतव्य ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
-      "title": "Ian Destination",
-      "description": "Destination to send IAN N-CREATE RQ. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "आई.ए.एन. (IAN) आगे भेजने का गंतव्य",
+      "description": "आई.ए.एन. एन-क्रिएट आर.क्यू. (IAN N-CREATE RQ) अनुरोधों को आगे भेजने का गंतव्य ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmIanDelay": {
-      "title": "IAN Delay",
-      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में विलम्ब after which an IAN for a received study is sent to configured IAN destinations. अगर कॉन्फ़िगर न किया हो तो, IANs are triggered by received MPPS. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "आई.ए.एन. (IAN) विलम्ब",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब जिसके बाद प्राप्त हुए स्टडीज का आई.ए.एन. (IAN) कॉन्फ़िगर्ड आई.ए.एन. (IAN) गंतव्यों पे भेजा जाएगा ।यदि कॉन्फ़िगर न किया हो तो, आई.ए.एन. (IAN) प्राप्त हुए एम्.पी.पी.एस. (MPPS) द्वारा सक्रीय होंगे ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmIanTimeout": {
-      "title": "IAN Timeout",
-      "description": "Timeout in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "आई.ए.एन. (IAN) समयपाल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMn.nS में समयपाल जो एम्.पी.पी.एस. (MPPS) में संदर्भित दृष्टांतों का इंतज़ार करता है; यदि निर्दिष्ट नहीं किया है, तो एम्.पी.पी.एस. (MPPS) के संपूर्णता की जाँच हमेशा के लिए करें ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmIanOnTimeout": {
-      "title": "IAN On Timeout",
-      "description": "निर्दिष्ट करता है if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "आई.ए.एन. (IAN) समयपाल पे लागू",
+      "description": "निर्दिष्ट करता है एम्.पी.पी.एस. (MPPS) में संदर्भित दृष्टांतों का इंतज़ार समयपाल की सीमा पर कर जाए, तो आई.ए.एन. (IAN) को भेजे ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmIanTaskPollingInterval": {
-      "title": "IAN Task पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for IAN Tasks in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS. IAN disabled, if absent",
+      "title": "आई.ए.एन. (IAN) कार्य पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में आई.ए.एन. (IAN) कार्यों को भेजने का पोलिंग अंतराल ।यदि निर्दिष्ट नहीं किया है, तो आई.ए.एन. (IAN) भेजना असक्षम होगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmIanTaskFetchSize": {
-      "title": "IAN Task प्राप्ति का माप",
-      "description": "Maximal number of IAN Tasks scheduled in one transaction.",
+      "title": "आई.ए.एन. (IAN) कार्य प्राप्ति का माप",
+      "description": "एक ट्रांसेक्शन में आई.ए.एन. (IAN) कार्यों को अनुसूचित करने की अधिकतम संख्या ।",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmSpanningCFindSCP": {
-      "title": "Spanning C-Find SCP",
-      "description": "AE Title of external C-FIND SCP to forward C-FIND RQs and backward responses according configured Spanning C-Find SCP Policy. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "स्पेनिंग सी-फाइंड एस.सी.पी. (C-Find SCP)",
+      "description": "बाहरी सी-फाइंड एस.सी.पी. (C-Find SCP) के ए.इ. (AE) का नाम जहा पे सी-फाइंड आर.क्यू. (C-FIND RQs) अनुरोधों को भेजा जाएगा और कॉन्फ़िगर्ड स्पेनिंग सी-फाइंड एस.सी.पी. (C-Find SCP) नीति के अनुसार प्रतिक्रियाओं को वापस किया जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmSpanningCFindSCPPolicy": {
-      "title": "Spanning C-Find SCP Policy",
-      "description": "निर्दिष्ट करता है policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "स्पेनिंग सी-फाइंड एस.सी.पी. (C-Find SCP) नीति",
+      "description": "कॉन्फ़िगर्ड स्पेनिंग सी-फाइंड एस.सी.पी. (C-Find SCP) से वापस किए गए नतीजों को आर्काइव डेटाबेस के रिकार्ड्स के साथ संयोजित करने की नीति को निर्दिष्ट करता है ।SUPPLEMENT (= स्थानीय रेकॉर्ड्स को अधिक स्पेनिंग सी-फाइंड एस.सी.पी. (C-Find SCP) से वापस किए गए रेकॉर्ड्स के पहले भेजा जाएगा), MERGE (= स्पेनिंग सी-फाइंड एस.सी.पी. (C-Find SCP) से वापस किए गए रेकॉर्ड्स को स्थानीय रेकॉर्ड्स के पहले भेजा जाएगा), REPLACE (= सिर्फ स्पेनिंग सी-फाइंड एस.सी.पी. (C-Find SCP) से वापस किए गए रेकॉर्ड्स को भेजा जाएगा) ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "REPLACE",
       "enum": [
@@ -456,8 +456,8 @@
       ]
     },
     "dcmSpanningCFindSCPRetrieveAET": {
-      "title": "Spanning C-Find SCP Retrieve AE Title",
-      "description": "निर्दिष्ट करता है Retrieve AE Title(s) in returned matches from Spanning C-Find SCP. Keep original Retrieve AE Title(s) returned by Spanning C-Find SCP if absent. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "स्पेनिंग सी-फाइंड एस.सी.पी. (C-Find SCP) पुनःप्राप्ति ए.इ. (AE) का नाम",
+      "description": "स्पेनिंग सी-फाइंड एस.सी.पी. (C-Find SCP) से वापस किए गए नतीजों में पुनःप्राप्ति ए.इ. (AE) के नामों को निर्दिष्ट करता है ।यदि निर्दिष्ट नहीं किया है, तो स्पेनिंग सी-फाइंड एस.सी.पी. (C-Find SCP) से वापस किए गए नतीजों में मूल पुनःप्राप्ति ए.इ. (AE) के नामों को रखे ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -465,44 +465,44 @@
       "format": "dcmArchiveAETitle"
     },
     "dcmFallbackCMoveSCP": {
-      "title": "Fallback C-Move SCP",
-      "description": "AE Title of external C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not managed by this archive. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "पलटाव सी-मूव एस.सी.पी. (C-Move SCP)",
+      "description": "बाहरी सी-मूव एस.सी.पी. (C-MOVE SCP) के ए.इ. (AE) का नाम जहा पे सी-मूव आर.क्यू. (C-MOVE RQs) अनुरोधों को भेजा जाएगा, यदि अनुरोधित तत्वों को इस आर्काइव द्वारा प्रबंधित नहीं होगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmFallbackCMoveSCPDestination": {
-      "title": "Fallback C-Move SCP Destination",
-      "description": "AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to the external C-MOVE SCP specified by dcmFallbackCMoveSCP",
+      "title": "पलटाव सी-मूव एस.सी.पी. (C-Move SCP) गंतव्य",
+      "description": "'पलटाव सी-मूव एस.सी.पी. (C-Move SCP)' द्वारा निर्दिष्ट बाहरी सी-मूव एस.सी.पी. (C-MOVE SCP) पे भेजे गए सी-मूव आर.क्यू. (C-MOVE RQs) अनुरोधों में सेट किए हुए स्थानीय सी-स्टोर एस.सी.पी. (C-STORE-SCP) के ए.इ. (AE) का नाम ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmFallbackCMoveSCPStudyOlderThan": {
-      "title": "Fallback C-Move SCP Study Older Than",
-      "description": "निर्दिष्ट करता है threshold for Study Date इस प्रारूप में YYYYMMDD for marking received Studies as (potential) incomplete to enforce the retrieve from configured dcmFallbackCMoveSCP",
+      "title": "पलटाव सी-मूव एस.सी.पी. (C-Move SCP) स्टडी इससे पुराना",
+      "description": "निर्दिष्ट करता है की स्टडीज के स्टडी तारीख, इस प्रारूप YYYYMMDD में, से पुराने हो तो, ऐसे प्राप्त हुए स्टडीज को (संभावित) अपूर्ण अंकित करके, कॉन्फ़िगर्ड 'पलटाव सी-मूव एस.सी.पी. (C-Move SCP)' से पुनःप्राप्त करने के लिए क्रियात्मक करता है ।",
       "type": "string"
     },
     "dcmFallbackCMoveSCPLeadingCFindSCP": {
-      "title": "Fallback C-Move SCP Leading C-Find SCP",
-      "description": "AE Title of external C-FIND SCP for Verification of Number of Instances retrieved from external C-MOVE SCP specified by dcmFallbackCMoveSCP.",
+      "title": "पलटाव सी-मूव एस.सी.पी. (C-Move SCP) प्रमुख सी-फाइंड एस.सी.पी. (C-Find SCP)",
+      "description": "'पलटाव सी-मूव एस.सी.पी. (C-Move SCP)' द्वारा निर्दिष्ट बाहरी सी-मूव एस.सी.पी. (C-MOVE SCP) से पुनःप्राप्त हुए दृष्टांतों की संख्या की जाँच के लिए बाहरी सी-फाइंड एस.सी.पी. (C-Find SCP) के ए.इ. (AE) का नाम ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmFallbackCMoveSCPRetries": {
-      "title": "Fallback C-Move SCP Retries",
-      "description": "Maximal number of retries to retrieve not available objects from C-MOVE SCP configured by dcmFallbackCMoveSCP. -1 = forever.",
+      "title": "पलटाव सी-मूव एस.सी.पी. (C-Move SCP) पुनःपरीक्षण",
+      "description": "कॉन्फ़िगर्ड 'पलटाव सी-मूव एस.सी.पी. (C-Move SCP)' से अनुपस्थित दृष्टांतों के पुनःप्राप्ति की अधिकतम संख्या ।-1 = हमेशा ।",
       "type": "integer",
       "default": 0,
       "minimum": -1
     },
     "dcmFallbackWadoURIWebAppName": {
-      "title": "Fallback WADO-URI Web Application Name",
-      "description": "का नाम external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "पलटाव वाडो-यू.आर.आइ. (WADO-URI) वेब अनुप्रयोग का नाम",
+      "description": "यदि अनुरोधित दृष्टांत इस आर्काइव पे अनुपस्थित हो तो, बाहरी वेब अनुप्रयोग का नाम जहा पे वाडो-यू.आर.आइ. (WADO-URI) अनुरोधों को अनुप्रेषित किया जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmWebAppName"
     },
     "dcmFallbackWadoURIHttpStatusCode": {
-      "title": "Fallback Wado URI Http Status Code",
-      "description": "HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "पलटाव वाडो-यू.आर.आइ. (WADO-URI) एच.टी.टी.पी. (HTTP) स्थिति कोड",
+      "description": "'पलटाव वाडो-यू.आर.आइ. (WADO-URI) वेब अनुप्रयोग के नाम' द्वारा कॉन्फ़िगर्ड एच.टी.टी.पी. (HTTP) स्थिति कोड ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "integer",
       "default": 303,
       "enum": [
@@ -513,14 +513,14 @@
        ]
     },
     "dcmAltCMoveSCP": {
-      "title": "Alternative C-Move SCP",
-      "description": "AE Title of alternative C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not located on a local attached Storage",
+      "title": "वैकल्पिक सी-मूव एस.सी.पी. (C-Move SCP)",
+      "description": "वैकल्पिक सी-मूव एस.सी.पी. (C-Move SCP) के ए.इ. (AE) का नाम जहा पे सी-मूव आर.क्यू. (C-MOVE RQs) अनुरोधों को भेजा जाएगा, यदि अनुरोधित तत्वों स्थानीय स्टोरेज पे उपलब्ध नहीं है ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmCStoreSCUOfCMoveSCP": {
-      "title": "C-STORE SCU of C-MOVE SCP",
-      "description": "Indicates to identify received C-STORE RQs as caused by a forwarded C-MOVE RQs by the Calling AET in the A-Associate-RQ इस प्रारूप में <Calling AET>=<C-MOVE-SCP>. Typically <Calling AET> and <C-MOVE-SCP> are equal. If no value is configured for a particular C-MOVE SCP, गुण (0000,1030) Move Originator Application Entity Title in the C-STORE RQ is used to find the corresponding forwarded C-MOVE RQ to forward the received C-STORE RQ to the original Move Destination.",
+      "title": "सी-मूव एस.सी.पी. (C-Move SCP) का सी-स्टोर एस.सी.यू. (C-STORE-SCU)",
+      "description": "भेजे गए सी-मूव आर.क्यू. (C-MOVE RQs) अनुरोधों के कारण प्राप्त हुए सी-स्टोर आर.क्यू. (C-STORE RQs) अनुरोधों को ए-एसोसिएट-आर.क्यू. (A-Associate-RQ) अनुरोधों में आह्वान ए.इ. (AE) के नाम के द्वारा पहचानने का संकेत करता है, इस प्रारूप में <आह्वान ए.इ. (AE) का नाम>=<सी-मूव एस.सी.पी. (C-MOVE-SCP)> ।आम तौर पे <आह्वान ए.इ. (AE) का नाम> and <सी-मूव एस.सी.पी. (C-MOVE-SCP)> बराबर होंगे ।विशिष्ट सी-मूव एस.सी.पी. (C-MOVE-SCP) के लिए यदि कोई मूल्य कॉन्फ़िगर्ड नहीं किया है, तो सी-स्टोर आर.क्यू. (C-STORE RQ) में मूव उत्पन्नकर्ता अनुप्रयोग तत्व का नाम (००००,१०३०) के गुण के मूल्य तदनुसार भेजे गए सी-मूव आर.क्यू. (C-MOVE RQ), जो प्राप्त हुए सी-स्टोर आर.क्यू. (C-STORE RQ) को मूल मूव गंतव्य पे भेजेगा, उसको ढूंढने में उपयोग होगा ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -528,183 +528,183 @@
       "format": "dcmProperty"
     },
     "dcmUPSProcessingPollingInterval": {
-      "title": "UPS Processing पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for Workitems ready for processing in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS.",
+      "title": "यू.पी.एस. (UPS) प्रसंस्करण पोलिंग अंतराल",
+      "description": "प्रसंस्करण के लिए तैयार वर्क आइटम्स का आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में पोलिंग अंतराल ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmUPSProcessingFetchSize": {
-      "title": "UPS Processing  प्राप्ति का माप",
-      "description": "Limit result set of DB query for Workitems ready for processing.",
+      "title": "यू.पी.एस. (UPS) प्रसंस्करण प्राप्ति का माप",
+      "description": "प्रसंस्करण के लिए तैयार वर्क आइटम्स का डेटाबेस से प्राप्ति के नतीजों के सेट की सीमा ।",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmExportTaskPollingInterval": {
-      "title": "Export Task पोलिंग अंतराल",
-      "description": "Export Task Polling आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में अंतराल.",
+      "title": "निर्यात कार्य पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में निर्यात कार्य पोलिंग अंतराल ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmExportTaskFetchSize": {
-      "title": "Export Task प्राप्ति का माप",
-      "description": "Limit result set of DB query for Export Tasks ready for processing.",
+      "title": "निर्यात कार्य प्राप्ति का माप",
+      "description": "प्रसंस्करण के लिए तैयार निर्यात कार्यों का डेटाबेस से प्राप्ति के नतीजों के सेट की सीमा ।",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRetrieveTaskPollingInterval": {
-      "title": "Retrieve Task पोलिंग अंतराल",
-      "description": "Retrieve Task Polling आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में अंतराल.",
+      "title": "पुनःप्राप्ति कार्य पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में पुनःप्राप्ति कार्य पोलिंग अंतराल ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmRetrieveTaskFetchSize": {
-      "title": "Retrieve Task प्राप्ति का माप",
-      "description": "Limit result set of DB query for Retrieve Tasks ready for processing.",
+      "title": "पुनःप्राप्ति कार्य प्राप्ति का माप",
+      "description": "प्रसंस्करण के लिए तैयार पुनःप्राप्ति कार्यों का डेटाबेस से प्राप्ति के नतीजों के सेट की सीमा ।",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRetrieveTaskWarningOnNoMatch": {
-      "title": "Retrieve Task Warning on no Match",
-      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.\",",
+      "title": "पुनःप्राप्ति कार्य मिलान नहीं पे चेतावनी",
+      "description": "यदि सी-मूव एस.सी.पी. (C-Move SCP) से कोई भी अनुरोधित दृष्टांतों के न मिलने पे, पुनःप्राप्ति कार्यों के नतीजों की स्थिति को चेतावनी 'WARNING' के तौर पे सेट करने का संकेत करता है ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmRetrieveTaskWarningOnWarnings": {
-      "title": "Retrieve Task Warning on Warnings",
-      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.\",",
+      "title": "पुनःप्राप्ति कार्य चेतावनियों पे चेतावनी",
+      "description": "यदि सारे दृष्टांतों की पुनःप्राप्ति सफल होने पर भी चेतावनी उप-क्रियाएँ है, तो भी पुनःप्राप्ति कार्यों के नतीजों की स्थिति को चेतावनी 'WARNING' के तौर पे सेट करने का संकेत करता है ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmPurgeStoragePollingInterval": {
-      "title": "Purge Storage पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for deleting objects in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS.",
+      "title": "स्टोरेज पे परिष्करण पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में दृष्टांतों को मिटाने का पोलिंग अंतराल ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeStorageFetchSize": {
-      "title": "Purge Storage प्राप्ति का माप",
-      "description": "Maximal number of objects to delete in one task.",
+      "title": "स्टोरेज पे परिष्करण प्राप्ति का माप",
+      "description": "एक कार्य में दृष्टांतों को मिटाने की अधिकतम संख्या ।",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmFailedToDeletePollingInterval": {
-      "title": "Failed to delete पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for resolving deletion failures in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS.",
+      "title": "मिटाने में असफल पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में विलोपन असफलताओं को हल करने का पोलिंग अंतराल ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmFailedToDeleteFetchSize": {
-      "title": "Failed to delete प्राप्ति का माप",
-      "description": "Maximal number of Location records fetched for resolving deletion failures in one query.",
+      "title": "मिटाने में असफल प्राप्ति का माप",
+      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए विलोपन असफलताओं को हल करने के लोकेशन रेकॉर्ड्स की अधिकतम संख्या ।",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmDeleteStudyBatchSize": {
-      "title": "Delete Study Batch Size",
-      "description": "Number of Studies to delete from the Storage System, if the usable space fall below configured Usable Space, before checking the usable space again.",
+      "title": "स्टडीज को मिटाने के समूह का माप",
+      "description": "यदि स्टोरेज सिस्टम का उपयोगी जगह कॉन्फ़िगर्ड उपयोगी जगह से कम हो जाए, तो फिरसे उपयोगी जगह जांचने के पहले, स्टोरेज सिस्टम से स्टडीज को मिटाने की संख्या ।",
       "type": "integer",
       "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmDeleteStudyChunkSize": {
-      "title": "Delete Study Chunk Size",
-      "description": "Number of Instances deleted in one DB transaction on permanent deletion of Studies.",
+      "title": "स्टडीज को मिटाने के खण्ड का माप",
+      "description": "एक डेटाबेस ट्रांसेक्शन में स्टडीज के स्थायी विलोपन की संख्या ।",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmDeletePatientOnDeleteLastStudy": {
-      "title": "Delete Patient On Delete Last Study",
-      "description": "निर्दिष्ट करता है if a Patient shall be deleted on deletion of its last study.",
+      "title": "आखरी स्टडी को मिटाने पर मरीज़ के रेकॉर्ड को मिटाए",
+      "description": "आखरी स्टडी को मिटाने पर मरीज़ के रेकॉर्ड को मिटाने को निर्दिष्ट करता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmDeleteRejectedPollingInterval": {
-      "title": "Delete Rejected पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for deleting rejected instances from the DB in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS.",
+      "title": "अस्वीकृत दृष्टांतों को मिटाने का पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में अस्वीकृत दृष्टांतों को मिटाने का पोलिंग अंतराल ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmDeleteRejectedFetchSize": {
-      "title": "Delete Rejected प्राप्ति का माप",
-      "description": "Maximal number of rejected instances to delete from the DB in one task.",
+      "title": "अस्वीकृत दृष्टांतों को मिटाने के प्राप्ति का माप",
+      "description": "एक डेटाबेस ट्रांसेक्शन में अस्वीकृत दृष्टांतों को मिटाने की अधिकतम संख्या ।",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmMaxAccessTimeStaleness": {
-      "title": "Maximum Access Time Staleness",
-      "description": "Maximal staleness of recorded study accession time in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS. अपडेट of the access time disabled, if absent.",
+      "title": "एक्सेस समय का अधिकतम पुरानापन",
+      "description": "रेकॉर्ड किए हुए स्टडी के एक्सेस समय का आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में अधिकतम पुरानापन ।यदि निर्दिष्ट नहीं किया है, तो एक्सेस समय का अपडेट असक्षम होगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmAECacheStaleTimeout": {
-      "title": "AE Cache Stale Timeout",
-      "description": "Maximal staleness of cached AE in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS. अगर कॉन्फ़िगर न किया हो तो, cached AE entries will not be refetched from LDAP.",
+      "title": "ए.इ. (AE) कैश पुरानापन समयपाल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में कैश किए हुए ए.इ. (AE) के पुरानेपन का अधिकतम समय ।यदि कॉन्फ़िगर न किया हो तो, कैश किए हुए ए.इ. (AE) के रेकॉर्ड्स को LDAP से फिरसे नहीं लाया जाएगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmLeadingCFindSCPQueryCacheStaleTimeout": {
-      "title": "Leading C-Find SCP Query Cache Stale Timeout",
-      "description": "Maximal staleness of cached Patient and Study attributes fetched from leading C-Find SCP in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS. अगर कॉन्फ़िगर न किया हो तो, cache Study attributes are only removed on reaching the maximal cache size.",
+      "title": "प्रमुख सी-फाइंड एस.सी.पी. (C-Find SCP) से प्राप्ति कैश पुरानापन समयपाल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में प्रमुख सी-फाइंड एस.सी.पी. (C-Find SCP) से प्राप्त किए गए मरीज़ के रेकॉर्ड और स्टडी के गुणों के पुरानेपन का अधिकतम समयपाल । यदि कॉन्फ़िगर न किया हो तो, सिर्फ कैश के अधिकतम माप की सीमा पहुंचने पे स्टडी के कैश किए हुए गुणों को निकाला जाएगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmLeadingCFindSCPQueryCacheSize": {
-      "title": "Leading C-Find SCP Query Cache Size",
-      "description": "Maximum number of cached Patient and Study attributes fetched from leading C-Find SCP.",
+      "title": "प्रमुख सी-फाइंड एस.सी.पी. (C-Find SCP) से प्राप्ति कैश का माप",
+      "description": "प्रमुख सी-फाइंड एस.सी.पी. (C-Find SCP) से प्राप्त किए गए मरीज़ के रेकॉर्ड और स्टडी के गुणों की अधिकतम संख्या ।",
       "type": "integer",
       "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmAuditSpoolDirectory": {
-      "title": "ऑडिट स्पूल निर्देशिका ",
+      "title": "ऑडिट स्पूल निर्देशिका",
       "description": "ऑडिट सेवा स्पूल निर्देशिका का पथ ।",
       "type": "string",
       "default": "${jboss.server.temp.dir}"
     },
     "dcmAuditPollingInterval": {
       "title": "ऑडिट पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for aggregating Audit Messages in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS. Audit Message aggregation disabled, if absent.",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में ऑडिट संदेशों को इकठ्ठा करने का पोलिंग अंतराल ।यदि निर्दिष्ट नहीं किया है, तो ऑडिट संदेशों का एकत्रीकरण असक्षम होगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmAuditAggregateDuration": {
-      "title": "Audit Aggregate Duration",
-      "description": "Audit Message Aggregation Duration in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS. Audit Message aggregation disabled, if absent.",
+      "title": "ऑडिट संदेशों का एकत्रीकरण की कालावधि",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में ऑडिट संदेशों का एकत्रीकरण की कालावधि ।यदि निर्दिष्ट नहीं किया है, तो ऑडिट संदेशों का एकत्रीकरण असक्षम होगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmAuditUnknownStudyInstanceUID": {
-      "title": "Audit Unknown स्टडी दृष्टांत यू.आई.डी.",
-      "description": "Indicates स्टडी दृष्टांत यू.आई.डी. value to be sent in audit message when not known.",
+      "title": "ऑडिट अनजान स्टडी दृष्टांत यू.आई.डी. (UID)",
+      "description": "यदि स्टडी दृष्टांत यू.आई.डी. (UID) के मूल्य की जानकारी अनजान है, तो ऑडिट संदेश में भेजे गए स्टडी दृष्टांत यू.आई.डी. (UID) का मूल्य ।",
       "type": "string",
       "default": "1.2.40.0.13.1.15.110.3.165.1",
       "pattern": "^[0-2]((\\.0)|(\\.[1-9][0-9]*))*$"
     },
     "dcmAuditUnknownPatientID": {
-      "title": "Audit Unknown Patient ID",
-      "description": "Indicates patient id value to be sent in audit message when not known.",
+      "title": "ऑडिट अनजान मरीज़ की आई.डी. (ID)",
+      "description": "यदि मरीज़ की आई.डी. (ID) के मूल्य की जानकारी अनजान है, तो ऑडिट संदेश में भेजे गए मरीज़ की आई.डी. (ID) का मूल्य ।",
       "type": "string",
       "default": "<none>"
     },
     "dcmShowPatientInfoInSystemLog": {
-      "title": "Show Patient Info In System Log",
-      "description": "निर्दिष्ट करता है if Patient Information is shown as plain text or hashed in system logs.",
+      "title": "मरीज़ की आई.डी. (ID) सिस्टम लॉग में दिखाए",
+      "description": "निर्दिष्ट करता है की मरीज़ की आई.डी. (ID) को साधारण टेक्स्ट रूप से या हैश किए हुए रूप में सिस्टम लॉग्स में दिखाया जाएगा ।",
       "type": "string",
       "default": "PLAIN_TEXT",
       "enum": [
@@ -714,8 +714,8 @@
       ]
     },
     "dcmShowPatientInfoInAuditLog": {
-      "title": "Show Patient Info In Audit Log",
-      "description": "निर्दिष्ट करता है if Patient Information is shown as plain text or hashed in emitted audit messages.",
+      "title": "मरीज़ की आई.डी. (ID) ऑडिट लॉग में दिखाए",
+      "description": "निर्दिष्ट करता है की मरीज़ की आई.डी. (ID) को साधारण टेक्स्ट रूप से या हैश किए हुए रूप में भेजे गए ऑडिट संदेशों में दिखाया जाएगा ।",
       "type": "string",
       "default": "PLAIN_TEXT",
       "enum": [
@@ -725,14 +725,14 @@
       ]
     },
     "dcmStowSpoolDirectory": {
-      "title": "STOW-RS Spool Directory",
-      "description": "Path to Directory used by STOW-RS Service to spool Bulkdata of XML/JSON Metadata and Bulk Data Request Messages.",
+      "title": "एस.टी.ओ.डब्ल्यू-आर.एस. (STOW-RS) स्पूल निर्देशिका",
+      "description": "एस.टी.ओ.डब्ल्यू-आर.एस. (STOW-RS) सेवा द्वारा अधिकांश डेटा अनुरोध संदेशों को और एक्स.एम्.एल. या जे.एस.ओ.एन. मेटाडेटा के अधिकांश डेटा स्पूल किए गए निर्देशिका का पथ ।",
       "type": "string",
       "default": "${jboss.server.temp.dir}"
     },
     "hl7ORUAction": {
-      "title": "एच.एल.७. ओआरयू क्रिया",
-      "description": "एच.एल.७. ORU^R01 संदेश के प्राप्त होने पे की गई क्रिया को निर्दिष्ट करता है : IMPORT_REPORT (= प्राप्त हुए एच.एल.७. ORU^R01 को डाइकोम एसआर में ट्रांसकोड करें), MWL_COMPLETED (= मिलान एम्.डब्ल्यू.एल. आइटम्स के स्थिति को 'पूर्ण' के रूप में सेट करें). किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) ओ.आर.यू. (ORU) क्रिया",
+      "description": "एच.एल.७. (HL7) ORU^R01 संदेश के प्राप्त होने पे की गई क्रिया को निर्दिष्ट करता है : IMPORT_REPORT (= प्राप्त हुए एच.एल.७. (HL7) ORU^R01 को डाइकोम (DICOM) एस.आर. (SR) (DICOM SR) में ट्रांसकोड करें), MWL_COMPLETED (= मिलान एम्.डब्ल्यू.एल. आइटम्स के स्थिति को 'पूर्ण' के रूप में सेट करें) ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items": {
         "type": "string",
@@ -743,36 +743,36 @@
       }
     },
     "hl7PatientUpdateTemplateURI": {
-      "title": "एच.एल.७. मरीज़ के रेकॉर्ड की अपडेट सेवा फर्मा यू.आर.आई.",
-      "description": "एच.एल.७. संस्करण २ मरीज़ के रेकॉर्ड की अपडेट सेवा से इस्तमाल की गई स्टाइलशीट यू.आर.आई. को निर्दिष्ट करता है. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) मरीज़ के रेकॉर्ड की अपडेट सेवा फर्मा यू.आर.आई. (URI)",
+      "description": "एच.एल.७. (HL7) संस्करण २ मरीज़ के रेकॉर्ड की अपडेट सेवा से इस्तमाल की गई स्टाइलशीट यू.आर.आई. (URI) को निर्दिष्ट करता है ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "hl7ImportReportTemplateURI": {
-      "title": "एच.एल.७. आयातित रिपोर्ट फर्मा यू.आर.आई.",
-      "description": "प्राप्त हुए एच.एल.७. ORU^R01 को डाइकोम एसआर (SR) में ट्रांसकोड करनेवाले स्टाइलशीट यू.आर.आई. को निर्दिष्ट करता है. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) आयातित रिपोर्ट फर्मा यू.आर.आई. (URI)",
+      "description": "प्राप्त हुए एच.एल.७. (HL7) ORU^R01 को डाइकोम (DICOM) एस.आर. (SR) (DICOM SR) में ट्रांसकोड करनेवाले स्टाइलशीट यू.आर.आई. (URI) को निर्दिष्ट करता है ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "hl7ImportReportTemplateParam": {
-      "title": "एच.एल.७. आयातित रिपोर्ट फर्मा मापदण्ड",
-      "description": "एच.एल.७. आयातित रिपोर्ट फर्मा यू.आर.आई. से निर्दिष्ट स्टाइलशीट को भेजे गए एक्स.एस.एल.टी. मापदण्ड. प्रारूप: {नाम}={मूल्य}. उदाहरण के तौर पे: 'langCodeValue=et', 'langCodingSchemeDesignator=RFC5646', 'langCodeMeaning=Estonian'. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) आयातित रिपोर्ट फर्मा मापदण्ड",
+      "description": "एच.एल.७. (HL7) आयातित रिपोर्ट फर्मा यू.आर.आई. (URI) से निर्दिष्ट स्टाइलशीट को भेजे गए एक्स.एस.एल.टी. मापदण्ड. प्रारूप: {नाम}={मूल्य} ।उदाहरण के तौर पे : 'langCodeValue=et', 'langCodingSchemeDesignator=RFC5646', 'langCodeMeaning=Estonian' ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7ScheduleProcedureTemplateURI": {
-      "title": "एच.एल.७. अनुसूचित प्रक्रिया फर्मा यू.आर.आई.",
-      "description": "प्राप्त हुए एच.एल.७. ORM^O01, OMI^O23, OMG^O19 को डाइकोम एम्.डब्ल्यू.एल. आइटम्स में ट्रांसकोड करनेवाले स्टाइलशीट यू.आर.आई. को निर्दिष्ट करता है. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) अनुसूचित प्रक्रिया फर्मा यू.आर.आई. (URI)",
+      "description": "प्राप्त हुए एच.एल.७. (HL7) ORM^O01, OMI^O23, OMG^O19 को डाइकोम (DICOM) एम्.डब्ल्यू.एल. आइटम्स में ट्रांसकोड करनेवाले स्टाइलशीट यू.आर.आई. (URI) को निर्दिष्ट करता है ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "hl7OutgoingPatientUpdateTemplateURI": {
-      "title": "एच.एल.७. Outgoing Patient अपडेट Template URI",
-      "description": "निर्दिष्ट करता है URI for the style sheet to transcode डाइकोम object patient attributes to एच.एल.७. ADT messages.",
+      "title": "भेजे गए मरीज़ के रेकॉर्ड के एच.एल.७. (HL7) अपडेट फर्मा का यू.आर.आई. (URI)",
+      "description": "डाइकोम (DICOM) दृष्टांत के मरीज़ रेकॉर्ड के स्तर के गुणों को एच.एल.७. (HL7) ए.डी.टी. (ADT) संदेशों में ट्रांसकोड करनेवाले स्टाइलशीट के यू.आर.आई. (URI) को निर्दिष्ट करता है ।",
       "type": "string"
     },
     "hl7ScheduledProtocolCodeInOrder": {
-      "title": "एच.एल.७. ऑर्डर में अनुसूचित प्रक्रिया कोड",
-      "description": "प्राप्त हुए एच.एल.७. ऑर्डर संदेश में पाए गए अनुसूचित प्रक्रिया कोड के पथ को निर्दिष्ट करता है. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) ऑर्डर में अनुसूचित प्रक्रिया कोड",
+      "description": "प्राप्त हुए एच.एल.७. (HL7) ऑर्डर संदेश में पाए गए अनुसूचित प्रक्रिया कोड के पथ को निर्दिष्ट करता है ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "OBR_4_4",
       "enum": [
@@ -781,65 +781,65 @@
       ]
     },
     "hl7ScheduledStationAETInOrder": {
-      "title": "एच.एल.७. ऑर्डर में अनुसूचित स्टेशन ए.इ.टी.",
-      "description": "प्राप्त हुए एच.एल.७. ऑर्डर संदेश में पाए गए अनुसूचित स्टेशन ए.इ. के नाम के पथ को निर्दिष्ट करता है. एच.एल.७. संस्करण २.५.१ (जिसमे आईपीसी सेगमेंट होता है) के लिए कॉन्फ़िगर ना करें. अगर कॉन्फ़िगर न किया हो या कॉन्फ़िगर की गई फील्ड का मूल्य अनुपस्थित हो तो, अनुसूचित स्टेशन ए.इ. के नाम को कॉन्फ़िगर किए गए नियमों के अनुसार चुना जाएगा. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) ऑर्डर में अनुसूचित स्टेशन ए.इ.टी.",
+      "description": "प्राप्त हुए एच.एल.७. (HL7) ऑर्डर संदेश में पाए गए अनुसूचित स्टेशन ए.इ. (AE) के नाम के पथ को निर्दिष्ट करता है ।एच.एल.७. (HL7) संस्करण २.५.१ (जिसमे आईपीसी सेगमेंट होता है) के लिए कॉन्फ़िगर ना करें. यदि कॉन्फ़िगर न किया हो या कॉन्फ़िगर की गई फील्ड का मूल्य अनुपस्थित हो तो, अनुसूचित स्टेशन ए.इ. (AE) के नाम को कॉन्फ़िगर किए गए नियमों के अनुसार चुना जाएगा ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "enum": [
         "ORC_18"
       ]
     },
     "hl7LogFilePattern": {
-      "title": "एच.एल.७. लॉग फाइल पैटर्न",
-      "description": "एच.एल.७. संदेशों का पथ जो उसी तरह सहेजे जाएंगे जिस तरह प्राप्त हुए थे. अगर कॉन्फ़िगर न हो तो, लॉगिंग नहीं की जाएगी. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है. eg. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "title": "एच.एल.७. (HL7) लॉग फाइल पैटर्न",
+      "description": "एच.एल.७. (HL7) संदेशों का पथ जो उसी तरह सहेजे जाएंगे जिस तरह प्राप्त हुए थे ।यदि कॉन्फ़िगर न हो तो, लॉगिंग नहीं की जाएगी ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।उदहारण के तौर पे : ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7 ।",
       "type": "string"
     },
     "hl7ErrorLogFilePattern": {
-      "title": "एच.एल.७. त्रुटि लॉग फाइल पैटर्न",
-      "description": "एच.एल.७. संदेशों का पथ जो उसी तरह सहेजे जाएंगे जिस तरह प्राप्त हुए थे, अगर एच.एल.७. संदेशों की प्रक्रिया असफल हुई हो. अगर कॉन्फ़िगर न हो तो, लॉगिंग नहीं की जाएगी. अगर कॉन्फ़िगर न किया हो तो, there is no logging. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है. eg. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "title": "एच.एल.७. (HL7) त्रुटि लॉग फाइल पैटर्न",
+      "description": "एच.एल.७. (HL7) संदेशों का पथ जो उसी तरह सहेजे जाएंगे जिस तरह प्राप्त हुए थे, यदि एच.एल.७. (HL7) संदेशों की प्रक्रिया असफल हुई हो ।यदि कॉन्फ़िगर न हो तो, लॉगिंग नहीं की जाएगी ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।उदाहरण के तौर पे : ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7 ।",
       "type": "string"
     },
     "hl7NoPatientCreateMessageType": {
-      "title": "एच.एल.७. संदेश प्रकार - मरीज़ के रेकॉर्ड को निर्माण न करें",
-      "description": "एच.एल.७. संदेशों का संदेश प्रकार (संदेश प्रकार^ट्रिगर घटना) जिनपे सिर्फ तभी प्रक्रिया होगी अगर डेटाबेस में पहले से मरीज़ का रेकॉर्ड है, जिन मरीज़ों के आई.डी. उन मरीज़ों के आई.डी. जो एच.एल.७. संदेश के पी.आई.डी. (PID) या एम्आरजी (MRG) सेगमेंट से मेल खाते है. इस तरह निर्दिष्ट एच.एल.७. संदेशों के प्रकारों के लिए कोई नया मरीज का रेकॉर्ड नहीं निर्माण किया जाएगा. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) संदेश प्रकार - मरीज़ के रेकॉर्ड को निर्माण न करें",
+      "description": "एच.एल.७. (HL7) संदेशों का संदेश प्रकार (संदेश प्रकार^ट्रिगर घटना) जिनपे सिर्फ तभी प्रक्रिया होगी यदि डेटाबेस में पहले से मरीज़ का रेकॉर्ड है, जिन मरीज़ों के आई.डी. (ID) उन मरीज़ों के आई.डी. (ID) जो एच.एल.७. (HL7) संदेश के पी.आई.डी. (PID) या एम्आरजी (MRG) सेगमेंट से मेल खाते है ।इस तरह निर्दिष्ट एच.एल.७. (HL7) संदेशों के प्रकारों के लिए कोई नया मरीज का रेकॉर्ड नहीं निर्माण किया जाएगा ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7PatientArrivalMessageType": {
-      "title": "HL7 Patient Arrival Message Type",
-      "description": "Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. If absent, the status of Scheduled Procedure Steps will not be affected by HL7 ADT messages. May be overwritten by configured values for particular Archive HL7 Application.",
+      "title": "एच.एल.७. (HL7) मरीज़ आगमन संदेश प्रकार",
+      "description": "मरीज़ के रेकॉर्ड से संबंधित अनुसूचित प्रक्रिया स्टेप्स के स्थिति को अनुसूचित (SCHEDULED) से आगमन (ARRIVED) में बदलाव सक्रीय करनेवाले एच.एल.७. (HL7) संदेश का प्रकार ।यदि कॉन्फ़िगर नहीं किया है, तो अनुसूचित प्रक्रिया स्टेप्स की स्थिति एच.एल.७. (HL7) ए.डी.टी. (ADT) संदेशों से प्रभावित नहीं होगी ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्य से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "enum": [
         "ADT^A10"
       ]
     },
     "dcmUnzipVendorDataToURI": {
-      "title": "Unzip Vendor Data To URI",
-      "description": "निर्दिष्ट करता है URI of directory into which ZIP stream in Device Vendor Data गुण will be extracted",
+      "title": "वेंडर डेटा को यू.आर.आई. (URI) में अनज़िप करें",
+      "description": "डिवाइस वेंडर डेटा गुण के मूल्य के ज़िप स्ट्रीम को निकालने के निर्देशिका के यू.आर.आई. (URI) को निर्दिष्ट करता है ।",
       "type": "string"
     },
     "dcmPurgeQueueMessagePollingInterval": {
-      "title": "Purge Queue Messages पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for purging queue messages in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS. अगर कॉन्फ़िगर न किया हो तो, there is no deletion",
+      "title": "कतार में संदेशों के परिष्करण का पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में कतार के संदेशों को परिष्करण करने का पोलिंग अंतराल ।यदि कॉन्फ़िगर न किया हो तो, कोई विलोपन नहीं होगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmWadoSpoolDirectory": {
-      "title": "Wado-RS Spool Directory",
-      "description": "Path to Wado-RS spool directory used to aggregate uncompressed frames.",
+      "title": "डब्ल्यू.ए.डी.ओ.-आर.एस. (WADO-RS) स्पूल निर्देशिका",
+      "description": "असम्पीड़ित फ्रेम्स को इकठ्ठा करने के डब्ल्यू.ए.डी.ओ.-आर.एस. (WADO-RS) स्पूल निर्देशिका का पथ ।",
       "type": "string",
       "default": "${jboss.server.temp.dir}"
     },
     "dcmRejectExpiredStudiesPollingInterval": {
-      "title": "Reject Expired Studies पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for rejecting expired Studies and Series in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS. अगर कॉन्फ़िगर न किया हो तो, neither expired Studies nor Series will be rejected automatically",
+      "title": "समाप्त स्टडीज अस्वीकृती पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में समाप्त हुए स्टडीज और सीरीज को अस्वीकृत करने का पोलिंग अंतराल ।यदि कॉन्फ़िगर न किया हो तो, समाप्त हुए स्टडीज और सीरीज अपनेआप अस्वीकृत नहीं होंगे ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmRejectExpiredStudiesSchedule": {
-      "title": "Reject Expired Studies Schedule",
-      "description": "Limits Rejection of Expired Studies to specified times इस प्रारूप में 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday).",
+      "title": "समाप्त स्टडीज अस्वीकृती अनुसूची",
+      "description": "समाप्त हुए स्टडीज को निर्दिष्ट समय अनुसूची में अस्वीकृत करने को सीमित करता है, इस प्रारूप में 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday) ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -847,64 +847,64 @@
       "format": "dcmSchedule"
     },
     "dcmRejectExpiredStudiesFetchSize": {
-      "title": "Reject Expired Studies प्राप्ति का माप",
-      "description": "Maximal number of expired Studies fetched in one query; अगर कॉन्फ़िगर न किया हो तो, expired Studies will not be rejected automatically",
+      "title": "समाप्त स्टडीज अस्वीकृती प्राप्ति का माप",
+      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए समाप्त स्टडीज के रेकॉर्ड्स की अधिकतम संख्या; यदि कॉन्फ़िगर न किया हो तो, समाप्त हुए स्टडीज अपनेआप अस्वीकृत नहीं होंगे ।",
       "type": "integer",
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRejectExpiredSeriesFetchSize": {
-      "title": "Reject Expired Series प्राप्ति का माप",
-      "description": "Maximal number of expired Series fetched in one query; अगर कॉन्फ़िगर न किया हो तो, expired Series will not be rejected automatically",
+      "title": "समाप्त सीरीज अस्वीकृती प्राप्ति का माप",
+      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए समाप्त सीरीज के रेकॉर्ड्स की अधिकतम संख्या; यदि कॉन्फ़िगर न किया हो तो, समाप्त हुए सीरीज अपनेआप अस्वीकृत नहीं होंगे ।",
       "type": "integer",
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRejectExpiredStudiesAETitle": {
-      "title": "Reject Expired Studies AE Title",
-      "description": "AE Title of Local Application Entity performing the automatic rejection of expired Studies and Series. अगर कॉन्फ़िगर न किया हो तो, neither expired Studies nor Series will be rejected automatically.",
+      "title": "समाप्त स्टडीज अस्वीकृती ए.इ. (AE) का नाम",
+      "description": "स्थानीय अनुप्रयोग तत्व ए.इ. (AE) का नाम जो समाप्त हुए स्टडीज और सीरीज को अपनेआप अस्वीकृत करने की प्रक्रिया करता है ।यदि कॉन्फ़िगर न किया हो तो, समाप्त हुए स्टडीज और सीरीज अपनेआप अस्वीकृत नहीं होंगे ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmStorePermissionServiceURL": {
-      "title": "Store Permission Service URL",
-      "description": "URL of Store Permission Service which will be invoked on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the गुण in the object. उदाहरण के तौर पे http(s)://<store-permission-service-provider-host>:<store-permission-service-provider-port>/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "संचय अनुमति सेवा का यू.आर.एल. (URL)",
+      "description": "संचय अनुमति सेवा का यू.आर.एल. (URL) जिसे किसी भी ए.इ. (AE) द्वारा प्राप्त हुए स्टडी के पहले दृष्टांत के प्राप्ति पे बुलाया जाएगा ।{<dicomTag>} को दृष्टांत के गुण के मूल्य से बदला जाएगा ।उदाहरण के तौर पे : http(s)://<store-permission-service-provider-host>:<store-permission-service-provider-port>/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded} ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "dcmStorePermissionServiceResponse": {
-      "title": "Store Permission Service Response",
-      "description": "Emulate Store Permission Service Response on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the गुण in the object. सिर्फ प्रभावशाली अगर no Store Permission Service URL is configured. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "संचय अनुमति सेवा प्रतिक्रिया",
+      "description": "किसी भी ए.इ. (AE) द्वारा प्राप्त हुए स्टडी के पहले दृष्टांत के प्राप्ति पे संचय अनुमति सेवा प्रतिक्रिया के बराबर करें ।{<dicomTag>} को दृष्टांत के गुण के मूल्य से बदला जाएगा ।सिर्फ प्रभावशाली, यदि कोई ‘संचय अनुमति सेवा का यू.आर.एल.‘ कॉन्फ़िगर्ड नहीं है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "dcmStorePermissionServiceResponsePattern": {
-      "title": "Store Permission Service Response Pattern",
-      "description": "Regular Expression applied to responses from Store Permission Service to determine agreement for storage. उदाहरण के तौर पे \"validation\"\\s*:\\s*\"true\" . अगर कॉन्फ़िगर न किया हो तो, every success response will be treated as agreement for storage. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "संचय अनुमति सेवा प्रतिक्रिया पैटर्न",
+      "description": "संचय अनुमति सेवा के प्रतिक्रियाओं पे लागू रेगुलर एक्सप्रेशन जो स्टोरज पे समझौते का तय करता है ।उदाहरण के तौर पे \"validation\"\\s*:\\s*\"true\" ।यदि कॉन्फ़िगर न किया हो तो, हर सफल प्रतिक्रिया को स्टोरेज पे समझौते के तौर पे माना जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "dcmStorePermissionServiceErrorCommentPattern": {
-      "title": "Store Permission Service Error Comment Pattern",
-      "description": "Regular Expression applied to responses from Store Permission Service to extract Error Comment. उदाहरण के तौर पे \"errorcomment\"\\s*:\\s*\"(.*)\". अगर कॉन्फ़िगर न किया हो तो, \"Storage denied.\" will be used as Error Comment. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "संचय अनुमति सेवा त्रुटि टिप्पणि पैटर्न",
+      "description": "संचय अनुमति सेवा के प्रतिक्रियाओं से त्रुटि टिप्पणि को निकालने के लिए लागू रेगुलर एक्सप्रेशन ।उदाहरण के तौर पे \"errorcomment\"\\s*:\\s*\"(.*)\" ।यदि कॉन्फ़िगर न किया हो तो, \"Storage denied.\" को त्रुटि टिप्पणि के तौर पे इस्तमाल किया जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "dcmStorePermissionServiceErrorCodePattern": {
-      "title": "Store Permission Service Error Code Pattern",
-      "description": "Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. उदाहरण के तौर पे \"errorcode\"\\s*:\\s*\"(\\p{XDigit}{4})\". अगर कॉन्फ़िगर न किया हो तो, the Error Code will be 0124H (Not Authorized). किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "संचय अनुमति सेवा त्रुटि कोड पैटर्न",
+      "description": "संचय अनुमति सेवा के प्रतिक्रियाओं से त्रुटि कोड को हेक्साडेसीमल में निकालने के लिए लागू रेगुलर एक्सप्रेशन ।उदाहरण के तौर पे \"errorcode\"\\s*:\\s*\"(\\p{XDigit}{4})\" ।यदि कॉन्फ़िगर न किया हो तो, 0124H (अधिकृत नहीं) को त्रुटि कोड के तौर पे इस्तमाल किया जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "dcmStorePermissionServiceExpirationDatePattern": {
-      "title": "Store Permission Service Expiration Date Pattern",
-      "description": "Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. उदाहरण के तौर पे \"expirationdate\"\\s*:\\s*\"([0-9]{8})\". अगर कॉन्फ़िगर न किया हो तो, locally configured स्टडी धारण नीति Rules will be applied. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "संचय अनुमति सेवा समाप्ति तारीख पैटर्न",
+      "description": "संचय अनुमति सेवा के प्रतिक्रियाओं से प्राथमिक स्टडी समाप्ति तारीख को निकालने के लिए लागू रेगुलर एक्सप्रेशन ।उदाहरण के तौर पे \"expirationdate\"\\s*:\\s*\"([0-9]{8})\" ।यदि कॉन्फ़िगर न किया हो तो, स्थानीय कॉन्फ़िगर्ड स्टडी धारण नीतियाँ लागू होंगे ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "dcmStorePermissionCacheStaleTimeout": {
-      "title": "Store Permission Cache Stale Timeout",
-      "description": "Maximal staleness of cached responses from Storage Permission Service in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS. अगर कॉन्फ़िगर न किया हो तो, cached responses are only removed on reaching the maximal cache size.",
+      "title": "संचय अनुमति कैश पुरानापन समयपाल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में संचय अनुमति सेवा से कैश किए हुए प्रतिक्रियाओं के पुरानापन का अधिकतम समयपाल ।यदि कॉन्फ़िगर न किया हो तो, सिर्फ अधिकतम कैश सीमा पार होने पे कैश किए हुए प्रतिक्रियाओं को निकाला जाएगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmStorePermissionCacheSize": {
-      "title": "Store Permission Cache Size",
-      "description": "Maximum number of cached responses from Storage Permission Service.",
+      "title": "संचय अनुमति कैश सीमा",
+      "description": "संचय अनुमति सेवा से कैश किए हुए प्रतिक्रियाओं की सीमा ।",
       "type": "integer",
       "default": 10,
       "minimum": 0,
@@ -925,29 +925,29 @@
       "exclusiveMinimum": true
     },
     "dcmStoreUpdateDBMaxRetries": {
-      "title": "Store अपडेट DB पुनःपरीक्षण की अधिकतम संख्या",
-      "description": "पुनःपरीक्षण की अधिकतम संख्या to अपडेट the database on storage.",
+      "title": "संचय अपडेट डेटाबेस पुनःपरीक्षण की अधिकतम संख्या",
+      "description": "संचय पे डेटाबेस को अपडेट करने के पुनःपरीक्षण की अधिकतम संख्या ।",
       "type": "integer",
       "default": 1,
       "minimum": 0
     },
     "dcmStoreUpdateDBMinRetryDelay": {
-      "title": "Minimal Store अपडेट DB Delay of Retry",
-      "description": "Minimal Delay in ms between retries to अपडेट the database on storage.",
+      "title": "न्यूतनम संचय अपडेट डेटाबेस पुनःपरीक्षण विलम्ब",
+      "description": "मिलीसेकण्डों में संचय पे डेटाबेस को अपडेट करने के पुनःपरीक्षण का न्यूतनम विलम्व ।",
       "type": "integer",
       "default": 500,
       "minimum": 0
     },
     "dcmStoreUpdateDBMaxRetryDelay": {
-      "title": "Maximal Store अपडेट DB Delay of Retry",
-      "description": "Maximal Delay in ms between retries to अपडेट the database on storage.",
+      "title": "अधिकतम संचय अपडेट डेटाबेस पुनःपरीक्षण विलम्ब",
+      "description": "मिलीसेकण्डों में संचय पे डेटाबेस को अपडेट करने के पुनःपरीक्षण का अधिकतम विलम्व ।",
       "type": "integer",
       "default": 1000,
       "minimum": 1
     },
     "dcmAllowRejectionForDataRetentionPolicyExpired": {
-      "title": "Allow Rejection For Data Retention Policy Expired",
-      "description": "Allow Rejection For Data Retention Policy Expired. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "डेटा धारण नीति समाप्ति पे अस्वीकृति की अनुमति दे",
+      "description": "डेटा धारण नीति समाप्ति पे अस्वीकृति की अनुमति दे ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "EXPIRED_UNSET",
       "enum": [
@@ -958,8 +958,8 @@
       ]
     },
     "dcmAllowDeleteStudyPermanently": {
-      "title": "Allow Delete Study permanently",
-      "description": "Allow to delete Study permanently. REJECTED = only already rejected Studies. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "स्टडी को पूरी तरह मिटाने की अनुमति दे",
+      "description": "स्टडी को पूरी तरह मिटाने की अनुमति दे ।REJECTED = सिर्फ पहले से अस्वीकृत किए हुए स्टडीज ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "REJECTED",
       "enum": [
@@ -968,8 +968,8 @@
       ]
     },
     "dcmAllowDeletePatient": {
-      "title": "Allow Delete Patient",
-      "description": "Allow permanent deletion of Patients. Enumerated values: NEVER, ALWAYS, WITHOUT_STUDIES. अगर कॉन्फ़िगर न किया हो तो, WITHOUT_STUDIES will be applied.",
+      "title": "मरीज़ के रेकॉर्ड को मिटाने की अनुमति दे",
+      "description": "मरीज़ के रेकॉर्ड को पूरी तरह मिटाने की अनुमति दे ।इन मूल्यों में से चुने : NEVER (= कभी नहीं), ALWAYS (= हमेशा), WITHOUT_STUDIES (= बिना स्टडीज के) ।यदि कॉन्फ़िगर न किया हो तो, WITHOUT_STUDIES (= बिना स्टडीज के) लागू होगा ।",
       "type": "string",
       "default": "WITHOUT_STUDIES",
       "enum": [
@@ -979,31 +979,31 @@
         ]
       },
     "dcmPurgeStgCmtCompletedDelay": {
-      "title": "Purge Storage Commitment Completed Delay",
-      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में विलम्ब after which results of completed Storage Commitment requests are purged. अगर कॉन्फ़िगर न किया हो तो, there is no deletion.",
+      "title": "संपूर्ण स्टोरेज प्रतिबद्धता परिष्करण विलम्ब",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में विलम्ब जिसके बाद संपूर्ण स्टोरेज प्रतिबद्धता अनुरोधों के प्रतिक्रियाओं का परिष्करण होगा ।यदि कॉन्फ़िगर न किया हो तो, कोई परिष्करण नहीं होगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeStgCmtPollingInterval": {
-      "title": "Purge Storage Commitment पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for purging Storage Commitment Results in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS. अगर कॉन्फ़िगर न किया हो तो, there is no deletion",
+      "title": "संपूर्ण स्टोरेज प्रतिबद्धता परिष्करण पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में स्टोरेज प्रतिबद्धता के प्रतिक्रियाओं का पोलिंग अंतराल ।यदि कॉन्फ़िगर न किया हो तो, कोई परिष्करण नहीं होगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmDefaultCharacterSet": {
-      "title": "Default Character Set",
-      "description": "Value of Specific Character Set (0008,0005) added to Data Sets of C-STORE RQs and pending C-FIND RSPs without Specific Character Set (0008,0005) गुण received by any AE. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "डिफ़ॉल्ट कॅरक्टर सेट",
+      "description": "किसी भी ए.इ. (AE) द्वारा पाए गए सी-स्टोर (C-Store) अनुरोधों के डेटा सेट्स और अनिर्णीत सी-फाइंड (C-FIND) प्रतिक्रियाएँ, जो विशिष्ट कॅरक्टर सेट (०००८,०००५) गुण के मूल्य के बिना हो, उनमें जोड़े गए विशिष्ट कॅरक्टर सेट (०००८,०००५) गुण का मूल्य ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmCharset"
     },
     "dcmUPSWorklistLabel": {
-      "title": "UPS Worklist Label",
-      "description": "Value of Worklist Label (0074,1202) of created UPS by any Network AE, if the UPS Push SCU or UPS-RS User Agent does not provide a value for this attribute. अगर कॉन्फ़िगर न किया हो तो, the AE Title of the receiving AE will be used. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "यू.पी.एस. (UPS) कार्यसूची लेबल",
+      "description": "किसी भी ए.इ. (AE) द्वारा निर्माण किए गए यू.पी.एस. (UPS) में कार्यसूची लेबल (००७४,१२०२) का मूल्य, यदि यू.पी.एस. पुश एस.सी.यू. (UPS Push SCU) या यू.पी.एस.-आर.एस. (UPS-RS) सेवा का उपभोक्ता इस गुण का मूल्य नहीं देता है ।यदि कॉन्फ़िगर न किया हो तो, बुलाए गए ए.इ. (AE) के नाम का इस्तमाल किया जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string"
     },
     "dcmUPSEventSCU": {
-      "title": "UPS Event SCU",
-      "description": "AE Title of UPS Event एस.ओ.पी. वर्ग SCU, to which UPS Event Reports are sent - independently if the subscription was created by the N-ACTION DIMSE service, or by a corresponding UPS RESTful service. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "यू.पी.एस. (UPS) घटना एस.सी.यू. (SCU)",
+      "description": "यू.पी.एस. (UPS) घटना एस.ओ.पी. (SOP) वर्ग एस.सी.यू. (SCU) ए.इ. (AE) का नाम, जिसपे यू.पी.एस. (UPS) घटना रिपोर्ट्स को स्वतंत्र रूप से भेजे जाएंगे - यदि सदस्य्ता एन.एक्शन डिमसे (N-ACTION DIMSE) सेवा या यू.पी.एस.-आर.एस. (UPS-RS) सेवा द्वारा निर्माण हुआ हो ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -1011,14 +1011,14 @@
       "format": "dcmAETitle"
     },
     "dcmUPSEventSCUKeepAlive": {
-      "title": "UPS Event SCU Keep Alive",
-      "description": "Timeout in ms to keep associations to UPS Event SCUs alive. अगर कॉन्फ़िगर न किया हो तो, associations will not be reused for sending multiple UPS Event Reports to one UPS Event SCU. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "यू.पी.एस. (UPS) घटना एस.सी.यू. (SCU) ज़िंदा रखे",
+      "description": "यू.पी.एस. (UPS) घटना एस.सी.यू. (SCU) को ज़िंदा रखने का मिलीसेकण्डों में समयपाल ।यदि कॉन्फ़िगर न किया हो तो, एक यू.पी.एस. (UPS) घटना एस.सी.यू. (SCU) पे विविध यू.पी.एस. (UPS) घटना रिपोर्ट्स को भेजने के लिए संपर्कों का फिरसे इस्तमाल नहीं किया जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "integer",
       "minimum": 100
     },
     "dcmRetrieveAET": {
-      "title": "Retrieve AE Title",
-      "description": "निर्दिष्ट करता है Retrieve AE Titles associated with received डाइकोम objects. अगर कॉन्फ़िगर न किया हो तो, the Called AE Title of the receiving AE will be used. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "पुनःप्राप्ति ए.इ. (AE) का नाम",
+      "description": "प्राप्त हुए डाइकोम (DICOM) दृष्टांतों से सम्बंधित पुनःप्राप्ति ए.इ. (AE) के नामों को निर्दिष्ट करता है ।यदि कॉन्फ़िगर न किया हो तो, बुलाए गए ए.इ. (AE) के नाम का इस्तमाल होगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -1026,8 +1026,8 @@
       "format": "dcmArchiveAETitle"
     },
     "dcmReturnRetrieveAET": {
-      "title": "Return Retrieve AE Title",
-      "description": "Retrieve AE Title returned in C-FIND and QIDO responses. अगर कॉन्फ़िगर न किया हो तो, the Retrieve AET associated with the archived entity will be returned. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "पुनःप्राप्ति ए.इ. (AE) का नाम लौटाए",
+      "description": "सी-फाइंड (C-FIND) और क्वीडो (QIDO) प्रतिक्रियाओं में लौटाए हुए पुनःप्राप्ति ए.इ. (AE) का नाम ।यदि कॉन्फ़िगर न किया हो तो, संग्रहित तत्व से सम्बंधित पुनःप्राप्ति ए.इ. (AE) के नाम को लौटाया जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -1035,8 +1035,8 @@
       "format": "dcmArchiveAETitle"
     },
     "dcmMultipleStoreAssociations": {
-      "title": "Multiple Store Associations",
-      "description": "Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. अगर कॉन्फ़िगर न किया हो तो, only one Association will be used. May be supplemented by configured Multiple Store Associations for particular Archive Network AEs.",
+      "title": "विविध संचय संपर्क",
+      "description": "मिश्र दृष्टांतों के पुनःप्राप्ति में इस्तमाल हुए संचय संपर्कों की संख्या ।सी-स्टोर एस.सी.पी. (C-STORE SCP) से विशिष्ट संख्याएँ '<AETitle>:' उपसर्ग द्वारा निर्दिष्ट की जा सकती है ।यदि कॉन्फ़िगर न किया हो तो, सिर्फ एक संपर्क इस्तमाल होगा ।विशिष्ट आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर्ड विविध संचय संपर्कों से पूरक हो सकते है ।",
         "type": "array",
         "items": {
         "type": "string"
@@ -1044,47 +1044,47 @@
       "format": "dcmMultipleStoreAssociations"
     },
     "dcmExternalRetrieveAEDestination": {
-      "title": "External Retrieve AE Destination",
-      "description": "AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to external retrieve AE. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "बाहरी पुनःप्राप्ति ए.इ. (AE) गंतव्य",
+      "description": "बाहरी पुनःप्राप्ति ए.इ. (AE) पे भेजे गए सी-मूव आर.क्यू. (C-MOVE RQs) अनुरोधों में मूव गंतव्य के रूप में सेट किए हुए सी-स्टोर एस.सी.पी. (C-STORE SCP) ए.इ. (AE) का नाम ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmXDSiImagingDocumentSourceAETitle": {
-      "title": "XDS-I Imaging Document Source AE Title",
-      "description": "AE Title of local Application Entity associated with XDS-I Imaging Document Source.",
+      "title": "एक्स.डी.एस.-आई. (XDS-I) इमेजिंग दस्तावेज़ स्रोत ए.इ. (AE) का नाम",
+      "description": "एक्स.डी.एस.-आई. (XDS-I) इमेजिंग दस्तावेज़ स्रोत से सम्बंधित स्थानीय अनुप्रयोग तत्व के ए.इ. (AE) का नाम ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmQueueTasksFetchSize": {
-      "title": "Queue Tasks प्राप्ति का माप",
-      "description": "Maximal number of Tasks rescheduled or deleted or canceled in one transaction.",
+      "title": "कतार में कार्यों के प्राप्ति का माप",
+      "description": "एक डेटाबेस ट्रांसेक्शन में पुनर्निर्धारित किए हुए या मिटाए गए या रद्द किए हुए कार्यों की अधिकतम संख्या ।",
       "type": "integer",
       "default": 100,
       "minimum": 1
     },
     "dcmRemapRetrieveURL": {
-      "title": "Remap Retrieve URL",
-      "description": "Remap Retrieve URL used in QIDO-RS and WADO-RS Metadata responses. Optionally prefixed with \"[<http-client-host>]\". उदाहरण के तौर पे: \"[cache-proxy]http://cache-proxy:8080\". If absent or if the specified <http-client-host> does not match, scheme and server authority of the QIDO-RS or WADO-RS request URL are used.",
+      "title": "पुनःप्राप्ति यू.आर.एल. (URL) को फिरसे मूल्य दे",
+      "description": "क्यू.आई.डी.ओ.-आर.एस. (QIDO-RS) और डब्ल्यू.ए.डी.ओ.-आर.एस. (WADO-RS) मेटाडेटा प्रतिक्रियाओं में पुनःप्राप्ति यू.आर.एल. (URL) को फिरसे मूल्य दे ।वैकल्पिक रूप से \"[<http-client-host>]\" उपसर्ग दिया जा सकता है ।उदाहरण के तौर पे : \"[cache-proxy]http://cache-proxy:8080\" ।यदि कॉन्फ़िगर न किया हो या निर्दिष्ट <http-client-host> से मेल नहीं मिलता हो तो, क्यू.आई.डी.ओ.-आर.एस. (QIDO-RS) और डब्ल्यू.ए.डी.ओ.-आर.एस. (WADO-RS) अनुरोध यू.आर.एल. (URL) के स्कीम और सर्वर अधिकार का इस्तमाल होगा ।",
       "type": "string"
     },
-    "dcmAuditRecordRepositoryURL": {
-      "title": "Audit Record Repository URL",
-      "description": "Access URL of Audit Record Repository. उदाहरण के तौर पे http(s)://<arr-host>:<arr-port>",
+    "dcmProxyUpstreamURL": {
+      "title": "प्रॉक्सी अपस्ट्रीम यू.आर.एल. (URL)",
+      "description": "अपस्ट्रीम एंडपॉइन्ट, जिसे प्रॉक्सी करना है, उसका यू.आर.एल. (URL)",
       "type": "string"
     },
     "dcmAudit2JsonFhirTemplateURI": {
-      "title": "Audit to json+fhir Template URI",
-      "description": "निर्दिष्ट करता है URI for the style sheet to transcode Audit Message to a FHIR JSON Resource Audit Event",
+      "title": "ऑडिट से जे.एस.ओ.एन + एफ.एच.आई.आर (json+fhir) फर्मा यू.आर.आई. (URI)",
+      "description": "ऑडिट संदेश को एफ.एच.आई.आर (FHIR) जे.एस.ओ.एन (JSON) संसाधन ऑडिट घटना में ट्रांसकोड करने के स्टाइलशीट के यू.आर.आई. (URI) को निर्दिष्ट करता है ।",
       "type": "string"
     },
     "dcmAudit2XmlFhirTemplateURI": {
-      "title": "Audit to xml+fhir Template URI",
-      "description": "निर्दिष्ट करता है URI for the style sheet to transcode Audit Message to a FHIR XML Resource Audit Event",
+      "title": "ऑडिट से एक्स.एम.एल + एफ.एच.आई.आर (xml+fhir) फर्मा यू.आर.आई. (URI)",
+      "description": "नऑडिट संदेश को एफ.एच.आई.आर (FHIR) एक्स.एम.एल (XML) संसाधन ऑडिट घटना में ट्रांसकोड करने के स्टाइलशीट के यू.आर.आई. (URI) को निर्दिष्ट करता है ।",
       "type": "string"
     },
     "dcmCopyMoveUpdatePolicy": {
-      "title": "Copy Move अपडेट Policy",
-      "description": "निर्दिष्ट करता है अपडेट policy for attributes of the destination Study on Copy/Move of Instances from another Study. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "कॉपी मूव अपडेट नीति",
+      "description": "किसी स्टडी के दृष्टांतों को कॉपी या मूव करने पे गंतव्य स्टडी के गुणों पे लागू की गई नीति को निर्दिष्ट करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "PRESERVE",
       "enum": [
@@ -1096,8 +1096,8 @@
       ]
     },
     "dcmLinkMWLEntryUpdatePolicy": {
-      "title": "Link MWL Entry अपडेट Policy",
-      "description": "निर्दिष्ट करता है अपडेट policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "एम्.डब्ल्यू.एल. (MWL) एंट्री संयुक्ति अपडेट नीति",
+      "description": "पहले से मौजूद स्टडी को संदर्भित करनेवाले एम्.डब्ल्यू.एल. (MWL) एंट्री के साथ दूसरे स्टडी के दृष्टांतों को संयुक्त करने पे स्टडी के गुणों पे लागू हुई अपडेट नीति को निर्दिष्ट करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "PRESERVE",
       "enum": [
@@ -1109,8 +1109,8 @@
       ]
     },
     "dcmStorageVerificationPolicy": {
-      "title": "Storage Verification Policy",
-      "description": "DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "स्टोरेज सिद्धकरण नीति",
+      "description": "DB_RECORD_EXISTS: सिर्फ डेटाबेस के रेकॉर्ड्स के  मौजूदगी की जाँच करें, OBJECT_EXISTS: जाँच करें यदि दृष्टांत स्टोरेज सिस्टम पे मौजूद है, OBJECT_SIZE: स्टोरेज सिस्टम पे दृष्टांत के माप की जाँच करें, OBJECT_FETCH: स्टोरेज सिस्टम से दृष्टांत को प्राप्त करें, OBJECT_CHECKSUM: स्टोरेज सिस्टम पे दृष्टांत के चेकसम की पुनर्गणना करें, S3_MD5SUM: एस.३. (S3) स्टोरेज सिस्टम पे डाइकोम (DICOM) फ़ाइल के एम्.डी.५. (MD5) की जांच योग करें ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "OBJECT_CHECKSUM",
       "enum": [
@@ -1123,57 +1123,57 @@
       ]
     },
     "dcmStorageVerificationUpdateLocationStatus": {
-      "title": "Storage Verification अपडेट Location Status",
-      "description": "Indicates if the Status of the Location DB record shall be updated on Storage Verification accordingly. Not effective with Storage Verification Policy: DB_RECORD_EXISTS. False if absent. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "स्टोरेज सिद्धकरण स्थान की स्थिती का अपडेट",
+      "description": "स्टोरेज सिद्धकरण पे डेटाबेस में स्थान के रेकॉर्ड की स्थिती को अपडेट करने का संकेत करता है ।प्रभावशाली नहीं होगा, यदि 'स्टोरेज सिद्धकरण नीति' का मूल्य DB_RECORD_EXISTS है । यदि कॉन्फ़िगर नहीं किया है, तो कोई अपडेट नहीं होगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmStorageVerificationStorageID": {
-      "title": "Storage Verification Storage IDs",
-      "description": "Indicates that for successful Storage Verification the object must be stored on (one of) the specified Storage System. अगर कॉन्फ़िगर न किया हो तो, successful verification of the storage on any Storage System is sufficient. Not effective with Storage Validation Policy: DB_RECORD_EXISTS. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "स्टोरेज सिद्धकरण स्टोरेज की कई आई.डी. (IDs)",
+      "description": "स्टोरेज सिद्धकरण की सफलता के लिए दृष्टांत का संचय किसी एक निर्दिष्ट स्टोरेज सिस्टम पे होने का संकेत करता है ।यदि कॉन्फ़िगर न किया हो तो, किसी भी स्टोरेज सिस्टम पे स्टोरेज सिद्धकरण की सफलता काफी है ।प्रभावशाली नहीं होगा, यदि 'स्टोरेज सिद्धकरण नीति' का मूल्य DB_RECORD_EXISTS है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationAETitle": {
-      "title": "Storage Verification AE Title",
-      "description": "Archive AE Title used for scheduled Storage Verifications.",
+      "title": "स्टोरेज सिद्धकरण ए.इ. (AE) का नाम",
+      "description": "स्टोरेज सिद्धकरण के लिए इस्तमाल हुए आर्काइव ए.इ. (AE) का नाम ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmStorageVerificationBatchID": {
-      "title": "Storage Verification Batch ID",
-      "description": "Batch ID of Storage Verification Tasks triggered by scheduler.",
+      "title": "स्टोरेज सिद्धकरण बैच आई.डी. (ID)",
+      "description": "अनुसूचक द्वारा सक्रीय किए स्टोरेज सिद्धकरण का बैच आई.डी. (ID) ।",
       "type": "string"
     },
     "dcmStorageVerificationInitialDelay": {
-      "title": "Storage Verification Initial Delay",
-      "description": "Delay of first Storage Verification of a Series after it was received. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "स्टोरेज सिद्धकरण प्राथमिक विलम्ब",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnYnMnD or PnW में सीरीज के प्राप्ति पे उसके प्राथमिक स्टोरेज सिद्धकरण का विलम्ब ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmStorageVerificationPeriod": {
-      "title": "Storage Verification Period",
-      "description": "Period in which the storage of individual Series is verified. If absent, storage of individual Series are only verified once after configured Storage Verification Initial Delay.",
+      "title": "स्टोरेज सिद्धकरण अवधि",
+      "description": "अवधि जिसमें प्रत्येक सीरीज की जाँच होगी ।यदि कॉन्फ़िगर नहीं किया है, तो प्रत्येक सीरीज के स्टोरेज को सिर्फ कॉन्फ़िगर्ड 'स्टोरेज सिद्धकरण प्राथमिक विलम्ब' पहुँचने पे जाँच होगी ।",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmStorageVerificationMaxScheduled": {
-      "title": "Maximal scheduled Storage Verifications",
-      "description": "Maximal number of scheduled Storage Verification tasks on this device. Shall be set > 0 to distribute tasks over nodes of a clustered archive.",
+      "title": "अधिकतम अनुसूचित स्टोरेज सिद्धकरण",
+      "description": "इस डिवाइस पे अनुसूचित स्टोरेज सिद्धकरण कार्यों की अधिकतम संख्या ।० के मूल्य से ज़्यादा सेट करें, यदि कार्यों को क्लस्टर के अन्य आर्काइव डिवाइसेस पे विभाजित करना हो ।",
       "type": "integer",
       "default": 0,
       "minimum": 0
     },
     "dcmStorageVerificationPollingInterval": {
-      "title": "Storage Verification पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for Series scheduled for Storage Verification in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS.",
+      "title": "स्टोरेज सिद्धकरण पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में सीरीज के स्टोरेज सिद्धकरण का पोलिंग अंतराल ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmStorageVerificationSchedule": {
-      "title": "Storage Verification Schedule",
-      "description": "Limits Storage Verification to specified times इस प्रारूप में 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday).",
+      "title": "स्टोरेज सिद्धकरण अनुसूची",
+      "description": "निर्दिष्ट समय अनुसूची में स्टोरेज सिद्धकरण को सीमित करता है, इस प्रारूप में 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday) ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -1181,48 +1181,48 @@
       "format": "dcmSchedule"
     },
     "dcmStorageVerificationFetchSize": {
-      "title": "Storage Verification प्राप्ति का माप",
-      "description": "Maximal number of Series scheduled for Storage Verification fetched by one query.",
+      "title": "स्टोरेज सिद्धकरण प्राप्ति का माप",
+      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए अनुसूचित किए हुए सीरीज के स्टोरेज सिद्धकरण की अधिकतम संख्या ।",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmUpdateLocationStatusOnRetrieve": {
-      "title": "अपडेट Location Status on Retrieve",
-      "description": "Indicates if the Status of the Location DB record shall be updated for objects failed to get fetched from storage on retrieve to MISSING_OBJECT or FAILED_TO_FETCH_OBJECT. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "पुनःप्राप्ति पे स्थान की स्थिती का अपडेट",
+      "description": "पुनःप्राप्ति पे स्टोरेज से दृष्टांतों की प्राप्ति असफल होने पे डेटाबेस में स्थान के रेकॉर्ड की स्थिती को 'MISSING_OBJECT' या 'FAILED_TO_FETCH_OBJECT' के मूल्य से अपडेट करने का संकेत करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmStorageVerificationOnRetrieve": {
-      "title": "Storage Verification on Retrieve",
-      "description": "Indicates if failures to fetch an object from Storage on retrieve shall trigger a Storage Verification of the whole Series. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "पुनःप्राप्ति पे स्टोरेज सिद्धकरण",
+      "description": "पुनःप्राप्ति पे स्टोरेज से दृष्टांत के प्राप्ति में असफलताएँ हो तो सम्पूर्ण सीरीज के स्टोरेज सिद्धकरण को सक्रीय करने का संकेत करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmCompressionAETitle": {
-      "title": "Compression AE Title",
-      "description": "Archive AE Title used for delayed Compression.",
+      "title": "संपीड़न ए.इ. (AE) का नाम",
+      "description": "विलंबित संपीडन में इस्तमाल हुए आर्काइव ए.इ. (AE) का नाम ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmCompressionPollingInterval": {
-      "title": "Compression पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for Series to be compressed in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS.",
+      "title": "संपीड़न पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में सीरीज के संपीड़न का पोलिंग अंतराल ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmCompressionThreads": {
-      "title": "Compression Threads",
-      "description": "Number of Threads used for Compression.",
+      "title": "संपीड़न थ्रेड्स",
+      "description": "संपीड़न में इस्तमाल की गई थ्रेड्स की संख्या ।",
       "type": "integer",
       "default" : 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmCompressionSchedule": {
-      "title": "Compression Schedule",
-      "description": "Limits compression to specified times इस प्रारूप में 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
+      "title": "संपीड़न अनुसूची",
+      "description": "निर्दिष्ट समय अनुसूची में संपीड़न को सीमित करता है, इस प्रारूप में 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday) ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -1230,111 +1230,111 @@
       "format": "dcmSchedule"
     },
     "dcmCompressionFetchSize": {
-      "title": "Compression प्राप्ति का माप",
-      "description": "Maximal number of Series fetched for compression by one query.",
+      "title": "संपीड़न प्राप्ति का माप",
+      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए संपीडन के लिए सीरीज की अधिकतम संख्या ।",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmDiffTaskProgressUpdateInterval": {
-      "title": "Diff Task Progress अपडेट Interval",
-      "description": "Interval of updating Diff Tasks in process for progress monitoring; disabled if absent.",
+      "title": "तुलना कार्य के प्रगति का अपडेट अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में प्रगति की निगरानी के लिए जारी तुलना कार्यों को अपडेट करने का अंतराल; यदि कॉन्फ़िगर नहीं किया है, तो कोई अपडेट नहीं होगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPatientVerificationPDQServiceID": {
-      "title": "Patient Verification PDQ Service ID",
-      "description": "ID of PDQ Service used for Verification of Patient Demographic. अगर कॉन्फ़िगर न किया हो तो, no Patient Verification will be performed.",
+      "title": "मरीज़ के रेकॉर्ड का सिद्धकरण के लिए पी.डी.क्यू. (PDQ) सेवा आई.डी. (ID)",
+      "description": "मरीज़ जनसांख्यिकी का सिद्धकरण करने के लिए इस्तमाल हुए पी.डी.क्यू. (PDQ) सेवा का आई.डी. (ID) ।यदि कॉन्फ़िगर न किया हो तो, मरीज़ के रेकॉर्ड का सिद्धकरण नहीं होगा ।",
       "type": "string",
       "format": "dcmPDQServiceID"
     },
     "dcmPatientVerificationPollingInterval": {
-      "title": "Patient Verification पोलिंग अंतराल",
-      "description": "Patient Verification पोलिंग अंतराल. अगर कॉन्फ़िगर न किया हो तो, no Patient Verification will be performed.",
+      "title": "मरीज़ के रेकॉर्ड का सिद्धकरण के लिए पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में मरीज़ के रेकॉर्ड का सिद्धकरण के लिए पोलिंग अंतराल ।यदि कॉन्फ़िगर न किया हो तो, मरीज़ के रेकॉर्ड का सिद्धकरण नहीं होगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPatientVerificationFetchSize": {
-      "title": "Patient Verification प्राप्ति का माप",
-      "description": "Maximal number of Patients fetched for Patient Verification in one query.",
+      "title": "मरीज़ के रेकॉर्ड का सिद्धकरण के लिए प्राप्ति का माप",
+      "description": "मरीज़ के रेकॉर्ड का सिद्धकरण के लिए एक डेटाबेस क्वेरी में प्राप्त हुए मरीज़ों के रेकॉर्ड्स की अधिकतम संख्या ।",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmPatientVerificationAdjustIssuerOfPatientID": {
-      "title": "Patient Verification Adjust Issuer of Patient ID",
-      "description": "Indicates if the Issuer Of Patient ID shall be adjusted to the value returned by the PDQ Service.",
+      "title": "मरीज़ के रेकॉर्ड का सिद्धकरण के लिए मरीज़़ की आई.डी. (ID) का जारीकर्ता का समायोजन",
+      "description": "मरीज़़ की आई.डी. (ID) के जारीकर्ता को पी.डी.क्यू. (PDQ) सेवा द्वारा वापस किए हुए मूल्य से समायोजन करने का संकेत करता है ।",
       "type": "boolean",
       "default" : false
     },
     "dcmPatientVerificationPeriod": {
-      "title": "Patient Verification Period",
-      "description": "Period in which Patient Demographic will be verified. अगर कॉन्फ़िगर न किया हो तो, Patient Verification will not be renewed for Patients verified in the past.",
+      "title": "मरीज़ के रेकॉर्ड का सिद्धकरण के लिए विलम्ब",
+      "description": "विलम्ब जिसमें मरीज़ जनसांख्यिकी का सिद्धकरण होगा ।यदि कॉन्फ़िगर न किया हो तो, जिन मरीज़ के रेकॉर्ड्स का सिद्धकरण पहले से हो चूका है, उन्हें फिरसे नहीं दोहराया जाएगा ।",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmPatientVerificationPeriodOnNotFound": {
-      "title": "Patient Verification Period Not Found",
-      "description": "Period in which Patient Demographic will be retried for Patients which were not found by the configured PDQ Service on last attempt. अगर कॉन्फ़िगर न किया हो तो, Patient Verification will not be retried for Patients not found in the past.",
+      "title": "अनुपस्थित मरीज़ के रेकॉर्ड का सिद्धकरण के लिए विलम्ब",
+      "description": "पिछले कोशिश में कॉन्फ़िगर्ड पी.डी.क्यू. (PDQ) सेवा से न प्राप्त हुए मरीज़ के रेकॉर्ड्स के लिए मरीज़ जनसांख्यिकी के पुनःपरीक्षण का विलम्ब ।यदि कॉन्फ़िगर न किया हो तो, पिछले कोशिश में न प्राप्त हुए मरीज़ के रेकॉर्ड्स के लिए मरीज़ के रेकॉर्ड के सिद्धकरण का पुनःपरीक्षण नहीं होगा ।",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmPatientVerificationRetryInterval": {
-      "title": "Patient Verification पुनःपरीक्षण अंतराल",
-      "description": "Patient Verification पुनःपरीक्षण अंतराल in which failed attempts to verify Patient Demographics against the PDQ Service configured by Patient Verification PDQ Service ID will be retried until the maximal number of retries specified by Patient Verification Max Retries is reached. अगर कॉन्फ़िगर न किया हो तो, failed Patient Verification attempts will not be retried.",
+      "title": "मरीज़ के रेकॉर्ड का सिद्धकरण के पुनःपरीक्षण का अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में 'मरीज़ के रेकॉर्ड का सिद्धकरण के पुनःपरीक्षण की अधिकतम संख्या' की सीमा पहुँचने तक कॉन्फ़िगर्ड 'मरीज़ के रेकॉर्ड का सिद्धकरण के लिए पी.डी.क्यू. (PDQ) सेवा आई.डी. (ID)' के पी.डी.क्यू. (PDQ) सेवा से असफल हुए मरीज़ जनसांख्यिकी का सिद्धकरण को पुनःपरीक्षण करने का पोलिंग अंतराल ।यदि कॉन्फ़िगर न किया हो तो, असफल हुए मरीज़ के रेकॉर्ड का सिद्धकरण के पुनःपरीक्षण की कोशिश नहीं की जाएगी ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPatientVerificationMaxRetries": {
-      "title": "Patient Verification पुनःपरीक्षण की अधिकतम संख्या",
-      "description": "पुनःपरीक्षण की अधिकतम संख्या to verify Patient Demographics against the PDQ Service configured by dcmPatientVerificationPDQServiceID. सिर्फ प्रभावशाली अगर Patient Verification पुनःपरीक्षण अंतराल को निर्दिष्ट किया है. -1 = forever.",
+      "title": "मरीज़ के रेकॉर्ड का सिद्धकरण के पुनःपरीक्षण की अधिकतम संख्या",
+      "description": "कॉन्फ़िगर्ड 'मरीज़ के रेकॉर्ड का सिद्धकरण के लिए पी.डी.क्यू. (PDQ) सेवा आई.डी. (ID)' के पी.डी.क्यू. (PDQ) सेवा से मरीज़ जनसांख्यिकी के सिद्धकरण के पुनःपरीक्षण की अधिकतम संख्या ।सिर्फ प्रभावशाली, यदि 'मरीज़ के रेकॉर्ड का सिद्धकरण के पुनःपरीक्षण का अंतराल' को निर्दिष्ट किया है ।-1 = हमेशा ।",
       "type": "integer",
       "default": 0,
       "minimum": -1
     },
     "dcmPatientVerificationMaxStaleness": {
-      "title": "Patient Verification Maximum Staleness",
-      "description": "Indicates to renew the verification of Patient Demographics on receive of objects for a patient, if previous verification is longer ago as the specified Interval. अगर कॉन्फ़िगर न किया हो तो, Patient Verification on receive of objects is disabled.",
+      "title": "मरीज़ के रेकॉर्ड का सिद्धकरण क अधिकतम पुरानापन",
+      "description": "मरीज़ के दृष्टांतों के प्राप्ति पे मरीज़ जनसांख्यिकी के सिद्धकरण को फिरसे दोहराने का संकेत करता है, यदि पिछला सिद्धकरण निर्दिष्ट अंतराल से पहले हुआ हो ।यदि कॉन्फ़िगर न किया हो तो, दृष्टांतों के प्राप्ति पे मरीज़ के रेकॉर्ड के सिद्धकरण नहीं होगा ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "hl7ADTSendingApplication": {
-      "title": "एच.एल.७. ADT Sending Application",
-      "description": "Application|Facility का नाम Sending Application for एच.एल.७. ADT messages to synchronize external systems about performed Patient Information updates. अगर कॉन्फ़िगर न किया हो तो, synchronization of external systems by एच.एल.७. ADT messages is disabled.",
+      "title": "एच.एल.७. (HL7) ए.डी.टी. (ADT) भेजनेवाला अनुप्रयोग",
+      "description": "पूरे की गए मरीज़ के जानकारी के अपडेट को एच.एल.७. (HL7) ए.डी.टी. (ADT) संदेशों से बाहरी सिस्टम्स को सूचित करनेवाले भेजनेवाला अनुप्रयोग के अनुप्रयोग और सुविधा का नाम ।यदि कॉन्फ़िगर न किया हो तो, बाहरी सिस्टम्स को एच.एल.७. (HL7) ए.डी.टी. (ADT) संदेशों से सूचित नहीं किया जाएगा ।",
       "type": "string",
       "format": "hl7ApplicationName"
     },
     "hl7ADTReceivingApplication": {
-      "title": "एच.एल.७. ADT Receiving Application",
-      "description": "Application|Facility का नाम Receiving Application for एच.एल.७. ADT messages to synchronize external systems about performed Patient Information updates. अगर कॉन्फ़िगर न किया हो तो, synchronization of external systems by एच.एल.७. ADT messages is disabled.",
+      "title": "एच.एल.७. (HL7) ए.डी.टी. (ADT) प्राप्ति अनुप्रयोग",
+      "description": "पूरे की गए मरीज़ के जानकारी के अपडेट को एच.एल.७. (HL7) ए.डी.टी. (ADT) संदेशों से बाहरी सिस्टम्स को सूचित करनेवाले प्राप्ति अनुप्रयोग के अनुप्रयोग और सुविधा का नाम ।यदि कॉन्फ़िगर न किया हो तो, बाहरी सिस्टम्स को एच.एल.७. (HL7) ए.डी.टी. (ADT) संदेशों से सूचित नहीं किया जाएगा ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
     "hl7PSUSendingApplication": {
-      "title": "एच.एल.७. Procedure Status अपडेट Sending Application",
-      "description": "Application|Facility का नाम Sending Application for एच.एल.७. Procedure Status Update. एच.एल.७. Procedure Status अपडेट disabled, if absent. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट भेजनेवाला अनुप्रयोग",
+      "description": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट संदेश भेजनेवाले अनुप्रयोग के अनुप्रयोग और सुविधा का नाम ।यदि कॉन्फ़िगर न किया हो तो, एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट संदेश नहीं भेजा जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "hl7ApplicationName"
     },
     "hl7PSUReceivingApplication": {
-      "title": "एच.एल.७. Procedure Status अपडेट Receiving Application",
-      "description": "Application|Facility का नाम Receiving Application for एच.एल.७. Procedure Status Update. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट प्राप्ति अनुप्रयोग",
+      "description": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट प्राप्त करनेवाले अनुप्रयोग के अनुप्रयोग और सुविधा का नाम ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
     "hl7PSUDelay": {
-      "title": "एच.एल.७. Procedure Status अपडेट Delay",
-      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS में विलम्ब after which an एच.एल.७. Procedure Status अपडेट for a received study is sent to configured एच.एल.७. receivers. अगर कॉन्फ़िगर न किया हो तो, एच.एल.७. Procedure Status अपडेट is triggered by received MPPS. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट विलम्ब",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में विलम्ब जिसके बाद प्राप्त हुए स्टडी के लिए एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट संदेश को कॉन्फ़िगर्ड एच.एल.७. (HL7) संदेश प्राप्त करनेवाले सिस्टम्स पे भेजा जाएगा ।यदि कॉन्फ़िगर न किया हो तो, एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट प्राप्त हुए एम्.पी.पी.एस. (MPPS) द्वारा सक्रीय होगी ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "hl7PSUConditions": {
-      "title": "HL7 Procedure Status Update Attribute Conditions",
-      "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}. May be overwritten by configured values for particular Archive Network AEs.",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट गुण नियम",
+      "description": "प्राप्त हुए मिश्र दृष्टांत के गुणों पे नियमों के द्वारा कॉन्फ़िगर्ड 'एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट प्राप्ति अनुप्रयोगों' पे भेजे गए प्रक्रिया स्थिति अपडेट संदेश के अधिसूचना को सीमित करें, इस प्रारूप में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx} ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -1342,38 +1342,38 @@
       "format": "dcmProperty"
     },
     "hl7PSUForRequestedProcedure": {
-      "title": "एच.एल.७. Procedure Status अपडेट for Requested Procedure",
-      "description": "Restrict notification of configured एच.एल.७. Procedure Status अपडेट Receiving Applications about Procedure Status अपडेट to existence of Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching स्टडी दृष्टांत यू.आई.डी.. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "अनुरोधित प्रक्रिया के लिए एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट",
+      "description": "मिलान स्टडी दृष्टांत यू.आई.डी. (UID) के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में एम्.डब्ल्यू.एल. (MWL) आइटम्स) की मौजूदगी पे कॉन्फ़िगर्ड 'एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट प्राप्ति अनुप्रयोगों' पे भेजे गए प्रक्रिया स्थिति अपडेट संदेश के अधिसूचना को सीमित करें ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "hl7PSURequestedProcedureID": {
-      "title": "एच.एल.७. Procedure Status अपडेट Requested Procedure ID",
-      "description": "Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching स्टडी दृष्टांत यू.आई.डी.. {<attributeID>} will be replaced by the value of गुण in the received study. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट अनुरोधित प्रक्रिया का आई.डी. (ID)",
+      "description": "अधिसूचना संदेश में अनुरोधित प्रक्रिया के आई.डी. (ID) का मूल्य, यदि मिलान स्टडी दृष्टांत यू.आई.डी. (UID) के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में एम्.डब्ल्यू.एल. (MWL) आइटम्स) नहीं है ।प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "{StudyInstanceUID,hash}"
     },
     "hl7PSUAccessionNumber": {
-      "title": "एच.एल.७. Procedure Status Accession Number",
-      "description": "Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching स्टडी दृष्टांत यू.आई.डी.. {<attributeID>} will be replaced by the value of गुण in the received study. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति परिग्रहण संख्या",
+      "description": "अधिसूचना संदेश में परिग्रहण संख्या का मूल्य, यदि मिलान स्टडी दृष्टांत यू.आई.डी. (UID) के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में एम्.डब्ल्यू.एल. (MWL) आइटम्स) नहीं है ।प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "{StudyInstanceUID,hash}"
     },
     "hl7PSUFillerOrderNumber": {
-      "title": "एच.एल.७. Procedure Status Filler Order Number",
-      "description": "Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching स्टडी दृष्टांत यू.आई.डी.. {<attributeID>} will be replaced by the value of गुण in the received study. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति फिलर आर्डर संख्या",
+      "description": "अधिसूचना संदेश में फिलर आर्डर संख्या का मूल्य, यदि मिलान स्टडी दृष्टांत यू.आई.डी. (UID) के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में एम्.डब्ल्यू.एल. (MWL) आइटम्स) नहीं है ।प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "{StudyInstanceUID,hash}"
     },
     "hl7PSUPlacerOrderNumber": {
-      "title": "एच.एल.७. Procedure Status Placer Order Number",
-      "description": "Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching स्टडी दृष्टांत यू.आई.डी.. {<attributeID>} will be replaced by the value of गुण in the received study. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति प्लेसर आर्डर संख्या",
+      "description": "अधिसूचना संदेश में प्लेसर आर्डर संख्या का मूल्य, यदि मिलान स्टडी दृष्टांत यू.आई.डी. (UID) के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में एम्.डब्ल्यू.एल. (MWL) आइटम्स) नहीं है ।प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "{StudyInstanceUID,hash}"
     },
     "hl7PSUMessageType": {
-      "title": "एच.एल.७. Procedure Status Message Type",
-      "description": "Message Type of एच.एल.७. Procedure Status अपडेट message. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति संदेश का प्रकार",
+      "description": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट संदेश का प्रकार ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "OMG_O19",
       "enum": [
@@ -1382,70 +1382,70 @@
       ]
     },
     "hl7PSUPIDPV1": {
-      "title": "एच.एल.७. Procedure Status अपडेट PID PV1",
-      "description": "Indicates to include a Patient Identification (PID) and a Patient Visit (PV1) segment in the एच.एल.७. Procedure Status अपडेट message. Implicitly set, if एच.एल.७. Procedure Status Message Type = ORU_R01. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट पी.आई.डी. (PID) पी.वी.१. (PV1)",
+      "description": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट संदेश में मरीज़ की पहचान (PID) और मरीज़ की मुलाकात (PV1) सेग्मेंट्स को समावेश करने का संकेत करता है ।अन्तर्निहित रूप से समावेश होगा, यदि 'एच.एल.७. (HL7) प्रक्रिया स्थिति संदेश का प्रकार' का मूल्य ORU_R01 है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "hl7PSUMWL": {
-      "title": "एच.एल.७. Procedure Status अपडेट MWL",
-      "description": "निर्दिष्ट करता है if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured एच.एल.७. Procedure Status अपडेट Delay or for received MPPS after configured एच.एल.७. Procedure Status अपडेट Timeout. Implicitly set to true, if notification of एच.एल.७. receivers is configured. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट एम्.डब्ल्यू.एल. (MWL)",
+      "description": "प्राप्त हुए स्टडी के लिए कॉन्फ़िगर्ड 'एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट विलम्ब' या प्राप्त हुए एम्.पी.पी.एस. (MPPS) के लिए कॉन्फ़िगर्ड 'एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट समयपाल' का मूल्य पहुँचने पर डेटाबेस में एम्.डब्ल्यू.एल. (MWL) आइटम्स की स्थिति को COMPLETED (संपूर्ण) के रूप में अपडेट करने को निर्दिष्ट करता है ।अन्तर्निहित रूप से 'हाँ' के तौर पे सेट होगा, यदि एच.एल.७. (HL7) संदेश प्राप्त करनेवाले सिस्टम्स को अधिसूचित करना कॉन्फ़िगर्ड है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "hl7PSUTimeout": {
-      "title": "एच.एल.७. Procedure Status अपडेट Timeout",
-      "description": "Timeout in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट समयपाल",
+      "description": "एम्.पी.पी.एस. (MPPS) में संदर्भित दृष्टांतों के प्राप्ति के इंतज़ार का आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में समयपाल; यदि कॉन्फ़िगर न किया हो तो, हमेशा के लिए इंतज़ार करें ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "hl7PSUOnTimeout": {
-      "title": "एच.एल.७. Procedure Status अपडेट On Timeout",
-      "description": "निर्दिष्ट करता है if the एच.एल.७. Procedure Status अपडेट is sent if the timeout for waiting on receive of instances referenced is exceeded. किसी आर्काइव नेटवर्क ए.इ. पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है",
+      "title": "समयपाल पे एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट",
+      "description": "एम्.पी.पी.एस. (MPPS) में संदर्भित दृष्टांतों के प्राप्ति के इंतज़ार के समयपाल की सीमा पार होने पे एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट संदेश भेजने का निर्दिष्ट करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "hl7PSUTaskPollingInterval": {
-      "title": "एच.एल.७. Procedure Status अपडेट Task पोलिंग अंतराल",
-      "description": "पोलिंग अंतराल for एच.एल.७. Procedure Status अपडेट Tasks in आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMnS. Disabled, if absent.",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट कार्य पोलिंग अंतराल",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMnS में एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट कार्यों का पोलिंग अंतराल ।यदि कॉन्फ़िगर न किया हो तो, एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट नहीं होगी ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "hl7PSUTaskFetchSize": {
-      "title": "एच.एल.७. Procedure Status अपडेट Tasks प्राप्ति का माप",
-      "description": "Maximal number of एच.एल.७. Procedure Status अपडेट Tasks fetched in one query.",
+      "title": "एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट कार्यों के प्राप्ति का माप",
+      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए एच.एल.७. (HL7) प्रक्रिया स्थिति अपडेट कार्यों की अधिकतम संख्या ।",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "hl7TrackChangedPatientID": {
-      "title": "एच.एल.७. Track Changed Patient ID",
-      "description": "Enable to keep track of the prior Patient ID on a change of the Patient ID by एच.एल.७. ADT^A47 or by the RESTful Patient अपडेट Service.",
+      "title": "एच.एल.७. (HL7) बदले हुए मरीज़ के आई.डी. (ID) को ट्रैक करें",
+      "description": "एच.एल.७. (HL7) ए.डी.टी^ए.४७ (ADT^A47) संदेश या रेस्ट्फुल मरीज़ के रेकॉर्ड का अपडेट सेवा द्वारा मरीज़ के आई.डी. (ID) के बदलाव पे पिछले मरीज़ के आई.डी. (ID) का ट्रैक रखना काबिल करें ।",
       "type": "boolean",
       "default": true
     },
     "dcmAuditSoftwareConfigurationVerbose": {
-      "title": "Audit Software Configuration Verbose",
-      "description": "निर्दिष्ट करता है if Child Objects and Attributes of created Objects should be included in Software Configuration Audit Message.",
+      "title": "ऑडिट सॉफ्टवेयर विन्यास शब्दाडंबरपूर्ण",
+      "description": "एल.डेप (LDAP) में चाइल्ड ऑब्जेक्ट्स और निर्माण किए हुए ऑब्जेक्ट्स के गुणों को सॉफ्टवेयर विन्यास ऑडिट संदेश में समावेश करने को निर्दिष्ट करता है ।",
       "type": "boolean",
       "default": false
     },
     "hl7UseNullValue": {
-      "title": "एच.एल.७. अनुपस्थित मूल्य का इस्तमाल",
-      "description": "एच.एल.७. संस्करण २ अनुपस्थित मूल्यों को (सेगमेंट फील्ड में |\"\"| इस तरह निर्दिष्ट होंगे) भेजे गए एच.एल.७. संदेशों में अनुपस्थित या खाली तत्त्व गुणों के लिए इस्तमाल किया जाएगा यह निर्दिष्ट करता है. दूरवर्ती एच.एल.७. अनुप्रयोग पे तत्त्व गुणों को अस्त न करने के लिए जरूरी है. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) अनुपस्थित मूल्य का इस्तमाल",
+      "description": "एच.एल.७. (HL7) संस्करण २ अनुपस्थित मूल्यों को (सेगमेंट फील्ड में |\"\"| इस तरह निर्दिष्ट होंगे) भेजे गए एच.एल.७. (HL7) संदेशों में अनुपस्थित या खाली तत्त्व गुणों के लिए इस्तमाल किया जाएगा यह निर्दिष्ट करता है ।दूरवर्ती एच.एल.७. (HL7) अनुप्रयोग पे तत्त्व गुणों को अस्त न करने के लिए जरूरी है ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "hl7VeterinaryUsePatientName": {
-      "title": "एच.एल.७. पशुचिकित्सा - मरीज़ के नाम का इस्तमाल",
-      "description": "एच.एल.७. पी.आई.डी. (PID) फ़ील्ड्स से डाइकोम गुणों के मैपिंग में मरीज़ों के नामों के पशुचिकित्सक उपयोग को मजबूर करने का संकेत करता है: डाइकोम मरीज़ के नाम के लिए PID.5 के सिर्फ पहले २ कम्पोनेंट का उपयोग करें; अगर PID.5 में सिर्फ १ कम्पोनेंट हो तो उसे दिए गए नाम में इस्तमाल करें, और PID.9 के पहले कम्पोनेंट को उपनाम में इस्तमाल करें. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) पशुचिकित्सा - मरीज़ के नाम का इस्तमाल",
+      "description": "एच.एल.७. (HL7) पी.आई.डी. (PID) फ़ील्ड्स से डाइकोम (DICOM) गुणों के मैपिंग में मरीज़ों के नामों के पशुचिकित्सक उपयोग को मजबूर करने का संकेत करता है: डाइकोम (DICOM) मरीज़ के नाम के लिए PID.5 के सिर्फ पहले २ कम्पोनेंट का उपयोग करें; यदि PID.5 में सिर्फ १ कम्पोनेंट हो तो उसे दिए गए नाम में इस्तमाल करें, और PID.9 के पहले कम्पोनेंट को उपनाम में इस्तमाल करें ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "hl7OrderMissingStudyIUIDPolicy": {
-      "title": "एच.एल.७. ऑर्डर - अनुपस्थित स्टडी दृष्टांत यू.आई.डी. नीति",
-      "description": "आने वाले एच.एल.७. ऑर्डर संदेशों में अनुपस्थित स्टडी दृष्टांत यू.आई.डी. के नीति को निर्दिष्ट करता है. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) ऑर्डर - अनुपस्थित स्टडी दृष्टांत यू.आई.डी. (UID) नीति",
+      "description": "आने वाले एच.एल.७. (HL7) ऑर्डर संदेशों में अनुपस्थित स्टडी दृष्टांत यू.आई.डी. (UID) के नीति को निर्दिष्ट करता है ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "GENERATE",
       "enum": [
@@ -1455,8 +1455,8 @@
       ]
     },
     "hl7ImportReportMissingStudyIUIDPolicy": {
-      "title": "एच.एल.७. आयातित रिपोर्ट अनुपस्थित स्टडी दृष्टांत यू.आई.डी. नीति",
-      "description": "आने वाले एच.एल.७. आयातित रिपोर्ट (ORU) संदेशों में अनुपस्थित स्टडी दृष्टांत यू.आई.डी. के नीति को निर्दिष्ट करता है. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.\",",
+      "title": "एच.एल.७. (HL7) आयातित रिपोर्ट अनुपस्थित स्टडी दृष्टांत यू.आई.डी. (UID) नीति",
+      "description": "आने वाले एच.एल.७. (HL7) आयातित रिपोर्ट (ORU) संदेशों में अनुपस्थित स्टडी दृष्टांत यू.आई.डी. (UID) के नीति को निर्दिष्ट करता है ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "GENERATE",
       "enum": [
@@ -1466,8 +1466,8 @@
       ]
     },
     "hl7ReferredMergedPatientPolicy": {
-      "title": "एच.एल.७. संदर्भित विलीन संविलीन मरीज़ नीति",
-      "description": "आने वाले एच.एल.७. संदेशों पर नीति को निर्दिष्ट करता है जो पहले से मौजूद विलीन संविलीन मरीज़ को संदर्भित करता है. REJECT: ऐसे एच.एल.७. संदेश अस्वीकार करें, IGNORE: ऐसे एच.एल.७. संदेश नज़रअंदाज़ करें, IGNORE_DUPLICATE_MERGE: सिर्फ फिरसे प्राप्त हुए एच.एल.७. विलीन संविलीन संदेश नज़रअंदाज़ करें, अन्य ऐसे संदेश अस्वीकार करें. किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है.",
+      "title": "एच.एल.७. (HL7) संदर्भित विलीन संविलीन मरीज़ नीति",
+      "description": "आने वाले एच.एल.७. (HL7) संदेशों पर नीति को निर्दिष्ट करता है जो पहले से मौजूद विलीन संविलीन मरीज़ को संदर्भित करता है ।REJECT: ऐसे एच.एल.७. (HL7) संदेश अस्वीकार करें, IGNORE: ऐसे एच.एल.७. (HL7) संदेश नज़रअंदाज़ करें, IGNORE_DUPLICATE_MERGE: सिर्फ फिरसे प्राप्त हुए एच.एल.७. (HL7) विलीन संविलीन संदेश नज़रअंदाज़ करें, अन्य ऐसे संदेश अस्वीकार करें ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "default": "REJECT",
       "enum": [
@@ -1477,96 +1477,96 @@
       ]
     },
     "hl7DicomCharacterSet": {
-      "title": "एच.एल.७. डाइकोम कॅरक्टर सेट",
-      "description": "स्पेसिफिक कॅरक्टर सेट (०००८,०००५) के मूल्य को प्राप्त हुए एच.एल.७. संदेशों से जो डटसेट्स ट्रांसकोड हुए है, उनमें इस्तमाल करने को निर्दिष्ट करता है. अगर कॉन्फ़िगर ना किया हो तो, एच.एल.७. संदेश में MSH-18 में पाए गए कॅरक्टर सेट के मूल्य का उपयोग करें.",
+      "title": "एच.एल.७. (HL7) डाइकोम (DICOM) कॅरक्टर सेट",
+      "description": "स्पेसिफिक कॅरक्टर सेट (०००८,०००५) के मूल्य को प्राप्त हुए एच.एल.७. (HL7) संदेशों से जो डटसेट्स ट्रांसकोड हुए है, उनमें इस्तमाल करने को निर्दिष्ट करता है ।यदि कॉन्फ़िगर ना किया हो तो, एच.एल.७. (HL7) संदेश में MSH-18 में पाए गए कॅरक्टर सेट के मूल्य का उपयोग करें ।",
       "type": "string",
       "format": "dcmCharset"
     },
     "dcmRejectionNoteStorageAET": {
-      "title": "Rejection Note Storage AE title",
-      "description": "Title of Archive Application Entity, of which first configured Object Storage will be used for storing Rejection Notes generated either by IOCM-RS services or by Delete Expired Studies Scheduler. अगर कॉन्फ़िगर न किया हो तो, for IOCM services the Object Storage configured for Archive AE referred in the IOCM-RS request will be used, or for Delete Expired Studies Scheduler the Object Storage configured for Reject Expired Studies AE will be used.",
+      "title": "अस्वीकृति नोट स्टोरेज ए.इ. (AE) का नाम",
+      "description": "आर्काइव अनुप्रयोग तत्व का नाम, जिसका पहिला कॉन्फ़िगर्ड ऑब्जेक्ट स्टोरेज आई.ओ.सी.एम्-आर.एस (IOCM-RS) सेवाओं द्वारा या समाप्ति स्टडीज को मिटाने के अनुसूचक द्वारा निर्माण हुए अस्वीकृति नोट्स को सहेजने में इस्तमाल होगा ।यदि कॉन्फ़िगर न किया हो तो, आई.ओ.सी.एम्-आर.एस (IOCM-RS) सेवाओं के लिए आई.ओ.सी.एम्-आर.एस (IOCM-RS) अनुरोधों में संदर्भित आर्काइव ए.इ. (AE) के कॉन्फ़िगर्ड ऑब्जेक्ट स्टोरेज का इस्तमाल होगा, या समाप्ति स्टडीज को मिटाने के अनुसूचक के लिए कॉन्फ़िगर्ड 'समाप्त स्टडीज अस्वीकृती ए.इ. (AE) का नाम' के कॉन्फ़िगर्ड ऑब्जेक्ट स्टोरेज का इस्तमाल होगा ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmUIConfigurationDeviceName": {
-      "title": "UI Configuration Device Name",
-      "description": "निर्दिष्ट करता है the device name containing the Archive UI Configuration.",
+      "title": "यू.आई. (UI) विन्यास डिवाइस का नाम",
+      "description": "निर्दिष्ट करता है यू.आई. (UI) विन्यास डिवाइस का नाम ।",
       "type": "string",
       "format": "dicomDeviceName"
     },
     "dcmCSVUploadChunkSize": {
-      "title": "CSV Upload Chunk Size",
-      "description": "Number of CSV file upload tasks to be processed in one transaction.",
+      "title": "सी.एस.वी. (CSV) फाइल अपलोड खण्ड का माप",
+      "description": "एक डेटाबेस ट्रांसक्शन में सी.एस.वी. (CSV) फाइल अपलोड पे प्रक्रिया करने की कार्यों संख्या ।",
       "type": "integer",
       "default": 100,
       "minimum": 1
     },
     "dcmValidateUID": {
-      "title": "Validate UID",
-      "description": "Indicates if UIDs shall be validated or not.",
+      "title": "यू.आई.डी. (UID) मान्य करें",
+      "description": "यू.आई.डी. (UID) के मूल्यों  के प्रमाणीकरण करने का संकेत करता है ।",
       "type": "boolean",
       "default": true
     },
     "dcmRelationalQueryNegotiationLenient": {
-      "title": "Relational Query Negotiation Lenient",
-      "description": "Indicates to accept C-FIND RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "संबंधक प्राप्ति का उदार व्यवहार",
+      "description": "प्राप्ति स्तर से श्रेष्ठ स्तरों के लिए, तथा इस प्राप्ति स्तर के लिए यदि संबंधक प्राप्ति का समझौता न हो, तो बिना अनन्य कुंजियों के सी-फाइंड आर.क्यू. (C-FIND RQs) अनुरोधों को स्वीकार करें ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmRelationalRetrieveNegotiationLenient": {
-      "title": "Relational Retrieve Negotiation Lenient",
-      "description": "Indicates to accept C-MOVE and C-GET RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "संबंधक पुनःप्राप्ति का उदार व्यवहार",
+      "description": "प्राप्ति स्तर से श्रेष्ठ स्तरों के लिए, तथा इस प्राप्ति स्तर के लिए यदि संबंधक प्राप्ति का समझौता न हो, तो बिना अनन्य कुंजियों के सी-मूव आर.क्यू. (C-MOVE RQs) और सी-गेट आर.क्यू. (C-GET RQs) अनुरोधों को स्वीकार करें ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmRestrictRetrieveSilently": {
-      "title": "Restrict Retrieve Silently",
-      "description": "Indicates if the set of requested objects to retrieve shall be silently (=without counting not transferred object as failures) restricted according the Transfer Capabilities of the Retrieve Destination. Otherwise the number of requested objects for which no Transfer Capability is configured for the Retrieve Destination and therefore are not retrieved is counted as failures. सिर्फ प्रभावशाली अगर the Retrieve Destination has configured at least one Transfer Capability with SCP role. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "पुनःप्राप्ति शांति से सिमित करें",
+      "description": "पुनःप्राप्ति गंतव्य के हस्तांतरण क्षमताोंनुसार अनुरोधित दृष्टांतों के पुनःप्राप्ति को शांति (= पुनःप्राप्त न हुए दृष्टांतों को असफलताओं के रूप में न गिनते हुए) से सिमित करने का संकेत करता है ।अन्यथा अनुरोधित दृष्टांतों की संख्या, जिनके लिए कोई हस्तांतरण क्षमता पुनर्प्राप्त गंतव्य के लिए कॉन्फ़िगर नहीं की गई है और इसलिए पुनर्प्राप्त नहीं हो सकते है, उनकी गिनती असफलताओं के रूप में होगी ।सिर्फ प्रभावशाली यदि पुनःप्राप्ति गंतव्य पे कम से कम एक एस.सी.पी. (SCP) भूमिका की हस्तांतरण क्षमता कॉन्फ़िगर्ड है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmSchedulerMinStartDelay": {
-      "title": "Scheduler Minimum Start Delay",
-      "description": "Minimal delay in s to start schedulers on system start up.",
+      "title": "अनुसूचक न्यूतनम प्रारम्भ विलम्ब",
+      "description": "सिस्टम चालू होने पे अनुसूचकों को शुरू करने का सेकंडों में न्यूतनम विलम्ब ।",
       "type": "integer",
       "default" : 60,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRejectConflictingPatientAttribute": {
-      "title": "Reject Conflicting Patient Attribute",
-      "description": "डाइकोम टैग of Patient गुण which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "मरीज़ के रेकॉर्ड के परस्पर विरोधी गुणों को अस्वीकार करें",
+      "description": "प्राप्त हुए दृष्टांतों में मरीज़ के रेकॉर्ड के गुणों के डाइकोम (DICOM) टैग्स जिन्हे समान मरीज़ के आई.डी. (ID) के पिछले प्राप्त हुए दृष्टांतों के गुणों के मूल्यों के साथ स्वीकार होने के लिए मिलान करना है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
-      "title": "STOW Retired Transfer Syntax",
-      "description": "Store received JPEG Full Progression, Non-Hierarchical JPEG images in डाइकोम images with corresponding (retired) Transfer Syntax UID 1.2.840.10008.1.2.4.55. Otherwise set 1.2.840.10008.1.2.4.50 (= JPEG Baseline) or 1.2.840.10008.1.2.4.51 (= JPEG Extended) as Transfer Syntax UID of the stored डाइकोम image, without transcoding to JPEG Baseline or JPEG Extended, but including the JPEG image as received. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "एस.टी.ओ.डब्ल्यू (STOW) निवृत्त हस्तांतरण वाक्यविन्यास",
+      "description": "प्राप्त हुए जे.पी.इ.जी. (JPEG) फुल प्रोग्रेशन, नॉन-हैरारकिअल जे.पी.इ.जी. (JPEG) इमेजेस को डाइकोम (DICOM) इमेजस में तदनुसार (निवृत्त) हस्तांतरण वाक्यविन्यास यू.आई.डी. (UID) १.२.८४०.१०००८.१.२.४.५५ (1.2.840.10008.1.2.4.55) के साथ सहेजे ।अन्यथा सहेजे गए डाइकोम (DICOM) इमेज को १.२.८४०.१०००८.१.२.४.५० (1.2.840.10008.1.2.4.50) याने की जे.पी.इ.जी. बेसलाइन (JPEG Baseline) या १.२.८४०.१०००८.१.२.४.५१ (1.2.840.10008.1.2.4.51) याने की जे.पी.इ.जी. एक्सटेंडेड (JPEG Extended) हस्तांतरण वाक्यविन्यास यू.आई.डी. (UID) के तौर पे सेट करें, बिना जे.पी.इ.जी. बेसलाइन (JPEG Baseline) या जे.पी.इ.जी. एक्सटेंडेड (JPEG Extended) में ट्रांसकोड किए, लेकिन जे.पी.इ.जी. (JPEG) इमेज को प्राप्त हुए रूप में ही समावेश करें ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default" : false
     },
     "dcmStowExcludeAPPMarkers": {
-      "title": "STOW Exclude Application Markers",
-      "description": "Indicates if APP markers in JPEG images received in STOW-RS Metadata and Bulkdata requests shall be excluded from the JPEG bit streams encapsulated in created डाइकोम instances. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "एस.टी.ओ.डब्ल्यू (STOW) अनुप्रयोग मार्करों को निकाले",
+      "description": "एस.टी.ओ.डब्ल्यू-आर.एस. (STOW-RS) मेटाडेटा और अधिकांश डेटा अनुरोधों द्वारा प्राप्त हुए जे.पी.इ.जी. (JPEG) इमेजेस में ऍप (APP) मार्करों को निर्माण किए डाइकोम (DICOM) दृष्टांतों के एनकेप्सुलेटेड जे.पी.इ.जी. (JPEG) बिट स्ट्रीम्स में से निकालने का संकेत करता है ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default" : false
     },
     "dcmStowQuicktime2MP4": {
-      "title": "STOW Quicktime to MP4",
-      "description": "Indicates if QuickTime containers received in STOW-RS Metadata and Bulkdata requests shall be converted to MP4 containers encapsulated in created डाइकोम instances. The conversion requires that ffmpeg is installed and the ffmpeg CLI utility is available in the PATH. Otherwise Quicktime containers will get encapsulated in the stored डाइकोम object verbatim, with a declared डाइकोम MPEG-4 Transfer Syntax which reflects the encoding of the video stream in the container, but contradicts the actual container format. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "एस.टी.ओ.डब्ल्यू (STOW) क्विकटाइम से एम्.पी.४ (MP4)",
+      "description": "एस.टी.ओ.डब्ल्यू-आर.एस. (STOW-RS) मेटाडेटा और अधिकांश डेटा अनुरोधों द्वारा प्राप्त हुए क्विकटाइम कंटेनरों को निर्माण किए डाइकोम (DICOM) दृष्टांतों में एम्.पी.४ (MP4) कंटेनरों में परिवर्तित करके एनकेप्सुलेट करने का संकेत करता है ।यह परिवर्तन सफल होने के लिए जरूरी है की ffmpeg यूटिलिटी सिस्टम पे स्थापित है और ffmpeg CLI यूटिलिटी सिस्टम के PATH वेरिएबल में उपलब्ध होना चाहिए ।अन्यथा सहेजे गए डाइकोम (DICOM) दृष्टांत वेरबाटिम में क्विकटाइम कंटेनरों को घोषित एम्.पी.इ.जी.-४ (MPEG-4) हस्तांतरण वाक्यविन्यास, जो कंटेनर में वीडियो स्ट्रीम के एन्कोडिंग को दर्शाता है, लेकिन वास्तविक कंटेनर प्रारूप का खंडन करता है, से एनकेप्सुलेट किया जाएगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default" : false
     },
     "dcmFallbackCMoveSCPCallingAET": {
-      "title": "Fallback C-Move SCP Calling AE title",
-      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. अगर कॉन्फ़िगर न किया हो तो, the AE Title of the external C-MOVE SCU is used. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "पलटाव सी-मूव एस.सी.पी. (C-Move SCP) आह्वान ए.इ. (AE) का नाम",
+      "description": "पलटाव सी-मूव एस.सी.पी. (C-Move SCP) पे भेजे गए ए-एसोसिएट-आर.क्यू. (A-ASSOCIATE-RQ) में इस्तमाल किए गए आह्वान ए.इ. (AE) का नाम ।यदि निर्दिष्ट नहीं किया है, तो बाहरी सी-मूव एस.सी.यू. (C-MOVE SCU) का उपयोग होगा ।किसी आर्काइव नेटवर्क ए.इ. (AE) पे कॉन्फ़िगर किए गए मूल्य से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmAttributeFilter": {
       "title": "गुण फ़िल्टर",
-      "description": "निर्दिष्ट करता है Attributes stored in the database",
+      "description": "डेटाबेस में सहेजे गुणों को निर्दिष्ट करता है ।",
       "type": "array",
       "titleKey":"{dcmEntity}",
       "items" : {
@@ -1575,7 +1575,7 @@
     },
     "dcmAttributeSet": {
       "title": "गुण Set",
-      "description": "Named गुण Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests.",
+      "description": "क्यू.आई.डी.ओ.-आर.एस. (QIDO-RS) और डब्ल्यू.ए.डी.ओ.-आर.एस. (WADO-RS) मेटाडेटा के अनुरोध के 'includefields' प्राप्ति मापदण्ड और डिफ्फ-आर.एस. (DIFF-RS) अनुरोध के 'comparefield' प्राप्ति मापदण्ड का नांमाकित गुण सेट ।",
       "type": "array",
       "titleKey":"{dcmAttributeSetType}:{dcmAttributeSetID}",
       "items" : {
@@ -1583,8 +1583,8 @@
       }
     },
     "dcmBulkDataDescriptor": {
-      "title": "Bulk Data Descriptor",
-      "description": "निर्दिष्ट करता है Bulk Data Descriptors applied by services providing Metadata of archived instances.",
+      "title": "अधिकांश डेटा वर्णनकर्ता",
+      "description": "आर्काइव किए हुए दृष्टांतों के मेटाडेटा प्रधान करनेवाले सेवाओं द्वारा लागू की गई अधिकांश डेटा वर्णनकर्ताों को निर्दिष्ट करता है ।",
       "type": "array",
       "titleKey":"{dcmBulkDataDescriptorID}",
       "items" : {
@@ -1592,8 +1592,8 @@
       }
     },
     "dcmStorage": {
-      "title": "Storage Descriptor",
-      "description": "निर्दिष्ट करता है Storage System",
+      "title": "स्टोरेज वर्णनकर्ता",
+      "description": "स्टोरेज सिस्टम निर्दिष्ट करता है ।",
       "type": "array",
       "titleKey":"{dcmStorageID}",
       "items" : {
@@ -1619,8 +1619,8 @@
       }
     },
     "dcmMetrics": {
-      "title": "Metrics",
-      "description": "Activated Metrics",
+      "title": "नाप",
+      "description": "सक्रिय किए हुए नाप",
       "type": "array",
       "titleKey":"{dcmMetricsName}",
       "items" : {
@@ -1647,7 +1647,7 @@
     },
     "dcmExportRule": {
       "title": "निर्यात नियम",
-      "description": "किसी भी ए.इ. से सहेजे गए डाइकोम दृष्टांतों पे निर्यात नियम लागू करें ।आर्काइव नेटवर्क ए.इ. स्तर पे कॉन्फ़िगर किए गए निर्यात नियम पूरक होंगे ।",
+      "description": "किसी भी ए.इ. (AE) से सहेजे गए डाइकोम (DICOM) दृष्टांतों पे निर्यात नियम लागू करें ।आर्काइव नेटवर्क ए.इ. (AE) स्तर पे कॉन्फ़िगर किए गए निर्यात नियम पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1656,7 +1656,7 @@
     },
     "dcmExportPriorsRule": {
       "title": "पूर्व स्टडीज निर्यात नियम",
-      "description": "किसी भी ए.इ. से सहेजे गए डाइकोम दृष्टांतों पे पूर्व स्टडीज निर्यात नियम लागू करें ।आर्काइव नेटवर्क ए.इ. स्तर पे कॉन्फ़िगर किए गए पूर्व स्टडीज निर्यात नियम पूरक होंगे ।",
+      "description": "किसी भी ए.इ. (AE) से सहेजे गए डाइकोम (DICOM) दृष्टांतों पे पूर्व स्टडीज निर्यात नियम लागू करें ।आर्काइव नेटवर्क ए.इ. (AE) स्तर पे कॉन्फ़िगर किए गए पूर्व स्टडीज निर्यात नियम पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1665,7 +1665,7 @@
     },
     "dcmRSForwardRule": {
       "title": "रेस्ट्फुल फॉरवर्ड नियम",
-      "description": "रेस्ट्फुल फॉरवर्ड नियम ।आर्काइव नेटवर्क ए.इ. स्तर पे कॉन्फ़िगर किए गए रेस्ट्फुल फॉरवर्ड नियम पूरक होंगे ।",
+      "description": "रेस्ट्फुल फॉरवर्ड नियम ।आर्काइव नेटवर्क ए.इ. (AE) स्तर पे कॉन्फ़िगर किए गए रेस्ट्फुल फॉरवर्ड नियम पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1683,7 +1683,7 @@
     },
     "dcmArchiveCompressionRule": {
       "title": "संपीड़न नियम",
-      "description": "Compression rules applied to डाइकोम objects received by any AE ।आर्काइव नेटवर्क ए.इ. स्तर पे कॉन्फ़िगर किए गए संपीड़न नियम पूरक होंगे ।",
+      "description": "किसी भी ए.इ. (AE) से सहेजे गए डाइकोम (DICOM) दृष्टांतों पे लागू किए गए संपीड़न नियम ।आर्काइव नेटवर्क ए.इ. (AE) स्तर पे कॉन्फ़िगर किए गए संपीड़न नियम पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1692,7 +1692,7 @@
     },
     "dcmArchiveAttributeCoercion": {
       "title": "गुण नियंत्रण",
-      "description": "गुण नियंत्रण applied to DIMSE received/sent by any AE ।आर्काइव नेटवर्क ए.इ. स्तर पे कॉन्फ़िगर किए गए गुण नियंत्रण पूरक होंगे ।",
+      "description": "किसी भी ए.इ. (AE) से प्राप्त हुए या भेजे गए डिमसे (DIMSE) पे लागू किए गए गुण नियंत्रण ।आर्काइव नेटवर्क ए.इ. (AE) स्तर पे कॉन्फ़िगर किए गए गुण नियंत्रण पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1701,7 +1701,7 @@
     },
     "dcmRejectionNote": {
       "title": "Rejection Note",
-      "description": "निर्दिष्ट करता है behavior on Rejection Note Stored",
+      "description": "अस्वीकृति नोट के सहेजने पे बर्ताव निर्दिष्ट करता है ।",
       "type": "array",
       "titleKey":"{dcmRejectionNoteLabel}",
       "items" : {
@@ -1710,7 +1710,7 @@
     },
     "dcmStudyRetentionPolicy": {
       "title": "स्टडी धारण नीति",
-      "description": "स्टडी धारण नीतियाँ जो इस ए.इ. द्वारा सहेजे गए स्टडीज पे लागू होंगे ।आर्काइव नेटवर्क ए.इ. स्तर पे कॉन्फ़िगर किए गए स्टडी धारण नीतियाँ पूरक होंगे ।",
+      "description": "स्टडी धारण नीतियाँ जो इस ए.इ. (AE) द्वारा सहेजे गए स्टडीज पे लागू होंगे ।आर्काइव नेटवर्क ए.इ. (AE) स्तर पे कॉन्फ़िगर किए गए स्टडी धारण नीतियाँ पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1718,8 +1718,8 @@
       }
     },
     "dcmStoreAccessControlIDRule": {
-      "title": "संचय प्रवेश निरीक्षण आई.डी. नियम",
-      "description": "संचय प्रवेश निरीक्षण आई.डी. नियम जो इस ए.इ. द्वारा सहेजे गए स्टडीज पे लागू होंगे ।आर्काइव नेटवर्क ए.इ. स्तर पे कॉन्फ़िगर किए गए संचय प्रवेश निरीक्षण आई.डी. नियम पूरक होंगे ।",
+      "title": "संचय प्रवेश निरीक्षण आई.डी. (ID) नियम",
+      "description": "संचय प्रवेश निरीक्षण आई.डी. (ID) नियम जो इस ए.इ. (AE) द्वारा सहेजे गए स्टडीज पे लागू होंगे ।आर्काइव नेटवर्क ए.इ. (AE) स्तर पे कॉन्फ़िगर किए गए संचय प्रवेश निरीक्षण आई.डी. (ID) नियम पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1728,7 +1728,7 @@
     },
     "dcmUPSOnStore": {
       "title": "दृष्टांतों के सहेजने पे यू.पी.एस. नियम",
-      "description": "किसी भी ए.इ. से सहेजे गए डाइकोम दृष्टांतों पे दृष्टांतों के सहेजने पे यू.पी.एस. नियम लागू करें ।आर्काइव नेटवर्क ए.इ. स्तर पे कॉन्फ़िगर किए गए दृष्टांतों के सहेजने पे यू.पी.एस. नियम पूरक होंगे ।",
+      "description": "किसी भी ए.इ. (AE) से सहेजे गए डाइकोम (DICOM) दृष्टांतों पे दृष्टांतों के सहेजने पे यू.पी.एस. नियम लागू करें ।आर्काइव नेटवर्क ए.इ. (AE) स्तर पे कॉन्फ़िगर किए गए दृष्टांतों के सहेजने पे यू.पी.एस. नियम पूरक होंगे ।",
       "type": "array",
       "titleKey": "{dcmUPSOnStoreID}",
       "items": {
@@ -1736,8 +1736,8 @@
       }
     },
     "hl7UPSOnHL7": {
-      "title": "एच.एल.७. पे यू.पी.एस. नियम",
-      "description": "एच.एल.७. पे यू.पी.एस. नियम जो इस एच.एल.७. अनुप्रयोग से प्राप्त हुए एच.एल.७. संदेशों पे लागू होंगे. आर्काइव एच.एल.७. अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए एच.एल.७. पे यू.पी.एस. नियम पूरक होंगे",
+      "title": "एच.एल.७. (HL7) पे यू.पी.एस. नियम",
+      "description": "एच.एल.७. (HL7) पे यू.पी.एस. नियम जो इस एच.एल.७. (HL7) अनुप्रयोग से प्राप्त हुए एच.एल.७. (HL7) संदेशों पे लागू होंगे. आर्काइव एच.एल.७. (HL7) अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए एच.एल.७. (HL7) पे यू.पी.एस. नियम पूरक होंगे ।",
       "type": "array",
       "titleKey": "{hl7UPSOnHL7ID}",
       "items": {
@@ -1754,8 +1754,8 @@
       }
     },
     "dcmIDGenerator": {
-      "title": "आई.डी. जेनरेटर",
-      "description": "आई.डी. जेनरेटर ।",
+      "title": "आई.डी. (ID) जेनरेटर",
+      "description": "आई.डी. (ID) जेनरेटर ।",
       "type": "array",
       "titleKey":"{dcmIDGeneratorName}",
       "items" : {
@@ -1772,8 +1772,8 @@
       }
     },
     "hl7ForwardRule": {
-      "title": "एच.एल.७. फॉरवर्ड नियम",
-      "description": "एच.एल.७. फॉरवर्ड नियम","एच.एल.७. फॉरवर्ड नियम. आर्काइव एच.एल.७. अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए फॉरवर्ड नियम पूरक होंगे ।",
+      "title": "एच.एल.७. (HL7) फॉरवर्ड नियम",
+      "description": "एच.एल.७. (HL7) फॉरवर्ड नियम","एच.एल.७. (HL7) फॉरवर्ड नियम. आर्काइव एच.एल.७. (HL7) अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए फॉरवर्ड नियम पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1781,8 +1781,8 @@
       }
     },
     "hl7ExportRule": {
-      "title": "एच.एल.७. निर्यात नियम",
-      "description": "निर्यात नियम जो इस एच.एल.७. अनुप्रयोग से प्राप्त हुए एच.एल.७. संदेशों पे लागू होंगे ।आर्काइव एच.एल.७. अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए निर्यात नियम पूरक होंगे ।",
+      "title": "एच.एल.७. (HL7) निर्यात नियम",
+      "description": "निर्यात नियम जो इस एच.एल.७. (HL7) अनुप्रयोग से प्राप्त हुए एच.एल.७. (HL7) संदेशों पे लागू होंगे ।आर्काइव एच.एल.७. (HL7) अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए निर्यात नियम पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1790,8 +1790,8 @@
       }
     },
     "hl7PrefetchRule": {
-      "title": "एच.एल.७. प्रीफ़ेच नियम",
-      "description": "प्रीफ़ेच नियम जो इस एच.एल.७. अनुप्रयोग से प्राप्त हुए एच.एल.७. संदेशों पे लागू होंगे ।आर्काइव एच.एल.७. अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए प्रीफ़ेच नियम पूरक होंगे ।",
+      "title": "एच.एल.७. (HL7) प्रीफ़ेच नियम",
+      "description": "प्रीफ़ेच नियम जो इस एच.एल.७. (HL7) अनुप्रयोग से प्राप्त हुए एच.एल.७. (HL7) संदेशों पे लागू होंगे ।आर्काइव एच.एल.७. (HL7) अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए प्रीफ़ेच नियम पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1799,8 +1799,8 @@
       }
     },
     "hl7StudyRetentionPolicy": {
-      "title": "एच.एल.७. स्टडी धारण नीति",
-      "description": "एच.एल.७. स्टडी धारण नीतियाँ जो इस एच.एल.७. अनुप्रयोग से प्राप्त हुए एच.एल.७. संदेशों पे लागू होंगे ।आर्काइव एच.एल.७. अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए स्टडी धारण नीतियाँ पूरक होंगे ।",
+      "title": "एच.एल.७. (HL7) स्टडी धारण नीति",
+      "description": "एच.एल.७. (HL7) स्टडी धारण नीतियाँ जो इस एच.एल.७. (HL7) अनुप्रयोग से प्राप्त हुए एच.एल.७. (HL7) संदेशों पे लागू होंगे ।आर्काइव एच.एल.७. (HL7) अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए स्टडी धारण नीतियाँ पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1808,8 +1808,8 @@
       }
     },
     "hl7OrderScheduledStation": {
-      "title": "एच.एल.७. ऑर्डर के लिए अनुसूचित स्टेशन",
-      "description": "चुने गए एम्.डब्ल्यू.एल. एच.एल.७. ऑर्डर फीड पे अनुसूचित स्टेशन ।आर्काइव एच.एल.७. अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए एच.एल.७. ऑर्डर के लिए अनुसूचित स्टेशन पूरक होंगे ।",
+      "title": "एच.एल.७. (HL7) ऑर्डर के लिए अनुसूचित स्टेशन",
+      "description": "चुने गए एम्.डब्ल्यू.एल. एच.एल.७. (HL7) ऑर्डर फीड पे अनुसूचित स्टेशन ।आर्काइव एच.एल.७. (HL7) अनुप्रयोग स्तर पे कॉन्फ़िगर किए गए एच.एल.७. (HL7) ऑर्डर के लिए अनुसूचित स्टेशन पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1817,8 +1817,8 @@
       }
     },
     "hl7OrderSPSStatus": {
-      "title": "एच.एल.७. ऑर्डर के लिए एसपीएस स्थिति",
-      "description": "प्राप्त हुए एच.एल.७. ORM^O01, OMI^O23, OMG^O19 संदेशों पे निर्माण की गए या अपडेट हुए डाइकोम एम्.डब्ल्यू.एल. आइटम्स के एसपीएस स्थिति को निर्दिष्ट करता है ।किसी आर्काइव एच.एल.७. अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "title": "एच.एल.७. (HL7) ऑर्डर के लिए एसपीएस स्थिति",
+      "description": "प्राप्त हुए एच.एल.७. (HL7) ORM^O01, OMI^O23, OMG^O19 संदेशों पे निर्माण की गए या अपडेट हुए डाइकोम (DICOM) एम्.डब्ल्यू.एल. आइटम्स के एसपीएस स्थिति को निर्दिष्ट करता है ।किसी आर्काइव एच.एल.७. (HL7) अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
       "titleKey":"{dcmSPSStatus}",
       "items" : {

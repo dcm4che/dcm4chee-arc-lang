@@ -14,8 +14,8 @@
   ],
   "properties": {
     "dcmExporterID": {
-      "title": "निर्यातक आई.डी.",
-      "description": "निर्यातक आई.डी. ।",
+      "title": "निर्यातक आई.डी. (ID)",
+      "description": "निर्यातक आई.डी. (ID) ।",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmExportPriorsRule[*].dcmExporterID[*]",
@@ -28,13 +28,13 @@
       ]
     },
     "dcmURI": {
-      "title": "यू.आर.आई.",
-      "description": "आर.एफ.सी.२०७९: समान संसाधन पहचानकर्ता ।",
+      "title": "यू.आर.आई. (URI)",
+      "description": "आर.एफ.सी.२०७९ (RFC2071) : समान संसाधन पहचानकर्ता ।",
       "type": "string"
     },
     "dcmQueueName": {
       "title": "कतार का नाम",
-      "description": "जे.एम्.एस. कतार का नाम ।",
+      "description": "जे.एम्.एस. (JMS) कतार का नाम ।",
       "type": "string",
       "enum" : [
         "Export1",
@@ -51,7 +51,7 @@
     },
     "dcmExportPriority": {
       "title": "निर्यातक प्राथमिकता",
-      "description": "निर्यात कार्य के प्रक्रिया के लिए जे.एम्.एस. प्राथमिकता स्तर : ० (न्यूतनम) से ९ (अधिकतम) तक ।",
+      "description": "निर्यात कार्य के प्रक्रिया के लिए जे.एम्.एस. (JMS) प्राथमिकता स्तर : ० (न्यूतनम) से ९ (अधिकतम) तक ।",
       "type": "integer",
       "default" : 4,
       "minimum": 0,
@@ -63,20 +63,20 @@
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "अनुप्रयोग तत्त्व (ए.इ.) का नाम",
-      "description": "अनुप्रयोग तत्त्व (ए.इ.) का नाम ।",
+      "title": "अनुप्रयोग तत्त्व ए.इ. (AE) का नाम",
+      "description": "अनुप्रयोग तत्त्व ए.इ. (AE) का नाम ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmExportAsSourceAE": {
-      "title": "Export as Source Application Entity (AE)",
-      "description": "Mask the Archive Application Entity (AE) title by the title of the Application Entity (AE) from which a Series was received on establishing the Association to the Destination Application Entity (AE).",
+      "title": "स्रोत अनुप्रयोग तत्व (AE) के रूप में निर्यात करें",
+      "description": "गंतव्य अनुप्रयोग तत्व (AE) से संपर्क साधते वक्त आर्काइव अनुप्रयोग तत्व (AE) के नाम को सीरीज प्राप्त हुए अनुप्रयोग तत्व (AE) के नाम से मुखौटित करें ।",
       "type": "boolean",
       "default": false
     },
     "dcmDeleteStudyFromStorageID": {
       "title": "स्टोरेज सिस्टम से स्टडी मिटाए",
-      "description": "स्टोरेज सिस्टम का आई.डी. जहा से निर्यात हुए स्टडी के दृष्टांतों को मिटाया जाएगा ।सिर्फ प्रभावशाली जब निर्यात कार्य स्टडी स्तर पे है ।",
+      "description": "स्टोरेज सिस्टम का आई.डी. (ID) जहा से निर्यात हुए स्टडी के दृष्टांतों को मिटाया जाएगा ।सिर्फ प्रभावशाली जब निर्यात कार्य स्टडी स्तर पे है ।",
       "type": "string",
       "format": "dcmStorageID"
     },
@@ -87,28 +87,28 @@
       "default": false
     },
     "dcmStgCmtSCP": {
-      "title": "स्टोरेज प्रतिबद्धता एस.सी.पी. ए.इ. का नाम",
-      "description": "दूसरे आर्काइव पे निर्यात को जांचने के लिए उपयोग किया गया बाहरी स्टोरेज प्रतिबद्धता एस.सी.पी. ए.इ. का नाम ।",
+      "title": "स्टोरेज प्रतिबद्धता एस.सी.पी. (SCP) ए.इ. (AE) का नाम",
+      "description": "दूसरे आर्काइव पे निर्यात को जांचने के लिए उपयोग किया गया बाहरी स्टोरेज प्रतिबद्धता एस.सी.पी. (SCP) ए.इ. (AE) का नाम ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
-      "title": "आई.ए.एन. गंतव्य",
-      "description": "आई.ए.एन. एन-क्रिएट अनुरोध भेजने के लिए गंतव्य ।",
+      "title": "आई.ए.एन. (IAN) गंतव्य",
+      "description": "आई.ए.एन. एन-क्रिएट (IAN N-CREATE) अनुरोध भेजने के लिए गंतव्य ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmRetrieveAET": {
-      "title": "प्राप्ति ए.इ. का नाम",
-      "description": "इस नेटवर्क ए.इ. से सम्बंधित ए.इ. का नाम ।",
+      "title": "प्राप्ति ए.इ. (AE) का नाम",
+      "description": "इस नेटवर्क ए.इ. से सम्बंधित ए.इ. (AE) का नाम ।",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmArchiveAETitle"
     },
     "dcmRetrieveLocationUID": {
-      "title": "पुनःप्राप्ति स्थान का यू.आई.डी.",
-      "description": "पुनःप्राप्ति स्थान का यू.आई.डी. ।",
+      "title": "पुनःप्राप्ति स्थान का यू.आई.डी. (UID)",
+      "description": "पुनःप्राप्ति स्थान का यू.आई.डी. (UID) ।",
       "type": "string",
       "pattern": "^[0-2]((\\.0)|(\\.[1-9][0-9]*))*$"
     },

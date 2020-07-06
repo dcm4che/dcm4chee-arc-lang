@@ -1,6 +1,6 @@
 {
-  "title": "यू.आई. भाषा प्रोफ़ाइल विन्यास",
-  "description": "यू.आई. भाषा प्रोफ़ाइल विन्यास ।",
+  "title": "यू.आई. (UI) भाषा प्रोफ़ाइल विन्यास",
+  "description": "यू.आई. (UI) भाषा प्रोफ़ाइल विन्यास ।",
   "type": "object",
   "required": [
     "dcmuiLanguageProfileName",
@@ -14,7 +14,7 @@
     },
     "dcmDefaultLanguage": {
       "title": "डिफ़ॉल्ट भाषा",
-      "description": "यू.आई. के लिए डिफ़ॉल्ट भाषा चुने ।",
+      "description": "यू.आई. (UI) के लिए डिफ़ॉल्ट भाषा चुने ।",
       "type": "string",
       "items" : {
         "type": "string"

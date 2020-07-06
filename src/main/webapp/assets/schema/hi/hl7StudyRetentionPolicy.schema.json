@@ -1,6 +1,6 @@
 {
-  "title": "एच.एल.७. स्टडी धारण नीति",
-  "description": "एच.एल.७. स्टडी धारण नीति ।",
+  "title": "एच.एल.७. (HL7) स्टडी धारण नीति",
+  "description": "एच.एल.७. (HL7) स्टडी धारण नीति ।",
   "type": "object",
   "required": [
     "cn",
@@ -14,24 +14,24 @@
   "properties": {
     "cn": {
       "title": "नाम",
-      "description": "एच.एल.७. स्टडी धारण नीति का मनमाना/सार्थक नाम ।",
+      "description": "एच.एल.७. (HL7) स्टडी धारण नीति का मनमाना/सार्थक नाम ।",
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "अनुप्रयोग तत्त्व (ए.इ.) का नाम",
-      "description": "अनुप्रयोग तत्त्व (ए.इ.) का नाम ।",
+      "title": "अनुप्रयोग तत्त्व ए.इ. (AE) का नाम",
+      "description": "अनुप्रयोग तत्त्व ए.इ. (AE) का नाम ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmRetentionPeriod": {
       "title": "न्यूतनम स्टडी धारण कालावधि",
-      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnYnMnD या PnW में न्यूतनम स्टडी धारण कालावधि ।",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnYnMnD या PnW में न्यूतनम स्टडी धारण कालावधि ।",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmMaxRetentionPeriod": {
       "title": "अधिकतम स्टडी धारण कालावधि",
-      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnYnMnD या PnW में अधिकतम स्टडी धारण कालावधि ।",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnYnMnD या PnW में अधिकतम स्टडी धारण कालावधि ।",
       "type": "string",
       "format": "dcmPeriod"
     },
@@ -44,7 +44,7 @@
     },
     "dcmProperty": {
       "title": "नियम",
-      "description": "नियम इस प्रारूप में {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. उदाहरण के तौर पे: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 ।",
+      "description": "नियम इस प्रारूप में {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx} ।उदाहरण के तौर पे: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -52,7 +52,7 @@
     },
     "dcmStartRetentionPeriodOnStudyDate": {
       "title": "धारण कालावधि को स्टडी के तारीख से आरंभ करें",
-      "description": "धारण कालावधि को एच.एल.७. संदेश (जिससे यह नियम सक्रीय हुआ) के आर्काइव में पाए जाने के तारीख के बजाय प्रत्येक स्टडी के तारीख से आरंभ करने का संकेत करता है ।",
+      "description": "धारण कालावधि को एच.एल.७. (HL7) संदेश (जिससे यह नियम सक्रीय हुआ) के आर्काइव में पाए जाने के तारीख के बजाय प्रत्येक स्टडी के तारीख से आरंभ करने का संकेत करता है ।",
       "type": "boolean",
       "default": false
     },

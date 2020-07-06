@@ -1,6 +1,6 @@
 {
-  "title": "यू.आई. अनुमति",
-  "description": "यू.आई. अनुमति ।",
+  "title": "यू.आई. (UI) अनुमति",
+  "description": "यू.आई. (UI) अनुमति ।",
   "type": "object",
   "required": [
     "dcmuiPermissionName",
@@ -8,13 +8,13 @@
   ],
   "properties": {
     "dcmuiPermissionName": {
-      "title": "यू.आई. अनुमति का नाम",
-      "description": "यू.आई. क्रिया के लिए अनुमति का नाम ।",
+      "title": "यू.आई. (UI) अनुमति का नाम",
+      "description": "यू.आई. (UI) क्रिया के लिए अनुमति का नाम ।",
       "type": "string"
     },
     "dcmuiAction": {
-      "title": "यू.आई. क्रिया",
-      "description": "यू.आई. क्रिया ।",
+      "title": "यू.आई. (UI) क्रिया",
+      "description": "यू.आई. (UI) क्रिया ।",
       "type": "string",
       "enum": [
         "menu-studies",
@@ -79,8 +79,8 @@
       ]
     },
     "dcmuiActionParam": {
-      "title": "यू.आई. क्रिया मापदण्ड",
-      "description": "यू.आई. क्रिया मापदण्ड ।",
+      "title": "यू.आई. (UI) क्रिया मापदण्ड",
+      "description": "यू.आई. (UI) क्रिया मापदण्ड ।",
       "type": "array",
       "items" : {
         "type": "string",

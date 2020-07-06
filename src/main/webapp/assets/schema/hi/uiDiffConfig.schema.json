@@ -1,61 +1,61 @@
 {
-  "title": "यू.आई. तुलना विन्यास",
-  "description": "यू.आई. तुलना विन्यास ।",
+  "title": "यू.आई. (UI) तुलना विन्यास",
+  "description": "यू.आई. (UI) तुलना विन्यास ।",
   "type": "object",
   "required": [
     "dcmuiDiffConfigName"
   ],
   "properties": {
     "dcmuiDiffConfigName": {
-      "title": "यू.आई. तुलना विन्यास का नाम",
-      "description": "यू.आई. तुलना विन्यास का नाम ।",
+      "title": "यू.आई. (UI) तुलना विन्यास का नाम",
+      "description": "यू.आई. (UI) तुलना विन्यास का नाम ।",
       "type": "string"
     },
     "dcmuiDiffCallingAET": {
-      "title": "तुलना आह्वान ए.इ.टी.",
-      "description": "तुलना आह्वान ए.इ.टी. ।",
+      "title": "तुलना आह्वान ए.इ.टी. (AET)",
+      "description": "तुलना आह्वान ए.इ.टी. (AET) ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmuiDiffPrimaryCFindSCP": {
-      "title": "यू.आई. तुलना प्राथमिक सी-फाइंड एस.सी.पी.",
-      "description": "यू.आई. तुलना प्राथमिक सी-फाइंड एस.सी.पी. ।",
+      "title": "यू.आई. (UI) तुलना प्राथमिक सी-फाइंड एस.सी.पी. (C-FIND SCP)",
+      "description": "यू.आई. (UI) तुलना प्राथमिक सी-फाइंड एस.सी.पी. (C-FIND SCP) ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffPrimaryCMoveSCP": {
-      "title": "यू.आई. तुलना प्राथमिक सी-मूव एस.सी.पी.",
-      "description": "यू.आई. तुलना प्राथमिक सी-मूव एस.सी.पी. ।",
+      "title": "यू.आई. (UI) तुलना प्राथमिक सी-मूव एस.सी.पी. (C-MOVE SCP)",
+      "description": "यू.आई. (UI) तुलना प्राथमिक सी-मूव एस.सी.पी. (C-MOVE SCP) ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffPrimaryCStoreSCP": {
-      "title": "यू.आई. तुलना प्राथमिक सी-स्टोर एस.सी.पी.",
-      "description": "यू.आई. तुलना प्राथमिक सी-स्टोर एस.सी.पी. ।",
+      "title": "यू.आई. (UI) तुलना प्राथमिक सी-स्टोर एस.सी.पी. (C-STORE SCP)",
+      "description": "यू.आई. (UI) तुलना प्राथमिक सी-स्टोर एस.सी.पी. (C-STORE SCP) ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffSecondaryCFindSCP": {
-      "title": "यू.आई. तुलना द्वितीयक सी-फाइंड एस.सी.पी.",
-      "description": "यू.आई. तुलना द्वितीयक सी-फाइंड एस.सी.पी. ।",
+      "title": "यू.आई. (UI) तुलना द्वितीयक सी-फाइंड एस.सी.पी. (C-FIND SCP)",
+      "description": "यू.आई. (UI) तुलना द्वितीयक सी-फाइंड एस.सी.पी. (C-FIND SCP) ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffSecondaryCMoveSCP": {
-      "title": "यू.आई. तुलना द्वितीयक सी-मूव एस.सी.पी.",
-      "description": "यू.आई. तुलना द्वितीयक सी-मूव एस.सी.पी. ।",
+      "title": "यू.आई. (UI) तुलना द्वितीयक सी-मूव एस.सी.पी. (C-MOVE SCP)",
+      "description": "यू.आई. (UI) तुलना द्वितीयक सी-मूव एस.सी.पी. (C-MOVE SCP) ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffSecondaryCStoreSCP": {
-      "title": "यू.आई. तुलना द्वितीयक सी-स्टोर एस.सी.पी.",
-      "description": "यू.आई. तुलना द्वितीयक सी-स्टोर एस.सी.पी. ।",
+      "title": "यू.आई. (UI) तुलना द्वितीयक सी-स्टोर एस.सी.पी. (C-STORE SCP)",
+      "description": "यू.आई. (UI) तुलना द्वितीयक सी-स्टोर एस.सी.पी. (C-STORE SCP) ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffCriteria": {
-      "title": "यू.आई. तुलना मानदण्ड",
-      "description": "यू.आई. तुलना मानदण्ड ।",
+      "title": "यू.आई. (UI) तुलना मानदण्ड",
+      "description": "यू.आई. (UI) तुलना मानदण्ड ।",
       "titleKey":"{dcmuiDiffCriteriaTitle}",
       "type": "array",
       "items" : {

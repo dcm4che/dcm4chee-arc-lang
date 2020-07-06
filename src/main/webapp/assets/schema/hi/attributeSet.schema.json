@@ -1,6 +1,6 @@
 {
   "title": "गुण सेट",
-  "description": "QIDO-RS और WADO-RS मेटाडेटा के अनुरोध के 'includefields' प्राप्ति मापदण्ड और DIFF-RS अनुरोध के 'comparefield' प्राप्ति मापदण्ड का नांमाकित गुण सेट ।",
+  "description": "क्यू.आई.डी.ओ.-आर.एस. (QIDO-RS) और डब्ल्यू.ए.डी.ओ.-आर.एस. (WADO-RS) मेटाडेटा के अनुरोध के 'includefields' प्राप्ति मापदण्ड और डिफ्फ-आर.एस. (DIFF-RS) अनुरोध के 'comparefield' प्राप्ति मापदण्ड का नांमाकित गुण सेट ।",
   "type": "object",
   "required": [
     "dcmAttributeSetType",
@@ -16,7 +16,7 @@
     },
     "dcmAttributeSetType": {
       "title": "गुण प्रकार",
-      "description": "QIDO-RS और WADO-RS मेटाडेटा के अनुरोध के 'includefields' प्राप्ति मापदण्ड और DIFF-RS अनुरोध के 'comparefield' प्राप्ति मापदण्ड के द्वारा यह गुण सेट इस्तमाल होगा यह निर्दिष्ट करता है ।",
+      "description": "क्यू.आई.डी.ओ.-आर.एस. (QIDO-RS) और डब्ल्यू.ए.डी.ओ.-आर.एस. (WADO-RS) मेटाडेटा के अनुरोध के 'includefields' प्राप्ति मापदण्ड और डिफ्फ-आर.एस. (DIFF-RS) अनुरोध के 'comparefield' प्राप्ति मापदण्ड के द्वारा यह गुण सेट इस्तमाल होगा यह निर्दिष्ट करता है ।",
       "type": "string",
       "enum": [
         "QIDO_RS",
@@ -26,8 +26,8 @@
       ]
     },
     "dcmAttributeSetID": {
-      "title": "गुण सेट आई.डी.",
-      "description": "QIDO-RS और WADO-RS मेटाडेटा के अनुरोध के 'includefields' प्राप्ति मापदण्ड और DIFF-RS अनुरोध के 'comparefield' प्राप्ति मापदण्ड के द्वारा इस्तमाल की गई इस गुण सेट का पहचानकर्ता ।",
+      "title": "गुण सेट आई.डी. (ID)",
+      "description": "क्यू.आई.डी.ओ.-आर.एस. (QIDO-RS) और डब्ल्यू.ए.डी.ओ.-आर.एस. (WADO-RS) मेटाडेटा के अनुरोध के 'includefields' प्राप्ति मापदण्ड और डिफ्फ-आर.एस. (DIFF-RS) अनुरोध के 'comparefield' प्राप्ति मापदण्ड के द्वारा इस्तमाल की गई इस गुण सेट का पहचानकर्ता ।",
       "type": "string"
     },
     "dcmAttributeSetTitle": {
@@ -48,7 +48,7 @@
     },
     "dcmTag": {
       "title": "गुण टैग",
-      "description": "हेक्स स्ट्रिंग के रूप में डाइकोम टैग ।",
+      "description": "हेक्स स्ट्रिंग के रूप में डाइकोम (DICOM) टैग ।",
       "type": "array",
       "items": {
         "type": "string"

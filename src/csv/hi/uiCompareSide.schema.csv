@@ -3,6 +3,6 @@
 "dcmuiCompareSideName","नाम","पक्षों की तुलना का नाम ।"
 "dcmuiCompareSideDescription","वर्णन","इस समूह का संक्षेप वर्णन ।"
 "dcmuiCompareSideCluster","क्लस्टर","क्लस्टर को चुने ।"
-"dcmuiCompareSideElasticsearch","इलास्टिकसर्च","इलास्टिकसर्च यू.आर.एल. को चुने ।"
+"dcmuiCompareSideElasticsearch","इलास्टिकसर्च","इलास्टिकसर्च यू.आर.एल. (URL) को चुने ।"
 "dcmuiCompareSideQueueName","कतार","पक्षों की तुलना के लिए इस्तमाल किए जानेवाले कतार का नाम ।"
 "dcmuiCompareSideInstalled","स्थापित","हाँ अगर यह पक्षों की तुलना डैशबोर्ड में सक्रीय है ।"

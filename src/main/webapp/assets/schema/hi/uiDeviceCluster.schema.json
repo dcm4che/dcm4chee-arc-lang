@@ -1,6 +1,6 @@
 {
-  "title": "यू.आई. क्लस्टर विन्यास",
-  "description": "यू.आई. क्लस्टर विन्यास ।",
+  "title": "यू.आई. (UI) क्लस्टर विन्यास",
+  "description": "यू.आई. (UI) क्लस्टर विन्यास ।",
   "type": "object",
   "required": [
     "dcmuiDeviceClusterName",

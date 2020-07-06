@@ -1,6 +1,6 @@
 {
   "title": "मेटाडेटा फ़िल्टर",
-  "description": "वाड़ो-आरएस मेटाडेटा अनुरोधों के लिए नामांकित गुण फ़िल्टर ।",
+  "description": "डब्ल्यू.ए.डी.ओ.-आर.एस. (WADO-RS) मेटाडेटा अनुरोधों के लिए नामांकित गुण फ़िल्टर ।",
   "type": "object",
   "required": [
     "dcmMetadataFilterName",
@@ -9,12 +9,12 @@
   "properties": {
     "dcmMetadataFilterName": {
       "title": "मेटाडेटा फ़िल्टर का नाम",
-      "description": "वाड़ो-आरएस मेटाडेटा अनुरोधों के मालिकाना प्राप्ति मापदण्ड 'includefields' द्वारा संदर्भित मेटाडेटा फ़िल्टर का नाम ।",
+      "description": "डब्ल्यू.ए.डी.ओ.-आर.एस. (WADO-RS) मेटाडेटा अनुरोधों के मालिकाना प्राप्ति मापदण्ड 'includefields' द्वारा संदर्भित मेटाडेटा फ़िल्टर का नाम ।",
       "type": "string"
     },
     "dcmTag": {
       "title": "गुण टैग",
-      "description": "हेक्स स्ट्रिंग के रूप में डाइकोम टैग ।",
+      "description": "हेक्स स्ट्रिंग के रूप में डाइकोम (DICOM) टैग ।",
       "type": "array",
       "items": {
         "type": "string"

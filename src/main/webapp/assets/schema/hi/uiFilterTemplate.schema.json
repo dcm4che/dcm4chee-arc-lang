@@ -1,5 +1,5 @@
 {
-  "title": "यू.आई. फ़िल्टर फर्मा",
+  "title": "यू.आई. (UI) फ़िल्टर फर्मा",
   "description": "परिभाषित फ़िल्टर फर्मा ।",
   "type": "object",
   "required": [
@@ -14,8 +14,8 @@
       "type": "string"
     },
     "dcmuiFilterTemplateID": {
-      "title": "आई.डी.",
-      "description": "फ़िल्टर का आई.डी. जहां यह फर्मा लागू हो सकता है ।",
+      "title": "आई.डी. (ID)",
+      "description": "फ़िल्टर का आई.डी. (ID) जहां यह फर्मा लागू हो सकता है ।",
       "type": "string"
     },
     "dcmuiFilterTemplateDescription": {

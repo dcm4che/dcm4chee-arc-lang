@@ -1,5 +1,5 @@
 {
-  "title": "यू.आई. स्टडी सारिणी कॉलम विन्यास",
+  "title": "यू.आई. (UI) स्टडी सारिणी कॉलम विन्यास",
   "description": "स्टडी सारिणी कॉलम ।",
   "type": "object",
   "required": [
@@ -33,13 +33,13 @@
       ]
     },
     "dcmuiColumnWidth": {
-      "title": "Column width in weight",
-      "description": "Width of the column in weight ( x > 0.1 - x < infinite ) default 1",
+      "title": "कॉलम प्रभाव की चौड़ाई",
+      "description": "कॉलम प्रभाव की चौड़ाई ( x > 0.1 - x < infinite ), डिफ़ॉल्ट मूल्य १ होगा",
       "type":  "string"
     },
     "dcmuiColumnOrder": {
-      "title": "Order of the Column",
-      "description": "Order of the Column",
+      "title": "कॉलम का क्रम",
+      "description": "कॉलम का क्रम",
       "type":  "string"
     }
   }

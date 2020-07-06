@@ -15,8 +15,8 @@
       "type": "string"
     },
     "dcmExporterID": {
-      "title": "निर्यातक आई.डी.",
-      "description": "निर्यातक आई.डी. ।",
+      "title": "निर्यातक आई.डी. (ID)",
+      "description": "निर्यातक आई.डी. (ID) ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmExporterID"

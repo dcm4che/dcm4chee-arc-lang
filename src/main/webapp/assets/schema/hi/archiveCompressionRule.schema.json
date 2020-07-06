@@ -14,8 +14,8 @@
       "type": "string"
     },
     "dicomTransferSyntax": {
-      "title": "डाइकोम स्थानांतरण वाक्यविन्यास यू.आई.डी.",
-      "description": "स्थानांतरण वाक्यविन्यास यू.आई.डी. ।",
+      "title": "डाइकोम (DICOM) स्थानांतरण वाक्यविन्यास यू.आई.डी. (UID)",
+      "description": "स्थानांतरण वाक्यविन्यास यू.आई.डी. (UID) ।",
       "type": "string",
       "format": "dcmTransferSyntax"
     },
@@ -44,7 +44,7 @@
     },
     "dcmCompressionDelay": {
       "title": "संपीड़न विलंभ",
-      "description": "आई.एस.ओ.-८६०१ कालावधि प्रारूप PnDTnHnMn.nS में संपीड़न विलंभ ।अगर कॉन्फ़िगर ना किया हो तो, प्राप्त होने पे संपीडित करें ।",
+      "description": "आई.एस.ओ.-८६०१ (ISO-8601) कालावधि प्रारूप PnDTnHnMn.nS में संपीड़न विलंभ ।अगर कॉन्फ़िगर ना किया हो तो, प्राप्त होने पे संपीडित करें ।",
       "type": "string",
       "format": "dcmDuration"
     }

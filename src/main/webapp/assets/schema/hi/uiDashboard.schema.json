@@ -1,14 +1,14 @@
 {
-  "title": "यू.आई. डैशबोर्ड विन्यास",
-  "description": "यू.आई. डैशबोर्ड विन्यास ।",
+  "title": "यू.आई. (UI) डैशबोर्ड विन्यास",
+  "description": "यू.आई. (UI) डैशबोर्ड विन्यास ।",
   "type": "object",
   "required": [
     "dcmuiDashboardConfigName"
   ],
   "properties": {
     "dcmuiDashboardConfigName": {
-      "title": "यू.आई. डैशबोर्ड विन्यास का नाम",
-      "description": "यू.आई. डैशबोर्ड विन्यास का नाम ।",
+      "title": "यू.आई. (UI) डैशबोर्ड विन्यास का नाम",
+      "description": "यू.आई. (UI) डैशबोर्ड विन्यास का नाम ।",
       "type": "string"
     },
     "dcmuiShowStarBlock":{
@@ -19,21 +19,21 @@
     },
     "dcmuiQueueName": {
       "title": "कतार",
-      "description": "कतार ब्लॉक में इस्तमाल किए जानेवाले यू.आई. डैशबोर्ड विन्यास के लिए कतार के नाम ।",
+      "description": "कतार ब्लॉक में इस्तमाल किए जानेवाले यू.आई. (UI) डैशबोर्ड विन्यास के लिए कतार के नाम ।",
       "type": "array",
       "items" : { "type": "string" },
       "format" : "dcmQueueName"
     },
     "dcmuiExportName": {
       "title": "निर्यातक आई.डी.",
-      "description": "कतार और तुलना ब्लॉक में इस्तमाल किए जानेवाले यू.आई. डैशबोर्ड विन्यास के लिए निर्यातक के आई.डी. ।",
+      "description": "कतार और तुलना ब्लॉक में इस्तमाल किए जानेवाले यू.आई. (UI) डैशबोर्ड विन्यास के लिए निर्यातक के आई.डी. ।",
       "type": "array",
       "items" : { "type": "string" },
       "format" : "dcmExporterID"
     },
     "dicomuiDeviceName": {
       "title": "डिवाइसेस के नाम",
-      "description": "पुनःप्राप्ति और निर्यात ब्लॉक का निर्माण करने के लिए इस्तमाल किए जानेवाले यू.आई. डैशबोर्ड विन्यास के लिए डिवाइसेस के नाम ।",
+      "description": "पुनःप्राप्ति और निर्यात ब्लॉक का निर्माण करने के लिए इस्तमाल किए जानेवाले यू.आई. (UI) डैशबोर्ड विन्यास के लिए डिवाइसेस के नाम ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dicomDeviceName"
@@ -45,8 +45,8 @@
       "items" : { "type": "string" }
     },
     "dcmuiCountAET": {
-      "title": "गिनती ए.इ.टी.",
-      "description": "डैशबोर्ड में स्टडीज की गिनती प्राप्त करने के लिए चुने हुए ए.इ.टी. का इस्तमाल होगा ।",
+      "title": "गिनती ए.इ.टी. (AET)",
+      "description": "डैशबोर्ड में स्टडीज की गिनती प्राप्त करने के लिए चुने हुए ए.इ.टी. (AET) का इस्तमाल होगा ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },

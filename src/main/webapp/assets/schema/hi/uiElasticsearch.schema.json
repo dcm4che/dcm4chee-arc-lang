@@ -1,5 +1,5 @@
 {
-  "title": "यू.आई. इलास्टिकसर्च विन्यास",
+  "title": "यू.आई. (UI) इलास्टिकसर्च विन्यास",
   "description": "प्रो संस्करण के लिए इलास्टिकसर्च विन्यास ।",
   "type": "object",
   "required": [
@@ -7,13 +7,13 @@
   ],
   "properties": {
     "dcmuiElasticsearchConfigName": {
-      "title": "यू.आई. इलास्टिकसर्च विन्यास का नाम",
-      "description": "यू.आई. इलास्टिकसर्च विन्यास का नाम",
+      "title": "यू.आई. (UI) इलास्टिकसर्च विन्यास का नाम",
+      "description": "यू.आई. (UI) इलास्टिकसर्च विन्यास का नाम",
       "type": "string"
     },
     "dcmuiElasticsearchURLObjects": {
-      "title": "यू.आई. इलास्टिकसर्च यू.आर.एल.",
-      "description": "यू.आई. इलास्टिकसर्च यू.आर.एल.",
+      "title": "यू.आई. (UI) इलास्टिकसर्च यू.आर.एल. (URL)",
+      "description": "यू.आई. (UI) इलास्टिकसर्च यू.आर.एल. (URL)",
       "titleKey":"{dcmuiElasticsearchURLName}",
       "type": "array",
       "items" : {

@@ -8,8 +8,8 @@
   ],
   "properties": {
     "dcmBulkDataDescriptorID": {
-      "title": "अधिकांश डेटा वर्णनकर्ता की आई.डी.",
-      "description": "अधिकांश डेटा वर्णनकर्ता की आई.डी. ।",
+      "title": "अधिकांश डेटा वर्णनकर्ता की आई.डी. (ID)",
+      "description": "अधिकांश डेटा वर्णनकर्ता की आई.डी. (ID) ।",
       "type": "string"
     },
     "dcmBulkDataExcludeDefaults": {
