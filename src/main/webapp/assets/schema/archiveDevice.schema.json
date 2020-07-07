@@ -996,6 +996,24 @@
       "type": "string",
       "format": "dcmCharset"
     },
+    "dcmCharsetNameMapping": {
+      "title": "DICOM Character Set Name Mapping",
+      "description": "Customize mapping of value of DICOM Specific Character Set (0008,0005) to named charset in format <value>=<charset name>. E.g.: \"ISO_IR 100=windows-1252\".",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmProperty"
+    },
+    "hl7CharsetNameMapping": {
+      "title": "HL7 Character Set Name Mapping",
+      "description": "Add mapping of value of HL7 MSH-18 to named charset in format <value>=<charset name>. E.g.: \"Windows-1252=windows-1252\". Typically you will also have to specify the HL7 DICOM Character Set of the Archive HL7 Application to use for received HL7 messages with such Character Set.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmProperty"
+    },
     "dcmUPSWorklistLabel": {
       "title": "UPS Worklist Label",
       "description": "Value of Worklist Label (0074,1202) of created UPS by any Network AE, if the UPS Push SCU or UPS-RS User Agent does not provide a value for this attribute. If absent, the AE Title of the receiving AE will be used. May be overwritten by configured values for particular Archive Network AEs.",
