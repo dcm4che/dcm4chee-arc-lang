@@ -7,7 +7,6 @@
     "dcmUPSLabel",
     "dcmUPSPriority",
     "dcmUPSInputReadinessState",
-    "dcmUPSInputInformation",
     "dcmUPSIncludeStudyInstanceUID",
     "dcmUPSIncludeInputInformation",
     "dcmUPSIncludeReferencedRequest",
