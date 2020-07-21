@@ -7,7 +7,6 @@
     "dcmUPSLabel",
     "dcmUPSPriority",
     "dcmUPSInputReadinessState",
-    "dcmUPSInputInformation",
     "dcmUPSIncludeStudyInstanceUID",
     "dcmUPSIncludeInputInformation",
     "dcmUPSIncludeReferencedRequest",
@@ -100,7 +99,7 @@
       ]
     },
     "dcmDestinationAE": {
-      "title": "गंतव्य ए.इ.",
+      "title": "गंतव्य ए.इ. (AE)",
       "description": "डाइकोम (DICOM) अनुप्रयोग तत्त्व का नाम जिसपे दृष्टांत सहेजे जाएंगे ।",
       "type": "string",
       "format": "dcmAETitle"

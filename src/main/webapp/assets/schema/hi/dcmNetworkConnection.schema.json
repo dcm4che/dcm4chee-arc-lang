@@ -60,10 +60,10 @@
     },
     "dcmTCPBacklog": {
       "title": " टी.सी.पी. (TCP) बैकलॉग",
-      "description": "आनेवाले  टी.सी.पी. (TCP) संपर्कों के लिए अधिकतम कतार की लम्बाई ।० = असीमित ।",
+      "description": "आनेवाले  टी.सी.पी. (TCP) संपर्कों के लिए अधिकतम कतार की लम्बाई ।",
       "type": "integer",
       "default": 50,
-      "minimum": 0
+      "minimum": 1
     },
     "dcmTCPConnectTimeout": {
       "title": " टी.सी.पी. (TCP) संपर्क समय",
