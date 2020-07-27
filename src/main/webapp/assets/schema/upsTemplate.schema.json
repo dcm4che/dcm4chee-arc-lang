@@ -15,6 +15,11 @@
       "description": "ID of UPS Template",
       "type": "string"
     },
+    "dicomDescription": {
+      "title": "UPS Template Description",
+      "description": "Unconstrained text description of the UPS Template",
+      "type": "string"
+    },
     "dcmUPSLabel": {
       "title": "Procedure Step Label",
       "description": "Value of Procedure Step Label (0074,1204) in created UPS.",

@@ -1,6 +1,7 @@
 "property","title","description"
 "","UPS Template","UPS Template"
 "dcmUPSTemplateID","UPS Template ID","ID of UPS Template"
+"dicomDescription","UPS Template Description","Unconstrained text description of the UPS Template"
 "dcmUPSLabel","Procedure Step Label","Value of Procedure Step Label (0074,1204) in created UPS."
 "dcmUPSWorklistLabel","Worklist Label","Value of Worklist Label (0074,1202) in created UPS."
 "dcmUPSPriority","Priority","Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied."
