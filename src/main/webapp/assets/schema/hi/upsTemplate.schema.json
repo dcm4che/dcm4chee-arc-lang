@@ -15,6 +15,11 @@
       "description": "यू.पी.एस. (UPS) फर्मा का आई.डी. (ID)",
       "type": "string"
     },
+    "dicomDescription": {
+      "title": "यू.पी.एस. (UPS) फर्मा का वर्णन",
+      "description": "यू.पी.एस. (UPS) फर्मा का स्वैच्छिक विषय वर्णन ।",
+      "type": "string"
+    },
     "dcmUPSLabel": {
       "title": "प्रक्रिया स्टेप लेबल",
       "description": "निर्माण किए गए यू.पी.एस. (UPS) में प्रक्रिया स्टेप लेबल (००७४,१२०४) का मूल्य ।",
