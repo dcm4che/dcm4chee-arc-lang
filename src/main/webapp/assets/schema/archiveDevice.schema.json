@@ -1514,7 +1514,7 @@
     },
     "dcmCSVUploadChunkSize": {
       "title": "CSV Upload Chunk Size",
-      "description": "Number of CSV file upload tasks to be processed in one transaction.",
+      "description": "Number of CSV file upload tasks to be processed in one chunk.",
       "type": "integer",
       "default": 100,
       "minimum": 1
