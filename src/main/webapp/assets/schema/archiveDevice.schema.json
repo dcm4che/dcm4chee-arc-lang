@@ -16,6 +16,7 @@
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
     "dcmValidateCallingAEHostname",
+    "dcmUserIdentityNegotiation",
     "dcmPersonNameComponentOrderInsensitiveMatching",
     "dcmSendPendingCGet",
     "dcmQueryFetchSize",
@@ -310,6 +311,17 @@
       "description": "Validate Calling AE Hostname or IP Address of Association requestors. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
+    },
+    "dcmUserIdentityNegotiation": {
+      "title": "User Identity Negotiation",
+      "description": "Usage of User Identity Negotiation Sub-Item in received Association requests. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string",
+      "default": "SUPPORTS",
+      "enum": [
+        "NOT_SUPPORTED",
+        "SUPPORTS",
+        "REQUIRED"
+      ]
     },
     "dcmPersonNameComponentOrderInsensitiveMatching": {
       "title": "Person Name Component Order Insensitive Matching",

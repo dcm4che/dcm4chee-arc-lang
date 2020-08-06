@@ -140,6 +140,16 @@
       "description": "Validate Calling AE Hostname or IP Address of Association requestors for this AE. Overwrites value specified on Device level.",
       "type": "boolean"
     },
+    "dcmUserIdentityNegotiation": {
+      "title": "User Identity Negotiation",
+      "description": "Usage of User Identity Negotiation Sub-Item in received Association requests. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "NOT_SUPPORTED",
+        "SUPPORTS",
+        "REQUIRED"
+      ]
+    },
     "dcmPersonNameComponentOrderInsensitiveMatching": {
       "title": "Person Name Component Order Insensitive Matching",
       "description": "Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names by this AE. Overwrites value specified on Device level.",
