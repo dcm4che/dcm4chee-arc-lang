@@ -142,13 +142,24 @@
     },
     "dcmUserIdentityNegotiation": {
       "title": "User Identity Negotiation",
-      "description": "Usage of User Identity Negotiation Sub-Item in received Association requests. Overwrites value specified on Device level.",
+      "description": "Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
         "NOT_SUPPORTED",
         "SUPPORTS",
         "REQUIRED"
       ]
+    },
+    "dcmUserIdentityNegotiationRole": {
+      "title": "User Identity Negotiation Role",
+      "description": "Constrain accepted User Identity Negotiation requests to users with specified role. Overwrites value specified on Device level.",
+      "type": "string"
+    },
+    "dcmUserIdentityNegotiationKeycloakClientID": {
+      "title": "User Identity Negotiation Keycloak Client ID",
+      "description": "Keycloak Client ID referring Keycloak connection configuration for verifying passed username and password or JSON Web Token. Overwrites value specified on Device level.",
+      "type": "string",
+      "format": "dcmKeycloakClientID"
     },
     "dcmPersonNameComponentOrderInsensitiveMatching": {
       "title": "Person Name Component Order Insensitive Matching",
