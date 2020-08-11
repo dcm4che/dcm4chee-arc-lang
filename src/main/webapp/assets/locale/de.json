@@ -783,6 +783,7 @@
     "no_aets_found": "No AETs found, please use the device-configurator or the LDAP-Browser to configure one!",
     "no_data_found": "Keine Daten gefunden!",
     "no_date_restriction_specified_continue": "No date restriction specified, are you sure you want to continue?",
+    "no_deletion_constraint": "No Deletion Constraint",
     "no_device_was_accessible": "No device was accessible!",
     "no_diff_res": "No Diff Results found!",
     "no_diffs": " ( No diffs )",
