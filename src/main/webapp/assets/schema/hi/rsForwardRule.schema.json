@@ -18,7 +18,7 @@
       "title": "वेब अनुप्रयोग का नाम",
       "description": "वेब अनुप्रयोग का नाम ।",
       "type": "string",
-      "format": "dcmWebAppName"
+      "format": "dcmWebApp"
     },
     "dcmTLSAllowAnyHostname": {
       "title": "टी.एल.एस. (TLS) किसी भी मेज़बान को अनुमति दे",
