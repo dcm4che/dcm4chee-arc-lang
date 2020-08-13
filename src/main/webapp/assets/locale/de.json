@@ -392,7 +392,6 @@
     "diff-pro.diff_triggered_successfully": "Diff triggered successfully!",
     "diff-pro.error_getting_param": "Error getting {$@@comparefield} ({$@@status_text})",
     "diff-pro.export_all_entries": "Export all entries",
-    "diff-pro.force_query_by_study_uid": "Force query by Study UID",
     "diff-pro.missing_studies": "Missing studies",
     "diff-pro.more_than_one_column_found": "More than one column found, try uploading csv-file with only one column!",
     "diff-pro.no_studyinstanceuids_found_in_the_file": "No StudyInstanceUIDs found in the file!",

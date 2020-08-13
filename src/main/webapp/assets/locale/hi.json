@@ -392,7 +392,6 @@
     "diff-pro.diff_triggered_successfully": "तुलना सफलतापूर्वक सक्रिय हुआ!",
     "diff-pro.error_getting_param": "पाने में त्रुटि {$@@comparefield} ({$@@status_text})",
     "diff-pro.export_all_entries": "सारे प्रविष्टियाँ निर्यात करें ।",
-    "diff-pro.force_query_by_study_uid": "स्टडी यू.आई.डी. (UID) से प्राप्ति मजबूर करें ।",
     "diff-pro.missing_studies": "अनुपस्थित स्टडीज",
     "diff-pro.more_than_one_column_found": "एक से ज़्यादा कॉलम मिला, एक कॉलम का सी.एस.वी. (CSV) फाइल अपलोड करने की कोशिश करें!",
     "diff-pro.no_studyinstanceuids_found_in_the_file": "इस फाइल में स्टडी दृष्टांत यू.आई.डी. (UID) नहीं मिला!",
