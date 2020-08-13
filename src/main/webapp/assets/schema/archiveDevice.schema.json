@@ -332,7 +332,7 @@
       "title": "User Identity Negotiation Keycloak Client ID",
       "description": "Keycloak Client ID referring Keycloak connection configuration for verifying passed username and password or JSON Web Token. If absent, System Properties ${auth-server-url}, ${realm-name:dcm4che}, ${ui-client-id:dcm4chee-arc-ui}, ${disable-trust-manager:false}, ${allow-any-hostname:true} will be applied. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
-      "format": "dcmKeycloakClientID"
+      "format": "dcmKeycloakClient"
     },
     "dcmPersonNameComponentOrderInsensitiveMatching": {
       "title": "Person Name Component Order Insensitive Matching",

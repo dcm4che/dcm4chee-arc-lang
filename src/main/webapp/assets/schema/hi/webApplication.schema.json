@@ -62,7 +62,7 @@
       "title": "कीक्लोक क्लाइंट आई.डी. (ID)",
       "description": "वेब अनुप्रयोग का कीक्लोक क्लाइंट आई.डी. (ID) ।",
       "type": "string",
-      "format": "dcmKeycloakClientID"
+      "format": "dcmKeycloakClient"
     },
     "dicomAETitle": {
       "title": "ए.इ. (AE) का नाम",
