@@ -13,9 +13,9 @@
     "dcmNoKeywords"
   ],
   "properties": {
-    "dcmUPSOnStoreID": {
-      "title": "UPS on Store ID",
-      "description": "ID of UPS on Store Rule",
+    "dcmUPSOnUPSCompletedID": {
+      "title": "UPS on UPS Completed Rule ID",
+      "description": "ID of UPS on UPS Completed Rule",
       "type": "string"
     },
     "dcmUPSPerformedWorkitemCode": {

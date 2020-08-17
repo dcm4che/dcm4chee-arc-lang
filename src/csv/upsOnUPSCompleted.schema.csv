@@ -1,6 +1,6 @@
 "property","title","description"
 "","UPS on UPS Completed","Create Workitem in unified Worklist on previous UPS Completed"
-"dcmUPSOnStoreID","UPS on Store ID","ID of UPS on Store Rule"
+"dcmUPSOnUPSCompletedID","UPS on UPS Completed Rule ID","ID of UPS on UPS Completed Rule"
 "dcmUPSPerformedWorkitemCode","Previous Performed Workitem Code","Performed Workitem Code of completed UPS triggering this rule in format (CV, CSD, ""CM"")."
 "dcmUPSLabel","Procedure Step Label","Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset."
 "dcmUPSWorklistLabel","Worklist Label","Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset."
