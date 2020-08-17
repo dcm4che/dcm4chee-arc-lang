@@ -234,6 +234,7 @@
 "dcmStoreAccessControlIDRule","Store Access Control Rules","Store Access Control Rules applied to Studies received by any AE. May be supplemented by configured Store Access Control Rules for particular Archive Network AEs."
 "dcmUPSOnStore","UPS on Store Rules","UPS on Store Rules applied to DICOM objects received by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
 "hl7UPSOnHL7","UPS on HL7 Rules","UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured UPS on HL7 Rules for particular HL7 Applications."
+"dcmUPSOnUPSCompleted","UPS on UPS Completed Rules","UPS on UPS Completed Rules applied to UPS managed by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
 "dcmUPSTemplate","UPS Templates","UPS Templates."
 "dcmUPSProcessingRule","UPS Processing Rules","UPS Processing Rules."
 "dcmIDGenerator","ID Generator","ID Generator"

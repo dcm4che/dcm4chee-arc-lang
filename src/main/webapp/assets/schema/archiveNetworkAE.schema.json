@@ -714,6 +714,15 @@
       "items" : {
         "$ref": "upsOnStore.schema.json"
       }
+    },
+    "dcmUPSOnUPSCompleted": {
+      "title": "UPS on UPS Completed Rules",
+      "description": "UPS on UPS Completed Rules applied to UPS managed by this AE. Supplements UPS on UPS Completed Rules specified on Device level.",
+      "type": "array",
+      "titleKey": "{dcmUPSOnUPSCompletedID}",
+      "items": {
+        "$ref": "upsOnUPSCompleted.schema.json"
+      }
     }
   }
 }
