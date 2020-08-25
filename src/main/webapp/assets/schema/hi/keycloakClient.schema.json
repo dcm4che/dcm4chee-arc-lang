@@ -16,7 +16,9 @@
       "description": "टोकन अनुरोधों में इस्तमाल किया गया कीक्लोक क्लाइंट आई.डी. (ID) ।",
       "type": "string",
       "use": [
-        "$.dcmWebApp[*].dcmKeycloakClientID"
+        "$.dcmWebApp[*].dcmKeycloakClientID",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmUserIdentityNegotiationKeycloakClientID",
+        "$.dcmDevice.dcmArchiveDevice.dcmUserIdentityNegotiationKeycloakClientID"
       ]
     },
     "dcmURI": {

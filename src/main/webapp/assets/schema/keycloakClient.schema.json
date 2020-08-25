@@ -16,7 +16,9 @@
       "description": "Client ID used in token requests.",
       "type": "string",
       "use": [
-        "$.dcmWebApp[*].dcmKeycloakClientID"
+        "$.dcmWebApp[*].dcmKeycloakClientID",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmUserIdentityNegotiationKeycloakClientID",
+        "$.dcmDevice.dcmArchiveDevice.dcmUserIdentityNegotiationKeycloakClientID"
       ]
     },
     "dcmURI": {

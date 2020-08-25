@@ -11,7 +11,13 @@
     "dcmWebAppName": {
       "title": "वेब अनुप्रयोग का नाम",
       "description": "वेब अनुप्रयोग का नाम ।",
-      "type": "string"
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmRSForwardRule[*].dcmWebAppName",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmRSForwardRule[*].dcmWebAppName",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackWadoURIWebAppName",
+        "$.dcmDevice.dcmArchiveDevice.dcmFallbackWadoURIWebAppName"
+      ]
     },
     "dicomNetworkConnectionReference": {
       "title": "वेब अनुप्रयोग नेटवर्क संपर्क",
