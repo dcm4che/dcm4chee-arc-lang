@@ -34,9 +34,8 @@
     },
     "dcmTrustStoreType": {
       "title": "Trust Store Type",
-      "description": "Key Store Type of Trust Store specified by dcmTrustStoreURL.",
-      "type":"string",
-      "enum": [ "JKS", "PKCS12" ]
+      "description": "Key Store Type of Trust Store specified by dcmTrustStoreURL. Enumerated values: JKS, PKCS12.",
+      "type":"string"
     },
     "dcmTrustStorePin": {
       "title": "Trust Store Pin",
@@ -55,10 +54,8 @@
     },
     "dcmKeyStoreType": {
       "title": "Key Store Type",
-      "description": "Key Store Type of Key Store specified by Key Store URL.",
-      "type": "string",
-      "enum": [ "JKS", "PKCS12"]
-
+      "description": "Key Store Type of Key Store specified by Key Store URL. Enumerated values: JKS, PKCS12.",
+      "type": "string"
     },
     "dcmKeyStorePin": {
       "title": "Key Store Pin",

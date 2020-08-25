@@ -35,8 +35,7 @@
     "dcmTrustStoreType": {
       "title": "ट्रस्टस्टोर प्रकार",
       "description": "ट्रस्टस्टोर यू.आर.एल. (URL). द्वारा निर्दिष्ट ट्रस्टस्टोर का कीस्टोर प्रकार ।",
-      "type":"string",
-      "enum": [ "JKS", "PKCS12" ]
+      "type":"string"
     },
     "dcmTrustStorePin": {
       "title": "ट्रस्टस्टोर पिन",
@@ -56,9 +55,7 @@
     "dcmKeyStoreType": {
       "title": "कीस्टोर प्रकार",
       "description": "कीस्टोर यू.आर.एल. (URL) द्वारा निर्दिष्ट कीस्टोर का कीस्टोर प्रकार ।",
-      "type": "string",
-      "enum": [ "JKS", "PKCS12"]
-
+      "type": "string"
     },
     "dcmKeyStorePin": {
       "title": "कीस्टोर पिन",
