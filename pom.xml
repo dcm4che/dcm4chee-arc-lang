@@ -44,6 +44,14 @@
   <version>5.22.5</version>
   <packaging>war</packaging>
 
+  <distributionManagement>
+    <repository>
+      <id>www.dcm4che.org</id>
+      <name>dcm4che Repository</name>
+      <url>scp://www.dcm4che.org/home/maven2</url>
+    </repository>
+  </distributionManagement>
+
   <build>
     <extensions>
       <extension>
