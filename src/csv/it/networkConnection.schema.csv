@@ -1,0 +1,8 @@
+"property","title","description"
+"","Connessione di Rete","Descrive una porta TCP/UDP su un dispositivo di rete."
+"cn","Nome","Nome arbitrario/significativo per l'oggetto Connessione di rete"
+"dicomHostname","Nome host","Nome DNS per questa particolare connessione"
+"dicomPort","Porta","Porta TCP/UDP su cui è in ascolto un servizio. Potrebbe mancare se questa connessione di rete viene utilizzata solo per le connessioni in uscita"
+"dicomTLSCipherSuite","TLS CipherSuites","Le CipherSuite TLS supportate su questa particolare connessione. Se non presente TLS è disabilitato"
+"dicomInstalled","installato","Vero se la connessione di rete è installata sulla rete. Se non presente, le informazioni sullo stato di installazione dell'ARR vengono ereditate dal dispositivo"
+"dcmNetworkConnection","Estensione della connessione di rete","Attributi di connessione di rete proprietari di dcm4che"

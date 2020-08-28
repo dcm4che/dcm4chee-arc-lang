@@ -1,0 +1,7 @@
+"property","title","description"
+"","Lettore di immagini","Specifica i lettori java di immagini utilizzati per decomprimere immagini DICOM compresse"
+"dicomTransferSyntax","Sintassi di trasferimento","Sintassi di trasferimento dell'immagine DICOM compressa"
+"dcmIIOFormatName","Image IO Reader Format Name","Image IO Reader Format Name"
+"dcmJavaClassName","Nome classe Java","Classe Java pienamente qualificata di Image IO Reader. Se assente, utilizzare qualsiasi lettore di immagini trovato per il nome del formato specificato"
+"dcmPatchJPEGLS","Aggiusta JPEG-LS","Aggiusta JPEG-LS prima della decompressione"
+"dcmImageReadParam","Parametro lettura immagine","Parametri di lettura immagine (nome = valore)"

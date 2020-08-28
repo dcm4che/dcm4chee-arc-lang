@@ -1,0 +1,5 @@
+"property","title","description"
+"","Configurazione della lingua dell'interfaccia utente","Configurazione della lingua dell'interfaccia utente"
+"dcmuiLanguageConfigName","Nome configurazione lingua","Nome della configurazione della lingua"
+"dcmLanguages","Lingue disponibili","Imposta le lingue che dovrebbero essere disponibili nell'interfaccia utente (i file JSON di quelle lingue devono esistere nel codice, se non esistono apri un problema in GitHub)"
+"dcmuiLanguageProfileObjects","Profilo della lingua","Profilo della lingua per nome utente, ruolo o tutti"

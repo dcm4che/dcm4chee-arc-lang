@@ -1,0 +1,6 @@
+"property","title","description"
+"","Configurazione dell'URL dell'interfaccia utente di Elasticsearch ","URL dell'interfaccia utente di Elasticsearch"
+"dcmuiLanguageProfileName","Nome","Nome del profilo della lingua"
+"dcmDefaultLanguage","Lingua predefinita","Seleziona la lingua predefinita per l'interfaccia utente"
+"dcmuiLanguageProfileRole","Ruolo","Ruolo del nome utente a cui deve essere applicato questo profilo di lingua"
+"dcmuiLanguageProfileUsername","Nome utente","Nome utente per il profilo della lingua"

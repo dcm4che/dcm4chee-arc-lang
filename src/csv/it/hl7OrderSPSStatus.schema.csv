@@ -1,0 +1,4 @@
+"property","title","description"
+"","Stato SPS per un Ordine HL7","Specifica lo stato SPS degli elementi DICOM MWL creati/aggiornati sui messaggi HL7 ORM ^ O01, OMI ^ O23, OMG ^ O19 ricevuti"
+"dcmSPSStatus","Codice di stato del passo della procedura pianificata","Codice di stato del passo della procedura pianificata"
+"hl7OrderControlStatus","Stato controllo ordine HL7","Combinazioni di codici di stato controllo ordine HL7"

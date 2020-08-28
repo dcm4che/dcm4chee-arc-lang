@@ -1,0 +1,7 @@
+"property","title","description"
+"","Elenco a discesa degli AET","Elenco a discesa degli AET"
+"dcmuiAetListName","Nome della lista","Definisci un nome per questa configurazione"
+"dcmuiAetListDescription","Descrizione","Descrizione dell'elenco degli Aet"
+"dcmuiMode","Modalità elenco AEt","Definisci in quale modalità questa configurazione deve essere disponibile in 'internal' (archivia i propri AET, in alcuni posti chiamati anche 'Home AET' o 'Local AET') o 'external' (o in alcuni posti anche chiamati 'Remote AET') elenco a discesa degli AET, per essere disponibili per entrambi, non selezionarne nessuno"
+"dcmuiAets","AETs","Parametro di azione dell'UI"
+"dcmAcceptedUserRole","Ruolo utente accettato","Definisci i ruoli per i quali questa configurazione dovrebbe essere disponibile, usa ""user"" per essere disponibile per tutti i ruoli"

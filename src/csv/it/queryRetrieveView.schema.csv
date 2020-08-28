@@ -1,0 +1,6 @@
+"property","title","description"
+"","Vista di Query/Retrieve ","Specifica il comportamento della nota di rifiuto memorizzata"
+"dcmQueryRetrieveViewID","ID Vista di Query/Retrieve","Identificatore vista di Query/Retrieve "
+"dcmShowInstancesRejectedByCode","Mostra istanze rifiutate dal codice","Indica se i servizi Q/R devono mostrare le istanze rifiutate dal codice specificato in formato (CV, CSD, 'CM')"
+"dcmHideRejectionNoteWithCode","Nascondi nota di rifiuto con codice","Indica se i servizi di Q/R devono nascondere le note di rifiuto con il codice specificato nel formato (CV, CSD, 'CM')"
+"dcmHideNotRejectedInstances","Hide Not Rejected Instances","Indica se i servizi Q/R devono nascondere istanze non rifiutate per qualche motivo."

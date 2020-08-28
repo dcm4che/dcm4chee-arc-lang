@@ -1,0 +1,8 @@
+"property","title","description"
+"","Configurazione delle colonne della tabella di studio dell'interfaccia utente","Colonne della tabella dello studio"
+"dcmuiColumnName","Nome colonna","Il nome della colonna nella tabella di studio"
+"dcmuiColumnTitle","Descrizione colonna","Descrizione della colonna, mostrata al passaggio del mouse"
+"dcmuiValuePath","Percorso","Valore (json-Object) Percorso della colonna, ad esempio: '00100010.Value[0].Alfabetico ""per il nome del paziente o"" 00100020.Value[0]' for Patient ID"
+"dcmuiValueType","Tipo di valore","Tipo di colonna come ottenere il valore, il valore predefinito dovrebbe essere ""valore"""
+"dcmuiColumnWidth","Larghezza della colonna in peso","Larghezza della colonna in peso (x> 0,1 - x <infinito) default 1"
+"dcmuiColumnOrder","Ordine della Colonna","Ordine della Colonna"

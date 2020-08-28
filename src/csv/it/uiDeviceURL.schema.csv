@@ -1,0 +1,6 @@
+"property","title","description"
+"","URL della interfaccia utente del dispositivo","Configurazione dell'URL del dispositivo da utilizzare accanto all'URL dell'interfaccia utente principale"
+"dcmuiDeviceURLName","Nome URL dispositivo","Nome URL per il dispositivo configurato"
+"dcmuiDeviceURL","URL del dispositivo","URL di accesso del dispositivo. E.g. http(s)://<myDevice-host>:<myDevice-port> "
+"dcmuiDeviceURLDescription","Descrizione","Descrizione dell'URL del dispositivo"
+"dcmuiDeviceURLInstalled","Installato","Utilizza questo URL nell'interfaccia utente"

@@ -1,0 +1,8 @@
+"property","title","description"
+"","Elenco a discesa delle app Web","Elenco a discesa delle app Web"
+"dcmuiWebAppListName","Nome della lista","Definisci un nome per questa configurazione"
+"dcmuiWebAppListDescription","Descrizione","Descrizione dell'elenco di applicazioni Web"
+"dcmuiMode","Modalità elenco","Hai due possibilità su come mostrare l'elenco definito: 1.) In cima al resto dell'elenco 'separati' da una riga, 2.) Mostra solo quelli definiti hir ('esclusivi')."
+"dcmuiWebApps","WebApps","Applicazione Web"
+"dcmAcceptedUserRole","Ruolo utente accettato","Definisci i ruoli per i quali questa configurazione dovrebbe essere disponibile, usa 'user' per essere disponibile per tutti i ruoli (dovresti definire un nome utente (attributo seguente) o un ruolo utente (questo attributo))"
+"dcmAcceptedUserName","Nome utente accettato","Definisci il nome utente per il quale questa configurazione dovrebbe essere disponibile (dovresti definire un nome utente (questo attributo) o un ruolo utente (attributo precedente))"

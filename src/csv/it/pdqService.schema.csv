@@ -1,0 +1,8 @@
+"property","title","description"
+"","Servizio PDQ","Descrittore del servizio PDQ"
+"dcmPDQServiceID","ID servizio PDQ","ID servizio PDQ"
+"dcmURI","URI del servizio PDQ","URI del servizio PDQ, ad esempio ""pdq-dicom: FINDSCP""."
+"dicomDescription","Descrizione del servizio PDQ","Descrizione testuale non vincolata del servizio PDQ"
+"dcmTag","Attributi del paziente","Attributi paziente interrogati: se non specificato, verranno interrogati tutti gli attributi del paziente disponibili"
+"dcmEntity","Entità Query","Indica se viene richiesto al C-FIND SCP per un particolare paziente o per gli studi di un particolare paziente. Efficace solo per i servizi DICOM PDQ (URI: pdq-dicom: {AETitle})."
+"dcmProperty","Proprietà del servizio PDQ","Proprietà in formato <name>=<value>, ad es. ""LocalAET = DCM4CHEE"""

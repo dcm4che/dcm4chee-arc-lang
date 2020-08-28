@@ -1,0 +1,5 @@
+"property","title","description"
+"","Generatore di ID","Generatore di ID"
+"dcmIDGeneratorName","Nome del Generatore di ID","Nome del Generatore di ID."
+"dcmIDGeneratorFormat","Formato generatore di ID","Stringa di formato utilizzata da questo generatore di ID. %0<width>d verrà sostituito da un numero sequenziale con zeri iniziali in base alla larghezza specificata"
+"dcmIDGeneratorInitialValue","Valore iniziale del Generatore di ID","Valore iniziale per la sequenza utilizzata da questo generatore di ID."

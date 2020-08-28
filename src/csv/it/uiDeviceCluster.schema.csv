@@ -1,0 +1,8 @@
+"property","title","description"
+"","Configurazione cluster UI","Configurazione dell'URL del dispositivo da utilizzare accanto all'URL dell'interfaccia utente principale"
+"dcmuiDeviceClusterName","Nome","Nome Cluster"
+"dcmuiDeviceClusterDescription","Descrizione","Descrizione del cluster"
+"dcmuiDeviceClusterLoadBalancer","Bilanciamento del Carico","Seleziona il Load Balancer"
+"dcmuiDeviceClusterKeycloakServer","Server Keycloak ","Se questo cluster non utilizza lo stesso Keycloak, selezionare il Keycloak configurato"
+"dcmuiDeviceClusterDevices","Dispositivo","Aggiungi il nome dei dispositivi configurati"
+"dcmuiDeviceClusterInstalled","Installato","Utilizza questo URL nell'interfaccia utente"

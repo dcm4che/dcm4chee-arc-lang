@@ -1,0 +1,8 @@
+"property","title","description"
+"","Confronta Lato","Confronta Lato"
+"dcmuiCompareSideName","Nome","Nome del lato di Confronto"
+"dcmuiCompareSideDescription","Descrizione","Una breve descrizione di questo Gruppo"
+"dcmuiCompareSideCluster","Cluster","Seleziona un cluster"
+"dcmuiCompareSideElasticsearch","Elasticsearch","Seleziona un URL di Elasticsearch"
+"dcmuiCompareSideQueueName","Coda","Seleziona il QueueName da utilizzare per il confronto"
+"dcmuiCompareSideInstalled","Installato","Se true, questo lato di confronto è attivo nel dashboard"

@@ -1,0 +1,4 @@
+"property","title","description"
+"","Filtro metadati","Filtro attributi con nome per richieste di metadati WADO-RS."
+"dcmMetadataFilterName","Nome filtro metadati","Nome filtro metadati a cui fa riferimento il parametro di query proprietario ""includefields"" delle richieste di metadati WADO-RS."
+"dcmTag","Attributo Tag ","Tag DICOM come stringa esadecimale"
