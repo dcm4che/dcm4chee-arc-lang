@@ -1,0 +1,34 @@
+{
+  "title": "Configurazione della lingua dell'interfaccia utente",
+  "description": "Configurazione della lingua dell'interfaccia utente",
+  "type": "object",
+  "required": [
+    "dcmLanguages",
+    "dcmuiLanguageConfigName"
+  ],
+  "properties": {
+    "dcmuiLanguageConfigName": {
+      "title": "Nome configurazione lingua",
+      "description": "Nome della configurazione della lingua",
+      "type": "string"
+    },
+    "dcmLanguages":{
+      "title": "Lingue disponibili",
+      "description": "Imposta le lingue che dovrebbero essere disponibili nell'interfaccia utente (i file JSON di quelle lingue devono esistere nel codice, se non esistono apri un problema in GitHub)",
+      "type": "array",
+      "items":{
+        "type": "string"
+      },
+      "format": "dcmLanguageChooser"
+    },
+    "dcmuiLanguageProfileObjects": {
+      "title": "Profilo della lingua",
+      "description": "Profilo della lingua per nome utente, ruolo o tutti",
+      "titleKey":"{dcmuiLanguageProfileName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiLanguageProfile.schema.json"
+      }
+    }
+  }
+}

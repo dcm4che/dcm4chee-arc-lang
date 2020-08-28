@@ -1,0 +1,149 @@
+{
+  "title": "Configurazione dell'interfaccia utente",
+  "description": "Configurazione dell'interfaccia utente",
+  "type": "object",
+  "required": [
+    "dcmuiConfigName"
+  ],
+  "properties": {
+    "dcmuiConfigName": {
+      "title": "Nome configurazione interfaccia utente",
+      "description": "Nome configurazione interfaccia utente",
+      "type": "string"
+    },
+    "dcmuiModalities": {
+      "title": "Statistic Modalities",
+      "description": "Modalità preselezionate che dovrebbero essere visualizzate nella pagina Statistiche",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiLanguageConfig":{
+      "title": "Configurazione lingua",
+      "description": "Configura le lingue dell'interfaccia utente",
+      "titleKey":"{dcmuiLanguageConfigName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiLanguage.schema.json"
+      }
+    },
+    "dcmuiWidgetAets": {
+      "title": "Widget AETs",
+      "description": "Seleziona gli AET che non vuoi vedere nel widget AET, dove puoi selezionare in quale di essi l'AET appena aggiunto dovrebbe essere come `Titolo AE di chiamata accettato`",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiBackgroundURL": {
+      "title": "URL in background",
+      "description": "URL di sfondo per modificare lo sfondo dell'interfaccia utente, può essere un URL relativo o assoluto, l'immagine deve avere una larghezza di almeno 1024px ",
+      "type": "string"
+    },
+    "dcmuiLogoURL": {
+      "title": "URL logo",
+      "description": "URL del logo per cambiare il logo dell'interfaccia utente, può essere un URL relativo o assoluto, l'immagine dovrebbe avere la larghezza di 140px e dovrebbe essere in formato png con sfondo trasparente",
+      "type": "string"
+    },
+    "dcmuiDefaultWidgetAets": {
+      "title": "Default Widget AETs",
+      "description": "Seleziona gli AET che dovrebbero essere preselezionati su Widget AETs",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiAetConfig": {
+      "title": "Elenco a discesa AET",
+      "description": "Definisci quali AET devono essere visibili negli elenchi a discesa dell'interfaccia utente",
+      "titleKey":"{dcmuiAetListName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiAet.schema.json"
+      }
+    },
+    "dcmuiWebAppConfig": {
+      "title": "Elenco a discesa delle app Web",
+      "description": "Definisci quali WebApp devono essere visibili nella parte superiore dell'elenco a discesa nell'interfaccia utente",
+      "titleKey":"{dcmuiWebAppListName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiWebApp.schema.json"
+      }
+    },
+    "dcmuiPermission": {
+      "title": "Permission",
+      "description": "Permission",
+      "titleKey":"{dcmuiPermissionName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiPermission.schema.json"
+      }
+    },"dcmuiFilterTemplateObject": {
+      "title": "Modello di Filtro UI",
+      "description": "Modello di filtro Definito",
+      "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
+      "type": "array",
+      "items": {
+        "$ref": "uiFilterTemplate.schema.json"
+      }
+    },
+    "dcmuiDiffConfig": {
+      "title": "Configurazione confronto studio",
+      "description": "Configurazione confronto studio",
+      "titleKey":"{dcmuiDiffConfigName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiDiffConfig.schema.json"
+      }
+    },
+    "dcmuiDashboardConfig": {
+      "title": "Configurazione dashboard dell'interfaccia utente",
+      "description": "Configurazione dashboard dell'interfaccia utente",
+      "titleKey":"{dcmuiDashboardConfigName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiDashboard.schema.json"
+      }
+    },
+    "dcmuiStudyTableConfig": {
+      "title": "Configurazione della tabella di studio dell'interfaccia utente",
+      "description": "Configurazione della tabella",
+      "titleKey":"{dcmuiStudyTableConfigName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiTable.schema.json"
+      }
+    },
+    "dcmuiElasticsearchConfig": {
+      "title": "Configurazione Elasticsearch dell'interfaccia utente",
+      "description": "Configurazione di Elasticsearch per la versione pro",
+      "titleKey":"{dcmuiElasticsearchConfigName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiElasticsearch.schema.json"
+      }
+    },
+    "dcmuiDeviceURLObject": {
+      "title": "URL della interfaccia utente del dispositivo",
+      "description": "Altri URL del dispositivo dell'interfaccia utente",
+      "titleKey":"{dcmuiDeviceURLName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiDeviceURL.schema.json"
+      }
+    },
+    "dcmuiDeviceClusterObject": {
+      "title": "Configurazione cluster UI",
+      "description": "Dispositivi di gruppo in cluster",
+      "titleKey":"{dcmuiDeviceClusterName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiDeviceCluster.schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "title": "Regola ID controllo accesso all'archivio",
+  "description": "Regola ID controllo accesso all'archivio",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmStoreAccessControlID",
+    "dcmRulePriority"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Nome",
+      "description": "Nome arbitrario\/significativo della regola dell'ID di controllo dell'accesso allo storage",
+      "type": "string"
+    },
+    "dcmStoreAccessControlID": {
+      "title": "ID controllo accesso all'archivio",
+      "description": "ID controllo accesso assegnato agli studi i cui attributi soddisfano tutte le condizioni",
+      "type": "string"
+    },
+    "dcmRulePriority": {
+      "title": "Priorità delle regole",
+      "description": "Priorità della regola.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmProperty": {
+      "title": "Condizioni",
+      "description": "Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

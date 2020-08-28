@@ -1,0 +1,138 @@
+{
+  "title": "UPS su HL7",
+  "description": "Crea\/Aggiorna elemento di lavoro in una lista di lavoro unificata alla ricezione del messaggio HL7v2",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmUPSLabel",
+    "dcmUPSPriority",
+    "dcmUPSInputReadinessState",
+    "dcmURI"
+  ],
+  "properties": {
+    "hl7UPSOnHL7ID": {
+      "title": "UPS su ID HL7",
+      "description": "ID dell'UPS sulla regola HL7",
+      "type": "string"
+    },
+    "dcmProperty": {
+      "title": "Condizioni",
+      "description": "Condizioni in formato <SEG>-<Seq#>[.<Comp #> [.<SubComp #>]] [!]=<regEx>. Esempio: MSH-9=ORM\\^O01",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmProperty"
+    },
+    "dcmSchedule": {
+      "title": "Condizioni dei tempi",
+      "description": "Applica questa regola solo entro intervalli di tempo specificati.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSchedule"
+    },
+    "dcmUPSLabel": {
+      "title": "Etichetta del passo della procedura",
+      "description": "Valore dell'etichetta del passo della procedura (0074,1204) nell'UPS creato. {<SEG>- <Seq#> [.<Comp #> [.<SubComp #>]]} verrà sostituito dal valore di quel campo nel messaggio HL7 ricevuto.",
+      "type": "string"
+    },
+    "dcmUPSWorklistLabel": {
+      "title": "Etichetta lista di lavoro",
+      "description": "Valore dell'etichetta della lista di lavoro (0074,1202) nell'UPS creato. {<SEG>- <Seq#> [.<Comp #> [.<SubComp #>]]} verrà sostituito dal valore di quel campo nel messaggio HL7 ricevuto. Se assente o se il valore non è stato trovato nel messaggio HL7, verrà utilizzato il nome dell'applicazione HL7 dell'applicazione HL7 ricevente.",
+      "type": "string"
+    },
+    "dcmUPSPriority": {
+      "title": "Priorità",
+      "description": "Valore della priorità del passo della procedura pianificata (0074,1200) nell'UPS creato. Valori enumerati: HIGH, MEDIUM, LOW. Se assente, verrà applicato MEDIO.",
+      "type": "string",
+      "default": "MEDIO",
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "dcmUPSInputReadinessState": {
+      "title": "Stato di disponibilità di ingresso",
+      "description": "Valore dello stato di disponibilità dell'ingresso (0040,4041) nell'UPS creato",
+      "type": "string",
+      "default": "PRONTO",
+      "enum": [
+        "INCOMPLETE",
+        "UNAVAILABLE",
+        "READY"
+      ]
+    },
+    "dcmUPSStartDateTimeDelay": {
+      "title": "Ritardo nell'Ora di inizio dello Scheduled Procedure Step",
+      "description": "Ritardo del Scheduled Procedure Step Start DateTime (0040,4005) nell'UPS creato dall'ora di ricezione nel formato PnDTnHnMn.nS. Efficace solo se nel messaggio HL7 non viene trovata alcuna data di inizio del passo della procedura pianificata (Scheduled Procedure Step Start DateTime).",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmUPSCompletionDateTimeDelay": {
+      "title": "Ritardo previsto per data e ora di completamento",
+      "description": "Ritardo della data di completamento prevista (0040,4011) nell'UPS creato dall'ora di ricezione nel formato PnDTnHnMn.nS. Se assente, non verrà impostata alcuna data e ora di completamento prevista.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmUPSInstanceUIDBasedOnName": {
+      "title": "Instance UID UPS basato sul nome",
+      "description": "Valore utilizzato per generare l'UID dell'istanza SOP basato sul nome (0008,0018) nell'UPS creato. {<SEG>- <Seq#> [.<Comp #> [.<SubComp #>]]} verrà sostituito dal valore di quel campo nel messaggio HL7 ricevuto. Se assente, verrà utilizzato un SOP Instance UID generato casualmente (0008,0018).",
+      "type": "string"
+    },
+    "dcmDestinationAE": {
+      "title": "AE di Destinazione ",
+      "description": "Titolo di un'entità dell'applicazione DICOM in cui verranno archiviate le istanze.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmUPSScheduledWorkitemCode": {
+      "title": "Codice dell'elemento di lavoro pianificato",
+      "description": "Elemento della sequenza codice elemento lavoro programmato (0040,4018) nell'UPS creato in formato (CV, CSD, \"CM\").",
+      "type": "string"
+    },
+    "dcmUPSScheduledStationNameCode": {
+      "title": "Codice nome stazione pianificata",
+      "description": "Elemento della sequenza codice nome stazione pianificata (0040,4025) nell'UPS creato in formato (CV, CSD, \"CM\").",
+      "type": "string"
+    },
+    "dcmUPSScheduledStationClassCode": {
+      "title": "Codice classe stazione pianificata",
+      "description": "Elemento della sequenza codice classe stazione pianificata (0040,4026) nell'UPS creato in formato (CV, CSD, \"CM\").",
+      "type": "string"
+    },
+    "dcmUPSScheduledStationLocationCode": {
+      "title": "Codice di posizione geografica della stazione pianificata",
+      "description": "Elemento della sequenza del codice di posizione geografica della stazione pianificata (0040,4027) nell'UPS creato in formato (CV, CSD, \"CM\").",
+      "type": "string"
+    },
+    "dcmUPSScheduledHumanPerformerCode": {
+      "title": "Codice pianificato di esecuzione umana ",
+      "description": "Elemento della sequenza del codice degli esecutori umani (0040,4009) nell'elemento della sequenza degli esecutori umani pianificati (0040,4034) nell'UPS creato in formato (CV, CSD, \"CM\").",
+      "type": "string"
+    },
+    "dcmUPSScheduledHumanPerformerName": {
+      "title": "Nome dell'attore umano pianificato",
+      "description": "Valore del nome dell'attore umano (0040,4037) nell'elemento della sequenza pianificata di interpreti umani (0040,4034) nell'UPS creato. {<SEG>- <Seq#> [.<Comp #> [.<SubComp #>]]} verrà sostituito dal valore di quel campo nel messaggio HL7 ricevuto.",
+      "type": "string"
+    },
+    "dcmUPSScheduledHumanPerformerOrganization": {
+      "title": "Organizzazione pianificata di interpreti umani",
+      "description": "Valore dell'organizzazione dell'esecutore umano (0040,4036) nell'elemento della sequenza degli interpreti umani pianificata (0040,4034) nell'UPS creato. {<SEG>- <Seq#> [.<Comp #> [.<SubComp #>]]} verrà sostituito dal valore di quel campo nel messaggio HL7 ricevuto.",
+      "type": "string"
+    },
+    "dcmRequestingService": {
+      "title": "Servizio richiedente",
+      "description": "Valore della richiesta di servizio (0032,1033) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {<SEG>- <Seq#> [.<Comp #> [.<SubComp #>]]} verrà sostituito dal valore di quel campo nel messaggio HL7 ricevuto.",
+      "type": "string"
+    },
+    "dcmURI": {
+      "title": "URI del foglio di stile XSL",
+      "description": "Specifica l'URI del foglio di stile XSL per transcodificare il messaggio HL7 ricevuto per includere gli attributi nell'UPS creato.",
+      "type": "string",
+      "default": "${jboss.server.temp.url}\/dcm4chee-arc\/hl7-order2ups.xsl"
+    }
+  }
+}

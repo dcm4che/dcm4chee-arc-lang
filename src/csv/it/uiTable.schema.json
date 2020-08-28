@@ -1,0 +1,40 @@
+{
+  "title": "Configurazione della tabella di studio dell'interfaccia utente",
+  "description": "Configurazione Study Table per la versione pro",
+  "type": "object",
+  "required": [
+    "dcmuiStudyTableConfigName"
+  ],
+  "properties": {
+    "dcmuiStudyTableConfigName": {
+      "title": "Nome di configurazione",
+      "description": "Nome configurazione tabella studio interfaccia utente",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigUsername": {
+      "title": "Nome utente",
+      "description": "Nome utente a cui dovrebbe essere disponibile questo set",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigRoles": {
+      "title": "Ruolo",
+      "description": "Ruolo del nome utente che può utilizzare questo set (se imposti il nome utente, il ruolo verrà ignorato)",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigIsDefault": {
+      "title": "È predefinito",
+      "description": "Imposta questo set di colonne su quello predefinito. (Assicurati che solo uno dei Set - fratelli sia impostato come predefinito).",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiStudyTableColumnConfigObjects": {
+      "title": "Colonne della tabella dello studio",
+      "description": "Definire le colonne della tabella di studio",
+      "titleKey":"{dcmuiColumnName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiTableColumns.schema.json"
+      }
+    }
+  }
+}

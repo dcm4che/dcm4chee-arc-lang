@@ -1,0 +1,45 @@
+{
+  "title": "Configurazione dell'URL dell'interfaccia utente di Elasticsearch ",
+  "description": "URL dell'interfaccia utente di Elasticsearch",
+  "type": "object",
+  "required": [
+    "dcmuiElasticsearchURLName",
+    "dcmuiElasticsearchURL",
+    "dcmuiElasticsearchIsDefault",
+    "dcmuiElasticsearchInstalled"
+  ],
+  "properties": {
+    "dcmuiElasticsearchURLName": {
+      "title": "Nome URL Elasticsearch",
+      "description": "URL dell'interfaccia utente di Elasticsearch",
+      "type": "string"
+    },
+    "dcmuiElasticsearchURL": {
+      "title": "URL dell'interfaccia utente di Elasticsearch",
+      "description": "URL di accesso di Elasticsearch. Ad esempio: http(s):\/\/<elasticsearch-host>:<elasticsearch-port> ",
+      "type": "string"
+    },
+    "dcmuiElasticsearchURLKeycloakServer": {
+      "title": "Server Keycloak ",
+      "description": "Seleziona Keycloak Server da cui ottenere il token portatore per accedere a Elasticsearch",
+      "type":  "string",
+      "format": "dcmKeycloakServer"
+    },"dcmuiAuditEnterpriseSiteID": {
+      "title": "Audit Enterprise SiteID",
+      "description": "Imposta Audit Enterprise SiteID che dovrebbe essere usato nelle query Elasticsearch",
+      "type": "string"
+    },
+    "dcmuiElasticsearchIsDefault": {
+      "title": "È predefinito",
+      "description": "Imposta questo URL su quello predefinito. (Assicurati che solo uno dei Set - fratelli sia impostato come predefinito).",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiElasticsearchInstalled": {
+      "title": "Installato",
+      "description": "Utilizza questo URL nell'interfaccia utente",
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

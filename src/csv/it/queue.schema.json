@@ -1,0 +1,115 @@
+{
+  "title": "Coda",
+  "description": "Coda JMS gestita",
+  "type": "object",
+  "required": [
+    "dcmQueueName",
+    "dcmJndiName",
+    "dcmRetryDelay",
+    "dcmRetryOnWarning",
+    "dcmRetryInProcessOnStartup",
+    "dcmRetryDelayMultiplier",
+    "dcmMaxRetries",
+    "dcmMaxQueueSize"
+  ],
+  "properties": {
+    "dcmQueueName": {
+      "title": "Nome coda",
+      "description": "Nome coda JMS",
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiQueueName[*]",
+        "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiCompareSideObjects[*].dcmuiCompareSideQueueName"
+      ]
+    },
+    "dcmJndiName": {
+      "title": "JNDI Name",
+      "description": "JNDI Name",
+      "type": "string"
+    },
+    "dicomDescription": {
+      "title": "Descrizione DICOM",
+      "description": "Descrizione testuale dell'entità DICOM",
+      "type": "string"
+    },
+    "dcmMaxRetries": {
+      "title": "Numero massimo di tentativi",
+      "description": "Numero massimo di tentativi per elaborare le attività pianificate in una coda specifica.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmRetryDelay": {
+      "title": "Intervallo tra i tentativi:",
+      "description": "Ritardo per riprovare a elaborare le attività pianificate in una coda specifica nel formato di durata ISO-8601 PnDTnHnMn.nS.",
+      "type": "string",
+      "default": "PT1M",
+      "format": "dcmDuration"
+    },
+    "dcmMaxRetryDelay": {
+      "title": "Maximum Retry Delay",
+      "description": "Ritardo per riprovare a elaborare le attività pianificate in una coda specifica nel formato di durata ISO-8601 PnDTnHnMn.nS. Infinito se assente.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmRetryDelayMultiplier": {
+      "title": "Moltiplicatore ritardo di riprova",
+      "description": "Moltiplicatore in % che avrà effetto su dcmRetryDelay con dcmMaxRetryDelay da prendere in considerazione.",
+      "type": "integer",
+      "minimum": 100,
+      "default": 100
+    },
+    "dcmRetryOnWarning": {
+      "title": "Riprova con avviso",
+      "description": "Consente i nuovi tentativi per elaborare le attività non solo in caso di errore ma anche in caso di stato di risultato di avviso in una coda specifica.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmRetryInProcessOnStartup": {
+      "title": "Riprova IN PROCESS all'avvio",
+      "description": "Indica di ritentare le attività lasciate nello stato IN PROCESS all'avvio del sistema.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmPurgeQueueMessageCompletedDelay": {
+      "title": "Ritardo per l'eliminazione dei messaggi completati dalla coda",
+      "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMn.nS dopo il quale i messaggi completati vengono eliminati dalla coda. Se assente, non c'è cancellazione per quella coda particolare",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmPurgeQueueMessageFailedDelay": {
+      "title": "Ritardo per l'eliminazione dei messaggi falliti in coda",
+      "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMn.nS dopo il quale i messaggi falliti vengono eliminati dalla coda. Se assente, non c'è cancellazione per quella coda particolare",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmPurgeQueueMessageWarningDelay": {
+      "title": "Ritardo per l'eliminazione dei messaggi della coda di avviso",
+      "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMn.nS dopo il quale i messaggi di avviso vengono eliminati dalla coda. Se assente, non c'è cancellazione per quella coda particolare",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmPurgeQueueMessageCanceledDelay": {
+      "title": "Ritardo per l'eliminazione dei messaggi annullati in coda ",
+      "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMn.nS dopo il quale i messaggi di annullamento vengono eliminati dalla coda. Se assente, non c'è cancellazione per quella coda particolare",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmMaxQueueSize": {
+      "title": "Maximum Queue Size",
+      "description": "Numero massimo di attività pianificate nella coda. Se il numero di attività pianificate raggiunge il limite, il tentativo di pianificare altre attività fallirà. 0 = nessuna limitazione.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "dcmSchedule": {
+      "title": "Limita pianificazione",
+      "description": "Limita la pianificazione a intervalli di tempo specificati. Utilizzare la dimensione massima della coda per controllare il numero massimo di attività elaborate tra intervalli di tempo specificati. Efficace solo per la pianificazione delle attività di recupero.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSchedule"
+    }
+  }
+}

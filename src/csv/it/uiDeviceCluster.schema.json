@@ -1,0 +1,47 @@
+{
+  "title": "Configurazione cluster UI",
+  "description": "Configurazione dell'URL del dispositivo da utilizzare accanto all'URL dell'interfaccia utente principale",
+  "type": "object",
+  "required": [
+    "dcmuiDeviceClusterName",
+    "dcmuiDeviceClusterDevices",
+    "dcmuiDeviceClusterInstalled"
+  ],
+  "properties": {
+    "dcmuiDeviceClusterName": {
+      "title": "Nome",
+      "description": "Nome Cluster",
+      "type": "string"
+    },
+    "dcmuiDeviceClusterDescription": {
+      "title": "Descrizione",
+      "description": "Descrizione del cluster",
+      "type": "string"
+    },
+    "dcmuiDeviceClusterLoadBalancer": {
+      "title": "Bilanciamento del Carico",
+      "description": "Seleziona il Load Balancer",
+      "type": "string",
+      "format": "dcmuiDeviceURLObject"
+    },
+    "dcmuiDeviceClusterKeycloakServer": {
+      "title": "Server Keycloak ",
+      "description": "Se questo cluster non utilizza lo stesso Keycloak, selezionare il Keycloak configurato",
+      "type":  "string",
+      "format": "dcmKeycloakServer"
+    },
+    "dcmuiDeviceClusterDevices": {
+      "title": "Dispositivo",
+      "description": "Aggiungi il nome dei dispositivi configurati",
+      "type": "array",
+      "items": { "type": "string" },
+      "format": "dcmuiDeviceURLObject"
+    },
+    "dcmuiDeviceClusterInstalled": {
+      "title": "Installato",
+      "description": "Utilizza questo URL nell'interfaccia utente",
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
