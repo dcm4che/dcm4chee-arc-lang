@@ -124,11 +124,17 @@
     },
     "dcmUPSRescheduleDiscontinuationReasonCode": {
       "title": "Reschedule Discontinuation Reason Code",
-      "description": "Specifies Discontinuation Reason Code in format (CV, CSD, \"CM\") to reschedule the canceled UPS. If absent, UPS canceled with any Discontinuation Reason Code with be rescheduled according specified Maximum Number of Rescheduling.",
+      "description": "Specifies Discontinuation Reason Code in format (CV, CSD, \"CM\") to reschedule the canceled UPS. If absent, UPS canceled with any Discontinuation Reason Code will be rescheduled according specified Maximum Number of Rescheduling.",
       "type": "array",
       "items": {
         "type": "string"
       }
+    },
+    "dcmUPSTemplateID": {
+      "title": "Create UPS on Cancel",
+      "description": "Specifies ID of UPS Template for creating an UPS if the processing failed and no retry is scheduled. If absent, no UPS will be created on failures.",
+      "type": "string",
+      "format": "dcmUPSTemplateID"
     },
     "dcmMaxRetries": {
       "title": "Maximum Number of Rescheduling",
