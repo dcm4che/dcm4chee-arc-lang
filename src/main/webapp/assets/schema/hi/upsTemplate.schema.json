@@ -13,7 +13,10 @@
     "dcmUPSTemplateID": {
       "title": "यू.पी.एस. (UPS) फर्मा का आई.डी. (ID)",
       "description": "यू.पी.एस. (UPS) फर्मा का आई.डी. (ID)",
-      "type": "string"
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmUPSProcessingRule.dcmUPSTemplateID"
+      ]
     },
     "dicomDescription": {
       "title": "यू.पी.एस. (UPS) फर्मा का वर्णन",

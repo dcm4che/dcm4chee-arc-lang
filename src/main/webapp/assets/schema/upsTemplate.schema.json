@@ -13,7 +13,10 @@
     "dcmUPSTemplateID": {
       "title": "UPS Template ID",
       "description": "ID of UPS Template",
-      "type": "string"
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmUPSProcessingRule.dcmUPSTemplateID"
+      ]
     },
     "dicomDescription": {
       "title": "UPS Template Description",
