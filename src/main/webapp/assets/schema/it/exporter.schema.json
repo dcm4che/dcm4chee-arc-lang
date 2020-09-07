@@ -21,9 +21,13 @@
         "$.dcmDevice.dcmArchiveDevice.dcmExportPriorsRule[*].dcmExporterID[*]",
         "$.dcmDevice.dcmArchiveDevice.dcmExportRule[*].dcmExporterID[*]",
         "$.dcmDevice.dcmArchiveDevice.hl7ExportRule[*].dcmExporterID[*]",
+        "$.dcmDevice.dcmArchiveDevice.dcmStudyRetentionPolicy[*].dcmExporterID",
+        "$.dcmDevice.dcmArchiveDevice.hl7StudyRetentionPolicy[*].dcmExporterID",
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmExportPriorsRule[*].dcmExporterID[*]",
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmExportRule[*].dcmExporterID[*]",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmStudyRetentionPolicy[*].dcmExporterID",
         "$.dcmDevice.hl7Application[*].dcmArchiveHL7Application.hl7ExportRule[*].dcmExporterID[*]",
+        "$.dcmDevice.hl7Application[*].dcmArchiveHL7Application.hl7StudyRetentionPolicy[*].dcmExporterID",
         "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiExportName[*]"
       ]
     },

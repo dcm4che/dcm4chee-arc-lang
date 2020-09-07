@@ -11,7 +11,13 @@
     "dcmWebAppName": {
       "title": "Nome dell'applicazione web",
       "description": "Nome dell'applicazione Web",
-      "type": "string"
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmRSForwardRule[*].dcmWebAppName",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmRSForwardRule[*].dcmWebAppName",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackWadoURIWebAppName",
+        "$.dcmDevice.dcmArchiveDevice.dcmFallbackWadoURIWebAppName"
+      ]
     },
     "dicomNetworkConnectionReference": {
       "title": "Connessione\/i di rete dell'applicazione web",
