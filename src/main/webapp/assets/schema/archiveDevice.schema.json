@@ -595,13 +595,13 @@
     },
     "dcmRetrieveTaskWarningOnNoMatch": {
       "title": "Retrieve Task Warning on no Match",
-      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. May be overwritten by configured values for particular Archive HL7 Application.\",",
+      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmRetrieveTaskWarningOnWarnings": {
       "title": "Retrieve Task Warning on Warnings",
-      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. May be overwritten by configured values for particular Archive HL7 Application.\",",
+      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
@@ -1498,7 +1498,7 @@
     },
     "hl7ImportReportMissingStudyIUIDPolicy": {
       "title": "HL7 Import Report Missing Study Instance UID Policy",
-      "description": "Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application.\",",
+      "description": "Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string",
       "default": "GENERATE",
       "enum": [
