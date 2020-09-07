@@ -10,7 +10,10 @@
     "dcmBulkDataDescriptorID": {
       "title": "ID descrittore dati in blocco",
       "description": "ID descrittore dati in blocco",
-      "type": "string"
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmBulkDataDescriptorID"
+      ]
     },
     "dcmBulkDataExcludeDefaults": {
       "title": "Escludi impostazioni predefinite",

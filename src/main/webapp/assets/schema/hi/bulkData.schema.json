@@ -10,7 +10,10 @@
     "dcmBulkDataDescriptorID": {
       "title": "अधिकांश डेटा वर्णनकर्ता की आई.डी. (ID)",
       "description": "अधिकांश डेटा वर्णनकर्ता की आई.डी. (ID) ।",
-      "type": "string"
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmBulkDataDescriptorID"
+      ]
     },
     "dcmBulkDataExcludeDefaults": {
       "title": "डिफॉल्ट्स निकाले",

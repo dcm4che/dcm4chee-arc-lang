@@ -10,7 +10,10 @@
     "dcmBulkDataDescriptorID": {
       "title": "Bulk Data Descriptor ID",
       "description": "Bulk Data Descriptor ID",
-      "type": "string"
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmBulkDataDescriptorID"
+      ]
     },
     "dcmBulkDataExcludeDefaults": {
       "title": "Exclude Defaults",
