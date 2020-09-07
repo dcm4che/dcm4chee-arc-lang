@@ -18,6 +18,7 @@
 "dcmUPSPerformedStationNameCode","Codice nome stazione eseguito","Elemento della sequenza di codice nome stazione eseguita (0040,4028) nell'UPS elaborato in formato (CV, CSD, ""CM"")."
 "dcmUPSIgnoreDiscontinuationReasonCode","Ignora codice motivo interruzione","Specifica il codice motivo dell'interruzione nel formato (CV, CSD, ""CM"") da ignorare e modificare lo stato dell'UPS in COMPLETED, anziché in CANCELED."
 "dcmUPSRescheduleDiscontinuationReasonCode","Riprogramma codice motivo di interruzione","Specifica il codice motivo interruzione nel formato (CV, CSD, ""CM"") per riprogrammare l'UPS annullato. Se assente, UPS annullato con qualsiasi codice motivo interruzione verrà riprogrammato in base al numero massimo di riprogrammazioni specificato."
+"dcmUPSTemplateID","Create UPS on Cancel","Specifies ID of UPS Template for creating an UPS if the processing failed and retry is not scheduled any more. If absent, no UPS will be created on failures."
 "dcmMaxRetries","Numero massimo di riprogrammazioni","Il numero massimo di un elemento di lavoro la cui elaborazione non è riuscita viene riprogrammata."
 "dcmRetryDelay","Ritardo di Riprogrammazione","Ritardo per riprogrammare un elemento di lavoro la cui elaborazione non è riuscita nel formato di durata ISO-8601 PnDTnHnMn.nS."
 "dcmMaxRetryDelay","Ritardo massimo di riprogrammazione","Ritardo per riprogrammare un elemento di lavoro la cui elaborazione non è riuscita nel formato di durata ISO-8601 PnDTnHnMn.nS. Infinito se assente."
