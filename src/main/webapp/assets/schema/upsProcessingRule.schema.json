@@ -116,7 +116,7 @@
     },
     "dcmUPSIgnoreDiscontinuationReasonCode": {
       "title": "Ignore Discontinuation Reason Code",
-      "description": "Specifies Discontinuation Reason Code in format (CV, CSD, \"CM\") to ignore and change UPS State to COMPLETED - instead to CANCELED.",
+      "description": "Specifies Discontinuation Reason Code in format (CV, CSD, \"CM\") to ignore and change UPS State to COMPLETED - instead of CANCELED.",
       "type": "array",
       "items": {
         "type": "string"
