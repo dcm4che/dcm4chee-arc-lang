@@ -22,7 +22,7 @@
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmSeriesMetadataStorageID[*]",
         "$.dcmDevice.dcmArchiveDevice.dcmStorageVerificationStorageID[*]",
-        "$.dcmDevice.dcmArchiveDevice.dcmStorage[*].dcmExportStorageID",
+        "$.dcmDevice.dcmArchiveDevice.dcmStorage[*].dcmExportStorageID[*]",
         "$.dcmDevice.dcmArchiveDevice.dcmStorage[*].dcmRetrieveCacheStorageID",
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmObjectStorageID[*]",
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmMetadataStorageID[*]",
@@ -166,7 +166,10 @@
     "dcmExportStorageID": {
       "title": "निर्यात स्टोरेज आई.डी. (ID)",
       "description": "स्टडीज का विलोपन स्टोरेज सिस्टम से निरोध करता है, कॉन्फ़िगर्ड डिलीटर सीमा के साथ और/या विलोपन धारण कालावधि निरोध, जिन स्टडीज के दृष्टांत अन्य निर्दिष्ट स्टोरेज सिस्टम्स से भी उपलब्ध है ।",
-      "type": "string",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
       "format": "dcmStorageID"
     },
     "dcmRetrieveCacheStorageID": {

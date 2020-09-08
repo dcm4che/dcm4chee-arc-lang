@@ -22,7 +22,7 @@
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmSeriesMetadataStorageID[*]",
         "$.dcmDevice.dcmArchiveDevice.dcmStorageVerificationStorageID[*]",
-        "$.dcmDevice.dcmArchiveDevice.dcmStorage[*].dcmExportStorageID",
+        "$.dcmDevice.dcmArchiveDevice.dcmStorage[*].dcmExportStorageID[*]",
         "$.dcmDevice.dcmArchiveDevice.dcmStorage[*].dcmRetrieveCacheStorageID",
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmObjectStorageID[*]",
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmMetadataStorageID[*]",
@@ -166,7 +166,10 @@
     "dcmExportStorageID": {
       "title": "Export Storage ID",
       "description": "Limita l'eliminazione degli studi, oltre alle soglie di cancellazione configurate e\/o ai vincoli del periodo di conservazione dell'eliminazione, dal sistema di archiviazione agli studi i cui oggetti sono accessibili anche dall'altro archivio specificato.",
-      "type": "string",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
       "format": "dcmStorageID"
     },
     "dcmRetrieveCacheStorageID": {
