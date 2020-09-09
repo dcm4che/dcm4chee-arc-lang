@@ -101,13 +101,9 @@
     },
     "dcmUPSIncludePatient": {
       "title": "UPS Include Patient",
-      "description": "Indicates if patient (associated with created UPS) shall be created using patient attributes in received objects or not. Enumerated Values: NO (= create a dummy patient), YES (= create patient from patient attributes in received objects). If absent, YES will be applied.",
-      "type": "string",
-      "default": "YES",
-      "enum": [
-        "NO",
-        "YES"
-      ]
+      "description": "Indicates if patient (associated with created UPS) is created using patient attributes in received object; true if absent.",
+      "type": "boolean",
+      "default": true
     },
     "dcmDestinationAE": {
       "title": "Destination AE",
