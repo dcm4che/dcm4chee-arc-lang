@@ -9,6 +9,7 @@
     "dcmUPSInputReadinessState",
     "dcmUPSIncludeStudyInstanceUID",
     "dcmUPSIncludeInputInformation",
+    "dcmUPSIncludePatient",
     "dcmUPSIncludeReferencedRequest",
     "dcmNoKeywords"
   ],
@@ -96,6 +97,16 @@
         "APPEND",
         "SINGLE_OR_CREATE",
         "APPEND_OR_CREATE"
+      ]
+    },
+    "dcmUPSIncludePatient": {
+      "title": "UPS Include Patient",
+      "description": "Indicates if patient (associated with created UPS) shall be created using patient attributes in received objects or not. Enumerated Values: NO (= create a dummy patient), YES (= create patient from patient attributes in received objects). If absent, YES will be applied.",
+      "type": "string",
+      "default": "YES",
+      "enum": [
+        "NO",
+        "YES"
       ]
     },
     "dcmDestinationAE": {

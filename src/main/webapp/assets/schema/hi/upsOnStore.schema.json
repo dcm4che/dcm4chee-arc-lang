@@ -9,6 +9,7 @@
     "dcmUPSInputReadinessState",
     "dcmUPSIncludeStudyInstanceUID",
     "dcmUPSIncludeInputInformation",
+    "dcmUPSIncludePatient",
     "dcmUPSIncludeReferencedRequest",
     "dcmNoKeywords"
   ],
@@ -96,6 +97,16 @@
         "APPEND",
         "SINGLE_OR_CREATE",
         "APPEND_OR_CREATE"
+      ]
+    },
+    "dcmUPSIncludePatient": {
+      "title": "यू.पी.एस. (UPS) में मरीज़ की जानकारी समावेश करें",
+      "description": "सूचित करता है की, मरीज़ रेकॉर्ड (निर्माण किए गए यू.पी.एस. (UPS) से संदर्भित) के निर्माण में प्राप्र्त हुए दृष्टांतों के मरीज़ से संदर्भित विशेषताओं का इस्तमाल होगा या नहीं । प्रगणित मूल्य: NO (= डमी मरीज़ रेकॉर्ड निर्माण करें), YES (= प्राप्र्त हुए दृष्टांतों के मरीज़ से संदर्भित विशेषताओं का इस्तमाल कर मरीज़ रेकॉर्ड निर्माण करें) । अनुपस्थित हो तो, 'YES' लागू होगा ।",
+      "type": "string",
+      "default": "YES",
+      "enum": [
+        "NO",
+        "YES"
       ]
     },
     "dcmDestinationAE": {
