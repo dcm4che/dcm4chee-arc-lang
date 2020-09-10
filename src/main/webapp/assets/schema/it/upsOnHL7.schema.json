@@ -7,6 +7,8 @@
     "dcmUPSLabel",
     "dcmUPSPriority",
     "dcmUPSInputReadinessState",
+    "dcmUPSIncludeStudyInstanceUID",
+    "dcmUPSIncludeReferencedRequest",
     "dcmURI"
   ],
   "properties": {
@@ -121,6 +123,58 @@
     "dcmUPSScheduledHumanPerformerOrganization": {
       "title": "Organizzazione pianificata di interpreti umani",
       "description": "Valore dell'organizzazione dell'esecutore umano (0040,4036) nell'elemento della sequenza degli interpreti umani pianificata (0040,4034) nell'UPS creato. {<SEG>- <Seq#> [.<Comp #> [.<SubComp #>]]} verrà sostituito dal valore di quel campo nel messaggio HL7 ricevuto.",
+      "type": "string"
+    },
+    "dcmUPSIncludeStudyInstanceUID": {
+      "title": "Include Study Instance UID",
+      "description": "Indicates if Study Instance UID (0020,000D) in the received HL7 message shall be included in the created UPS",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmUPSIncludeReferencedRequest": {
+      "title": "Include Referenced Request",
+      "description": "Indicates if the Study Instance UID (0020,000D) in the received HL7 message and the specified Accession Number (0008,0050), Requested Procedure ID (0040,1001) and Requesting Service (0032,1033) shall be included in the item of the Referenced Request Sequence (0040,A370) in the created UPS. Otherwise an empty Referenced Request Sequence (0040,A370) is included.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmStudyInstanceUID": {
+      "title": "Study Instance UID",
+      "description": "Value of Study Instance UID (0020,000D) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "type": "string"
+    },
+    "dcmAdmissionID": {
+      "title": "Admission Number",
+      "description": "Value of Admission ID (0038,0010) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "type": "string"
+    },
+    "dicomIssuerOfAdmissionID": {
+      "title": "Issuer of Admission ID",
+      "description": "Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "type": "string"
+    },
+    "dcmAccessionNumber": {
+      "title": "Accession Number",
+      "description": "Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "type": "string"
+    },
+    "dicomIssuerOfAccessionNumber": {
+      "title": "Issuer of Accession Number",
+      "description": "Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) in Item of Issuer of Accession Number Sequence (0008,0051) in Item of Referenced Request Sequence (0040,A370) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "type": "string"
+    },
+    "dcmRequestedProcedureID": {
+      "title": "Requested Procedure ID",
+      "description": "Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "type": "string"
+    },
+    "dcmRequestedProcedureDescription": {
+      "title": "Requested Procedure Description",
+      "description": "Value of Requested Procedure Description (0032,1060) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "type": "string"
+    },
+    "dcmRequestingPhysician": {
+      "title": "Requesting Physician",
+      "description": "Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
       "type": "string"
     },
     "dcmRequestingService": {
