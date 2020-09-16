@@ -18,7 +18,7 @@
       "title": "Nome dell'applicazione web",
       "description": "Nome dell'applicazione Web",
       "type": "string",
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmTLSAllowAnyHostname": {
       "title": "TLS Consente qualsiasi nome host",

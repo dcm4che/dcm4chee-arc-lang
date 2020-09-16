@@ -13,8 +13,6 @@
       "description": "Name of the Web Application",
       "type": "string",
       "use": [
-        "$.dcmDevice.dcmArchiveDevice.dcmRSForwardRule[*].dcmWebAppName",
-        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmRSForwardRule[*].dcmWebAppName",
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackWadoURIWebAppName",
         "$.dcmDevice.dcmArchiveDevice.dcmFallbackWadoURIWebAppName"
       ]
