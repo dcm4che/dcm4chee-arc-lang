@@ -132,9 +132,8 @@
     },
     "dcmUPSTemplateID": {
       "title": "Create UPS on Cancel",
-      "description": "Specifies ID of UPS Template for creating an UPS if the processing failed and retry is not scheduled any more. If absent, no UPS will be created on failures.",
-      "type": "string",
-      "format": "dcmUPSTemplateID"
+      "description": "Specifies UPS Template Workitem Instance UID for creating an UPS if the processing failed and retry is not scheduled any more. If absent, no UPS will be created on failures.",
+      "type": "string"
     },
     "dcmMaxRetries": {
       "title": "Maximum Number of Rescheduling",
