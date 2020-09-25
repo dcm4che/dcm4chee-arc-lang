@@ -1795,15 +1795,6 @@
         "$ref": "upsOnUPSCompleted.schema.json"
       }
     },
-    "dcmUPSTemplate": {
-      "title": "UPS Templates",
-      "description": "UPS Templates.",
-      "type": "array",
-      "titleKey": "{dcmUPSTemplateID}",
-      "items": {
-        "$ref": "upsTemplate.schema.json"
-      }
-    },
     "dcmUPSProcessingRule": {
       "title": "UPS Processing Rules",
       "description": "UPS Processing Rules.",

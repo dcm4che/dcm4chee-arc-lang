@@ -1795,15 +1795,6 @@
         "$ref": "upsOnUPSCompleted.schema.json"
       }
     },
-    "dcmUPSTemplate": {
-      "title": "Modelli UPS",
-      "description": "Modelli UPS.",
-      "type": "array",
-      "titleKey": "{dcmUPSTemplateID}",
-      "items": {
-        "$ref": "upsTemplate.schema.json"
-      }
-    },
     "dcmUPSProcessingRule": {
       "title": "Regole di elaborazione UPS",
       "description": "Regole di elaborazione UPS.",
