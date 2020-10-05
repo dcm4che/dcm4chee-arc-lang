@@ -46,9 +46,9 @@
 
   <distributionManagement>
     <repository>
-      <id>www.dcm4che.org</id>
-      <name>dcm4che Repository</name>
-      <url>scp://www.dcm4che.org/home/maven2</url>
+      <id>test-ng.lan.j4care.com</id>
+      <name>J4Care Maven Repository</name>
+      <url>scp://test-ng.lan.j4care.com/home/j4care/maven2</url>
     </repository>
   </distributionManagement>
 
@@ -65,6 +65,7 @@
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.0</version>
         <configuration>
+          <classifier>pro</classifier>
           <failOnMissingWebXml>false</failOnMissingWebXml>
         </configuration>
       </plugin>
