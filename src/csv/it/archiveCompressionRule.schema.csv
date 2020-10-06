@@ -3,6 +3,6 @@
 "cn","Nome","Nome arbitrario/significativo della regola di compressione dell'archivio"
 "dicomTransferSyntax","UID della Sintassi di trasferimento DICOM","Un UID della sintassi di trasferimento"
 "dcmRulePriority","Priorità delle regole","Priorità delle regole"
-"dcmProperty","Condizioni","Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}"
+"dcmProperty","Condizioni","Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER"
 "dcmImageWriteParam","Parametri di scrittura immagine","Parametri di scrittura immagine (nome=valore) impostati su Image Writer prima della compressione"
 "dcmCompressionDelay","Ritardo di compressione","Ritardo di compressione nel formato di durata ISO-8601 PnDTnHnMn.nS. Comprimi in ricezione se assente."

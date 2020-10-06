@@ -19,7 +19,7 @@
     },
     "dcmProperty": {
       "title": "Condizioni",
-      "description": "Condizioni in formato <SEG>-<Seq#>[.<Comp #> [.<SubComp #>]] [!]=<regEx>. Esempio: MSH-9=ORM\\^O01",
+      "description": "Condizioni in formato <SEG>-<Seq#>[.<Comp #> [.<SubComp #>]] [!]=<regEx>. Esempio: MSH-4=FORWARD o MSH-9=ORM\\^O01 o PID-3[.3]=MEE4 o PID-3[.3[.2]]=ISO",
       "type": "array",
       "items": {
         "type": "string"

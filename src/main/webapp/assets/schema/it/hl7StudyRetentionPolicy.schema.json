@@ -44,7 +44,7 @@
     },
     "dcmProperty": {
       "title": "Condizioni",
-      "description": "Condizioni nel formato {SEG}-{Seq #}[.{Comp#}[.{SubComp#}]][!]={regEx}. Esempi: MSH-4=FORWARD o MSH-9=ADT\\^A28\\^ADT_A05",
+      "description": "Condizioni nel formato {SEG}-{Seq #}[.{Comp#}[.{SubComp#}]][!]={regEx}. Esempi: MSH-4=FORWARD o MSH-9=ADT\\^A28\\^ADT_A05 o PID-3[.3]=MEE4 o PID-3[.3[.2]]=ISO",
       "type": "array",
       "items": {
         "type": "string"

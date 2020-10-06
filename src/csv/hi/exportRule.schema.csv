@@ -5,7 +5,7 @@
 "dcmExporterID","निर्यातक आई.डी. (ID)","निर्यातक आई.डी. (ID) ।"
 "dicomDeviceName","निर्यातक डिवाइस का नाम","जिस डिवाइस पे निर्यात कार्यों को अनुसूचित किया जाएगा, यह निर्दिष्ट करता है ।यदि निर्दिष्ट नहीं किया है, तो जिस डिवाइस पे दृष्टांत प्राप्त हुए है, उसपे ही निर्यात कार्यों को अनुसूचित किया जाएगा ।ध्यान दे की : निर्दिष्ट आई.डी. (ID) के निर्यातक निर्दिष्ट डिवाइसेस पे भी कॉन्फ़िगर्ड होने चाहिए!"
 "dcmExportPreviousEntity","पिछले तत्व को निर्यात करें","बदले हुए दृष्टांत के पिछले तत्व का भी निर्यात निर्दिष्ट करता है ।"
-"dcmProperty","गुण नियम","गुण नियम इस प्रारूप में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx} ।"
+"dcmProperty","गुण नियम","गुण नियम इस प्रारूप में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} । किसी दिए गए विशेषता के लिए एक से अधिक मूल्य निर्दिष्ट करने के लिए उन्हें | प्रतीक के सहारे अलग किया जा सकता है । उदाहरण के तौर पे : SendingApplicationEntityTitle=FORWARD या Modality=MR|CT या ProcedureCodeSequence.CodeValue=MRProcedure या 00180015=KNEE या 00321034.00080100=RequestingServiceCode या ImageType[3]=LOCALIZER"
 "dcmSchedule","समय नियम","इस नियम को सिर्फ निर्दिष्ट समय रंजों में लागू करें ।"
 "dcmDuration","निर्यात विलम्ब","एक निर्यात कार्य में विविध सक्रीय घटनाओं को इकठ्ठा करने के लिए तत्वों के निर्यात में विलम्ब ।"
 "dcmExportReoccurredInstances","फिरसे पाए गए दृष्टांतों को निर्यात करें","संकेत करता है की तत्व फिरसे पाए गए दृष्टांतों को निर्यात होगा ।"

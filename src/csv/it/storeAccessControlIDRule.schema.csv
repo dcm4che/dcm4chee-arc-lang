@@ -3,4 +3,4 @@
 "cn","Nome","Nome arbitrario/significativo della regola dell'ID di controllo dell'accesso allo storage"
 "dcmStoreAccessControlID","ID controllo accesso all'archivio","ID controllo accesso assegnato agli studi i cui attributi soddisfano tutte le condizioni"
 "dcmRulePriority","Priorità delle regole","Priorità della regola."
-"dcmProperty","Condizioni","Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}"
+"dcmProperty","Condizioni","Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER"

@@ -3,4 +3,4 @@
 "cn","Name","Arbitrary/Meaningful name for the Scheduled Station Order Mapping"
 "hl7OrderScheduledStationDeviceName","Scheduled Station Device Name","Device name of Scheduled Station used for HL7 Order Messages."
 "dcmRulePriority","Mapping Priority","Mapping Priority."
-"dcmProperty","Conditions","Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\^A28\^ADT_A05"
+"dcmProperty","Conditions","Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\^A28\^ADT_A05 or PID-3[.3]=MEE4 or PID-3[.3[.2]]=ISO"
