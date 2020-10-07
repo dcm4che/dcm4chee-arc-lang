@@ -23,7 +23,7 @@
     },
     "dcmProperty": {
       "title": "नियम",
-      "description": "नियम इस प्रारूप में {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx} ।उदाहरण के तौर पे: MSH-4=FORWARD या MSH-9=ADT\\^A28\\^ADT_A05 या PID-3[.3]=MEE4 या PID-3[.3[.2]]=ISO ।",
+      "description": "नियम इस प्रारूप में {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx} ।उदाहरण के तौर पे: MSH-4=FORWARD या MSH-9=ADT\\^A28\\^ADT_A05 या PID-3[.3]=PIDIssuer या PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType ।",
       "type": "array",
       "items": {
         "type": "string"

@@ -1,7 +1,7 @@
 "property","title","description"
 "","UPS su HL7","Crea/Aggiorna elemento di lavoro in una lista di lavoro unificata alla ricezione del messaggio HL7v2"
 "hl7UPSOnHL7ID","UPS su ID HL7","ID dell'UPS sulla regola HL7"
-"dcmProperty","Condizioni","Condizioni in formato <SEG>-<Seq#>[.<Comp #> [.<SubComp #>]] [!]=<regEx>. Esempio: MSH-4=FORWARD o MSH-9=ORM\^O01 o PID-3[.3]=MEE4 o PID-3[.3[.2]]=ISO"
+"dcmProperty","Condizioni","Condizioni in formato <SEG>-<Seq#>[.<Comp #> [.<SubComp #>]] [!]=<regEx>. Esempio: MSH-4=FORWARD o MSH-9=ORM\^O01 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType"
 "dcmSchedule","Condizioni dei tempi","Applica questa regola solo entro intervalli di tempo specificati."
 "dcmUPSLabel","Etichetta del passo della procedura","Valore dell'etichetta del passo della procedura (0074,1204) nell'UPS creato. {<SEG>- <Seq#> [.<Comp #> [.<SubComp #>]]} verrà sostituito dal valore di quel campo nel messaggio HL7 ricevuto."
 "dcmUPSWorklistLabel","Etichetta lista di lavoro","Valore dell'etichetta della lista di lavoro (0074,1202) nell'UPS creato. {<SEG>- <Seq#> [.<Comp #> [.<SubComp #>]]} verrà sostituito dal valore di quel campo nel messaggio HL7 ricevuto. Se assente o se il valore non è stato trovato nel messaggio HL7, verrà utilizzato il nome dell'applicazione HL7 dell'applicazione HL7 ricevente."
