@@ -5,7 +5,7 @@
 "dcmDIMSE","DIMSE","DICOM Message Element on which this Attribute Coercion shall be applied"
 "dicomTransferRole","DICOM Transfer Role","DICOM Transfer Role of peer DICOM AE."
 "dcmSOPClass","SOP Class UID","UID of SOP Class for which this Attribute Coercion shall be applied. Apply on any if absent."
-"dcmProperty","Conditions","Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}"
+"dcmProperty","Conditions","Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER"
 "dcmRetrieveAsReceived","Retrieve as Received","Disables merge of DB information into the retrieved Composite Object, returning the objects as received. Only effective with DIMSE = C_STORE_RQ and DICOM Transfer Role = SCP."
 "dcmDeIdentification","De-identification","De-identify objects according the Basic Application Level Confidentiality Profile specified in DICOM PS3.15. Selecting any Option implicitly includes the Basic Application Level Confidentiality Profile."
 "dcmURI","XSL Stylesheet URI","Specifies URI of the XSL style sheet for Attribute Coercion"

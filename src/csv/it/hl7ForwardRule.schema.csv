@@ -2,4 +2,4 @@
 "","Regola di inoltro HL7","Regola di inoltro HL7"
 "cn","Nome","Nome arbitrario/significativo della regola forward HL7"
 "hl7FwdApplicationName","Nome applicazione di inoltro HL7","Applicazione di destinazione di inoltro HL7 e nome della struttura (Applicazione|Struttura)"
-"dcmProperty","Condizioni","Condizioni nel formato {SEG}-{Seq #}[.{Comp#}[.{SubComp#}]][!]={regEx}. Esempi: MSH-4=FORWARD o MSH-9=ADT\^A28\^ADT_A05"
+"dcmProperty","Condizioni","Condizioni nel formato {SEG}-{Seq #}[.{Comp#}[.{SubComp#}]][!]={regEx}. Esempi: MSH-4=FORWARD o MSH-9=ADT\^A28\^ADT_A05 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType"

@@ -1,7 +1,7 @@
 "property","title","description"
 "","UPS sull'archivio","Crea/Aggiorna elemento di lavoro in una lista di lavoro unificata alla ricezione di un oggetto composito"
 "dcmUPSOnStoreID","UPS su Store ID","ID dell'UPS sulla regola dell'archivio"
-"dcmProperty","Condizioni","Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}"
+"dcmProperty","Condizioni","Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER"
 "dcmSchedule","Condizioni dei tempi","Applica questa regola solo entro intervalli di tempo specificati."
 "dcmUPSLabel","Etichetta del passo della procedura","Valore dell'etichetta del passo della procedura (0074,1204) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente."
 "dcmUPSWorklistLabel","Etichetta lista di lavoro","Valore dell'etichetta della lista di lavoro (0074,1202) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente."

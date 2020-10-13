@@ -5,7 +5,7 @@
 "dcmRetentionPeriod","Minimal Study Retention Period","Minimal Study Retention Period in ISO-8601 period format PnYnMnD or PnW"
 "dcmMaxRetentionPeriod","Maximal Study Retention Period","Maximal Study Retention Period in ISO-8601 period format PnYnMnD or PnW"
 "dcmRulePriority","Rule Priority","Rule Priority."
-"dcmProperty","Conditions","Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\^A28\^ADT_A05"
+"dcmProperty","Conditions","Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\^A28\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType"
 "dcmStartRetentionPeriodOnStudyDate","Start Retention Period on Study Date","Indicates if retention period should be started on individual Study Dates instead on receive of the HL7 message triggering this rule."
 "dcmExporterID","Export expired Study","Export expired Study/Series using the specified Exporter"
 "dcmFreezeExpirationDate","Freeze Expiration Date","Indicate to disable changes of the Expiration Date by following events."
