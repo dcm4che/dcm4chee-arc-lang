@@ -18,7 +18,7 @@
 "dcmUPSPerformedStationNameCode","Performed Station Name Code","Item of Performed Station Name Code Sequence (0040,4028) in processed UPS in format (CV, CSD, ""CM"")."
 "dcmUPSIgnoreDiscontinuationReasonCode","Ignore Discontinuation Reason Code","Specifies Discontinuation Reason Code in format (CV, CSD, ""CM"") to ignore and change UPS State to COMPLETED - instead of CANCELED."
 "dcmUPSRescheduleDiscontinuationReasonCode","Reschedule Discontinuation Reason Code","Specifies Discontinuation Reason Code in format (CV, CSD, ""CM"") to reschedule the canceled UPS. If absent, UPS canceled with any Discontinuation Reason Code will be rescheduled according specified Maximum Number of Rescheduling."
-"dcmUPSTemplateID","Create UPS on Cancel","Specifies ID of UPS Template for creating an UPS if the processing failed and retry is not scheduled any more. If absent, no UPS will be created on failures."
+"dcmUPSTemplateID","Create UPS on Cancel","Specifies UPS Template Workitem Instance UID for creating an UPS if the processing failed and retry is not scheduled any more. If absent, no UPS will be created on failures."
 "dcmMaxRetries","Maximum Number of Rescheduling","Maximal number a Workitem which processing failed is rescheduled."
 "dcmRetryDelay","Reschedule Delay","Delay to reschedule a Workitem which processing failed in ISO-8601 duration format PnDTnHnMn.nS."
 "dcmMaxRetryDelay","Maximum Reschedule Delay","Maximal Delay to reschedule a Workitem which processing failed in ISO-8601 duration format PnDTnHnMn.nS. Infinite if absent."
