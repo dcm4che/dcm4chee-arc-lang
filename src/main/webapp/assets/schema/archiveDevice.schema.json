@@ -135,7 +135,7 @@
     },
     "dcmCalculateStudySizeFetchSize": {
       "title": "Calculate Study Size Fetch Size",
-      "description": "Maximal number of Studies with unknown size fetched by one query.",
+      "description": "Limit result set of DB query for Studies with unknown size.",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
