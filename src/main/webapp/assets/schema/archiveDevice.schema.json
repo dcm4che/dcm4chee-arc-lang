@@ -5,6 +5,7 @@
   "required": [
     "dcmFuzzyAlgorithmClass",
     "dcmCalculateStudySizeFetchSize",
+    "dcmCalculateQueryAttributes",
     "dcmSeriesMetadataFetchSize",
     "dcmSeriesMetadataThreads",
     "dcmSeriesMetadataMaxRetries",
@@ -141,14 +142,11 @@
       "minimum": 0,
       "exclusiveMinimum": true
     },
-    "dcmCalculateQueryAttributesViewID": {
+    "dcmCalculateQueryAttributes": {
       "title": "Calculate Query Attributes View ID",
-      "description": "Indicates to eager calculate Query Attributes for specified Query/Retrieve Views according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.",
-      "type": "array",
-      "items" : {
-        "type": "string"
-      },
-      "format": "dcmQueryRetrieveViewID"
+      "description": "Indicates to eager calculate Query Attributes according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.",
+      "type": "boolean",
+      "default" : false
     },
     "dcmSeriesMetadataStorageID": {
       "title": "Series Metadata Storage ID",
