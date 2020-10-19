@@ -130,7 +130,7 @@
 "dcmStoreUpdateDBMaxRetryDelay","Maximal Store Update DB Delay of Retry","Maximal Delay in ms between retries to update the database on storage."
 "dcmAllowRejectionForDataRetentionPolicyExpired","Allow Rejection For Data Retention Policy Expired","Allow Rejection For Data Retention Policy Expired. May be overwritten by configured values for particular Archive Network AEs."
 "dcmAllowDeleteStudyPermanently","Allow Delete Study permanently","Allow to delete Study permanently. REJECTED = only already rejected Studies. May be overwritten by configured values for particular Archive Network AEs."
-"dcmAllowDeletePatient","Allow Delete Patient","Allow permanent deletion of Patients. Enumerated values: NEVER, ALWAYS, WITHOUT_STUDIES. If absent, WITHOUT_STUDIES will be applied."
+"dcmAllowDeletePatient","Allow Delete Patient","Allow permanent deletion of Patients. WITHOUT_STUDIES = only Patients without Studies."
 "dcmPurgeStgCmtCompletedDelay","Purge Storage Commitment Completed Delay","Delay in ISO-8601 duration format PnDTnHnMnS after which results of completed Storage Commitment requests are purged. If absent, there is no deletion."
 "dcmPurgeStgCmtPollingInterval","Purge Storage Commitment Polling Interval","Polling Interval for purging Storage Commitment Results in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion"
 "dcmDefaultCharacterSet","Default Character Set","Value of Specific Character Set (0008,0005) added to Data Sets of C-STORE RQs and pending C-FIND RSPs without Specific Character Set (0008,0005) attribute received by any AE. May be overwritten by configured values for particular Archive Network AEs."
