@@ -143,7 +143,7 @@
       "exclusiveMinimum": true
     },
     "dcmCalculateQueryAttributes": {
-      "title": "Calculate Query Attributes View ID",
+      "title": "Calculate Query Attributes",
       "description": "Indicates to eager calculate Query Attributes according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.",
       "type": "boolean",
       "default" : false
@@ -1021,7 +1021,7 @@
     },
     "dcmAllowDeletePatient": {
       "title": "Allow Delete Patient",
-      "description": "Allow permanent deletion of Patients. Enumerated values: NEVER, ALWAYS, WITHOUT_STUDIES. If absent, WITHOUT_STUDIES will be applied.",
+      "description": "Allow permanent deletion of Patients. WITHOUT_STUDIES = only Patients without Studies.",
       "type": "string",
       "default": "WITHOUT_STUDIES",
       "enum": [
