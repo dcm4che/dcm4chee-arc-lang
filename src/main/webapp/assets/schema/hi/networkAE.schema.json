@@ -1,5 +1,5 @@
 {
-  "title": "नेटवर्क ए.इ. (AE)",
+  "title": "नेटवर्क AE",
   "description": "अनुप्रयोग तत्व जो इस नेटवर्क पे सेवाएँ प्रधान करता है ।",
   "type": "object",
   "required": [
@@ -10,8 +10,8 @@
   ],
   "properties": {
     "dicomAETitle": {
-      "title": "ए.इ. (AE) का नाम",
-      "description": "इस नेटवर्क ए.इ. (AE) का अनन्य नाम ।",
+      "title": "AE का नाम",
+      "description": "इस नेटवर्क AE का अनन्य नाम ।",
       "type": "string",
       "order":1,
       "use": [
@@ -50,7 +50,7 @@
     },
     "dicomNetworkConnectionReference": {
       "title": "नेटवर्क संपर् संदर्भ",
-      "description": "इस नेटवर्क ए.इ. (AE) द्वारा इस्तमाल किए गए नेटवर्क संपर्क ऑब्जेक्ट के जेसन पॉइंटर्स ।",
+      "description": "इस नेटवर्क AE द्वारा इस्तमाल किए गए नेटवर्क संपर्क ऑब्जेक्ट के जेसन पॉइंटर्स ।",
       "type": "array",
       "order":2,
       "items": {
@@ -59,20 +59,20 @@
     },
     "dicomAssociationInitiator": {
       "title": "संपर्क आरंभ करनेवाला",
-      "description": "'हाँ' अगर यह नेटवर्क ए.इ. (AE) संपर्क आरंभ कर सकता है ।",
+      "description": "'हाँ' अगर यह नेटवर्क AE संपर्क आरंभ कर सकता है ।",
       "type": "boolean",
       "default": true,
       "order":3
     },
     "dicomAssociationAcceptor": {
       "title": "संपर्क मंजूर करनेवाला",
-      "description": "'हाँ' अगर यह नेटवर्क ए.इ. (AE) संपर्क मंजूर कर सकता है ।",
+      "description": "'हाँ' अगर यह नेटवर्क AE संपर्क मंजूर कर सकता है ।",
       "type": "boolean",
       "default": true,
       "order":4
     },
     "dicomDescription": {
-      "title": "ए.इ. (AE) का वर्णन",
+      "title": "AE का वर्णन",
       "description": "अनुप्रयोग तत्व का स्वैछिक विषय वर्णन ।",
       "type": "string",
       "order":5
@@ -87,8 +87,8 @@
       }
     },
     "dicomPreferredCalledAETitle": {
-      "title": "अधिमान्य बुलाए गए ए.इ. (AE) का नाम",
-      "description": "संपर्क आरंभ करने के लिए अधिमान्य ए.इ. (AE) के नाम ।",
+      "title": "अधिमान्य बुलाए गए AE का नाम",
+      "description": "संपर्क आरंभ करने के लिए अधिमान्य AE के नाम ।",
       "type": "array",
       "order":7,
       "items": {
@@ -96,8 +96,8 @@
       }
     },
     "dicomPreferredCallingAETitle": {
-      "title": "अधिमान्य आह्वान ए.इ. (AE) का नाम",
-      "description": "संपर्क स्वीकार करने के लिए अधिमान्य ए.इ. (AE) के नाम ।",
+      "title": "अधिमान्य आह्वान AE का नाम",
+      "description": "संपर्क स्वीकार करने के लिए अधिमान्य AE के नाम ।",
       "type": "array",
       "order":8,
       "items": {
@@ -106,7 +106,7 @@
     },
     "dicomSupportedCharacterSet": {
       "title": "समर्थित कॅरक्टर सेट",
-      "description": "दृष्टांतों के प्राप्ति पे नेटवर्क ए.इ. (AE) द्वारा समर्थित कॅरक्टर सेट्स ।",
+      "description": "दृष्टांतों के प्राप्ति पे नेटवर्क AE द्वारा समर्थित कॅरक्टर सेट्स ।",
       "type": "array",
       "order":9,
       "items": {
@@ -116,7 +116,7 @@
     },
     "dicomInstalled": {
       "title": "स्थापित",
-      "description": "'हाँ' अगर यह नेटवर्क ए.इ. (AE) इस नेटवर्क पे स्थापित है ।अनुपलभ्य हो तो, नेटवर्क ए.इ. (AE) के स्थापित स्थिति की जानकारी डिवाइस से ली जाएगी ।",
+      "description": "'हाँ' अगर यह नेटवर्क AE इस नेटवर्क पे स्थापित है । अनुपलभ्य हो तो, नेटवर्क AE के स्थापित स्थिति की जानकारी डिवाइस से ली जाएगी ।",
       "order":10,
       "type": "boolean"
     },
@@ -131,8 +131,8 @@
       }
     },
     "dcmNetworkAE": {
-      "title": "नेटवर्क ए.इ. (AE) एक्सटेंशन",
-      "description": "डीसीएम्४ची मालिकाना नेटवर्क ए.इ. (AE) के गुण ।",
+      "title": "नेटवर्क AE एक्सटेंशन",
+      "description": "DCM4CHE मालिकाना नेटवर्क AE के गुण ।",
       "$ref": "dcmNetworkAE.schema.json",
       "order":12
     }

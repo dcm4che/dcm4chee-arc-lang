@@ -14,8 +14,8 @@
   ],
   "properties": {
     "dcmExporterID": {
-      "title": "निर्यातक आई.डी. (ID)",
-      "description": "निर्यातक आई.डी. (ID) ।",
+      "title": "निर्यातक ID",
+      "description": "निर्यातक ID ।",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmExportPriorsRule[*].dcmExporterID[*]",
@@ -32,13 +32,13 @@
       ]
     },
     "dcmURI": {
-      "title": "यू.आर.आई. (URI)",
-      "description": "आर.एफ.सी.२०७९ (RFC2071) : समान संसाधन पहचानकर्ता ।",
+      "title": "URI",
+      "description": "RFC2071 : समान संसाधन पहचानकर्ता ।",
       "type": "string"
     },
     "dcmQueueName": {
       "title": "कतार का नाम",
-      "description": "जे.एम्.एस. (JMS) कतार का नाम ।",
+      "description": "JMS कतार का नाम ।",
       "type": "string",
       "enum" : [
         "Export1",
@@ -55,7 +55,7 @@
     },
     "dcmExportPriority": {
       "title": "निर्यातक प्राथमिकता",
-      "description": "निर्यात कार्य के प्रक्रिया के लिए जे.एम्.एस. (JMS) प्राथमिकता स्तर : ० (न्यूतनम) से ९ (अधिकतम) तक ।",
+      "description": "निर्यात कार्य के प्रक्रिया के लिए JMS प्राथमिकता स्तर : ० (न्यूतनम) से ९ (अधिकतम) तक ।",
       "type": "integer",
       "default" : 4,
       "minimum": 0,
@@ -67,8 +67,8 @@
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "अनुप्रयोग तत्त्व ए.इ. (AE) का नाम",
-      "description": "अनुप्रयोग तत्त्व ए.इ. (AE) का नाम ।",
+      "title": "अनुप्रयोग तत्त्व AE का नाम",
+      "description": "अनुप्रयोग तत्त्व AE का नाम ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
@@ -80,7 +80,7 @@
     },
     "dcmDeleteStudyFromStorageID": {
       "title": "स्टोरेज सिस्टम से स्टडी मिटाए",
-      "description": "स्टोरेज सिस्टम का आई.डी. (ID) जहा से निर्यात हुए स्टडी के दृष्टांतों को मिटाया जाएगा ।सिर्फ प्रभावशाली जब निर्यात कार्य स्टडी स्तर पे है ।",
+      "description": "स्टोरेज सिस्टम का ID जहा से निर्यात हुए स्टडी के दृष्टांतों को मिटाया जाएगा । सिर्फ प्रभावशाली जब निर्यात कार्य स्टडी स्तर पे है ।",
       "type": "string",
       "format": "dcmStorageID"
     },
@@ -91,28 +91,28 @@
       "default": false
     },
     "dcmStgCmtSCP": {
-      "title": "स्टोरेज प्रतिबद्धता एस.सी.पी. (SCP) ए.इ. (AE) का नाम",
-      "description": "दूसरे आर्काइव पे निर्यात को जांचने के लिए उपयोग किया गया बाहरी स्टोरेज प्रतिबद्धता एस.सी.पी. (SCP) ए.इ. (AE) का नाम ।",
+      "title": "स्टोरेज प्रतिबद्धता SCP AE का नाम",
+      "description": "दूसरे आर्काइव पे निर्यात को जांचने के लिए उपयोग किया गया बाहरी स्टोरेज प्रतिबद्धता SCP AE का नाम ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
-      "title": "आई.ए.एन. (IAN) गंतव्य",
-      "description": "आई.ए.एन. एन-क्रिएट (IAN N-CREATE) अनुरोध भेजने के लिए गंतव्य ।",
+      "title": "IAN गंतव्य",
+      "description": "IAN N-CREATE अनुरोध भेजने के लिए गंतव्य ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmRetrieveAET": {
-      "title": "प्राप्ति ए.इ. (AE) का नाम",
-      "description": "इस नेटवर्क ए.इ. से सम्बंधित ए.इ. (AE) का नाम ।",
+      "title": "प्राप्ति AE का नाम",
+      "description": "इस नेटवर्क AE से सम्बंधित AE का नाम ।",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmArchiveAETitle"
     },
     "dcmRetrieveLocationUID": {
-      "title": "पुनःप्राप्ति स्थान का यू.आई.डी. (UID)",
-      "description": "पुनःप्राप्ति स्थान का यू.आई.डी. (UID) ।",
+      "title": "पुनःप्राप्ति स्थान का UID",
+      "description": "पुनःप्राप्ति स्थान का UID ।",
       "type": "string",
       "pattern": "^[0-2]((\\.0)|(\\.[1-9][0-9]*))*$"
     },
@@ -129,7 +129,7 @@
     },
     "dcmSchedule": {
       "title": "निर्यात अनुसूची",
-      "description": "निर्यात को अनुसूचित समय में करें ।यदि कोई निर्यात अनुसूची निर्दिष्ट नहीं किया है, तो तुरंत ही निर्यात कार्यों पे प्रक्रिया करने के लिए कतार में डाले ।प्रारूप : 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday) ।",
+      "description": "निर्यात को अनुसूचित समय में करें । यदि कोई निर्यात अनुसूची निर्दिष्ट नहीं किया है, तो तुरंत ही निर्यात कार्यों पे प्रक्रिया करने के लिए कतार में डाले । प्रारूप : 'hour=[0-23] dayOfWeek=[0-6]' (0=रविवार) ।",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"
