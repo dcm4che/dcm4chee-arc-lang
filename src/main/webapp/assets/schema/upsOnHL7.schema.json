@@ -37,12 +37,12 @@
     },
     "dcmUPSLabel": {
       "title": "Procedure Step Label",
-      "description": "Value of Procedure Step Label (0074,1204) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "description": "Value of Procedure Step Label (0074,1204) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmUPSWorklistLabel": {
       "title": "Worklist Label",
-      "description": "Value of Worklist Label (0074,1202) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent or if value could not be found in HL7 Message, HL7 Application Name of the receiving HL7 Application will be used.",
+      "description": "Value of Worklist Label (0074,1202) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent or if value could not be found in HL7 Message, HL7 Application Name of the receiving HL7 Application will be used. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmUPSPriority": {
@@ -81,7 +81,7 @@
     },
     "dcmUPSInstanceUIDBasedOnName": {
       "title": "UPS Instance UID based on name",
-      "description": "Value used to generate name based SOP Instance UID (0008,0018) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent, a random generated SOP Instance UID (0008,0018) will be used.",
+      "description": "Value used to generate name based SOP Instance UID (0008,0018) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent, a random generated SOP Instance UID (0008,0018) will be used. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmDestinationAE": {
@@ -117,12 +117,12 @@
     },
     "dcmUPSScheduledHumanPerformerName": {
       "title": "Scheduled Human Performer Name",
-      "description": "Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "description": "Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerOrganization": {
       "title": "Scheduled Human Performer Organization",
-      "description": "Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "description": "Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmUPSIncludeStudyInstanceUID": {
@@ -139,12 +139,12 @@
     },
     "dcmStudyInstanceUID": {
       "title": "Study Instance UID",
-      "description": "Value of Study Instance UID (0020,000D) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "description": "Value of Study Instance UID (0020,000D) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmAdmissionID": {
       "title": "Admission Number",
-      "description": "Value of Admission ID (0038,0010) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "description": "Value of Admission ID (0038,0010) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dicomIssuerOfAdmissionID": {
@@ -154,7 +154,7 @@
     },
     "dcmAccessionNumber": {
       "title": "Accession Number",
-      "description": "Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "description": "Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dicomIssuerOfAccessionNumber": {
@@ -164,22 +164,22 @@
     },
     "dcmRequestedProcedureID": {
       "title": "Requested Procedure ID",
-      "description": "Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "description": "Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmRequestedProcedureDescription": {
       "title": "Requested Procedure Description",
-      "description": "Value of Requested Procedure Description (0032,1060) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "description": "Value of Requested Procedure Description (0032,1060) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmRequestingPhysician": {
       "title": "Requesting Physician",
-      "description": "Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "description": "Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmRequestingService": {
       "title": "Requesting Service",
-      "description": "Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message.",
+      "description": "Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmURI": {

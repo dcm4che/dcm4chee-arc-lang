@@ -240,7 +240,7 @@
     },
     "dcmDeleteMWLDelay": {
       "title": "Delete MWL Delay",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting MWL items. Status specific delays can be specified by prefix 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. If absent, MWL Items will not get deleted.",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting MWL items. Status specific delays can be specified by prefix 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. Examples: PT5M or CANCELED:PT10M. If absent, MWL Items will not get deleted.",
       "type": "array",
       "items" : { "type": "string" }
     },
@@ -925,12 +925,12 @@
     },
     "dcmStorePermissionServiceResponse": {
       "title": "Store Permission Service Response",
-      "description": "Emulate Store Permission Service Response on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service URL is configured. May be overwritten by configured value for particular Archive Network AEs.",
+      "description": "Emulate Store Permission Service Response on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service URL is configured. Example: patientID={00100020},patientName={00100010},errorCode=0110H,errorComment=errorMessage. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmStorePermissionServiceResponsePattern": {
       "title": "Store Permission Service Response Pattern",
-      "description": "Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. \"validation\"\\s*:\\s*\"true\" . If absent, every success response will be treated as agreement for storage. May be overwritten by configured value for particular Archive Network AEs.",
+      "description": "Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. \"validation\"\\s*:\\s*\"true\" or '(?<=patientName=)[^null].*?(?=,)'. If absent, every success response will be treated as agreement for storage. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmStorePermissionServiceErrorCommentPattern": {
@@ -1106,7 +1106,7 @@
     },
     "dcmMultipleStoreAssociations": {
       "title": "Multiple Store Associations",
-      "description": "Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. If absent, only one Association will be used. May be supplemented by configured Multiple Store Associations for particular Archive Network AEs.",
+      "description": "Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. If absent, only one Association will be used. Examples : 2 or STORESCP:3 May be supplemented by configured Multiple Store Associations for particular Archive Network AEs.",
         "type": "array",
         "items": {
         "type": "string"
@@ -1404,7 +1404,7 @@
     },
     "hl7PSUConditions": {
       "title": "HL7 Procedure Status Update Attribute Conditions",
-      "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}. May be overwritten by configured values for particular Archive Network AEs.",
+      "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items": {
         "type": "string"

@@ -38,12 +38,12 @@
     },
     "dcmUPSLabel": {
       "title": "Procedure Step Label",
-      "description": "Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset.",
+      "description": "Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {StudyDescription}",
       "type": "string"
     },
     "dcmUPSWorklistLabel": {
       "title": "Worklist Label",
-      "description": "Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset.",
+      "description": "Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {StudyDescription}",
       "type": "string"
     },
     "dcmUPSPriority": {
@@ -146,17 +146,17 @@
     },
     "dcmUPSScheduledHumanPerformerName": {
       "title": "Scheduled Human Performer Name",
-      "description": "Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset.",
+      "description": "Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {PerformingPhysicianName}",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerOrganization": {
       "title": "Scheduled Human Performer Organization",
-      "description": "Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset.",
+      "description": "Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {ResponsibleOrganization}",
       "type": "string"
     },
     "dcmAdmissionID": {
       "title": "Admission Number",
-      "description": "Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset.",
+      "description": "Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {AdmissionID}",
       "type": "string"
     },
     "dicomIssuerOfAdmissionID": {

@@ -9,7 +9,7 @@
   "properties": {
     "dcmRoleSelectionNegotiationLenient": {
       "title": "Negoziazione di selezione del ruolo clemente",
-      "description": "Indica di disabilitare il controllo per la negoziazione della selezione del ruolo SCP\/SCU richiesta sull'invio di DIMSE-RQ. Può essere sovrascritto dal valore configurato per particolari AE di rete.",
+      "description": "Indica di disabilitare il controllo per la negoziazione della selezione del ruolo SCP/SCU richiesta sull'invio di DIMSE-RQ. Può essere sovrascritto dal valore configurato per particolari AE di rete.",
       "type": "boolean",
       "default": false
     },
@@ -24,7 +24,7 @@
       "title": "Limite di associazione per AE",
       "description": "Numero massimo di connessioni DICOM aperte avviate da una particolare entità dell'applicazione (AE) nel formato <ae-title>=<number>; rifiuta le richieste di associazione da quell'AE se il limite viene superato.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmLimitAssociationsInitiatedBy"
     },
     "dcmTrustStoreURL": {
@@ -35,8 +35,7 @@
     "dcmTrustStoreType": {
       "title": "Tipo di archivio attendibile",
       "description": "Tipo Key Store di Trust Store specificato da dcmTrustStoreURL.",
-      "type":"string",
-      "enum": [ "JKS", "PKCS12" ]
+      "type":"string"
     },
     "dcmTrustStorePin": {
       "title": "Pin del Trust Store",
@@ -56,9 +55,7 @@
     "dcmKeyStoreType": {
       "title": "Tipo di archivio chiavi",
       "description": "Tipo di Archivio chiavi dell'archivio chiavi specificato dall'URL dell'archivio chiavi.",
-      "type": "string",
-      "enum": [ "JKS", "PKCS12"]
-
+      "type": "string"
     },
     "dcmKeyStorePin": {
       "title": "Pin del Archivio chiavi",
@@ -141,7 +138,7 @@
       "titleKey":"{cn}",
       "type": "array",
       "order":31,
-      "items": {
+      "items" : {
         "$ref": "auditLogger.schema.json"
       }
     },
@@ -163,7 +160,7 @@
       "titleKey":"{dcmuiConfigName}",
       "type": "array",
       "order":34,
-      "items": {
+      "items" : {
         "$ref": "uiConfig.schema.json"
       }
     }

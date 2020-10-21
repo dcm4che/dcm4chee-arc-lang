@@ -10,14 +10,14 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo della regola di esportazione HL7",
+      "description": "Nome arbitrario/significativo della regola di esportazione HL7",
       "type": "string"
     },
     "dcmExporterID": {
       "title": "ID esportatore",
       "description": "ID esportatore",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmExporterID"
     },
     "dcmProperty": {
@@ -30,7 +30,7 @@
       "title": "Selettore entità",
       "description": "Specifica le chiavi di corrispondenza utilizzate per selezionare gli studi precedenti da esportare. Formato: {key}={value}[&{key}={value)]..., with {key} = 'StudyAge' | {attributeID}. {value} in the format '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] vengono sostituiti dal valore del campo HL7 specificato dal messaggio HL7 ricevuto che ha attivato il prefetch. Se non viene specificato alcun selettore di entità, tutti gli studi per il paziente verranno esportati. Esempio: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => seleziona al massimo 2 studi precedenti non più vecchi di 5 anni contenenti almeno una serie CT.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {

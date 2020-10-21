@@ -9,7 +9,7 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo della regola forward HL7",
+      "description": "Nome arbitrario/significativo della regola forward HL7",
       "type": "string"
     },
     "hl7FwdApplicationName": {

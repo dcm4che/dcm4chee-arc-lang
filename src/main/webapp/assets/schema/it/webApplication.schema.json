@@ -18,7 +18,7 @@
       ]
     },
     "dicomNetworkConnectionReference": {
-      "title": "Connessione\/i di rete dell'applicazione web",
+      "title": "Connessione/i di rete dell'applicazione web",
       "description": "Connessioni di rete su cui sono disponibili i servizi dell'applicazione Web",
       "type": "array",
       "items": {
@@ -84,7 +84,7 @@
     },
     "dcmProperty": {
       "title": "Proprietà",
-      "description": "Proprietà nel formato <name>=<value> Ad esempio: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s):\/\/<viewer-host>:<viewer-port>\/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} or IID_STUDY_URL=http(s):\/\/<viewer-host>:<viewer-port>\/IHEInvokeImageDisplay?requestType = STUDY &{{studyUID}}studyUID =, (Altri parametri validi sono: 'PatientBirthDate' e 'accessionNumber'), puoi definire il target dell'Url impostandolo sul parametro 'IID_URL_TARGET = _blank|_self'",
+      "description": "Proprietà nel formato <name>=<value> Ad esempio: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} o IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType = STUDY &{{studyUID}}studyUID =, (Altri parametri validi sono: 'PatientBirthDate' e 'accessionNumber'), puoi definire il target dell'Url impostandolo sul parametro 'IID_URL_TARGET = _blank|_self'",
       "type": "array",
       "items": {
         "type": "string"

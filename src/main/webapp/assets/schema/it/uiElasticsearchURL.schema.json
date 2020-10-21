@@ -16,7 +16,7 @@
     },
     "dcmuiElasticsearchURL": {
       "title": "URL dell'interfaccia utente di Elasticsearch",
-      "description": "URL di accesso di Elasticsearch. Ad esempio: http(s):\/\/<elasticsearch-host>:<elasticsearch-port> ",
+      "description": "URL di accesso di Elasticsearch. Ad esempio: http(s)://<elasticsearch-host>:<elasticsearch-port> ",
       "type": "string"
     },
     "dcmuiElasticsearchURLKeycloakServer": {
@@ -26,7 +26,7 @@
       "format": "dcmKeycloakServer"
     },"dcmuiAuditEnterpriseSiteID": {
       "title": "Audit Enterprise SiteID",
-      "description": "Imposta Audit Enterprise SiteID che dovrebbe essere usato nelle query Elasticsearch",
+      "description": "Set Audit Enterprise SiteID which should be used on Elasticsearch queries",
       "type": "string"
     },
     "dcmuiElasticsearchIsDefault": {

@@ -16,7 +16,7 @@
       "description": "URL dell'interfaccia utente di Elasticsearch ",
       "titleKey":"{dcmuiElasticsearchURLName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiElasticsearchURL.schema.json"
       }
     }

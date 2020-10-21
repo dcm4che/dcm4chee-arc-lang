@@ -22,7 +22,7 @@
       "title": "Modalità elenco",
       "description": "Hai due possibilità su come mostrare l'elenco definito: 1.) In cima al resto dell'elenco 'separati' da una riga, 2.) Mostra solo quelli definiti hir ('esclusivi').",
       "type": "string",
-      "default":"separato",
+      "default":"separated",
       "enum": [
         "separated",
         "exclusive"
@@ -33,7 +33,7 @@
       "description": "Applicazione Web",
       "format": "webApp",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string"
       }
     },
@@ -41,7 +41,7 @@
       "title": "Ruolo utente accettato",
       "description": "Definisci i ruoli per i quali questa configurazione dovrebbe essere disponibile, usa 'user' per essere disponibile per tutti i ruoli (dovresti definire un nome utente (attributo seguente) o un ruolo utente (questo attributo))",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string"
       }
     },
@@ -49,7 +49,7 @@
       "title": "Nome utente accettato",
       "description": "Definisci il nome utente per il quale questa configurazione dovrebbe essere disponibile (dovresti definire un nome utente (questo attributo) o un ruolo utente (attributo precedente))",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string"
       }
     }

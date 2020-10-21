@@ -10,7 +10,7 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo per l'oggetto Capacità di trasferimento",
+      "description": "Nome arbitrario/significativo per l'oggetto Capacità di trasferimento",
       "type": "string"
     },
     "dicomSOPClass": {

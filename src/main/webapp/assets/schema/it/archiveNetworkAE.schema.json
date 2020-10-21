@@ -11,7 +11,7 @@
       "title": "Object Storage ID",
       "description": "ID del sistema di archiviazione su cui sono archiviati gli oggetti compositi DICOM ricevuti. È possibile configurare più sistemi di archiviazione.",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -27,7 +27,7 @@
       "title": "ID archiviazione metadati",
       "description": "ID di archiviazione su cui sono archiviati i metadati in formato JSON, in aggiunta all'oggetto composito DICOM completo. È possibile configurare più sistemi di archiviazione. Se assenti, i metadati non vengono memorizzati in aggiunta.",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -57,7 +57,7 @@
     },
     "dcmAccessControlID": {
       "title": "ID Controllo accesso",
-      "description": "ID di controllo dell'accesso assegnati alle richieste di query\/recupero ricevute da questo AE.",
+      "description": "ID di controllo dell'accesso assegnati alle richieste di query/recupero ricevute da questo AE.",
       "type": "array",
       "items": { "type": "string" }
     },
@@ -65,7 +65,7 @@
       "title": "Destinazione di spostamento accettata",
       "description": "Destinazione di spostamento accettata nelle richieste C-MOVE; qualsiasi se assente.",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string"
       }
     },
@@ -107,8 +107,8 @@
       ]
     },
     "dcmQueryRetrieveViewID": {
-      "title": "ID Vista di Query\/Retrieve",
-      "description": "Identificatore vista di Query\/Retrieve",
+      "title": "ID Vista di Query/Retrieve",
+      "description": "Identificatore vista di Query/Retrieve",
       "type": "string",
       "format": "dcmQueryRetrieveViewID"
     },
@@ -121,7 +121,7 @@
       "title": "Nascondi SPS con Stato",
       "description": "Codici di stato del passo della procedura pianificata degli articoli MWL che non devono essere restituiti da MWL SCP. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -189,7 +189,7 @@
     },
     "dcmWadoCDA2HtmlTemplateURI": {
       "title": "URI per modello da WADO CDA a HTML",
-      "description": "URL al foglio di stile XSL inserito come <?xml-stylesheet type=\"text\/xsl\" href=\"<url>\" > nei documenti CDA restituiti dal servizio WADO-URI. Se assente, il documento CDI incorporato viene restituito letteralmente. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "URL al foglio di stile XSL inserito come <?xml-stylesheet type=\"text/xsl\" href=\"<url>\" > nei documenti CDA restituiti dal servizio WADO-URI. Se assente, il documento CDI incorporato viene restituito letteralmente. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string"
     },
     "dcmWadoThumbnailViewport": {
@@ -219,14 +219,14 @@
       "title": "Destinazione di inoltro Mpps",
       "description": "Destinazione per inoltrare MPPS N-CREATE RQ e N-SET RQ. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
       "title": "Destinazione IAN",
       "description": "Destinazione per inviare IAN N-CREATE RQ. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmIanDelay": {
@@ -325,17 +325,17 @@
     },
     "dcmStorePermissionServiceURL": {
       "title": "URL del servizio di autorizzazione dell'archivio",
-      "description": "URL del servizio di autorizzazione dello storage che verrà richiamato alla ricezione del primo oggetto di uno studio da parte di qualsiasi AE. {<dicomTag>} verrà sostituito dal valore dell'attributo nell'oggetto. Ad esempio: http(s):\/\/<store-permission-service-provider-host>:<store-permission-service-provider-port>\/storage-permission\/study\/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "URL del servizio di autorizzazione dello storage che verrà richiamato alla ricezione del primo oggetto di uno studio da parte di qualsiasi AE. {<dicomTag>} verrà sostituito dal valore dell'attributo nell'oggetto. Ad esempio: http(s)://<store-permission-service-provider-host>:<store-permission-service-provider-port>/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string"
     },
     "dcmStorePermissionServiceResponse": {
       "title": "Store Permission Service Response",
-      "description": "Emula la risposta del servizio di autorizzazione dello storage alla ricezione del primo oggetto di uno studio da parte di qualsiasi AE. {<dicomTag>} verrà sostituito dal valore dell'attributo nell'oggetto. Efficace solo se non è configurata alcuna risposta del servizio autorizzazione archivio. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Emula la risposta del servizio di autorizzazione dello storage alla ricezione del primo oggetto di uno studio da parte di qualsiasi AE. {<dicomTag>} verrà sostituito dal valore dell'attributo nell'oggetto. Efficace solo se non è configurata alcuna risposta del servizio autorizzazione archivio. Esempio: patientID={00100020},patientName={00100010},errorCode=0110H,errorComment=errorMessage. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string"
     },
     "dcmStorePermissionServiceResponsePattern": {
       "title": "Pattern del servizio di autorizzazione dell'archivio",
-      "description": "Espressione regolare applicata alle risposte dal servizio di autorizzazione dell'archivio per determinare l'accordo per l'archiviazione. Ad esempio: \"validation\"\\s*:\\s*\"true\". Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Espressione regolare applicata alle risposte dal servizio di autorizzazione dell'archivio per determinare l'accordo per l'archiviazione. Ad esempio: \"validation\"\\s*:\\s*\"true\" o '(?<=patientName=)[^null].*?(?=,)'. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string"
     },
     "dcmStorePermissionServiceErrorCommentPattern": {
@@ -429,7 +429,7 @@
     },
     "dcmMultipleStoreAssociations": {
       "title": "Multiple Store Associations",
-      "description": "Numero di associazioni di archiviazione utilizzate per il recupero di oggetti compositi. I numeri specifici di C-STORE SCP possono essere specificati con il prefisso<AETitle>':'. Supporta più associazioni di archivio specificate a livello di dispositivo.",
+      "description": "Numero di associazioni di archiviazione utilizzate per il recupero di oggetti compositi. I numeri specifici di C-STORE SCP possono essere specificati con il prefisso<AETitle>':'. Esempio : 2 o STORESCP:3 Supporta più associazioni di archivio specificate a livello di dispositivo.",
       "type": "array",
       "items": {
         "type": "string"
@@ -444,7 +444,7 @@
     },
     "dcmCopyMoveUpdatePolicy": {
       "title": "Copia il criterio di aggiornamento dello spostamento",
-      "description": "Specifica la politica di aggiornamento per gli attributi dello studio di destinazione sulla copia\/spostamento di istanze da un altro studio. Se assenti, gli attributi non verranno aggiornati. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Specifica la politica di aggiornamento per gli attributi dello studio di destinazione sulla copia/spostamento di istanze da un altro studio. Se assenti, gli attributi non verranno aggiornati. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string",
       "enum": [
         "PRESERVE",
@@ -488,7 +488,7 @@
       "title": "ID di verifica dello storage",
       "description": "Accettare la verifica della memorizzazione solo se la convalida della memorizzazione dell'oggetto su uno dei sistemi di memorizzazione specificati ha esito positivo. Non efficace con il criterio di verifica dello storage: DB_RECORD_EXISTS. Sovrascrive i valori specificati a livello di dispositivo.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationInitialDelay": {
@@ -517,7 +517,7 @@
       "title": "Applicazione Ricevente per l'Aggiornamento dello stato della procedura HL7",
       "description": "Applicazione | Nome della struttura di invio dell'applicazione per l'aggiornamento dello stato della procedura HL7. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
     "hl7PSUDelay": {
@@ -528,7 +528,7 @@
     },
     "hl7PSUConditions": {
       "title": "Condizioni degli attributi di aggiornamento dello stato della procedura HL7",
-      "description": "Limita la notifica dell'aggiornamento dello stato della procedura configurata HL7 di Ricezione delle applicazioni sull'aggiornamento dello stato della procedura in base alle condizioni sugli attributi dell'oggetto composito ricevuto nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Limita la notifica dell'aggiornamento dello stato della procedura configurata HL7 di Ricezione delle applicazioni sull'aggiornamento dello stato della procedura in base alle condizioni sugli attributi dell'oggetto composito ricevuto nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Esempio: SendingApplicationEntityTitle=FORWARD o Modality=MR|CT o ProcedureCodeSequence.CodeValue=MRProcedure o 00180015=KNEE o 00321034.00080100=RequestingServiceCode o ImageType[3]=LOCALIZER. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "array",
       "items": {
         "type": "string"
@@ -542,22 +542,22 @@
     },
     "hl7PSURequestedProcedureID": {
       "title": "ID procedura Richiesta per l'Aggiornamento dello stato della procedura HL7",
-      "description": "Valore per l'ID procedura richiesta nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Valore per l'ID procedura richiesta nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Esempio: {StudyInstanceUID,hash}. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string"
     },
     "hl7PSUAccessionNumber": {
       "title": "Numero di Accesso dello stato della procedura HL7",
-      "description": "Valore per il numero di Accesso nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Valore per il numero di Accesso nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Esempio: {StudyInstanceUID,hash}. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string"
     },
     "hl7PSUFillerOrderNumber": {
       "title": "Numero di Order Filler per lo stato di procedura HL7",
-      "description": "Valore per il numero di Order Filler nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Valore per il numero di Order Filler nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Esempio: {StudyInstanceUID,hash}. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string"
     },
     "hl7PSUPlacerOrderNumber": {
       "title": "Numero di Order Placer dello stato della procedura HL7",
-      "description": "Valore per il Numero di Order Placer nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Valore per il Numero di Order Placer nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Esempio: {StudyInstanceUID,hash}. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string"
     },
     "hl7PSUMessageType": {
@@ -609,7 +609,7 @@
       "title": "Rifiuta attributo paziente in conflitto",
       "description": "Tag DICOM dell'attributo paziente che deve corrispondere negli oggetti ricevuti con il valore degli oggetti ricevuti in precedenza con lo stesso ID paziente per essere accettato. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
@@ -648,7 +648,7 @@
       "description": "Regole di esportazione applicate agli oggetti DICOM ricevuti da questo AE. Integra le regole di esportazione HL7 specificate a livello di dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "exportRule.schema.json"
       }
     },
@@ -657,7 +657,7 @@
       "description": "Esporta le regole dei Priors applicate agli oggetti DICOM ricevuti da questo AE. Integra le regole di esportazione HL7 specificate a livello di dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "exportPriorsRule.schema.json"
       }
     },
@@ -666,7 +666,7 @@
       "description": "Regole di inoltro RESTful. Integra le regole di inoltro RESTful specificate a livello di dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "rsForwardRule.schema.json"
       }
     },
@@ -675,16 +675,16 @@
       "description": "Regole di compressione. Integra le regole di compressione specificate a livello di dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "archiveCompressionRule.schema.json"
       }
     },
     "dcmArchiveAttributeCoercion": {
       "title": "Coercizione di un Attributo",
-      "description": "Coercizione dell'attributo di archivio del DIMSE ricevuto\/inviato Integra le coercizioni degli attributi specificate a livello di dispositivo.",
+      "description": "Coercizione dell'attributo di archivio del DIMSE ricevuto/inviato Integra le coercizioni degli attributi specificate a livello di dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "archiveAttributeCoercion.schema.json"
       }
     },
@@ -702,7 +702,7 @@
       "description": "Regole di controllo dell'accesso allo storage applicate agli studi ricevuti da qualsiasi AE. Integra le regole di controllo dell'accesso al negozio specificate a livello di dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "storeAccessControlIDRule.schema.json"
       }
     },
@@ -711,7 +711,7 @@
       "description": "Regole UPS su Archivio applicate agli oggetti DICOM ricevuti da qualsiasi AE. Integra le regole UPS su archivio specificate a livello di dispositivo.",
       "type": "array",
       "titleKey":"{dcmUPSOnStoreID}",
-      "items": {
+      "items" : {
         "$ref": "upsOnStore.schema.json"
       }
     },

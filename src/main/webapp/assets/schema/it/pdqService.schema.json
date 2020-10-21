@@ -40,7 +40,7 @@
       "description": "Indica se viene richiesto al C-FIND SCP per un particolare paziente o per gli studi di un particolare paziente. Efficace solo per i servizi DICOM PDQ (URI: pdq-dicom: {AETitle}).",
       "type": "string",
       "enum": [ "Patient", "Study" ],
-      "default": "Paziente"
+      "default": "Patient"
     },
     "dcmProperty": {
       "title": "Proprietà del servizio PDQ",

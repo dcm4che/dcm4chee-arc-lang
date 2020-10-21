@@ -1,5 +1,5 @@
 {
-  "title": "Vista di Query\/Retrieve ",
+  "title": "Vista di Query/Retrieve ",
   "description": "Specifica il comportamento della nota di rifiuto memorizzata",
   "type": "object",
   "required": [
@@ -8,8 +8,8 @@
   ],
   "properties": {
     "dcmQueryRetrieveViewID": {
-      "title": "ID Vista di Query\/Retrieve",
-      "description": "Identificatore vista di Query\/Retrieve ",
+      "title": "ID Vista di Query/Retrieve",
+      "description": "Identificatore vista di Query/Retrieve ",
       "type": "string",
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmQueryRetrieveViewID"
@@ -17,7 +17,7 @@
     },
     "dcmShowInstancesRejectedByCode": {
       "title": "Mostra istanze rifiutate dal codice",
-      "description": "Indica se i servizi Q\/R devono mostrare le istanze rifiutate dal codice specificato in formato (CV, CSD, 'CM')",
+      "description": "Indica se i servizi Q/R devono mostrare le istanze rifiutate dal codice specificato in formato (CV, CSD, 'CM')",
       "type": "array",
       "items": {
         "type": "string"
@@ -26,7 +26,7 @@
     },
     "dcmHideRejectionNoteWithCode": {
       "title": "Nascondi nota di rifiuto con codice",
-      "description": "Indica se i servizi di Q\/R devono nascondere le note di rifiuto con il codice specificato nel formato (CV, CSD, 'CM')",
+      "description": "Indica se i servizi di Q/R devono nascondere le note di rifiuto con il codice specificato nel formato (CV, CSD, 'CM')",
       "type": "array",
       "items": {
         "type": "string"
@@ -35,7 +35,7 @@
     },
     "dcmHideNotRejectedInstances": {
       "title": "Hide Not Rejected Instances",
-      "description": "Indica se i servizi Q\/R devono nascondere istanze non rifiutate per qualche motivo.",
+      "description": "Indica se i servizi Q/R devono nascondere istanze non rifiutate per qualche motivo.",
       "type": "boolean",
       "default": false
     }

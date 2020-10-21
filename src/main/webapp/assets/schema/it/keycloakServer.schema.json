@@ -64,13 +64,13 @@
       "default": false
     },
     "uid":  {
-      "title": "ID Utente",
-      "description": "ID Utente. Obbligatorio se tipo di concessione = password.",
+      "title": "User ID",
+      "description": "User ID. Required if grant type = password.",
       "type": "string"
     },
     "userPassword":  {
-      "title": "Password utente",
-      "description": "Password utente. Obbligatorio se tipo di concessione = password.",
+      "title": "User Password",
+      "description": "User Password. Required if grant type = password.",
       "type": "string"
     }
   }

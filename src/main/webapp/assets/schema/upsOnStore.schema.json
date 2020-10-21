@@ -39,12 +39,12 @@
     },
     "dcmUPSLabel": {
       "title": "Procedure Step Label",
-      "description": "Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.",
+      "description": "Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {StudyDescription}",
       "type": "string"
     },
     "dcmUPSWorklistLabel": {
       "title": "Worklist Label",
-      "description": "Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.",
+      "description": "Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {StudyDescription}",
       "type": "string"
     },
     "dcmUPSPriority": {
@@ -148,17 +148,17 @@
     },
     "dcmUPSScheduledHumanPerformerName": {
       "title": "Scheduled Human Performer Name",
-      "description": "Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.",
+      "description": "Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {PerformingPhysicianName}",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerOrganization": {
       "title": "Scheduled Human Performer Organization",
-      "description": "Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.",
+      "description": "Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {ResponsibleOrganization}",
       "type": "string"
     },
     "dcmAdmissionID": {
       "title": "Admission Number",
-      "description": "Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.",
+      "description": "Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {AdmissionID}",
       "type": "string"
     },
     "dicomIssuerOfAdmissionID": {
@@ -180,7 +180,7 @@
     },
     "dcmAccessionNumber": {
       "title": "Accession Number",
-      "description": "Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.",
+      "description": "Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {AccessionNumber}",
       "type": "string"
     },
     "dicomIssuerOfAccessionNumber": {
@@ -190,22 +190,22 @@
     },
     "dcmRequestedProcedureID": {
       "title": "Requested Procedure ID",
-      "description": "Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.",
+      "description": "Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {StudyID}",
       "type": "string"
     },
     "dcmRequestedProcedureDescription": {
       "title": "Requested Procedure Description",
-      "description": "Value of Requested Procedure Description (0032,1060) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.",
+      "description": "Value of Requested Procedure Description (0032,1060) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {StudyDescription}",
       "type": "string"
     },
     "dcmRequestingPhysician": {
       "title": "Requesting Physician",
-      "description": "Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.",
+      "description": "Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {PerformingPhysicianName}",
       "type": "string"
     },
     "dcmRequestingService": {
       "title": "Requesting Service",
-      "description": "Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset.",
+      "description": "Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {StudyDescription}",
       "type": "string"
     },
     "dcmURI": {

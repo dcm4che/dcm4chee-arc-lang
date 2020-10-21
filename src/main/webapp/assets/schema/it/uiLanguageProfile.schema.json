@@ -16,7 +16,7 @@
       "title": "Lingua predefinita",
       "description": "Seleziona la lingua predefinita per l'interfaccia utente",
       "type": "string",
-      "items": {
+      "items" : {
         "type": "string"
       },
       "format": "dcmDefaultLanguage"
@@ -25,7 +25,7 @@
       "title": "Ruolo",
       "description": "Ruolo del nome utente a cui deve essere applicato questo profilo di lingua",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string"
       }
     },

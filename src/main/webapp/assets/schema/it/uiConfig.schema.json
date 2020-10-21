@@ -15,16 +15,16 @@
       "title": "Statistic Modalities",
       "description": "Modalità preselezionate che dovrebbero essere visualizzate nella pagina Statistiche",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string"
       }
     },
     "dcmuiLanguageConfig":{
-      "title": "Configurazione lingua",
-      "description": "Configura le lingue dell'interfaccia utente",
+      "title": "Language Config",
+      "description": "Config the languages of the UI",
       "titleKey":"{dcmuiLanguageConfigName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiLanguage.schema.json"
       }
     },
@@ -32,7 +32,7 @@
       "title": "Widget AETs",
       "description": "Seleziona gli AET che non vuoi vedere nel widget AET, dove puoi selezionare in quale di essi l'AET appena aggiunto dovrebbe essere come `Titolo AE di chiamata accettato`",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string"
       },
       "format": "dcmAETitle"
@@ -51,7 +51,7 @@
       "title": "Default Widget AETs",
       "description": "Seleziona gli AET che dovrebbero essere preselezionati su Widget AETs",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string"
       },
       "format": "dcmAETitle"
@@ -61,7 +61,7 @@
       "description": "Definisci quali AET devono essere visibili negli elenchi a discesa dell'interfaccia utente",
       "titleKey":"{dcmuiAetListName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiAet.schema.json"
       }
     },
@@ -70,7 +70,7 @@
       "description": "Definisci quali WebApp devono essere visibili nella parte superiore dell'elenco a discesa nell'interfaccia utente",
       "titleKey":"{dcmuiWebAppListName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiWebApp.schema.json"
       }
     },
@@ -79,15 +79,15 @@
       "description": "Permission",
       "titleKey":"{dcmuiPermissionName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiPermission.schema.json"
       }
     },"dcmuiFilterTemplateObject": {
-      "title": "Modello di Filtro UI",
-      "description": "Modello di filtro Definito",
+      "title": "UI Filter Template",
+      "description": "Defined filter template",
       "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiFilterTemplate.schema.json"
       }
     },
@@ -96,7 +96,7 @@
       "description": "Configurazione confronto studio",
       "titleKey":"{dcmuiDiffConfigName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiDiffConfig.schema.json"
       }
     },
@@ -105,7 +105,7 @@
       "description": "Configurazione dashboard dell'interfaccia utente",
       "titleKey":"{dcmuiDashboardConfigName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiDashboard.schema.json"
       }
     },
@@ -114,7 +114,7 @@
       "description": "Configurazione della tabella",
       "titleKey":"{dcmuiStudyTableConfigName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiTable.schema.json"
       }
     },
@@ -123,7 +123,7 @@
       "description": "Configurazione di Elasticsearch per la versione pro",
       "titleKey":"{dcmuiElasticsearchConfigName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiElasticsearch.schema.json"
       }
     },
@@ -132,7 +132,7 @@
       "description": "Altri URL del dispositivo dell'interfaccia utente",
       "titleKey":"{dcmuiDeviceURLName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiDeviceURL.schema.json"
       }
     },
@@ -141,7 +141,7 @@
       "description": "Dispositivi di gruppo in cluster",
       "titleKey":"{dcmuiDeviceClusterName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiDeviceCluster.schema.json"
       }
     }

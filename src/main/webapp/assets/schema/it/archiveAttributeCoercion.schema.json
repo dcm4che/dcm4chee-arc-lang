@@ -1,6 +1,6 @@
 {
   "title": "Archive Attribute Coercion",
-  "description": "Coercizione dell'attributo di archivio del DIMSE ricevuto \/ inviato",
+  "description": "Coercizione dell'attributo di archivio del DIMSE ricevuto / inviato",
   "type": "object",
   "required": [
     "cn",
@@ -15,14 +15,14 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo di Archive Attribute Coercion",
+      "description": "Nome arbitrario/significativo di Archive Attribute Coercion",
       "type": "string"
     },
     "dcmRulePriority": {
       "title": "Priorità delle regole",
       "description": "Priorità della regola.",
       "type": "integer",
-      "default": 0,
+      "default" : 0,
       "minimum": 0
     },
     "dcmDIMSE": {
@@ -56,7 +56,7 @@
     },
     "dcmProperty": {
       "title": "Condizioni",
-      "description": "Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER",
+      "description": "Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Esempio: SendingApplicationEntityTitle=FORWARD o Modality=MR|CT o ProcedureCodeSequence.CodeValue=MRProcedure o 00180015=KNEE o 00321034.00080100=RequestingServiceCode o ImageType[3]=LOCALIZER",
       "type": "array",
       "items": {
         "type": "string"
@@ -148,12 +148,12 @@
       "title": "Nullify Attribute Tag",
       "description": "Tag DICOM dell'attributo da annullare come stringa esadecimale",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmTag"
     },
     "dcmMergeAttribute": {
       "title": "Attributo Unione",
-      "description": "Attributo di unione DICOM nel formato {attributeID} = {value}. {attributeID} all'interno di {value} verrà sostituito dal valore di quello attribuito nel set di dati originale.",
+      "description": "Attributo di unione DICOM nel formato {attributeID} = {value}. {attributeID} all'interno di {value} verrà sostituito dal valore di quello attribuito nel set di dati originale. Esempio: InstitutionName=RegionalHospital o 00081040=XRay.",
       "type": "array",
       "items": {
         "type": "string"

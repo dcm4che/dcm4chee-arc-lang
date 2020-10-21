@@ -40,7 +40,7 @@
       "title": "Nome coda",
       "description": "Nome coda JMS",
       "type": "string",
-      "enum": [
+      "enum" : [
         "Export1",
         "Export2",
         "Export3",
@@ -57,7 +57,7 @@
       "title": "Priorità di esportazione",
       "description": "Livello di priorità JMS per l'elaborazione dell'attività di esportazione da 0 (il più basso) a 9 (il più alto).",
       "type": "integer",
-      "default": 4,
+      "default" : 4,
       "minimum": 0,
       "maximum": 9
     },
@@ -100,7 +100,7 @@
       "title": "Destinazione IAN",
       "description": "Destinazione per inviare IAN N-CREATE RQ.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmRetrieveAET": {

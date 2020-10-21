@@ -46,8 +46,8 @@
       "order":2
     },
     "dicomVendorData":{
-      "title": "Dati del dispositivo del fornitore",
-      "description": "Informazioni sulla configurazione del fornitore specifico del dispositivo",
+      "title": "Vendor Device Data",
+      "description": "Device specific vendor configuration information",
       "type": "boolean",
       "order":2
     },
@@ -96,7 +96,7 @@
       "description": "Rappresenta il tipo di dispositivo ed è più applicabile per le modalità di acquisizione",
       "type": "array",
       "order":9,
-      "items": {
+      "items" : {
         "type": "string",
         "enum":[
           "ARCHIVE",
@@ -164,7 +164,7 @@
     },
     "dicomInstitutionCode": {
       "title": "Codice istituto",
-      "description": "Codice\/i istituto in formato (CV, CSD, \"CM\")",
+      "description": "Codice/i istituto in formato (CV, CSD, \"CM\")",
       "type": "array",
       "order":11,
       "items": {

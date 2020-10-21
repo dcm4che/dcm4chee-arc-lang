@@ -34,7 +34,7 @@
       "title": "Dispositivo",
       "description": "Aggiungi il nome dei dispositivi configurati",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmuiDeviceURLObject"
     },
     "dcmuiDeviceClusterInstalled": {

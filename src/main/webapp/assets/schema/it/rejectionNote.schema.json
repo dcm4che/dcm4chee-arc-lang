@@ -37,7 +37,7 @@
       "title": "Accetta istanza rifiutata precedente",
       "description": "Specifica il comportamento alla successiva occorrenza di istanze rifiutate da una particolare nota di rifiuto.",
       "type": "string",
-      "default": "RIFIUTO",
+      "default": "REJECT",
       "enum": [
         "REJECT",
         "RESTORE",

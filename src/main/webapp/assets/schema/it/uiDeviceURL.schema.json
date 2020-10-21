@@ -15,7 +15,7 @@
     },
     "dcmuiDeviceURL": {
       "title": "URL del dispositivo",
-      "description": "URL di accesso del dispositivo. E.g. http(s):\/\/<myDevice-host>:<myDevice-port> ",
+      "description": "URL di accesso del dispositivo. E.g. http(s)://<myDevice-host>:<myDevice-port> ",
       "type": "string"
     },
     "dcmuiDeviceURLDescription": {

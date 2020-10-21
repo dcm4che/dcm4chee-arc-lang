@@ -10,7 +10,7 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo per la mappatura dell'ordine delle stazioni programmate",
+      "description": "Nome arbitrario/significativo per la mappatura dell'ordine delle stazioni programmate",
       "type": "string"
     },
     "hl7OrderScheduledStationDeviceName": {

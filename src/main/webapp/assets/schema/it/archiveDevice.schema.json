@@ -4,6 +4,8 @@
   "type": "object",
   "required": [
     "dcmFuzzyAlgorithmClass",
+    "dcmCalculateStudySizeFetchSize",
+    "dcmCalculateQueryAttributes",
     "dcmSeriesMetadataFetchSize",
     "dcmSeriesMetadataThreads",
     "dcmSeriesMetadataMaxRetries",
@@ -120,11 +122,37 @@
       "type": "string",
       "format": "dcmBulkDataDescriptorID"
     },
+    "dcmCalculateStudySizeDelay": {
+      "title": "Calculate Study Size Delay",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS for eager calculation of Study Size and Query Attributes. If absent, no (minimal) delay for eager calculation of the Study Size and Query Attributes is applied.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmCalculateStudySizePollingInterval": {
+      "title": "Calculate Study Size Polling Interval",
+      "description": "Polling Interval for Studies with unknown size in ISO-8601 duration format PnDTnHnMnS. If absent, there is no eager calculation of the Study Size and Query Attributes.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmCalculateStudySizeFetchSize": {
+      "title": "Calculate Study Size Fetch Size",
+      "description": "Limit result set of DB query for Studies with unknown size.",
+      "type": "integer",
+      "default" : 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
+    "dcmCalculateQueryAttributes": {
+      "title": "Calculate Query Attributes",
+      "description": "Indicates to eager calculate Query Attributes according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.",
+      "type": "boolean",
+      "default" : false
+    },
     "dcmSeriesMetadataStorageID": {
       "title": "ID di archiviazione metadati delle serie",
       "description": "ID di archiviazione su cui sono archiviati gli archivi ZIP con i metadati aggregati di tutte le istanze di una serie. È possibile configurare più sistemi di archiviazione. Se assenti, non verranno archiviati metadati di serie aggregati.",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -145,7 +173,7 @@
       "title": "Aggiorna dimensioni di recupero metadati della serie",
       "description": "Numero massimo di serie pianificate per l'aggiornamento dei metadati recuperati da una query.",
       "type": "integer",
-      "default": 100,
+      "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -153,20 +181,20 @@
       "title": "Aggiorna thread di metadati della serie",
       "description": "Numero di thread utilizzati per la creazione e l'aggiornamento dei metadati della serie.",
       "type": "integer",
-      "default": 1,
+      "default" : 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmSeriesMetadataMaxRetries": {
       "title": "Aggiorna numero massimo di tentativi di metadati della serie",
-      "description": "Numero massimo di tentativi per creare\/aggiornare i metadati della serie aggregati. Efficace solo se è specificato l'intervallo di tentativi di aggiornamento dei metadati delle serie -1 = per sempre.",
+      "description": "Numero massimo di tentativi per creare/aggiornare i metadati della serie aggregati. Efficace solo se è specificato l'intervallo di tentativi di aggiornamento dei metadati delle serie -1 = per sempre.",
       "type": "integer",
       "default": 0,
       "minimum": -1
     },
     "dcmSeriesMetadataRetryInterval": {
       "title": "Aggiorna intervallo tentativi metadati delle serie",
-      "description": "Intervallo nel formato di durata ISO-8601 PnDTnHnMnS in cui verranno ritentati i tentativi non riusciti di creare\/aggiornare i metadati della serie aggregati. Efficace solo se si aggiorna il numero massimo di tentativi di metadati della serie!= 0. Se assente, i tentativi falliti non verranno riprovati.",
+      "description": "Intervallo nel formato di durata ISO-8601 PnDTnHnMnS in cui verranno ritentati i tentativi non riusciti di creare/aggiornare i metadati della serie aggregati. Efficace solo se si aggiorna il numero massimo di tentativi di metadati della serie!= 0. Se assente, i tentativi falliti non verranno riprovati.",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -174,7 +202,7 @@
       "title": "Elimina record istanza",
       "description": "Indica che i record dell'istanza possono essere eliminati dal database.",
       "type": "boolean",
-      "default": false
+      "default" : false
     },
     "dcmPurgeInstanceRecordsDelay": {
       "title": "Ritardo nell'Eliminazione dei record di istanza",
@@ -192,7 +220,7 @@
       "title": "Dimensioni di recupero per l'eliminazione dei record istanza",
       "description": "Numero massimo di serie pianificate per l'eliminazione dei record di istanza dal database recuperati da una query. Efficace solo se Purge Instance Records = true.",
       "type": "integer",
-      "default": 100,
+      "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -206,15 +234,15 @@
       "title": "Dimensione di recupero MWL ",
       "description": "Numero massimo di articoli MWL da aggiornare o eliminare in una transazione.",
       "type": "integer",
-      "default": 100,
+      "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmDeleteMWLDelay": {
       "title": "Elimina ritardo MWL",
-      "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMn.nS per l'eliminazione di elementi MWL. I ritardi specifici dello stato possono essere specificati dal prefisso 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. Se assenti, gli elementi MWL non verranno eliminati.",
+      "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMn.nS per l'eliminazione di elementi MWL. I ritardi specifici dello stato possono essere specificati dal prefisso 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. Esempio: PT5M o CANCELED:PT10M. Se assenti, gli elementi MWL non verranno eliminati.",
       "type": "array",
-      "items": { "type": "string" }
+      "items" : { "type": "string" }
     },
     "dcmDeleteUPSPollingInterval": {
       "title": "Elimina intervallo polling UPS",
@@ -226,7 +254,7 @@
       "title": "Elimina Dimensione di recupero UPS",
       "description": "Numero massimo di UPS (Unified Procedure Steps) da eliminare in una transazione.",
       "type": "integer",
-      "default": 100,
+      "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -246,7 +274,7 @@
       "title": "Politica di sovrascrittura",
       "description": "Politica di sovrascrittura. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
-      "default": "MAI",
+      "default": "NEVER",
       "enum": [
         "NEVER",
         "ALWAYS",
@@ -265,7 +293,7 @@
       "title": "Accetta ID paziente mancante",
       "description": "Indica se gli oggetti senza ID paziente devono essere accettati e se deve essere creato un ID paziente. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
-      "default": "CREARE",
+      "default": "CREATE",
       "enum": [
         "YES",
         "NO",
@@ -276,7 +304,7 @@
       "title": "Accetta ID paziente in conflitto",
       "description": "Indica se gli oggetti con un ID paziente diverso dall'ID paziente presente negli oggetti dello studio ricevuti in precedenza devono essere accettati. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
-      "default": "UNITI",
+      "default": "MERGED",
       "enum": [
         "YES",
         "NO",
@@ -293,7 +321,7 @@
       "title": "Nascondi SPS con Stato",
       "description": "Codici di stato del passo della procedura pianificata degli articoli MWL che non devono essere restituiti da MWL SCP. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -317,7 +345,7 @@
       "title": "Negoziazione dell'identità dell'utente",
       "description": "Specifica di ignorare l'elemento secondario di negoziazione dell'identità dell'utente nelle richieste di associazione (= NOT_SUPPORTED), per verificare che il nome utente e la password passati o il token Web JSON siano su un server Keycloak (= SUPPORTS) o di rifiutare le richieste di associazione senza un nome utente e una password validi o un token Web JSON nel suo oggetto secondario di negoziazione dell'identità (= REQUIRED). Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
-      "default": "SUPPORTI",
+      "default": "SUPPORTS",
       "enum": [
         "NOT_SUPPORTED",
         "SUPPORTS",
@@ -357,14 +385,14 @@
       "title": "Classi SR supportate da Wado",
       "description": "Classi SR SOP supportate per il recupero WADO",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmSOPClass"
     },
     "dcmWadoSupportedPRClasses": {
       "title": "Classi PR supportate da Wado",
       "description": "Classi SR SOP supportate per il recupero WADO",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmSOPClass"
     },
     "dcmWadoSR2HtmlTemplateURI": {
@@ -379,7 +407,7 @@
     },
     "dcmWadoCDA2HtmlTemplateURI": {
       "title": "URI per modello da WADO CDA a HTML",
-      "description": "URL al foglio di stile XSL inserito come <?xml-stylesheet type=\"text\/xsl\" href=\"<url>\" > nei documenti CDA restituiti dal servizio WADO-URI. Se assente, il documento CDI incorporato viene restituito letteralmente. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
+      "description": "URL al foglio di stile XSL inserito come <?xml-stylesheet type=\"text/xsl\" href=\"<url>\" > nei documenti CDA restituiti dal servizio WADO-URI. Se assente, il documento CDI incorporato viene restituito letteralmente. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string"
     },
     "dcmWadoThumbnailViewport": {
@@ -393,7 +421,7 @@
       "title": "Formato del Nome della voce per lo ZIP Wado",
       "description": "Formato dei nomi delle voci nell'archivio ZIP restituito da WADO-RS. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
-      "default": "DICOM\/{0020000D,hash}\/{0020000E,hash}\/{00080018,hash}.dcm"
+      "default": "DICOM/{0020000D,hash}/{0020000E,hash}/{00080018,hash}.dcm"
     },
     "dcmQueryFetchSize": {
       "title": "Dimensione recupero query",
@@ -420,14 +448,14 @@
       "title": "Destinazione di inoltro Mpps",
       "description": "Destinazione per inoltrare MPPS N-CREATE RQ e N-SET RQ. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
       "title": "Destinazione IAN",
       "description": "Destinazione per inviare IAN N-CREATE RQ. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmIanDelay": {
@@ -472,7 +500,7 @@
       "title": "Politica di Spanning C-Find SCP",
       "description": "Specifica la politica per combinare le corrispondenze restituite dallo Spanning C-Find SCP configurato con le voci corrispondenti del DB di archivio. SUPPLEMENT (= restituisce corrispondenze locali prima di corrispondenze aggiuntive da Spanning C-Find SCP), MERGE (= restituisce corrispondenze da Spanning C-Find SCP prima di corrispondenze locali aggiuntive), REPLACE (= restituisce solo corrispondenze da Spanning C-Find SCP). Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
-      "default": "SOSTITUISCI",
+      "default": "REPLACE",
       "enum": [
         "SUPPLEMENT",
         "MERGE",
@@ -750,7 +778,7 @@
     },
     "dcmStowSpoolDirectory": {
       "title": "Directory di spool STOW-RS",
-      "description": "Percorso alla directory utilizzato dal servizio STOW-RS per eseguire lo spooling di dati in blocco di metadati XML \/ JSON e messaggi di richiesta dati in blocco.",
+      "description": "Percorso alla directory utilizzato dal servizio STOW-RS per eseguire lo spooling di dati in blocco di metadati XML / JSON e messaggi di richiesta dati in blocco.",
       "type": "string",
       "default": "${jboss.server.temp.dir}"
     },
@@ -814,12 +842,12 @@
     },
     "hl7LogFilePattern": {
       "title": "HL7 Log File Pattern",
-      "description": "Percorso dei messaggi HL7 che verranno acquisiti esattamente come ricevuti. Se assente, non c'è registrazione log. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di archivio. Per esempio. ${jboss.server.data.dir}\/hl7\/${date,yyyy\/MM\/dd}\/${SerialNo}-${MSH-9}.hl7",
+      "description": "Percorso dei messaggi HL7 che verranno acquisiti esattamente come ricevuti. Se assente, non c'è registrazione log. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di archivio. Per esempio. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
       "type": "string"
     },
     "hl7ErrorLogFilePattern": {
       "title": "HL7 Error Log File Pattern",
-      "description": "Percorso ai messaggi HL7 che verranno acquisiti esattamente come ricevuti, quando l'elaborazione dei messaggi HL7 fallisce. Se assente, non c'è registrazione log. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di archivio. Per esempio. ${jboss.server.data.dir}\/hl7\/${date,yyyy\/MM\/dd}\/${SerialNo}-${MSH-9}.hl7",
+      "description": "Percorso ai messaggi HL7 che verranno acquisiti esattamente come ricevuti, quando l'elaborazione dei messaggi HL7 fallisce. Se assente, non c'è registrazione log. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di archivio. Per esempio. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
       "type": "string"
     },
     "hl7NoPatientCreateMessageType": {
@@ -892,17 +920,17 @@
     },
     "dcmStorePermissionServiceURL": {
       "title": "URL del servizio di autorizzazione dell'archivio",
-      "description": "URL del servizio di autorizzazione dello storage che verrà richiamato alla ricezione del primo oggetto di uno studio da parte di qualsiasi AE. {<dicomTag>} verrà sostituito dal valore dell'attributo nell'oggetto. Ad esempio: http(s):\/\/<store-permission-service-provider-host>:<store-permission-service-provider-port>\/storage-permission\/study\/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
+      "description": "URL del servizio di autorizzazione dello storage che verrà richiamato alla ricezione del primo oggetto di uno studio da parte di qualsiasi AE. {<dicomTag>} verrà sostituito dal valore dell'attributo nell'oggetto. Ad esempio: http(s)://<store-permission-service-provider-host>:<store-permission-service-provider-port>/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string"
     },
     "dcmStorePermissionServiceResponse": {
       "title": "Store Permission Service Response",
-      "description": "Emula la risposta del servizio di autorizzazione dello storage alla ricezione del primo oggetto di uno studio da parte di qualsiasi AE. {<dicomTag>} verrà sostituito dal valore dell'attributo nell'oggetto. Efficace solo se non è configurato alcun URL del servizio di autorizzazione all'archivio. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
+      "description": "Emula la risposta del servizio di autorizzazione dello storage alla ricezione del primo oggetto di uno studio da parte di qualsiasi AE. {<dicomTag>} verrà sostituito dal valore dell'attributo nell'oggetto. Efficace solo se non è configurato alcun URL del servizio di autorizzazione all'archivio. Esempio: patientID={00100020},patientName={00100010},errorCode=0110H,errorComment=errorMessage. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string"
     },
     "dcmStorePermissionServiceResponsePattern": {
       "title": "Pattern del servizio di autorizzazione dell'archivio",
-      "description": "Espressione regolare applicata alle risposte dal servizio di autorizzazione dell'archivio per determinare l'accordo per l'archiviazione. E.g. \"validation\"\\s*:\\s*\"true\" . Se assente, ogni risposta positiva verrà considerata come un accordo per l'archiviazione. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
+      "description": "Espressione regolare applicata alle risposte dal servizio di autorizzazione dell'archivio per determinare l'accordo per l'archiviazione. E.g. \"validation\"\\s*:\\s*\"true\" o '(?<=patientName=)[^null].*?(?=,)'. Se assente, ogni risposta positiva verrà considerata come un accordo per l'archiviazione. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string"
     },
     "dcmStorePermissionServiceErrorCommentPattern": {
@@ -985,7 +1013,7 @@
       "title": "Consenti eliminazione studio in modo permanente",
       "description": "Consenti di eliminare lo studio in modo permanente. REJECTED = solo studi già rifiutati. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
-      "default": "RESPINTO",
+      "default": "REJECTED",
       "enum": [
         "ALWAYS",
         "REJECTED"
@@ -1078,7 +1106,7 @@
     },
     "dcmMultipleStoreAssociations": {
       "title": "Multiple Store Associations",
-      "description": "Numero di associazioni di archiviazione utilizzate per il recupero di oggetti compositi. I numeri specifici di C-STORE SCP possono essere specificati con il prefisso<AETitle>':'. In caso di assenza, verrà utilizzata una sola Associazione. Può essere integrato da associazioni di storage multipli configurate per particolari AE della rete di archiviazione.",
+      "description": "Numero di associazioni di archiviazione utilizzate per il recupero di oggetti compositi. I numeri specifici di C-STORE SCP possono essere specificati con il prefisso<AETitle>':'. In caso di assenza, verrà utilizzata una sola Associazione. Esempio : 2 o STORESCP:3 Può essere integrato da associazioni di storage multipli configurate per particolari AE della rete di archiviazione.",
         "type": "array",
         "items": {
         "type": "string"
@@ -1106,7 +1134,7 @@
     },
     "dcmRemapRetrieveURL": {
       "title": "Rimappa URL di recupero",
-      "description": "Rimappa l'URL di recupero utilizzato nelle risposte dei metadati QIDO-RS e WADO-RS. Facoltativamente con prefisso \"[<http-client-host>]\". E.g.: \"[cache-proxy]http:\/\/cache-proxy:8080\". Se assente o se quanto specificato in <http-client-host> non corrisponde, vengono utilizzati lo schema e l'autorizzazione del server dell'URL di richiesta QIDO-RS o WADO-RS.",
+      "description": "Rimappa l'URL di recupero utilizzato nelle risposte dei metadati QIDO-RS e WADO-RS. Facoltativamente con prefisso \"[<http-client-host>]\". E.g.: \"[cache-proxy]http://cache-proxy:8080\". Se assente o se quanto specificato in <http-client-host> non corrisponde, vengono utilizzati lo schema e l'autorizzazione del server dell'URL di richiesta QIDO-RS o WADO-RS.",
       "type": "string"
     },
     "dcmProxyUpstreamURL": {
@@ -1126,7 +1154,7 @@
     },
     "dcmCopyMoveUpdatePolicy": {
       "title": "Copia il criterio di aggiornamento dello spostamento",
-      "description": "Specifica la politica di aggiornamento per gli attributi dello studio di destinazione sulla copia\/spostamento di istanze da un altro studio. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
+      "description": "Specifica la politica di aggiornamento per gli attributi dello studio di destinazione sulla copia/spostamento di istanze da un altro studio. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
       "default": "PRESERVE",
       "enum": [
@@ -1174,7 +1202,7 @@
       "title": "ID di verifica dello storage",
       "description": "Indica che per una verifica di archiviazione corretta, l'oggetto deve essere archiviato su uno dei sistemi di archiviazione specificati. Se assente, è sufficiente la corretta verifica della archiviazione su qualsiasi Storage System. Non efficace con il criterio di verifica dello storage: DB_RECORD_EXISTS. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationAETitle": {
@@ -1226,7 +1254,7 @@
       "title": "Dimensioni recupero verifica archiviazione",
       "description": "Numero massimo di serie pianificate per la verifica dell'archiviazione recuperate da una query.",
       "type": "integer",
-      "default": 100,
+      "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1258,7 +1286,7 @@
       "title": "Threads per la compressione",
       "description": "Numero di thread utilizzati per la compressione.",
       "type": "integer",
-      "default": 1,
+      "default" : 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1275,7 +1303,7 @@
       "title": "Dimensioni recupero per la compressione",
       "description": "Numero massimo di serie recuperate per la compressione attraverso una query.",
       "type": "integer",
-      "default": 100,
+      "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1301,7 +1329,7 @@
       "title": "Dimensioni recupero verifica paziente",
       "description": "Numero massimo di pazienti recuperati per la verifica del paziente in una query.",
       "type": "integer",
-      "default": 100,
+      "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1309,7 +1337,7 @@
       "title": "Verifica del paziente con Modifica dell'emittente dell'ID paziente",
       "description": "Indica se l'emittente dell'ID paziente deve essere adattato al valore restituito dal servizio PDQ.",
       "type": "boolean",
-      "default": false
+      "default" : false
     },
     "dcmPatientVerificationPeriod": {
       "title": "Periodo di verifica del paziente",
@@ -1352,7 +1380,7 @@
       "title": "Applicazione di Ricezione HL7 ADT",
       "description": "Applicazione | Nome della struttura di invio dell'applicazione per i messaggi HL7 ADT per sincronizzare i sistemi esterni sugli aggiornamenti delle informazioni sul paziente eseguiti. Se assente, la sincronizzazione dei sistemi esterni tramite messaggi HL7 ADT è disabilitata.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
     "hl7PSUSendingApplication": {
@@ -1365,7 +1393,7 @@
       "title": "Applicazione Ricevente per l'Aggiornamento dello stato della procedura HL7",
       "description": "Applicazione | Nome della struttura di invio dell'applicazione per l'aggiornamento dello stato della procedura HL7. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
     "hl7PSUDelay": {
@@ -1376,7 +1404,7 @@
     },
     "hl7PSUConditions": {
       "title": "Condizioni degli attributi di aggiornamento dello stato della procedura HL7",
-      "description": "Limita la notifica dell'aggiornamento dello stato della procedura configurata HL7 di Ricezione delle applicazioni sull'aggiornamento dello stato della procedura in base alle condizioni sugli attributi dell'oggetto composito ricevuto nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
+      "description": "Limita la notifica dell'aggiornamento dello stato della procedura configurata HL7 di Ricezione delle applicazioni sull'aggiornamento dello stato della procedura in base alle condizioni sugli attributi dell'oggetto composito ricevuto nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Esempio: SendingApplicationEntityTitle=FORWARD o Modality=MR|CT o ProcedureCodeSequence.CodeValue=MRProcedure o 00180015=KNEE o 00321034.00080100=RequestingServiceCode o ImageType[3]=LOCALIZER. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "array",
       "items": {
         "type": "string"
@@ -1511,7 +1539,7 @@
       "title": "Politica per il paziente unito referenziato HL7",
       "description": "Specifica la politica sui messaggi HL7 in arrivo che fanno riferimento a un paziente già unito. REJECT: rifiuta qualsiasi messaggio HL7 di questo tipo, IGNORE: ignora qualsiasi messaggio HL7 di questo tipo, IGNORE_DUPLICATE_MERGE: ignora solo i messaggi di unione HL7 duplicati, rifiuta qualsiasi altro messaggio simile. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di Archivio.",
       "type": "string",
-      "default": "RIFIUTO",
+      "default": "REJECT",
       "enum": [
         "REJECT",
         "IGNORE",
@@ -1571,7 +1599,7 @@
       "title": "Ritardo minimo di avvio dello scheduler",
       "description": "Ritardo minimo in secondi per l'avvio degli scheduler all'avvio del sistema.",
       "type": "integer",
-      "default": 60,
+      "default" : 60,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1579,26 +1607,26 @@
       "title": "Rifiuta attributo paziente in conflitto",
       "description": "Tag DICOM dell'attributo paziente che deve corrispondere negli oggetti ricevuti con il valore degli oggetti ricevuti in precedenza con lo stesso ID paziente per essere accettato. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
       "title": "Sintassi di trasferimento ritirate STOW",
       "description": "Memorizza le immagini JPEG a progressione completa ricevute, JPEG non gerarchiche in immagini DICOM con il corrispondente UID sintassi di trasferimento (ritirato) 1.2.840.10008.1.2.4.55. Altrimenti impostare 1.2.840.10008.1.2.4.50 (= JPEG Baseline) o 1.2.840.10008.1.2.4.51 (= JPEG Extended) come Transfer Syntax UID dell'immagine DICOM memorizzata, senza transcodifica in JPEG Baseline o JPEG Extended, ma includendo il JPEG dell'immagine ricevuta. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "boolean",
-      "default": false
+      "default" : false
     },
     "dcmStowExcludeAPPMarkers": {
       "title": "STOW Escludi i marker dell'applicazione",
       "description": "Indica se i marker APP nelle immagini JPEG ricevute nelle richieste STOW-RS Metadata e Bulkdata devono essere esclusi dai flussi di bit JPEG incapsulati nelle istanze DICOM create. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "boolean",
-      "default": false
+      "default" : false
     },
     "dcmStowQuicktime2MP4": {
       "title": "STOW Da Quicktime a MP4",
       "description": "Indica se i contenitori QuickTime ricevuti nelle richieste STOW-RS Metadata e Bulkdata devono essere convertiti in contenitori MP4 incapsulati in istanze DICOM create. La conversione richiede che ffmpeg sia installato e che l'utility ffmpeg CLI sia disponibile nel PATH. In caso contrario, i contenitori Quicktime verranno incapsulati nell'oggetto DICOM archiviato non cambiati, con una sintassi di trasferimento DICOM MPEG-4 dichiarata che riflette la codifica del flusso video nel contenitore, ma contraddice il formato effettivo del contenitore. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "boolean",
-      "default": false
+      "default" : false
     },
     "dcmFallbackCMoveSCPCallingAET": {
       "title": "Titolo AE chiamante di Fallback C-Move SCP ",
@@ -1611,7 +1639,7 @@
       "description": "Specifica gli attributi archiviati nel database",
       "type": "array",
       "titleKey":"{dcmEntity}",
-      "items": {
+      "items" : {
         "$ref": "attributeFilter.schema.json"
       }
     },
@@ -1620,7 +1648,7 @@
       "description": "Set di attributi con nome per il parametro di query \"includefields\" dei metadati QIDO-RS e WADO-RS o dal parametro di query \"comparefield\" delle richieste DIFF-RS.",
       "type": "array",
       "titleKey":"{dcmAttributeSetType}:{dcmAttributeSetID}",
-      "items": {
+      "items" : {
         "$ref": "attributeSet.schema.json"
       }
     },
@@ -1629,7 +1657,7 @@
       "description": "Specifica i descrittori di dati in blocco applicati dai servizi che forniscono i metadati delle istanze archiviate.",
       "type": "array",
       "titleKey":"{dcmBulkDataDescriptorID}",
-      "items": {
+      "items" : {
         "$ref": "bulkData.schema.json"
       }
     },
@@ -1638,16 +1666,16 @@
       "description": "Specifica il sistema di archiviazione",
       "type": "array",
       "titleKey":"{dcmStorageID}",
-      "items": {
+      "items" : {
         "$ref": "storage.schema.json"
       }
     },
     "dcmQueryRetrieveView": {
-      "title": "Vista di Query\/Retrieve ",
+      "title": "Vista di Query/Retrieve ",
       "description": "Specifica il comportamento della nota di rifiuto memorizzata",
       "type": "array",
       "titleKey":"{dcmQueryRetrieveViewID}",
-      "items": {
+      "items" : {
         "$ref": "queryRetrieveView.schema.json"
       }
     },
@@ -1656,7 +1684,7 @@
       "description": "Coda JMS gestita",
       "type": "array",
       "titleKey":"{dcmQueueName}",
-      "items": {
+      "items" : {
         "$ref": "queue.schema.json"
       }
     },
@@ -1665,7 +1693,7 @@
       "description": "Metriche Attivate",
       "type": "array",
       "titleKey":"{dcmMetricsName}",
-      "items": {
+      "items" : {
         "$ref": "metrics.schema.json"
       }
     },
@@ -1674,7 +1702,7 @@
       "description": "Descrittore del servizio PDQ",
       "type": "array",
       "titleKey":"{dcmPDQServiceID}",
-      "items": {
+      "items" : {
         "$ref": "pdqService.schema.json"
       }
     },
@@ -1683,7 +1711,7 @@
       "description": "Descrittore dell'esportatore",
       "type": "array",
       "titleKey":"{dcmExporterID}",
-      "items": {
+      "items" : {
         "$ref": "exporter.schema.json"
       }
     },
@@ -1692,7 +1720,7 @@
       "description": "Regole di esportazione applicate agli oggetti DICOM ricevuti da qualsiasi AE. May be supplemented by configured Export Rules for particular Archive Network AEs.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "exportRule.schema.json"
       }
     },
@@ -1701,7 +1729,7 @@
       "description": "Esporta le regole dei Precedenti applicate agli oggetti DICOM ricevuti da qualsiasi AE. Può essere integrato dalle regole di Esportazione dei Precedenti configurate per particolari AE della rete di Archiviazione.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "exportPriorsRule.schema.json"
       }
     },
@@ -1710,7 +1738,7 @@
       "description": "Regole di inoltro RESTful. Può essere integrato da regole di inoltro RESTful configurate per particolari AE della rete di archivio.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "rsForwardRule.schema.json"
       }
     },
@@ -1719,7 +1747,7 @@
       "description": "Server Keycloak ",
       "type": "array",
       "titleKey":"{dcmKeycloakServerID}",
-      "items": {
+      "items" : {
         "$ref": "keycloakServer.schema.json"
       }
     },
@@ -1728,16 +1756,16 @@
       "description": "Regole di compressione applicate agli oggetti DICOM ricevuti da qualsiasi AE. Può essere integrato da regole di compressione configurate per particolari AE di Archive Network.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "archiveCompressionRule.schema.json"
       }
     },
     "dcmArchiveAttributeCoercion": {
       "title": "Coercizione di un Attributo",
-      "description": "Coercizione di un attributo applicato a un DIMSE ricevuto\/inviato da qualsiasi AE. Può essere integrato dalle coercizioni degli attributi configurate per particolari AE della rete di archivio.",
+      "description": "Coercizione di un attributo applicato a un DIMSE ricevuto/inviato da qualsiasi AE. Può essere integrato dalle coercizioni degli attributi configurate per particolari AE della rete di archivio.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "archiveAttributeCoercion.schema.json"
       }
     },
@@ -1746,7 +1774,7 @@
       "description": "Specifica il comportamento della nota di rifiuto memorizzata",
       "type": "array",
       "titleKey":"{dcmRejectionNoteLabel}",
-      "items": {
+      "items" : {
         "$ref": "rejectionNote.schema.json"
       }
     },
@@ -1755,7 +1783,7 @@
       "description": "Politiche di conservazione degli studi applicate agli studi ricevuti da qualsiasi AE. Può essere integrato da criteri di conservazione dello studio configurati per particolari AE della rete di archiviazione.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "studyRetentionPolicy.schema.json"
       }
     },
@@ -1764,7 +1792,7 @@
       "description": "Regole di controllo dell'accesso allo storage applicate agli studi ricevuti da qualsiasi AE. Può essere integrato dalle regole di controllo dell'accesso allo storage configurate per particolari AE della rete di archiviazione.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "storeAccessControlIDRule.schema.json"
       }
     },
@@ -1809,7 +1837,7 @@
       "description": "Generatore di ID",
       "type": "array",
       "titleKey":"{dcmIDGeneratorName}",
-      "items": {
+      "items" : {
         "$ref": "idGenerator.schema.json"
       }
     },
@@ -1818,7 +1846,7 @@
       "description": "Timeout per inattività MWL",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "mwlIdleTimeout.schema.json"
       }
     },
@@ -1827,7 +1855,7 @@
       "description": "Regole di inoltro HL7 per i messaggi HL7 ricevuti da qualsiasi applicazione HL7. Può essere integrato da regole di inoltro HL7 configurate per particolari applicazioni HL7.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -1836,7 +1864,7 @@
       "description": "Regole di esportazione applicate ai messaggi HL7 ricevuti da qualsiasi applicazione HL7. Può essere integrato dalle regole di esportazione HL7 configurate per una particolare applicazione HL7.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -1845,7 +1873,7 @@
       "description": "Regole di Prefetch applicate ai messaggi HL7 ricevuti da qualsiasi applicazione HL7. Può essere integrato dalle regole di Prefetch HL7 configurate per una particolare applicazione HL7.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -1854,7 +1882,7 @@
       "description": "Politiche di conservazione dello studio HL7 attivate dai messaggi HL7 ricevuti da qualsiasi applicazione HL7. Può essere integrato da criteri di conservazione dello studio configurati per particolari AE della rete di archiviazione.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -1863,16 +1891,16 @@
       "description": "Stazione pianificata selezionata su MWL HL7 Order Feed ricevuto da qualsiasi applicazione HL7. Può essere integrato da valori configurati per particolari applicazioni HL7.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
     "hl7OrderSPSStatus": {
       "title": "Stato SPS per un Ordine HL7",
-      "description": "Specifica lo stato SPS degli elementi DICOM MWL creati\/aggiornati sui messaggi HL7 ORM ^ O01, OMI ^ O23, OMG ^ O19 ricevuti. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di Archivio.",
+      "description": "Specifica lo stato SPS degli elementi DICOM MWL creati/aggiornati sui messaggi HL7 ORM ^ O01, OMI ^ O23, OMG ^ O19 ricevuti. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di Archivio.",
       "type": "array",
       "titleKey":"{dcmSPSStatus}",
-      "items": {
+      "items" : {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     },

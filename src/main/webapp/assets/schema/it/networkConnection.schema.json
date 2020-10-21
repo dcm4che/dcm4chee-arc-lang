@@ -1,6 +1,6 @@
 {
   "title": "Connessione di Rete",
-  "description": "Descrive una porta TCP\/UDP su un dispositivo di rete.",
+  "description": "Descrive una porta TCP/UDP su un dispositivo di rete.",
   "type": "object",
   "required": [
     "dicomHostname"
@@ -8,7 +8,7 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo per l'oggetto Connessione di rete",
+      "description": "Nome arbitrario/significativo per l'oggetto Connessione di rete",
       "type": "string"
     },
     "dicomHostname": {
@@ -18,7 +18,7 @@
     },
     "dicomPort": {
       "title": "Porta",
-      "description": "Porta TCP\/UDP su cui è in ascolto un servizio. Potrebbe mancare se questa connessione di rete viene utilizzata solo per le connessioni in uscita",
+      "description": "Porta TCP/UDP su cui è in ascolto un servizio. Potrebbe mancare se questa connessione di rete viene utilizzata solo per le connessioni in uscita",
       "type": "integer",
       "minimum": 1,
       "maximum": 99999
