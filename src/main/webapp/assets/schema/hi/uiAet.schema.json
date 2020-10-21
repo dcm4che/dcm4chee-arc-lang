@@ -1,6 +1,6 @@
 {
-  "title": "ए.इ.टी. (AET) की सूची",
-  "description": "ए.इ.टी. (AET) की सूची ।",
+  "title": "AET की सूची",
+  "description": "AET की सूची ।",
   "type": "object",
   "required": [
     "dcmuiAetListName",
@@ -16,12 +16,12 @@
     },
     "dcmuiAetListDescription": {
       "title": "वर्णन",
-      "description": "ए.इ.टी. (AET) की सूची का वर्णन ।",
+      "description": "AET की सूची का वर्णन ।",
       "type": "string"
     },
     "dcmuiMode": {
-      "title": "ए.इ.टी. (AET) की सूची का प्रकार",
-      "description": "परिभाषित करें कि यह विन्यास किस प्रकार में उपलब्ध होना चाहिए : 'internal' (आर्काइव के अपने ए.इ.टी. (AET), कुछ जगहों में इसे 'Home AET' या 'Local AET' भी कहा गया है), या 'external' ( या कुछ जगहों में इसे 'Remote AET' भी कहा गया है) ए.इ.टी. (AET) की सूची, दोनों प्रकारों में उपलब्ध होने के लिए, किसी भी विकल्प को न चुने ।",
+      "title": "AET की सूची का प्रकार",
+      "description": "परिभाषित करें कि यह विन्यास किस प्रकार में उपलब्ध होना चाहिए : 'internal' (आर्काइव के अपने AET, कुछ जगहों में इसे 'Home AET' या 'Local AET' भी कहा गया है), या 'external' ( या कुछ जगहों में इसे 'Remote AET' भी कहा गया है) AET की सूची, दोनों प्रकारों में उपलब्ध होने के लिए, किसी भी विकल्प को न चुने ।",
       "type": "string",
       "enum": [
         "internal",
@@ -29,8 +29,8 @@
       ]
     },
     "dcmuiAets": {
-      "title": "ए.इ.टी. (AET)",
-      "description": "ए.इ.टी. (AET) ।",
+      "title": "AET",
+      "description": "AET ।",
       "format": "dcmAETitle",
       "type": "array",
       "items" : {

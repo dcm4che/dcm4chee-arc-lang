@@ -32,7 +32,7 @@
     },
     "dcmWebServicePath": {
       "title": "वेब सेवा पथ",
-      "description": "वेब अनुप्रयोग के सेवा का एच.टी.टी.पी. (HTTP) पथ ।",
+      "description": "वेब अनुप्रयोग के सेवा का HTTP पथ ।",
       "type": "string"
     },
     "dcmWebServiceClass": {
@@ -63,14 +63,14 @@
       }
     },
     "dcmKeycloakClientID": {
-      "title": "कीक्लोक क्लाइंट आई.डी. (ID)",
-      "description": "वेब अनुप्रयोग का कीक्लोक क्लाइंट आई.डी. (ID) ।",
+      "title": "कीक्लोक क्लाइंट ID",
+      "description": "वेब अनुप्रयोग का कीक्लोक क्लाइंट ID ।",
       "type": "string",
       "format": "dcmKeycloakClient"
     },
     "dicomAETitle": {
-      "title": "ए.इ. (AE) का नाम",
-      "description": "इस वेब अनुप्रयोग से सम्बंधित नेटवर्क ए.इ. (AE) का नाम ।",
+      "title": "AE का नाम",
+      "description": "इस वेब अनुप्रयोग से सम्बंधित नेटवर्क AE का नाम ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
@@ -84,7 +84,7 @@
     },
     "dcmProperty": {
       "title": "गुण",
-      "description": "गुण इस प्रारूप में <नाम>=<मूल्य> ।उदाहरण के तौर पे: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} या IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}}, ( अन्य सही मापदण्ड : 'patientBirthDate' और 'accessionNumber' है) , 'IID_URL_TARGET=_blank|_self' मापदण्ड लागू करके आप यू.आर.एल. (URL) के लक्ष्य को परिभाषित कर सकते है ।",
+      "description": "गुण इस प्रारूप में <नाम>=<मूल्य> । उदाहरण के तौर पे: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} या IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}}, ( अन्य सही मापदण्ड : 'patientBirthDate' और 'accessionNumber' है) , 'IID_URL_TARGET=_blank|_self' मापदण्ड लागू करके आप URL के लक्ष्य को परिभाषित कर सकते है ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -93,7 +93,7 @@
     },
     "dicomInstalled": {
       "title": "स्थापित",
-      "description": "'हाँ' पे क्लिक करें अगर यह वेब अनुप्रयोग इस नेटवर्क पे स्थापित है. अगर अनुपलभ्य हो तो, वेब अनुप्रयोग की स्थापित स्थिति की जानकारी को डिवाइस से प्राप्त किया जाएगा ।",
+      "description": "'हाँ' पे क्लिक करें अगर यह वेब अनुप्रयोग इस नेटवर्क पे स्थापित है । अगर अनुपलभ्य हो तो, वेब अनुप्रयोग की स्थापित स्थिति की जानकारी को डिवाइस से प्राप्त किया जाएगा ।",
       "type": "boolean"
     }
   }

@@ -8,7 +8,7 @@
   ],
   "properties": {
     "dcmQueryRetrieveViewID": {
-      "title": "प्राप्ति व्यू आई.डी. (ID)",
+      "title": "प्राप्ति व्यू ID",
       "description": "प्राप्ति व्यूव का पहचानकर्ता ।",
       "type": "string",
       "use": [

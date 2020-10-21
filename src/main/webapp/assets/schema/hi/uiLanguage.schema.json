@@ -1,6 +1,6 @@
 {
-  "title": "यू.आई. (UI) भाषा कॉन्फिग",
-  "description": "यू.आई. (UI) भाषा कॉन्फिग ।",
+  "title": "UI भाषा कॉन्फिग",
+  "description": "UI भाषा कॉन्फिग ।",
   "type": "object",
   "required": [
     "dcmLanguages",
