@@ -23,7 +23,7 @@
     },
     "dcmAttributeSelector": {
       "title": "Selettore attributi",
-      "description": "Specifica i singoli attributi trattati come dati in blocco da XPath (per esempio 'DicomAttribute[@tag=\"54000100\"]\/Item\/DicomAttribute[@tag=\"54001010\"]').",
+      "description": "Specifica i singoli attributi trattati come dati in blocco da XPath (per esempio 'DicomAttribute[@tag=\"54000100\"]/Item/DicomAttribute[@tag=\"54001010\"]').",
       "type": "array",
       "items": {
         "type": "string"

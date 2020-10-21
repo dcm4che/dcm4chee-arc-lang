@@ -38,7 +38,7 @@
       "title": "Algoritmo per il Digest",
       "description": "Algoritmo per la generazione dei checksum.",
       "type": "string",
-      "enum": [
+      "enum" : [
         "MD5",
         "SHA-1"
       ]
@@ -107,7 +107,7 @@
     },
     "dcmNoDeletionConstraint": {
       "title": "Nessun vincolo di cancellazione",
-      "description": "Elimina studi dalla cache\/sistema di archiviazione temporaneo, se non è configurata alcuna soglia di eliminazione e nessun altro vincolo di eliminazione.",
+      "description": "Elimina studi dalla cache/sistema di archiviazione temporaneo, se non è configurata alcuna soglia di eliminazione e nessun altro vincolo di eliminazione.",
       "type": "boolean",
       "default": false
     },
@@ -150,13 +150,13 @@
       "title": "Threads di cancellazione",
       "description": "Numero di thread utilizzati per l'eliminazione di oggetti dal sistema di archiviazione.",
       "type": "integer",
-      "default": 1,
+      "default" : 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmExternalRetrieveAET": {
       "title": "External Retrieve AETs",
-      "description": "Limita la cancellazione degli studi, oltre alle soglie di cancellazione configurate e\/o ai vincoli del periodo di conservazione della cancellazione, dal sistema di archiviazione per gli studi che possono essere recuperabili utilizzando uno degli AE  SCP C-MOVE esterni",
+      "description": "Limita la cancellazione degli studi, oltre alle soglie di cancellazione configurate e/o ai vincoli del periodo di conservazione della cancellazione, dal sistema di archiviazione per gli studi che possono essere recuperabili utilizzando uno degli AE  SCP C-MOVE esterni",
       "type": "array",
       "items": {
         "type": "string"
@@ -165,7 +165,7 @@
     },
     "dcmExportStorageID": {
       "title": "Export Storage ID",
-      "description": "Limita l'eliminazione degli studi, oltre alle soglie di cancellazione configurate e\/o ai vincoli del periodo di conservazione dell'eliminazione, dal sistema di archiviazione agli studi i cui oggetti sono accessibili anche dall'altro archivio specificato.",
+      "description": "Limita l'eliminazione degli studi, oltre alle soglie di cancellazione configurate e/o ai vincoli del periodo di conservazione dell'eliminazione, dal sistema di archiviazione agli studi i cui oggetti sono accessibili anche dall'altro archivio specificato.",
       "type": "array",
       "items": {
         "type": "string"
@@ -182,7 +182,7 @@
       "title": "Retrieve Cache Max Parallel",
       "description": "Numero massimo di copie parallele da memorizzare nella cache durante il recupero. Efficace solo se è configurato un ID di archiviazione cache di recupero.",
       "type": "integer",
-      "default": 10,
+      "default" : 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },

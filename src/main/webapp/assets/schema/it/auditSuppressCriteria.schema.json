@@ -8,7 +8,7 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo dei criteri di soppressione dell'audit",
+      "description": "Nome arbitrario/significativo dei criteri di soppressione dell'audit",
       "type": "string"
     },
     "dcmAuditEventID": {
@@ -162,7 +162,7 @@
     },
     "dcmAuditUserIsRequestor": {
       "title": "L'utente è richiedente",
-      "description": "Indica se il partecipante attivo è l'iniziatore\/richiedente dell'evento di controllo come specificato da RFC 3881",
+      "description": "Indica se il partecipante attivo è l'iniziatore/richiedente dell'evento di controllo come specificato da RFC 3881",
       "type": "boolean"
     }
   }

@@ -14,14 +14,14 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo della regola di prefetch",
+      "description": "Nome arbitrario/significativo della regola di prefetch",
       "type": "string"
     },
     "dcmQueueName": {
       "title": "Nome coda",
       "description": "Nome della coda JMS utilizzata per la pianificazione delle attività di recupero attivate da questa regola di prefetch",
       "type": "string",
-      "enum": [
+      "enum" : [
         "Retrieve1",
         "Retrieve2",
         "Retrieve3",
@@ -72,7 +72,7 @@
       "title": "Selettore entità",
       "description": "Specifica le chiavi di corrispondenza utilizzate per selezionare gli studi da precaricare. Formato: {key}={value}[&{key}={value)]..., with {key} = 'priors' | 'StudyAge' | {attributeID}. {value} nel formato '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] vengono sostituiti dal valore del campo HL7 specificato dal messaggio HL7 ricevuto che ha attivato il prefetch. Se non viene specificato alcun selettore di entità, tutti gli studi per il paziente verranno precaricati. Esempio: 'priors = 2 & StudyAge = -5Y & ModalityInStudy = $OBR-24' => seleziona al massimo 2 studi precedenti non più vecchi di 5 anni contenenti almeno una serie con modalità da OBR-24.>",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {

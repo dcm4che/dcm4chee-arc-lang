@@ -11,7 +11,7 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo della regola forward RESTful",
+      "description": "Nome arbitrario/significativo della regola forward RESTful",
       "type": "string"
     },
     "dcmWebAppName": {
@@ -41,7 +41,7 @@
       "title": "Operazione RESTful",
       "description": "Nome dell'operazione RESTful che deve essere inoltrata a un'altra istanza di archivio.",
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string",
         "enum": [
           "CreatePatient",

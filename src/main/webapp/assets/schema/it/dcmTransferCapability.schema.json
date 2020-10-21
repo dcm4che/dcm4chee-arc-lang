@@ -20,25 +20,25 @@
     },
     "dcmRelationalQueries": {
       "title": "Query relazionali",
-      "description": "Abilita\/disabilita le query relazionali.",
+      "description": "Abilita/disabilita le query relazionali.",
       "type": "boolean",
       "default": false
     },
     "dcmCombinedDateTimeMatching": {
       "title": "Corrispondenza combinata di data e ora",
-      "description": "Abilita\/disabilita la corrispondenza combinata di data e ora.",
+      "description": "Abilita/disabilita la corrispondenza combinata di data e ora.",
       "type": "boolean",
       "default": false
     },
     "dcmFuzzySemanticMatching": {
       "title": "Corrispondenza semantica fuzzy",
-      "description": "Abilita\/disabilita la corrispondenza semantica fuzzy dei nomi delle persone.",
+      "description": "Abilita/disabilita la corrispondenza semantica fuzzy dei nomi delle persone.",
       "type": "boolean",
       "default": false
     },
     "dcmTimezoneQueryAdjustment": {
       "title": "Regolazione della query sul fuso orario",
-      "description": "Abilita \/ disabilita la regolazione della query del fuso orario",
+      "description": "Abilita / disabilita la regolazione della query del fuso orario",
       "type": "boolean",
       "default": false
     },

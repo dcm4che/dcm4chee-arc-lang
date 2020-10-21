@@ -14,7 +14,7 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo della politica di conservazione dello studio HL7",
+      "description": "Nome arbitrario/significativo della politica di conservazione dello studio HL7",
       "type": "string"
     },
     "dicomAETitle": {
@@ -58,7 +58,7 @@
     },
     "dcmExporterID": {
       "title": "Esporta studio scaduto",
-      "description": "Esporta studi\/serie scaduti utilizzando l'esportatore specificato",
+      "description": "Esporta studi/serie scaduti utilizzando l'esportatore specificato",
       "type": "string",
       "format": "dcmExporterID"
     },

@@ -153,7 +153,7 @@
     },
     "dcmMergeAttribute": {
       "title": "Merge Attribute",
-      "description": "Merge DICOM Attribute in format {attributeID}={value}. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset.",
+      "description": "Merge DICOM Attribute in format {attributeID}={value}. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. Example: InstitutionName=RegionalHospital or 00081040=XRay.",
       "type": "array",
       "items": {
         "type": "string"

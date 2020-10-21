@@ -13,8 +13,8 @@
       "type": "string"
     },
     "dcmLanguages":{
-      "title": "Lingue disponibili",
-      "description": "Imposta le lingue che dovrebbero essere disponibili nell'interfaccia utente (i file JSON di quelle lingue devono esistere nel codice, se non esistono apri un problema in GitHub)",
+      "title": "Available languages",
+      "description": "Set languages that should be available in the UI (The JSON-files to those language must exist in the code, if they don't exist open an Issue in github",
       "type": "array",
       "items":{
         "type": "string"
@@ -26,7 +26,7 @@
       "description": "Profilo della lingua per nome utente, ruolo o tutti",
       "titleKey":"{dcmuiLanguageProfileName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiLanguageProfile.schema.json"
       }
     }

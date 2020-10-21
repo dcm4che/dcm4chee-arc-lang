@@ -10,7 +10,7 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo della regola di compressione dell'archivio",
+      "description": "Nome arbitrario/significativo della regola di compressione dell'archivio",
       "type": "string"
     },
     "dicomTransferSyntax": {
@@ -23,12 +23,12 @@
       "title": "Priorità delle regole",
       "description": "Priorità delle regole",
       "type": "integer",
-      "default": 0,
+      "default" : 0,
       "minimum": 0
     },
     "dcmProperty": {
       "title": "Condizioni",
-      "description": "Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER",
+      "description": "Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Esempio: SendingApplicationEntityTitle=FORWARD o Modality=MR|CT o ProcedureCodeSequence.CodeValue=MRProcedure o 00180015=KNEE o 00321034.00080100=RequestingServiceCode o ImageType[3]=LOCALIZER",
       "type": "array",
       "items": {
         "type": "string"

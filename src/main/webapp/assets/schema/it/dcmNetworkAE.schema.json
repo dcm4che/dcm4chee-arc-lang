@@ -5,7 +5,7 @@
   "properties": {
     "dcmRoleSelectionNegotiationLenient": {
       "title": "Negoziazione di selezione del ruolo clemente",
-      "description": "Indica di disabilitare il controllo per la negoziazione della selezione del ruolo SCP\/SCU richiesta sull'invio di DIMSE-RQ. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Indica di disabilitare il controllo per la negoziazione della selezione del ruolo SCP/SCU richiesta sull'invio di DIMSE-RQ. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "boolean"
     },
     "dcmAcceptedCallingAETitle": {

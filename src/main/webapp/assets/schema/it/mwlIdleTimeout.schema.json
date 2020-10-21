@@ -11,7 +11,7 @@
   "properties": {
     "cn": {
       "title": "Nome",
-      "description": "Nome arbitrario\/significativo del timeout di inattività MWL.",
+      "description": "Nome arbitrario/significativo del timeout di inattività MWL.",
       "type": "string"
     },
     "dicomAETitle": {
@@ -22,7 +22,7 @@
     },
     "dcmAETitle": {
       "title": "Titolo AE stazione pianificata",
-      "description": "Titolo AE stazione pianificata\/e delle fasi della procedura pianificata per le quali deve essere applicato il timeout di inattività MWL. Se non viene specificato nessuno, il timeout di inattività MWL viene applicato a tutti i passaggi della procedura pianificata forniti da MWL SCP.",
+      "description": "Titolo AE stazione pianificata/e delle fasi della procedura pianificata per le quali deve essere applicato il timeout di inattività MWL. Se non viene specificato nessuno, il timeout di inattività MWL viene applicato a tutti i passaggi della procedura pianificata forniti da MWL SCP.",
       "type": "array",
       "items": {
         "type": "string"

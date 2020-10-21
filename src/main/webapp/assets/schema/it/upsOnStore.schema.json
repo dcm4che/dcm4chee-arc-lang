@@ -1,6 +1,6 @@
 {
   "title": "UPS sull'archivio",
-  "description": "Crea\/Aggiorna elemento di lavoro in una lista di lavoro unificata alla ricezione di un oggetto composito",
+  "description": "Crea/Aggiorna elemento di lavoro in una lista di lavoro unificata alla ricezione di un oggetto composito",
   "type": "object",
   "required": [
     "dcmUPSOnStoreID",
@@ -21,7 +21,7 @@
     },
     "dcmProperty": {
       "title": "Condizioni",
-      "description": "Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER",
+      "description": "Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Esempio: SendingApplicationEntityTitle=FORWARD o Modality=MR|CT o ProcedureCodeSequence.CodeValue=MRProcedure o 00180015=KNEE o 00321034.00080100=RequestingServiceCode o ImageType[3]=LOCALIZER",
       "type": "array",
       "items": {
         "type": "string"
@@ -39,19 +39,19 @@
     },
     "dcmUPSLabel": {
       "title": "Etichetta del passo della procedura",
-      "description": "Valore dell'etichetta del passo della procedura (0074,1204) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente.",
+      "description": "Valore dell'etichetta del passo della procedura (0074,1204) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente. Esempio: {StudyDescription}",
       "type": "string"
     },
     "dcmUPSWorklistLabel": {
       "title": "Etichetta lista di lavoro",
-      "description": "Valore dell'etichetta della lista di lavoro (0074,1202) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente.",
+      "description": "Valore dell'etichetta della lista di lavoro (0074,1202) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente. Esempio: {StudyDescription}",
       "type": "string"
     },
     "dcmUPSPriority": {
       "title": "Priorità",
       "description": "Valore della priorità del passo della procedura pianificata (0074,1200) nell'UPS creato. Valori enumerati: HIGH, MEDIUM, LOW. Se assente, verrà applicato MEDIO.",
       "type": "string",
-      "default": "MEDIO",
+      "default": "MEDIUM",
       "enum": [
         "HIGH",
         "MEDIUM",
@@ -62,7 +62,7 @@
       "title": "Stato di disponibilità di ingresso",
       "description": "Valore dello stato di disponibilità dell'ingresso (0040,4041) nell'UPS creato",
       "type": "string",
-      "default": "PRONTO",
+      "default": "READY",
       "enum": [
         "INCOMPLETE",
         "UNAVAILABLE",
@@ -148,17 +148,17 @@
     },
     "dcmUPSScheduledHumanPerformerName": {
       "title": "Nome dell'attore umano pianificato",
-      "description": "Valore del nome del performer umano (0040,4037) nell'elemento della sequenza pianificata di interpreti umani (0040,4034) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente.",
+      "description": "Valore del nome del performer umano (0040,4037) nell'elemento della sequenza pianificata di interpreti umani (0040,4034) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente. Esempio: {PerformingPhysicianName}",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerOrganization": {
       "title": "Organizzazione pianificata di interpreti umani",
-      "description": "Valore dell'organizzazione dell'esecutore umano (0040,4036) nell'elemento della sequenza degli interpreti umani pianificata (0040,4034) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente.",
+      "description": "Valore dell'organizzazione dell'esecutore umano (0040,4036) nell'elemento della sequenza degli interpreti umani pianificata (0040,4034) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente. Esempio: {ResponsibleOrganization}",
       "type": "string"
     },
     "dcmAdmissionID": {
       "title": "Numero di ammissione",
-      "description": "Valore dell'ID di ammissione (0038,0010) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente.",
+      "description": "Valore dell'ID di ammissione (0038,0010) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente. Esempio: {AdmissionID}",
       "type": "string"
     },
     "dicomIssuerOfAdmissionID": {
@@ -180,7 +180,7 @@
     },
     "dcmAccessionNumber": {
       "title": "Numero di Accesso",
-      "description": "Valore del numero di accesso (0008,0050) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente.",
+      "description": "Valore del numero di accesso (0008,0050) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente. Esempio: {AccessionNumber}",
       "type": "string"
     },
     "dicomIssuerOfAccessionNumber": {
@@ -190,22 +190,22 @@
     },
     "dcmRequestedProcedureID": {
       "title": "ID procedura richiesta",
-      "description": "Valore dell'ID procedura richiesta (0040,1001) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {attributeID} verrà sostituito dal valore di quell'attributo nel set di dati ricevuto.",
+      "description": "Valore dell'ID procedura richiesta (0040,1001) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {attributeID} verrà sostituito dal valore di quell'attributo nel set di dati ricevuto. Esempio: {StudyID}",
       "type": "string"
     },
     "dcmRequestedProcedureDescription": {
       "title": "Descrizione della procedura richiesta",
-      "description": "Valore della descrizione della procedura richiesta (0032,1060) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {attributeID} verrà sostituito dal valore di quell'attributo nel set di dati ricevuto.",
+      "description": "Valore della descrizione della procedura richiesta (0032,1060) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {attributeID} verrà sostituito dal valore di quell'attributo nel set di dati ricevuto. Esempio: {StudyDescription}",
       "type": "string"
     },
     "dcmRequestingPhysician": {
       "title": "Medico richiedente",
-      "description": "Valore del medico richiedente (0032,1032) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente.",
+      "description": "Valore del medico richiedente (0032,1032) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente. Esempio: {PerformingPhysicianName}",
       "type": "string"
     },
     "dcmRequestingService": {
       "title": "Servizio richiedente",
-      "description": "Valore del servizio richiedente (0032,1033) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente.",
+      "description": "Valore del servizio richiedente (0032,1033) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente. Esempio: {StudyDescription}",
       "type": "string"
     },
     "dcmURI": {

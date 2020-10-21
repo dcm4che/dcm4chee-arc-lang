@@ -1,6 +1,6 @@
 {
   "title": "Stato SPS per un Ordine HL7",
-  "description": "Specifica lo stato SPS degli elementi DICOM MWL creati\/aggiornati sui messaggi HL7 ORM ^ O01, OMI ^ O23, OMG ^ O19 ricevuti",
+  "description": "Specifica lo stato SPS degli elementi DICOM MWL creati/aggiornati sui messaggi HL7 ORM ^ O01, OMI ^ O23, OMG ^ O19 ricevuti",
   "type": "object",
   "required": [
     "dcmSPSStatus",

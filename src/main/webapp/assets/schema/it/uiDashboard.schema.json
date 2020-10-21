@@ -12,37 +12,37 @@
       "type": "string"
     },
     "dcmuiShowStarBlock":{
-      "title": "Mostra Star Block",
-      "description": "Mostra Star Block - attività senza deviceName definito",
+      "title": "Show Star Block",
+      "description": "Show Star Block - tasks without defined deviceName",
       "type": "boolean",
-      "default": true
+      "default" : true
     },
     "dcmuiQueueName": {
       "title": "Code",
       "description": "Nomi delle code per la configurazione del dashboard dell'interfaccia utente utilizzati nel blocco della coda",
       "type": "array",
-      "items": { "type": "string" },
-      "format": "dcmQueueName"
+      "items" : { "type": "string" },
+      "format" : "dcmQueueName"
     },
     "dcmuiExportName": {
       "title": "IDs Esportatori",
       "description": "ID esportatori per la configurazione del dashboard dell'interfaccia utente utilizzati nel blocco della coda e del confronto",
       "type": "array",
-      "items": { "type": "string" },
-      "format": "dcmExporterID"
+      "items" : { "type": "string" },
+      "format" : "dcmExporterID"
     },
     "dicomuiDeviceName": {
       "title": "Nomi dei dispositivi",
       "description": "Nomi dei dispositivi per la configurazione del dashboard dell'interfaccia utente utilizzati per generare il blocco Recupera ed esporta",
       "type": "array",
-      "items": { "type": "string" },
+      "items" : { "type": "string" },
       "format": "dicomDeviceName"
     },
     "dicomuiIgnoreParams": {
       "title": "Parametri da ignorare negli eventi di controllo",
       "description": "Imposta i parametri Elasticsearch da ignorare negli eventi di controllo. Ad esempio Source.UserID = TESTVALUE",
       "type": "array",
-      "items": { "type": "string" }
+      "items" : { "type": "string" }
     },
     "dcmuiCountAET": {
       "title": "Conteggio Aet",
@@ -55,7 +55,7 @@
       "description": "Confronta i lati",
       "titleKey":"{dcmuiCompareSideName}",
       "type": "array",
-      "items": {
+      "items" : {
         "$ref": "uiCompareSide.schema.json"
       }
     },
@@ -63,7 +63,7 @@
       "title": "Archivio Docker Containers",
       "description": "Nomi dei contenitori dei container docker di archivio utilizzati nella pagina hardware",
       "type": "array",
-      "items": { "type": "string" }
+      "items" : { "type": "string" }
     }
   }
 }

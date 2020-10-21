@@ -330,12 +330,12 @@
     },
     "dcmStorePermissionServiceResponse": {
       "title": "Store Permission Service Response",
-      "description": "Emulate Store Permission Service Response on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service Response is configured. Overwrites value specified on Device level.",
+      "description": "Emulate Store Permission Service Response on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service Response is configured. Example: patientID={00100020},patientName={00100010},errorCode=0110H,errorComment=errorMessage. Overwrites value specified on Device level.",
       "type": "string"
     },
     "dcmStorePermissionServiceResponsePattern": {
       "title": "Store Permission Service Response Pattern",
-      "description": "Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. \"validation\"\\s*:\\s*\"true\". Overwrites value specified on Device level.",
+      "description": "Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. \"validation\"\\s*:\\s*\"true\" or '(?<=patientName=)[^null].*?(?=,)'. Overwrites value specified on Device level.",
       "type": "string"
     },
     "dcmStorePermissionServiceErrorCommentPattern": {
@@ -429,7 +429,7 @@
     },
     "dcmMultipleStoreAssociations": {
       "title": "Multiple Store Associations",
-      "description": "Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. Supplements Multiple Store Associations specified on Device level.",
+      "description": "Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. Examples : 2 or STORESCP:3 Supplements Multiple Store Associations specified on Device level.",
       "type": "array",
       "items": {
         "type": "string"
@@ -528,7 +528,7 @@
     },
     "hl7PSUConditions": {
       "title": "HL7 Procedure Status Update Attribute Conditions",
-      "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{attributeID})[!]={regEx}. Overwrites value specified on Device level.",
+      "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER. Overwrites value specified on Device level.",
       "type": "array",
       "items": {
         "type": "string"
@@ -542,22 +542,22 @@
     },
     "hl7PSURequestedProcedureID": {
       "title": "HL7 Procedure Status Update Requested Procedure ID",
-      "description": "Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.",
+      "description": "Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7PSUAccessionNumber": {
       "title": "HL7 Procedure Status Accession Number",
-      "description": "Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.",
+      "description": "Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7PSUFillerOrderNumber": {
       "title": "HL7 Procedure Status Filler Order Number",
-      "description": "Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.",
+      "description": "Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7PSUPlacerOrderNumber": {
       "title": "HL7 Procedure Status Placer Order Number",
-      "description": "Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Overwrites value specified on Device level.",
+      "description": "Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7PSUMessageType": {

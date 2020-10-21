@@ -71,12 +71,12 @@
     },
     "hl7LogFilePattern": {
       "title": "HL7 Log File Pattern",
-      "description": "Percorso dei messaggi HL7 che verranno acquisiti esattamente come ricevuti. Se assente, non c'è registrazione log. Sovrascrive il valore specificato a livello di dispositivo. per esempio. $ {jboss.server.data.dir}\/hl7\/${date, yyyy\/MM\/dd}\/${SerialNo}-${MSH-9}.hl7",
+      "description": "Percorso dei messaggi HL7 che verranno acquisiti esattamente come ricevuti. Se assente, non c'è registrazione log. Sovrascrive il valore specificato a livello di dispositivo. per esempio. $ {jboss.server.data.dir}/hl7/${date, yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
       "type": "string"
     },
     "hl7ErrorLogFilePattern": {
       "title": "HL7 Error Log File Pattern",
-      "description": "Percorso ai messaggi HL7 che verranno acquisiti esattamente come ricevuti, quando l'elaborazione dei messaggi HL7 fallisce. Se assente, non c'è registrazione log. Sovrascrive il valore specificato a livello di dispositivo. per esempio. ${jboss.server.data.dir}\/hl7\/${date,yyyy\/MM\/dd}\/${SerialNo}-${MSH-9}.hl7",
+      "description": "Percorso ai messaggi HL7 che verranno acquisiti esattamente come ricevuti, quando l'elaborazione dei messaggi HL7 fallisce. Se assente, non c'è registrazione log. Sovrascrive il valore specificato a livello di dispositivo. per esempio. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
       "type": "string"
     },
     "hl7NoPatientCreateMessageType": {
@@ -146,7 +146,7 @@
       "description": "HL7 Forward Rule. Integra i valori specificati a livello di dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -155,7 +155,7 @@
       "description": "Regole di esportazione applicate ai messaggi HL7 ricevuti da questa applicazione HL7. Integra le regole di esportazione HL7 specificate a livello di dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -173,7 +173,7 @@
       "description": "Regole di esportazione applicate ai messaggi HL7 ricevuti da questa applicazione HL7. Integra le regole di esportazione HL7 specificate a livello di dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -182,7 +182,7 @@
       "description": "Criteri di conservazione dello studio HL7 attivati dai messaggi HL7 ricevuti da questa applicazione HL7. Integra i valori specificati a livello di dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -191,16 +191,16 @@
       "description": "Scheduled Station selected on MWL HL7 Order Feed. Integra i valori specificati a livello di dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
-      "items": {
+      "items" : {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
     "hl7OrderSPSStatus": {
       "title": "Stato SPS per un Ordine HL7",
-      "description": "Specifica lo stato SPS degli elementi DICOM MWL creati\/aggiornati sui messaggi HL7 ORM ^ O01, OMI ^ O23, OMG ^ O19 ricevuti. Sovrascrive i valori specificati a livello di dispositivo.",
+      "description": "Specifica lo stato SPS degli elementi DICOM MWL creati/aggiornati sui messaggi HL7 ORM ^ O01, OMI ^ O23, OMG ^ O19 ricevuti. Sovrascrive i valori specificati a livello di dispositivo.",
       "type": "array",
       "titleKey":"{dcmSPSStatus}",
-      "items": {
+      "items" : {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     }

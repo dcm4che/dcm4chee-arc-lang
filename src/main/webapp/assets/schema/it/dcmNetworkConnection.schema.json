@@ -47,7 +47,7 @@
       "description": "I protocolli TLS supportati.",
       "default": ["TLSv1.2"],
       "type": "array",
-      "items": {
+      "items" : {
         "type": "string",
         "enum": [
           "TLSv1.3",
@@ -92,7 +92,7 @@
     },
     "dcmTCPNoDelay": {
       "title": "Nessun ritardo TCP",
-      "description": "Abilita\/disabilita TCP_NODELAY (disabilita\/abilita l'algoritmo Nagle).",
+      "description": "Abilita/disabilita TCP_NODELAY (disabilita/abilita l'algoritmo Nagle).",
       "type": "boolean",
       "default": true
     },
@@ -144,7 +144,7 @@
     },
     "dcmPackPDV": {
       "title": "Pack PDV",
-      "description": "Abilita\/disabilita il Packing di comandi e dati PDV in una PDU P-DATA-TF.",
+      "description": "Abilita/disabilita il Packing di comandi e dati PDV in una PDU P-DATA-TF.",
       "type": "boolean",
       "default": true
     },

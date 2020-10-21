@@ -21,7 +21,7 @@
       "title": "Periodo di conservazione delle metriche",
       "description": "Periodo di conservazione delle metriche in minuti",
       "type": "integer",
-      "default": 60,
+      "default" : 60,
       "minimum": 1
     },
     "dcmUnit": {
