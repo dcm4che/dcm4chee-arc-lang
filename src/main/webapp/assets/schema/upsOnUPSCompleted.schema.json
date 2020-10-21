@@ -8,6 +8,8 @@
     "dcmUPSPriority",
     "dcmUPSInputReadinessState",
     "dcmUPSIncludeStudyInstanceUID",
+    "dcmUPSIncludeInputInformation",
+    "dcmUPSIncludePatient",
     "dcmUPSIncludeReferencedRequest",
     "dcmNoKeywords"
   ],
@@ -77,6 +79,29 @@
       "description": "Delay of Expected Completion DateTime (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmUPSInstanceUIDBasedOnName": {
+      "title": "UPS Instance UID based on name",
+      "description": "Value to generate name based SOP Instance UID (0008,0018) in created UPS. If absent, a random generated SOP Instance UID (0008,0018) will be used.",
+      "type": "string"
+    },
+    "dcmUPSIncludeInputInformation": {
+      "title": "Include Input Information",
+      "description": "Indicates if the Input Information Sequence (0040,4021) or/and the Output Information Sequence (0040,4033) in the Unified Procedure Step Performed Procedure Sequence (0074,1216) of the previous UPS is included in Input Information Sequence (0040,4021) of the in created UPS.",
+      "type": "string",
+      "default": "COPY_OUTPUT",
+      "enum": [
+        "NO",
+        "COPY_INPUT",
+        "COPY_OUTPUT",
+        "MERGE_INPUT_OUTPUT"
+      ]
+    },
+    "dcmUPSIncludePatient": {
+      "title": "UPS Include Patient",
+      "description": "Indicates if patient attributes are copied from the previous UPS.",
+      "type": "boolean",
+      "default": true
     },
     "dcmDestinationAE": {
       "title": "Destination AE",
