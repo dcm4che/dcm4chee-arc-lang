@@ -4,7 +4,6 @@
   "type": "object",
   "required": [
     "dcmUPSOnUPSCompletedID",
-    "dcmUPSPerformedWorkitemCode",
     "dcmUPSLabel",
     "dcmUPSPriority",
     "dcmUPSInputReadinessState",
@@ -18,10 +17,22 @@
       "description": "ID of UPS on UPS Completed Rule",
       "type": "string"
     },
-    "dcmUPSPerformedWorkitemCode": {
-      "title": "Previous Performed Workitem Code",
-      "description": "Performed Workitem Code of completed UPS triggering this rule in format (CV, CSD, \"CM\").",
-      "type": "string"
+    "dcmProperty": {
+      "title": "Condition",
+      "description": "Conditions in format {attributeID[number]})[!]={regEx} or {sequenceAttributeID}[!]=(CV, CSD, \"CM\"). More than one value can be specified for a given attribute by separating them with a | symbol.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmProperty"
+    },
+    "dcmRequiresOtherUPSCompleted": {
+      "title": "Requires other UPS completed",
+      "description": "Specifies Query Parameters for other UPS referring the same request (= Study Instance UID), which must be already be completed for creating this UPS. Format: {attributeID}={value}[&...]",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
     },
     "dcmUPSLabel": {
       "title": "Procedure Step Label",
