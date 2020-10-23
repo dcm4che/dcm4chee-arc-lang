@@ -980,7 +980,7 @@
       "title": "Store Update DB Maximum Number of Retries",
       "description": "Maximum number of retries to update the database on storage.",
       "type": "integer",
-      "default": 1,
+      "default": 3,
       "minimum": 0
     },
     "dcmStoreUpdateDBMinRetryDelay": {
