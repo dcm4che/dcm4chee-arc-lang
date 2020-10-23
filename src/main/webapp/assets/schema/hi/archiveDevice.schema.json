@@ -980,7 +980,7 @@
       "title": "संचय अपडेट डेटाबेस पुनःपरीक्षण की अधिकतम संख्या",
       "description": "संचय पे डेटाबेस को अपडेट करने के पुनःपरीक्षण की अधिकतम संख्या ।",
       "type": "integer",
-      "default": 1,
+      "default": 3,
       "minimum": 0
     },
     "dcmStoreUpdateDBMinRetryDelay": {

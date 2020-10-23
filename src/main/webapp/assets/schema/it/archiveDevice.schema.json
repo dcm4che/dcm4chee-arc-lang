@@ -980,7 +980,7 @@
       "title": "Numero massimo di tentativi di aggiornamento DB dell'archivio",
       "description": "Numero massimo di tentativi per aggiornare il database dello storage.",
       "type": "integer",
-      "default": 1,
+      "default": 3,
       "minimum": 0
     },
     "dcmStoreUpdateDBMinRetryDelay": {
