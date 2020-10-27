@@ -1,0 +1,149 @@
+{
+  "title": "UI कॉन्फिगरेशन",
+  "description": "UI कॉन्फिगरेशन",
+  "type": "object",
+  "required": [
+    "dcmuiConfigName"
+  ],
+  "properties": {
+    "dcmuiConfigName": {
+      "title": "UI कॉन्फिगरेशनचे नाव",
+      "description": "UI कॉन्फिगरेशनचे नाव",
+      "type": "string"
+    },
+    "dcmuiModalities": {
+      "title": "आकडेवारी मोडेलिटीज",
+      "description": "आधी निवडलेले मोडेलिटीज जे आकडेवारी पेजमध्ये दिसले पाहिजेत.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiLanguageConfig":{
+      "title": "Language Config",
+      "description": "Config the languages of the UI",
+      "titleKey":"{dcmuiLanguageConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiLanguage.schema.json"
+      }
+    },
+    "dcmuiWidgetAets": {
+      "title": "विजेट AET",
+      "description": "त्या AET ना निवडा जे AET विजेटमध्ये दिसले पाहिजेत, ज्यामध्ये नवीन जोडलेल्या AET ना स्वीकृत बोलवणाऱ्या AET च्या रूपात वापरले जाईल, हे तुम्ही निवडूशकता.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiBackgroundURL": {
+      "title": "पार्श्वभूमी URL",
+      "description": "UI ची पार्श्वभूमी बदलण्यासाठी पार्श्वभूमी URL, ते संबंधित किंवा निरपेक्ष URL असू शकते, प्रतिमेची रूंदी कमीत कमी १०२४px असावी.",
+      "type": "string"
+    },
+    "dcmuiLogoURL": {
+      "title": "लोगो URL",
+      "description": "UI चा लोगो बदलण्यासाठी लोगो URL, यह संबंधित किंवा निरपेक्ष URL असू शकते, प्रतिमेची रूंदी १४० पिक्सेल (140px) असावी आणि पारदर्शक पार्श्वभूमीसह png स्वरूपात असावी.",
+      "type": "string"
+    },
+    "dcmuiDefaultWidgetAets": {
+      "title": "डिफ़ॉल्ट विजेट AET",
+      "description": "त्या AET ना निवडा, जे विजेट AET वर आधी निवडले गेले पाहिजेत.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiAetConfig": {
+      "title": "AET ची यादी",
+      "description": "UI मध्ये AET ची यादी, ज्यामध्ये शीर्षस्थानी कोणते AET दृश्यमान असावेत, ते परिभाषित करा.",
+      "titleKey":"{dcmuiAetListName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiAet.schema.json"
+      }
+    },
+    "dcmuiWebAppConfig": {
+      "title": "वेब अनुप्रयोगांची यादी",
+      "description": "UI मध्ये वेब अनुप्रयोगांची यादी, ज्यामध्ये शीर्षस्थानी कोणते वेब अनुप्रयोग दृश्यमान असावेत, ते परिभाषित करा.",
+      "titleKey":"{dcmuiWebAppListName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiWebApp.schema.json"
+      }
+    },
+    "dcmuiPermission": {
+      "title": "परवानगी",
+      "description": "परवानगी.",
+      "titleKey":"{dcmuiPermissionName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiPermission.schema.json"
+      }
+    },"dcmuiFilterTemplateObject": {
+      "title": "UI Filter Template",
+      "description": "Defined filter template",
+      "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
+      "type": "array",
+      "items" : {
+        "$ref": "uiFilterTemplate.schema.json"
+      }
+    },
+    "dcmuiDiffConfig": {
+      "title": "अभ्यासांची तुलना करणारी कॉन्फिगरेशन",
+      "description": "अभ्यासांची तुलना करणारी कॉन्फिगरेशन.",
+      "titleKey":"{dcmuiDiffConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDiffConfig.schema.json"
+      }
+    },
+    "dcmuiDashboardConfig": {
+      "title": "UI डॅशबोर्ड कॉन्फिगरेशन",
+      "description": "UI डॅशबोर्ड कॉन्फिगरेशन.",
+      "titleKey":"{dcmuiDashboardConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDashboard.schema.json"
+      }
+    },
+    "dcmuiStudyTableConfig": {
+      "title": "UI अभ्यास टेबल कॉन्फिगरेशन",
+      "description": "टेबलची कॉन्फिगरेशन.",
+      "titleKey":"{dcmuiStudyTableConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiTable.schema.json"
+      }
+    },
+    "dcmuiElasticsearchConfig": {
+      "title": "UI इलास्टिकसर्च कॉन्फिगरेशन",
+      "description": "प्रो आवृत्तीसाठी इलास्टिकसर्च कॉन्फिगरेशन.",
+      "titleKey":"{dcmuiElasticsearchConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiElasticsearch.schema.json"
+      }
+    },
+    "dcmuiDeviceURLObject": {
+      "title": "UI डिव्हाइस URL",
+      "description": "इतर UI डिव्हाइस URL.",
+      "titleKey":"{dcmuiDeviceURLName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDeviceURL.schema.json"
+      }
+    },
+    "dcmuiDeviceClusterObject": {
+      "title": "UI क्लस्टर कॉन्फिगरेशन",
+      "description": "डिव्हाइसेसना क्लस्टरमध्ये समूहित करा.",
+      "titleKey":"{dcmuiDeviceClusterName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDeviceCluster.schema.json"
+      }
+    }
+  }
+}
