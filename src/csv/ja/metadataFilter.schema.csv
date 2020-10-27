@@ -1,0 +1,4 @@
+"property","title","description"
+"","メタデータ フィルター","WADO-RS メタデータ 要求の 名前付き 属性 フィルター。"
+"dcmMetadataFilterName","メタデータ フィルター名","WADO-RS メタデータ 要求の 独自の 「includefields」 クエリ パラメーターに よって 参照される メタデータ フィルター名。"
+"dcmTag","属性 タグ","16進 文字列としての DICOM タグ"

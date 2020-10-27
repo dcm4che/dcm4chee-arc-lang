@@ -1,0 +1,5 @@
+"property","title","description"
+"","ID 発生器","ID 発生器"
+"dcmIDGeneratorName","ID 発生器名","ID 発生器名。"
+"dcmIDGeneratorFormat","ID 発生器 形式","この ID 発生器で 使用される 形式 文字列。 %0<width>dは、 指定された 幅に 従って 先行 ゼロを 持つ 連続 番号に 置き換えられます"
+"dcmIDGeneratorInitialValue","ID 発生器 初期値","この ID 発生器が 使用 する シーケンスの 初期値。"

@@ -1,0 +1,8 @@
+"property","title","description"
+"","UI エラスティクサーチ URL 構成","エラスティクサーチ URL"
+"dcmuiElasticsearchURLName","エラスティクサーチ URL名","UI エラスティクサーチ URL名"
+"dcmuiElasticsearchURL","エラスティクサーチ URL","エラスティクサーチ の アクセスURL。例えば : http(s)://<elasticsearch-host>:<elasticsearch-port>"
+"dcmuiElasticsearchURLKeycloakServer","キークローク サーバー","エラスティクサーチを アクセスする ために ベアラー トークンを 取得する キークローク サーバーを 選択します"
+"dcmuiAuditEnterpriseSiteID","監査 エンタープライズ サイト ID","エラスティクサーチ クエリで 使用する 監査 エンタープライズ サイト IDを 設定 する"
+"dcmuiElasticsearchIsDefault","デフォルトです","この URLを デフォルトに 設定します。(URL 兄弟の 子の 1つだけが デフォルトに 設定されて いる ことを 確認して ください)。"
+"dcmuiElasticsearchInstalled","インストール済み","UIで この URLを 使用 する"

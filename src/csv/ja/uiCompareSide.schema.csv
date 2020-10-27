@@ -1,0 +1,8 @@
+"property","title","description"
+"","比較側名","比較側名"
+"dcmuiCompareSideName","名前","比較側名"
+"dcmuiCompareSideDescription","説明","この グループに 関する 短い 説明。"
+"dcmuiCompareSideCluster","クラスタ","クラスタを 選択 する。"
+"dcmuiCompareSideElasticsearch","エラスティクサーチ","エラスティクサーチ URLを 選択 する。"
+"dcmuiCompareSideQueueName","キュー","比較側に 使用 する キュー名を 選択 します。"
+"dcmuiCompareSideInstalled","インストール済み","'真'の場合、この 比較側は ダッシュボードで アクティブです。"

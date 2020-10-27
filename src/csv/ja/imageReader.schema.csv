@@ -1,0 +1,7 @@
+"property","title","description"
+"","画像 リーダー","圧縮された DICOM 画像の 解凍に 使用される Java 画像 IO 画像 リーダーを 指定します"
+"dicomTransferSyntax","転送 構文","圧縮された DICOM 画像の 転送 構文"
+"dcmIIOFormatName","画像 IO リーダー 形式名","画像 IO リーダー 形式名"
+"dcmJavaClassName","Java クラス名","画像 IO リーダーの 完全 修飾 Java クラス。 存在しない 場合は、 指定された 形式名で 見つかった 任意の 画像 リーダーを 使用します"
+"dcmPatchJPEGLS","パッチ JPEG-LS","解凍 する 前に JPEG-LSを パッチ する"
+"dcmImageReadParam","画像 読み取り パラメーター","画像 読み取り パラメーター (名前 = 値)"

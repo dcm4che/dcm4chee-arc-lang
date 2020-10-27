@@ -1,0 +1,8 @@
+"property","title","description"
+"","UI クラスター 構成","UI クラスター 構成"
+"dcmuiDeviceClusterName","名前","クラスター名"
+"dcmuiDeviceClusterDescription","説明","クラスターの 説明"
+"dcmuiDeviceClusterLoadBalancer","ロード バランサー","ロード バランサーを 選択 する。"
+"dcmuiDeviceClusterKeycloakServer","キークローク サーバー","この クラスターが 同じ キークロークを 使用しない 場合は、構成済みの キークロークを 選択します。"
+"dcmuiDeviceClusterDevices","デバイス","構成済み デバイスの 名前を 追加します。"
+"dcmuiDeviceClusterInstalled","インストール済み","UIで この URLを 使用 する。"

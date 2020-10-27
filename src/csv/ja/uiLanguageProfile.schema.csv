@@ -1,0 +1,6 @@
+"property","title","description"
+"","UI 言語 プロファイル 構成","UI 言語 プロファイル 構成"
+"dcmuiLanguageProfileName","名前","言語 プロファイル名"
+"dcmDefaultLanguage","デフォルト 言語","UIの デフォルト 言語を 選択 する。"
+"dcmuiLanguageProfileRole","役割","この 言語 プロファイルを 適用 する 必要が ある ユーザー名 役割。"
+"dcmuiLanguageProfileUsername","ユーザー名","言語 プロファイルの ユーザー名。"

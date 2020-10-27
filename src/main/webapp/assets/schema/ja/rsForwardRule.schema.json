@@ -1,0 +1,69 @@
+{
+  "title": "RESTful 転送 規則",
+  "description": "RESTful 転送 規則",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmWebAppName",
+    "dcmTLSAllowAnyHostname",
+    "dcmTLSDisableTrustManager"
+  ],
+  "properties": {
+    "cn": {
+      "title": "名前",
+      "description": "RESTful 転送 規則の 任意 / 意味の ある 名前",
+      "type": "string"
+    },
+    "dcmWebAppName": {
+      "title": "ウェブ アプリケーション名",
+      "description": "ウェブ アプリケーションの 名前",
+      "type": "string",
+      "format": "webApp"
+    },
+    "dcmTLSAllowAnyHostname": {
+      "title": "TLS 任意の ホスト名を 許可 する",
+      "description": "他の サーバーが HTTPSを 必要とし、 この 構成 オプションが 「真」に 設定されて いる 場合、 他の サーバーの 証明書は トラストストアを 介して 検証されますが、 ホスト名の 検証は 行われません。",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmTLSDisableTrustManager": {
+      "title": "TLS トラスト マネージャーを 無効に する",
+      "description": "他の サーバーが HTTPSを 必要とし、 この 構成 オプションが 「真」に 設定されて いる 場合、 トラストストアを 指定する 必要は ありません。",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmURIPattern": {
+      "title": "要求 URL パターン",
+      "description": "指定された 正規表現に 一致 する 要求のみを 転送します。 接頭辞が ！の 場合、 指定された 正規表現に 一致しない 要求のみを 転送します。",
+      "type": "string"
+    },
+    "dcmRSOperation": {
+      "title": "RESTful 操作",
+      "description": "別の アーカイブ インスタンスに 転送される RESTful 操作の 名前。",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "CreatePatient",
+          "UpdatePatient",
+          "DeletePatient",
+          "ChangePatientID",
+          "MergePatient",
+          "MergePatients",
+          "UpdateStudy",
+          "DeleteStudy",
+          "RejectStudy",
+          "RejectSeries",
+          "RejectInstance",
+          "UpdateStudyExpirationDate",
+          "UpdateSeriesExpirationDate",
+          "ApplyRetentionPolicy",
+          "CreateMWL",
+          "UpdateMWL",
+          "DeleteMWL",
+          "UpdateStudyAccessControlID"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "title": "PDQ サービス",
+  "description": "PDQ サービス 記述子",
+  "type": "object",
+  "required": [
+    "dcmPDQServiceID",
+    "dcmURI",
+    "dcmEntity"
+  ],
+  "properties": {
+    "dcmPDQServiceID": {
+      "title": "PDQ サービス ID",
+      "description": "PDQ サービス ID",
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
+      ]
+    },
+    "dcmURI": {
+      "title": "PDQ サービス URI",
+      "description": "PDQ サービス URI, 例 : 'pdq-dicom:FINDSCP'",
+      "type": "string"
+    },
+    "dicomDescription": {
+      "title": "PDQ サービスの 説明",
+      "description": "PDQ サービスの 制約のない テキスト 説明",
+      "type": "string"
+    },
+    "dcmTag": {
+      "title": "患者 属性",
+      "description": "クエリされた 患者 属性 - 指定されて いない 場合、 使用 可能な すべての 患者 属性が クエリされます",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmTag"
+    },
+    "dcmEntity": {
+      "title": "クエリ エンティティ",
+      "description": "特定の 患者 または 特定の 患者の 検査に 対して C-FIND SCPが クエリされるか どうかを 示します。 DICOM PDQ サービスに 対してのみ 有効 (URI: pdq-dicom:{AETitle})",
+      "type": "string",
+      "enum": [ "Patient", "Study" ],
+      "default": "Patient"
+    },
+    "dcmProperty": {
+      "title": "PDQ サービス 属性",
+      "description": "<name>=<value> 形式で 属性, 例 : 'LocalAET=DCM4CHEE'",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

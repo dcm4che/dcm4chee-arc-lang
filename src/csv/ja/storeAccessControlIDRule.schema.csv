@@ -1,0 +1,6 @@
+"property","title","description"
+"","保存 アクセス 制御 ID 規則","保存 アクセス 制御 ID 規則"
+"cn","名前","保存 アクセス 制御ID 規則の 任意 / 意味の ある 名前"
+"dcmStoreAccessControlID","保存 アクセス 制御 ID","すべての 条件に 一致 する 属性が 検査に 割り当てられた アクセス 制御 IDを 保存します"
+"dcmRulePriority","規則の 優先度","規則の 優先度。"
+"dcmProperty","条件","(SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} 形式で 条件。 「|」 シンボルで 区切る ことに より、 特定の 属性に 複数の 値を 指定できます。 例 : SendingApplicationEntityTitle=FORWARD または Modality=MR|CT または ProcedureCodeSequence.CodeValue=MRProcedure または 00180015=KNEE または 00321034.00080100=RequestingServiceCode または ImageType[3]=LOCALIZER"

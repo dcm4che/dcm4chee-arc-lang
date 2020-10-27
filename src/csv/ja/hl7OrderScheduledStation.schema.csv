@@ -1,0 +1,6 @@
+"property","title","description"
+"","HL7 オーダーの 予定された ステーション","HL7 オーダー フィードで 選択された 予定された ステーション。"
+"cn","名前","予定された ステーション オーダー マッピングの 任意 / 意味の ある 名前"
+"hl7OrderScheduledStationDeviceName","予定された ステーションの デバイス名","HL7 オーダー メッセージに 使用される 予定された ステーションの デバイス名。"
+"dcmRulePriority","マッピング 優先度","マッピング 優先度"
+"dcmProperty","条件","{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx} 形式で 条件。 例 : MSH-4=FORWARD または MSH-9=ADT\^A28\^ADT_A05 または PID-3[.3]=PIDIssuer または PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType"

@@ -1,0 +1,149 @@
+{
+  "title": "UI 構成",
+  "description": "UI 構成",
+  "type": "object",
+  "required": [
+    "dcmuiConfigName"
+  ],
+  "properties": {
+    "dcmuiConfigName": {
+      "title": "UI 構成名",
+      "description": "UI 構成名",
+      "type": "string"
+    },
+    "dcmuiModalities": {
+      "title": "統計 モダリティ",
+      "description": "統計 ページに 表示される 事前選択された モダリティ",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiLanguageConfig":{
+      "title": "Language Config",
+      "description": "Config the languages of the UI",
+      "titleKey":"{dcmuiLanguageConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiLanguage.schema.json"
+      }
+    },
+    "dcmuiWidgetAets": {
+      "title": "ウィジェット AETs",
+      "description": "AET ウィジェットに 表示したく AETを 選択します。ここで、新しく 追加された AETを 'Accepted Calling AE Title' として 選択する ことが できます。",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiBackgroundURL": {
+      "title": "背景 URL",
+      "description": "UIの 背景を 変更するための 背景 URL。相対 URL または 絶対 URLに する ことが できます、画像の 幅は 少なくとも 1024pxで ある 必要が あります。",
+      "type": "string"
+    },
+    "dcmuiLogoURL": {
+      "title": "ロゴ URL",
+      "description": "UIの ロゴを 変更するための ロゴ URL、相対 URL または 絶対 URLに する ことが できます, 画像の 幅は 140pxで、png 形式で あり、背景は 透明で ある 必要が あります。",
+      "type": "string"
+    },
+    "dcmuiDefaultWidgetAets": {
+      "title": "デフォルトの ウィジェット AETs",
+      "description": "ウィジェット AETで 事前 選択する 必要が ある AETを 選択 します。",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiAetConfig": {
+      "title": "AET ドロップダウン リスト",
+      "description": "UIの ドロップダウン リストに 表示する AETを 定義 します。",
+      "titleKey":"{dcmuiAetListName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiAet.schema.json"
+      }
+    },
+    "dcmuiWebAppConfig": {
+      "title": "ウェブ アプリケーション ドロップダウン リスト",
+      "description": "UIの ドロップダウン リストの 一番上に 表示する ウェブ アプリケーションを 定義 します",
+      "titleKey":"{dcmuiWebAppListName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiWebApp.schema.json"
+      }
+    },
+    "dcmuiPermission": {
+      "title": "許可",
+      "description": "許可",
+      "titleKey":"{dcmuiPermissionName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiPermission.schema.json"
+      }
+    },"dcmuiFilterTemplateObject": {
+      "title": "UI Filter Template",
+      "description": "Defined filter template",
+      "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
+      "type": "array",
+      "items" : {
+        "$ref": "uiFilterTemplate.schema.json"
+      }
+    },
+    "dcmuiDiffConfig": {
+      "title": "検査 違い 構成",
+      "description": "検査 違い 構成",
+      "titleKey":"{dcmuiDiffConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDiffConfig.schema.json"
+      }
+    },
+    "dcmuiDashboardConfig": {
+      "title": "UI ダッシュボード 構成",
+      "description": "UI ダッシュボード 構成",
+      "titleKey":"{dcmuiDashboardConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDashboard.schema.json"
+      }
+    },
+    "dcmuiStudyTableConfig": {
+      "title": "UI 検査 テーブル 構成",
+      "description": "テーブルの 構成",
+      "titleKey":"{dcmuiStudyTableConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiTable.schema.json"
+      }
+    },
+    "dcmuiElasticsearchConfig": {
+      "title": "UI エラスティクサーチ 構成",
+      "description": "プロ版の エラスティクサーチ 構成",
+      "titleKey":"{dcmuiElasticsearchConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiElasticsearch.schema.json"
+      }
+    },
+    "dcmuiDeviceURLObject": {
+      "title": "UI デバイス URLs",
+      "description": "その他の UI デバイス URLs",
+      "titleKey":"{dcmuiDeviceURLName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDeviceURL.schema.json"
+      }
+    },
+    "dcmuiDeviceClusterObject": {
+      "title": "UI クラスター 構成",
+      "description": "クラスター 内の デバイスの グループ化。",
+      "titleKey":"{dcmuiDeviceClusterName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDeviceCluster.schema.json"
+      }
+    }
+  }
+}

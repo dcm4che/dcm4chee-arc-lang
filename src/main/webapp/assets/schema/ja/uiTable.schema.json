@@ -1,0 +1,40 @@
+{
+  "title": "UI 検査 テーブル 構成",
+  "description": "プロ 版の 検査 テーブル 構成",
+  "type": "object",
+  "required": [
+    "dcmuiStudyTableConfigName"
+  ],
+  "properties": {
+    "dcmuiStudyTableConfigName": {
+      "title": "構成名",
+      "description": "UI 検査 テーブル 構成名",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigUsername": {
+      "title": "ユーザー名",
+      "description": "この セットを 使用できる ユーザー名",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigRoles": {
+      "title": "役割",
+      "description": "この セットを 使用できる ユーザー名 役割 (ユーザー名を 設定した 場合、役割は 無視されます)",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigIsDefault": {
+      "title": "デフォルトです",
+      "description": "この 列 セットを デフォルトに 設定します。（セット 兄弟の 子の 1つだけが デフォルトに 設定されて いる ことを 確認して ください）。",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiStudyTableColumnConfigObjects": {
+      "title": "検査 テーブル 列",
+      "description": "検査 テーブル 列の 定義",
+      "titleKey":"{dcmuiColumnName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiTableColumns.schema.json"
+      }
+    }
+  }
+}
