@@ -1,0 +1,8 @@
+"property","title","description"
+"","बाजूंची तुलना करा","बाजूंची तुलना करा"
+"dcmuiCompareSideName","नाव","बाजूंची तुलना करण्याचे नाव"
+"dcmuiCompareSideDescription","वर्णन","या गटाबद्दल एक लहान वर्णन."
+"dcmuiCompareSideCluster","क्लस्टर","क्लस्टर निवडा."
+"dcmuiCompareSideElasticsearch","इलास्टिकसर्च","इलास्टिकसर्च URL निवडा."
+"dcmuiCompareSideQueueName","रांगेचे नाव","बाजूंची तुलना करण्यासाठी वापरला जाणारा रांगेचे नाव निवडा."
+"dcmuiCompareSideInstalled","स्थापित","'हो' असल्यास या बाजूंची तुलना डॅशबोर्डमध्ये सक्रिय करते."

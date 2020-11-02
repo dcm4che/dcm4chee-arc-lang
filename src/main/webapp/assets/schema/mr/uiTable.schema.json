@@ -1,0 +1,40 @@
+{
+  "title": "UI अभ्यास टेबल कॉन्फिगरेशन",
+  "description": "प्रो संस्करण के लिए अभ्यास टेबल कॉन्फिगरेशन.",
+  "type": "object",
+  "required": [
+    "dcmuiStudyTableConfigName"
+  ],
+  "properties": {
+    "dcmuiStudyTableConfigName": {
+      "title": "कॉन्फिगरेशनचे नाव",
+      "description": "UI अभ्यास टेबल कॉन्फिगरेशनचे नाव.",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigUsername": {
+      "title": "वापरकर्ताचे नाव",
+      "description": "वापरकर्ताचे नाव ज्यासाठी हा सेट उपलब्ध असावा.",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigRoles": {
+      "title": "भूमिका",
+      "description": "वापरकर्त्याची भूमिका जो हा सेट वापरेल ('वापरकर्ताचे नाव' निर्दिष्ट असेल तर, भूमिका दुर्लक्ष केले जाईल).",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigIsDefault": {
+      "title": "डीफॉल्ट आहे",
+      "description": "या कॉलम-सेटला डीफॉल्ट म्हणून संच करा. (खात्री करा की फक्त कोणत्याही एका सेटला डीफॉल्ट म्हणून संच करा).",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiStudyTableColumnConfigObjects": {
+      "title": "अभ्यास टेबल कॉलम",
+      "description": "अभ्यास टेबल कॉलम परिभाषित करा.",
+      "titleKey":"{dcmuiColumnName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiTableColumns.schema.json"
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+"property","title","description"
+"","UI 検査 テーブルの 列 構成","検査 テーブルの 列"
+"dcmuiColumnName","列名","検査 テーブルの 列の 名前"
+"dcmuiColumnTitle","列の 説明","列の 説明、ホバーに 表示"
+"dcmuiValuePath","値の パス","値（json-Object）列の パス (例えば: 患者名の ために '00100010.Value[0].Alphabetic' または 患者IDの ために '00100020.Value[0]'"
+"dcmuiValueType","値の タイプ","列の タイプ、値の 取得方法、デフォルトは '値'"
+"dcmuiColumnWidth","列幅の 重み","列幅の 重み ( x > 0.1 - x < 無限) デフォルトが 1 です。"
+"dcmuiColumnOrder","列の 順序","列の 順序"

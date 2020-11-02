@@ -1,0 +1,5 @@
+"property","title","description"
+"","HL7 転送 規則","HL7 転送 規則"
+"cn","名前","HL7 転送 規則の 任意 / 意味の ある 名前"
+"hl7FwdApplicationName","HL7 転送 アプリケーション名","HL7 転送 宛先 アプリケーションと 施設名 (アプリケーション|施設)"
+"dcmProperty","条件","<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]][!]=<regEx> 形式で 条件。 例えば : MSH-4=FORWARD または MSH-9=ADT\^A28\^ADT_A05 または PID-3[.3]=PIDIssuer または PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType"

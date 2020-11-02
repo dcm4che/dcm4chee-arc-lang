@@ -1,0 +1,7 @@
+"property","title","description"
+"","UI 検査 テーブル 構成","プロ 版の 検査 テーブル 構成"
+"dcmuiStudyTableConfigName","構成名","UI 検査 テーブル 構成名"
+"dcmuiStudyTableConfigUsername","ユーザー名","この セットを 使用できる ユーザー名"
+"dcmuiStudyTableConfigRoles","役割","この セットを 使用できる ユーザー名 役割 (ユーザー名を 設定した 場合、役割は 無視されます)"
+"dcmuiStudyTableConfigIsDefault","デフォルトです","この 列 セットを デフォルトに 設定します。（セット 兄弟の 子の 1つだけが デフォルトに 設定されて いる ことを 確認して ください）。"
+"dcmuiStudyTableColumnConfigObjects","検査 テーブル 列","検査 テーブル 列の 定義"

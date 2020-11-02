@@ -1,0 +1,6 @@
+"property","title","description"
+"","メトリック 記述子","メトリック 記述子"
+"dcmMetricsName","メトリック名","メトリック名"
+"dicomDescription","メトリックの 説明","メトリックの 制約のない テキスト 説明"
+"dcmMetricsRetentionPeriod","メトリック 保持 期間","分で メトリック 保持 期間"
+"dcmUnit","メトリック 単位","メトリック データの 単位"

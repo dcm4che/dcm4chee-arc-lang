@@ -1,0 +1,5 @@
+"property","title","description"
+"","UI 言語 構成","UI 言語 構成"
+"dcmuiLanguageConfigName","言語 構成の 名前","言語 構成の 名前"
+"dcmLanguages","利用可能な 言語","UIで 利用 可能に する 必要が ある 言語を 設定します。(これらの 言語の JSON ファイルが コードに 存在 する 必要が あります、存在しない 場合は、githubで 課題を 開いて ください。"
+"dcmuiLanguageProfileObjects","言語 プロファイル","ユーザー名、役割 または 全員の 言語 プロファイル。"
