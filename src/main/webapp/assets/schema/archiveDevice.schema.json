@@ -73,7 +73,7 @@
     "dcmPatientVerificationAdjustIssuerOfPatientID",
     "dcmPatientVerificationMaxRetries",
     "dcmQueueTasksFetchSize",
-    "dcmQueueTasksFetchSize",
+    "dcmSupplementIssuerFetchSize",
     "dcmCopyMoveUpdatePolicy",
     "dcmLinkMWLEntryUpdatePolicy",
     "dcmCSVUploadChunkSize",
@@ -1376,6 +1376,13 @@
       "description": "Indicates to renew the verification of Patient Demographics on receive of objects for a patient, if previous verification is longer ago as the specified Interval. If absent, Patient Verification on receive of objects is disabled.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmSupplementIssuerFetchSize": {
+      "title": "Supplement Issuer Fetch Size",
+      "description": "Limit result set of DB query for matching Patients by RESTful service for supplementing Issuer of Patient ID.",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1
     },
     "hl7ADTSendingApplication": {
       "title": "HL7 ADT Sending Application",
