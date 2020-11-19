@@ -118,14 +118,13 @@
     },
     "dcmAttributeUpdatePolicy": {
       "title": "Criteri di aggiornamento degli attributi",
-      "description": "Specifica come gli attributi devono essere aggiornati con gli attributi recuperati da Leading C-FIND SCP. PRESERVE (= annulla gli attributi nel nuovo dataset che non sono presenti nel dataset originale), SUPPLEMENT (= gli attributi non presenti nel dataset originale verranno integrati), REPLACE (= il dataset originale è completamente sostituito), MERGE (= i valori degli attributi saranno scritto dal nuovo set di dati), OVERWRITE (= i valori degli attributi se nulli nel nuovo set di dati, saranno annullati nel set di dati originale).",
+      "description": "Specifica come gli attributi devono essere aggiornati con gli attributi recuperati da Leading C-FIND SCP. PRESERVE (= annulla gli attributi nel nuovo dataset che non sono presenti nel dataset originale), SUPPLEMENT (= gli attributi non presenti nel dataset originale verranno integrati), MERGE (= i valori degli attributi saranno scritto dal nuovo set di dati), OVERWRITE (= i valori degli attributi se nulli nel nuovo set di dati, saranno annullati nel set di dati originale).",
       "type": "string",
       "default": "MERGE",
       "enum": [
         "PRESERVE",
         "SUPPLEMENT",
         "MERGE",
-        "REPLACE",
         "OVERWRITE"
       ]
     },
