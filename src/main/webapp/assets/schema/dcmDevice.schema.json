@@ -163,6 +163,16 @@
       "items" : {
         "$ref": "uiConfig.schema.json"
       }
+    },
+    "xdsAdConfig": {
+      "title": "XDS Administrator Configuration",
+      "description": "XDS Administrator Configuration",
+      "titleKey":"{xdsAdConfigName}",
+      "type": "array",
+      "order":35,
+      "items" : {
+      "$ref": "xdsAdministratorConfig.schema.json"
+      }
     }
   }
 }

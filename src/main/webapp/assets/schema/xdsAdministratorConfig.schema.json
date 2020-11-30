@@ -1,0 +1,170 @@
+{
+  "title": "XDS Administrator Configuration Name",
+  "description": "XDS Administrator Configuration Name",
+  "type": "object",
+  "required": [
+    "xdsAdConfigName",
+    "xdsAdDisplayName",
+    "xdsAdIti18URL",
+    "xdsAdIti51URL",
+    "xdsAdIti57URL",
+    "xdsAdIti62URL",
+    "xdsAdNamespaceID",
+    "xdsAdRootOID",
+    "xdsAdSamlEnabled",
+    "xdsAdSourceOID",
+    "xdsAdUniversalID",
+    "xdsAdUniversalIDType"
+  ],
+  "properties": {
+    "xdsAdConfigName": {
+      "title": "XDS Administrator Configuration Name",
+      "description": "XDS Administrator Configuration Name",
+      "type": "string"
+    },
+    "xdsAdDisplayName": {
+      "title": "Display name of Affinity Domain",
+      "description": "Display name of Affinity Domain",
+      "type": "string"
+    },
+    "xdsAdIti18URL": {
+      "title": "ITI-18 URL",
+      "description": "ITI-18 URL",
+      "type": "string"
+    },
+    "xdsAdIti51URL": {
+      "title": "ITI-51 URL",
+      "description": "ITI-51 URL",
+      "type": "string"
+    },
+    "xdsAdIti57URL": {
+      "title": "ITI-57 URL",
+      "description": "ITI-57 URL",
+      "type": "string"
+    },
+    "xdsAdIti62URL": {
+      "title": "ITI-62 URL",
+      "description": "ITI-62 URL",
+      "type": "string"
+    },
+    "xdsAdNamespaceID": {
+      "title": "Namespace ID",
+      "description": "Namespace ID",
+      "type": "string"
+    },
+    "xdsAdRootOID": {
+      "title": "Root OID",
+      "description": "Root OID",
+      "type": "string"
+    },
+    "xdsAdSamlAudienceURIs": {
+      "title": "SAML Audience URIs",
+      "description": "SAML Audience URIs",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+     },
+    "xdsAdSamlAuthenticationMethod": {
+      "title": "SAML Authentication Method",
+      "description": "SAML Authentication Method",
+      "type": "string"
+    },
+    "xdsAdSamlCertificate": {
+      "title": "SAML Certificate",
+      "description": "SAML Certificate",
+      "type": "string"
+    },
+    "xdsAdSamlEnabled": {
+      "title": "SAML Enabled",
+      "description": "SAML Enabled",
+      "type": "boolean",
+      "default": false
+    },
+     "xdsAdSamlIssuer": {
+      "title": "SAML Issuer",
+      "description": "SAML Issuer",
+      "type": "string"
+    },
+     "xdsAdSamlNameID": {
+      "title": "SAML Name ID",
+      "description": "SAML Name ID",
+      "type": "string"
+    },
+     "xdsAdSamlNameQualifier": {
+      "title": "SAML Name Qualifier",
+      "description": "SAML Name Qualifier",
+      "type": "string"
+    },
+    "xdsAdSamlPrivateKey": {
+      "title": "SAML Private Key",
+      "description": "SAML Private Key",
+      "type": "string"
+    },
+     "xdsAdSamlPurposeOfUseCode": {
+      "title": "SAML Purpose of Use Code",
+      "description": "SAML Purpose of Use Code",
+      "type": "string"
+    },
+     "xdsAdSamlRoleCode": {
+      "title": "SAML Role Code",
+      "description": "SAML Role Code",
+      "type": "string"
+    },
+     "xdsAdSourceOID": {
+      "title": "Source OID",
+      "description": "Source OID",
+      "type": "string"
+    },
+      "xdsAdSslKeystore": {
+      "title": "SSL Keystore",
+      "description": "SSL Keystore",
+      "type": "string"
+    },
+     "xdsAdSslKeystorePassword": {
+      "title": "SSL Keystore Password",
+      "description": "SSL Keystore Password",
+      "type": "string"
+    },
+    "xdsAdSslTruststore": {
+      "title": "SSL Truststore",
+      "description": "SSL Truststore",
+      "type": "string"
+    },
+    "xdsAdSslTruststorePassword": {
+      "title": "SSL Truststore Password",
+      "description": "SSL Truststore Password",
+      "type": "string"
+    },
+     "xdsAdUniversalID": {
+      "title": "Universal ID",
+      "description": "Universal ID",
+      "type": "string"
+    },
+     "xdsAdUniversalIDType": {
+      "title": "Universal ID Type",
+      "description": "Universal ID Type",
+      "type": "string"
+    },
+    "xdsAdRepository":{
+      "title": "XDS Repositories",
+      "description": "XDS Repositories for this Affinity Domain",
+      "titleKey":"{xdsAdRepositoryName}",
+      "type": "array",
+      "items" : {
+        "$ref": "xdsRepository.schema.json"
+      }
+    }
+    ,
+    "xdsAdTemplate":{
+      "title": "XDS Templates",
+      "description": "XDS Templates for Metadata",
+      "titleKey":"{xdsAdTemplateName}",
+      "type": "array",
+      "items" : {
+        "$ref": "xdsTemplate.schema.json"
+      }
+    }
+  }
+}
+  

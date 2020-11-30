@@ -1,0 +1,75 @@
+{
+  "title": "XDS Template",
+  "description": "XDS Template",
+  "type": "object",
+  "required": [
+    "xdsAdTemplateName",
+    "xdsAdTemplateDisplayName",
+    "xdsAdTemplateClassCode",
+    "xdsAdTemplateConfidentialityCode",
+    "xdsAdTemplateContentTypeCode",
+    "xdsAdTemplateDescription",
+    "xdsAdTemplateHealthCareFacilityTypeCode",
+    "xdsAdTemplateLanguageCode",
+    "xdsAdTemplatePracticeSettingCode",
+    "xdsAdTemplateTypeCode",
+    "xdsAdTemplateFormatCode"
+  ],
+  "properties": {
+    "xdsAdTemplateName": {
+      "title": "Template Name",
+      "description": "Template Name",
+      "type": "string"
+    },
+    "xdsAdTemplateDisplayName": {
+      "title": "Template Display Name",
+      "description": "Template Display Name",
+      "type": "string"
+    },
+    "xdsAdTemplateClassCode": {
+      "title": "Class Code",
+      "description": "Class Code",
+      "type": "string"
+    },
+    "xdsAdTemplateConfidentialityCode": {
+      "title": "Confidentiality Code",
+      "description": "Confidentiality Code",
+      "type": "string"
+    },
+    "xdsAdTemplateContentTypeCode": {
+      "title": "Content Type Code",
+      "description": "Content Type Code",
+      "type": "string"
+    },
+    "xdsAdTemplateDescription": {
+      "title": "Description",
+      "description": "Description",
+      "type": "string"
+    },
+      "xdsAdTemplateFormatCode": {
+      "title": "Format Code",
+      "description": "Format Code",
+      "type": "string"
+    },
+    "xdsAdTemplateHealthCareFacilityTypeCode": {
+      "title": "Health Care Facility Type Code",
+      "description": "Health Care Facility Type Code",
+      "type": "string"
+    },
+       "xdsAdTemplateLanguageCode": {
+      "title": "Language Code",
+      "description": "Language Code",
+      "type": "string"
+    },
+    "xdsAdTemplatePracticeSettingCode": {
+      "title": "Practice Setting Code",
+      "description": "Practice Setting Code",
+      "type": "string"
+    },
+    "xdsAdTemplateTypeCode": {
+      "title": "Type Code",
+      "description": "Type Code",
+      "type": "string"
+    }
+  }
+}

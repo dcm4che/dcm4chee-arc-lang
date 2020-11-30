@@ -1,0 +1,52 @@
+{
+  "title": "XDS Repository",
+  "description": "XDS Repository",
+  "type": "object",
+  "required": [
+    "xdsAdRepositoryName",
+    "xdsAdRepositoryDisplayName",
+    "xdsAdIti41URL",
+    "xdsAdIti43URL",
+    "xdsAdRepositoryOID",
+    "xdsAdIti86URL"
+  ],
+  "properties": {
+    "xdsAdRepositoryName": {
+      "title": "XDS Repository Name",
+      "description": "XDS Repository Name",
+      "type": "string"
+    },
+    "xdsAdRepositoryDisplayName": {
+      "title": "Repository Display Name",
+      "description": "Repository Display Name",
+      "type": "string"
+    },
+    "xdsAdIti41URL": {
+      "title": "ITI-41 URL",
+      "description": "ITI-41 URL",
+      "type": "string"
+    },
+    "xdsAdIti43URL": {
+      "title": "ITI-43 URL",
+      "description": "ITI-43 URL",
+      "type": "string"
+    },
+    "xdsAdIti86URL": {
+      "title": "ITI-86 URL",
+      "description": "ITI-86 URL",
+      "type": "string",
+      "default": "iti-86://disabled"
+    },
+    "xdsAdIti86Enabled": {
+      "title": "ITI-86 Enabled",
+      "description": "ITI-86 Enabled",
+      "type": "boolean",
+      "default": false
+    },
+    "xdsAdRepositoryOID": {
+      "title": "Repository OID",
+      "description": "Repository OID",
+      "type": "string"
+    }
+  }
+}
