@@ -245,13 +245,6 @@
       "type": "array",
       "items" : { "type": "string" }
     },
-    "dcmSCPStatusChangeEventOnRestartDelay": {
-      "title": "SCP Status Change Event on restart Delay",
-      "description": "Delay in ms to send SCP State Change Events to subscribed UPS Event SCUs and UPS Web Clients on (re-)start of the archive; no delay if absent.",
-      "type": "integer",
-      "minimum": 0,
-      "exclusiveMinimum": true
-    },
     "dcmDeleteUPSPollingInterval": {
       "title": "Delete UPS Polling Interval",
       "description": "Polling Interval for deleting Unified Procedure Steps (UPS) in ISO-8601 duration format PnDTnHnMnS. If absent, Unified Procedure Steps will not get deleted.",
@@ -1099,6 +1092,15 @@
       "description": "Timeout in ms to keep associations to UPS Event SCUs alive. If absent, associations will not be reused for sending multiple UPS Event Reports to one UPS Event SCU. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "integer",
       "minimum": 100
+    },
+    "dcmUPSEventWebSocketQueueSize": {
+      "title": "UPS Event Web Socket Queue Size",
+      "description": "Indicates to queue UPS events to be sent to a particular Web Client identified by its {SubscriberAET} in case there is no open Web Socket connection to that client at the time of the event. Format: {SubscriberAET}:{QueueSize}.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "pattern": "^\\w*:\\d+$"
     },
     "dcmRetrieveAET": {
       "title": "Retrieve AE Title",
