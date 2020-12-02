@@ -1093,6 +1093,15 @@
       "type": "integer",
       "minimum": 100
     },
+    "dcmUPSEventWebSocketQueueSize": {
+      "title": "UPS Event Web Socket Queue Size",
+      "description": "Indicates to queue UPS events to be sent to a particular Web Client identified by its Subscriber AET in case there is no open Web Socket connection to that client at the time of the event. Format: <aet>=<size>.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "pattern": "^\\w*=\\d+$"
+    },
     "dcmRetrieveAET": {
       "title": "Retrieve AE Title",
       "description": "Specifies Retrieve AE Titles associated with received DICOM objects. If absent, the Called AE Title of the receiving AE will be used. May be overwritten by configured values for particular Archive Network AEs.",
