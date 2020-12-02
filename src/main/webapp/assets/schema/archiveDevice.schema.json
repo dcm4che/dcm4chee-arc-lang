@@ -1095,12 +1095,12 @@
     },
     "dcmUPSEventWebSocketQueueSize": {
       "title": "UPS Event Web Socket Queue Size",
-      "description": "Indicates to queue UPS events to be sent to a particular Web Client identified by its {SubscriberAET} in case there is no open Web Socket connection to that client at the time of the event. Format: {SubscriberAET}:{QueueSize}.",
+      "description": "Indicates to queue UPS events to be sent to a particular Web Client identified by its Subscriber AET in case there is no open Web Socket connection to that client at the time of the event. Format: <aet>=<size>.",
       "type": "array",
       "items": {
         "type": "string"
       },
-      "pattern": "^\\w*:\\d+$"
+      "pattern": "^\\w*=\\d+$"
     },
     "dcmRetrieveAET": {
       "title": "Retrieve AE Title",
