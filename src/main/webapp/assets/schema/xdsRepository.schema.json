@@ -8,7 +8,8 @@
     "xdsAdIti41URL",
     "xdsAdIti43URL",
     "xdsAdRepositoryOID",
-    "xdsAdIti86URL"
+    "xdsAdIti86URL",
+    "xdsAdIti86Enabled"
   ],
   "properties": {
     "xdsAdRepositoryName": {
@@ -23,12 +24,12 @@
     },
     "xdsAdIti41URL": {
       "title": "ITI-41 URL",
-      "description": "ITI-41 URL",
+      "description": "ITI-41 URL - f.e. xds-iti41://server/repository/provide?sslContextParameters=#ad1",
       "type": "string"
     },
     "xdsAdIti43URL": {
       "title": "ITI-43 URL",
-      "description": "ITI-43 URL",
+      "description": "ITI-43 URL- f.e. xds-iti43://server/repository/provide?sslContextParameters=#ad1",
       "type": "string"
     },
     "xdsAdIti86URL": {
@@ -45,7 +46,7 @@
     },
     "xdsAdRepositoryOID": {
       "title": "Repository OID",
-      "description": "Repository OID",
+      "description": "Repository OID - fe. 1.2.3.4",
       "type": "string"
     }
   }
