@@ -104,7 +104,7 @@
     },
     "dcmSchedule": {
       "title": "Restrict Scheduling",
-      "description": "Restrict Scheduling to specified time ranges. Use Maximum Queue Size to control maximal number of Tasks processed between specified time ranges. Only effective for scheduling Retrieve Tasks.",
+      "description": "Restrict Scheduling to specified time ranges. Use Maximum Queue Size to control maximal number of Tasks processed between specified time ranges. Only effective for scheduling 'TO SCHEDULE' Retrieve Tasks.",
       "type": "array",
       "items": {
         "type": "string"
