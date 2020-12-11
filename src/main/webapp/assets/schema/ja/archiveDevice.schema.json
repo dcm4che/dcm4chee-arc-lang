@@ -15,6 +15,7 @@
     "dcmMWLFetchSize",
     "dcmOverwritePolicy",
     "dcmRecordAttributeModification",
+    "dcmIdentifyPatientByAllAttributes",
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
     "dcmValidateCallingAEHostname",
@@ -310,6 +311,12 @@
         "NO",
         "MERGED"
       ]
+    },
+    "dcmIdentifyPatientByAllAttributes": {
+      "title": "すべての 属性で 患者を 特定 する",
+      "description": "患者 IDの 割り当て 権限が 患者ID または ユニバーサル エンティティ IDの 発行者に よって 指定されて いない 場合に、 受信した オブジェクトの すべての 患者 属性を 使用して、 アーカイブ内の 既存の 患者を 関連付けるか どうかを 示します。 注意 : 受信した オブジェクト内の 古い 患者 属性の 強制を 無効にし、 患者 IDの 明確さに 依存する 患者 管理 機能を 中断します。",
+      "type": "boolean",
+      "default": false
     },
     "dcmBulkDataSpoolDirectory": {
       "title": "バルクデータ スプール ディレクトリ",

@@ -15,6 +15,7 @@
     "dcmMWLFetchSize",
     "dcmOverwritePolicy",
     "dcmRecordAttributeModification",
+    "dcmIdentifyPatientByAllAttributes",
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
     "dcmValidateCallingAEHostname",
@@ -310,6 +311,12 @@
         "NO",
         "MERGED"
       ]
+    },
+    "dcmIdentifyPatientByAllAttributes": {
+      "title": "सर्व विशेषतांद्वारे रुग्ण ओळखा",
+      "description": "दर्शविते की जर रुग्ण ID चे असाइनिंग ऑथॉरिटीज रुग्णाच्या ID चा जारीकर्ता किंवा युनिव्हर्सल इन्टिटी ID जारीकर्ताद्वारे निर्दिष्ट केले नसेल तर, संग्रहात विद्यमान रुग्णाशी जोडण्यासाठी, प्राप्त झालेल्या दृष्टांतांमधील सर्व रुग्ण विशेषतांचे वापर केले जाईल. लक्ष द्या : प्राप्त झालेल्या दृष्टांतांमध्ये रुग्णाचे जुने विशेषतांची बळजबरी अक्षम करते आणि रुग्णांच्या ID च्या स्पष्टतेवर अवलंबून असलेल्या रुग्ण व्यवस्थापन कार्य खंडित करते.",
+      "type": "boolean",
+      "default": false
     },
     "dcmBulkDataSpoolDirectory": {
       "title": "बल्कडेटा स्पूल मार्गदर्शिका",

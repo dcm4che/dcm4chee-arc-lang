@@ -15,6 +15,7 @@
     "dcmMWLFetchSize",
     "dcmOverwritePolicy",
     "dcmRecordAttributeModification",
+    "dcmIdentifyPatientByAllAttributes",
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
     "dcmValidateCallingAEHostname",
@@ -310,6 +311,12 @@
         "NO",
         "MERGED"
       ]
+    },
+    "dcmIdentifyPatientByAllAttributes": {
+      "title": "सभी विशेषताओं द्वारा मरीज़ की पहचान करें",
+      "description": "इंगित करता है कि यदि मरीज़ की ID का समनुदेशन प्राधिकरण मरीज़ की ID या यूनिवर्सल एंटिटी ID के एक जारीकर्ता द्वारा निर्दिष्ट नहीं है, तो आर्काइव में पहले से मौजूद मरीज़ से सम्बंधित करने के लिए, प्राप्त दृष्टांतों के सभी मरीज़ विशेषताओं का उपयोग किया जाएगा । ध्यान रखे : प्राप्त दृष्टांतों में मरीज़ के पुराने विशेषताओं के नियंत्रण को अक्षम करता है और मरीज़ प्रबंधन कार्यों को मरीज़ की ID की अस्पष्टता पर निर्भर करता है ।",
+      "type": "boolean",
+      "default": false
     },
     "dcmBulkDataSpoolDirectory": {
       "title": "अधिकांश डेटा स्पूल निर्देशिका",
