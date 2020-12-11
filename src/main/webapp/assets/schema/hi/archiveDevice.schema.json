@@ -74,6 +74,7 @@
     "dcmPatientVerificationMaxRetries",
     "dcmQueueTasksFetchSize",
     "dcmQueueTasksFetchSize",
+    "dcmSupplementIssuerFetchSize",
     "dcmCopyMoveUpdatePolicy",
     "dcmLinkMWLEntryUpdatePolicy",
     "dcmCSVUploadChunkSize",
@@ -1376,6 +1377,13 @@
       "description": "मरीज़ के दृष्टांतों के प्राप्ति पे मरीज़ जनसांख्यिकी के सिद्धकरण को फिरसे दोहराने का संकेत करता है, यदि पिछला सिद्धकरण निर्दिष्ट अंतराल से पहले हुआ हो । यदि कॉन्फ़िगर न किया हो तो, दृष्टांतों के प्राप्ति पे मरीज़ के रेकॉर्ड के सिद्धकरण नहीं होगा ।",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmSupplementIssuerFetchSize": {
+      "title": "जारीकर्ता अनुपूरक करने का प्राप्ति का माप",
+      "description": "मरीज़ ID के जारीकर्ता को अनुपूरक करने के लिए RESTful सेवा द्वारा मिलान मरीजों के DB क्वेरी के नतीजे सेट को सीमित करें।",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1
     },
     "hl7ADTSendingApplication": {
       "title": "HL7 ADT भेजनेवाला अनुप्रयोग",

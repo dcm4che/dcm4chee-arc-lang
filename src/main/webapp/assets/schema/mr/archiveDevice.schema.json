@@ -74,6 +74,7 @@
     "dcmPatientVerificationMaxRetries",
     "dcmQueueTasksFetchSize",
     "dcmQueueTasksFetchSize",
+    "dcmSupplementIssuerFetchSize",
     "dcmCopyMoveUpdatePolicy",
     "dcmLinkMWLEntryUpdatePolicy",
     "dcmCSVUploadChunkSize",
@@ -1376,6 +1377,13 @@
       "description": "रुग्णांच्या दृष्टांतांच्या प्राप्तीवर रुग्ण जनसांख्यिकीचे सत्यापनाला परत करण्याचे संकेत करते, जर मागचा सत्यापन निर्दिष्ट मध्यांतराआधी झाला असेल. अनुपस्थित असल्यास, दृष्टांतांच्या प्राप्तीवर रुग्णांच्या रेकॉर्ड्सचे सत्यापन होणार नाही.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmSupplementIssuerFetchSize": {
+      "title": "जारीकर्ता पूरक करण्याचे प्राप्तीचे माप",
+      "description": "रुग्ण ID चा जरीकर्ता पूरक करण्यासाठी RESTful सेवेद्वारे जुळणाऱ्या रुग्णांचे डाटाबेस क्वेरी निकालाचा सेट मर्यादित करा.",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1
     },
     "hl7ADTSendingApplication": {
       "title": "HL7 ADT पाठवणारा अनुप्रयोग",
