@@ -1094,6 +1094,15 @@
       "type": "integer",
       "minimum": 100
     },
+    "dcmUPSEventWebSocketQueueSize": {
+      "title": "UPS イベント ウェブ ソケット キュー サイズ",
+      "description": "イベント時に その クライアントへの 開いて いる ウェブ ソケット 接続がない 場合に、 サブスクライバー AETに よって 識別される 特定の ウェブ クライアントに 送信される UPS イベントを キューに 入れる ことを 示します。 形式 : <aet>=<size>。",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "pattern": "^\\w*=\\d+$"
+    },
     "dcmRetrieveAET": {
       "title": "読み出し AE タイトル",
       "description": "受信した DICOM インスタンスに 関連付けられた 読み出し AE タイトルを 指定 します。 存在しない 場合、 受信 AEの 呼ばれた AE タイトルが 使用されます。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
