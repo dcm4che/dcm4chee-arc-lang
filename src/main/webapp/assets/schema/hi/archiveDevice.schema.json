@@ -15,6 +15,7 @@
     "dcmMWLFetchSize",
     "dcmOverwritePolicy",
     "dcmRecordAttributeModification",
+    "dcmIdentifyPatientByAllAttributes",
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
     "dcmValidateCallingAEHostname",
@@ -73,6 +74,7 @@
     "dcmPatientVerificationMaxRetries",
     "dcmQueueTasksFetchSize",
     "dcmQueueTasksFetchSize",
+    "dcmSupplementIssuerFetchSize",
     "dcmCopyMoveUpdatePolicy",
     "dcmLinkMWLEntryUpdatePolicy",
     "dcmCSVUploadChunkSize",
@@ -310,6 +312,12 @@
         "NO",
         "MERGED"
       ]
+    },
+    "dcmIdentifyPatientByAllAttributes": {
+      "title": "सभी विशेषताओं द्वारा मरीज़ की पहचान करें",
+      "description": "इंगित करता है कि यदि मरीज़ की ID का समनुदेशन प्राधिकरण मरीज़ की ID या यूनिवर्सल एंटिटी ID के एक जारीकर्ता द्वारा निर्दिष्ट नहीं है, तो आर्काइव में पहले से मौजूद मरीज़ से सम्बंधित करने के लिए, प्राप्त दृष्टांतों के सभी मरीज़ विशेषताओं का उपयोग किया जाएगा । ध्यान रखे : प्राप्त दृष्टांतों में मरीज़ के पुराने विशेषताओं के नियंत्रण को अक्षम करता है और मरीज़ प्रबंधन कार्यों को मरीज़ की ID की अस्पष्टता पर निर्भर करता है ।",
+      "type": "boolean",
+      "default": false
     },
     "dcmBulkDataSpoolDirectory": {
       "title": "अधिकांश डेटा स्पूल निर्देशिका",
@@ -1086,6 +1094,15 @@
       "type": "integer",
       "minimum": 100
     },
+    "dcmUPSEventWebSocketQueueSize": {
+      "title": "UPS घटना वेब सॉकेट कतार का माप",
+      "description": "जिस घटना के समय, यदि ग्राहक के लिए कोई खुला वेब सॉकेट कनेक्शन नहीं है, तो उसके सब्सक्राइबर AET द्वारा पहचाने जाने वाले विशेष वेब क्लाइंट को भेजी जाने वाली UPS घटनाओं को कतार में डालने को दर्शाता है । प्रारूप : <aet>=<size> ।",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "pattern": "^\\w*=\\d+$"
+    },
     "dcmRetrieveAET": {
       "title": "पुनःप्राप्ति AE का नाम",
       "description": "प्राप्त हुए DICOM दृष्टांतों से सम्बंधित पुनःप्राप्ति AE के नामों को निर्दिष्ट करता है । यदि कॉन्फ़िगर न किया हो तो, बुलाए गए AE के नाम का इस्तमाल होगा । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
@@ -1369,6 +1386,13 @@
       "description": "मरीज़ के दृष्टांतों के प्राप्ति पे मरीज़ जनसांख्यिकी के सिद्धकरण को फिरसे दोहराने का संकेत करता है, यदि पिछला सिद्धकरण निर्दिष्ट अंतराल से पहले हुआ हो । यदि कॉन्फ़िगर न किया हो तो, दृष्टांतों के प्राप्ति पे मरीज़ के रेकॉर्ड के सिद्धकरण नहीं होगा ।",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmSupplementIssuerFetchSize": {
+      "title": "जारीकर्ता अनुपूरक करने का प्राप्ति का माप",
+      "description": "मरीज़ ID के जारीकर्ता को अनुपूरक करने के लिए RESTful सेवा द्वारा मिलान मरीजों के DB क्वेरी के नतीजे सेट को सीमित करें।",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1
     },
     "hl7ADTSendingApplication": {
       "title": "HL7 ADT भेजनेवाला अनुप्रयोग",

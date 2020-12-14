@@ -15,6 +15,7 @@
     "dcmMWLFetchSize",
     "dcmOverwritePolicy",
     "dcmRecordAttributeModification",
+    "dcmIdentifyPatientByAllAttributes",
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
     "dcmValidateCallingAEHostname",
@@ -73,6 +74,7 @@
     "dcmPatientVerificationMaxRetries",
     "dcmQueueTasksFetchSize",
     "dcmQueueTasksFetchSize",
+    "dcmSupplementIssuerFetchSize",
     "dcmCopyMoveUpdatePolicy",
     "dcmLinkMWLEntryUpdatePolicy",
     "dcmCSVUploadChunkSize",
@@ -310,6 +312,12 @@
         "NO",
         "MERGED"
       ]
+    },
+    "dcmIdentifyPatientByAllAttributes": {
+      "title": "すべての 属性で 患者を 特定 する",
+      "description": "患者 IDの 割り当て 権限が 患者ID または ユニバーサル エンティティ IDの 発行者に よって 指定されて いない 場合に、 受信した オブジェクトの すべての 患者 属性を 使用して、 アーカイブ内の 既存の 患者を 関連付けるか どうかを 示します。 注意 : 受信した オブジェクト内の 古い 患者 属性の 強制を 無効にし、 患者 IDの 明確さに 依存する 患者 管理 機能を 中断します。",
+      "type": "boolean",
+      "default": false
     },
     "dcmBulkDataSpoolDirectory": {
       "title": "バルクデータ スプール ディレクトリ",
@@ -1086,6 +1094,15 @@
       "type": "integer",
       "minimum": 100
     },
+    "dcmUPSEventWebSocketQueueSize": {
+      "title": "UPS イベント ウェブ ソケット キュー サイズ",
+      "description": "イベント時に その クライアントへの 開いて いる ウェブ ソケット 接続がない 場合に、 サブスクライバー AETに よって 識別される 特定の ウェブ クライアントに 送信される UPS イベントを キューに 入れる ことを 示します。 形式 : <aet>=<size>。",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "pattern": "^\\w*=\\d+$"
+    },
     "dcmRetrieveAET": {
       "title": "読み出し AE タイトル",
       "description": "受信した DICOM インスタンスに 関連付けられた 読み出し AE タイトルを 指定 します。 存在しない 場合、 受信 AEの 呼ばれた AE タイトルが 使用されます。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
@@ -1369,6 +1386,13 @@
       "description": "Indicates to renew the verification of Patient Demographics on receive of objects for a patient, if previous verification is longer ago as the specified Interval. If absent, Patient Verification on receive of objects is disabled.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmSupplementIssuerFetchSize": {
+      "title": "発行者を 補足 する ための フェッチ サイズ",
+      "description": "患者 IDの 発行者を 補足 する ための RESTful サービスに よって、 一致 する 患者の DB クエリの 結果 セットを 制限します。",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1
     },
     "hl7ADTSendingApplication": {
       "title": "HL7 ADT 送信 アプリケーション",

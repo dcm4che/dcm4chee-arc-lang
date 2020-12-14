@@ -15,6 +15,7 @@
     "dcmMWLFetchSize",
     "dcmOverwritePolicy",
     "dcmRecordAttributeModification",
+    "dcmIdentifyPatientByAllAttributes",
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
     "dcmValidateCallingAEHostname",
@@ -73,6 +74,7 @@
     "dcmPatientVerificationMaxRetries",
     "dcmQueueTasksFetchSize",
     "dcmQueueTasksFetchSize",
+    "dcmSupplementIssuerFetchSize",
     "dcmCopyMoveUpdatePolicy",
     "dcmLinkMWLEntryUpdatePolicy",
     "dcmCSVUploadChunkSize",
@@ -310,6 +312,12 @@
         "NO",
         "MERGED"
       ]
+    },
+    "dcmIdentifyPatientByAllAttributes": {
+      "title": "सर्व विशेषतांद्वारे रुग्ण ओळखा",
+      "description": "दर्शविते की जर रुग्ण ID चे असाइनिंग ऑथॉरिटीज रुग्णाच्या ID चा जारीकर्ता किंवा युनिव्हर्सल इन्टिटी ID जारीकर्ताद्वारे निर्दिष्ट केले नसेल तर, संग्रहात विद्यमान रुग्णाशी जोडण्यासाठी, प्राप्त झालेल्या दृष्टांतांमधील सर्व रुग्ण विशेषतांचे वापर केले जाईल. लक्ष द्या : प्राप्त झालेल्या दृष्टांतांमध्ये रुग्णाचे जुने विशेषतांची बळजबरी अक्षम करते आणि रुग्णांच्या ID च्या स्पष्टतेवर अवलंबून असलेल्या रुग्ण व्यवस्थापन कार्य खंडित करते.",
+      "type": "boolean",
+      "default": false
     },
     "dcmBulkDataSpoolDirectory": {
       "title": "बल्कडेटा स्पूल मार्गदर्शिका",
@@ -1086,6 +1094,15 @@
       "type": "integer",
       "minimum": 100
     },
+    "dcmUPSEventWebSocketQueueSize": {
+      "title": "UPS घटना वेब सॉकेट रांगेचे माप",
+      "description": "घटणेच्या वेळी त्या क्लायंटशी कोणतेही मोकळे वेब सॉकेट कनेक्शन नसल्यास, त्याच्या स्बस्क्रायबर AET ने ओळखलेल्या एखाद्या विशिष्ट वेब क्लायंटला पाठविल्या जाणाऱ्या UPS इव्हेंट्सना रांगेत घालण्याचे संकेत करते. प्रारूप : <aet>=<size>.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "pattern": "^\\w*=\\d+$"
+    },
     "dcmRetrieveAET": {
       "title": "पुनर्प्राप्ती AE चे नाव",
       "description": "प्राप्त झालेल्या DICOM दृष्टांतांशी सम्बंधित पुनर्प्राप्ती AE चे नावांना निर्दिष्ट करते. अनुपस्थित असल्यास, बोलावलेल्या AE चे नाव वापरले जातील. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
@@ -1369,6 +1386,13 @@
       "description": "रुग्णांच्या दृष्टांतांच्या प्राप्तीवर रुग्ण जनसांख्यिकीचे सत्यापनाला परत करण्याचे संकेत करते, जर मागचा सत्यापन निर्दिष्ट मध्यांतराआधी झाला असेल. अनुपस्थित असल्यास, दृष्टांतांच्या प्राप्तीवर रुग्णांच्या रेकॉर्ड्सचे सत्यापन होणार नाही.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmSupplementIssuerFetchSize": {
+      "title": "जारीकर्ता पूरक करण्याचे प्राप्तीचे माप",
+      "description": "रुग्ण ID चा जरीकर्ता पूरक करण्यासाठी RESTful सेवेद्वारे जुळणाऱ्या रुग्णांचे डाटाबेस क्वेरी निकालाचा सेट मर्यादित करा.",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1
     },
     "hl7ADTSendingApplication": {
       "title": "HL7 ADT पाठवणारा अनुप्रयोग",
