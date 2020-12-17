@@ -135,6 +135,20 @@
         ]
       }
     },
+    "dcmEncodeAsJSONNumber": {
+      "title": "Encode as JSON Number",
+      "description": "VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. Supplements values specified on Device level.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "DS",
+          "IS",
+          "SV",
+          "UV"
+        ]
+      }
+    },
     "dcmValidateCallingAEHostname": {
       "title": "Validate Calling AE Hostname",
       "description": "Validate Calling AE Hostname or IP Address of Association requestors for this AE. Overwrites value specified on Device level.",

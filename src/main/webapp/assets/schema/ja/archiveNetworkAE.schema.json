@@ -135,6 +135,20 @@
         ]
       }
     },
+    "dcmEncodeAsJSONNumber": {
+      "title": "JSON 番号として エンコード する",
+      "description": "JSON 番号として エンコードされた VR。 構成されていない 場合、 IS、 DS、 SVと UVの 値は JSON 文字列として エンコードされます。 デバイス レベルで 指定された 値を 補足します。",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "DS",
+          "IS",
+          "SV",
+          "UV"
+        ]
+      }
+    },
     "dcmValidateCallingAEHostname": {
       "title": "呼びかけて いる AE ホスト名を 検証 する",
       "description": "この AEの ために 関連付け 要求の 呼びかけて いる AE ホスト名 または IP アドレスを 検証します。 デバイス レベルで 指定された 値を 上書きします。",
