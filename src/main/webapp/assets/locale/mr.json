@@ -986,6 +986,7 @@
     "reschedule_this_task": "हे कार्य पुन्हा अनुसूचित करा.",
     "responsible_person": "जबाबदार व्यक्ती",
     "rest_param": "बाकी ( {$@@groupingFilter} )",
+    "retainObj": "फाईलसिस्टीमवर दृष्टांतांना हटवू नका",
     "retrievable_from_external_retrieve_aet": "बाह्य पुनर्प्राप्त AET कडून पुनर्प्राप्त करण्यायोग्य",
     "retrieve": "परत मिळवणे",
     "retrieve-export.aetitle_is_missing": "AE चे शीर्षक गहाळ आहे",

@@ -986,6 +986,7 @@
 		"reschedule_this_task": "Riprogrammare questa attività",
 		"responsible_person": "Persona responsabile",
 		"rest_param": "Riposo ( {$@@groupingFilter} )",
+		"retainObj": "Retain objects on the filesystem",
 		"retrievable_from_external_retrieve_aet": "Recuperabile da AET di recupero esterno",
 		"retrieve": "Recupera",
 		"retrieve-export.aetitle_is_missing": "AETitle mancante",

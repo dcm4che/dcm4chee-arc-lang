@@ -986,6 +986,7 @@
     "reschedule_this_task": "Reschedule this task",
     "responsible_person": "Responsible Person",
     "rest_param": "Rest ( {$@@groupingFilter} )",
+    "retainObj": "Retain objects on the filesystem",
     "retrievable_from_external_retrieve_aet": "Retrievable from external retrieve AET",
     "retrieve": "Retrieve",
     "retrieve-export.aetitle_is_missing": "AETitle is missing",
