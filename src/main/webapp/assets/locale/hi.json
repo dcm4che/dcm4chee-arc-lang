@@ -988,6 +988,7 @@
     "reschedule_this_task": "ये कार्य पुनःनिर्धारित करें",
     "responsible_person": "जिम्मेदार व्यक्ति",
     "rest_param": "बाकि ( {$@@groupingFilter} )",
+    "retainObj": "फाइलसिस्टम पर दृष्टांतों को न हटाए",
     "retrievable_from_external_retrieve_aet": "बाहरी पुनःप्राप्ति AET से पुनःप्राप्त करने योग्य",
     "retrieve": "पुनःप्राप्ति",
     "retrieve-export.aetitle_is_missing": "AE का नाम अनुपस्थित है",

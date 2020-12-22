@@ -986,6 +986,7 @@
     "reschedule_this_task": "この タスクを 再予定 します",
     "responsible_person": "責任者",
     "rest_param": "残り ( {$@@groupingFilter} )",
+    "retainObj": "ファイル システムに インスタンスを 保持 する",
     "retrievable_from_external_retrieve_aet": "外部 読み出し AETから 取得が 可能です",
     "retrieve": "読み出す",
     "retrieve-export.aetitle_is_missing": "AE タイトルが ありません",
