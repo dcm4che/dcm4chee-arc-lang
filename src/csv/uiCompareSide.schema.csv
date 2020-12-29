@@ -2,6 +2,7 @@
 "","Compare Side","Compare Side"
 "dcmuiCompareSideName","Name","Compare Side Name"
 "dcmuiCompareSideDescription","Description","A short description about this Group"
+"dcmuiCompareSideOrder","Order","Order of the Compare side"
 "dcmuiCompareSideCluster","Cluster","Select a Cluster"
 "dcmuiCompareSideElasticsearch","Elasticsearch","Select an Elasticsearch URL"
 "dcmuiCompareSideQueueName","Queue","Select the QueueName that should be used for the compare side"

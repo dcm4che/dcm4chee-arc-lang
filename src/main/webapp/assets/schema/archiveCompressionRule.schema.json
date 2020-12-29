@@ -15,13 +15,13 @@
     },
     "dicomTransferSyntax": {
       "title": "DICOM Transfer Syntax UID",
-      "description": "A Transfer Syntax UID",
+      "description": "Transfer Syntax UID",
       "type": "string",
       "format": "dcmTransferSyntax"
     },
     "dcmRulePriority": {
       "title": "Rule Priority",
-      "description": "Rule Priority",
+      "description": "If the condition of several Compression rules matches for a received image, the rule with the highest priority will get applied. If there are several matching rules with equal priority its undefined which rule get applied.",
       "type": "integer",
       "default" : 0,
       "minimum": 0
