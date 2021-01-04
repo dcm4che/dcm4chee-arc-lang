@@ -18,7 +18,7 @@
       "title": "Elasticsearch WebApp",
       "description": "Access URL of Elastic Search. E.g. http(s)://<elasticsearch-host>:<elasticsearch-port>",
       "type": "string",
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmuiAuditEnterpriseSiteID": {
       "title": "Audit Enterprise SiteID",
