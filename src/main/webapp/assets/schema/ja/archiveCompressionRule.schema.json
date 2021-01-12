@@ -15,13 +15,13 @@
     },
     "dicomTransferSyntax": {
       "title": "DICOM 転送 構文 UID",
-      "description": "転送 構文 UID",
+      "description": "受信した 画像を 圧縮 する 転送 構文",
       "type": "string",
       "format": "dcmTransferSyntax"
     },
     "dcmRulePriority": {
       "title": "規則の 優先度",
-      "description": "規則の 優先度",
+      "description": "複数の 圧縮 規則の 条件が 受信した 画像に 一致 する 場合、 最も 優先度の 高い 規則が 適用されます。 優先度が 等しい 一致 する 規則が 複数 ある 場合、 どの 規則が 適用されるかは 定義されて いません。",
       "type": "integer",
       "default" : 0,
       "minimum": 0

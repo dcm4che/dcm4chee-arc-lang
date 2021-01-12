@@ -6,7 +6,8 @@
     "dcmuiCompareSideName",
     "dcmuiCompareSideCluster",
     "dcmuiCompareSideElasticsearch",
-    "dcmuiCompareSideInstalled"
+    "dcmuiCompareSideInstalled",
+    "dcmuiCompareSideOrder"
   ],
   "properties": {
     "dcmuiCompareSideName": {
@@ -18,6 +19,16 @@
       "title": "वर्णन",
       "description": "या गटाबद्दल एक लहान वर्णन.",
       "type": "string"
+    },
+    "dcmuiCompareSideOrder": {
+      "title": "क्रम",
+      "description": "बाजूंची तुलनाचे क्रम.",
+      "type": "integer",
+      "default":0,
+      "enum":[
+        0,
+        1
+      ]
     },
     "dcmuiCompareSideCluster": {
       "title": "क्लस्टर",

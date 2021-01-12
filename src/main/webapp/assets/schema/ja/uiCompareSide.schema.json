@@ -6,7 +6,8 @@
     "dcmuiCompareSideName",
     "dcmuiCompareSideCluster",
     "dcmuiCompareSideElasticsearch",
-    "dcmuiCompareSideInstalled"
+    "dcmuiCompareSideInstalled",
+    "dcmuiCompareSideOrder"
   ],
   "properties": {
     "dcmuiCompareSideName": {
@@ -18,6 +19,16 @@
       "title": "説明",
       "description": "この グループに 関する 短い 説明。",
       "type": "string"
+    },
+    "dcmuiCompareSideOrder": {
+      "title": "順序",
+      "description": "比較側の 順序",
+      "type": "integer",
+      "default":0,
+      "enum":[
+        0,
+        1
+      ]
     },
     "dcmuiCompareSideCluster": {
       "title": "クラスタ",

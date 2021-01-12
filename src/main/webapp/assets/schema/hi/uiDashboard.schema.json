@@ -45,10 +45,10 @@
       "items" : { "type": "string" }
     },
     "dcmuiCountAET": {
-      "title": "गिनती AET",
-      "description": "डैशबोर्ड में स्टडीज की गिनती प्राप्त करने के लिए चुने हुए AET का इस्तमाल होगा ।",
+      "title": "गिनती वेब अनुप्रयोग",
+      "description": "डैशबोर्ड में स्टडीज की गिनती प्राप्त करने के लिए चुने हुए वेब अनुप्रयोग का इस्तमाल होगा ।",
       "type": "string",
-      "format": "dcmArchiveAETitle"
+      "format": "webApp"
     },
     "dcmuiCompareSideObjects": {
       "title": "पक्षों की तुलना करें",

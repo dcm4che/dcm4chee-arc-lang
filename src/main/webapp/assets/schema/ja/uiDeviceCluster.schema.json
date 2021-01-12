@@ -18,24 +18,18 @@
       "description": "クラスターの 説明",
       "type": "string"
     },
-    "dcmuiDeviceClusterLoadBalancer": {
-      "title": "ロード バランサー",
-      "description": "ロード バランサーを 選択 する。",
-      "type": "string",
-      "format": "dcmuiDeviceURLObject"
-    },
-    "dcmuiDeviceClusterKeycloakServer": {
-      "title": "キークローク サーバー",
-      "description": "この クラスターが 同じ キークロークを 使用しない 場合は、構成済みの キークロークを 選択します。",
-      "type":  "string",
-      "format": "dcmKeycloakServer"
-    },
     "dcmuiDeviceClusterDevices": {
       "title": "デバイス",
       "description": "構成済み デバイスの 名前を 追加します。",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmuiDeviceURLObject"
+    },
+    "dcmuiClusterWebApp": {
+      "title": "ウェブ アプリケーション",
+      "description": "QIDO-RS クラスの ウェブ アプリケーション",
+      "type":  "string",
+      "format": "webApp"
     },
     "dcmuiDeviceClusterInstalled": {
       "title": "インストール済み",

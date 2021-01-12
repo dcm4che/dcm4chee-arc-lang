@@ -45,10 +45,10 @@
       "items" : { "type": "string" }
     },
     "dcmuiCountAET": {
-      "title": "カウント AET",
-      "description": "選択された AETは、ダッシュボードに 検査の カウントを 取得する ために 使用されます。",
+      "title": "カウント ウェブ アプリケーション",
+      "description": "選択された ウェブ アプリケーションは、ダッシュボードに 検査の カウントを 取得する ために 使用されます。",
       "type": "string",
-      "format": "dcmArchiveAETitle"
+      "format": "webApp"
     },
     "dcmuiCompareSideObjects": {
       "title": "側面を 比較 する",

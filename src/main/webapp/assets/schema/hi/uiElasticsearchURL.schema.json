@@ -14,17 +14,13 @@
       "description": "UI इलास्टिकसर्च URL का नाम ।",
       "type": "string"
     },
-    "dcmuiElasticsearchURL": {
-      "title": "इलास्टिकसर्च URL",
-      "description": "इलास्टिकसर्च का प्रवेश URL, उदाहरण के तौर पे http(s)://<elasticsearch-host>:<elasticsearch-port> ।",
-      "type": "string"
+    "dcmuiElasticsearchWebApp": {
+      "title": "Elasticsearch WebApp",
+      "description": "Access URL of Elastic Search. E.g. http(s)://<elasticsearch-host>:<elasticsearch-port>",
+      "type": "string",
+      "format": "webApp"
     },
-    "dcmuiElasticsearchURLKeycloakServer": {
-      "title": "कीक्लोक सर्वर",
-      "description": "इलास्टिकसर्च से संपर्क करने के लिए कीक्लोक सर्वर को चुने जहा से बेरर टोकन को प्राप्त करें ।",
-      "type":  "string",
-      "format": "dcmKeycloakServer"
-    },"dcmuiAuditEnterpriseSiteID": {
+    "dcmuiAuditEnterpriseSiteID": {
       "title": "Audit Enterprise SiteID",
       "description": "Set Audit Enterprise SiteID which should be used on Elasticsearch queries",
       "type": "string"
