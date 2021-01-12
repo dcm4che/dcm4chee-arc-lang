@@ -23,13 +23,13 @@
       "description": "Select configured WebApps to used to access the corresponding devices",
       "type": "array",
       "items" : { "type": "string" },
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmuiClusterWebApp": {
       "title": "Web Application",
       "description": "Web Application with the class QIDO-RS",
       "type":  "string",
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmuiDeviceClusterInstalled": {
       "title": "Installed",

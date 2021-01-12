@@ -49,7 +49,7 @@
       "title": "Count Web App",
       "description": "Selected Web App, It will be used to get the count of studies in the dashboard",
       "type": "string",
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmuiCompareSideObjects": {
       "title": "Compare Sides",
