@@ -100,15 +100,6 @@
         "$ref": "uiDiffConfig.schema.json"
       }
     },
-    "dcmuiDashboardConfig": {
-      "title": "UI डॅशबोर्ड कॉन्फिगरेशन",
-      "description": "UI डॅशबोर्ड कॉन्फिगरेशन.",
-      "titleKey":"{dcmuiDashboardConfigName}",
-      "type": "array",
-      "items" : {
-        "$ref": "uiDashboard.schema.json"
-      }
-    },
     "dcmuiStudyTableConfig": {
       "title": "UI अभ्यास टेबल कॉन्फिगरेशन",
       "description": "टेबलची कॉन्फिगरेशन.",
@@ -127,15 +118,6 @@
         "$ref": "uiElasticsearch.schema.json"
       }
     },
-    "dcmuiDeviceURLObject": {
-      "title": "UI डिव्हाइस URL",
-      "description": "इतर UI डिव्हाइस URL.",
-      "titleKey":"{dcmuiDeviceURLName}",
-      "type": "array",
-      "items" : {
-        "$ref": "uiDeviceURL.schema.json"
-      }
-    },
     "dcmuiDeviceClusterObject": {
       "title": "UI क्लस्टर कॉन्फिगरेशन",
       "description": "डिव्हाइसेसना क्लस्टरमध्ये समूहित करा.",
@@ -143,6 +125,15 @@
       "type": "array",
       "items" : {
         "$ref": "uiDeviceCluster.schema.json"
+      }
+    },
+    "dcmuiDashboardConfig": {
+      "title": "UI डॅशबोर्ड कॉन्फिगरेशन",
+      "description": "UI डॅशबोर्ड कॉन्फिगरेशन.",
+      "titleKey":"{dcmuiDashboardConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDashboard.schema.json"
       }
     }
   }

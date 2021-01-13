@@ -18,24 +18,24 @@
       "description": "क्लस्टरचे वर्णन.",
       "type": "string"
     },
-    "dcmuiDeviceClusterLoadBalancer": {
-      "title": "लोड बॅलेन्सर",
-      "description": "लोड बॅलेन्सर निवडा.",
-      "type": "string",
-      "format": "dcmuiDeviceURLObject"
-    },
-    "dcmuiDeviceClusterKeycloakServer": {
-      "title": "कीक्लोक सर्व्हर",
-      "description": "जर हे क्लस्टर समान कीक्लोक वापरत नसेल तर कॉन्फिगर केलेले कीक्लोक निवडा.",
-      "type":  "string",
-      "format": "dcmKeycloakServer"
-    },
     "dcmuiDeviceClusterDevices": {
-      "title": "डिव्हाइस",
-      "description": "कॉन्फिगर केलेल्या डिव्हाइसेसचे नाव जोडा.",
+      "title": "Web Application for Devices",
+      "description": "Select configured WebApps to used to access the corresponding devices",
       "type": "array",
       "items" : { "type": "string" },
-      "format": "dcmuiDeviceURLObject"
+      "format": "webApp"
+    },
+    "dcmuiClusterWebApp": {
+      "title": "Web Application",
+      "description": "Web Application with the class QIDO-RS",
+      "type":  "string",
+      "format": "webApp"
+    },
+    "dcmuiClusterWebApp": {
+      "title": "वेब अनुप्रयोग",
+      "description": "QIDO-RS सेवेचे वेब अनुप्रयोग",
+      "type":  "string",
+      "format": "webApp"
     },
     "dcmuiDeviceClusterInstalled": {
       "title": "स्थापित",

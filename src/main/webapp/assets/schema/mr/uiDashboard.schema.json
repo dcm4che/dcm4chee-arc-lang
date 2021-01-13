@@ -3,7 +3,8 @@
   "description": "UI Dashboard Configuration",
   "type": "object",
   "required": [
-    "dcmuiDashboardConfigName"
+    "dcmuiDashboardConfigName",
+    "dcmuiCountWebApp"
   ],
   "properties": {
     "dcmuiDashboardConfigName": {
@@ -44,11 +45,11 @@
       "type": "array",
       "items" : { "type": "string" }
     },
-    "dcmuiCountAET": {
-      "title": "Count Aet",
-      "description": "Selected Aet will be used to get the count of studies in the dashboard",
+    "dcmuiCountWebApp": {
+      "title": "Count Web App",
+      "description": "Selected Web App, It will be used to get the count of studies in the dashboard",
       "type": "string",
-      "format": "dcmArchiveAETitle"
+      "format": "webApp"
     },
     "dcmuiCompareSideObjects": {
       "title": "Compare Sides",

@@ -100,15 +100,6 @@
         "$ref": "uiDiffConfig.schema.json"
       }
     },
-    "dcmuiDashboardConfig": {
-      "title": "UI ダッシュボード 構成",
-      "description": "UI ダッシュボード 構成",
-      "titleKey":"{dcmuiDashboardConfigName}",
-      "type": "array",
-      "items" : {
-        "$ref": "uiDashboard.schema.json"
-      }
-    },
     "dcmuiStudyTableConfig": {
       "title": "UI 検査 テーブル 構成",
       "description": "テーブルの 構成",
@@ -127,15 +118,6 @@
         "$ref": "uiElasticsearch.schema.json"
       }
     },
-    "dcmuiDeviceURLObject": {
-      "title": "UI デバイス URLs",
-      "description": "その他の UI デバイス URLs",
-      "titleKey":"{dcmuiDeviceURLName}",
-      "type": "array",
-      "items" : {
-        "$ref": "uiDeviceURL.schema.json"
-      }
-    },
     "dcmuiDeviceClusterObject": {
       "title": "UI クラスター 構成",
       "description": "クラスター 内の デバイスの グループ化。",
@@ -143,6 +125,15 @@
       "type": "array",
       "items" : {
         "$ref": "uiDeviceCluster.schema.json"
+      }
+    },
+    "dcmuiDashboardConfig": {
+      "title": "UI ダッシュボード 構成",
+      "description": "UI ダッシュボード 構成",
+      "titleKey":"{dcmuiDashboardConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDashboard.schema.json"
       }
     }
   }

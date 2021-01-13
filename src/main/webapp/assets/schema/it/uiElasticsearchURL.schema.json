@@ -14,17 +14,13 @@
       "description": "URL dell'interfaccia utente di Elasticsearch",
       "type": "string"
     },
-    "dcmuiElasticsearchURL": {
-      "title": "URL dell'interfaccia utente di Elasticsearch",
-      "description": "URL di accesso di Elasticsearch. Ad esempio: http(s)://<elasticsearch-host>:<elasticsearch-port> ",
-      "type": "string"
+    "dcmuiElasticsearchWebApp": {
+      "title": "Elasticsearch WebApp",
+      "description": "Web Application that will be used te extract the Elasticsearch URL and access Elasticsearch",
+      "type": "string",
+      "format": "webApp"
     },
-    "dcmuiElasticsearchURLKeycloakServer": {
-      "title": "Server Keycloak ",
-      "description": "Seleziona Keycloak Server da cui ottenere il token portatore per accedere a Elasticsearch",
-      "type":  "string",
-      "format": "dcmKeycloakServer"
-    },"dcmuiAuditEnterpriseSiteID": {
+    "dcmuiAuditEnterpriseSiteID": {
       "title": "Audit Enterprise SiteID",
       "description": "Set Audit Enterprise SiteID which should be used on Elasticsearch queries",
       "type": "string"
