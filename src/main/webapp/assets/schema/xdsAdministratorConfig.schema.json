@@ -126,7 +126,7 @@
     },
       "xdsAdSslKeystore": {
       "title": "SSL Keystore",
-      "description": "SSL Keystore - Path to SSL Keystore",
+      "description": "SSL Keystore - Path to SSL Keystore - leave empty if no SSL Context should be setuped",
       "type": "string"
     },
      "xdsAdSslKeystorePassword": {
