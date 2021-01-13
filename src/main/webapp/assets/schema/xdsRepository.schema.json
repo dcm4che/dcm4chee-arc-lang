@@ -36,7 +36,7 @@
       "title": "ITI-86 URL",
       "description": "ITI-86 URL",
       "type": "string",
-      "default": "iti-86://disabled"
+      "default": "rmd-iti86://disabled2"
     },
     "xdsAdIti86Enabled": {
       "title": "ITI-86 Enabled",
