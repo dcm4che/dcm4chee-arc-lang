@@ -3,8 +3,8 @@
   "description": "UI ダッシュボード 構成",
   "type": "object",
   "required": [
-    "dcmuiDashboardConfigName"
-  ],
+    "dcmuiDashboardConfigName",
+    "dcmuiCountWebApp"  ],
   "properties": {
     "dcmuiDashboardConfigName": {
       "title": "UI ダッシュボード 構成名",
@@ -44,9 +44,9 @@
       "type": "array",
       "items" : { "type": "string" }
     },
-    "dcmuiCountAET": {
-      "title": "カウント ウェブ アプリケーション",
-      "description": "選択された ウェブ アプリケーションは、ダッシュボードに 検査の カウントを 取得する ために 使用されます。",
+    "dcmuiCountWebApp": {
+      "title": "カウント Web App",
+      "description": "選択された Web Appは、ダッシュボードに 検査の カウントを 取得する ために 使用されます。",
       "type": "string",
       "format": "webApp"
     },

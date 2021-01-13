@@ -19,11 +19,17 @@
       "type": "string"
     },
     "dcmuiDeviceClusterDevices": {
-      "title": "デバイス",
-      "description": "構成済み デバイスの 名前を 追加します。",
+      "title": "Web Application for Devices",
+      "description": "Select configured WebApps to used to access the corresponding devices",
       "type": "array",
       "items" : { "type": "string" },
-      "format": "dcmuiDeviceURLObject"
+      "format": "webApp"
+    },
+    "dcmuiClusterWebApp": {
+      "title": "Web Application",
+      "description": "Web Application with the class QIDO-RS",
+      "type":  "string",
+      "format": "webApp"
     },
     "dcmuiClusterWebApp": {
       "title": "ウェブ アプリケーション",

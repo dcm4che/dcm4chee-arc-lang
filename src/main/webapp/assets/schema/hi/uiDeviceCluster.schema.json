@@ -19,11 +19,17 @@
       "type": "string"
     },
     "dcmuiDeviceClusterDevices": {
-      "title": "डिवाइस",
-      "description": "कॉन्फ़िगर किए हुए डिवाइसेस के नामों को जोड़े ।",
+      "title": "Web Application for Devices",
+      "description": "Select configured WebApps to used to access the corresponding devices",
       "type": "array",
       "items" : { "type": "string" },
-      "format": "dcmuiDeviceURLObject"
+      "format": "webApp"
+    },
+    "dcmuiClusterWebApp": {
+      "title": "Web Application",
+      "description": "Web Application with the class QIDO-RS",
+      "type":  "string",
+      "format": "webApp"
     },
     "dcmuiClusterWebApp": {
       "title": "वेब अनुप्रयोग",

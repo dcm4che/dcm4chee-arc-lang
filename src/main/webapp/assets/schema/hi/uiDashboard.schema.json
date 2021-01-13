@@ -3,7 +3,8 @@
   "description": "UI डैशबोर्ड विन्यास ।",
   "type": "object",
   "required": [
-    "dcmuiDashboardConfigName"
+    "dcmuiDashboardConfigName",
+    "dcmuiCountWebApp"
   ],
   "properties": {
     "dcmuiDashboardConfigName": {
@@ -44,9 +45,9 @@
       "type": "array",
       "items" : { "type": "string" }
     },
-    "dcmuiCountAET": {
-      "title": "गिनती वेब अनुप्रयोग",
-      "description": "डैशबोर्ड में स्टडीज की गिनती प्राप्त करने के लिए चुने हुए वेब अनुप्रयोग का इस्तमाल होगा ।",
+    "dcmuiCountWebApp": {
+      "title": "गिनती Web App",
+      "description": "डैशबोर्ड में स्टडीज की गिनती प्राप्त करने के लिए चुने हुए Web App का इस्तमाल होगा ।",
       "type": "string",
       "format": "webApp"
     },
