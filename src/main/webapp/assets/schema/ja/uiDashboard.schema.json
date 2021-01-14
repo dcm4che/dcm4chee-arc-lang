@@ -3,8 +3,8 @@
   "description": "UI ダッシュボード 構成",
   "type": "object",
   "required": [
-    "dcmuiDashboardConfigName"
-  ],
+    "dcmuiDashboardConfigName",
+    "dcmuiCountWebApp"  ],
   "properties": {
     "dcmuiDashboardConfigName": {
       "title": "UI ダッシュボード 構成名",
@@ -44,11 +44,11 @@
       "type": "array",
       "items" : { "type": "string" }
     },
-    "dcmuiCountAET": {
-      "title": "カウント AET",
-      "description": "選択された AETは、ダッシュボードに 検査の カウントを 取得する ために 使用されます。",
+    "dcmuiCountWebApp": {
+      "title": "カウント Web App",
+      "description": "選択された Web Appは、ダッシュボードに 検査の カウントを 取得する ために 使用されます。",
       "type": "string",
-      "format": "dcmArchiveAETitle"
+      "format": "webApp"
     },
     "dcmuiCompareSideObjects": {
       "title": "側面を 比較 する",

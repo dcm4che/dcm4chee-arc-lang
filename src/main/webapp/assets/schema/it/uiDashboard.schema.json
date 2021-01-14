@@ -3,7 +3,8 @@
   "description": "Configurazione dashboard dell'interfaccia utente",
   "type": "object",
   "required": [
-    "dcmuiDashboardConfigName"
+    "dcmuiDashboardConfigName",
+    "dcmuiCountWebApp"
   ],
   "properties": {
     "dcmuiDashboardConfigName": {
@@ -44,11 +45,11 @@
       "type": "array",
       "items" : { "type": "string" }
     },
-    "dcmuiCountAET": {
-      "title": "Conteggio Aet",
-      "description": "L'Aet selezionato verrà utilizzato per ottenere il conteggio degli studi nella dashboard",
+    "dcmuiCountWebApp": {
+      "title": "Conteggio Web APp",
+      "description": "L'Web App selezionato verrà utilizzato per ottenere il conteggio degli studi nella dashboard",
       "type": "string",
-      "format": "dcmArchiveAETitle"
+      "format": "webApp"
     },
     "dcmuiCompareSideObjects": {
       "title": "Confronta i lati",

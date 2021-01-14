@@ -18,24 +18,18 @@
       "description": "Descrizione del cluster",
       "type": "string"
     },
-    "dcmuiDeviceClusterLoadBalancer": {
-      "title": "Bilanciamento del Carico",
-      "description": "Seleziona il Load Balancer",
-      "type": "string",
-      "format": "dcmuiDeviceURLObject"
-    },
-    "dcmuiDeviceClusterKeycloakServer": {
-      "title": "Server Keycloak ",
-      "description": "Se questo cluster non utilizza lo stesso Keycloak, selezionare il Keycloak configurato",
-      "type":  "string",
-      "format": "dcmKeycloakServer"
-    },
     "dcmuiDeviceClusterDevices": {
-      "title": "Dispositivo",
-      "description": "Aggiungi il nome dei dispositivi configurati",
+      "title": "Web Application for Devices",
+      "description": "Select configured WebApps to used to access the corresponding devices",
       "type": "array",
       "items" : { "type": "string" },
-      "format": "dcmuiDeviceURLObject"
+      "format": "webApp"
+    },
+    "dcmuiClusterWebApp": {
+      "title": "Web Application",
+      "description": "Web Application with the class QIDO-RS",
+      "type":  "string",
+      "format": "webApp"
     },
     "dcmuiDeviceClusterInstalled": {
       "title": "Installato",

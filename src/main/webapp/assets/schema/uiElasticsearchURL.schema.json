@@ -16,7 +16,7 @@
     },
     "dcmuiElasticsearchWebApp": {
       "title": "Elasticsearch WebApp",
-      "description": "Access URL of Elastic Search. E.g. http(s)://<elasticsearch-host>:<elasticsearch-port>",
+      "description": "Web Application that will be used te extract the Elasticsearch URL and access Elasticsearch",
       "type": "string",
       "format": "webApp"
     },

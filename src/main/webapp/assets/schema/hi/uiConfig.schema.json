@@ -100,15 +100,6 @@
         "$ref": "uiDiffConfig.schema.json"
       }
     },
-    "dcmuiDashboardConfig": {
-      "title": "UI डैशबोर्ड विन्यास",
-      "description": "UI डैशबोर्ड विन्यास ।",
-      "titleKey":"{dcmuiDashboardConfigName}",
-      "type": "array",
-      "items" : {
-        "$ref": "uiDashboard.schema.json"
-      }
-    },
     "dcmuiStudyTableConfig": {
       "title": "UI स्टडी सारिणी विन्यास",
       "description": "सारिणी का विन्यास ।",
@@ -127,15 +118,6 @@
         "$ref": "uiElasticsearch.schema.json"
       }
     },
-    "dcmuiDeviceURLObject": {
-      "title": "UI डिवाइस URL",
-      "description": "अन्य UI डिवाइस URL ।",
-      "titleKey":"{dcmuiDeviceURLName}",
-      "type": "array",
-      "items" : {
-        "$ref": "uiDeviceURL.schema.json"
-      }
-    },
     "dcmuiDeviceClusterObject": {
       "title": "UI क्लस्टर विन्यास",
       "description": "डिवाइसेस को क्लस्टर में समूहित करें ।",
@@ -143,6 +125,15 @@
       "type": "array",
       "items" : {
         "$ref": "uiDeviceCluster.schema.json"
+      }
+    },
+    "dcmuiDashboardConfig": {
+      "title": "UI डैशबोर्ड विन्यास",
+      "description": "UI डैशबोर्ड विन्यास ।",
+      "titleKey":"{dcmuiDashboardConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDashboard.schema.json"
       }
     }
   }

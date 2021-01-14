@@ -2,7 +2,6 @@
 "","UI क्लस्टर कॉन्फिगरेशन","UI क्लस्टर कॉन्फिगरेशन."
 "dcmuiDeviceClusterName","नाव","क्लस्टरचे नाव."
 "dcmuiDeviceClusterDescription","वर्णन","क्लस्टरचे वर्णन."
-"dcmuiDeviceClusterLoadBalancer","लोड बॅलेन्सर","लोड बॅलेन्सर निवडा."
-"dcmuiDeviceClusterKeycloakServer","कीक्लोक सर्व्हर","जर हे क्लस्टर समान कीक्लोक वापरत नसेल तर कॉन्फिगर केलेले कीक्लोक निवडा."
 "dcmuiDeviceClusterDevices","डिव्हाइस","कॉन्फिगर केलेल्या डिव्हाइसेसचे नाव जोडा."
+"dcmuiClusterWebApp","वेब अनुप्रयोग","QIDO-RS सेवेचे वेब अनुप्रयोग."
 "dcmuiDeviceClusterInstalled","स्थापित","'हो' असल्यास हा क्लस्टर स्थापित आहे."
