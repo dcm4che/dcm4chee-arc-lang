@@ -154,6 +154,76 @@
       "description": "Universal ID Type - f.e ISO",
       "type": "string"
     },
+      "xdsAdFpAet": {
+      "title": "Fix Patients - AET",
+      "description": "Fix Patients - AET",
+      "type": "string"
+    },
+    "xdsAdFpAssigningAuthority": {
+      "title": "Fix Patients - Assigning Authority",
+      "description": "Fix Patients - Assigning Authority",
+      "type": "string"
+    },
+      "xdsAdFpDcm4cheeURL": {
+      "title": "Fix Patients - DCM4CHEE URL",
+      "description": "Fix Patients - DCM4CHEE URL",
+      "type": "string"
+    },
+      "xdsAdFpDomainsReturnedAssigningAuthority": {
+      "title": "Fix Patients - Domains Returned Assigning Authority",
+      "description": "Fix Patients - Domains Returned Assigning Authority",
+      "type": "string"
+    },
+      "xdsAdFpDomainsReturnedUniversalID": {
+      "title": "Fix Patients - Domains Returned Universal ID",
+      "description": "Fix Patients - Domains Returned Universal ID",
+      "type": "string"
+    },
+     "xdsAdFpFixPatientsExporterID": {
+      "title": "Fix Patients - Fix Patients ExporterID",
+      "description": "Fix Patients - Fix Patients ExporterID",
+      "type": "string"
+    },
+     "xdsAdFpKeycloakURL": {
+      "title": "Fix Patients - Keycloak URL",
+      "description": "Fix Patients - Keycloak URL",
+      "type": "string"
+    },
+     "xdsAdFpPixURL": {
+      "title": "Fix Patients - PIX URL",
+      "description":"PIX URL to query in the form pix-iti9://hostname:port",
+      "type": "string"
+    },
+    "xdsAdFpReceivingApplication": {
+      "title": "Fix Patients - Receiving Application",
+      "description": "Fix Patients - Receiving Application",
+      "type": "string"
+    },
+     "xdsAdFpReceivingFacility": {
+      "title": "Fix Patients - Receiving Facility",
+      "description": "Fix Patients - Receiving Facility",
+      "type": "string"
+    },
+     "xdsAdFpSecret": {
+      "title": "Fix Patients - Secret",
+      "description": "Fix Patients - Secret",
+      "type": "string"
+    },
+    "xdsAdFpSendingApplication": {
+      "title": "Fix Patients - Sending Application",
+      "description": "Fix Patients - Sending Application",
+      "type": "string"
+    },
+    "xdsAdFpSendingFacility": {
+      "title": "Fix Patients - Sending Facility",
+      "description": "Fix Patients - Sending Facility",
+      "type": "string"
+    },
+     "xdsAdFpUniversalID": {
+      "title": "Fix Patients - Universal ID",
+      "description": "Fix Patients - Universal ID",
+      "type": "string"
+    },
     "xdsAdRepository":{
       "title": "XDS Repositories",
       "description": "XDS Repositories for this Affinity Domain",
