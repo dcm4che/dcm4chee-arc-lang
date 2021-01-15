@@ -1780,15 +1780,6 @@
         "$ref": "rsForwardRule.schema.json"
       }
     },
-    "dcmKeycloakServer": {
-      "title": "कीक्लोक सर्वर",
-      "description": "कीक्लोक सर्वर ।",
-      "type": "array",
-      "titleKey":"{dcmKeycloakServerID}",
-      "items" : {
-        "$ref": "keycloakServer.schema.json"
-      }
-    },
     "dcmArchiveCompressionRule": {
       "title": "संपीड़न नियम",
       "description": "किसी भी AE से सहेजे गए DICOM दृष्टांतों पे लागू किए गए संपीड़न नियम । आर्काइव नेटवर्क AE स्तर पे कॉन्फ़िगर किए गए संपीड़न नियम पूरक होंगे ।",

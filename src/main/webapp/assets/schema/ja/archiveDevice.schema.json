@@ -1780,15 +1780,6 @@
         "$ref": "rsForwardRule.schema.json"
       }
     },
-    "dcmKeycloakServer": {
-      "title": "キークローク サーバー",
-      "description": "キークローク サーバー",
-      "type": "array",
-      "titleKey":"{dcmKeycloakServerID}",
-      "items" : {
-        "$ref": "keycloakServer.schema.json"
-      }
-    },
     "dcmArchiveCompressionRule": {
       "title": "圧縮 規則",
       "description": "任意の AEに よって 受信された DICOM オブジェクトに 適用される 圧縮 規則。 特定の アーカイブ ネットワーク AEの 構成された 圧縮 規則に よって 補足される 場合が あります。",
