@@ -1,0 +1,54 @@
+{
+  "title": "AGFA Migration Configuration Name",
+  "description": "AGFA Migration Configuration Name",
+  "type": "object",
+  "required": [
+    "j4careAMDcm4cheeURL",
+    "j4careAMExtractionPath",
+    "j4careAMMigrationPath",
+    "j4careAMPathPattern",
+    "j4careAMQueueName",
+    "j4careAMKeycloakClientID",
+    "j4careAMDeleteOnImport"
+  ],
+  "properties": {
+    "j4careAMDcm4cheeURL": {
+      "title": "DCM4CHEE Import-RS URL",
+      "description": "REST Endpoint URL for Import RS",
+      "type": "string"
+    },
+    "j4careAMExtractionPath": {
+      "title": "Extraction Path",
+      "description": "Path to extract Blob files - must match the Filesystem configruation of the filesystem descriptor used in the DCM4CHEE URL",
+      "type": "string"
+    },
+    "j4careAMMigrationPath": {
+      "title": "Migration Path",
+      "description": "Path where Blob files are located",
+      "type": "string"
+    },
+    "j4careAMPathPattern": {
+      "title": "Path Pattern",
+      "description": "Path Pattern to extract Blob files (f.e. 2021/01/23/{00100020,hash}/{0020000D,hash}/{0020000E,hash}/{00080018,hash})",
+      "type": "string"
+    },
+    "j4careAMQueueName": {
+      "title": "JMS Queue Name",
+      "description": "JMS Queue Name where Migration Orders are stored",
+      "type": "string",
+      "default": "AgfaMigrate"
+    },
+    "j4careAMKeycloakClientID": {
+      "title": "Keycloak Client ID",
+      "description": "Keycloak Client ID",
+      "type": "string"
+    },
+    "j4careAMDeleteOnImport": {
+      "title": "Delete on Import",
+      "description": "Delete on Import",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
+  

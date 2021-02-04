@@ -174,5 +174,12 @@
       "$ref": "xdsAdministratorConfig.schema.json"
       }
     }
+    ,
+    "j4careAMConfig": {
+      "title": "AGFA Migration Configuration",
+      "description": "AGFA Migration Configuration",
+      "order":36,
+      "$ref": "agfaMigrationConfig.schema.json"
+    }
   }
 }
