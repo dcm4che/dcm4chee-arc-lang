@@ -163,6 +163,16 @@
       },
       "format": "dcmAETitle"
     },
+    "dcmExternalRetrieveInstanceAvailability": {
+      "title": "外部 読み出し アーカイブの インスタンスの 可用性",
+      "description": "外部 読み出し アーカイブで 利用 可能な インスタンスの 場合は, 検査の 削除時に インスタンスの 可用性を 更新します。",
+      "type": "string",
+      "enum": [
+        "ONLINE",
+        "NEARLINE",
+        "OFFLINE"
+      ]
+    },
     "dcmExportStorageID": {
       "title": "書き出し 格納 ID",
       "description": "構成された 削除 敷居値と 削除 保持 時間の 制約に 加えて、 格納 システムからの 検査の 削除を、 指定された 他の 格納から オブジェクトに アクセスできる 検査に 制限します。",

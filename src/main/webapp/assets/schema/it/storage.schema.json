@@ -163,6 +163,16 @@
       },
       "format": "dcmAETitle"
     },
+    "dcmExternalRetrieveInstanceAvailability": {
+      "title": "External Retrieve Instance Availability",
+      "description": "Updates instance availability on deletion of studies for instances available on external retrieve archive.",
+      "type": "string",
+      "enum": [
+        "ONLINE",
+        "NEARLINE",
+        "OFFLINE"
+      ]
+    },
     "dcmExportStorageID": {
       "title": "Export Storage ID",
       "description": "Limita l'eliminazione degli studi, oltre alle soglie di cancellazione configurate e/o ai vincoli del periodo di conservazione dell'eliminazione, dal sistema di archiviazione agli studi i cui oggetti sono accessibili anche dall'altro archivio specificato.",
