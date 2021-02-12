@@ -173,13 +173,18 @@
       "items" : {
       "$ref": "xdsAdministratorConfig.schema.json"
       }
-    }
-    ,
+    },
     "j4careAMConfig": {
       "title": "AGFA Migration Configuration",
       "description": "AGFA Migration Configuration",
       "order":36,
-      "$ref": "agfaMigrationConfig.schema.json"
+      "$ref": "agfaMigrationConfig.schema.json" 
+    },
+    "j4careSUConfig": {
+      "title": "Study Updater Configuration",
+      "description": "Study Updater Configuration",
+      "order":37,
+      "$ref": "studyUpdaterConfig.schema.json" 
     }
   }
 }

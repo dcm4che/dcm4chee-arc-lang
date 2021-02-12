@@ -1,0 +1,36 @@
+{
+  "title": "Study Updater Configuration",
+  "description": "Study Updater Configuration",
+  "type": "object",
+  "required": [
+    "j4careSUDcm4cheeURL",
+    "j4careSUUpdaterURL",
+    "j4careSUKeycloakClientID"
+  ],
+  "properties": {
+    "j4careSUDcm4cheeURL": {
+      "title": "DCM4CHEE Update Study RS URL",
+      "description": "REST Endpoint URL for Update Study RS",
+      "type": "string"
+    },
+    "j4careSUUpdaterURL": {
+      "title": "Updater URL",
+      "description": "REST Endpoint URL for the external Updater service (f.e. Study Update CSV RS)",
+      "type": "string"
+    },
+    "j4careSUUpdaterProperty": {
+      "title": "Updater Properties",
+      "description": "Properties for Updater specific configuration in the form <name>=<value> - f.e. Seperator=,",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "j4careSUKeycloakClientID": {
+      "title": "Keycloak Client ID",
+      "description": "Keycloak Client ID",
+      "type": "string"
+    }
+  }
+}
+  
