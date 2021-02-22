@@ -1547,6 +1547,7 @@
     "true": "真",
     "tuesday": "火曜日",
     "ui_permission": "UI 許可",
+    "uid_of_new_created_workitem": "新しく 作成された 作業項目の UID",
     "unable_to_connect_to_elasticsearch": "エラスティクサーチに 接続 できません!",
     "unfreeze_unprotect_expiration_date_of_the_study": "検査の 有効期限の 凍結解除 / 保護解除 する",
     "unique_identifier_of_the_study_to_filter_by": "フィルター する 検査の 一意の 識別子",
