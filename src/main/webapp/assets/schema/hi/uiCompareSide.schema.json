@@ -21,8 +21,8 @@
       "type": "string"
     },
     "dcmuiCompareSideOrder": {
-      "title": "Order",
-      "description": "Order of the Compare side",
+      "title": "क्रम",
+      "description": "पक्षों की तुलना का क्रम ।",
       "type": "integer",
       "default":0,
       "enum":[

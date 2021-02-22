@@ -15,14 +15,14 @@
       "type": "string"
     },
     "dcmuiElasticsearchWebApp": {
-      "title": "Elasticsearch WebApp",
-      "description": "Web Application that will be used te extract the Elasticsearch URL and access Elasticsearch",
+      "title": "इलास्टिकसर्च वेब अनुप्रयोग",
+      "description": "इलास्टिकसर्च URL निकालकर इलास्टिकसर्च उपयोग करने के लिए इस्तमाल किया गया वेब अनुप्रयोग ।",
       "type": "string",
       "format": "webApp"
     },
     "dcmuiAuditEnterpriseSiteID": {
-      "title": "Audit Enterprise SiteID",
-      "description": "Set Audit Enterprise SiteID which should be used on Elasticsearch queries",
+      "title": "ऑडिट एंटरप्राइज साइट ID",
+      "description": "इलास्टिकसर्च प्रश्नों पे इस्तमाल किए जानेवाले ऑडिट एंटरप्राइज साइट ID को सेट करें ।",
       "type": "string"
     },
     "dcmuiElasticsearchIsDefault": {

@@ -45,8 +45,8 @@
       "items" : { "type": "string" }
     },
     "dcmuiCountWebApp": {
-      "title": "カウント Web App",
-      "description": "選択された Web Appは、ダッシュボードに 検査の カウントを 取得する ために 使用されます。",
+      "title": "カウント ウェブ アプリケーション",
+      "description": "選択された ウェブ アプリケーションは、ダッシュボードに 検査の カウントを 取得する ために 使用されます。",
       "type": "string",
       "format": "webApp"
     },
