@@ -2,6 +2,6 @@
 "","UI क्लस्टर विन्यास","UI क्लस्टर विन्यास ।"
 "dcmuiDeviceClusterName","नाम","क्लस्टर का नाम ।"
 "dcmuiDeviceClusterDescription","वर्णन","क्लस्टर का वर्णन ।"
-"dcmuiDeviceClusterDevices","डिवाइस","कॉन्फ़िगर किए हुए डिवाइसेस के नामों को जोड़े ।"
+"dcmuiDeviceClusterDevices","डिवाइसेस के लिए वेब अनुप्रयोग","संबंधित डिवाइसेस का उपयोग करने के लिए कॉन्फ़िगर किए गए वेब अनुप्रयोगों को चुने ।"
 "dcmuiClusterWebApp","वेब अनुप्रयोग","QIDO-RS सेवा के वेब अनुप्रयोग ।"
 "dcmuiDeviceClusterInstalled","स्थापित","हाँ अगर यह क्लस्टर स्थापित है ।"

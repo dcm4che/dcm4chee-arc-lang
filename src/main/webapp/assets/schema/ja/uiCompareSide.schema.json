@@ -21,8 +21,8 @@
       "type": "string"
     },
     "dcmuiCompareSideOrder": {
-      "title": "Order",
-      "description": "Order of the Compare side",
+      "title": "順序",
+      "description": "比較側の 順序",
       "type": "integer",
       "default":0,
       "enum":[
