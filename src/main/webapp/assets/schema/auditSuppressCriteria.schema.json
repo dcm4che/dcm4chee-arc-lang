@@ -8,12 +8,12 @@
   "properties": {
     "cn": {
       "title": "Name",
-      "description": "Arbitrary/Meaningful name of the Audit Suppress Criteria",
+      "description": "Arbitrary/Meaningful name of the Audit Suppress Criteria.",
       "type": "string"
     },
     "dcmAuditEventID": {
       "title": "Audit Event ID",
-      "description": "DICOM PS 3.15 A.5 Audit Event ID code and codeSystemName in format (CV, CSD, \"CM\")",
+      "description": "DICOM PS 3.15 A.5 Audit Event ID code and codeSystemName in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -43,7 +43,7 @@
     },
     "dcmAuditEventTypeCode": {
       "title": "Audit Event Type Code",
-      "description": "DICOM PS 3.15 A.5 Audit Event Type code in format (CV, CSD, \"CM\")",
+      "description": "DICOM PS 3.15 A.5 Audit Event Type code in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -122,7 +122,7 @@
     },
     "dcmAuditUserID": {
       "title": "User ID",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant User ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant User ID.",
       "type": "array",
       "items": {
         "type": "string"
@@ -130,7 +130,7 @@
     },
     "dcmAuditAlternativeUserID": {
       "title": "Alternative User ID",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID.",
       "type": "array",
       "items": {
         "type": "string"
@@ -138,7 +138,7 @@
     },
     "dcmAuditUserRoleIDCode": {
       "title": "User Role ID Code",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, \"CM\")",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -154,7 +154,7 @@
     },
     "dcmAuditNetworkAccessPointID": {
       "title": "Network Access Point ID",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID.",
       "type": "array",
       "items": {
         "type": "string"
@@ -167,7 +167,7 @@
     },
     "dcmParticipantObjectTypeCode": {
       "title": "Participant Object Type Code",
-      "description": "DICOM PS 3.15 A.5 Participant Object Type Code",
+      "description": "DICOM PS 3.15 A.5 Participant Object Type Code.",
       "type": "array",
       "items": {
         "type": "string",
@@ -181,7 +181,7 @@
     },
     "dcmParticipantObjectTypeCodeRole": {
       "title": "Participant Object Type Code Role",
-      "description": "DICOM PS 3.15 A.5 Participant Object Type Code Role",
+      "description": "DICOM PS 3.15 A.5 Participant Object Type Code Role.",
       "type": "array",
       "items": {
         "type": "string",
@@ -217,7 +217,7 @@
     },
     "dcmParticipantObjectDataLifeCycle": {
       "title": "Participant Object Data Life Cycle",
-      "description": "DICOM PS 3.15 A.5 Participant Object Data Life Cycle",
+      "description": "DICOM PS 3.15 A.5 Participant Object Data Life Cycle.",
       "type": "array",
       "items": {
         "type": "string",
