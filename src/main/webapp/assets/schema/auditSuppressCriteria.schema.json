@@ -8,12 +8,12 @@
   "properties": {
     "cn": {
       "title": "Name",
-      "description": "Arbitrary/Meaningful name of the Audit Suppress Criteria",
+      "description": "Arbitrary/Meaningful name of the Audit Suppress Criteria.",
       "type": "string"
     },
     "dcmAuditEventID": {
       "title": "Audit Event ID",
-      "description": "RFC 3881 Audit Event ID code and codeSystemName in format (CV, CSD, \"CM\")",
+      "description": "DICOM PS 3.15 A.5 Audit Event ID code and codeSystemName in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -43,7 +43,7 @@
     },
     "dcmAuditEventTypeCode": {
       "title": "Audit Event Type Code",
-      "description": "RFC 3881 Audit Event Type code in format (CV, CSD, \"CM\")",
+      "description": "DICOM PS 3.15 A.5 Audit Event Type code in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -93,7 +93,7 @@
     },
     "dcmAuditEventActionCode": {
       "title": "Event Action Code",
-      "description": "RFC 3881 Audit Event Action Type code.",
+      "description": "DICOM PS 3.15 A.5 Audit Event Action Type code.",
       "type": "array",
       "items": {
         "type": "string",
@@ -108,7 +108,7 @@
     },
     "dcmAuditEventOutcomeIndicator": {
       "title": "Event Outcome Indicator",
-      "description": "RFC 3881 Audit Event Outcome Indicator.",
+      "description": "DICOM PS 3.15 A.5 Audit Event Outcome Indicator.",
       "type": "array",
       "items": {
         "type": "string",
@@ -122,7 +122,7 @@
     },
     "dcmAuditUserID": {
       "title": "User ID",
-      "description": "RFC 3881 Audit Active Participant User ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant User ID.",
       "type": "array",
       "items": {
         "type": "string"
@@ -130,7 +130,7 @@
     },
     "dcmAuditAlternativeUserID": {
       "title": "Alternative User ID",
-      "description": "RFC 3881 Audit Active Participant Alternative User ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID.",
       "type": "array",
       "items": {
         "type": "string"
@@ -138,7 +138,7 @@
     },
     "dcmAuditUserRoleIDCode": {
       "title": "User Role ID Code",
-      "description": "RFC 3881 Audit Active Participant User Role ID code in format (CV, CSD, \"CM\")",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -154,7 +154,7 @@
     },
     "dcmAuditNetworkAccessPointID": {
       "title": "Network Access Point ID",
-      "description": "RFC 3881 Audit Active Participant Network Access Point ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID.",
       "type": "array",
       "items": {
         "type": "string"
@@ -162,8 +162,83 @@
     },
     "dcmAuditUserIsRequestor": {
       "title": "User is Requestor",
-      "description": "Indicates if Active Participant is initiator/requestor of the Audit Event as specified by RFC 3881",
+      "description": "Indicates if Active Participant is initiator/requestor of the Audit Event as specified by DICOM PS 3.15 A.5",
       "type": "boolean"
+    },
+    "dcmParticipantObjectTypeCode": {
+      "title": "Participant Object Type Code",
+      "description": "DICOM PS 3.15 A.5 Participant Object Type Code.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    },
+    "dcmParticipantObjectTypeCodeRole": {
+      "title": "Participant Object Type Code Role",
+      "description": "DICOM PS 3.15 A.5 Participant Object Type Code Role.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26"
+        ]
+      }
+    },
+    "dcmParticipantObjectDataLifeCycle": {
+      "title": "Participant Object Data Life Cycle",
+      "description": "DICOM PS 3.15 A.5 Participant Object Data Life Cycle.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15"
+        ]
+      }
     }
   }
 }
