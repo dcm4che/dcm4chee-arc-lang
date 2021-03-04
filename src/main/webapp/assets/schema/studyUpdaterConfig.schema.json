@@ -24,6 +24,12 @@
       "title": "Keycloak Client ID",
       "description": "Keycloak Client ID",
       "type": "string"
+    },
+    "j4careSUUpdaterWarningOnNoMatch": {
+      "title": "Warning on No Match",
+      "description": "Warning on No Match",
+      "type": "boolean",
+      "default": false
     }
   }
 }
