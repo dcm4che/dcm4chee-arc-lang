@@ -9,6 +9,7 @@
     "dcmPrefetchCFindSCP",
     "dcmPrefetchCMoveSCP",
     "dcmPrefetchCStoreSCP",
+    "dcmPrefetchPriority",
     "dcmDuration"
   ],
   "properties": {
