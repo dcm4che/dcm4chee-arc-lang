@@ -9,6 +9,7 @@
     "dcmPrefetchCFindSCP",
     "dcmPrefetchCMoveSCP",
     "dcmPrefetchCStoreSCP",
+    "dcmPrefetchPriority",
     "dcmDuration"
   ],
   "properties": {
@@ -39,7 +40,7 @@
     },
     "dcmPrefetchPriority": {
       "title": "Prefetch Priority",
-      "description": "JMS Priority Level for processing the retrieve tasks from 0 (lowest) to 9 (highest).",
+      "description": "JMS Priority Level of scheduled retrieve tasks from 0 (lowest) to 9 (highest).",
       "type": "integer",
       "default" : 4,
       "minimum": 0,

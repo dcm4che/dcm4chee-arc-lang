@@ -2,6 +2,7 @@
 "","Regole di Prefetch HL7","Regole di Prefetch HL7"
 "cn","Nome","Nome arbitrario/significativo della regola di prefetch"
 "dcmQueueName","Nome coda","Nome della coda JMS utilizzata per la pianificazione delle attività di recupero attivate da questa regola di prefetch"
+"dcmPrefetchPriority","Prefetch Priority","JMS Priority Level for processing the retrieve tasks from 0 (lowest) to 9 (highest)."
 "dicomAETitle","Titolo AE dell'archivio","Titolo AE dell'entità dell'applicazione di archiviazione utilizzato per recuperare studi selezionati da Prefetch C-Move SCP."
 "dcmPrefetchCFindSCP","Prefetch C-Find SCP","Titolo AE di C-FIND SCP che viene richiesto per gli studi che corrispondono al selettore di entità specificato."
 "dcmPrefetchCMoveSCP","Prefetch C-Move SCP","Titolo AE  di C-MOVE SCP da cui vengono recuperati gli studi selezionati."

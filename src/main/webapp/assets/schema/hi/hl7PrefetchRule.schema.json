@@ -9,6 +9,7 @@
     "dcmPrefetchCFindSCP",
     "dcmPrefetchCMoveSCP",
     "dcmPrefetchCStoreSCP",
+    "dcmPrefetchPriority",
     "dcmDuration"
   ],
   "properties": {
@@ -36,6 +37,14 @@
         "Retrieve12",
         "Retrieve13"
       ]
+    },
+    "dcmPrefetchPriority": {
+      "title": "प्रीफ़ेच प्राथमिकता",
+      "description": "पुनःप्राप्ति कार्य के प्रक्रिया के लिए JMS प्राथमिकता स्तर : ० (न्यूतनम) से ९ (अधिकतम) तक ।",
+      "type": "integer",
+      "default" : 4,
+      "minimum": 0,
+      "maximum": 9
     },
     "dicomAETitle": {
       "title": "आर्काइव AE का नाम",

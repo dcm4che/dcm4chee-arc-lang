@@ -2,7 +2,7 @@
 "","HL7 Prefetch Rule","HL7 Prefetch Rule"
 "cn","Name","Arbitrary/Meaningful name of the Prefetch Rule"
 "dcmQueueName","Queue Name","Name of JMS Queue used for scheduling retrieve tasks triggered by this Prefetch Rule"
-"dcmPrefetchPriority","Prefetch Priority","JMS Priority Level for processing the retrieve tasks from 0 (lowest) to 9 (highest)."
+"dcmPrefetchPriority","Prefetch Priority","JMS Priority Level of scheduled retrieve tasks from 0 (lowest) to 9 (highest)."
 "dicomAETitle","Archive AE title","AE Title of Archive Application Entity used for retrieving selected Studies from Prefetch C-Move SCP."
 "dcmPrefetchCFindSCP","Prefetch C-Find SCP","AE Title of C-FIND SCP which is queried for Studies matching the specified Entity Selector."
 "dcmPrefetchCMoveSCP","Prefetch C-Move SCP","AE Title of C-MOVE SCP from which selected Studies are retrieved."
