@@ -1307,6 +1307,7 @@
     "study.input_readiness": "入力の 覚悟",
     "study.instance_rejected": "インスタンスが 正常に 拒否されました",
     "study.instance_restored": "インスタンスが 正常に 復元されました!",
+    "study.more_than_one_source_patient_selected": "マージ する ために 複数の ソース 患者 レコードが 選択されました!",
     "study.more_than_one_target_selected": "複数の ターゲットが 選択されました!",
     "study.mwl_create": "MWLが 正常に 作成されました!",
     "study.mwl_saved": "MWLが 正常に 保存されました!",

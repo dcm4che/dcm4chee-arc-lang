@@ -1307,6 +1307,7 @@
     "study.input_readiness": "Input Readiness",
     "study.instance_rejected": "Instance rejected successfully",
     "study.instance_restored": "Instance restored successfully!",
+    "study.more_than_one_source_patient_selected": "More than one source patient selected for merge!",
     "study.more_than_one_target_selected": "More than one target selected!",
     "study.mwl_create": "MWL created successfully!",
     "study.mwl_saved": "MWL saved successfully!",
