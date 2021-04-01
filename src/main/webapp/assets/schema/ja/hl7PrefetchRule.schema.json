@@ -102,7 +102,7 @@
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "患者 IDの 割り当て 権限の ために プリフェッチ",
-      "description": "PID-3の 識別子の リストで 適格な 患者 識別子を 検索 する ために 使用される 受信 HL7 メッセージでの 患者 IDの 権限の 割り当て。 この 適格な 患者 識別子の 指定された エンティティ セレクターに 一致 する 検査は クエリされなければならない。 存在しない 場合、 デフォルトでは、  PID-3の 最初の 適格な 患者 識別子が 使用されます。 形式: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "description": "PID-3の 識別子の リストで 適格な 患者 識別子を 検索 する ために 使用される 受信 HL7 メッセージでの 患者 IDの 権限の 割り当て。 この 適格な 患者 識別子の 指定された エンティティ セレクターに 一致 する 検査は クエリされなければならない。 存在しない 場合、 デフォルトでは、  PID-3の 最初の 適格な 患者 識別子が 使用されます。 形式: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>]。",
       "type": "string"
     },
     "dcmDuration": {
