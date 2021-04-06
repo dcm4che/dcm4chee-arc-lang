@@ -117,6 +117,17 @@
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"
+    },
+    "dcmPrefetchDateTimeField": {
+      "title": "Prefetch Date Time Field",
+      "description": "Delay retrieve of selected Studies to time from referred HL7 TS field in format {SEG}-{Seq#}[.{Comp#}]. Example: TQ1-7 or SCH-11.4. Schedule retrieve of selected Studies immediate if absent.",
+      "type": "string"
+    },
+    "dcmPrefetchInAdvance": {
+      "title": "Prefetch In Advance",
+      "description": "Schedule retrieve of selected Studies given time span in ISO-8601 duration format PnDTnHnMn.nS in advance to the time from configured dcmPrefetchDateTimeField. Not effective, if dcmPrefetchDateTimeField is absent.",
+      "type": "string",
+      "format": "dcmDuration"
     }
   }
 }
