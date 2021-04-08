@@ -14,7 +14,7 @@
 "dcmSeriesMetadataThreads","Update Series Metadata Threads","Number of Threads used for creation and update of Series Metadata."
 "dcmSeriesMetadataMaxRetries","Update Series Metadata Maximum Number of Retries","Maximum number of retries to create/update aggregated Series Metadata. Only effective if Update Series Metadata Retry Interval is specified. -1 = forever."
 "dcmSeriesMetadataRetryInterval","Update Series Metadata Retry Interval","Interval in ISO-8601 duration format PnDTnHnMnS in which failed attempts to create/update aggregated Series Metadata will be retried. Only effective if Update Series Metadata Maximum Number of Retries != 0. If absent, failed attempts will not be retried."
-"dcmPurgeInstanceRecords","Purge Instance Records","Indicates that Instance Records may be purged from the DB."
+"dcmPurgeInstanceRecords","Purged Instance Records","Indicates that Instance Records may have been purged from the DB."
 "dcmPurgeInstanceRecordsDelay","Purge Instance Records Delay","Delay in ISO-8601 duration format PnDTnHnMnS for purging Instance Records from the DB. May be overwritten by configured values for particular Archive Network AEs. Only effective, if Purge Instance Records = true."
 "dcmPurgeInstanceRecordsPollingInterval","Purge Instance Records Polling Interval","Polling Interval for Series scheduled for purging Instance Records from the DB in ISO-8601 duration format PnDTnHnMnS. Only effective, if Purge Instance Records = true."
 "dcmPurgeInstanceRecordsFetchSize","Purge Instance Records Fetch Size","Maximal number of Series scheduled for purging Instance Records from the DB fetched by one query. Only effective, if Purge Instance Records = true."

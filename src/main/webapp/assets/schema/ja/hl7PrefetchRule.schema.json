@@ -111,9 +111,20 @@
       "type": "string",
       "format": "dcmDuration"
     },
+    "dcmPrefetchDateTimeField": {
+      "title": "プリフェッチ 日時 フィールド",
+      "description": "選択した 検査の 取得を、 {SEG}-{Seq#}[.{Comp#}] の 形式で 参照された HL7 TS フィールドからの 時間まで 遅らせます。 例: TQ1-7 または SCH-11.4。 存在しない 場合、 選択した 検査の 取得を すぐに 予定 する。",
+      "type": "string"
+    },
+    "dcmPrefetchInAdvance": {
+      "title": "事前に プリフェッチ",
+      "description": "選択した 検査の 取得を、 ISO-8601 期間 形式 PnDTnHnMn.nSで 指定された 期間で 構成された 「プリフェッチ 日時 フィールド」 からの 時間に 事前に 予定 します。 「プリフェッチ 日時 フィールド」がない 場合、 効果的では ありません。",
+      "type": "string",
+      "format": "dcmDuration"
+    },
     "dcmSchedule": {
       "title": "プリフェッチ 予定",
-      "description": "指定した 期間への プリフェッチを 遅延 する。プリフェッチ 予定が 指定されて いない 場合は、 選択した 患者の 検査の プリフェッチ タスクを すぐに キューに 入れます。 形式: 'hour=[0-23] dayOfWeek=[0-6]' (0=日曜日)",
+      "description": "構成された 「プリフェッチ 日時 フィールド」 に 加えて 指定した 期間への プリフェッチを 遅延 する。 プリフェッチ 予定が 指定されて いない 場合は、 選択した 患者の 検査の プリフェッチ タスクを 構成された 「プリフェッチ 日時 フィールド」 に よる キューに 入れます。 形式: 'hour=[0-23] dayOfWeek=[0-6]' (0=日曜日)",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"

@@ -111,6 +111,17 @@
       "type": "string",
       "format": "dcmDuration"
     },
+    "dcmPrefetchDateTimeField": {
+      "title": "Prefetch Date Time Field",
+      "description": "Delay retrieve of selected Studies to time from referred HL7 TS field in format {SEG}-{Seq#}[.{Comp#}]. Example: TQ1-7 or SCH-11.4. Schedule retrieve of selected Studies immediate if absent.",
+      "type": "string"
+    },
+    "dcmPrefetchInAdvance": {
+      "title": "Prefetch In Advance",
+      "description": "Schedule retrieve of selected Studies in advance to the time from configured dcmPrefetchDateTimeField with given time span in ISO-8601 duration format PnDTnHnMn.nS. Not effective, if dcmPrefetchDateTimeField is absent.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
     "dcmSchedule": {
       "title": "Pianificazione di Prefetch",
       "description": "Ritarda il precaricamento a periodi di tempo specificati. Se non viene specificato alcun programma di precaricamento, mettere immediatamente in coda un'attività di prefetch per gli studi selezionati del paziente. Formato: 'hour=[0-23] dayOfWeek=[0-6]' (0=Domenica)",

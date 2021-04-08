@@ -111,9 +111,20 @@
       "type": "string",
       "format": "dcmDuration"
     },
+    "dcmPrefetchDateTimeField": {
+      "title": "Prefetch Date Time Field",
+      "description": "Delay retrieve of selected Studies to time from referred HL7 TS field in format {SEG}-{Seq#}[.{Comp#}]. Example: TQ1-7 or SCH-11.4. Schedule retrieve of selected Studies immediate if absent.",
+      "type": "string"
+    },
+    "dcmPrefetchInAdvance": {
+      "title": "Prefetch In Advance",
+      "description": "Schedule retrieve of selected Studies in advance to the time from configured dcmPrefetchDateTimeField with given time span in ISO-8601 duration format PnDTnHnMn.nS. Not effective, if dcmPrefetchDateTimeField is absent.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
     "dcmSchedule": {
       "title": "Prefetch Schedule",
-      "description": "Delay prefetch to specified time periods. If no Prefetch Schedule is specified, queue a Prefetch Task for the selected Studies of the Patient immediately. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
+      "description": "Delay prefetch to specified time periods in addition to configured Prefetch Date Time field. If no Prefetch Schedule is specified, queue a Prefetch Task for the selected Studies of the Patient based on configured Prefetch Date Time field. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"

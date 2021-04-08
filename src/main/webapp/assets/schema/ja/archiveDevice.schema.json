@@ -201,8 +201,8 @@
       "format": "dcmDuration"
     },
     "dcmPurgeInstanceRecords": {
-      "title": "インスタン スレコーを パージ する",
-      "description": "インスタンス レコードが DBから パージされる 可能性が ある ことを 示します。",
+      "title": "パージされた インスタン スレコー",
+      "description": "インスタンス レコードが DBから パージされた 可能性が ある ことを 示します。",
       "type": "boolean",
       "default" : false
     },
