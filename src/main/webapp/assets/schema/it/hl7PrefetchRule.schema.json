@@ -71,6 +71,12 @@
       "items": { "type": "string" },
       "format": "dcmAETitle"
     },
+    "dicomDeviceName": {
+      "title": "Prefetch Device Name",
+      "description": "Specifies Device on which the Retrieve Task(s) shall be scheduled. If not specified, the Retrieve Task(s) is/are scheduled on the Device which received the HL7 messages.",
+      "type": "string",
+      "format": "dicomDeviceName"
+    },
     "dcmProperty": {
       "title": "Condizioni",
       "description": "Condizioni nel formato {SEG}-{Seq #}[.{Comp#}[.{SubComp#}]][!]={regEx}. Esempio: MSH-4=FORWARD o MSH-9=ORM\\^O01 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",

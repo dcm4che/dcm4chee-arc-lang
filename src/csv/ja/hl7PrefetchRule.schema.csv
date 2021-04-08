@@ -7,6 +7,7 @@
 "dcmPrefetchCFindSCP","プリフェッチ C-Find SCP","指定された エンティティ セレクタに 一致 する 検査を クエリされた C-FIND SCPの AE タイトル。"
 "dcmPrefetchCMoveSCP","プリフェッチ C-Move SCP","選択した 検査が 読み出しされる C-MOVE SCPの AE タイトル。"
 "dcmPrefetchCStoreSCP","プリフェッチ C-Store SCP","選択した 読み出された 検査が 保存された C-Store SCPの AE タイトル。"
+"dicomDeviceName","プリフェッチ デバイス名","読み出し タスクを 予定 する デバイスを 指定します。 指定しない 場合、 HL7 メッセージを 受信した デバイスで 書き出し タスクが 予定されます。"
 "dcmProperty","条件","{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx} 形式で 条件。 例: MSH-4=FORWARD または MSH-9=ORM\^O01 または PID-3[.3]=PIDIssuer または PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType"
 "dcmEntitySelector","エンティティ セレクタ","プリフェッチ する 検査の 選択に 使用される 一致 する キーを 指定します。 形式: {key}={value}[&{key}={value)]..., ここは {key} = 'priors' | 'StudyAge' | {attributeID}。 '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] 形式で {value}は プリフェッチを トリガーした 受信 HL7 メッセージからの 指定された HL7 フィールドの 値に 置き換えられます。 エンティティ セレクタが 指定されて いない 場合、 患者の すべての 検査が プリフェッチされます。 例: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=$OBR-24' => OBR-24からの モダリティを 持つ 少なくとも 1つの シリーズを 含む、 5年以内の 最大 2つの 先行 検査を 選択します。"
 "dcmNullifyIssuerOfPatientID","患者 IDの 割り当て 権限を 無視する","条件付きで 患者 IDの 割り当て 権限 (PID-3.4) を 無視します。 これは、患者の 検査を 選択 する ための プリフェッチを トリガーした 受信 HL7 メッセージに あります。"

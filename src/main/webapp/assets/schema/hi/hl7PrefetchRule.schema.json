@@ -71,6 +71,12 @@
       "items": { "type": "string" },
       "format": "dcmAETitle"
     },
+    "dicomDeviceName": {
+      "title": "प्रीफ़ेच डिवाइस का नाम",
+      "description": "जिस डिवाइस पे प्रीफ़ेच कार्यों को अनुसूचित किया जाएगा, यह निर्दिष्ट करता है । यदि निर्दिष्ट नहीं किया है, तो जिस डिवाइस पे HL7 संदेश प्राप्त हुए है, उसपे ही प्रीफ़ेच कार्यों को अनुसूचित किया जाएगा ।",
+      "type": "string",
+      "format": "dicomDeviceName"
+    },
     "dcmProperty": {
       "title": "नियम",
       "description": "नियम इस प्रारूप में {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx} । उदाहरण के तौर पे: MSH-4=FORWARD या MSH-9=ORM\\^O01 या PID-3[.3]=PIDIssuer या PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType ।",

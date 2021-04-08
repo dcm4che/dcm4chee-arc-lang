@@ -71,6 +71,12 @@
       "items": { "type": "string" },
       "format": "dcmAETitle"
     },
+    "dicomDeviceName": {
+      "title": "プリフェッチ デバイス名",
+      "description": "読み出し タスクを 予定 する デバイスを 指定します。 指定しない 場合、 HL7 メッセージを 受信した デバイスで 書き出し タスクが 予定されます。",
+      "type": "string",
+      "format": "dicomDeviceName"
+    },
     "dcmProperty": {
       "title": "条件",
       "description": "{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx} 形式で 条件。 例: MSH-4=FORWARD または MSH-9=ORM\\^O01 または PID-3[.3]=PIDIssuer または PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
