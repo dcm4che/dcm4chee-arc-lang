@@ -52,6 +52,7 @@
 "dcmQidoMaxNumberOfResults","Qido Max Number Of Results","Maximal number of return results by QIDO-RS Service. 0 = no limitation. May be overwritten by configured values for particular Archive Network AEs."
 "dcmFwdMppsDestination","Mpps Forward Destination","Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs."
 "dcmIanDestination","Ian Destination","Destination to send IAN N-CREATE RQ. May be overwritten by configured values for particular Archive Network AEs."
+"dcmIANWebApplication","IAN Web Application","IAN-RS Web Application Destination to send IAN N-CREATE attributes. May be overwritten by configured values for particular Archive Network AEs."
 "dcmIanDelay","IAN Delay","Delay in ISO-8601 duration format PnDTnHnMnS after which an IAN for a received study is sent to configured IAN destinations. If absent, IANs are triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs."
 "dcmIanTimeout","IAN Timeout","Timeout in ISO-8601 duration format PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs."
 "dcmIanOnTimeout","IAN On Timeout","Specifies if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded. May be overwritten by configured values for particular Archive Network AEs."

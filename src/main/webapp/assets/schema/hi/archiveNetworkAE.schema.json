@@ -243,6 +243,13 @@
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
+    "dcmIANWebApplication": {
+      "title": "IAN आगे भेजने का गंतव्य वेब अनुप्रयोग",
+      "description": "IAN-RS N-CREATE RQ गुणों को आगे भेजने का गंतव्य वेब अनुप्रयोग । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "array",
+      "items" : { "type": "string" },
+      "format": "dcmWebApp"
+    },
     "dcmIanDelay": {
       "title": "IAN विलम्ब",
       "description": "ISO-8601 कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब जिसके बाद प्राप्त हुए स्टडीज का IAN कॉन्फ़िगर्ड IAN गंतव्यों पे भेजा जाएगा । यदि कॉन्फ़िगर न किया हो तो, IAN प्राप्त हुए MPPS द्वारा सक्रीय होंगे । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",

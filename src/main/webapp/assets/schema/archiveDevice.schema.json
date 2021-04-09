@@ -486,6 +486,13 @@
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
+    "dcmIANWebApplication": {
+      "title": "IAN Web Application",
+      "description": "IAN-RS Web Application Destination to send IAN N-CREATE attributes. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items" : { "type": "string" },
+      "format": "dcmWebApp"
+    },
     "dcmIanDelay": {
       "title": "IAN Delay",
       "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which an IAN for a received study is sent to configured IAN destinations. If absent, IANs are triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.",

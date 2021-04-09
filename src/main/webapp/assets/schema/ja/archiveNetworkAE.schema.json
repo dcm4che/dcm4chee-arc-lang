@@ -243,6 +243,13 @@
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
+    "dcmIANWebApplication": {
+      "title": "IAN 宛先 ウェブ アプリケーション",
+      "description": "IAN-RS N-CREATE 属性の 宛先 ウェブ アプリケーション。 デバイス レベルで 指定された 値を 上書きします。",
+      "type": "array",
+      "items" : { "type": "string" },
+      "format": "dcmWebApp"
+    },
     "dcmIanDelay": {
       "title": "IAN 遅延",
       "description": "構成された IAN 宛先に 受信した 検査の IANを 送信するために ISO-8601 期間 形式 PnDTnHnMnSで 遅延の 値。 デバイス レベルで 指定された 値を 上書きします。",

@@ -458,6 +458,13 @@
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
+    "dcmIANWebApplication": {
+      "title": "IAN Web Application",
+      "description": "IAN-RS Web Application Destination to send IAN N-CREATE attributes. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items" : { "type": "string" },
+      "format": "dcmWebApp"
+    },
     "dcmIanDelay": {
       "title": "Ritardo IAN",
       "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMnS dopo il quale viene inviato uno IAN per uno studio ricevuto alle destinazioni IAN configurate. Se assenti, gli IAN vengono attivati dagli MPPS ricevuti. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
