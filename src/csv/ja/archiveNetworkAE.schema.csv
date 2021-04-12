@@ -33,7 +33,6 @@
 "dcmQidoMaxNumberOfResults","QIDO 結果の 最大数","QIDO-RS サービスに よる 戻り 結果の 最大数。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmFwdMppsDestination","MPPS 転送 宛先","MPPS N-CREATE RQと N-SET RQを転送 する 宛先。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmIanDestination","IAN 宛先","IAN N-CREATE RQの 宛先。 デバイス レベルで 指定された 値を 上書きします。"
-"dcmIANWebApplication","IAN 宛先 ウェブ アプリケーション","IAN-RS N-CREATE 属性の 宛先 ウェブ アプリケーション。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmIanDelay","IAN 遅延","構成された IAN 宛先に 受信した 検査の IANを 送信するために ISO-8601 期間 形式 PnDTnHnMnSで 遅延の 値。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmIanTimeout","IAN タイムアウト","MPPSで 参照される インスタンスの 受信を 待機するための ISO-8601 期間 形式 PnDTnHnMnSで タイムアウト。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmIanOnTimeout","タイムアウト時の IAN","参照された インスタンスの 受信を 待機 する ための タイムアウトを 超えた 場合に IANが 送信されるか どうかを 指定します。 デバイス レベルで 指定された 値を 上書きします。"

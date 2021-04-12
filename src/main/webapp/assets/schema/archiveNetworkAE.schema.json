@@ -243,13 +243,6 @@
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
-    "dcmIANWebApplication": {
-      "title": "IAN Web Application",
-      "description": "IAN-RS Web Application Destination to send IAN N-CREATE attributes. Overwrites value specified on Device level.",
-      "type": "array",
-      "items" : { "type": "string" },
-      "format": "dcmWebApp"
-    },
     "dcmIanDelay": {
       "title": "IAN Delay",
       "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which an IAN for a received study is sent to configured IAN destinations. Overwrites value specified on Device level.",

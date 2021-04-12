@@ -229,13 +229,6 @@
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
-    "dcmIANWebApplication": {
-      "title": "IAN Web Application",
-      "description": "IAN-RS Web Application Destination to send IAN N-CREATE attributes. Overwrites value specified on Device level.",
-      "type": "array",
-      "items" : { "type": "string" },
-      "format": "dcmWebApp"
-    },
     "dcmIanDelay": {
       "title": "Ritardo IAN",
       "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMnS dopo il quale viene inviato uno IAN per uno studio ricevuto alle destinazioni IAN configurate. Sovrascrive i valori specificati a livello del dispositivo.",

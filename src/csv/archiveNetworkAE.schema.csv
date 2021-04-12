@@ -33,7 +33,6 @@
 "dcmQidoMaxNumberOfResults","Qido Max Number Of Results","Maximal number of return results by QIDO-RS Service. 0 = unlimited. Overwrites value specified on Device level."
 "dcmFwdMppsDestination","Mpps Forward Destination","Destination to forward MPPS N-CREATE RQ and N-SET RQ. Overwrites value specified on Device level."
 "dcmIanDestination","Ian Destination","Destination to send IAN N-CREATE RQ. Overwrites value specified on Device level."
-"dcmIANWebApplication","IAN Web Application","IAN-RS Web Application Destination to send IAN N-CREATE attributes. Overwrites value specified on Device level."
 "dcmIanDelay","IAN Delay","Delay in ISO-8601 duration format PnDTnHnMn.nS after which an IAN for a received study is sent to configured IAN destinations. Overwrites value specified on Device level."
 "dcmIanTimeout","IAN Timeout","Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS. Overwrites value specified on Device level."
 "dcmIanOnTimeout","IAN On Timeout","Specifies if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded. Overwrites value specified on Device level."
