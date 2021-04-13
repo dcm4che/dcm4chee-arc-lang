@@ -71,6 +71,12 @@
       "items": { "type": "string" },
       "format": "dcmAETitle"
     },
+    "dcmDestinationCFindSCP": {
+      "title": "宛先 C-Find SCP",
+      "description": "プリフェッチ C-MOVE SCP から 選択した 検査の 読み出しを 禁ずる 若しも、そのような 検査が ー プリフェッチ C-FIND SCP から 返された 検査の 「検査に よって インスタンスの 数」が 同じ または 以上 ある ー 指定された 宛先 C-FIND SCP で すでに 利用可能が あります。 指定しない 場合、 ぜんぶの 検査を 読み出しされます。",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
     "dicomDeviceName": {
       "title": "プリフェッチ デバイス名",
       "description": "読み出し タスクを 予定 する デバイスを 指定します。 指定しない 場合、 HL7 メッセージを 受信した デバイスで 書き出し タスクが 予定されます。",
