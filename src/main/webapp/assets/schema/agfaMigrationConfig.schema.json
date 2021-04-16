@@ -9,7 +9,8 @@
     "j4careAMPathPattern",
     "j4careAMQueueName",
     "j4careAMKeycloakClientID",
-    "j4careAMDeleteOnImport"
+    "j4careAMDeleteOnImport",
+    "j4careAMContinueOnStartup"
   ],
   "properties": {
     "j4careAMDcm4cheeURL": {
@@ -46,6 +47,12 @@
     "j4careAMDeleteOnImport": {
       "title": "Delete on Import",
       "description": "Delete on Import",
+      "type": "boolean",
+      "default": false
+    },
+    "j4careAMContinueOnStartup": {
+      "title": "Continue On Startup",
+      "description": "Automatically start the next scheduled batch on startup",
       "type": "boolean",
       "default": false
     }
