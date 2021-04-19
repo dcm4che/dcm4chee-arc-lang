@@ -110,6 +110,11 @@
       "description": "一致 する DICOM MWL アイテムから 受信した オブジェクトの 要求 属性を 強制 する スタイルシートの URIを 指定します。 「マージ MWL マッチング キー」が 指定されて いる 場合に のみ 有効です。",
       "type": "string"
     },
+    "dcmMergeMWLSCP": {
+      "title": "Merge MWL SCP",
+      "description": "AE Title of external MWL SCP to lookup MWL Item used to coerce request attributes of received objects.",
+      "type": "string"
+    },
     "dcmLeadingCFindSCP": {
       "title": "先頭の C-FIND SCP",
       "description": "この AEから フェッチされた 患者 属性と 検査 属性を 持つ 属性 強制の ための 外部 C-FIND SCPの AE タイトル。 C-FIND SCPに 特定の 属性 セットが 指定されて いない 場合、 構成された 患者と 検査 属性 フィルターの すべての 属性が フェッチされます。",
