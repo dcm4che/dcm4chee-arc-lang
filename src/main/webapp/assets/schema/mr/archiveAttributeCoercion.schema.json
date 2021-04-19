@@ -110,6 +110,11 @@
       "description": "Specifies URI for the style sheet to coerce request attributes of received objects from matching DICOM MWL items. Only effective, if dcmMergeMWLMatchingKey is specified.",
       "type": "string"
     },
+    "dcmMergeMWLSCP": {
+      "title": "Merge MWL SCP",
+      "description": "AE Title of external MWL SCP to lookup MWL Item used to coerce request attributes of received objects.",
+      "type": "string"
+    },
     "dcmLeadingCFindSCP": {
       "title": "Leading C-FIND SCP",
       "description": "AE Title of external C-FIND SCP for Attribute Coercion with Patient and Study attributes fetched from this AE. If no particular Attribute Set is specified for the C-FIND SCP, all Attributes of the configured Patient and Study Attribute Filter will be fetched.",
