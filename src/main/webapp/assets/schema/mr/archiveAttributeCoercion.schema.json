@@ -113,7 +113,8 @@
     "dcmMergeMWLSCP": {
       "title": "MWL विलीन करण्यासाठी SCP",
       "description": "प्राप्त झालेल्या दृष्टांतांमध्ये बाह्य MWL च्या विनंती विशेषतांना जोडण्यासाठी वापरलेल्या बाह्य MWL SCP AE चे शीर्षक.",
-      "type": "string"
+      "type": "string",
+      "format": "dcmAETitle"
     },
     "dcmLeadingCFindSCP": {
       "title": "अग्रगण्य C-FIND SCP",
