@@ -113,7 +113,8 @@
     "dcmMergeMWLSCP": {
       "title": "Merge MWL SCP",
       "description": "AE Title of external MWL SCP to lookup MWL Item used to coerce request attributes of received objects.",
-      "type": "string"
+      "type": "string",
+      "format": "dcmAETitle"
     },
     "dcmLeadingCFindSCP": {
       "title": "Leading C-FIND SCP",

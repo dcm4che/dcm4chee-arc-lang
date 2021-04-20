@@ -111,9 +111,10 @@
       "type": "string"
     },
     "dcmMergeMWLSCP": {
-      "title": "Merge MWL SCP",
-      "description": "AE Title of external MWL SCP to lookup MWL Item used to coerce request attributes of received objects.",
-      "type": "string"
+      "title": "マージ MWL SCP",
+      "description": "受信した オブジェクトの 要求 属性を 強制 する ために 使用される MWL アイテムを ルックアップ する ための 外部 MWL SCPの AE タイトル。",
+      "type": "string",
+      "format": "dcmAETitle"
     },
     "dcmLeadingCFindSCP": {
       "title": "先頭の C-FIND SCP",
