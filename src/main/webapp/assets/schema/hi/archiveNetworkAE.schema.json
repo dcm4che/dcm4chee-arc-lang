@@ -657,6 +657,11 @@
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
+    "dcmWadoIgnorePresentationLUTShape": {
+      "title": "Wado Ignore Presentation LUT Shape",
+      "description": "दर्शाता है की प्रेजेंटेशन LUT शेप (2050,0020) को नज़रअंदाज़ करें, लेकिन फोटोमैट्रिक इंटरप्रिटेशन (0028,0004) को ज़्यादा महत्त्व दे ताकि WADO-RS या WADO-URI सेवाओं द्वारा पुनःप्राप्त किए गए रेंडर्ड DICOM प्रतिमाओं के न्यूनतम नमूना मूल्य को सफ़ेद (=MONCHROME1) या काला (=MONCHROME2) दिखाने में निश्चित हो सके । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "boolean"
+    },
     "dcmExportRule": {
       "title": "निर्यात नियम",
       "description": "इस AE से सहेजे गए DICOM दृष्टांतों पे निर्यात नियम लागू करें । आर्काइव डिवाइस स्तर पे निर्दिष्ट निर्यात नियम पूरक होंगे ।",
