@@ -446,6 +446,12 @@
       "type": "string",
       "default": "DICOM/{0020000D,hash}/{0020000E,hash}/{00080018,hash}.dcm"
     },
+    "dcmWadoIgnorePresentationLUTShape": {
+      "title": "Wado プレゼンテーション LUT 状態を 無視 する",
+      "description": "Indicates to ignore Presentation LUT Shape (2050,0020), but prioritize value of Photometric Interpretation (0028,0004) to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "type": "boolean",
+      "default": false
+    },
     "dcmQueryFetchSize": {
       "title": "クエリ フェッチ サイズ",
       "description": "クエリ サービスに よって データベースから 一度に フェッチされた 行数。",
@@ -1677,12 +1683,6 @@
       "title": "患者 IDの 割り当て 権限の ために 監査",
       "description": "PID-3の 識別子の リストで 適格な 患者 識別子を 検索 する ために 使用される 受信 HL7 メッセージでの 患者 IDの 権限の 割り当て。 この 適格な 患者 識別子が 監査 メッセージに 使用 されます。 存在しない 場合、 デフォルトでは、 PID-3の 最初の 適格な 患者 識別子が 使用されます。 存在し 場合、けれでも PID-3の 識別子の リストで 適格な 患者 識別子にも 一致しない 場合、デフォルトでは、 PID-3の 最初の 適格な 患者 識別子が 使用されます。 形式: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>]。",
       "type": "string"
-    },
-    "dcmWadoIgnorePresentationLUTShape": {
-      "title": "Wado プレゼンテーション LUT 状態を 無視 する",
-      "description": "Indicates to ignore Presentation LUT Shape (2050,0020), but prioritize value of Photometric Interpretation (0028,0004) to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
-      "type": "boolean",
-      "default": false
     },
     "dcmAttributeFilter": {
       "title": "属性 フィルター",

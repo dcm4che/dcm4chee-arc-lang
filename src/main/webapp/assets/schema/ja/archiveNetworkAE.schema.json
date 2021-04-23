@@ -217,6 +217,11 @@
       "description": "WADO-RSに よって 返される ZIP アーカイブ内の エントリ名の 形式。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "string"
     },
+    "dcmWadoIgnorePresentationLUTShape": {
+      "title": "Wado プレゼンテーション LUT 状態を 無視 する",
+      "description": "Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. デバイス レベルで 指定された 値を 上書きします。",
+      "type": "boolean"
+    },
     "dcmQueryMaxNumberOfResults": {
       "title": "クエリの 結果の 最大数",
       "description": "C-FIND SCPに よる 戻り 結果の 最大数。 一致の 数が 制限を 超えると、 C-FIND 要求は 拒否されます。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。",
@@ -656,11 +661,6 @@
       "description": "構成された フォールバック C-MOVE SCPへの A-ASSOCIATE-RQで 使用された 呼びかけて いる AEの タイトル。 存在しない 場合、 外部 C-MOVE SCUの AEタイトルが 使用されます。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "string",
       "format": "dcmArchiveAETitle"
-    },
-    "dcmWadoIgnorePresentationLUTShape": {
-      "title": "Wado プレゼンテーション LUT 状態を 無視 する",
-      "description": "Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. デバイス レベルで 指定された 値を 上書きします。",
-      "type": "boolean"
     },
     "dcmExportRule": {
       "title": "書き出し 規則",

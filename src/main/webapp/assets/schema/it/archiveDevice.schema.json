@@ -424,6 +424,12 @@
       "type": "string",
       "default": "DICOM/{0020000D,hash}/{0020000E,hash}/{00080018,hash}.dcm"
     },
+    "dcmWadoIgnorePresentationLUTShape": {
+      "title": "Wado Ignore Presentation LUT Shape",
+      "description": "Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "boolean",
+      "default": false
+    },
     "dcmQueryFetchSize": {
       "title": "Dimensione recupero query",
       "description": "Numero di righe recuperate dal database contemporaneamente dal servizio di query.",
@@ -1639,12 +1645,6 @@
       "title": "Assigning Authority of Patient ID for Audit",
       "description": "Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. This qualified patient identifier shall be used in the patient details participant object. If absent, by default the first qualified patient identifier in PID-3 shall be used. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
       "type": "string"
-    },
-    "dcmWadoIgnorePresentationLUTShape": {
-      "title": "Wado Ignore Presentation LUT Shape",
-      "description": "Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. May be overwritten by configured values for particular Archive Network AEs.",
-      "type": "boolean",
-      "default": false
     },
     "dcmAttributeFilter": {
       "title": "Filtro attributi",

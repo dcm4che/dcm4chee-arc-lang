@@ -203,6 +203,11 @@
       "description": "Formato dei nomi delle voci nell'archivio ZIP restituito da WADO-RS. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string"
     },
+    "dcmWadoIgnorePresentationLUTShape": {
+      "title": "Wado Ignore Presentation LUT Shape",
+      "description": "Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. Overwrites value specified on Device level",
+      "type": "boolean"
+    },
     "dcmQueryMaxNumberOfResults": {
       "title": "Numero Max di risultati per la Query",
       "description": "Numero massimo di risultati restituiti da C-FIND SCP. Se il numero di corrispondenze supera il limite, la richiesta C-FIND verrà rifiutata. 0 = nessuna limitazione. Sovrascrive i valori specificati a livello del dispositivo.",
@@ -642,11 +647,6 @@
       "description": "Titolo AE chiamante utilizzato in A-ASSOCIATE-RQ per il Fallback del C-MOVE SCP configurato. Se assente, viene utilizzato il titolo AE della SCU C-MOVE esterna. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string",
       "format": "dcmArchiveAETitle"
-    },
-    "dcmWadoIgnorePresentationLUTShape": {
-      "title": "Wado Ignore Presentation LUT Shape",
-      "description": "Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. Overwrites value specified on Device level",
-      "type": "boolean"
     },
     "dcmExportRule": {
       "title": "Regola di esportazione",
