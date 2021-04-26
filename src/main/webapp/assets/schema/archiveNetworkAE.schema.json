@@ -662,6 +662,12 @@
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
+    "dcmChangeRequesterAET": {
+      "title": "Change Requester AET",
+      "description": "Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
     "dcmExportRule": {
       "title": "Export Rule",
       "description": "Export Rules applied to DICOM objects received by this AE. Supplements Export Rules specified on Device level.",
