@@ -1684,6 +1684,12 @@
       "type": "boolean",
       "default" : false
     },
+    "dcmChangeRequesterAET": {
+      "title": "Change Requester AET",
+      "description": "Indicates change requester AET in rejections triggered by archive. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
     "dcmAttributeFilter": {
       "title": "विशेषता फ़िल्टर",
       "description": "डेटाबेसमध्ये साठवलेले विशेषता.",

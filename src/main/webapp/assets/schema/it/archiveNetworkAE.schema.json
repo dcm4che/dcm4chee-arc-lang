@@ -648,6 +648,12 @@
       "description": "Indica se lo stato del risultato di Retrieve Tasks deve essere impostato su WARNING se sono presenti operazioni secondarie di avviso, anche se il recupero di tutti gli oggetti è riuscito. Overwrites value specified on Device level",
       "type": "boolean"
     },
+    "dcmChangeRequesterAET": {
+      "title": "Change Requester AET",
+      "description": "Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
     "dcmExportRule": {
       "title": "Regola di esportazione",
       "description": "Regole di esportazione applicate agli oggetti DICOM ricevuti da questo AE. Integra le regole di esportazione HL7 specificate a livello di dispositivo.",
