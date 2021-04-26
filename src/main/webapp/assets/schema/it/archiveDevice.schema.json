@@ -571,6 +571,12 @@
         307
        ]
     },
+    "dcmFallbackCMoveSCPCallingAET": {
+      "title": "Titolo AE chiamante di Fallback C-Move SCP ",
+      "description": "Titolo AE chiamante utilizzato in A-ASSOCIATE-RQ per il Fallback del C-MOVE SCP configurato. Se assente, viene utilizzato il titolo AE della SCU C-MOVE esterna. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
     "dcmAltCMoveSCP": {
       "title": "SCP C-Move alternativo",
       "description": "Titolo AE di C-MOVE SCP alternativo per inoltrare C-MOVE RQ se le Entità richieste non si trovano su un archivio locale collegato",
@@ -760,6 +766,27 @@
       "description": "Indica il valore dell'ID paziente da inviare nel messaggio di audit quando non è noto.",
       "type": "string",
       "default": "<none>"
+    },
+    "dcmAudit2JsonFhirTemplateURI": {
+      "title": "Modello URI per Audit su json + fhir ",
+      "description": "Specifica l'URI per il foglio di stile per transcodificare il messaggio di controllo in un evento di controllo della risorsa JSON FHIR",
+      "type": "string"
+    },
+    "dcmAudit2XmlFhirTemplateURI": {
+      "title": "Modello URI per Audit su xml + fhir ",
+      "description": "Specifica l'URI per il foglio di stile per transcodificare il messaggio di controllo in un evento di controllo della risorsa XML FHIR",
+      "type": "string"
+    },
+    "dcmAuditSoftwareConfigurationVerbose": {
+      "title": "Configurazione del software di controllo dettagliata",
+      "description": "Specifica se gli oggetti figlio e gli attributi degli oggetti creati devono essere inclusi nella configurazione software del messaggio controllo.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmAuditAssigningAuthorityOfPatientID": {
+      "title": "Assigning Authority of Patient ID for Audit",
+      "description": "Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. This qualified patient identifier shall be used in the patient details participant object. If absent, by default the first qualified patient identifier in PID-3 shall be used. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "type": "string"
     },
     "dcmShowPatientInfoInSystemLog": {
       "title": "Mostra informazioni paziente nel registro di sistema",
@@ -1149,16 +1176,6 @@
       "description": "URL per l'endpoint upstream che deve essere inviato tramite proxy.",
       "type": "string"
     },
-    "dcmAudit2JsonFhirTemplateURI": {
-      "title": "Modello URI per Audit su json + fhir ",
-      "description": "Specifica l'URI per il foglio di stile per transcodificare il messaggio di controllo in un evento di controllo della risorsa JSON FHIR",
-      "type": "string"
-    },
-    "dcmAudit2XmlFhirTemplateURI": {
-      "title": "Modello URI per Audit su xml + fhir ",
-      "description": "Specifica l'URI per il foglio di stile per transcodificare il messaggio di controllo in un evento di controllo della risorsa XML FHIR",
-      "type": "string"
-    },
     "dcmCopyMoveUpdatePolicy": {
       "title": "Copia il criterio di aggiornamento dello spostamento",
       "description": "Specifica la politica di aggiornamento per gli attributi dello studio di destinazione sulla copia/spostamento di istanze da un altro studio. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
@@ -1502,12 +1519,6 @@
       "type": "boolean",
       "default": true
     },
-    "dcmAuditSoftwareConfigurationVerbose": {
-      "title": "Configurazione del software di controllo dettagliata",
-      "description": "Specifica se gli oggetti figlio e gli attributi degli oggetti creati devono essere inclusi nella configurazione software del messaggio controllo.",
-      "type": "boolean",
-      "default": false
-    },
     "hl7UseNullValue": {
       "title": "Usa valore nullo HL7",
       "description": "Specifica se i valori nulli HL7 v2 (specificati nel campo del segmento come |\"\"|) vengono utilizzati nei messaggi HL7 inviati per attributi di entità non presenti o vuoti. Necessario per annullare l'impostazione degli attributi dell'entità nell'applicazione HL7 remota. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di Archivio.",
@@ -1634,17 +1645,6 @@
       "description": "Indica se i contenitori QuickTime ricevuti nelle richieste STOW-RS Metadata e Bulkdata devono essere convertiti in contenitori MP4 incapsulati in istanze DICOM create. La conversione richiede che ffmpeg sia installato e che l'utility ffmpeg CLI sia disponibile nel PATH. In caso contrario, i contenitori Quicktime verranno incapsulati nell'oggetto DICOM archiviato non cambiati, con una sintassi di trasferimento DICOM MPEG-4 dichiarata che riflette la codifica del flusso video nel contenitore, ma contraddice il formato effettivo del contenitore. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "boolean",
       "default" : false
-    },
-    "dcmFallbackCMoveSCPCallingAET": {
-      "title": "Titolo AE chiamante di Fallback C-Move SCP ",
-      "description": "Titolo AE chiamante utilizzato in A-ASSOCIATE-RQ per il Fallback del C-MOVE SCP configurato. Se assente, viene utilizzato il titolo AE della SCU C-MOVE esterna. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
-      "type": "string",
-      "format": "dcmArchiveAETitle"
-    },
-    "dcmAuditAssigningAuthorityOfPatientID": {
-      "title": "Assigning Authority of Patient ID for Audit",
-      "description": "Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. This qualified patient identifier shall be used in the patient details participant object. If absent, by default the first qualified patient identifier in PID-3 shall be used. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
-      "type": "string"
     },
     "dcmAttributeFilter": {
       "title": "Filtro attributi",

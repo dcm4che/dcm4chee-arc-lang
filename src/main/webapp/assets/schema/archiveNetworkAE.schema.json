@@ -336,6 +336,12 @@
         307
       ]
     },
+    "dcmFallbackCMoveSCPCallingAET": {
+      "title": "Fallback C-Move SCP Calling AE title",
+      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. Overwrites value specified on Device level.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
     "dcmAltCMoveSCP": {
       "title": "Alternative C-Move SCP",
       "description": "AE Title of alternative C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not located on a local attached Storage. Overwrites value specified on Device level.",
@@ -655,12 +661,6 @@
       "title": "Retrieve Task Warning on Warnings",
       "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. Overwrites value specified on Device level",
       "type": "boolean"
-    },
-    "dcmFallbackCMoveSCPCallingAET": {
-      "title": "Fallback C-Move SCP Calling AE title",
-      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. Overwrites value specified on Device level.",
-      "type": "string",
-      "format": "dcmArchiveAETitle"
     },
     "dcmChangeRequesterAET": {
       "title": "Change Requester AET",

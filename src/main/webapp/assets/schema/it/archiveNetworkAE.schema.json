@@ -322,6 +322,12 @@
         307
       ]
     },
+    "dcmFallbackCMoveSCPCallingAET": {
+      "title": "Titolo AE chiamante di Fallback C-Move SCP ",
+      "description": "Titolo AE chiamante utilizzato in A-ASSOCIATE-RQ per il Fallback del C-MOVE SCP configurato. Se assente, viene utilizzato il titolo AE della SCU C-MOVE esterna. Sovrascrive i valori specificati a livello del dispositivo.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
     "dcmAltCMoveSCP": {
       "title": "SCP C-Move alternativo",
       "description": "Titolo AE di C-MOVE SCP alternativo per inoltrare C-MOVE RQ se le Entità richieste non si trovano su un archivio locale collegato. Sovrascrive i valori specificati a livello del dispositivo.",
@@ -641,12 +647,6 @@
       "title": "Recupera attività di Warning su Warnings",
       "description": "Indica se lo stato del risultato di Retrieve Tasks deve essere impostato su WARNING se sono presenti operazioni secondarie di avviso, anche se il recupero di tutti gli oggetti è riuscito. Overwrites value specified on Device level",
       "type": "boolean"
-    },
-    "dcmFallbackCMoveSCPCallingAET": {
-      "title": "Titolo AE chiamante di Fallback C-Move SCP ",
-      "description": "Titolo AE chiamante utilizzato in A-ASSOCIATE-RQ per il Fallback del C-MOVE SCP configurato. Se assente, viene utilizzato il titolo AE della SCU C-MOVE esterna. Sovrascrive i valori specificati a livello del dispositivo.",
-      "type": "string",
-      "format": "dcmArchiveAETitle"
     },
     "dcmExportRule": {
       "title": "Regola di esportazione",
