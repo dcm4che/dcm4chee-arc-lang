@@ -336,6 +336,12 @@
         307
       ]
     },
+    "dcmFallbackCMoveSCPCallingAET": {
+      "title": "フォールバック C-Move SCP 呼びかけて いる AE タイトル",
+      "description": "構成された フォールバック C-MOVE SCPへの A-ASSOCIATE-RQで 使用された 呼びかけて いる AEの タイトル。 存在しない 場合、 外部 C-MOVE SCUの AEタイトルが 使用されます。 デバイス レベルで 指定された 値を 上書きします。",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
     "dcmAltCMoveSCP": {
       "title": "代替 C-Move SCP",
       "description": "要求された エンティティが 局所的に 接続された 格納にない 場合に C-MOVE RQを 転送するための 代替 C-MOVE SCPの AE タイトル。 デバイス レベルで 指定された 値を 上書きします。",
@@ -655,12 +661,6 @@
       "title": "警告で 読み出し タスク 警告",
       "description": "すべての オブジェクトの 読み出しが 成功した 場合でも、 警告 サブオペレーションが ある 場合、 読み出し タスクの 結果 ステータスを WARNINGに 設定する 必要が あるか どうかを 示します。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "boolean"
-    },
-    "dcmFallbackCMoveSCPCallingAET": {
-      "title": "フォールバック C-Move SCP 呼びかけて いる AE タイトル",
-      "description": "構成された フォールバック C-MOVE SCPへの A-ASSOCIATE-RQで 使用された 呼びかけて いる AEの タイトル。 存在しない 場合、 外部 C-MOVE SCUの AEタイトルが 使用されます。 デバイス レベルで 指定された 値を 上書きします。",
-      "type": "string",
-      "format": "dcmArchiveAETitle"
     },
     "dcmExportRule": {
       "title": "書き出し 規則",
