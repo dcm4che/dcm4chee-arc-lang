@@ -662,6 +662,12 @@
       "description": "すべての オブジェクトの 読み出しが 成功した 場合でも、 警告 サブオペレーションが ある 場合、 読み出し タスクの 結果 ステータスを WARNINGに 設定する 必要が あるか どうかを 示します。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "boolean"
     },
+    "dcmChangeRequesterAET": {
+      "title": "Change Requester AET",
+      "description": "Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
     "dcmExportRule": {
       "title": "書き出し 規則",
       "description": "この AEに よって 受信された DICOM オブジェクトに 適用される 書き出し 規則。 デバイス レベルで 指定された 書き出し 規則を 上補足します。",

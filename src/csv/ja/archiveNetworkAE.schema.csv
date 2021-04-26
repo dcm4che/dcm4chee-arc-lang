@@ -97,6 +97,7 @@
 "dcmStowQuicktime2MP4","STOW - MP4への Quicktime","STOW-RS メタデータと バルク データ 要求で 受信された QuickTime コンテナーが、 作成された DICOM インスタンスに カプセル化された MP4 コンテナーに 変換されるか どうかを 示します。 変換には、 ffmpegが インストールされており、 ffmpeg CLI ユーティリティーが PATHで 使用 可能で ある 必要が あります。 そうでない 場合、 Quicktime コンテナは、 コンテナ内の ビデオ ストリームの エンコーディングを 反映 する 宣言された DICOM MPEG-4 転送 構文を 使用して、 保存されて いる DICOM オブジェクトに その まま カプセル化されますが、 実際の コンテナ フォーマットとは 矛盾します。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmRetrieveTaskWarningOnNoMatch","一致 しない 場合の 読み出し タスク 警告","C-MOVE SCPで 要求された オブジェクトが 見つからなかった 場合に、 読み出し タスクの 結果 ステータスを WARNINGに 設定する 必要が あるか どうかを 示します。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmRetrieveTaskWarningOnWarnings","警告で 読み出し タスク 警告","すべての オブジェクトの 読み出しが 成功した 場合でも、 警告 サブオペレーションが ある 場合、 読み出し タスクの 結果 ステータスを WARNINGに 設定する 必要が あるか どうかを 示します。 デバイス レベルで 指定された 値を 上書きします。"
+"dcmChangeRequesterAET","Change Requester AET","Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level."
 "dcmExportRule","書き出し 規則","この AEに よって 受信された DICOM オブジェクトに 適用される 書き出し 規則。 デバイス レベルで 指定された 書き出し 規則を 上補足します。"
 "dcmExportPriorsRule","事前 エンティティの 書き出し 規則","この AEに よって 受信された DICOM オブジェクトに 適用される 事前 エンティティの 書き出し 規則。 デバイス レベルで 指定された 事前 エンティティの 書き出し 規則を 上補足します。"
 "dcmRSForwardRule","RESTful 転送 規則","RESTful 転送 規則。 デバイス レベルで 指定された RESTful 転送 規則を 上補足します。"

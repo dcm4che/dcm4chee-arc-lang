@@ -662,6 +662,12 @@
       "description": "जर सर्व दृष्टांतांची पुनर्प्राप्ती यशस्वी होऊनसुद्धा चेतावणी उप-क्रिया आहेत, तरीसुद्धा पुनर्प्राप्ती कार्यांचे परिणामांची स्थितीला चेतावणी 'WARNING' म्हणून संच करण्याचे संकेत करते. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
       "type": "boolean"
     },
+    "dcmChangeRequesterAET": {
+      "title": "Change Requester AET",
+      "description": "Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
     "dcmExportRule": {
       "title": "निर्यात नियम",
       "description": "कोणत्याही AE द्वारे प्राप्त झालेल्या DICOM दृष्टांतांवर निर्यात नियम लागू करा. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेले निर्यात नियम पूरक होतील.",
