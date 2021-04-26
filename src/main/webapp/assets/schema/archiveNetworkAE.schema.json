@@ -217,6 +217,11 @@
       "description": "Format of entry names in ZIP archive returned by WADO-RS. Overwrites value specified on Device level.",
       "type": "string"
     },
+    "dcmWadoIgnorePresentationLUTShape": {
+      "title": "Wado Ignore Presentation LUT Shape",
+      "description": "Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmQueryMaxNumberOfResults": {
       "title": "Query Max Number Of Results",
       "description": "Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. Overwrites value specified on Device level.",

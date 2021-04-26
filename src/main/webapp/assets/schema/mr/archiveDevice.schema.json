@@ -87,6 +87,7 @@
     "dcmAuditSoftwareConfigurationVerbose",
     "dcmStowExcludeAPPMarkers",
     "dcmStowQuicktime2MP4",
+    "dcmWadoIgnorePresentationLUTShape",
     "hl7PSUForRequestedProcedure",
     "hl7PSURequestedProcedureID",
     "hl7PSUAccessionNumber",
@@ -444,6 +445,12 @@
       "description": "WADO-RS सेवांद्वारे प्राप्त झालेल्या ZIP आर्काइव्हमध्ये नोंदींचे नावाचे प्रारूप. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "string",
       "default": "DICOM/{0020000D,hash}/{0020000E,hash}/{00080018,hash}.dcm"
+    },
+    "dcmWadoIgnorePresentationLUTShape": {
+      "title": "Wado प्रेजेंटेशन LUT शेप दुर्लक्ष करा",
+      "description": "दर्शवते कि प्रेजेंटेशन LUT शेप (2050,0020) ला दुर्लक्ष करा, फोटोमैट्रिक इंटरप्रिटेशन (0028,0004) ला जास्त महत्व द्या जेणेकरून WADO-RS किंवा WADO-URI सेवेद्वारा पुनर्प्राप्त केलेल्या रेंडर्ड DICOM प्रतिमांच्या न्यूनतम नमुना मूल्यला सफेद (=MONCHROME1) किंवा काळे (=MONCHROME2) दाखवण्यासाठी निश्चित होईल. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्याद्वारे अधिलिखित केले जाऊ शकते.",
+      "type": "boolean",
+      "default": false
     },
     "dcmQueryFetchSize": {
       "title": "प्राप्ती करण्याचे माप",
