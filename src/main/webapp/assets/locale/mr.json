@@ -1613,6 +1613,8 @@
     "unique_identifier_of_the_study_to_filter_by": "द्वारे फिल्टर करण्यासाठी अभ्यासाचा अद्वितीय अभिज्ञापक",
     "unit": "एकक",
     "unknown_action_param": "अज्ञात क्रिया:{$@@action}",
+    "unscheduled": "अनियमित",
+    "unscheduled_studies": "अनियमित अभ्यास",
     "unselect": "निवड रद्द करा",
     "unselect_all_patients": "सर्व रूग्णांची निवड रद्द करा",
     "unselect_all_studies": "सर्व अभ्यासाची निवड रद्द करा",
