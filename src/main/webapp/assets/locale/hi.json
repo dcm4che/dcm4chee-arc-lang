@@ -1613,6 +1613,8 @@
     "unique_identifier_of_the_study_to_filter_by": "स्टडी को फ़िल्टर करने का अनन्य पहचानकर्ता",
     "unit": "इकाई",
     "unknown_action_param": "अज्ञात कार्य:{$@@action}",
+    "unscheduled": "असूचीबद्ध",
+    "unscheduled_studies": "असूचीबद्ध स्टडीज",
     "unselect": "चयन रद्द करें",
     "unselect_all_patients": "सारे मरीज़ों का चयन रद्द करें",
     "unselect_all_studies": "सारे स्टडीज का चयन रद्द करें",

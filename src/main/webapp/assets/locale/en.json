@@ -1613,6 +1613,8 @@
     "unique_identifier_of_the_study_to_filter_by": "Unique Identifier of the Study to filter by",
     "unit": "Unit",
     "unknown_action_param": "Unknown action:{$@@action}",
+    "unscheduled": "Unscheduled",
+    "unscheduled_studies": "Unscheduled Studies",
     "unselect": "Unselect",
     "unselect_all_patients": "Unselect all patients",
     "unselect_all_studies": "Unselect all studies",

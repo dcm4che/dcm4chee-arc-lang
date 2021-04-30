@@ -1613,6 +1613,8 @@
     "unique_identifier_of_the_study_to_filter_by": "フィルター する 検査の 一意の 識別子",
     "unit": "ユニット",
     "unknown_action_param": "不明な アクション:{$@@action}",
+    "unscheduled": "予定外",
+    "unscheduled_studies": "予定外 検査",
     "unselect": "選択を 解除 する",
     "unselect_all_patients": "すべての 患者の 選択を 解除 する",
     "unselect_all_studies": "すべての 検査の 選択を 解除 する",
