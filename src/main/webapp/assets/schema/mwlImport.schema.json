@@ -50,13 +50,13 @@
       "title": "Filter by SCU",
       "description": "Indicates to apply specified filter on matches returned by external MWL SCP.",
       "type": "boolean",
-      "default": "false"
+      "default": false
     },
     "dcmMWLImportDeleteNotFound": {
       "title": "Delete not found",
       "description": "Indicates to delete Scheduled Procedure Steps from local MWL not returned by external MWL SCP.",
       "type": "boolean",
-      "default": "false"
+      "default": false
     },
     "dcmProperty": {
       "title": "Matching Keys",
