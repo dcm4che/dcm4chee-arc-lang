@@ -36,13 +36,13 @@
     },
     "dcmDuration": {
       "title": "Import not before",
-      "description": "Restrict import of Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled earlier in the future than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the future.",
+      "description": "Import Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled earlier in the future than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the future.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmMWLImportNotOlder": {
       "title": "Import not older than",
-      "description": "Restrict import of Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled later in the past than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the past.",
+      "description": "Import Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled later in the past than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the past.",
       "type": "string",
       "format": "dcmDuration"
     },
