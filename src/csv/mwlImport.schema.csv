@@ -1,6 +1,6 @@
 "property","title","description"
-"","MWL Import Rule","Specifies import of Scheduled Procedure Step from external MWL SCP"
-"dcmMWLImportID","MWL Import Rule ID","ID of MWL Import Rule"
+"","MWL Import","Specifies import of Scheduled Procedure Step from external MWL SCP"
+"dcmMWLImportID","MWL Import ID","ID of MWL Import"
 "dicomAETitle","Calling AE Title","Calling AE Title used in A-ASSOCIATE-RQ to external MWL SCP"
 "dcmMergeMWLSCP","Source MWL SCP","AE Title of external MWL SCP to query for Scheduled Procedure Step to import."
 "dcmDestinationAE","Destination MWL SCP","AE Title of local MWL SCP feeded/updated by Scheduled Procedure Steps returned by external MWL SCP."
