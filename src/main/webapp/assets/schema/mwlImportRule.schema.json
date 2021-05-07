@@ -27,7 +27,6 @@
       "description": "AE Title of external MWL SCP to query for Scheduled Procedure Step to import.",
       "type": "string",
       "format": "dcmAETitle"
-
     },
     "dcmDestinationAE": {
       "title": "Destination MWL SCP",
