@@ -1,5 +1,5 @@
 {
-  "title": "MWL Import Rule",
+  "title": "MWL Import",
   "description": "Specifies import of Scheduled Procedure Step from external MWL SCP",
   "type": "object",
   "required": [
@@ -12,8 +12,8 @@
   ],
   "properties": {
     "dcmMWLImportID": {
-      "title": "MWL Import Rule ID",
-      "description": "ID of MWL Import Rule",
+      "title": "MWL Import ID",
+      "description": "ID of MWL Import",
       "type": "string"
     },
     "dicomAETitle": {

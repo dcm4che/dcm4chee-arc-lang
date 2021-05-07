@@ -1907,12 +1907,12 @@
       }
     },
     "dcmMWLImport": {
-      "title": "MWL Import Rule",
-      "description": "MWL Import Rule",
+      "title": "MWL Import",
+      "description": "MWL Import",
       "type": "array",
       "titleKey":"{dcmMWLImportID}",
       "items" : {
-        "$ref": "mwlImportRule.schema.json"
+        "$ref": "mwlImport.schema.json"
       }
     },
     "dcmMWLIdleTimeout": {

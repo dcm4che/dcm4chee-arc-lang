@@ -250,7 +250,7 @@
 "dcmUPSOnUPSCompleted","UPS on UPS Completed Rules","UPS on UPS Completed Rules applied to UPS managed by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs."
 "dcmUPSProcessingRule","UPS Processing Rules","UPS Processing Rules."
 "dcmIDGenerator","ID Generator","ID Generator"
-"dcmMWLImport","MWL Import Rule","MWL Import Rule"
+"dcmMWLImport","MWL Import","MWL Import"
 "dcmMWLIdleTimeout","MWL Idle Timeout","MWL Idle Timeout"
 "hl7ForwardRule","HL7 Forward Rule","HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications."
 "hl7ExportRule","HL7 Export Rule","Export Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Export Rules for particular HL7 Application."
