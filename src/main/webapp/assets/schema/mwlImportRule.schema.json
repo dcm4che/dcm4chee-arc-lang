@@ -25,13 +25,15 @@
     "dcmMergeMWLSCP": {
       "title": "Source MWL SCP",
       "description": "AE Title of external MWL SCP to query for Scheduled Procedure Step to import.",
-      "type": "string"
+      "type": "string",
+      "format": "dcmAETitle"
+
     },
     "dcmDestinationAE": {
       "title": "Destination MWL SCP",
       "description": "AE Title of local MWL SCP feeded/updated by Scheduled Procedure Steps returned by external MWL SCP.",
-      "type": "array",
-      "items": { "type": "string" }
+      "type": "string",
+      "format": "dcmArchiveAETitle"
     },
     "dcmDuration": {
       "title": "Import not before",
