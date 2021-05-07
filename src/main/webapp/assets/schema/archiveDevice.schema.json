@@ -247,6 +247,12 @@
       "minimum": 0,
       "exclusiveMinimum": true
     },
+    "dcmMWLImportInterval": {
+      "title": "MWL Import Interval",
+      "description": "Interval for import of Scheduled Procedure Steps from external MWL SCPs in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
     "dcmDeleteMWLDelay": {
       "title": "Delete MWL Delay",
       "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting MWL items. Status specific delays can be specified by prefix 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. Examples: PT5M or CANCELED:PT10M. If absent, MWL Items will not get deleted.",
@@ -1898,6 +1904,15 @@
       "titleKey":"{dcmIDGeneratorName}",
       "items" : {
         "$ref": "idGenerator.schema.json"
+      }
+    },
+    "dcmMWLImport": {
+      "title": "MWL Import Rule",
+      "description": "MWL Import Rule",
+      "type": "array",
+      "titleKey":"{dcmMWLImportID}",
+      "items" : {
+        "$ref": "mwlImportRule.schema.json"
       }
     },
     "dcmMWLIdleTimeout": {
