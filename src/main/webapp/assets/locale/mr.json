@@ -804,7 +804,6 @@
     "mwl.import_matching_sps_to_archive": "Import matching SPS to archive",
     "mwl.import_matching_sps": "Import matching Scheduled Procedure Steps to archive",
     "mwl.status_changed_successfully": "स्थिती यशस्वीरित्या बदलली",
-    "mwl.test": "Only test import from external MWL SCP without performing the operation",
     "mwl.test_desc": "Only test import from external MWL SCP without performing the operation",
     "name": "नाव",
     "name_of_the_new_connection_is_empty": "नवीन कनेक्शनचे नाव रिक्त आहे!",

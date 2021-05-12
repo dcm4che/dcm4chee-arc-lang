@@ -804,7 +804,6 @@
 		"mwl.import_matching_sps_to_archive": "Import matching SPS to archive",
 		"mwl.import_matching_sps": "Import matching Scheduled Procedure Steps to archive",
 		"mwl.status_changed_successfully": "Stato modificato con successo",
-		"mwl.test": "Only test import from external MWL SCP without performing the operation",
 		"mwl.test_desc": "Only test import from external MWL SCP without performing the operation",
 		"name": "Nome",
 		"name_of_the_new_connection_is_empty": "Il nome della nuova connessione è vuoto!",
