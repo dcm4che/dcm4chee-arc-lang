@@ -100,6 +100,7 @@
       "description": "受信した オブジェクトの 属性を 指定して、 要求 属性を 強制 する ために 使用される MWL アイテムを 検索します。 存在しない 場合、 受信した オブジェクトの 要求 属性は 強制されません。",
       "type": "string",
       "enum": [
+        "PatientID",
         "AccessionNumber",
         "StudyInstanceUID",
         "ScheduledProcedureStepID"
