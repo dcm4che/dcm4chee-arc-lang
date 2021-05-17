@@ -100,6 +100,7 @@
       "description": "Specifica l'attributo dell'oggetto ricevuto per la ricerca dell'elemento MWL utilizzato per forzare gli attributi della richiesta. Se assenti, gli attributi di richiesta degli oggetti ricevuti non verranno forzati.",
       "type": "string",
       "enum": [
+        "PatientID",
         "AccessionNumber",
         "StudyInstanceUID",
         "ScheduledProcedureStepID"
