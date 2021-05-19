@@ -9,6 +9,7 @@
     "dcmRulePriority",
     "dcmRetrieveAsReceived",
     "dcmNoKeywords",
+    "dcmMWLImportFilterBySCU",
     "dcmAttributeUpdatePolicy",
     "dcmTrimISO2022CharacterSet"
   ],
@@ -116,6 +117,12 @@
       "description": "受信した オブジェクトの 要求 属性を 強制 する ために 使用される MWL アイテムを ルックアップ する ための 外部 MWL SCPの AE タイトル。",
       "type": "string",
       "format": "dcmAETitle"
+    },
+    "dcmMWLImportFilterBySCU": {
+      "title": "Merge MWL Filter by SCU",
+      "description": "Indicates to apply specified filter on matches returned by external MWL SCP.",
+      "type": "boolean",
+      "default": false
     },
     "dcmLeadingCFindSCP": {
       "title": "先頭の C-FIND SCP",

@@ -9,6 +9,7 @@
     "dcmRulePriority",
     "dcmRetrieveAsReceived",
     "dcmNoKeywords",
+    "dcmMWLImportFilterBySCU",
     "dcmAttributeUpdatePolicy",
     "dcmTrimISO2022CharacterSet"
   ],
@@ -116,6 +117,12 @@
       "description": "AE Title of external MWL SCP to lookup MWL Item used to coerce request attributes of received objects.",
       "type": "string",
       "format": "dcmAETitle"
+    },
+    "dcmMWLImportFilterBySCU": {
+      "title": "Merge MWL Filter by SCU",
+      "description": "Indicates to apply specified filter on matches returned by external MWL SCP.",
+      "type": "boolean",
+      "default": false
     },
     "dcmLeadingCFindSCP": {
       "title": "Leading C-FIND SCP",
