@@ -234,6 +234,11 @@
       "type": "integer",
       "minimum": 0
     },
+    "dcmQidoETag": {
+      "title": "Qido ETag",
+      "description": "Indicates to return Last-Modified and ETag for Search Series or Instances of a Study. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmFwdMppsDestination": {
       "title": "MPPS 転送 宛先",
       "description": "MPPS N-CREATE RQと N-SET RQを転送 する 宛先。 デバイス レベルで 指定された 値を 上書きします。",

@@ -32,6 +32,7 @@
 "dcmWadoIgnorePresentationLUTShape","Wado プレゼンテーション LUT 状態を 無視 する","Indicates to ignore Presentation LUT Shape (2050,0020), but prioritize value of Photometric Interpretation (0028,0004) to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. デバイス レベルで 指定された 値を 上書きします。"
 "dcmQueryMaxNumberOfResults","クエリの 結果の 最大数","C-FIND SCPに よる 戻り 結果の 最大数。 一致の 数が 制限を 超えると、 C-FIND 要求は 拒否されます。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmQidoMaxNumberOfResults","QIDO 結果の 最大数","QIDO-RS サービスに よる 戻り 結果の 最大数。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。"
+"dcmQidoETag","Qido ETag","Indicates to return Last-Modified and ETag for Search Series or Instances of a Study; disabled if absent. Overwrites value specified on Device level."
 "dcmFwdMppsDestination","MPPS 転送 宛先","MPPS N-CREATE RQと N-SET RQを転送 する 宛先。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmIanDestination","IAN 宛先","IAN N-CREATE RQの 宛先。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmIanDelay","IAN 遅延","構成された IAN 宛先に 受信した 検査の IANを 送信するために ISO-8601 期間 形式 PnDTnHnMnSで 遅延の 値。 デバイス レベルで 指定された 値を 上書きします。"
