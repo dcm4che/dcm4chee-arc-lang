@@ -234,6 +234,11 @@
       "type": "integer",
       "minimum": 0
     },
+    "dcmQidoETag": {
+      "title": "Qido ETag",
+      "description": "Indicates to return Last-Modified and ETag for Search Series or Instances of a Study. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmFwdMppsDestination": {
       "title": "MPPS अग्रेषित गंतव्य",
       "description": "MPPS N-CREATE RQ आणि N-SET RQ विनंत्यांना अग्रेषित करण्यासाठी गंतव्य. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",

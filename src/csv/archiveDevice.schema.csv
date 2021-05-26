@@ -52,6 +52,7 @@
 "dcmQueryFetchSize","Query Fetch Size","Number of rows fetched from the database at once by the Query Service."
 "dcmQueryMaxNumberOfResults","Query Max Number Of Results","Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. May be overwritten by configured values for particular Archive Network AEs."
 "dcmQidoMaxNumberOfResults","Qido Max Number Of Results","Maximal number of return results by QIDO-RS Service. 0 = no limitation. May be overwritten by configured values for particular Archive Network AEs."
+"dcmQidoETag","Qido ETag","Indicates to return Last-Modified and ETag for Search Series or Instances of a Study; disabled if absent. May be overwritten by configured values for particular Archive Network AEs."
 "dcmFwdMppsDestination","Mpps Forward Destination","Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs."
 "dcmIanDestination","Ian Destination","Destination to send IAN N-CREATE RQ. May be overwritten by configured values for particular Archive Network AEs."
 "dcmIanDelay","IAN Delay","Delay in ISO-8601 duration format PnDTnHnMnS after which an IAN for a received study is sent to configured IAN destinations. If absent, IANs are triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs."

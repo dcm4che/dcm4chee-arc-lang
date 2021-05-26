@@ -25,6 +25,7 @@
     "dcmQueryFetchSize",
     "dcmQueryMaxNumberOfResults",
     "dcmQidoMaxNumberOfResults",
+    "dcmQidoETag",
     "dcmWadoThumbnailViewport",
     "dcmWadoZIPEntryNameFormat",
     "dcmIanOnTimeout",
@@ -472,6 +473,12 @@
       "type": "integer",
       "default": 0,
       "minimum": 0
+    },
+    "dcmQidoETag": {
+      "title": "Qido ETag",
+      "description": "Indicates to return Last-Modified and ETag for Search Series or Instances of a Study; disabled if absent. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "boolean",
+      "default": false
     },
     "dcmFwdMppsDestination": {
       "title": "MPPS 転送 宛先",

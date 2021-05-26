@@ -234,6 +234,11 @@
       "type": "integer",
       "minimum": 0
     },
+    "dcmQidoETag": {
+      "title": "Qido ETag",
+      "description": "Indicates to return Last-Modified and ETag for Search Series or Instances of a Study. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmFwdMppsDestination": {
       "title": "Mpps Forward Destination",
       "description": "Destination to forward MPPS N-CREATE RQ and N-SET RQ. Overwrites value specified on Device level.",
