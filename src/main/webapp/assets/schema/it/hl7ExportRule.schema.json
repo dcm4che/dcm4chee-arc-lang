@@ -49,6 +49,11 @@
       "type": "array",
       "items": { "type": "string" }
     },
+    "dcmPrefetchForIssuerOfPatientID": {
+      "title": "Export for Assigning Authority of Patient ID",
+      "description": "Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. Studies matching the specified Entity Selector of this qualified patient identifier shall be queried. If absent, by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "type": "string"
+    },
     "dcmDuration": {
       "title": "Sopprimi intervallo di esportazione duplicato",
       "description": "Sopprimere l'esportazione di studi già esportati non prima dell'intervallo specificato per evitare esportazioni duplicate.",
