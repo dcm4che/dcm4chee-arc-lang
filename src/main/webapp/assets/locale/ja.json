@@ -702,6 +702,8 @@
     "menu.navigation": "ナビゲーション",
     "menu.statistics": "統計",
     "menu.wildfly_console": "ワイルドフライ コンソール",
+    "merged_patients": "Merged Patients",
+    "merged_patients_tooltip": "Indicates to return merged patients",
     "message": "メッセージ",
     "messaging.error_detail": "エラーの 詳細",
     "metadata_update_failed": "メタデータの更新に失敗しました",

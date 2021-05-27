@@ -702,6 +702,8 @@
     "menu.navigation": "पथ प्रदर्शन",
     "menu.statistics": "सांख्यिकी",
     "menu.wildfly_console": "वाइल्डफ्लाई कंसोल",
+    "merged_patients": "Merged Patients",
+    "merged_patients_tooltip": "Indicates to return merged patients",
     "message": "सन्देश",
     "messaging.error_detail": "त्रुटि विस्तार",
     "metadata_update_failed": "मेटाडेटा अद्यतन असफल हुआ",

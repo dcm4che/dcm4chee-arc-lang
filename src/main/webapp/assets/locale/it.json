@@ -702,6 +702,8 @@
 		"menu.navigation": "Menu di navigazione",
 		"menu.statistics": "Statistiche",
 		"menu.wildfly_console": "Console Wildfly",
+		"merged_patients": "Merged Patients",
+		"merged_patients_tooltip": "Indicates to return merged patients",
 		"message": "Messaggio",
 		"messaging.error_detail": "Dettagli dell'errore",
 		"metadata_update_failed": "Aggiornamento dei metadati non riuscito",
