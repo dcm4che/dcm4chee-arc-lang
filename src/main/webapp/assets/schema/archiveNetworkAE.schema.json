@@ -691,6 +691,15 @@
         "$ref": "exportPriorsRule.schema.json"
       }
     },
+    "dcmMPPSForwardRule": {
+      "title": "MPPS Forward Rule",
+      "description": "MPPS Forward Rules applied to MPPS received by this AE. Supplements MPPS Forward Rules specified on Device level.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "mppsForwardRule.schema.json"
+      }
+    },
     "dcmRSForwardRule": {
       "title": "RESTful Forward Rule",
       "description": "RESTful Forward Rules. Supplements RESTful Forward rules specified on Device level.",

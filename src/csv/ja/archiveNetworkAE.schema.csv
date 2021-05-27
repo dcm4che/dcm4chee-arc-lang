@@ -101,6 +101,7 @@
 "dcmChangeRequesterAET","Change Requester AET","Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level."
 "dcmExportRule","書き出し 規則","この AEに よって 受信された DICOM オブジェクトに 適用される 書き出し 規則。 デバイス レベルで 指定された 書き出し 規則を 上補足します。"
 "dcmExportPriorsRule","事前 エンティティの 書き出し 規則","この AEに よって 受信された DICOM オブジェクトに 適用される 事前 エンティティの 書き出し 規則。 デバイス レベルで 指定された 事前 エンティティの 書き出し 規則を 上補足します。"
+"dcmMPPSForwardRule","MPPS Forward Rule","MPPS Forward Rules applied to MPPS received by this AE. Supplements MPPS Forward Rules specified on Device level."
 "dcmRSForwardRule","RESTful 転送 規則","RESTful 転送 規則。 デバイス レベルで 指定された RESTful 転送 規則を 上補足します。"
 "dcmArchiveCompressionRule","圧縮 規則","圧縮 規則。 デバイス レベルで 指定された 圧縮 規則を 上補足します。"
 "dcmArchiveAttributeCoercion","属性 強制","受信 / 送信された DIMSEの 属性 強制。 デバイス レベルで 指定された 属性 強制を 上補足します。"

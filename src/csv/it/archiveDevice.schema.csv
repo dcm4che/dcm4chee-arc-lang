@@ -229,6 +229,7 @@
 "dcmExporter","Descrittore dell'esportatore","Descrittore dell'esportatore"
 "dcmExportRule","Regola di esportazione","Regole di esportazione applicate agli oggetti DICOM ricevuti da qualsiasi AE. May be supplemented by configured Export Rules for particular Archive Network AEs."
 "dcmExportPriorsRule","Regola dell'esportazione dei Precedenti","Esporta le regole dei Precedenti applicate agli oggetti DICOM ricevuti da qualsiasi AE. Può essere integrato dalle regole di Esportazione dei Precedenti configurate per particolari AE della rete di Archiviazione."
+"dcmMPPSForwardRule","MPPS Forward Rule","MPPS Forward Rules applied to MPPS received by any AE. May be supplemented by configured MPPS Forward Rules for particular Archive Network AEs."
 "dcmRSForwardRule","Regola di inoltro RESTful","Regole di inoltro RESTful. Può essere integrato da regole di inoltro RESTful configurate per particolari AE della rete di archivio."
 "dcmArchiveCompressionRule","Regola di compressione","Regole di compressione applicate agli oggetti DICOM ricevuti da qualsiasi AE. Può essere integrato da regole di compressione configurate per particolari AE di Archive Network."
 "dcmArchiveAttributeCoercion","Coercizione di un Attributo","Coercizione di un attributo applicato a un DIMSE ricevuto/inviato da qualsiasi AE. Può essere integrato dalle coercizioni degli attributi configurate per particolari AE della rete di archivio."
