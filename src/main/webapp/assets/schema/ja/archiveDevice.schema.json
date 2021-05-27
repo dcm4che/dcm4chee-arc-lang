@@ -1796,6 +1796,15 @@
         "$ref": "exportPriorsRule.schema.json"
       }
     },
+    "dcmMPPSForwardRule": {
+      "title": "MPPS Forward Rule",
+      "description": "MPPS Forward Rules applied to MPPS received by any AE. May be supplemented by configured MPPS Forward Rules for particular Archive Network AEs.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "mppsForwardRule.schema.json"
+      }
+    },
     "dcmRSForwardRule": {
       "title": "RESTful 転送 規則",
       "description": "RESTful 転送 規則。 特定の アーカイブ ネットワーク AEの 構成された RESTful 転送規則に よって 補足される 場合が あります。",

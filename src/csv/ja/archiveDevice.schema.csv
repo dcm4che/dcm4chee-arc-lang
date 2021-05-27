@@ -237,6 +237,7 @@
 "dcmExporter","エクスポーター 記述子","エクスポーター 記述子"
 "dcmExportRule","書き出し 規則","任意の AEに よって 受信された DICOM オブジェクトに 適用される 書き出し 規則。 特定の アーカイブ ネットワーク AEの 構成された 書き出し 規則に よって 補足される 場合が あります。"
 "dcmExportPriorsRule","事前 エンティティの 書き出し 規則","任意の AEに よって 受信された DICOM オブジェクトに 適用される 事前 エンティティの 書き出し 規則。 特定の アーカイブ ネットワーク AEの 構成された 事前 エンティティの 書き出し 規則に よって 補足される 場合が あります。"
+"dcmMPPSForwardRule","MPPS Forward Rule","MPPS Forward Rules applied to MPPS received by any AE. May be supplemented by configured MPPS Forward Rules for particular Archive Network AEs."
 "dcmRSForwardRule","RESTful 転送 規則","RESTful 転送 規則。 特定の アーカイブ ネットワーク AEの 構成された RESTful 転送規則に よって 補足される 場合が あります。"
 "dcmArchiveCompressionRule","圧縮 規則","任意の AEに よって 受信された DICOM オブジェクトに 適用される 圧縮 規則。 特定の アーカイブ ネットワーク AEの 構成された 圧縮 規則に よって 補足される 場合が あります。"
 "dcmStoreAccessControlIDRule","保存 アクセス 制御 ID 規則","任意の AEが 受け取った 検査に 適用される 保存 アクセス 制御 ID 規則。 特定の アーカイブ ネットワーク AEの 構成された 保存 アクセス 制御 ID 規則に よって 補足される 場合が あります。"

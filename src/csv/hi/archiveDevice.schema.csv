@@ -237,6 +237,7 @@
 "dcmExporter","निर्यातक वर्णनकर्ता","निर्यातक वर्णनकर्ता ।"
 "dcmExportRule","निर्यात नियम","किसी भी AE से सहेजे गए DICOM दृष्टांतों पे निर्यात नियम लागू करें । आर्काइव नेटवर्क AE स्तर पे कॉन्फ़िगर किए गए निर्यात नियम पूरक होंगे ।"
 "dcmExportPriorsRule","पूर्व स्टडीज निर्यात नियम","किसी भी AE से सहेजे गए DICOM दृष्टांतों पे पूर्व स्टडीज निर्यात नियम लागू करें । आर्काइव नेटवर्क AE स्तर पे कॉन्फ़िगर किए गए पूर्व स्टडीज निर्यात नियम पूरक होंगे ।"
+"dcmMPPSForwardRule","MPPS Forward Rule","MPPS Forward Rules applied to MPPS received by any AE. May be supplemented by configured MPPS Forward Rules for particular Archive Network AEs."
 "dcmRSForwardRule","RESTful फॉरवर्ड नियम","RESTful फॉरवर्ड नियम । आर्काइव नेटवर्क AE स्तर पे कॉन्फ़िगर किए गए RESTful फॉरवर्ड नियम पूरक होंगे ।"
 "dcmArchiveCompressionRule","संपीड़न नियम","किसी भी AE से सहेजे गए DICOM दृष्टांतों पे लागू किए गए संपीड़न नियम । आर्काइव नेटवर्क AE स्तर पे कॉन्फ़िगर किए गए संपीड़न नियम पूरक होंगे ।"
 "dcmArchiveAttributeCoercion","गुण नियंत्रण","किसी भी AE से प्राप्त हुए या भेजे गए DIMSE पे लागू किए गए गुण नियंत्रण । आर्काइव नेटवर्क AE स्तर पे कॉन्फ़िगर किए गए गुण नियंत्रण पूरक होंगे ।"

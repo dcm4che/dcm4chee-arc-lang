@@ -100,6 +100,7 @@
 "dcmChangeRequesterAET","Change Requester AET","Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level."
 "dcmExportRule","Regola di esportazione","Regole di esportazione applicate agli oggetti DICOM ricevuti da questo AE. Integra le regole di esportazione HL7 specificate a livello di dispositivo."
 "dcmExportPriorsRule","Regola dell'esportazione dei Precedenti","Esporta le regole dei Priors applicate agli oggetti DICOM ricevuti da questo AE. Integra le regole di esportazione HL7 specificate a livello di dispositivo."
+"dcmMPPSForwardRule","MPPS Forward Rule","MPPS Forward Rules applied to MPPS received by this AE. Supplements MPPS Forward Rules specified on Device level."
 "dcmRSForwardRule","Regola di inoltro RESTful","Regole di inoltro RESTful. Integra le regole di inoltro RESTful specificate a livello di dispositivo."
 "dcmArchiveCompressionRule","Regola di compressione","Regole di compressione. Integra le regole di compressione specificate a livello di dispositivo."
 "dcmArchiveAttributeCoercion","Coercizione di un Attributo","Coercizione dell'attributo di archivio del DIMSE ricevuto/inviato Integra le coercizioni degli attributi specificate a livello di dispositivo."

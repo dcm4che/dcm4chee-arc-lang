@@ -101,6 +101,7 @@
 "dcmChangeRequesterAET","Change Requester AET","Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level."
 "dcmExportRule","निर्यात नियम","इस AE से सहेजे गए DICOM दृष्टांतों पे निर्यात नियम लागू करें । आर्काइव डिवाइस स्तर पे निर्दिष्ट निर्यात नियम पूरक होंगे ।"
 "dcmExportPriorsRule","पूर्व स्टडीज निर्यात नियम","इस AE से सहेजे गए DICOM दृष्टांतों पे पूर्व स्टडीज निर्यात नियम लागू करें । आर्काइव डिवाइस स्तर पे निर्दिष्ट पूर्व स्टडीज निर्यात नियम पूरक होंगे ।"
+"dcmMPPSForwardRule","MPPS Forward Rule","MPPS Forward Rules applied to MPPS received by this AE. Supplements MPPS Forward Rules specified on Device level."
 "dcmRSForwardRule","RESTful फॉरवर्ड नियम","RESTful फॉरवर्ड नियम । आर्काइव डिवाइस स्तर पे निर्दिष्ट RESTful फॉरवर्ड नियम पूरक होंगे ।"
 "dcmArchiveCompressionRule","संपीड़न नियम","इस AE से सहेजे गए DICOM दृष्टांतों पे लागू किए गए संपीड़न नियम । आर्काइव डिवाइस स्तर पे निर्दिष्ट संपीड़न नियम पूरक होंगे ।"
 "dcmArchiveAttributeCoercion","गुण नियंत्रण","इस AE से प्राप्त हुए या भेजे गए DIMSE पे लागू किए गए गुण नियंत्रण । आर्काइव डिवाइस स्तर पे निर्दिष्ट गुण नियंत्रण पूरक होंगे ।"
