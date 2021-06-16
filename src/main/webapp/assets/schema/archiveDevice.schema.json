@@ -34,6 +34,7 @@
     "dcmSpanningCFindSCPPolicy",
     "dcmFallbackCMoveSCPRetries",
     "dcmFallbackWadoURIHttpStatusCode",
+    "dcmTaskProcessingFetchSize",
     "dcmUPSProcessingFetchSize",
     "dcmExportTaskFetchSize",
     "dcmRetrieveTaskFetchSize",
@@ -632,6 +633,20 @@
         "type": "string"
       },
       "format": "dcmProperty"
+    },
+    "dcmTaskProcessingPollingInterval": {
+      "title": "Task Processing Polling Interval",
+      "description": "Polling Interval for scheduled Tasks ready for processing in ISO-8601 duration format PnDTnHnMnS. If absent, Tasks will not get processed.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmTaskProcessingFetchSize": {
+      "title": "Task Processing  Fetch Size",
+      "description": "Limit result set of DB query for scheduled Tasks ready for processing.",
+      "type": "integer",
+      "default": 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
     },
     "dcmUPSProcessingPollingInterval": {
       "title": "UPS Processing Polling Interval",

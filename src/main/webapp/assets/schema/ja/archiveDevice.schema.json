@@ -1,9 +1,10 @@
 {
-  "title": "アーカイブ デバイス",
-  "description": "DICOM アーカイブ デバイス 関連 情報",
+  "title": "Archive Device",
+  "description": "DICOM Archive Device related information",
   "type": "object",
   "required": [
     "dcmFuzzyAlgorithmClass",
+    "dcmStoreImplementationVersionName",
     "dcmCalculateStudySizeFetchSize",
     "dcmCalculateQueryAttributes",
     "dcmSeriesMetadataFetchSize",
@@ -33,6 +34,7 @@
     "dcmSpanningCFindSCPPolicy",
     "dcmFallbackCMoveSCPRetries",
     "dcmFallbackWadoURIHttpStatusCode",
+    "dcmTaskProcessingFetchSize",
     "dcmUPSProcessingFetchSize",
     "dcmExportTaskFetchSize",
     "dcmRetrieveTaskFetchSize",
@@ -74,7 +76,6 @@
     "dcmPatientVerificationAdjustIssuerOfPatientID",
     "dcmPatientVerificationMaxRetries",
     "dcmQueueTasksFetchSize",
-    "dcmQueueTasksFetchSize",
     "dcmSupplementIssuerFetchSize",
     "dcmCopyMoveUpdatePolicy",
     "dcmLinkMWLEntryUpdatePolicy",
@@ -86,9 +87,9 @@
     "dcmSchedulerMinStartDelay",
     "dcmStowRetiredTransferSyntax",
     "dcmAuditSoftwareConfigurationVerbose",
+    "dcmWadoIgnorePresentationLUTShape",
     "dcmStowExcludeAPPMarkers",
     "dcmStowQuicktime2MP4",
-    "dcmWadoIgnorePresentationLUTShape",
     "hl7PSUForRequestedProcedure",
     "hl7PSURequestedProcedureID",
     "hl7PSUAccessionNumber",
@@ -108,8 +109,8 @@
   ],
   "properties": {
     "dcmFuzzyAlgorithmClass": {
-      "title": "ファジー アルゴリズム クラス",
-      "description": "ファジー アルゴリズム 実装 クラスを 指定します。",
+      "title": "Fuzzy Algorithm Class",
+      "description": "Specifies Fuzzy Algorithm Implementation Class.",
       "type": "string",
       "enum":[
       "org.dcm4che3.soundex.Soundex",
@@ -120,41 +121,47 @@
       "org.dcm4che3.soundex.Phonem"
       ]
     },
+    "dcmStoreImplementationVersionName": {
+      "title": "Store Implementation Version Name",
+      "description": "Indicates to include Implementation Version Name (0002,0012) in the File Meta Information of stored DICOM objects.",
+      "type": "boolean",
+      "default" : true
+    },
     "dcmBulkDataDescriptorID": {
-      "title": "バルクデータ 記述子 ID",
-      "description": "アーカイブされた インスタンスの メタデータを 提供する すべての サービスに よって 適用される バルクデータ 記述子の ID。 存在しない 場合、 バルクデータ サービス クラスなしの 複合 インスタンス 読み出しに よって 指定された 属性のみが バルクデータとして 扱われます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Bulk Data Descriptor ID",
+      "description": "ID of Bulk Data Descriptor applied by all services providing Metadata of archived instances. If absent, only Attributes specified by the Composite Instance Retrieve Without Bulk Data Service Class are treated as Bulk Data. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmBulkDataDescriptorID"
     },
     "dcmCalculateStudySizeDelay": {
-      "title": "検査 サイズ 計算 遅延",
-      "description": "検査 サイズの 計算と クエリ 属性の 計算の ISO-8601 期間 形式 PnDTnHnMnSで 遅延。 存在しない 場合、 検査 サイズの 計算と クエリ 属性の 計算に どれも (最小限) 遅延が 適用に なりません。",
+      "title": "Calculate Study Size Delay",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS for eager calculation of Study Size and Query Attributes. If absent, no (minimal) delay for eager calculation of the Study Size and Query Attributes is applied.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmCalculateStudySizePollingInterval": {
-      "title": "検査 サイズ 計算 ポーリング 間隔",
-      "description": "ISO-8601 期間 形式 PnDTnHnMnSで 不明な サイズの 検査の ポーリング 間隔。 存在しない 場合、 検査 サイズの 計算と クエリ 属性の 計算が しません。",
+      "title": "Calculate Study Size Polling Interval",
+      "description": "Polling Interval for Studies with unknown size in ISO-8601 duration format PnDTnHnMnS. If absent, there is no eager calculation of the Study Size and Query Attributes.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmCalculateStudySizeFetchSize": {
-      "title": "検査 サイズ 計算 フェッチ サイズ",
-      "description": "1つの DB クエリで 不明な サイズの 検査の 結果セットを 制限 する。",
+      "title": "Calculate Study Size Fetch Size",
+      "description": "Limit result set of DB query for Studies with unknown size.",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmCalculateQueryAttributes": {
-      "title": "クエリ 属性 計算",
-      "description": "構成された 「検査 サイズ 計算 遅延」 と 「検査 サイズ 計算 ポーリング 間隔」 に より クエリ 属性の 計算を する ことを 示します。",
+      "title": "Calculate Query Attributes",
+      "description": "Indicates to eager calculate Query Attributes according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.",
       "type": "boolean",
       "default" : false
     },
     "dcmSeriesMetadataStorageID": {
-      "title": "シリーズ メタデータの 格納 ID",
-      "description": "シリーズの すべての インスタンスの 集約 メタデータを 含む ZIP アーカイブが 保存される 格納の ID。 複数の 格納 システムを 構成できます。 存在しない 場合、 集約された シリーズ メタデータは 保存されません。",
+      "title": "Series Metadata Storage ID",
+      "description": "ID of Storage on which ZIP archives with aggregated Metadata of all instances of a Series is stored. Multiple Storage Systems may be configured. If absent, no aggregated Series Metadata will be stored.",
       "type": "array",
       "items" : {
         "type": "string"
@@ -162,121 +169,127 @@
       "format": "dcmStorageID"
     },
     "dcmSeriesMetadataDelay": {
-      "title": "集約 シリーズ メタデータの 遅延",
-      "description": "集約 シリーズ メタデータを 格納に 保存 する ために ISO-8601 期間 PnDTnHnMnS 形式で 遅延。 存在しない 場合、 集約された シリーズ メタデータは 保存されません。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Aggregate Series Metadata Delay",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS for storing aggregated Series Metadata on storage. If absent, no aggregated Series Metadata will be stored. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmSeriesMetadataPollingInterval": {
-      "title": "シリーズ メタデータの 更新 ポーリング 間隔",
-      "description": "ISO-8601 期間 形式 PnDTnHnMnSで メタデータの 更新が 予定されて いる シリーズの ポーリング 間隔。 存在しない 場合、 集約された シリーズ メタデータは 保存されません。",
+      "title": "Update Series Metadata Polling Interval",
+      "description": "Polling Interval for Series scheduled for Metadata update in ISO-8601 duration format PnDTnHnMnS. If absent, no aggregated Series Metadata will be stored.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmSeriesMetadataFetchSize": {
-      "title": "更新 シリーズ メタデータ フェッチ サイズ",
-      "description": "1つの クエリで フェッチされた 予定された シリーズの メタデータ 更新の  最大数。",
+      "title": "Update Series Metadata Fetch Size",
+      "description": "Maximal number of Series scheduled for Metadata update fetched by one query.",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmSeriesMetadataThreads": {
-      "title": "更新 シリーズ メタデータ スレッド",
-      "description": "シリーズ メタデータの 作成と 更新に 使用される スレッドの 数。",
+      "title": "Update Series Metadata Threads",
+      "description": "Number of Threads used for creation and update of Series Metadata.",
       "type": "integer",
       "default" : 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmSeriesMetadataMaxRetries": {
-      "title": "シリーズ メタデータの 更新 再試行の 最大数",
-      "description": "集約された シリーズ メタデータを 作成 / 更新する 最大 再試行 回数。「シリーズ メタデータ 更新 再試行 間隔」を 指定した 場合にのみ 有効です。-1 = 延々。",
+      "title": "Update Series Metadata Maximum Number of Retries",
+      "description": "Maximum number of retries to create/update aggregated Series Metadata. Only effective if Update Series Metadata Retry Interval is specified. -1 = forever.",
       "type": "integer",
       "default": 0,
       "minimum": -1
     },
     "dcmSeriesMetadataRetryInterval": {
-      "title": "シリーズ メタデータ 更新 再試行 間隔",
-      "description": "集約された シリーズ メタデータの 作成 / 更新の 試行が 失敗した 場合に 再試行 する ための ISO-8601 期間 PnDTnHnMnS 形式で 間隔。 「シリーズ メタデータ 更新 再試行の 最大数」は「0」等しくないの 場合に のみ 有効です。 存在しない 場合、 失敗した 試行は 再試行されません。",
+      "title": "Update Series Metadata Retry Interval",
+      "description": "Interval in ISO-8601 duration format PnDTnHnMnS in which failed attempts to create/update aggregated Series Metadata will be retried. Only effective if Update Series Metadata Maximum Number of Retries != 0. If absent, failed attempts will not be retried.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeInstanceRecords": {
-      "title": "パージされた インスタン スレコー",
-      "description": "インスタンス レコードが DBから パージされた 可能性が ある ことを 示します。",
+      "title": "Purged Instance Records",
+      "description": "Indicates that Instance Records may have been purged from the DB.",
       "type": "boolean",
       "default" : false
     },
     "dcmPurgeInstanceRecordsDelay": {
-      "title": "インスタン スレコーを パージ する 遅延",
-      "description": "DBから インスタンス レコードを パージ する ための ISO-8601 期間 PnDTnHnMnS 形式で 遅延。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。 「パージ インスタンス レコード」 = 「真」の 場合 のみ 有効です。",
+      "title": "Purge Instance Records Delay",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS for purging Instance Records from the DB. May be overwritten by configured values for particular Archive Network AEs. Only effective, if Purge Instance Records = true.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeInstanceRecordsPollingInterval": {
-      "title": "インスタン スレコーを パージ する ポーリング 間隔",
-      "description": "DBから インスタンス レコードを パージするために 予定された シリーズの ISO-8601 期間 PnDTnHnMnS 形式で ポーリング 間隔。 「パージ インスタンス レコード」 = 「真」の 場合 のみ 有効です。",
+      "title": "Purge Instance Records Polling Interval",
+      "description": "Polling Interval for Series scheduled for purging Instance Records from the DB in ISO-8601 duration format PnDTnHnMnS. Only effective, if Purge Instance Records = true.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeInstanceRecordsFetchSize": {
-      "title": "パージ インスタンス レコード フェッチ サイズ",
-      "description": "1つの クエリに よって フェッチされた DBから インスタンス レコードを パージ する ために 予定された シリーズの 最大数。 「パージ インスタンス レコード」 = 「真」の 場合 のみ 有効です。",
+      "title": "Purge Instance Records Fetch Size",
+      "description": "Maximal number of Series scheduled for purging Instance Records from the DB fetched by one query. Only effective, if Purge Instance Records = true.",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmMWLPollingInterval": {
-      "title": "MWL ポーリング 間隔",
-      "description": "アイドル MWL アイテムの ステータスを 更新と MWL アイテムを 削除 する ための ISO-8601 期間 PnDTnHnMnS 形式で ポーリング 間隔。 存在しない 場合、 MWL アイテムは 更新 または 削除されません。",
+      "title": "MWL Polling Interval",
+      "description": "Polling Interval for updating the status of idle MWL items and deleting MWL items in ISO-8601 duration format PnDTnHnMnS. If absent, MWL Items will not get update or deleted.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmMWLFetchSize": {
-      "title": "MWL フェッチ サイズ",
-      "description": "1回の トランザクションで 更新 または 削除 する MWL アイテムの 最大数。",
+      "title": "MWL Fetch Size",
+      "description": "Maximal number of MWL items to update or delete in one transaction.",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
+    "dcmMWLImportInterval": {
+      "title": "MWL Import Interval",
+      "description": "Interval for import of Scheduled Procedure Steps from external MWL SCPs in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
     "dcmDeleteMWLDelay": {
-      "title": "削除 する MWL 遅延",
-      "description": "MWL アイテムを 削除 する ために ISO-8601 期間 PnDTnHnMnS 形式で 遅延。 ステータス 固有の 遅延は 接頭辞で 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:' 指定できます。 例 : PT5M または CANCELED: PT10M 。 存在しない 場合、 MWL アイテムは 削除されません。",
+      "title": "Delete MWL Delay",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting MWL items. Status specific delays can be specified by prefix 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. Examples: PT5M or CANCELED:PT10M. If absent, MWL Items will not get deleted.",
       "type": "array",
       "items" : { "type": "string" }
     },
     "dcmDeleteUPSPollingInterval": {
-      "title": "UPSを 削除 する ポーリング 間隔",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で 統一 手順 ステップ (UPS) を 削除 する ための ポーリング 間隔。 存在しない 場合、 統一 手順 ステップは 削除されません。",
+      "title": "Delete UPS Polling Interval",
+      "description": "Polling Interval for deleting Unified Procedure Steps (UPS) in ISO-8601 duration format PnDTnHnMnS. If absent, Unified Procedure Steps will not get deleted.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmDeleteUPSFetchSize": {
-      "title": "UPSを 削除 する フェッチ サイズ",
-      "description": "1つの トランザクションで 統一 手順 ステップ (UPS)を 削除 するの 最大数。",
+      "title": "Delete UPS Fetch Size",
+      "description": "Maximal number of Unified Procedure Steps (UPS) to delete in one transaction.",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmDeleteUPSCompletedDelay": {
-      "title": "完了した UPSを 削除 する 遅延",
-      "description": "削除 ロックなしで 完了した 統一 手順 ステップを 削除 する ために ISO-8601 期間 PnDTnHnMnS 形式で 遅延。 存在しない 場合、 削除 ロックなしで 完了した 統一 手順 ステップは すぐに 削除されます。",
+      "title": "Delete UPS Completed Delay",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting completed Unified Procedure Steps without Deletion Lock. If absent, completed Unified Procedure Steps without Deletion Lock are deleted immediately.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmDeleteUPSCanceledDelay": {
-      "title": "キャンセルされた UPSを 削除 する 遅延",
-      "description": "削除 ロックなしで キャンセルされた 統一 手順 ステップを 削除 する ために ISO-8601 期間 PnDTnHnMnS 形式で 遅延。 存在しない 場合、 削除 ロックなしで キャンセルされた 統一 手順 ステップは すぐに 削除されます。",
+      "title": "Delete UPS Canceled Delay",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting canceled Unified Procedure Steps without Deletion Lock. If absent, canceled Unified Procedure Steps without Deletion Lock are deleted immediately.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmOverwritePolicy": {
-      "title": "上書き ポリシー",
-      "description": "上書き ポリシー。特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Overwrite Policy",
+      "description": "Overwrite Policy. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "NEVER",
       "enum": [
@@ -288,14 +301,14 @@
       ]
     },
     "dcmRecordAttributeModification": {
-      "title": "属性 変更の 記録",
-      "description": "格納された オブジェクトの 属性の 変更が 元の 属性 シーケンスの アイテムに 記録されるか どうかを 示します。 特定の アーカイブ ネットワーク AE または アーカイブ HL7 アプリケーションの 設定値に よって 上書きされる 場合が あります。",
+      "title": "Record Attribute Modification",
+      "description": "Indicates if modifications of attributes of stored objects are recorded in Items of the Original Attributes Sequence. May be overwritten by configured values for particular Archive Network AE or Archive HL7 Application.",
       "type": "boolean",
       "default": true
     },
     "dcmAcceptMissingPatientID": {
-      "title": "見つからない 患者 IDを 受け入れる",
-      "description": "患者 IDの ない インスタンスを 受け入れるか どうか、 および 患者 IDを 作成するか どうかを 示します。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "Accept Missing Patient ID",
+      "description": "Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "CREATE",
       "enum": [
@@ -305,8 +318,8 @@
       ]
     },
     "dcmAcceptConflictingPatientID": {
-      "title": "矛盾 する 患者 IDを 受け入れる",
-      "description": "以前に 受信した 検査の オブジェクトの 患者 IDと 異なる 患者 IDを 持つ オブジェクトを 受け入れるか どうかを 示します。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "Accept Conflicting Patient ID",
+      "description": "Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "MERGED",
       "enum": [
@@ -316,20 +329,20 @@
       ]
     },
     "dcmIdentifyPatientByAllAttributes": {
-      "title": "すべての 属性で 患者を 特定 する",
-      "description": "患者 IDの 割り当て 権限が 患者ID または ユニバーサル エンティティ IDの 発行者に よって 指定されて いない 場合に、 受信した オブジェクトの すべての 患者 属性を 使用して、 アーカイブ内の 既存の 患者を 関連付けるか どうかを 示します。 注意 : 受信した オブジェクト内の 古い 患者 属性の 強制を 無効にし、 患者 IDの 明確さに 依存する 患者 管理 機能を 中断します。",
+      "title": "Identify Patient by all Attributes",
+      "description": "Indicates if all Patient attributes in received objects shall be used for associating an already existing Patient in the archive, if the Assigning Authority of the Patient ID is not specified by an Issuer of Patient ID or Universal Entity ID. Attention: disables the coercion of stale Patient attributes in received objects and breaks Patient Management functions relying on the unambiguity of Patient IDs.",
       "type": "boolean",
       "default": false
     },
     "dcmBulkDataSpoolDirectory": {
-      "title": "バルクデータ スプール ディレクトリ",
-      "description": "バルクデータ スプール ディレクトリへの パス。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Bulk Data Spool Directory",
+      "description": "Path to Bulk Data Spool Directory. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "${jboss.server.temp.dir}"
     },
     "dcmHideSPSWithStatusFromMWL": {
-      "title": "SPS ステータスを 非表示 する",
-      "description": "MWL SCPに よって 返されない MWL アイテムの 予定された 手順 ステップ ステータス コード。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Hide SPS with Status",
+      "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items" : {
         "type": "string",
@@ -346,8 +359,8 @@
       }
     },
     "dcmEncodeAsJSONNumber": {
-      "title": "JSON 番号として エンコード する",
-      "description": "JSON 番号として エンコードされた VR。 構成されていない 場合、 IS、 DS、 SVと UVの 値は JSON 文字列として エンコードされます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 補足される 場合が あります。",
+      "title": "Encode as JSON Number",
+      "description": "VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. May be supplemented by configured values for particular Archive Network AEs.",
       "type": "array",
       "items" : {
         "type": "string",
@@ -360,14 +373,14 @@
       }
     },
     "dcmValidateCallingAEHostname": {
-      "title": "呼びかけて いる AE ホスト名を 検証 する",
-      "description": "関連付け 要求の 呼びかけて いる AE ホスト名 または IP アドレスを 検証します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Validate Calling AE Hostname",
+      "description": "Validate Calling AE Hostname or IP Address of Association requestors. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmUserIdentityNegotiation": {
-      "title": "ユーザー 身元 ネゴシエーション",
-      "description": "1つの オプションを 指定 する - NOT_SUPPORTED (= アソシエーション 要求の ユーザー 身元 ネゴシエーション サブアイテムを 無視 する) または SUPPORTS (= 渡された ユーザー名と パスワード または JSON Web トークンが キークローク サーバーに 対しての もので ある ことを 確認 する) または REQUIRED (= 有効な ユーザー名と パスワード または JSON Web トークンなしで 身元 ネゴシエーション サブアイテムの アソシエーション 要求 を 拒否 する)。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "User Identity Negotiation",
+      "description": "Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "SUPPORTS",
       "enum": [
@@ -377,99 +390,99 @@
       ]
     },
     "dcmUserIdentityNegotiationRole": {
-      "title": "ユーザー 身元 ネゴシエーション 役割",
-      "description": "受け入れられた ユーザー ID ネゴシエーション 要求を、 指定された 役割を 持つ ユーザーに 制限します。 存在しない 場合は、 渡された ユーザー名と パスワード または JSON Web トークン のみを 確認して ください。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "User Identity Negotiation Role",
+      "description": "Constrain accepted User Identity Negotiation requests to users with specified role. If absent, only verify passed username and password or JSON Web Token. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmUserIdentityNegotiationKeycloakClientID": {
-      "title": "ユーザー 身元 ネゴシエーション キークローク クライアント ID",
-      "description": "渡された ユーザー名と パスワード または JSON Web トークンを 確認 する ための キークローク 接続 構成を 参照 する キークローク クライアント ID。 存在しない 場合、 システム 属性 ${auth-server-url}, ${realm-name:dcm4che}, ${ui-client-id:dcm4chee-arc-ui}, ${disable-trust-manager:false}, ${allow-any-hostname:true}は 適用に なります。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "User Identity Negotiation Keycloak Client ID",
+      "description": "Keycloak Client ID referring Keycloak connection configuration for verifying passed username and password or JSON Web Token. If absent, System Properties ${auth-server-url}, ${realm-name:dcm4che}, ${ui-client-id:dcm4chee-arc-ui}, ${disable-trust-manager:false}, ${allow-any-hostname:true} will be applied. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmKeycloakClient"
     },
     "dcmPersonNameComponentOrderInsensitiveMatching": {
-      "title": "個人名 コンポーネントの 順序を 区別しない マッチング",
-      "description": "名前 コンポーネントの 順序を 区別しない マッチングが 個人名の ファジー セマンティック マッチングで 実行されるか どうかを 示します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Person Name Component Order Insensitive Matching",
+      "description": "Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmSendPendingCGet": {
-      "title": "保留中の C-Getを 送信 する",
-      "description": "保留中の C-GET 応答を 有効に します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Send Pending C-Get",
+      "description": "Enables pending C-GET responses. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmSendPendingCMoveInterval": {
-      "title": "送信 未決 C-Move 間隔",
-      "description": "未決の C-MOVE 応答の ISO-8601 期間 形式 PnDTnHnMnSで 間隔。 存在しない 場合は 無効に なります。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Send Pending C-Move Interval",
+      "description": "Interval of pending C-MOVE responses in ISO-8601 duration format PnDTnHnMnS; disabled if absent. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmWadoSupportedSRClasses": {
-      "title": "WADO 支持されて いる SR クラス",
-      "description": "WADO 読み出し用に 支持されて いる SR SOP クラス",
+      "title": "Wado Supported SR Classes",
+      "description": "Supported SR SOP classes for WADO retrieval",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmSOPClass"
     },
     "dcmWadoSupportedPRClasses": {
-      "title": "WADO 支持されて いる PR クラス",
-      "description": "WADO 読み出し用に 支持されて いる PR SOP クラス",
+      "title": "Wado Supported PR Classes",
+      "description": "Supported PR SOP classes for WADO retrieval",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmSOPClass"
     },
     "dcmWadoSR2HtmlTemplateURI": {
-      "title": "WADO SR から HTMLに テンプレート URI",
-      "description": "構造化 レポートを HTMLに レンダリング する ために 使用される スタイルシートの URIを 指定します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Wado SR2 Html Template URI",
+      "description": "Specifies URI for the style sheet used to render structured reports to html. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmWadoSR2TextTemplateURI": {
-      "title": "WADO SR から テキストに テンプレート URI",
-      "description": "構造化 レポートを 平文に レンダリング する ために 使用される スタイルシートの URIを 指定します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Wado SR2 Text Template URI",
+      "description": "Specifies URI for the style sheet used to render structured reports to plain text. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmWadoCDA2HtmlTemplateURI": {
-      "title": "WADO CDA から HTMLに テンプレート URI",
-      "description": "WADO-URI サービスから 返された CDA ドキュメントの 中で 流し込んだ XSL スタイルシートへの URL <?xml-stylesheet type=\"text/xsl\" href=\"<url>\" >。 存在しない 場合、 埋め込まれた CDA ドキュメントは その まま 返されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Wado CDA to HTML Template URI",
+      "description": "URL to XSL style sheet inserted as <?xml-stylesheet type=\"text/xsl\" href=\"<url>\" > in CDA documents returned by WADO-URI service. If absent, the embedded CDI document is returned verbatim. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmWadoThumbnailViewport": {
-      "title": "WADO サムネイル ビューポート",
-      "description": "要求で ビューポートが 指定されて いない 場合、 インスタンス サムネイルの WADO 読み出し時 返される サムネイルの 寸法。 形式 : <width>,<height>。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Wado Thumbnail Viewport",
+      "description": "Dimension of Thumbnails returned by WADO retrieve of Instance Thumbnails, if no Viewport is specified in the request. Format: <width>,<height>. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "64,64",
       "format": "dcmWadoThumbnailViewport"
     },
     "dcmWadoZIPEntryNameFormat": {
-      "title": "WADO ZIP エントリ名の 形式",
-      "description": "WADO-RSに よって 返される ZIP アーカイブ内の エントリ名の 形式。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Wado ZIP Entry Name Format",
+      "description": "Format of entry names in ZIP archive returned by WADO-RS. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string",
       "default": "DICOM/{0020000D,hash}/{0020000E,hash}/{00080018,hash}.dcm"
     },
     "dcmWadoIgnorePresentationLUTShape": {
-      "title": "Wado プレゼンテーション LUT 状態を 無視 する",
-      "description": "Indicates to ignore Presentation LUT Shape (2050,0020), but prioritize value of Photometric Interpretation (0028,0004) to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Wado Ignore Presentation LUT Shape",
+      "description": "Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmQueryFetchSize": {
-      "title": "クエリ フェッチ サイズ",
-      "description": "クエリ サービスに よって データベースから 一度に フェッチされた 行数。",
+      "title": "Query Fetch Size",
+      "description": "Number of rows fetched from the database at once by the Query Service.",
       "type": "integer",
       "default": 100,
       "minimum": 0
     },
     "dcmQueryMaxNumberOfResults": {
-      "title": "クエリの 結果の 最大数",
-      "description": "C-FIND SCPに よる 戻り 結果の 最大数。 一致の 数が 制限を 超えると、 C-FIND 要求は 拒否されます。 0 = 制限なし。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Query Max Number Of Results",
+      "description": "Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "integer",
       "default": 0,
       "minimum": 0
     },
     "dcmQidoMaxNumberOfResults": {
-      "title": "QIDO 結果の 最大数",
-      "description": "QIDO-RS サービスに よる 戻り 結果の 最大数。 0 = 制限なし。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Qido Max Number Of Results",
+      "description": "Maximal number of return results by QIDO-RS Service. 0 = no limitation. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "integer",
       "default": 0,
       "minimum": 0
@@ -481,60 +494,60 @@
       "default": false
     },
     "dcmFwdMppsDestination": {
-      "title": "MPPS 転送 宛先",
-      "description": "MPPS N-CREATE RQと N-SET RQを転送 する 宛先。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "Mpps Forward Destination",
+      "description": "Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
-      "title": "IAN 宛先",
-      "description": "IAN N-CREATE RQの 宛先。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Ian Destination",
+      "description": "Destination to send IAN N-CREATE RQ. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmIanDelay": {
-      "title": "IAN 遅延",
-      "description": "構成された IAN 宛先に 受信した 検査の IANを 送信するために ISO-8601 期間 形式 PnDTnHnMnSで 遅延の 値。 存在しない 場合、 IANは 受信した MPPSに よって トリガー されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "IAN Delay",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which an IAN for a received study is sent to configured IAN destinations. If absent, IANs are triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmIanTimeout": {
-      "title": "IAN タイムアウト",
-      "description": "MPPSで 参照される インスタンスの 受信を 待機するための ISO-8601 期間 形式 PnDTnHnMnSで タイムアウト。 存在しない 場合は、 完全性を 永久に 確認して ください。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "IAN Timeout",
+      "description": "Timeout in ISO-8601 duration format PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmIanOnTimeout": {
-      "title": "タイムアウト時の IAN",
-      "description": "参照された インスタンスの 受信を 待機 する ための タイムアウトを 超えた 場合に IANが 送信されるか どうかを 指定します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "IAN On Timeout",
+      "description": "Specifies if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmIanTaskPollingInterval": {
-      "title": "IAN タスクの ポーリング 間隔",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で IAN タスクの ポーリング 間隔。 存在しない 場合は IANが 無効に なります",
+      "title": "IAN Task Polling Interval",
+      "description": "Polling Interval for IAN Tasks in ISO-8601 duration format PnDTnHnMnS. IAN disabled, if absent",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmIanTaskFetchSize": {
-      "title": "IAN タスク フェッチ サイズ",
-      "description": "1つの トランザクションで 予定された IAN タスクの 最大数。",
+      "title": "IAN Task Fetch Size",
+      "description": "Maximal number of IAN Tasks scheduled in one transaction.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmSpanningCFindSCP": {
-      "title": "スパニング C-Find SCP",
-      "description": "構成された「スパニング C-Find SCP ポリシー」に 従って C-FIND RQと 後方 応答を 転送 するに 外部 C-FIND SCPの AE タイトル。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Spanning C-Find SCP",
+      "description": "AE Title of external C-FIND SCP to forward C-FIND RQs and backward responses according configured Spanning C-Find SCP Policy. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmSpanningCFindSCPPolicy": {
-      "title": "スパニング C-Find SCP ポリシー",
-      "description": "構成された スパニング C-Find SCPから 返された マッチと アーカイブ DBからの 一致 する エントリを 組み合わせる ための ポリシーを 指定します。 SUPPLEMENT (= スパニング C-Find SCPからの 追加 マッチの 前に 局所的 マッチを 返す), MERGE (= 追加の 局所的 マッチの 前に スパニング  C-Find SCPからの マッチを 返す), REPLACE (= スパニング C-Find SCPからの マッチ のみを 返す)。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Spanning C-Find SCP Policy",
+      "description": "Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "REPLACE",
       "enum": [
@@ -544,8 +557,8 @@
       ]
     },
     "dcmSpanningCFindSCPRetrieveAET": {
-      "title": "スパニング C-Find SCP 読み出し AE タイトル",
-      "description": "スパニング C-Find SCPから 返された 一致の 読み出し AE タイトルを 指定します。 存在しない 場合、スパニング C-Find SCPから 返された 元の 読み出し AE タイトルが 保持します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Spanning C-Find SCP Retrieve AE Title",
+      "description": "Specifies Retrieve AE Title(s) in returned matches from Spanning C-Find SCP. Keep original Retrieve AE Title(s) returned by Spanning C-Find SCP if absent. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items": {
         "type": "string"
@@ -553,44 +566,44 @@
       "format": "dcmArchiveAETitle"
     },
     "dcmFallbackCMoveSCP": {
-      "title": "フォールバック C-Move SCP",
-      "description": "要求された エンティティが この アーカイブに よって 管理されて いない 場合に C-MOVE RQを 転送 する ための 外部 C-MOVE SCPの AE タイトル。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Fallback C-Move SCP",
+      "description": "AE Title of external C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not managed by this archive. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmFallbackCMoveSCPDestination": {
-      "title": "フォールバック C-Move SCP 宛先",
-      "description": "「フォールバック C-Move SCP」で 指定された 外部 C-MOVE SCPに 転送される C-MOVE RQで 移動 宛先として 設定される 局所的 C-STORE-SCPの AE タイトル。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Fallback C-Move SCP Destination",
+      "description": "AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to the external C-MOVE SCP specified by dcmFallbackCMoveSCP",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmFallbackCMoveSCPStudyOlderThan": {
-      "title": "フォールバック C-Move SCP 検査 指定された 敷居値より 古い",
-      "description": "構成された 「フォールバック C-Move SCP」 からの 読み出しを 強制する ために、 受信した 検査を (潜在的な) 不完全として マーク する ために、 YYYYMMDD 形式で 検査 日付の 敷居値を 指定します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Fallback C-Move SCP Study Older Than",
+      "description": "Specifies threshold for Study Date in format YYYYMMDD for marking received Studies as (potential) incomplete to enforce the retrieve from configured dcmFallbackCMoveSCP",
       "type": "string"
     },
     "dcmFallbackCMoveSCPLeadingCFindSCP": {
-      "title": "フォールバック C-Move SCP 先頭の C-Find SCP",
-      "description": "「フォールバック C-Move SCP」 に よって 指定された 外部 C-MOVE SCPから 読み出しされた インスタンスの 数を 検証 する ための 外部 C-FIND SCPの AE タイトル。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Fallback C-Move SCP Leading C-Find SCP",
+      "description": "AE Title of external C-FIND SCP for Verification of Number of Instances retrieved from external C-MOVE SCP specified by dcmFallbackCMoveSCP.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmFallbackCMoveSCPRetries": {
-      "title": "フォールバック C-Move SCP 再試行",
-      "description": "「フォールバック C-Move SCP」に よって 構成された C-MOVE SCPから 使用できない オブジェクトを 読み出す ための 最大 再試行 回数。 -1 = 永久。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Fallback C-Move SCP Retries",
+      "description": "Maximal number of retries to retrieve not available objects from C-MOVE SCP configured by dcmFallbackCMoveSCP. -1 = forever.",
       "type": "integer",
       "default": 0,
       "minimum": -1
     },
     "dcmFallbackWadoURIWebAppName": {
-      "title": "フォールバック WADO-URI ウェブ アプリケーション名",
-      "description": "要求された オブジェクトが この アーカイブで 利用できない 場合に WADO URI 要求を リダイレクト する 外部 ウェブ アプリケーションの 名前。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Fallback WADO-URI Web Application Name",
+      "description": "Name of external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmWebApp"
     },
     "dcmFallbackWadoURIHttpStatusCode": {
-      "title": "フォールバック WADO URI HTTP ステータス コード",
-      "description": "フォールバック WADO-URI ウェブ アプリケーション名で 構成された リダイレクト 応答の HTTP ステータス コード。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Fallback Wado URI Http Status Code",
+      "description": "HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "integer",
       "default": 303,
       "enum": [
@@ -601,225 +614,239 @@
        ]
     },
     "dcmFallbackCMoveSCPCallingAET": {
-      "title": "フォールバック C-Move SCP 呼びかけて いる AE タイトル",
-      "description": "構成された フォールバック C-MOVE SCPへの A-ASSOCIATE-RQで 使用された 呼びかけて いる AEの タイトル。 存在しない 場合、 外部 C-MOVE SCUの AEタイトルが 使用されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Fallback C-Move SCP Calling AE title",
+      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmAltCMoveSCP": {
-      "title": "代替 C-MOVE SCP",
-      "description": "要求された エンティティが 局所的に 接続された 格納にない 場合に C-MOVE RQを 転送するための 代替 C-MOVE SCPの AE タイトル。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Alternative C-Move SCP",
+      "description": "AE Title of alternative C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not located on a local attached Storage",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmCStoreSCUOfCMoveSCP": {
-      "title": "C-MOVE SCP の C-STORE SCU",
-      "description": "<Calling AET> = <C-MOVE-SCP>  形式で、 A-Associate-RQの 呼びかけている AETに よって 転送された C-MOVE RQが 原因で 受信された C-STORE RQを 識別 する ことを 示します。 通常 <Calling AET> と <C-MOVE-SCP> は 等しいです。 特定の C-MOVE SCPに 値が 構成されていない 場合、  対応 する 転送された C-MOVE RQを 見つける ために、C-STORE RQの 移動 オリジネーター アプリケーション エンティティ タイトル (0000,1030) 属性を 使用して、 受信した C-STORE RQを 元の 宛先に 転送 する。",
+      "title": "C-STORE SCU of C-MOVE SCP",
+      "description": "Indicates to identify received C-STORE RQs as caused by a forwarded C-MOVE RQs by the Calling AET in the A-Associate-RQ in format <Calling AET>=<C-MOVE-SCP>. Typically <Calling AET> and <C-MOVE-SCP> are equal. If no value is configured for a particular C-MOVE SCP, attribute (0000,1030) Move Originator Application Entity Title in the C-STORE RQ is used to find the corresponding forwarded C-MOVE RQ to forward the received C-STORE RQ to the original Move Destination.",
       "type": "array",
       "items": {
         "type": "string"
       },
       "format": "dcmProperty"
     },
+    "dcmTaskProcessingPollingInterval": {
+      "title": "Task Processing Polling Interval",
+      "description": "Polling Interval for scheduled Tasks ready for processing in ISO-8601 duration format PnDTnHnMnS. If absent, Tasks will not get processed.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmTaskProcessingFetchSize": {
+      "title": "Task Processing  Fetch Size",
+      "description": "Limit result set of DB query for scheduled Tasks ready for processing.",
+      "type": "integer",
+      "default": 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
     "dcmUPSProcessingPollingInterval": {
-      "title": "UPS 処理 ポーリング 間隔",
-      "description": "ISO-8601 期間 形式 PnDTnHnMnSで 処理 する 準備が できて いる 作業項目の ポーリング 間隔。",
+      "title": "UPS Processing Polling Interval",
+      "description": "Polling Interval for Workitems ready for processing in ISO-8601 duration format PnDTnHnMnS.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmUPSProcessingFetchSize": {
-      "title": "UPS 処理 フェッチ サイズ",
-      "description": "処理の 準備が できて いる 作業項目の DB クエリの 結果 セットを 制限します。",
+      "title": "UPS Processing  Fetch Size",
+      "description": "Limit result set of DB query for Workitems ready for processing.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmExportTaskPollingInterval": {
-      "title": "書き出し タスク ポーリング 間隔",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で 書き出し タスク ポーリング 間隔",
+      "title": "Export Task Polling Interval",
+      "description": "Export Task Polling Interval in ISO-8601 duration format PnDTnHnMnS.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmExportTaskFetchSize": {
-      "title": "書き出し タスク フェッチ サイズ",
-      "description": "処理の 準備が できている 書き出し タスクの DB クエリの 結果 セットを 制限 する。",
+      "title": "Export Task Fetch Size",
+      "description": "Limit result set of DB query for Export Tasks ready for processing.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRetrieveTaskPollingInterval": {
-      "title": "読み出し タスク ポーリング 間隔",
-      "description": "読み出し タスクの ISO-8601 期間 形式 PnDTnHnMnSで ポーリング 間隔。",
+      "title": "Retrieve Task Polling Interval",
+      "description": "Retrieve Task Polling Interval in ISO-8601 duration format PnDTnHnMnS.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmRetrieveTaskFetchSize": {
-      "title": "読み出し タスク フェッチ サイズ",
-      "description": "処理の 準備ができて いる 読み出し タスクの DB クエリの 結果 セットを 制限します。",
+      "title": "Retrieve Task Fetch Size",
+      "description": "Limit result set of DB query for Retrieve Tasks ready for processing.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRetrieveTaskWarningOnNoMatch": {
-      "title": "一致 しない 場合の 読み出し タスク 警告",
-      "description": "C-MOVE SCPで 要求された オブジェクトが 見つからなかった 場合に、 読み出し タスクの 結果 ステータスを WARNINGに 設定する 必要が あるか どうかを 示します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Retrieve Task Warning on no Match",
+      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmRetrieveTaskWarningOnWarnings": {
-      "title": "警告で 読み出し タスク 警告",
-      "description": "すべての オブジェクトの 読み出しが 成功した 場合でも、 警告 サブオペレーションが ある 場合、 読み出し タスクの 結果 ステータスを WARNINGに 設定する 必要が あるか どうかを 示します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Retrieve Task Warning on Warnings",
+      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmPurgeStoragePollingInterval": {
-      "title": "格納から パージする ポーリング 間隔",
-      "description": "オブジェクトを 削除するための ISO-8601 期間 形式PnDTnHnMnSで ポーリング 間隔。",
+      "title": "Purge Storage Polling Interval",
+      "description": "Polling Interval for deleting objects in ISO-8601 duration format PnDTnHnMnS.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeStorageFetchSize": {
-      "title": "格納から パージする フェッチ サイズ",
-      "description": "1つの タスクで 削除 する オブジェクトの 最大数。",
+      "title": "Purge Storage Fetch Size",
+      "description": "Maximal number of objects to delete in one task.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmFailedToDeletePollingInterval": {
-      "title": "失敗した 削除の ポーリング 間隔",
-      "description": "ISO-8601 期間 形式 PnDTnHnMnSで 削除 失敗を 解決するための ポーリング 間隔。",
+      "title": "Failed to delete Polling Interval",
+      "description": "Polling Interval for resolving deletion failures in ISO-8601 duration format PnDTnHnMnS.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmFailedToDeleteFetchSize": {
-      "title": "失敗した 削除の フェッチ サイズ",
-      "description": "1つの クエリで 削除 エラーを 解決 する ために フェッチされた ロケーション レコードの 最大数。",
+      "title": "Failed to delete Fetch Size",
+      "description": "Maximal number of Location records fetched for resolving deletion failures in one query.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmDeleteStudyBatchSize": {
-      "title": "検査を 削除 バッチ サイズ",
-      "description": "使用可能な スペースを 再確認する 前に、 使用可能な スペースが 構成済みの 使用可能な スペースを 下回った 場合、格納 システムから 削除 するの 検査数。",
+      "title": "Delete Study Batch Size",
+      "description": "Number of Studies to delete from the Storage System, if the usable space fall below configured Usable Space, before checking the usable space again.",
       "type": "integer",
       "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmDeleteStudyChunkSize": {
-      "title": "削除 検査 チャンク サイズ",
-      "description": "検査の 完全 削除 時に 1つの DB トランザクションで 削除された インスタンスの 数。",
+      "title": "Delete Study Chunk Size",
+      "description": "Number of Instances deleted in one DB transaction on permanent deletion of Studies.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmDeletePatientOnDeleteLastStudy": {
-      "title": "最後の 検査の 削除時に 患者を 削除",
-      "description": "最後の 検査の 削除時に 患者を 削除 するか どうかを 指定します。",
+      "title": "Delete Patient On Delete Last Study",
+      "description": "Specifies if a Patient shall be deleted on deletion of its last study.",
       "type": "boolean",
       "default": false
     },
     "dcmDeleteRejectedPollingInterval": {
-      "title": "削除 拒否された ポーリング 間隔",
-      "description": "拒否された インスタンスを ISO-8601 期間 形式 PnDTnHnMnSで DBから 削除するための ポーリング 間隔。",
+      "title": "Delete Rejected Polling Interval",
+      "description": "Polling Interval for deleting rejected instances from the DB in ISO-8601 duration format PnDTnHnMnS.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmDeleteRejectedFetchSize": {
-      "title": "削除 拒否された フェッチ サイズ",
-      "description": "1つの タスクで DBから 削除する 拒否された インスタンスの 最大数。",
+      "title": "Delete Rejected Fetch Size",
+      "description": "Maximal number of rejected instances to delete from the DB in one task.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmMaxAccessTimeStaleness": {
-      "title": "最大 アクセス 時間の 失効",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で 記録された 検査 受入 時間の 最大 失効。 存在しない 場合、アクセス 時間の 更新が 無効に なります。",
+      "title": "Maximum Access Time Staleness",
+      "description": "Maximal staleness of recorded study accession time in ISO-8601 duration format PnDTnHnMnS. Update of the access time disabled, if absent.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmAECacheStaleTimeout": {
-      "title": "AE キャッシュ 失効 タイムアウト",
-      "description": "ISO-8601 期間 形式PnDTnHnMnS でキャッシュされた AEの 最大 失効。 存在しない 場合、 キャッシュされた AE エントリは LDAPから 再フェッチされません。",
+      "title": "AE Cache Stale Timeout",
+      "description": "Maximal staleness of cached AE in ISO-8601 duration format PnDTnHnMnS. If absent, cached AE entries will not be refetched from LDAP.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmLeadingCFindSCPQueryCacheStaleTimeout": {
-      "title": "先頭の C-Find SCP クエリ キャッシュ 古くなった タイムアウト",
-      "description": "キャッシュされた 患者 属性 と 検査 属性の 最大の 古さは、 ISO-8601 期間 PnDTnHnMnS 形式で 先頭の C-Find SCPから フェッチされます。存在しない 場合、 キャッシュ 検査 属性は、 最大 キャッシュ サイズに 達した ときに のみ 削除されます。",
+      "title": "Leading C-Find SCP Query Cache Stale Timeout",
+      "description": "Maximal staleness of cached Patient and Study attributes fetched from leading C-Find SCP in ISO-8601 duration format PnDTnHnMnS. If absent, cache Study attributes are only removed on reaching the maximal cache size.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmLeadingCFindSCPQueryCacheSize": {
-      "title": "先頭の C-Find SCP クエリ キャッシュ サイズ",
-      "description": "先頭の C-Find SCPから フェッチされた、 キャッシュされた 患者 と 検査 属性の 最大数。",
+      "title": "Leading C-Find SCP Query Cache Size",
+      "description": "Maximum number of cached Patient and Study attributes fetched from leading C-Find SCP.",
       "type": "integer",
       "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmAuditSpoolDirectory": {
-      "title": "監査 スプール ディレクトリ",
-      "description": "監査 サービスの スプール ディレクトリへの パス。",
+      "title": "Audit Spool Directory",
+      "description": "Path to Audit Service Spool Directory.",
       "type": "string",
       "default": "${jboss.server.temp.dir}"
     },
     "dcmAuditPollingInterval": {
-      "title": "監査 ポーリング 間隔",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で 監査 メッセージを 集約 する ための ポーリング 間隔。 存在しない 場合、 監査 メッセージの 集約は 無効に なります。",
+      "title": "Audit Polling Interval",
+      "description": "Polling Interval for aggregating Audit Messages in ISO-8601 duration format PnDTnHnMnS. Audit Message aggregation disabled, if absent.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmAuditAggregateDuration": {
-      "title": "監査 集計 期間",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で 監査 メッセージ 集計 期間。 存在しない 場合、 監査 メッセージの 集計は 無効に なります。",
+      "title": "Audit Aggregate Duration",
+      "description": "Audit Message Aggregation Duration in ISO-8601 duration format PnDTnHnMnS. Audit Message aggregation disabled, if absent.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmAuditUnknownStudyInstanceUID": {
-      "title": "監査 不明な 検査 インスタンス UID",
-      "description": "不明な 場合に 監査 メッセージで 送信される 検査 インスタンス UID 値を 示します。",
+      "title": "Audit Unknown Study Instance UID",
+      "description": "Indicates study instance uid value to be sent in audit message when not known.",
       "type": "string",
       "default": "1.2.40.0.13.1.15.110.3.165.1",
       "pattern": "^[0-2]((\\.0)|(\\.[1-9][0-9]*))*$"
     },
     "dcmAuditUnknownPatientID": {
-      "title": "監査 不明な 患者 ID",
-      "description": "不明な 場合に 監査 メッセージで 送信される 患者 ID 値を 示します。",
+      "title": "Audit Unknown Patient ID",
+      "description": "Indicates patient id value to be sent in audit message when not known.",
       "type": "string",
       "default": "<none>"
     },
     "dcmAudit2JsonFhirTemplateURI": {
-      "title": "監査から json+fhir テンプレート URI",
-      "description": "監査 メッセージを FHIR JSON リソース 監査 イベントに トランスコードするための スタイルシートの URIを 指定します。",
+      "title": "Audit to json+fhir Template URI",
+      "description": "Specifies URI for the style sheet to transcode Audit Message to a FHIR JSON Resource Audit Event",
       "type": "string"
     },
     "dcmAudit2XmlFhirTemplateURI": {
-      "title": "監査から xml+fhir テンプレート URI",
-      "description": "監査 メッセージを FHIR XML リソース 監査 イベントに トランスコードするための スタイルシートの URIを 指定します。",
+      "title": "Audit to xml+fhir Template URI",
+      "description": "Specifies URI for the style sheet to transcode Audit Message to a FHIR XML Resource Audit Event",
       "type": "string"
     },
     "dcmAuditSoftwareConfigurationVerbose": {
-      "title": "監査 ソフトウェア 構成 詳細",
-      "description": "作成された オブジェクトの 子オブジェクトと 属性を ソフトウェア 構成 監査 メッセージに 含めるか どうかを 指定します。",
+      "title": "Audit Software Configuration Verbose",
+      "description": "Specifies if Child Objects and Attributes of created Objects should be included in Software Configuration Audit Message.",
       "type": "boolean",
       "default": false
     },
     "dcmAuditAssigningAuthorityOfPatientID": {
-      "title": "患者 IDの 割り当て 権限の ために 監査",
-      "description": "PID-3の 識別子の リストで 適格な 患者 識別子を 検索 する ために 使用される 受信 HL7 メッセージでの 患者 IDの 権限の 割り当て。 この 適格な 患者 識別子が 監査 メッセージに 使用 されます。 存在しない 場合、 デフォルトでは、 PID-3の 最初の 適格な 患者 識別子が 使用されます。 存在し 場合、けれでも PID-3の 識別子の リストで 適格な 患者 識別子にも 一致しない 場合、デフォルトでは、 PID-3の 最初の 適格な 患者 識別子が 使用されます。 形式: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>]。",
+      "title": "Assigning Authority of Patient ID for Audit",
+      "description": "Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. This qualified patient identifier shall be used in the patient details participant object. If absent, by default the first qualified patient identifier in PID-3 shall be used. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
       "type": "string"
     },
     "dcmShowPatientInfoInSystemLog": {
-      "title": "システム ログに 患者 情報の 表示",
-      "description": " システム ログに 患者 情報を プレーン テキストとして 表示 するか、ハッシュ化して 表示 するかを 指定します。",
+      "title": "Show Patient Info In System Log",
+      "description": "Specifies if Patient Information is shown as plain text or hashed in system logs.",
       "type": "string",
       "default": "PLAIN_TEXT",
       "enum": [
@@ -829,8 +856,8 @@
       ]
     },
     "dcmShowPatientInfoInAuditLog": {
-      "title": "監査 ログに 患者 情報の 表示",
-      "description": "発行された 監査 メッセージで 患者 情報を プレーン テキストとして 表示 するか、ハッシュ化して 表示 するかを 指定します。",
+      "title": "Show Patient Info In Audit Log",
+      "description": "Specifies if Patient Information is shown as plain text or hashed in emitted audit messages.",
       "type": "string",
       "default": "PLAIN_TEXT",
       "enum": [
@@ -840,14 +867,14 @@
       ]
     },
     "dcmStowSpoolDirectory": {
-      "title": "STOW-RS スプール ディレクトリ",
-      "description": "「XML / JSON メタデータ 要求 メッセージ」 と 「バルクデータ 要求 メッセージ」の バルクデータを スプール する ために STOW-RS サービスが 使用 する ディレクトリへの パス。",
+      "title": "STOW-RS Spool Directory",
+      "description": "Path to Directory used by STOW-RS Service to spool Bulkdata of XML/JSON Metadata and Bulk Data Request Messages.",
       "type": "string",
       "default": "${jboss.server.temp.dir}"
     },
     "hl7ORUAction": {
-      "title": "HL7 ORU アクション",
-      "description": "HL7 ORU^R01 メッセージの 受信時の アクションを 指定します : IMPORT_REPORT (= 受信した HL7 ORU^R01を DICOM SRにトランスコード する), MWL_COMPLETED (= 一致 する MWL アイテムの ステータスを COMPLETEDに 設定 する)。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 ORU Action",
+      "description": "Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "array",
       "items": {
         "type": "string",
@@ -858,36 +885,36 @@
       }
     },
     "hl7PatientUpdateTemplateURI": {
-      "title": "HL7 患者 更新 テンプレート URI",
-      "description": "HL7v2 患者 更新 サービスで 使用される スタイルシートの URIを 指定します。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Patient Update Template URI",
+      "description": "Specifies URI for the style sheet used by HL7v2 Patient Update Service. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string"
     },
     "hl7ImportReportTemplateURI": {
-      "title": "HL7 インポート レポート テンプレート URI",
-      "description": "受信した HL7 ORU^R01を DICOM SR に トランスコード する スタイルシートの URIを 指定します。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Import Report Template URI",
+      "description": "Specifies URI for the style sheet to transcode received HL7 ORU^R01 to DICOM SR. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string"
     },
     "hl7ImportReportTemplateParam": {
-      "title": "HL7 インポート レポート テンプレート パラメータ",
-      "description": "XSLT HL7 インポート レポート テンプレート URIで 指定された スタイルシートに 渡される XSLT パラメータ。 形式 : {name}={value}. 例 : 'langCodeValue=et', 'langCodingSchemeDesignator=RFC5646', 'langCodeMeaning=Estonian'。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Import Report Template Parameter",
+      "description": "XSLT parameters passed to style sheet specified by HL7 Import Report Template URI. Format: {name}={value}. E.g.: 'langCodeValue=et', 'langCodingSchemeDesignator=RFC5646', 'langCodeMeaning=Estonian'. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7ScheduleProcedureTemplateURI": {
-      "title": "HL7 予定された 手順 テンプレート URI",
-      "description": "受信した HL7 ORM^O01, OMI^O23, OMG^O19 を DICOM MWL アイテムに トランスコード する スタイルシートの URI を 指定します。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Schedule Procedure Template URI",
+      "description": "Specifies URI for the style sheet to transcode received HL7 ORM^O01, OMI^O23, OMG^O19 to DICOM MWL items. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string"
     },
     "hl7OutgoingPatientUpdateTemplateURI": {
-      "title": "HL7 発信 患者 更新 テンプレート URI",
-      "description": "DICOM オブジェクトの 患者 属性を HL7 ADT メッセージに トランスコード するための スタイルシートの URIを 指定します。",
+      "title": "HL7 Outgoing Patient Update Template URI",
+      "description": "Specifies URI for the style sheet to transcode DICOM object patient attributes to HL7 ADT messages.",
       "type": "string"
     },
     "hl7ScheduledProtocolCodeInOrder": {
-      "title": "HL7 オーダーに 予定された プロトコル コード",
-      "description": "受信した HL7 オーダー メッセージの 予定された プロトコル コードの 場所を 指定します。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Schedule Protocol Code in Order",
+      "description": "Specifies location of Scheduled Protocol Code in received HL7 Order message. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string",
       "default": "OBR_4_4",
       "enum": [
@@ -896,16 +923,16 @@
       ]
     },
     "hl7ScheduledStationAETInOrder": {
-      "title": "HL7 オーダーに 予定された ステーション AET",
-      "description": "受信した HL7 オーダー メッセージ内の 予定された ステーション AE タイトルの 場所を 指定します。 IPC セグメントを 持つ HL7 v2.5.1 OMI^O23には 構成しないで ください。 存在しない 場合 または 構成された フィールドに 値がない場合、予定された ステーション AE タイトルが 構成された 規則に 従って 選択されます。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Schedule Station AET in Order",
+      "description": "Specifies location of Scheduled Station AE Title in received HL7 Order message. Should not be configured for HL7 v2.5.1 OMI^O23 with IPC segment. If absent or no value is provided in the configured field, the Scheduled Station AE Title is selected according configured rules. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string",
       "enum": [
         "ORC_18"
       ]
     },
     "hl7LogFilePattern": {
-      "title": "HL7 ログ ファイル パターン",
-      "description": "受信したとおりに キャプチャされる HL7 メッセージへの パス。 存在しない 場合、 ログは 記録されません。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。 例 : ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "title": "HL7 Log File Pattern",
+      "description": "Path to HL7 messages which will be captured exactly as received. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
       "type": "string"
     },
     "hl7ErrorLogFilePattern": {
@@ -914,47 +941,47 @@
       "type": "string"
     },
     "hl7NoPatientCreateMessageType": {
-      "title": "HL7 患者を 作成しない メッセージ タイプ",
-      "description": "データベースに 既に 患者 レコードが あり、 その 患者 IDが PID または MRG セグメントの 患者 IDと 一致 する 場合 のみ 処理される HL7 メッセージのメッセージ タイプ (MessageType^TriggerEvent)。 したがって、 指定された タイプの メッセージに よって 新しい 患者 レコードが 作成される ことは ありません。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 No Patient Create Message Type",
+      "description": "Message Type(s) (MessageType^TriggerEvent) of HL7 messages which are only processed, if there is already a Patient record in the database, which Patient ID matches the Patient ID in the PID or MRG segment of the message. Thus no new Patient record will be created by messages of the specified types. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7PatientArrivalMessageType": {
-      "title": "HL7 患者 到着 メッセージ タイプ",
-      "description": "患者に 関連付けられた 予定された 手順 ステップの ステータスを SCHEDULEDから ARRIVEDに 変更 する トリガーと なる HL7 メッセージの メッセージ タイプ。 存在しない 場合、 予定された 手順 ステップの ステータスは HL7 ADT メッセージの 影響を 受けません。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Patient Arrival Message Type",
+      "description": "Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. If absent, the status of Scheduled Procedure Steps will not be affected by HL7 ADT messages. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string",
       "enum": [
         "ADT^A10"
       ]
     },
     "dcmUnzipVendorDataToURI": {
-      "title": "ベンダー データを URIに 解凍",
-      "description": "デバイス ベンダー データ 属性の ZIP ストリームが 抽出される ディレクトリの URIを 指定します",
+      "title": "Unzip Vendor Data To URI",
+      "description": "Specifies URI of directory into which ZIP stream in Device Vendor Data attribute will be extracted",
       "type": "string"
     },
     "dcmPurgeQueueMessagePollingInterval": {
-      "title": "キュー メッセージを パージ する ポーリング 間隔",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で キュー メッセージを パージ する ための ポーリング 間隔。 存在しない 場合、削除は ありません。",
+      "title": "Purge Queue Messages Polling Interval",
+      "description": "Polling Interval for purging queue messages in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmWadoSpoolDirectory": {
-      "title": "Wado-RS スプール ディレクトリ",
-      "description": "非圧縮 フレームの 集約に 使用される Wado-RS スプール ディレクトリへの パス。",
+      "title": "Wado-RS Spool Directory",
+      "description": "Path to Wado-RS spool directory used to aggregate uncompressed frames.",
       "type": "string",
       "default": "${jboss.server.temp.dir}"
     },
     "dcmRejectExpiredStudiesPollingInterval": {
-      "title": "期限切れの 検査の 拒否の ポーリング 間隔",
-      "description": "期限切れの 検査と シリーズを 拒否するための ISO-8601 期間 PnDTnHnMnS 形式で ポーリング 間隔。 存在しない 場合、 期限切れの 検査も シリーズも 自動的に 拒否されません。",
+      "title": "Reject Expired Studies Polling Interval",
+      "description": "Polling Interval for rejecting expired Studies and Series in ISO-8601 duration format PnDTnHnMnS. If absent, neither expired Studies nor Series will be rejected automatically",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmRejectExpiredStudiesSchedule": {
-      "title": "期限切れの 検査の 拒否の 予定",
-      "description": "期限切れの 検査の 拒否を 'hour=[0-23] dayOfWeek=[0-6]' の形式で 指定された 時間に 制限します。 (0=日曜日)",
+      "title": "Reject Expired Studies Schedule",
+      "description": "Limits Rejection of Expired Studies to specified times in format 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday).",
       "type": "array",
       "items": {
         "type": "string"
@@ -962,107 +989,107 @@
       "format": "dcmSchedule"
     },
     "dcmRejectExpiredStudiesFetchSize": {
-      "title": "期限切れの 検査の 拒否の フェッチ サイズ",
-      "description": "1つの クエリで フェッチされる 期限切れの 検査の 最大数。 存在しない 場合、 期限切れの 検査は 自動的に 拒否されません。",
+      "title": "Reject Expired Studies Fetch Size",
+      "description": "Maximal number of expired Studies fetched in one query; If absent, expired Studies will not be rejected automatically",
       "type": "integer",
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRejectExpiredSeriesFetchSize": {
-      "title": "期限切れの シリーズの 拒否の フェッチ サイズ",
-      "description": "1つの クエリで フェッチされる 期限切れの シリーズの 最大数。 存在しない 場合、 期限切れの シリーズは 自動的に 拒否されません。",
+      "title": "Reject Expired Series Fetch Size",
+      "description": "Maximal number of expired Series fetched in one query; If absent, expired Series will not be rejected automatically",
       "type": "integer",
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRejectExpiredStudiesAETitle": {
-      "title": "期限切れの 検査の 拒否の AE タイトル",
-      "description": "期限切れの 検査と シリーズの 自動 拒否を 実行する、 局所的 アプリケーション エンティティの AE タイトル。 存在しない 場合、 期限切れの 検査も シリーズも 自動的に 拒否されません。",
+      "title": "Reject Expired Studies AE Title",
+      "description": "AE Title of Local Application Entity performing the automatic rejection of expired Studies and Series. If absent, neither expired Studies nor Series will be rejected automatically.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmStorePermissionServiceURL": {
-      "title": "保存 許可 サービス URL",
-      "description": "任意の AEに よって 受信された 検査の 最初の オブジェクトに 呼び出される 保存 許可 サービスの URL。 {<dicomTag>} は オブジェクトの 属性の 値に 置き換えられます。 例 : http(s)://<store-permission-service-provider-host>:<store-permission-service-provider-port>/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Store Permission Service URL",
+      "description": "URL of Store Permission Service which will be invoked on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the attribute in the object. E.g. http(s)://<store-permission-service-provider-host>:<store-permission-service-provider-port>/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmStorePermissionServiceResponse": {
-      "title": "保存 許可 サービス 応答",
-      "description": "任意の AEから 受信した 検査の 最初の オブジェクトに ストア 許可 サービス 応答を 倣します。 {<dicomTag>}は、 オブジェクトの 属性の 値に 置き換えられます。 「保存 許可 サービス URL」が 構成されて いない 場合に のみ 有効です。 例 : patientID={00100020},patientName={00100010},errorCode=0110H,errorComment=errorMessage。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Store Permission Service Response",
+      "description": "Emulate Store Permission Service Response on receive of the first object of a study by any AE. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service URL is configured. Example: patientID={00100020},patientName={00100010},errorCode=0110H,errorComment=errorMessage. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmStorePermissionServiceResponsePattern": {
-      "title": "保存 許可 サービス 応答 パターン",
-      "description": "格納の 合意を 決定する ために 保存 許可 サービスからの 応答に 適用される 正規表現。 例 : \"validation\"\\s*:\\s*\"true\" または '(?<=patientName=)[^null].*?(?=,)'。 存在しない 場合、 すべての 成功 応答は 格納の 合意として 扱われます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Store Permission Service Response Pattern",
+      "description": "Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. \"validation\"\\s*:\\s*\"true\" or '(?<=patientName=)[^null].*?(?=,)'. If absent, every success response will be treated as agreement for storage. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmStorePermissionServiceErrorCommentPattern": {
-      "title": "保存 許可 サービス エラー コメント パターン",
-      "description": "エラー コメントを 抽出 する ために 保存 許可 サービスからの 応答に 適用される 正規表現。 例 : \"errorcomment\"\\s*:\\s*\"(.*)\"。 存在しない 場合、「格納は 拒否されました。」エラー コメントとして 使用されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Store Permission Service Error Comment Pattern",
+      "description": "Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. \"errorcomment\"\\s*:\\s*\"(.*)\". If absent, \"Storage denied.\" will be used as Error Comment. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmStorePermissionServiceErrorCodePattern": {
-      "title": "保存 許可 サービス エラー コード パターン",
-      "description": "16 進数で エラー コードを 抽出 する ために 保存 許可 サービスからの 応答に 適用される 正規表現。 例 : \"errorcode\"\\s*:\\s*\"(\\p{XDigit}{4})\". 存在しない 場合、 エラー コードは 0124H (未承認) に なります。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Store Permission Service Error Code Pattern",
+      "description": "Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. \"errorcode\"\\s*:\\s*\"(\\p{XDigit}{4})\". If absent, the Error Code will be 0124H (Not Authorized). May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmStorePermissionServiceExpirationDatePattern": {
-      "title": "保存 許可 サービス 期限 日付 パターン",
-      "description": "初期 検査 期限 日付を 抽出 する ために 保存 許可 サービスからの 応答に 適用される 正規表現。 例 :  \"expirationdate\"\\s*:\\s*\"([0-9]{8})\". 存在しない 場合、 局所的に 構成された 検査 保存 ポリシー 規則が 適用されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Store Permission Service Expiration Date Pattern",
+      "description": "Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. \"expirationdate\"\\s*:\\s*\"([0-9]{8})\". If absent, locally configured Study Retention Policy Rules will be applied. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmStorePermissionCacheStaleTimeout": {
-      "title": "保存 許可 キャッシュの 失効 タイムアウト",
-      "description": "保存 許可 サービスからの キャッシュされた 応答の ISO-8601 期間 PnDTnHnMnS 形式で   最大 失効。 存在しない 場合、 キャッシュされた 応答は、 最大 キャッシュ サイズに 達した ときに のみ 削除されます。",
+      "title": "Store Permission Cache Stale Timeout",
+      "description": "Maximal staleness of cached responses from Storage Permission Service in ISO-8601 duration format PnDTnHnMnS. If absent, cached responses are only removed on reaching the maximal cache size.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmStorePermissionCacheSize": {
-      "title": "保存 許可 キャッシュ サイズ",
-      "description": "格納 許可 サービスからの キャッシュされた 応答の 最大数。",
+      "title": "Store Permission Cache Size",
+      "description": "Maximum number of cached responses from Storage Permission Service.",
       "type": "integer",
       "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmMergeMWLCacheStaleTimeout": {
-      "title": "マージ MWL キャッシュの 失効 タイムアウト",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で 一致 する DICOM  MWL アイテムから 抽出された 要求 属性の 最大 失効。 存在しない 場合、 キャッシュされた 要求 属性は、 最大 キャッシュ サイズに 達した ときに のみ 削除されます。",
+      "title": "Merge MWL Cache Stale Timeout",
+      "description": "Maximal staleness of Request Attributes extracted from matching DICOM MWL items in ISO-8601 duration format PnDTnHnMnS. If absent, cached Request Attributes are only removed on reaching the maximal cache size.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmMergeMWLCacheSize": {
-      "title": "マージ MWL キャッシュ サイズ",
-      "description": "一致 する DICOM MWL アイテムから 抽出された キャッシュされた 要求 属性の 最大数。",
+      "title": "Merge MWL Cache Size",
+      "description": "Maximum number of cached Request Attributes extracted from matching DICOM MWL items.",
       "type": "integer",
       "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmStoreUpdateDBMaxRetries": {
-      "title": "保存 更新 DBの 最大 再試行 回数",
-      "description": "格納で データベースを 更新 する 最大 再試行 回数。",
+      "title": "Store Update DB Maximum Number of Retries",
+      "description": "Maximum number of retries to update the database on storage.",
       "type": "integer",
-      "default": 1,
+      "default": 3,
       "minimum": 0
     },
     "dcmStoreUpdateDBMinRetryDelay": {
-      "title": "保存 更新 DBの 最小 再試行 遅延",
-      "description": "格納上の データベースを 更新 する ための 再試行間の 最小 遅延 (ミリ秒)。",
+      "title": "Minimal Store Update DB Delay of Retry",
+      "description": "Minimal Delay in ms between retries to update the database on storage.",
       "type": "integer",
       "default": 500,
       "minimum": 0
     },
     "dcmStoreUpdateDBMaxRetryDelay": {
-      "title": "保存 更新 DBの 最大 再試行 遅延",
-      "description": "格納上の データベースを 更新 する ための 再試行間の 最大 遅延 (ミリ秒)。",
+      "title": "Maximal Store Update DB Delay of Retry",
+      "description": "Maximal Delay in ms between retries to update the database on storage.",
       "type": "integer",
       "default": 1000,
       "minimum": 1
     },
     "dcmAllowRejectionForDataRetentionPolicyExpired": {
-      "title": "期限切れに データ 保持 ポリシーの 拒否を 許可 する",
-      "description": "期限切れに データ 保持 ポリシーの 拒否を 許可 する。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "Allow Rejection For Data Retention Policy Expired",
+      "description": "Allow Rejection For Data Retention Policy Expired. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "EXPIRED_UNSET",
       "enum": [
@@ -1073,8 +1100,8 @@
       ]
     },
     "dcmAllowDeleteStudyPermanently": {
-      "title": "検査の 完全 削除の 許可",
-      "description": "検査の 完全 削除の 許可。REJECTED = すでに 拒否された 検査のみ。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "Allow Delete Study permanently",
+      "description": "Allow to delete Study permanently. REJECTED = only already rejected Studies. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "REJECTED",
       "enum": [
@@ -1083,8 +1110,8 @@
       ]
     },
     "dcmAllowDeletePatient": {
-      "title": "患者の 完全 削除の 許可",
-      "description": "患者の 完全 削除の 許可。 WITHOUT_STUDIES (= 検査なし)。",
+      "title": "Allow Delete Patient",
+      "description": "Allow permanent deletion of Patients. WITHOUT_STUDIES = only Patients without Studies.",
       "type": "string",
       "default": "WITHOUT_STUDIES",
       "enum": [
@@ -1094,26 +1121,26 @@
         ]
       },
     "dcmPurgeStgCmtCompletedDelay": {
-      "title": "完了された 格納 コミットメントの パージ する 遅延",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で遅延の 後、 完了した 格納 コミットメント 要求の 結果が パージされます。 存在しない 場合、 削除は ありません。",
+      "title": "Purge Storage Commitment Completed Delay",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which results of completed Storage Commitment requests are purged. If absent, there is no deletion.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeStgCmtPollingInterval": {
-      "title": "格納 コミットメント パージ する ポーリング 間隔",
-      "description": "格納 コミットメント 結果を パージするための ISO-8601 期間 形式PnDTnHnMnSで ポーリング 間隔。 存在しない 場合、 削除は ありません。",
+      "title": "Purge Storage Commitment Polling Interval",
+      "description": "Polling Interval for purging Storage Commitment Results in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmDefaultCharacterSet": {
-      "title": "デフォルト 文字 セット",
-      "description": "任意の AEに よって 受信された, 「C-STORE RQ」と 「特定の 文字 セット (0008,0005) なくして 保留中の C-FIND RSP」に 追加した 特定の 文字 セット (0008,0005) の 値。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "Default Character Set",
+      "description": "Value of Specific Character Set (0008,0005) added to Data Sets of C-STORE RQs and pending C-FIND RSPs without Specific Character Set (0008,0005) attribute received by any AE. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmCharset"
     },
     "dcmCharsetNameMapping": {
-      "title": "DICOM 文字 セット名 マッピング",
-      "description": "<value>=<charset name> 形式で DICOM 固有の 文字 セット (0008,0005) の 値の 名前付き 文字 セットへの マッピングを 形式で カスタマイズ する。 例 : \"ISO_IR 100=windows-1252\"。",
+      "title": "DICOM Character Set Name Mapping",
+      "description": "Customize mapping of value of DICOM Specific Character Set (0008,0005) to named charset in format <value>=<charset name>. E.g.: \"ISO_IR 100=windows-1252\".",
       "type": "array",
       "items": {
         "type": "string"
@@ -1121,8 +1148,8 @@
       "format": "dcmProperty"
     },
     "hl7CharsetNameMapping": {
-      "title": "HL7 文字 セット名 マッピング",
-      "description": "<value>=<charset name> 形式で HL7 MSH-18の 値の マッピングを 名前付き 文字 セットに 追加 する。 例 : \"Windows-1252=windows-1252\"。通常、 この ような 文字 セットで 受信した HL7 メッセージに 使用する アーカイブ HL7 アプリケーションの HL7 DICOM 文字 セットも 指定する 必要が あります。",
+      "title": "HL7 Character Set Name Mapping",
+      "description": "Add mapping of value of HL7 MSH-18 to named charset in format <value>=<charset name>. E.g.: \"Windows-1252=windows-1252\". Typically you will also have to specify the HL7 DICOM Character Set of the Archive HL7 Application to use for received HL7 messages with such Character Set.",
       "type": "array",
       "items": {
         "type": "string"
@@ -1130,13 +1157,13 @@
       "format": "dcmProperty"
     },
     "dcmUPSWorklistLabel": {
-      "title": "UPS ワークリスト ラベル",
-      "description": "UPS Push SCU または UPS-RS User Agentが この 属性の 値を 提供しない 場合, 任意の AEに よって 作成された UPSの 中で ワークリスト ラベルの 値 (0074,1202)。 存在しない 場合は、 受信 AEの AE タイトルが 使用されます。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "UPS Worklist Label",
+      "description": "Value of Worklist Label (0074,1202) of created UPS by any Network AE, if the UPS Push SCU or UPS-RS User Agent does not provide a value for this attribute. If absent, the AE Title of the receiving AE will be used. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string"
     },
     "dcmUPSEventSCU": {
-      "title": "UPS イベント SCU",
-      "description": "UPS イベント レポートの 送信先と なる UPS イベント SOP クラス SCUの AE タイトル - 独立的に サブスクリプションが N-ACTION DIMSE サービス または 対応 する UPS RESTful サービスに よって 作成された 場合です。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "UPS Event SCU",
+      "description": "AE Title of UPS Event SOP Class SCU, to which UPS Event Reports are sent - independently if the subscription was created by the N-ACTION DIMSE service, or by a corresponding UPS RESTful service. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items": {
         "type": "string"
@@ -1144,14 +1171,14 @@
       "format": "dcmAETitle"
     },
     "dcmUPSEventSCUKeepAlive": {
-      "title": "UPS イベント SCU 生き 続ける",
-      "description": "UPS イベント SCUへの 関連付けを 生き 続ける タイムアウト (ミリ秒)。 存在しない 場合、 関連付けは 1つの UPS イベント SCUに 複数の UPS イベント レポートを 送信 する ために 再利用されません。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "UPS Event SCU Keep Alive",
+      "description": "Timeout in ms to keep associations to UPS Event SCUs alive. If absent, associations will not be reused for sending multiple UPS Event Reports to one UPS Event SCU. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "integer",
       "minimum": 100
     },
     "dcmUPSEventWebSocketQueueSize": {
-      "title": "UPS イベント ウェブ ソケット キュー サイズ",
-      "description": "イベント時に その クライアントへの 開いて いる ウェブ ソケット 接続がない 場合に、 サブスクライバー AETに よって 識別される 特定の ウェブ クライアントに 送信される UPS イベントを キューに 入れる ことを 示します。 形式 : <aet>=<size>。",
+      "title": "UPS Event Web Socket Queue Size",
+      "description": "Indicates to queue UPS events to be sent to a particular Web Client identified by its Subscriber AET in case there is no open Web Socket connection to that client at the time of the event. Format: <aet>=<size>.",
       "type": "array",
       "items": {
         "type": "string"
@@ -1159,8 +1186,8 @@
       "pattern": "^\\w*=\\d+$"
     },
     "dcmRetrieveAET": {
-      "title": "読み出し AE タイトル",
-      "description": "受信した DICOM インスタンスに 関連付けられた 読み出し AE タイトルを 指定 します。 存在しない 場合、 受信 AEの 呼ばれた AE タイトルが 使用されます。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "Retrieve AE Title",
+      "description": "Specifies Retrieve AE Titles associated with received DICOM objects. If absent, the Called AE Title of the receiving AE will be used. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items": {
         "type": "string"
@@ -1168,8 +1195,8 @@
       "format": "dcmArchiveAETitle"
     },
     "dcmReturnRetrieveAET": {
-      "title": "返し 読み出し AE タイトル",
-      "description": "C-FIND と QIDO 応答で 返された 読み出し AE タイトル。 存在しない 場合、 読み出し AEに 関連付けられて いる 呼び出された AE タイトルが 返されます。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "Return Retrieve AE Title",
+      "description": "Retrieve AE Title returned in C-FIND and QIDO responses. If absent, the Retrieve AET associated with the archived entity will be returned. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items": {
         "type": "string"
@@ -1177,8 +1204,8 @@
       "format": "dcmArchiveAETitle"
     },
     "dcmMultipleStoreAssociations": {
-      "title": "複数の ストア アソシエーション",
-      "description": "複合 オブジェクトの 読み出しに 使用される 格納 アソシエーションの 数。 C-STORE SCP 固有の 番号は 「<AETitle>:」 接頭辞で 指定できます。 例 : 2 または STORESCP:3 。 存在しない 場合、 1つの 関連付け のみが 使用されます。 特定の アーカイブ ネットワーク AEの 設定値に よって 補足される 場合が あります。",
+      "title": "Multiple Store Associations",
+      "description": "Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. If absent, only one Association will be used. Examples : 2 or STORESCP:3 May be supplemented by configured Multiple Store Associations for particular Archive Network AEs.",
         "type": "array",
         "items": {
         "type": "string"
@@ -1186,37 +1213,37 @@
       "format": "dcmMultipleStoreAssociations"
     },
     "dcmExternalRetrieveAEDestination": {
-      "title": "外部 読み出し AE 宛先",
-      "description": "外部 読み出し AEに 転送された C-MOVE RQの 移動 宛先として 設定された 局所的 C-STORE-SCPの AE タイトル。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "External Retrieve AE Destination",
+      "description": "AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to external retrieve AE. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmXDSiImagingDocumentSourceAETitle": {
-      "title": "XDS-I イメージング ドキュメント ソース AE タイトル",
-      "description": "XDS-I イメージング ドキュメント ソースに 関連付けられた 局所的 アプリケーション エンティティの AE タイトル。",
+      "title": "XDS-I Imaging Document Source AE Title",
+      "description": "AE Title of local Application Entity associated with XDS-I Imaging Document Source.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmQueueTasksFetchSize": {
-      "title": "キュー タスク フェッチ サイズ",
-      "description": "1つの トランザクションで 再予定、 削除、 または キャンセルされた タスクの 最大数。",
+      "title": "Queue Tasks Fetch Size",
+      "description": "Maximal number of Tasks rescheduled or deleted or canceled in one transaction.",
       "type": "integer",
       "default": 100,
       "minimum": 1
     },
     "dcmRemapRetrieveURL": {
-      "title": "リマップ 読み出し URL",
-      "description": "QIDO-RSと WADO-RS メタデータ 応答で 使用される リマップ 読み出し URL。 必要に応じて \"[<http-client-host>]\" に 接頭辞された。 存在しない 場合、または 指定された <http-client-host>は 一致 しない 場合、QIDO-RS または WADO-RS 要求 URLの スキームと サーバー 権限が 使用されます。",
+      "title": "Remap Retrieve URL",
+      "description": "Remap Retrieve URL used in QIDO-RS and WADO-RS Metadata responses. Optionally prefixed with \"[<http-client-host>]\". E.g.: \"[cache-proxy]http://cache-proxy:8080\". If absent or if the specified <http-client-host> does not match, scheme and server authority of the QIDO-RS or WADO-RS request URL are used.",
       "type": "string"
     },
     "dcmProxyUpstreamURL": {
-      "title": "プロキシ アップストリーム URL",
-      "description": "プロキシされる アップストリーム エンドポイントの URL。",
+      "title": "Proxy Upstream URL",
+      "description": "URL for the upstream endpoint that shall be proxied.",
       "type": "string"
     },
     "dcmCopyMoveUpdatePolicy": {
-      "title": "コピー 移動 更新 ポリシー",
-      "description": "別の 検査からの インスタンスの コピー / 移動に 関する 宛先 検査の 属性の 更新 ポリシーを 指定します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Copy Move Update Policy",
+      "description": "Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "PRESERVE",
       "enum": [
@@ -1228,8 +1255,8 @@
       ]
     },
     "dcmLinkMWLEntryUpdatePolicy": {
-      "title": "MWL エントリを リンク する 更新  ポリシー",
-      "description": "既存の 検査を 参照 する MWL エントリを 持つ 別の 検査の インスタンスの リンクに 関する 検査 属性の 更新 ポリシーを 指定します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Link MWL Entry Update Policy",
+      "description": "Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "PRESERVE",
       "enum": [
@@ -1241,8 +1268,8 @@
       ]
     },
     "dcmStorageVerificationPolicy": {
-      "title": "格納 検証 ポリシー",
-      "description": "DB_RECORD_EXISTS: DB レコードの 存在のみを 確認 する、 OBJECT_EXISTS: オブジェクトが 格納 ステムに 存在するか どうかを 確認 する、 OBJECT_SIZE: オブジェクトの サイズを 格納 システムで 確認 する、 OBJECT_FETCH: オブジェクトを 格納 ステムから フェッチ する、 OBJECT_CHECKSUM: オブジェクトの チェックサムを 格納 システムで  再計算 する、 S3_MD5SUM: S3 格納 システム上の オブジェクトの MD5 チェックサムを 確認します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Storage Verification Policy",
+      "description": "DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "OBJECT_CHECKSUM",
       "enum": [
@@ -1255,57 +1282,57 @@
       ]
     },
     "dcmStorageVerificationUpdateLocationStatus": {
-      "title": "格納 検証 ロケーション ステータスの 更新",
-      "description": "ロケーション DB レコードの ステータスが 格納 検証に 応じて 更新されるか どうかを 示します。 「格納 検証 ポリシー」が  「DB_RECORD_EXISTS」の 場合 無効です。 存在しない 場合は 「偽」です。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Storage Verification Update Location Status",
+      "description": "Indicates if the Status of the Location DB record shall be updated on Storage Verification accordingly. Not effective with Storage Verification Policy: DB_RECORD_EXISTS. False if absent. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmStorageVerificationStorageID": {
-      "title": "格納 検証 格納 IDs",
-      "description": "格納 検証を 正常に 行うには オブジェクトを 1つの 指定した 格納 システムに 格納 する 必要が ある ことを 示します。 存在しない 場合は、 任意の 格納 システム上の 格納の 検証に 成功すれば 十分です。「格納 検証 ポリシー」= 「DB_RECORD_EXISTS」 では 無効です。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Storage Verification Storage IDs",
+      "description": "Indicates that for successful Storage Verification the object must be stored on (one of) the specified Storage System. If absent, successful verification of the storage on any Storage System is sufficient. Not effective with Storage Validation Policy: DB_RECORD_EXISTS. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationAETitle": {
-      "title": "格納 検証 AE タイトル",
-      "description": "予定された 格納 検証に 使用される アーカイブ AE タイトル。",
+      "title": "Storage Verification AE Title",
+      "description": "Archive AE Title used for scheduled Storage Verifications.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmStorageVerificationBatchID": {
-      "title": "格納 検証 バッチ ID",
-      "description": "スケジューラーに よって トリガーされた 格納 検証 タスクの バッチ ID。",
+      "title": "Storage Verification Batch ID",
+      "description": "Batch ID of Storage Verification Tasks triggered by scheduler.",
       "type": "string"
     },
     "dcmStorageVerificationInitialDelay": {
-      "title": "格納 検証の 初期 遅延",
-      "description": "ISO-8601 期間 PnYnMnD または PnW 形式で シリーズ 受信後の 最初の 格納 検証の 遅延。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Storage Verification Initial Delay",
+      "description": "Delay of first Storage Verification of a Series after it was received. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmStorageVerificationPeriod": {
-      "title": "格納 検証 期間",
-      "description": "個々の シリーズの 格納が 検証される 期間。 存在しない 場合、 個々の シリーズの 格納は、 構成された 「格納 検証の 初期 遅延」後に 一度だけ 検証されます。",
+      "title": "Storage Verification Period",
+      "description": "Period in which the storage of individual Series is verified. If absent, storage of individual Series are only verified once after configured Storage Verification Initial Delay.",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmStorageVerificationMaxScheduled": {
-      "title": "予定された 最大の ストレージ 検証",
-      "description": "この デバイスで 予定された ストレージ 検証 タスクの 最大数。クラスタ化された アーカイブの ノードに タスクを 分散 するには、 0より 大きい 設定 する 必要が あります。",
+      "title": "Maximal scheduled Storage Verifications",
+      "description": "Maximal number of scheduled Storage Verification tasks on this device. Shall be set > 0 to distribute tasks over nodes of a clustered archive.",
       "type": "integer",
       "default": 0,
       "minimum": 0
     },
     "dcmStorageVerificationPollingInterval": {
-      "title": "格納 検証 ポーリング 間隔",
-      "description": "予定された シリーズの 格納 検証の ISO-8601 期間 形式 PnDTnHnMnSで ポーリング 間隔。",
+      "title": "Storage Verification Polling Interval",
+      "description": "Polling Interval for Series scheduled for Storage Verification in ISO-8601 duration format PnDTnHnMnS.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmStorageVerificationSchedule": {
-      "title": "格納 検証 予定",
-      "description": "格納 検証を 'hour=[0-23] dayOfWeek=[0-6]' の 形式で 指定された 時間に 制限します (0=日曜日)。",
+      "title": "Storage Verification Schedule",
+      "description": "Limits Storage Verification to specified times in format 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday).",
       "type": "array",
       "items": {
         "type": "string"
@@ -1313,48 +1340,48 @@
       "format": "dcmSchedule"
     },
     "dcmStorageVerificationFetchSize": {
-      "title": "格納 検証 フェッチ サイズ",
-      "description": "1回の クエリで フェッチされた 格納 検証用に 予定された シリーズの 最大数。",
+      "title": "Storage Verification Fetch Size",
+      "description": "Maximal number of Series scheduled for Storage Verification fetched by one query.",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmUpdateLocationStatusOnRetrieve": {
-      "title": "読み出し時の ロケーション ステータスの 更新",
-      "description": "読み出し時に 格納からの フェッチに 失敗した オブジェクトの ロケーション レコードの ステータスを DBで MISSING_OBJECT または FAILED_TO_FETCH_OBJECTへの 更新 する 必要が あるか どうかを 示します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Update Location Status on Retrieve",
+      "description": "Indicates if the Status of the Location DB record shall be updated for objects failed to get fetched from storage on retrieve to MISSING_OBJECT or FAILED_TO_FETCH_OBJECT. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmStorageVerificationOnRetrieve": {
-      "title": "読み出し時の 格納 検証",
-      "description": "読み出し時に 格納から オブジェクトを フェッチできなかった 場合に、 シリーズ 全体の 格納 検証を トリガー するか どうかを 示します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Storage Verification on Retrieve",
+      "description": "Indicates if failures to fetch an object from Storage on retrieve shall trigger a Storage Verification of the whole Series. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmCompressionAETitle": {
-      "title": "圧縮 AE タイトル",
-      "description": "遅延された 圧縮に 使用される アーカイブ AE タイトル。",
+      "title": "Compression AE Title",
+      "description": "Archive AE Title used for delayed Compression.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmCompressionPollingInterval": {
-      "title": "圧縮 ポーリング 間隔",
-      "description": "シリーズを 圧縮 する ISO-8601 期間 PnDTnHnMnS 形式で ポーリング 間隔。",
+      "title": "Compression Polling Interval",
+      "description": "Polling Interval for Series to be compressed in ISO-8601 duration format PnDTnHnMnS.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmCompressionThreads": {
-      "title": "圧縮 スレッド",
-      "description": "圧縮に 使用される スレッドの 数。",
+      "title": "Compression Threads",
+      "description": "Number of Threads used for Compression.",
       "type": "integer",
       "default" : 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmCompressionSchedule": {
-      "title": "圧縮 予定",
-      "description": "'hour=[0-23] dayOfWeek=[0-6]'の 形式で 指定された 時間に 圧縮を 制限します。(0 = 日曜日)",
+      "title": "Compression Schedule",
+      "description": "Limits compression to specified times in format 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
       "type": "array",
       "items": {
         "type": "string"
@@ -1362,66 +1389,66 @@
       "format": "dcmSchedule"
     },
     "dcmCompressionFetchSize": {
-      "title": "圧縮 フェッチ サイズ",
-      "description": "1つの クエリに よる 圧縮の ために フェッチ される シリーズの 最大数。",
+      "title": "Compression Fetch Size",
+      "description": "Maximal number of Series fetched for compression by one query.",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmDiffTaskProgressUpdateInterval": {
-      "title": "比較 タスクの 進捗状況の 更新 間隔",
-      "description": "進捗状況の 監視の ために 処理中の 比較 タスクの 更新 間隔。 存在しない 場合は 無効に なります。",
+      "title": "Diff Task Progress Update Interval",
+      "description": "Interval of updating Diff Tasks in process for progress monitoring; disabled if absent.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPatientVerificationPDQServiceID": {
-      "title": "患者 検証 PDQ サービス ID",
-      "description": "患者の 人口統計の 検証に 使用される PDQ サービスの ID。 存在しない 場合、 患者の 検証は 行われません。",
+      "title": "Patient Verification PDQ Service ID",
+      "description": "ID of PDQ Service used for Verification of Patient Demographic. If absent, no Patient Verification will be performed.",
       "type": "string",
       "format": "dcmPDQServiceID"
     },
     "dcmPatientVerificationPollingInterval": {
-      "title": "患者 検証の ポーリング 間隔",
-      "description": "患者 検証の ポーリング 間隔。 存在しない 場合、 患者 検証は 行われません。",
+      "title": "Patient Verification Polling Interval",
+      "description": "Patient Verification Polling Interval. If absent, no Patient Verification will be performed.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPatientVerificationFetchSize": {
-      "title": "患者 検証 フェッチ サイズ",
-      "description": "1回の クエリで 患者 検証の ために フェッチされた 患者の 最大数。",
+      "title": "Patient Verification Fetch Size",
+      "description": "Maximal number of Patients fetched for Patient Verification in one query.",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmPatientVerificationAdjustIssuerOfPatientID": {
-      "title": "患者 検証 患者 ID 発行者を 調整",
-      "description": "患者 IDの 発行者が PDQ サービスから 返された 値に 調整されるか どうかを 示します。",
+      "title": "Patient Verification Adjust Issuer of Patient ID",
+      "description": "Indicates if the Issuer Of Patient ID shall be adjusted to the value returned by the PDQ Service.",
       "type": "boolean",
       "default" : false
     },
     "dcmPatientVerificationPeriod": {
-      "title": "患者 検証 期間",
-      "description": "患者の 人口統計を 検証 する 期間。 存在しない 場合、 過去に 検証された 患者の 患者 検証は 更新されません。",
+      "title": "Patient Verification Period",
+      "description": "Period in which Patient Demographic will be verified. If absent, Patient Verification will not be renewed for Patients verified in the past.",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmPatientVerificationPeriodOnNotFound": {
-      "title": "見つからなかった 患者 検証 期間",
-      "description": "構成された PDQ サービスに よって 最後の 試行で 検出されなかった 患者の 患者 人口統計が 再試行される 期間。 存在しない 場合、 過去に 見つからなかった 患者の 患者 確認は 再試行されません。",
+      "title": "Patient Verification Period Not Found",
+      "description": "Period in which Patient Demographic will be retried for Patients which were not found by the configured PDQ Service on last attempt. If absent, Patient Verification will not be retried for Patients not found in the past.",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmPatientVerificationRetryInterval": {
-      "title": "患者 検証 再試行 間隔",
-      "description": "「患者 検証の 最大 再試行 回数」で 指定された 最大 再試行 回数に 達するまで、「患者 検証 PDQ サービス ID」で 構成された PDQ サービスに 対して 失敗した 患者 人口統計の 検証に 指定された「患者 検証 再試行 間隔」。 存在しない 場合、 失敗した 患者の 確認の 試行は 再試行されません。",
+      "title": "Patient Verification Retry Interval",
+      "description": "Patient Verification Retry Interval in which failed attempts to verify Patient Demographics against the PDQ Service configured by Patient Verification PDQ Service ID will be retried until the maximal number of retries specified by Patient Verification Max Retries is reached. If absent, failed Patient Verification attempts will not be retried.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPatientVerificationMaxRetries": {
-      "title": "患者 検証の 最大 再試行 回数",
-      "description": "「患者 検証 PDQ サービス ID」で 構成された PDQ サービスに 対して 患者の 人口統計を 検証 する 最大 再試行 回数。 「患者 検証 再試行 間隔」が 指定されて いる 場合に のみ 有効です。 -1 = 永久。",
+      "title": "Patient Verification Maximum Number of Retries",
+      "description": "Maximum number of retries to verify Patient Demographics against the PDQ Service configured by dcmPatientVerificationPDQServiceID. Only effective if Patient Verification Retry Interval is specified. -1 = forever.",
       "type": "integer",
       "default": 0,
       "minimum": -1
@@ -1433,47 +1460,47 @@
       "format": "dcmDuration"
     },
     "dcmSupplementIssuerFetchSize": {
-      "title": "発行者を 補足 する ための フェッチ サイズ",
-      "description": "患者 IDの 発行者を 補足 する ための RESTful サービスに よって、 一致 する 患者の DB クエリの 結果 セットを 制限します。",
+      "title": "Supplement Issuer Fetch Size",
+      "description": "Limit result set of DB query for matching Patients by RESTful service for supplementing Issuer of Patient ID.",
       "type": "integer",
       "default": 100,
       "minimum": 1
     },
     "hl7ADTSendingApplication": {
-      "title": "HL7 ADT 送信 アプリケーション",
-      "description": "実行された 患者 情報の 更新に ついて 外部 システムを 同期 する ために HL7 ADT メッセージの 送信 アプリケーションの 「アプリケーション | 施設」名前。 存在しない 場合、 HL7 ADT メッセージに よる 外部 システムの 同期は 無効に なります。",
+      "title": "HL7 ADT Sending Application",
+      "description": "Application|Facility name of Sending Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.",
       "type": "string",
       "format": "hl7ApplicationName"
     },
     "hl7ADTReceivingApplication": {
-      "title": "HL7 ADT 受信 アプリケーション",
-      "description": "実行された 患者 情報の 更新に ついて 外部 システムを 同期 する ために HL7 ADT メッセージの 受信 アプリケーションの 「アプリケーション | 施設」名前。 存在しない 場合、 HL7 ADT メッセージに よる 外部 システムの 同期は 無効に なります。",
+      "title": "HL7 ADT Receiving Application",
+      "description": "Application|Facility name of Receiving Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
     "hl7PSUSendingApplication": {
-      "title": "HL7 手順 ステータス 更新 送信 アプリケーション",
-      "description": "HL7 手順 ステータス 更新の 送信 アプリケーションの 「アプリケーション | 施設」。 存在しない 場合、HL7 手順 ステータス 更新が 無効に なります。特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Update Sending Application",
+      "description": "Application|Facility name of Sending Application for HL7 Procedure Status Update. HL7 Procedure Status Update disabled, if absent. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "hl7ApplicationName"
     },
     "hl7PSUReceivingApplication": {
-      "title": "HL7 手順 ステータス 更新 受け取り アプリケーション",
-      "description": "HL7 手順 ステータス 更新の 受け取り アプリケーションの 「アプリケーション | 施設」。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Update Receiving Application",
+      "description": "Application|Facility name of Receiving Application for HL7 Procedure Status Update. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
     "hl7PSUDelay": {
-      "title": "HL7 手順 ステータス 更新 遅延",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で遅延の 後、受信した 検査の HL7 手順 ステータス 更新が 構成済みの HL7 受け取り アプリケーションに 送信されます。 存在しない 場合、 HL7 手順 ステータス 更新は 受信した MPPSに よって トリガーされます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Update Delay",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmDuration"
     },
     "hl7PSUConditions": {
-      "title": "HL7 手順 ステータス 更新 属性の 条件",
-      "description": "受信した 複合 オブジェクトの 属性の (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} 形式で 指定した 条件に よって、 手順 ステータス 更新の 通知を 構成された 「HL7 手順 ステータス 更新 受け取り アプリケーション」に 限る。 「|」 シンボルで 区切る ことに より、 特定の 属性に 複数の 値を 指定できます。 例 : SendingApplicationEntityTitle=FORWARD または Modality=MR|CT または ProcedureCodeSequence.CodeValue=MRProcedure または 00180015=KNEE または 00321034.00080100=RequestingServiceCode または ImageType[3]=LOCALIZER。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Update Attribute Conditions",
+      "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items": {
         "type": "string"
@@ -1481,38 +1508,38 @@
       "format": "dcmProperty"
     },
     "hl7PSUForRequestedProcedure": {
-      "title": "要求された 手順のために HL7 手順 ステータス 更新",
-      "description": "存在して 要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDの 手順 ステータス 更新の 通知を 構成された 「HL7 手順 ステータス 更新 受け取り アプリケーション」に 限る。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Update for Requested Procedure",
+      "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update to existence of Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "hl7PSURequestedProcedureID": {
-      "title": "HL7 手順 ステータス 更新 要求された 手順 ID",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに 要求された 手順 IDの 値。 {<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Update Requested Procedure ID",
+      "description": "Value for Requested Procedure ID in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string",
       "default": "{StudyInstanceUID,hash}"
     },
     "hl7PSUAccessionNumber": {
-      "title": "HL7 手順 ステータス アクセッション 番号",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに アクセッション 番号の 値。 {<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Accession Number",
+      "description": "Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string",
       "default": "{StudyInstanceUID,hash}"
     },
     "hl7PSUFillerOrderNumber": {
-      "title": "HL7 手順 ステータス フィラー オーダー 番号",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに フィラー オーダー 番号の 値。{<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Filler Order Number",
+      "description": "Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string",
       "default": "{StudyInstanceUID,hash}"
     },
     "hl7PSUPlacerOrderNumber": {
-      "title": "HL7 手順 ステータス プレーサー オーダー 番号",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに プレーサー オーダー 番号の 値。{<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Placer Order Number",
+      "description": "Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string",
       "default": "{StudyInstanceUID,hash}"
     },
     "hl7PSUMessageType": {
-      "title": "HL7 手順 ステータス メッセージ タイプ",
-      "description": "HL7 手順 ステータス 更新 メッセージの メッセージ タイプ。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Message Type",
+      "description": "Message Type of HL7 Procedure Status Update message. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "default": "OMG_O19",
       "enum": [
@@ -1521,64 +1548,64 @@
       ]
     },
     "hl7PSUPIDPV1": {
-      "title": "HL7 手順 ステータス 更新 PID PV1",
-      "description": "HL7 手順 ステータス 更新 メッセージに 患者 識別 (PID) と 患者 来院 (PV1) セグメントを 含める ことを 示します。 HL7 手順 ステータス メッセージ タイプ = ORU^R01の 場合、 暗黙的に 設定されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Update PID PV1",
+      "description": "Indicates to include a Patient Identification (PID) and a Patient Visit (PV1) segment in the HL7 Procedure Status Update message. Implicitly set, if HL7 Procedure Status Message Type = ORU_R01. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "hl7PSUMWL": {
-      "title": "HL7 手順 ステータス 更新 MWL",
-      "description": "DB内の MWL アイテムの ステータスが 、構成された 「HL7 手順 ステータス 更新 遅延」後に 受信した 検査には または 構成された 「HL7 手順 ステータス 更新 タイムアウト」後に 受信した MPPSには 、COMPLETEDに 更新されるか どうかを 指定します。「HL7 手順 ステータス 更新 受け取り アプリケーション」が 構成されて いる 場合は、 暗黙的 に 「真」に 設定されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Update MWL",
+      "description": "Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay or for received MPPS after configured HL7 Procedure Status Update Timeout. Implicitly set to true, if notification of HL7 receivers is configured. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "hl7PSUTimeout": {
-      "title": "HL7 手順 ステータス 更新 タイムアウト",
-      "description": "MPPSで 参照された インスタンスの 受信を 待機 する ための ISO-8601 期間 PnDTnHnMnS 形式で タイムアウト。 存在しない 場合は、 完全性を 永久に 確認して ください。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Update Timeout",
+      "description": "Timeout in ISO-8601 duration format PnDTnHnMnS for waiting on receive of instances referenced in MPPS; check for completeness forever if absent. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmDuration"
     },
     "hl7PSUOnTimeout": {
-      "title": "タイムアウト時の HL7 手順 ステータス 更新",
-      "description": "参照された インスタンスの 受信を 待機 する タイムアウトを 超えた 場合に HL7 手順 ステータス 更新を 送信 するか どうかを 指定します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Procedure Status Update On Timeout",
+      "description": "Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "hl7PSUTaskPollingInterval": {
-      "title": "HL7 手順 ステータス 更新 タスクの ポーリング 間隔",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で HL7 手順 ステータス 更新 タスクの ポーリング 間隔。 存在しない 場合は 無効に する。",
+      "title": "HL7 Procedure Status Update Task Polling Interval",
+      "description": "Polling Interval for HL7 Procedure Status Update Tasks in ISO-8601 duration format PnDTnHnMnS. Disabled, if absent.",
       "type": "string",
       "format": "dcmDuration"
     },
     "hl7PSUTaskFetchSize": {
-      "title": "HL7 手順 ステータス 更新 タスクの フェッチ サイズ",
-      "description": "1つの クエリで フェッチされた HL7 手順 ステータス 更新 タスクの 最大数。",
+      "title": "HL7 Procedure Status Update Tasks Fetch Size",
+      "description": "Maximal number of HL7 Procedure Status Update Tasks fetched in one query.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "hl7TrackChangedPatientID": {
-      "title": "HL7 変更された 患者 IDを 追跡 する",
-      "description": "HL7 ADT^A47 または RESTful 患者 更新 サービスに よる 患者 IDの 変更に ついて、 以前の 患者 IDを 追跡できる ように します。",
+      "title": "HL7 Track Changed Patient ID",
+      "description": "Enable to keep track of the prior Patient ID on a change of the Patient ID by HL7 ADT^A47 or by the RESTful Patient Update Service.",
       "type": "boolean",
       "default": true
     },
     "hl7UseNullValue": {
-      "title": "HL7 ヌル 値を 使用 する",
-      "description": "送信された HL7 メッセージで、 存在しない または 空の エンティティ 属性に 対して HL7 v2 ヌル 値 (セグメント フィールドで |\"\"| として 指定された) が 使用されるか どうかを 指定します。 リモート HL7 アプリケーションで エンティティ 属性を 設定 解除 する ために 必要です。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Use HL7 Null Value",
+      "description": "Specifies if HL7 v2 null values (specified in segment field as |\"\"|) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "boolean",
       "default": false
     },
     "hl7VeterinaryUsePatientName": {
-      "title": "HL7 獣医 使用 患者名",
-      "description": "HL7 PID フィールドを DICOM 属性に マッピングするときに 患者名の 獣医 使用を 強制する ことを 示します。 PID.5の 最初の 2つの コンポーネントのみを DICOM 患者名として 使用します。 PID.5に 1つの コンポーネントのみ 場合には その 値を 名前として 使用し、PID.9の 最初の コンポーネントを DICOM 患者名の 姓として 使用します。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Veterinary use Patient Name",
+      "description": "Indicates to force veterinary use of Patient Names on mapping HL7 PID fields to DICOM attributes: only use the first two components of PID.5 as DICOM Patient Name; if PID.5 only contains one component, use that value as given name, and the first component of PID.9 as family name of the DICOM Patient Name. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "boolean",
       "default": false
     },
     "hl7OrderMissingStudyIUIDPolicy": {
-      "title": "HL7 オーダー ために 欠落 スタディ インスタンス UID ポリシー",
-      "description": "受信した HL7 オーダー メッセージに スタディ インスタンス UIDがない 場合の ポリシーを 指定します。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Order Missing Study Instance UID Policy",
+      "description": "Specifies policy for missing Study Instance UID in incoming HL7 Order messages. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string",
       "default": "GENERATE",
       "enum": [
@@ -1588,8 +1615,8 @@
       ]
     },
     "hl7ImportReportMissingStudyIUIDPolicy": {
-      "title": "HL7 インポート レポート ために 欠落 スタディ インスタンス UID ポリシー",
-      "description": "受信した HL7 インポート レポート (ORU) メッセージに スタディ インスタンス UIDがない 場合の ポリシーを 指定します。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "HL7 Import Report Missing Study Instance UID Policy",
+      "description": "Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string",
       "default": "GENERATE",
       "enum": [
@@ -1598,9 +1625,15 @@
         "ACCESSION_BASED"
       ]
     },
+    "hl7ImportReportMissingStudyIUIDCFindSCP": {
+      "title": "HL7 Import Report Missing Study Instance UID C-FIND SCP",
+      "description": "AE Title of external C-FIND SCP to query for missing Study Instance UID in incoming HL7 Import Report (ORU) messages by given Accession Number. May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
     "hl7ReferredMergedPatientPolicy": {
-      "title": "HL7 参照された マージ済み 患者 ポリシー",
-      "description": "すでに マージ済みの 患者を 参照する 着信 HL7 メッセージに 関する ポリシーを 指定します。 REJECT: その ような HL7 メッセージを 拒否します, IGNORE: その ような HL7メッセージを 無視します, IGNORE_DUPLICATE_MERGE：重複する HL7 マージ メッセージのみを 無視し、その 他の その ような メッセージを 拒否します。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 補足される 場合が あります。",
+      "title": "HL7 Referred Merged Patient Policy",
+      "description": "Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string",
       "default": "REJECT",
       "enum": [
@@ -1610,84 +1643,84 @@
       ]
     },
     "hl7DicomCharacterSet": {
-      "title": "HL7 Dicom 文字 セット",
-      "description": "受信した HL7 メッセージから トランスコードされた データセットで 特定の 文字 セットの 指定された 値 (0008,0005)を 使用する ことを 示します。 存在しない 場合、 MSH-18で 指定された HL7 メッセージの 文字 セットに 対応する 値を 使用します。",
+      "title": "HL7 Dicom Character Set",
+      "description": "Indicates to use specified Value of Specific Character Set (0008,0005) in Data Sets transcoded from received HL7 messages. Use Value corresponding to Character Set of the HL7 message specified by MSH-18 if absent.",
       "type": "string",
       "format": "dcmCharset"
     },
     "dcmRejectionNoteStorageAET": {
-      "title": "拒否 ノート 格納 AE タイトル",
-      "description": "アーカイブ アプリケーション エンティティの AE タイトル用に 構成された 最初の オブジェクト 格納は、IOCM-RS サービス または 期限切れの 検査 削除の スケジューラに よって 作成された 拒否 ノートの 保存に 使用されます。 存在しない 場合、 IOCM サービスでは、 IOCM-RS 要求で 参照されて いる アーカイブ AE用に 構成された オブジェクト 格納が 使用されます、 または 期限切れの 検査 削除の スケジューラでは、「期限切れの 検査の 拒否の AE タイトル」用に 構成された オブジェクト 格納が 使用されます。",
+      "title": "Rejection Note Storage AE title",
+      "description": "Title of Archive Application Entity, of which first configured Object Storage will be used for storing Rejection Notes generated either by IOCM-RS services or by Delete Expired Studies Scheduler. If absent, for IOCM services the Object Storage configured for Archive AE referred in the IOCM-RS request will be used, or for Delete Expired Studies Scheduler the Object Storage configured for Reject Expired Studies AE will be used.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmUIConfigurationDeviceName": {
-      "title": "UI 構成 デバイス名",
-      "description": "アーカイブ UI 構成を 含む デバイス名を 指定します。",
+      "title": "UI Configuration Device Name",
+      "description": "Specifies the device name containing the Archive UI Configuration.",
       "type": "string",
       "format": "dicomDeviceName"
     },
     "dcmCSVUploadChunkSize": {
-      "title": "CSV アップロード チャンク サイズ",
-      "description": "1つの チャンクで 処理される CSV ファイル アップロード タスクの 数。",
+      "title": "CSV Upload Chunk Size",
+      "description": "Number of CSV file upload tasks to be processed in one chunk.",
       "type": "integer",
       "default": 100,
       "minimum": 1
     },
     "dcmValidateUID": {
-      "title": "UIDを 検証 する",
-      "description": "UIDを 検証 するか どうかを 示します。",
+      "title": "Validate UID",
+      "description": "Indicates if UIDs shall be validated or not.",
       "type": "boolean",
       "default": true
     },
     "dcmRelationalQueryNegotiationLenient": {
-      "title": "リレーショナル クエリ ネゴシエーション 寛容",
-      "description": "リレーショナル クエリの 支持が ネゴシエートされなかった 場合にも、 クエリ レベルより 上の レベルの 一意の キーなしで C-FIND RQを 受け入れる ことを 示します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Relational Query Negotiation Lenient",
+      "description": "Indicates to accept C-FIND RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmRelationalRetrieveNegotiationLenient": {
-      "title": "リレーショナル 読み出し ネゴシエーション 寛容",
-      "description": "リレーショナル クエリの 支持が ネゴシエートされなかった 場合にも、 クエリ レベルより 上の レベルの 一意の キーなしで C-MOVEと C-GET RQを 受け入れる ことを 示します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Relational Retrieve Negotiation Lenient",
+      "description": "Indicates to accept C-MOVE and C-GET RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmRestrictRetrieveSilently": {
-      "title": "読み出しを サイレントに 制限 する",
-      "description": "要求された オブジェクトの セットが、読み出し 宛先の 転送 機能に よると  従って 読み出しを サイレントに (= 転送されて いない オブジェクトを 失敗として カウント せずに) 制限されるか どうかを 示します。 それ 以外、 読み出し先に 転送 機能が 構成されて いないの 場合、 読み出されない 要求された オブジェクトの 数は、 失敗として カウントされます。読み出し先で 少なくとも 1つの 転送 機能と SCPの 役割が 設定されて いる 場合に のみ 有効です。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "Restrict Retrieve Silently",
+      "description": "Indicates if the set of requested objects to retrieve shall be silently (=without counting not transferred object as failures) restricted according the Transfer Capabilities of the Retrieve Destination. Otherwise the number of requested objects for which no Transfer Capability is configured for the Retrieve Destination and therefore are not retrieved is counted as failures. Only effective, if the Retrieve Destination has configured at least one Transfer Capability with SCP role. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmSchedulerMinStartDelay": {
-      "title": "スケジューラ 最小 開始 遅延",
-      "description": "システム 起動時に スケジューラを 開始 する ための 秒単位の 最小 遅延。",
+      "title": "Scheduler Minimum Start Delay",
+      "description": "Minimal delay in s to start schedulers on system start up.",
       "type": "integer",
       "default" : 60,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRejectConflictingPatientAttribute": {
-      "title": "矛盾 患者 属性を 拒否 する",
-      "description": "以前に 受信した オブジェクトの 患者 IDと 一致 する 患者 IDを 持つ オブジェクトの 指定された 患者 属性の 値と 一致 しないの 場合 DICOM オブジェクトを 拒否します。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "Reject Conflicting Patient Attribute",
+      "description": "DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
-      "title": "STOW リタイア 転送 構文",
-      "description": "受信した「JPEG Full Progression」 と 「Non-Hierarchical JPEG」 画像は 対応する (リタイアされた) 転送 構文 UID 1.2.840.10008.1.2.4.55 の DICOM 画像で 保存します。 それ 以外の 場合は、 保存されて いる DICOM 画像の 転送 構文 UIDとして、1.2.840.10008.1.2.4.50 (= JPEG Baseline) または 1.2.840.10008.1.2.4.51 (= JPEG Extended) を 設定します, でも 「JPEG Baseline」 または 「JPEG Extended」 で トランスコード しなくて,  受け取った ままの JPEG 画像を 含むします。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "STOW Retired Transfer Syntax",
+      "description": "Store received JPEG Full Progression, Non-Hierarchical JPEG images in DICOM images with corresponding (retired) Transfer Syntax UID 1.2.840.10008.1.2.4.55. Otherwise set 1.2.840.10008.1.2.4.50 (= JPEG Baseline) or 1.2.840.10008.1.2.4.51 (= JPEG Extended) as Transfer Syntax UID of the stored DICOM image, without transcoding to JPEG Baseline or JPEG Extended, but including the JPEG image as received. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
       "default" : false
     },
     "dcmStowExcludeAPPMarkers": {
-      "title": "STOW アプリケーション マーカーを 除外",
-      "description": "STOW-RS Metadata および Bulkdata リクエストで 受信された JPEG 画像の APP マーカーが、 作成された DICOM インスタンスに カプセル化された JPEG ビットストリームから 除外されるか どうかを 示します。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
+      "title": "STOW Exclude Application Markers",
+      "description": "Indicates if APP markers in JPEG images received in STOW-RS Metadata and Bulkdata requests shall be excluded from the JPEG bit streams encapsulated in created DICOM instances. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
       "default" : false
     },
     "dcmStowQuicktime2MP4": {
-      "title": "STOW - MP4への Quicktime",
-      "description": "STOW-RS メタデータと バルク データ 要求で 受信された QuickTime コンテナーが、 作成された DICOM インスタンスに カプセル化された MP4 コンテナーに 変換されるか どうかを 示します。 変換には、 ffmpegが インストールされており、 ffmpeg CLI ユーティリティーが PATHで 使用 可能で ある 必要が あります。 そうでない 場合、 Quicktime コンテナは、 コンテナ内の ビデオ ストリームの エンコーディングを 反映 する 宣言された DICOM MPEG-4 転送 構文を 使用して、 保存されて いる DICOM オブジェクトに その まま カプセル化されますが、 実際の コンテナ フォーマットとは 矛盾します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "STOW Quicktime to MP4",
+      "description": "Indicates if QuickTime containers received in STOW-RS Metadata and Bulkdata requests shall be converted to MP4 containers encapsulated in created DICOM instances. The conversion requires that ffmpeg is installed and the ffmpeg CLI utility is available in the PATH. Otherwise Quicktime containers will get encapsulated in the stored DICOM object verbatim, with a declared DICOM MPEG-4 Transfer Syntax which reflects the encoding of the video stream in the container, but contradicts the actual container format. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
       "default" : false
     },
@@ -1698,8 +1731,8 @@
       "format": "dcmAETitle"
     },
     "dcmAttributeFilter": {
-      "title": "属性 フィルター",
-      "description": "データベースに 保存されて いる 属性を 指定します。",
+      "title": "Attribute Filter",
+      "description": "Specifies Attributes stored in the database",
       "type": "array",
       "titleKey":"{dcmEntity}",
       "items" : {
@@ -1707,8 +1740,8 @@
       }
     },
     "dcmAttributeSet": {
-      "title": "属性 セット",
-      "description": "QIDO-RSと WADO-RS メタデータの クエリ パラメーター 'includefields' に よって、 または DIFF-RS 要求の クエリ パラメーター 'comparefield' に よって 使用された 名前付き 属性 セット",
+      "title": "Attribute Set",
+      "description": "Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests.",
       "type": "array",
       "titleKey":"{dcmAttributeSetType}:{dcmAttributeSetID}",
       "items" : {
@@ -1716,8 +1749,8 @@
       }
     },
     "dcmBulkDataDescriptor": {
-      "title": "バルクデータ 記述子",
-      "description": "アーカイブされた インスタンスの メタデータを 提供 する サービスに よって 適用される バルクデータ 記述子を 指定します。",
+      "title": "Bulk Data Descriptor",
+      "description": "Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances.",
       "type": "array",
       "titleKey":"{dcmBulkDataDescriptorID}",
       "items" : {
@@ -1725,8 +1758,8 @@
       }
     },
     "dcmStorage": {
-      "title": "格納 記述子",
-      "description": "格納 システムを 指定します",
+      "title": "Storage Descriptor",
+      "description": "Specifies Storage System",
       "type": "array",
       "titleKey":"{dcmStorageID}",
       "items" : {
@@ -1734,8 +1767,8 @@
       }
     },
     "dcmQueryRetrieveView": {
-      "title": "クエリ / 読み出し ビュー",
-      "description": "保存された 拒否 ノートの 動作を 指定します",
+      "title": "Query Retrieve View",
+      "description": "Specifies behavior on Rejection Note Stored",
       "type": "array",
       "titleKey":"{dcmQueryRetrieveViewID}",
       "items" : {
@@ -1743,8 +1776,8 @@
       }
     },
     "dcmQueue": {
-      "title": "キュー",
-      "description": "管理された JMS キュー",
+      "title": "Queue",
+      "description": "Managed JMS Queue",
       "type": "array",
       "titleKey":"{dcmQueueName}",
       "items" : {
@@ -1752,8 +1785,8 @@
       }
     },
     "dcmMetrics": {
-      "title": "メトリック",
-      "description": "アクティブ化された メトリック",
+      "title": "Metrics",
+      "description": "Activated Metrics",
       "type": "array",
       "titleKey":"{dcmMetricsName}",
       "items" : {
@@ -1761,8 +1794,8 @@
       }
     },
     "dcmPDQService": {
-      "title": "PDQ サービス 記述子",
-      "description": "PDQ サービス 記述子",
+      "title": "PDQ Service Descriptor",
+      "description": "PDQ Service Descriptor",
       "type": "array",
       "titleKey":"{dcmPDQServiceID}",
       "items" : {
@@ -1770,8 +1803,8 @@
       }
     },
     "dcmExporter": {
-      "title": "エクスポーター 記述子",
-      "description": "エクスポーター 記述子",
+      "title": "Exporter Descriptor",
+      "description": "Exporter Descriptor",
       "type": "array",
       "titleKey":"{dcmExporterID}",
       "items" : {
@@ -1779,8 +1812,8 @@
       }
     },
     "dcmExportRule": {
-      "title": "書き出し 規則",
-      "description": "任意の AEに よって 受信された DICOM オブジェクトに 適用される 書き出し 規則。 特定の アーカイブ ネットワーク AEの 構成された 書き出し 規則に よって 補足される 場合が あります。",
+      "title": "Export Rule",
+      "description": "Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1788,8 +1821,8 @@
       }
     },
     "dcmExportPriorsRule": {
-      "title": "事前 エンティティの 書き出し 規則",
-      "description": "任意の AEに よって 受信された DICOM オブジェクトに 適用される 事前 エンティティの 書き出し 規則。 特定の アーカイブ ネットワーク AEの 構成された 事前 エンティティの 書き出し 規則に よって 補足される 場合が あります。",
+      "title": "Export Priors Rule",
+      "description": "Export Priors Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Priors Rules for particular Archive Network AEs.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1806,8 +1839,8 @@
       }
     },
     "dcmRSForwardRule": {
-      "title": "RESTful 転送 規則",
-      "description": "RESTful 転送 規則。 特定の アーカイブ ネットワーク AEの 構成された RESTful 転送規則に よって 補足される 場合が あります。",
+      "title": "RESTful Forward Rule",
+      "description": "RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1815,8 +1848,8 @@
       }
     },
     "dcmArchiveCompressionRule": {
-      "title": "圧縮 規則",
-      "description": "任意の AEに よって 受信された DICOM オブジェクトに 適用される 圧縮 規則。 特定の アーカイブ ネットワーク AEの 構成された 圧縮 規則に よって 補足される 場合が あります。",
+      "title": "Compression rule",
+      "description": "Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1824,8 +1857,8 @@
       }
     },
     "dcmArchiveAttributeCoercion": {
-      "title": "属性 強制",
-      "description": "任意の AEに よって 受信 / 送信された DIMSEに 適用される 属性 強制。 特定の アーカイブ ネットワーク AEの 構成された 属性 強制に よって 補足される 場合が あります。",
+      "title": "Attribute Coercion",
+      "description": "Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1833,8 +1866,8 @@
       }
     },
     "dcmRejectionNote": {
-      "title": "拒否 ノート",
-      "description": "保存された 拒否 ノートの 動作を 指定します",
+      "title": "Rejection Note",
+      "description": "Specifies behavior on Rejection Note Stored",
       "type": "array",
       "titleKey":"{dcmRejectionNoteLabel}",
       "items" : {
@@ -1842,8 +1875,8 @@
       }
     },
     "dcmStudyRetentionPolicy": {
-      "title": "検査 保持 ポリシー",
-      "description": "任意の AEが 受け取った 検査に 適用される 検査 保持 ポリシー。 特定の アーカイブ ネットワーク AEの 構成された 検査 保持 ポリシーに よって 補足される 場合が あります。",
+      "title": "Study Retention Policy",
+      "description": "Study Retention Policies applied to Studies received by any AE. May be supplemented by configured Study Retention Policies for particular Archive Network AEs.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1851,8 +1884,8 @@
       }
     },
     "dcmStoreAccessControlIDRule": {
-      "title": "保存 アクセス 制御 ID 規則",
-      "description": "任意の AEが 受け取った 検査に 適用される 保存 アクセス 制御 ID 規則。 特定の アーカイブ ネットワーク AEの 構成された 保存 アクセス 制御 ID 規則に よって 補足される 場合が あります。",
+      "title": "Store Access Control Rules",
+      "description": "Store Access Control Rules applied to Studies received by any AE. May be supplemented by configured Store Access Control Rules for particular Archive Network AEs.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1860,8 +1893,8 @@
       }
     },
     "dcmUPSOnStore": {
-      "title": "格納に よって 作成された UPS",
-      "description": "任意の AEが 受け取った DICOM オブジェクトに 適用される 格納に よって 作成された UPS 規則。 特定の アーカイブ ネットワーク AEの 構成された 検査 保持 ポリシーに よって 補足される 場合が あります。",
+      "title": "UPS on Store Rules",
+      "description": "UPS on Store Rules applied to DICOM objects received by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs.",
       "type": "array",
       "titleKey": "{dcmUPSOnStoreID}",
       "items": {
@@ -1869,8 +1902,8 @@
       }
     },
     "hl7UPSOnHL7": {
-      "title": "HL7上の UPS 規則",
-      "description": "任意の HL7 アプリケーションに よって 受信された HL7 メッセージに 適用された HL7上の UPS 規則。 特定の アーカイブ HL7 アプリケーションの 構成された HL7上の UPS 規則に よって 補足される 場合が あります。",
+      "title": "UPS on HL7 Rules",
+      "description": "UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured UPS on HL7 Rules for particular HL7 Applications.",
       "type": "array",
       "titleKey": "{hl7UPSOnHL7ID}",
       "items": {
@@ -1878,8 +1911,8 @@
       }
     },
     "dcmUPSOnUPSCompleted": {
-      "title": "以前の UPSの 完了に よって 作成された UPS",
-      "description": "任意の AEに よって 管理された UPSに 適用される 以前の UPSの 完了に よって 作成された UPS。 特定の アーカイブ ネットワーク AEの 構成された 以前の UPSの 完了に よって 作成された UPSに よって 補足される 場合が あります。",
+      "title": "UPS on UPS Completed Rules",
+      "description": "UPS on UPS Completed Rules applied to UPS managed by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs.",
       "type": "array",
       "titleKey": "{dcmUPSOnUPSCompletedID}",
       "items": {
@@ -1887,8 +1920,8 @@
       }
     },
     "dcmUPSProcessingRule": {
-      "title": "UPS 処理 規則",
-      "description": "UPS 処理 規則。",
+      "title": "UPS Processing Rules",
+      "description": "UPS Processing Rules.",
       "type": "array",
       "titleKey": "{dcmUPSProcessingRuleID}",
       "items": {
@@ -1896,17 +1929,26 @@
       }
     },
     "dcmIDGenerator": {
-      "title": "ID ジェネレーター",
-      "description": "ID ジェネレーター",
+      "title": "ID Generator",
+      "description": "ID Generator",
       "type": "array",
       "titleKey":"{dcmIDGeneratorName}",
       "items" : {
         "$ref": "idGenerator.schema.json"
       }
     },
+    "dcmMWLImport": {
+      "title": "MWL Import",
+      "description": "MWL Import",
+      "type": "array",
+      "titleKey":"{dcmMWLImportID}",
+      "items" : {
+        "$ref": "mwlImport.schema.json"
+      }
+    },
     "dcmMWLIdleTimeout": {
-      "title": "MWL アイドル タイムアウト",
-      "description": "MWL アイドル タイムアウト",
+      "title": "MWL Idle Timeout",
+      "description": "MWL Idle Timeout",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1914,8 +1956,8 @@
       }
     },
     "hl7ForwardRule": {
-      "title": "HL7 転送 規則",
-      "description": "任意の HL7 アプリケーションが 受信した HL7 メッセージに 適用される 転送 規則。 特定の アーカイブ HL7 アプリケーションの 構成された HL7 転送 規則に よって 補足される 場合が あります。",
+      "title": "HL7 Forward Rule",
+      "description": "HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1923,8 +1965,8 @@
       }
     },
     "hl7ExportRule": {
-      "title": "HL7 エクスポート 規則",
-      "description": "任意の HL7 アプリケーションが 受信した HL7 メッセージに 適用される エクスポート 規則。 特定の アーカイブ HL7 アプリケーションの 構成された HL7 エクスポート 規則に よって 補足される 場合が あります。",
+      "title": "HL7 Export Rule",
+      "description": "Export Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Export Rules for particular HL7 Application.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1932,8 +1974,8 @@
       }
     },
     "hl7PrefetchRule": {
-      "title": "HL7 プリフェッチ 規則",
-      "description": "任意の HL7 アプリケーションが 受信した HL7 メッセージに 適用される HL7 プリフェッチ 規則。 特定の アーカイブ HL7 アプリケーションの 構成された HL7 プリフェッチ 規則に よって 補足される 場合が あります。",
+      "title": "HL7 Prefetch Rule",
+      "description": "HL7 Prefetch Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Prefetch Rules for particular HL7 Application.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1941,8 +1983,8 @@
       }
     },
     "hl7StudyRetentionPolicy": {
-      "title": "HL7 検査 保存 ポリシー",
-      "description": "任意の HL7 アプリケーションが 受信した HL7 メッセージに よって トリガーされる HL7 検査 保存 ポリシー。 特定の HL7 アプリケーション用に 構成された 検査 保存 ポリシーで 補足できます。",
+      "title": "HL7 Study Retention Policy",
+      "description": "HL7 Study Retention Policies triggered by HL7 messages received by any HL7 Application. May be supplemented by configured Study Retention Policies for particular HL7 Applications.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1950,8 +1992,8 @@
       }
     },
     "hl7OrderScheduledStation": {
-      "title": "HL7 オーダーの 予定された ステーション",
-      "description": "HL7 アプリケーションが 受信した MWL HL7 オーダー フィードで 選択された 予定された ステーション。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 補足される 場合が あります。",
+      "title": "Scheduled Station for HL7 Order",
+      "description": "Scheduled Station selected on MWL HL7 Order Feed received by any HL7 Application. May be supplemented by configured values for particular HL7 Applications.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -1959,8 +2001,8 @@
       }
     },
     "hl7OrderSPSStatus": {
-      "title": "HL7 オーダーの SPS ステータス",
-      "description": "受信した HL7 ORM^O01, OMI^O23, OMG^O19 メッセージで 作成 / 更新された DICOM MWL アイテムの SPS ステータスを 指定します。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
+      "title": "SPS Status for HL7 Order",
+      "description": "Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "array",
       "titleKey":"{dcmSPSStatus}",
       "items" : {
@@ -1968,16 +2010,16 @@
       }
     },
     "dcmXRoadProperty": {
-      "title": "X-Road 属性",
-      "description": "<name>=<value> 形式で エストニア 国立 患者 レジストリに アクセス する ための プロパティ",
+      "title": "X-Road Property",
+      "description": "Properties for accessing Estonian National Patient Registry in format <name>=<value>",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmImpaxReportProperty": {
-      "title": "Impax レポート 属性",
-      "description": "<name>=<value> 形式で Agfa Impax レポート サービスに アクセス する ための 属性",
+      "title": "Impax Report Property",
+      "description": "Properties for accessing Agfa Impax Report Service in format <name>=<value>",
       "type": "array",
       "items": {
         "type": "string"

@@ -1,6 +1,6 @@
 {
-  "title": "Estensione del dispositivo",
-  "description": "Attributi del dispositivo proprietari di dcm4che",
+  "title": "Device Extension",
+  "description": "dcm4che proprietary Device Attributes",
   "type": "object",
   "required": [
     "dcmRoleSelectionNegotiationLenient",
@@ -8,83 +8,83 @@
   ],
   "properties": {
     "dcmRoleSelectionNegotiationLenient": {
-      "title": "Negoziazione di selezione del ruolo clemente",
-      "description": "Indica di disabilitare il controllo per la negoziazione della selezione del ruolo SCP/SCU richiesta sull'invio di DIMSE-RQ. Può essere sovrascritto dal valore configurato per particolari AE di rete.",
+      "title": "Role Selection Negotiation Lenient",
+      "description": "Indicates to disable check for required SCP/SCU role selection negotiation on sending of DIMSE-RQs. May be overwritten by configured value for particular Network AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmLimitOpenAssociations": {
-      "title": "Limite di associazione",
-      "description": "Numero massimo di connessioni DICOM aperte; rifiuta le richieste di associazione se il limite viene superato; 0 = illimitato.",
+      "title": "Association Limit",
+      "description": "Maximal number of open DICOM connections; rejects Association requests if the limit is exceeded; 0 = unlimited.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmLimitAssociationsInitiatedBy": {
-      "title": "Limite di associazione per AE",
-      "description": "Numero massimo di connessioni DICOM aperte avviate da una particolare entità dell'applicazione (AE) nel formato <ae-title>=<number>; rifiuta le richieste di associazione da quell'AE se il limite viene superato.",
+      "title": "Association Limit for AE",
+      "description": "Maximal number of open DICOM connections initiated by a particular Application Entity (AE) in format <ae-title>=<number>; rejects Association requests from that AE if the limit is exceeded.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmLimitAssociationsInitiatedBy"
     },
     "dcmTrustStoreURL": {
-      "title": "URL del Trust Store",
-      "description": "URL di Trust Store con certificati per i nodi DICOM autorizzati a connettersi a questo nodo; sostituisce dicomAuthorizedNodeCertificateReference",
+      "title": "Trust Store URL",
+      "description": "URL of Trust Store with Certificates for DICOM nodes that are authorized to connect to this node; overrides dicomAuthorizedNodeCertificateReference",
       "type": "string"
     },
     "dcmTrustStoreType": {
-      "title": "Tipo di archivio attendibile",
-      "description": "Tipo Key Store di Trust Store specificato da dcmTrustStoreURL.",
+      "title": "Trust Store Type",
+      "description": "Key Store Type of Trust Store specified by dcmTrustStoreURL. Enumerated values: JKS, PKCS12.",
       "type":"string"
     },
     "dcmTrustStorePin": {
-      "title": "Pin del Trust Store",
-      "description": "Key Store Password del Trust Store specificata dall'URL di Trust Store",
+      "title": "Trust Store Pin",
+      "description": "Key Store Password of Trust Store specified by Trust Store URL",
       "type": "string"
     },
     "dcmTrustStorePinProperty": {
-      "title": "Proprietà del Pin del Trust Store",
-      "description": "Proprietà di sistema di Key Store Password di Trust Store specificata dall'URL di Trust Store",
+      "title": "Trust Store Pin Property",
+      "description": "System property of Key Store Password of Trust Store specified by Trust Store URL",
       "type": "string"
     },
     "dcmKeyStoreURL": {
-      "title": "URL archivio chiavi",
-      "description": "URL dell'archivio chiavi con chiave privata e certificato utilizzato per identificare questo nodo DICOM nelle connessioni TLS",
+      "title": "Key Store URL",
+      "description": "URL of Key Store with private Key and certificate used to identify this DICOM node in TLS connections",
       "type": "string"
     },
     "dcmKeyStoreType": {
-      "title": "Tipo di archivio chiavi",
-      "description": "Tipo di Archivio chiavi dell'archivio chiavi specificato dall'URL dell'archivio chiavi.",
+      "title": "Key Store Type",
+      "description": "Key Store Type of Key Store specified by Key Store URL. Enumerated values: JKS, PKCS12.",
       "type": "string"
     },
     "dcmKeyStorePin": {
-      "title": "Pin del Archivio chiavi",
-      "description": "Key Store Password dell'archivio chiavi specificata dall'URL dell'archivio chiavi",
+      "title": "Key Store Pin",
+      "description": "Key Store Password of Key Store specified by Key Store URL",
       "type": "string"
     },
     "dcmKeyStorePinProperty": {
-      "title": "Proprietà del pin dell'archivio delle chiavi",
-      "description": "Proprietà di sistema della password dell'archivio chiavi specificata dall'URL dell'archivio chiavi",
+      "title": "Key Store Pin Property",
+      "description": "System property of Key Store Password of Key Store specified by Key Store URL",
       "type": "string"
     },
     "dcmKeyStoreKeyPin": {
-      "title": "Pin del Archivio chiavi",
-      "description": "Password chiave dell'archivio chiavi specificata dall'URL dell'archivio chiavi",
+      "title": "Key Store Key Pin",
+      "description": "Key Password of Key Store specified by Key Store URL",
       "type": "string"
     },
     "dcmKeyStoreKeyPinProperty": {
-      "title": "Proprietà del pin dell'archivio delle chiavi",
-      "description": "Proprietà di sistema della password dell'archivio chiavi specificata dall'URL dell'archivio chiavi",
+      "title": "Key Store Key Pin Property",
+      "description": "System property of Key Password of Key Store specified by Key Store URL",
       "type": "string"
     },
     "dcmTimeZoneOfDevice": {
-      "title": "Fuso orario del dispositivo",
-      "description": "ID del fuso orario del dispositivo; corrisponde a Java TimeZone ID",
+      "title": "Time Zone of Device",
+      "description": "Time Zone ID of the Device; matches Java TimeZone ID",
       "type": "string"
     },
     "dcmWebApp": {
-      "title": "Applicazioni web",
-      "description": "Applicazioni Web fornite dal dispositivo",
+      "title": "Web Applications",
+      "description": "Web Applications provided by the Device",
       "type": "array",
       "titleKey":"{dcmWebAppName}",
       "order":26,
@@ -93,8 +93,8 @@
       }
     },
     "dcmKeycloakClient": {
-      "title": "Clienti Keycloak",
-      "description": "Clienti Keycloak forniti dal dispositivo",
+      "title": "Keycloak Clients",
+      "description": "Keycloak Clients provided by the Device",
       "type": "array",
       "titleKey":"{dcmKeycloakClientID}",
       "order":27,
@@ -103,8 +103,8 @@
       }
     },
     "hl7Application": {
-      "title": "Applicazioni HL7",
-      "description": "Applicazioni HL7 fornite dal dispositivo",
+      "title": "HL7 Applications",
+      "description": "HL7 Applications provided by the Device",
       "type": "array",
       "titleKey":"{hl7ApplicationName}",
       "order":28,
@@ -113,8 +113,8 @@
       }
     },
     "dcmImageWriter": {
-      "title": "Scrittori di immagini",
-      "description": "Specifica gli scrittori java di immagini IO con parametri di scrittura utilizzati per la compressione delle immagini DICOM",
+      "title": "Image Writers",
+      "description": "Specifies Java Image IO Image Writers with Write Parameters used for compressing DICOM images",
       "type": "array",
       "titleKey":"{dicomTransferSyntax}",
       "order":29,
@@ -123,8 +123,8 @@
       }
     },
     "dcmImageReader": {
-      "title": "Lettori di immagini",
-      "description": "Specifica i lettori java di immagini utilizzati per decomprimere immagini DICOM compresse",
+      "title": "Image Readers",
+      "description": "Specifies Java Image IO Image Readers used for decompressing compressed DICOM images",
       "type": "array",
       "titleKey":"{dicomTransferSyntax}",
       "order":30,
@@ -134,7 +134,7 @@
     },
     "dcmAuditLogger": {
       "title": "Audit Logger",
-      "description": "Informazioni relative a Audit Logger",
+      "description": "Audit Logger related information",
       "titleKey":"{cn}",
       "type": "array",
       "order":31,
@@ -143,20 +143,20 @@
       }
     },
     "dcmAuditRecordRepository": {
-      "title": "Archivio delle registrazioni di controllo",
-      "description": "Informazioni relative all'archivio delle registrazioni di controllo",
+      "title": "Audit Record Repository",
+      "description": "Audit Record Repository related information",
       "$ref": "auditRecordRepository.schema.json",
       "order":32
     },
     "dcmArchiveDevice": {
-      "title": "Dispositivo di archiviazione",
-      "description": "Informazioni relative al dispositivo di archiviazione DICOM",
+      "title": "Archive Device",
+      "description": "DICOM Archive Device related information",
       "order":33,
       "$ref": "archiveDevice.schema.json"
     },
     "dcmuiConfig": {
-      "title": "Configurazione dell'interfaccia utente",
-      "description": "Configurazione dell'interfaccia utente",
+      "title": "UI Configuration",
+      "description": "UI Configuration",
       "titleKey":"{dcmuiConfigName}",
       "type": "array",
       "order":34,

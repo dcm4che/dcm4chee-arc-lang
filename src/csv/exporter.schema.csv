@@ -3,7 +3,6 @@
 "dcmExporterID","Exporter ID","Exporter ID"
 "dcmURI","URI","RFC2079: Uniform Resource Identifier"
 "dcmQueueName","Queue Name","JMS Queue Name"
-"dcmExportPriority","Export Priority","JMS Priority Level for processing the Export Task from 0 (lowest) to 9 (highest)."
 "dicomDescription","Exporter Description","Unconstrained text description of the exporter"
 "dicomAETitle","Archive Application Entity (AE) title","Archive Application Entity (AE) title"
 "dcmExportAsSourceAE","Export as Source Application Entity (AE)","Mask the Archive Application Entity (AE) title by the title of the Application Entity (AE) from which a Series was received on establishing the Association to the Destination Application Entity (AE)."

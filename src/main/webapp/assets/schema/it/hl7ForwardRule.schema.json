@@ -1,6 +1,6 @@
 {
-  "title": "Regola di inoltro HL7",
-  "description": "Regola di inoltro HL7",
+  "title": "HL7 Forward Rule",
+  "description": "HL7 Forward Rule",
   "type": "object",
   "required": [
     "cn",
@@ -8,13 +8,13 @@
   ],
   "properties": {
     "cn": {
-      "title": "Nome",
-      "description": "Nome arbitrario/significativo della regola forward HL7",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the HL7 Forward Rule",
       "type": "string"
     },
     "hl7FwdApplicationName": {
-      "title": "Nome applicazione di inoltro HL7",
-      "description": "Applicazione di destinazione di inoltro HL7 e nome della struttura (Applicazione|Struttura)",
+      "title": "HL7 Forward Application Name",
+      "description": "HL7 Forward Destination Application and Facility name (Application|Facility)",
       "type": "array",
       "items": {
         "type": "string"
@@ -22,8 +22,8 @@
       "format": "hl7ApplicationName"
     },
     "dcmProperty": {
-      "title": "Condizioni",
-      "description": "Condizioni nel formato {SEG}-{Seq #}[.{Comp#}[.{SubComp#}]][!]={regEx}. Esempi: MSH-4=FORWARD o MSH-9=ADT\\^A28\\^ADT_A05 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "title": "Conditions",
+      "description": "Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
       "items": {
         "type": "string"

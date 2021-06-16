@@ -1,31 +1,31 @@
 {
-  "title": "ネットワーク 接続",
-  "description": "1つの ネットワーク デバイス上の 1つの TCP / UDP ポートに ついて 説明します。",
+  "title": "Network Connection",
+  "description": "Describes one TCP/UDP port on one network device.",
   "type": "object",
   "required": [
     "dicomHostname"
   ],
   "properties": {
     "cn": {
-      "title": "名前",
-      "description": "ネットワーク 接続 オブジェクトの 任意 / 意味の ある 名前",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name for the Network Connection object",
       "type": "string"
     },
     "dicomHostname": {
-      "title": "ホスト名",
-      "description": "この 特定の 接続の DNS名",
+      "title": "Hostname",
+      "description": "DNS name for this particular connection",
       "type": "string"
     },
     "dicomPort": {
-      "title": "ポート",
-      "description": "サービスが リッスンして いる TCP / UDP ポート。この ネットワーク 接続が アウトバウンド 接続にのみ 使用されている 場合は、 不足して いる 可能性が あります",
+      "title": "Port",
+      "description": "TCP/UDP port that a service is listening on. May be missing if this network connection is only used for outbound connections",
       "type": "integer",
       "minimum": 1,
       "maximum": 99999
     },
     "dicomTLSCipherSuite": {
-      "title": "TLS 暗号 スイート",
-      "description": "この 特定の 接続で 支持される TLS 暗号 スイート。 存在しない 場合、TLSは 無効に なります",
+      "title": "TLS CipherSuites",
+      "description": "The TLS CipherSuites that are supported on this particular connection. If not present TLS is disabled",
       "type": "array",
       "items": {
         "type": "string",
@@ -41,13 +41,13 @@
       }
     },
     "dicomInstalled": {
-      "title": "インストール済み",
-      "description": "ネットワーク 接続が ネットワークに インストールされて いる 場合は 「真」です。 存在しない 場合、 ネットワーク 接続の インストール ステータスに 関する 情報は デバイスから 継承されます",
+      "title": "installed",
+      "description": "True if the Network Connection is installed on the network. If not present, information about the installed status of the Network Connection is inherited from the device",
       "type": "boolean"
     },
     "dcmNetworkConnection": {
-      "title": "ネットワーク 接続 拡張",
-      "description": "dcm4che ネットワーク 接続 独自 属性",
+      "title": "Network Connection Extension",
+      "description": "dcm4che proprietary Network Connection Attributes",
       "$ref": "dcmNetworkConnection.schema.json"
     }
   }

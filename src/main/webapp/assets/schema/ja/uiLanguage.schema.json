@@ -1,6 +1,6 @@
 {
-  "title": "UI 言語 構成",
-  "description": "UI 言語 構成",
+  "title": "UI Language Config",
+  "description": "UI Language Config",
   "type": "object",
   "required": [
     "dcmLanguages",
@@ -8,8 +8,8 @@
   ],
   "properties": {
     "dcmuiLanguageConfigName": {
-      "title": "言語 構成の 名前",
-      "description": "言語 構成の 名前",
+      "title": "Language Config Name",
+      "description": "Name of the Language Config",
       "type": "string"
     },
     "dcmLanguages":{
@@ -22,8 +22,8 @@
       "format": "dcmLanguageChooser"
     },
     "dcmuiLanguageProfileObjects": {
-      "title": "言語 プロファイル",
-      "description": "ユーザー名、役割 または 全員の 言語 プロファイル。",
+      "title": "Language Profile",
+      "description": "Language profile for username, role or everyone",
       "titleKey":"{dcmuiLanguageProfileName}",
       "type": "array",
       "items" : {

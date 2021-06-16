@@ -1,6 +1,6 @@
 {
-  "title": "比較側名",
-  "description": "比較側名",
+  "title": "Compare Side",
+  "description": "Compare Side",
   "type": "object",
   "required": [
     "dcmuiCompareSideName",
@@ -11,46 +11,46 @@
   ],
   "properties": {
     "dcmuiCompareSideName": {
-      "title": "名前",
-      "description": "比較側名",
+      "title": "Name",
+      "description": "Compare Side Name",
       "type": "string"
     },
     "dcmuiCompareSideDescription": {
-      "title": "説明",
-      "description": "この グループに 関する 短い 説明。",
+      "title": "Description",
+      "description": "A short description about this Group",
       "type": "string"
     },
     "dcmuiCompareSideOrder": {
-      "title": "順序",
-      "description": "比較側の 順序",
+      "title": "Order",
+      "description": "Order of the Compare side",
       "type": "integer",
       "default":0,
       "enum":[
-        0,
-        1
+         0,
+         1
       ]
     },
     "dcmuiCompareSideCluster": {
-      "title": "クラスタ",
-      "description": "クラスタを 選択 する。",
+      "title": "Cluster",
+      "description": "Select a Cluster",
       "type": "string",
       "format":"dcmuiDeviceClusterObject"
     },
     "dcmuiCompareSideElasticsearch": {
-      "title": "エラスティクサーチ",
-      "description": "エラスティクサーチ URLを 選択 する。",
+      "title": "Elasticsearch",
+      "description": "Select an Elasticsearch URL",
       "type": "string",
       "format":"dcmuiElasticsearchConfig"
     },
     "dcmuiCompareSideQueueName": {
-      "title": "キュー",
-      "description": "比較側に 使用 する キュー名を 選択 します。",
+      "title": "Queue",
+      "description": "Select the QueueName that should be used for the compare side",
       "type": "string",
       "format":"dcmQueueName"
     },
     "dcmuiCompareSideInstalled": {
-      "title": "インストール済み",
-      "description": "'真'の場合、この 比較側は ダッシュボードで アクティブです。",
+      "title": "Installed",
+      "description": "If true this Compare side is active in the dashboard",
       "type": "boolean",
       "default": true
     }

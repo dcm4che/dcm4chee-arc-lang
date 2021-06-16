@@ -1,110 +1,123 @@
 {
-  "title": "キュー",
-  "description": "管理された JMS キュー",
+  "title": "Queue",
+  "description": "Managed JMS Queue",
   "type": "object",
   "required": [
     "dcmQueueName",
-    "dcmJndiName",
+    "dcmTaskProcessorName",
+    "dcmMaxTasksParallel",
     "dcmRetryDelay",
     "dcmRetryOnWarning",
-    "dcmRetryInProcessOnStartup",
     "dcmRetryDelayMultiplier",
     "dcmMaxRetries",
-    "dcmMaxQueueSize"
+    "dicomInstalled"
   ],
   "properties": {
     "dcmQueueName": {
-      "title": "キュー名",
-      "description": "JMS キュー名",
+      "title": "Queue Name",
+      "description": "JMS Queue Name",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiQueueName[*]",
         "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiCompareSideObjects[*].dcmuiCompareSideQueueName"
       ]
     },
-    "dcmJndiName": {
-      "title": "JNDI名",
-      "description": "JNDI名",
+    "dicomDescription": {
+      "title": "Queue Description",
+      "description": "Unconstrained text description of the Queue",
       "type": "string"
     },
-    "dicomDescription": {
-      "title": "DICOM 説明",
-      "description": "DICOM エンティティの テキストに よる 説明",
-      "type": "string"
+    "dcmTaskProcessorName": {
+      "title": "Task Processor Name",
+      "description": "Name of Task Processor associated with the Queue.",
+      "type": "string",
+      "enum" : [
+        "EXPORTER",
+        "MOVE_SCU",
+        "MPPS_SCU",
+        "IAN_SCU",
+        "STGCMT_SCP",
+        "STGCMT_SCU",
+        "STG_VERIFIER",
+        "HL7_SENDER",
+        "REST_CLIENT",
+        "REJECT_SCU",
+        "DIFF_SCU"
+      ]
+    },
+    "dicomInstalled": {
+      "title": "installed",
+      "description": "If false, processing of tasks in this queue is paused.",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmMaxTasksParallel": {
+      "title": "Maximum parallel Tasks",
+      "description": "Maximal number of tasks processed in parallel.",
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
     },
     "dcmMaxRetries": {
-      "title": "最大 再試行 回数",
-      "description": "特定の キューで 予定された タスクを 処理 する 最大 再試行 回数。",
+      "title": "Maximum Number of Retries",
+      "description": "Maximal number of retries to process tasks scheduled in a specific queue.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmRetryDelay": {
-      "title": "再試行 遅延",
-      "description": "ISO-8601 期間 形式 PnDTnHnMn.nSで 特定の キューに 予定された タスクの 処理を 再試行 する ための 遅延。",
+      "title": "Retry Delay",
+      "description": "Delay to retry to process tasks scheduled in a specific queue in ISO-8601 duration format PnDTnHnMn.nS.",
       "type": "string",
       "default": "PT1M",
       "format": "dcmDuration"
     },
     "dcmMaxRetryDelay": {
-      "title": "最大 再試行 遅延",
-      "description": "ISO-8601 期間 形式 PnDTnHnMn.nSで 特定の キューに 予定された タスクの 処理を 再試行 する ための 最大 遅延。 存在しない 場合は 無限です。",
+      "title": "Maximum Retry Delay",
+      "description": "Maximal Delay to retry to process tasks scheduled in a specific queue in ISO-8601 duration format PnDTnHnMn.nS. Infinite if absent.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmRetryDelayMultiplier": {
-      "title": "再試行 遅延 乗数",
-      "description": "「最大 再試行 遅延」が 考慮される 「再試行 遅延」の 上に 有効に なる 乗数 (%)",
+      "title": "Retry Delay Multiplier",
+      "description": "Multiplier in % that will take effect on top of dcmRetryDelay with dcmMaxRetryDelay to be taken into account.",
       "type": "integer",
       "minimum": 100,
       "default": 100
     },
     "dcmRetryOnWarning": {
-      "title": "警告時に 再試行",
-      "description": "失敗時だけでなく、 特定の キューの 警告 結果 ステータスでも タスクを 再試行できるように します。",
-      "type": "boolean",
-      "default": false
-    },
-    "dcmRetryInProcessOnStartup": {
-      "title": "起動時に IN PROCESSを 再試行します",
-      "description": "システムの 起動時に ステータスが IN PROCESSの ままに なって いる タスクを 再試行 する ことを 示します。",
+      "title": "Retry on Warning",
+      "description": "Enables retries to process tasks not only on failure but also on a warning outcome status in a specific queue.",
       "type": "boolean",
       "default": false
     },
     "dcmPurgeQueueMessageCompletedDelay": {
-      "title": "完了した キュー メッセージを パージ するための 遅延",
-      "description": "ISO-8601 期間 形式 PnDTnHnMn.nSで 遅延した後、 完了した キュー メッセージが パージされます。 存在しない 場合、 その 特定の キューの 削除は ありません。",
+      "title": "Delay for purging completed queue messages",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed queue messages are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageFailedDelay": {
-      "title": "失敗した キュー メッセージを パージ するための 遅延",
-      "description": "ISO-8601 期間 形式 PnDTnHnMn.nSで 遅延した後、 失敗した キュー メッセージが パージされます。 存在しない 場合、 その 特定の キューの 削除は ありません。",
+      "title": "Delay for purging failed queue messages",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which failed queue messages are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageWarningDelay": {
-      "title": "警告 キュー メッセージを パージ するための 遅延",
-      "description": "ISO-8601 期間 形式 PnDTnHnMn.nSで 遅延した後、 警告 キュー メッセージが パージされます。 存在しない 場合、 その 特定の キューの 削除は ありません。",
+      "title": "Delay for purging warning queue messages",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning queue messages are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageCanceledDelay": {
-      "title": "キャンセルされた キュー メッセージを パージ するための 遅延",
-      "description": "ISO-8601 期間 形式 PnDTnHnMn.nSで 遅延した後、 キャンセルされた キュー メッセージが パージされます。 存在しない 場合、 その 特定の キューの 削除は ありません。",
+      "title": "Delay for purging canceled queue messages",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled queue messages are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
-    "dcmMaxQueueSize": {
-      "title": "最大 キュー サイズ",
-      "description": "キュー内の 予定された タスクの 最大数。 予定された タスクの 数が 制限に 達すると、 別の タスクを 予定しようとしても 失敗します。 0 = 制限なし。",
-      "type": "integer",
-      "default": 0,
-      "minimum": 0
-    },
     "dcmSchedule": {
-      "title": "予定を 制限 する",
-      "description": "指定した 時間 範囲に 予定を 制限します。 指定された 時間 範囲内で 処理される タスクの 最大数を 制御するには、 「最大 キュー サイズ」を 使用します。 'TO SCHEDULE' (= 予定 する ために) 読み出し タスクの 予定にのみ 有効です。",
+      "title": "Restrict Scheduling",
+      "description": "Restrict Scheduling to specified time ranges. Use Maximum Queue Size to control maximal number of Tasks processed between specified time ranges. Only effective for scheduling 'TO SCHEDULE' Retrieve Tasks.",
       "type": "array",
       "items": {
         "type": "string"

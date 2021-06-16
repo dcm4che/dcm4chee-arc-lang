@@ -1,110 +1,123 @@
 {
-  "title": "रांग",
-  "description": "व्यवस्थापित JMS रांग",
+  "title": "Queue",
+  "description": "Managed JMS Queue",
   "type": "object",
   "required": [
     "dcmQueueName",
-    "dcmJndiName",
+    "dcmTaskProcessorName",
+    "dcmMaxTasksParallel",
     "dcmRetryDelay",
     "dcmRetryOnWarning",
-    "dcmRetryInProcessOnStartup",
     "dcmRetryDelayMultiplier",
     "dcmMaxRetries",
-    "dcmMaxQueueSize"
+    "dicomInstalled"
   ],
   "properties": {
     "dcmQueueName": {
-      "title": "रांगेचे नाव",
-      "description": "JMS रांगेचे नाव.",
+      "title": "Queue Name",
+      "description": "JMS Queue Name",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiQueueName[*]",
         "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiCompareSideObjects[*].dcmuiCompareSideQueueName"
       ]
     },
-    "dcmJndiName": {
-      "title": "JNDI नाव",
-      "description": "JNDI नाव.",
+    "dicomDescription": {
+      "title": "Queue Description",
+      "description": "Unconstrained text description of the Queue",
       "type": "string"
     },
-    "dicomDescription": {
-      "title": "DICOM वर्णन",
-      "description": "DICOM घटकाचे मजकूर वर्णन.",
-      "type": "string"
+    "dcmTaskProcessorName": {
+      "title": "Task Processor Name",
+      "description": "Name of Task Processor associated with the Queue.",
+      "type": "string",
+      "enum" : [
+        "EXPORTER",
+        "MOVE_SCU",
+        "MPPS_SCU",
+        "IAN_SCU",
+        "STGCMT_SCP",
+        "STGCMT_SCU",
+        "STG_VERIFIER",
+        "HL7_SENDER",
+        "REST_CLIENT",
+        "REJECT_SCU",
+        "DIFF_SCU"
+      ]
+    },
+    "dicomInstalled": {
+      "title": "installed",
+      "description": "If false, processing of tasks in this queue is paused.",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmMaxTasksParallel": {
+      "title": "Maximum parallel Tasks",
+      "description": "Maximal number of tasks processed in parallel.",
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
     },
     "dcmMaxRetries": {
-      "title": "पुन्हा प्रयत्न करण्याची अधिकतम संख्या",
-      "description": "विशिष्ट रांगेत अनुसूची केलेल्या कार्यांचे प्रक्रिया करण्यासाठी जास्तीत जास्त पुन्हा प्रयत्न करण्याची संख्या.",
+      "title": "Maximum Number of Retries",
+      "description": "Maximal number of retries to process tasks scheduled in a specific queue.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmRetryDelay": {
-      "title": "पुन्हा प्रयत्न करण्याचा विलंब",
-      "description": "विशिष्ट रांगेत अनुसूची केलेल्या कार्यांवर पुन्हा प्रक्रिया प्रयत्न करण्यासाठी ISO-8601 कालावधी स्वरूपात PnDTnHnMn.nS विलंब.",
+      "title": "Retry Delay",
+      "description": "Delay to retry to process tasks scheduled in a specific queue in ISO-8601 duration format PnDTnHnMn.nS.",
       "type": "string",
       "default": "PT1M",
       "format": "dcmDuration"
     },
     "dcmMaxRetryDelay": {
-      "title": "पुन्हा प्रयत्न करण्याचा अधिकतम विलंब",
-      "description": "विशिष्ट रांगेत अनुसूची केलेल्या कार्यांवर पुन्हा प्रक्रिया प्रयत्न करण्यासाठी ISO-8601 कालावधी स्वरूपात PnDTnHnMn.nS अधिकतम विलंब. अनुपस्थित असल्यास अनंत.",
+      "title": "Maximum Retry Delay",
+      "description": "Maximal Delay to retry to process tasks scheduled in a specific queue in ISO-8601 duration format PnDTnHnMn.nS. Infinite if absent.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmRetryDelayMultiplier": {
-      "title": "पुन्हा प्रयत्न करण्याचा विलंब गुणक",
-      "description": "% मध्ये गुणक जे 'पुन्हा प्रयत्न करण्याचा अधिकतम विलंब' च्या बरोबर 'पुन्हा प्रयत्न करण्याचा विलंब' च्या शीर्षस्थानी प्रभावी होईल.",
+      "title": "Retry Delay Multiplier",
+      "description": "Multiplier in % that will take effect on top of dcmRetryDelay with dcmMaxRetryDelay to be taken into account.",
       "type": "integer",
       "minimum": 100,
       "default": 100
     },
     "dcmRetryOnWarning": {
-      "title": "चेतावणी देण्याचा पुन्हा प्रयत्न करा",
-      "description": "केवळ अयशस्वी झाल्यावरच नव्हे तर एका विशिष्ट रांगेतील चेतावणीच्या परिणामाच्या स्थितीवर कार्यांची प्रक्रिया पुन्हा करण्याचा प्रयत्न सक्षम करते.",
-      "type": "boolean",
-      "default": false
-    },
-    "dcmRetryInProcessOnStartup": {
-      "title": "स्टार्टअप वर प्रक्रियेत असलेले कार्य पुन्हा प्रयत्न करा",
-      "description": "सिस्टीम स्टार्ट-अपवर प्रक्रियेत असलेल्या स्थितीत राहिलेले कार्य पुन्हा प्रक्रिया करण्याचा प्रयत्न करते.",
+      "title": "Retry on Warning",
+      "description": "Enables retries to process tasks not only on failure but also on a warning outcome status in a specific queue.",
       "type": "boolean",
       "default": false
     },
     "dcmPurgeQueueMessageCompletedDelay": {
-      "title": "रांगेतले पूर्ण संदेश हटविण्याचे विलंब",
-      "description": "ISO-8601 कालावधी स्वरूपात विलंब PnDTnHnMn.nS ज्यानंतर रांगेतले पूर्ण संदेश हटविले जातात. अनुपस्थित असल्यास, त्या विशिष्ट रांगेसाठी कोणतेही हटविले जाणार नाही.",
+      "title": "Delay for purging completed queue messages",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed queue messages are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageFailedDelay": {
-      "title": "रांगेतले अयशस्वी संदेश हटविण्याचे विलंब",
-      "description": "ISO-8601 कालावधी स्वरूपात PnDTnHnMn.nS विलंब ज्यानंतर रांगेतले अयशस्वी संदेश हटविले जातात. अनुपस्थित असल्यास, त्या विशिष्ट रांगेसाठी कोणतेही हटविले जाणार नाही.",
+      "title": "Delay for purging failed queue messages",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which failed queue messages are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageWarningDelay": {
-      "title": "रांगेतले चेतावणी संदेश हटविण्याचे विलंब",
-      "description": "ISO-8601 कालावधी स्वरूपात PnDTnHnMn.nS विलंब ज्यानंतर रांगेतले चेतावणी संदेश हटविले जातात. अनुपस्थित असल्यास, त्या विशिष्ट रांगेसाठी कोणतेही हटविले जाणार नाही.",
+      "title": "Delay for purging warning queue messages",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning queue messages are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageCanceledDelay": {
-      "title": "रांगेतले रद्द संदेश हटविण्याचे विलंब",
-      "description": "ISO-8601 कालावधी स्वरूपात विलंब PnDTnHnMn.nS ज्यानंतर रांगेतले रद्द संदेश हटविले जातात. अनुपस्थित असल्यास, त्या विशिष्ट रांगेसाठी कोणतेही हटविले जाणार नाही.",
+      "title": "Delay for purging canceled queue messages",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled queue messages are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
-    "dcmMaxQueueSize": {
-      "title": "रांगेचा कमाल आकार",
-      "description": "रांगेत अनुसूची केलेल्या कार्यांची कमाल संख्या. अनुसूची केलेल्या कार्यांची संख्या मर्यादेपर्यंत पोहोचल्यावर, इतर कार्ये अनुसूची करण्याचा प्रयत्न अयशस्वी होईल. ० = मर्यादा नाही.",
-      "type": "integer",
-      "default": 0,
-      "minimum": 0
-    },
     "dcmSchedule": {
-      "title": "अनुसूची करणे प्रतिबंधित करा",
-      "description": "निर्दिष्ट वेळ श्रेणीसाठी अनुसूची करणे प्रतिबंधित करा. निर्दिष्ट वेळ श्रेणी दरम्यान प्रक्रिया केलेल्या कार्यांची अधिकतम संख्याला रांगेच्या अधिकतम संख्याने नियंत्रित करा. केवळ 'TO SCHEDULE' (= अनुसूचित करायचे आहे) पुनर्प्राप्त करण्याच्या कार्यांसाठी प्रभावी.",
+      "title": "Restrict Scheduling",
+      "description": "Restrict Scheduling to specified time ranges. Use Maximum Queue Size to control maximal number of Tasks processed between specified time ranges. Only effective for scheduling 'TO SCHEDULE' Retrieve Tasks.",
       "type": "array",
       "items": {
         "type": "string"

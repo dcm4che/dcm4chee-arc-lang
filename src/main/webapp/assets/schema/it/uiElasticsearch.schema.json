@@ -1,19 +1,19 @@
 {
-  "title": "Configurazione Elasticsearch dell'interfaccia utente",
-  "description": "Configurazione di Elasticsearch per la versione pro",
+  "title": "UI Elasticsearch Configuration",
+  "description": "Elasticsearch Configuration for the pro version",
   "type": "object",
   "required": [
     "dcmuiElasticsearchConfigName"
   ],
   "properties": {
     "dcmuiElasticsearchConfigName": {
-      "title": "Nome della Configurazione dell'interfaccia utente di Elasticsearch ",
-      "description": "Nome della Configurazione dell'interfaccia utente di Elasticsearch ",
+      "title": "UI Elasticsearch Configuration Name",
+      "description": "UI Elasticsearch Configuration Name",
       "type": "string"
     },
     "dcmuiElasticsearchURLObjects": {
-      "title": "URL dell'interfaccia utente di Elasticsearch ",
-      "description": "URL dell'interfaccia utente di Elasticsearch ",
+      "title": "UI Elasticsearch URL",
+      "description": "UI Elasticsearch URL",
       "titleKey":"{dcmuiElasticsearchURLName}",
       "type": "array",
       "items" : {

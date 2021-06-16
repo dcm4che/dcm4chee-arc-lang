@@ -32,7 +32,7 @@
 "dcmWadoIgnorePresentationLUTShape","Wado Ignore Presentation LUT Shape","Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. Overwrites value specified on Device level."
 "dcmQueryMaxNumberOfResults","Query Max Number Of Results","Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. Overwrites value specified on Device level."
 "dcmQidoMaxNumberOfResults","Qido Max Number Of Results","Maximal number of return results by QIDO-RS Service. 0 = unlimited. Overwrites value specified on Device level."
-"dcmQidoETag","Qido ETag","Indicates to return Last-Modified and ETag for Search Series or Instances of a Study; disabled if absent. Overwrites value specified on Device level."
+"dcmQidoETag","Qido ETag","Indicates to return Last-Modified and ETag for Search Series or Instances of a Study. Overwrites value specified on Device level."
 "dcmFwdMppsDestination","Mpps Forward Destination","Destination to forward MPPS N-CREATE RQ and N-SET RQ. Overwrites value specified on Device level."
 "dcmIanDestination","Ian Destination","Destination to send IAN N-CREATE RQ. Overwrites value specified on Device level."
 "dcmIanDelay","IAN Delay","Delay in ISO-8601 duration format PnDTnHnMn.nS after which an IAN for a received study is sent to configured IAN destinations. Overwrites value specified on Device level."

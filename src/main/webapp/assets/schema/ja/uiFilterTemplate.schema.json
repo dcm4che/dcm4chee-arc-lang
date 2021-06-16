@@ -1,6 +1,6 @@
 {
-  "title": "UI フィルター テンプレート",
-  "description": "定義された フィルター テンプレート",
+  "title": "UI Filter Template",
+  "description": "Defined filter template",
   "type": "object",
   "required": [
     "dcmuiFilterTemplateGroupName",
@@ -9,41 +9,41 @@
   ],
   "properties": {
     "dcmuiFilterTemplateGroupName": {
-      "title": "名前",
-      "description": "テンプレート名",
+      "title": "Name",
+      "description": "Name of the template",
       "type": "string"
     },
     "dcmuiFilterTemplateID": {
       "title": "ID",
-      "description": "この テンプレートを 適用できる フィルターの ID",
+      "description": "ID of the filter where this template can apply",
       "type": "string"
     },
     "dcmuiFilterTemplateDescription": {
-      "title": "説明",
-      "description": "フィルター テンプレートの 説明",
+      "title": "Description",
+      "description": "Filter template description",
       "type": "string"
     },
     "dcmuiFilterTemplateUsername": {
-      "title": "ユーザー名",
-      "description": "この テンプレートを 使用できる ユーザー名",
+      "title": "Username",
+      "description": "Username that can use this template",
       "type": "string"
     },
     "dcmuiFilterTemplateRole": {
-      "title": "役割",
-      "description": "この テンプレートを 使用できる ユーザー名 役割",
+      "title": "Role",
+      "description": "Username role that can use this template",
       "type": "string"
     },
     "dcmuiFilterTemplateFilters": {
-      "title": "フィルター",
-      "description": "この テンプレートの デフォルト フィルター、フィルター対 <キー = 値> (例えば : LocalAET=DCM4CHEE)。日付 フィルターの 場合、事前定義された キーワードを 使用して (例えば : 今日, 昨日, 今週, 今月, 先週, 先月, 今 四半期, 前四半期, 今年, 去年) フィルターの 動的な 値を 生成できます。",
+      "title": "Filters",
+      "description": "Default filters in this template, filter pare key=value (example LocalAET=DCM4CHEE). For date filter you can use the predefined keywords (today, yesterday, this_week, this_month, last_week, last_month, this_quarter, last_quarter, this_year, last_year) so the dynamic values of the filters can be generated.",
       "type": "array",
       "items" : {
         "type": "string"
       }
     },
     "dcmuiFilterTemplateDefault": {
-      "title": "デフォルト",
-      "description": "この テンプレートを デフォルトとして 使用 する",
+      "title": "Default",
+      "description": "Use this template as default",
       "type": "boolean",
       "default": false
     }

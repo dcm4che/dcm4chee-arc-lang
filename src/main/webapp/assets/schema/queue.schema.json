@@ -4,13 +4,13 @@
   "type": "object",
   "required": [
     "dcmQueueName",
-    "dcmJndiName",
+    "dcmTaskProcessorName",
+    "dcmMaxTasksParallel",
     "dcmRetryDelay",
     "dcmRetryOnWarning",
-    "dcmRetryInProcessOnStartup",
     "dcmRetryDelayMultiplier",
     "dcmMaxRetries",
-    "dcmMaxQueueSize"
+    "dicomInstalled"
   ],
   "properties": {
     "dcmQueueName": {
@@ -22,15 +22,41 @@
         "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiCompareSideObjects[*].dcmuiCompareSideQueueName"
       ]
     },
-    "dcmJndiName": {
-      "title": "JNDI Name",
-      "description": "JNDI Name",
+    "dicomDescription": {
+      "title": "Queue Description",
+      "description": "Unconstrained text description of the Queue",
       "type": "string"
     },
-    "dicomDescription": {
-      "title": "DICOM Description",
-      "description": "Textual description of the DICOM entity",
-      "type": "string"
+    "dcmTaskProcessorName": {
+      "title": "Task Processor Name",
+      "description": "Name of Task Processor associated with the Queue.",
+      "type": "string",
+      "enum" : [
+        "EXPORTER",
+        "MOVE_SCU",
+        "MPPS_SCU",
+        "IAN_SCU",
+        "STGCMT_SCP",
+        "STGCMT_SCU",
+        "STG_VERIFIER",
+        "HL7_SENDER",
+        "REST_CLIENT",
+        "REJECT_SCU",
+        "DIFF_SCU"
+      ]
+    },
+    "dicomInstalled": {
+      "title": "installed",
+      "description": "If false, processing of tasks in this queue is paused.",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmMaxTasksParallel": {
+      "title": "Maximum parallel Tasks",
+      "description": "Maximal number of tasks processed in parallel.",
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
     },
     "dcmMaxRetries": {
       "title": "Maximum Number of Retries",
@@ -65,12 +91,6 @@
       "type": "boolean",
       "default": false
     },
-    "dcmRetryInProcessOnStartup": {
-      "title": "Retry IN PROCESS on Startup",
-      "description": "Indicates to retry tasks left in status IN PROCESS on system start-up.",
-      "type": "boolean",
-      "default": false
-    },
     "dcmPurgeQueueMessageCompletedDelay": {
       "title": "Delay for purging completed queue messages",
       "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed queue messages are purged. If absent, there is no deletion for that particular queue",
@@ -94,13 +114,6 @@
       "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled queue messages are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
-    },
-    "dcmMaxQueueSize": {
-      "title": "Maximum Queue Size",
-      "description": "Maximal number of scheduled tasks in the queue. If the number of scheduled tasks reaches the limit, an attempt to schedule another tasks will fail. 0 = no limitation.",
-      "type": "integer",
-      "default": 0,
-      "minimum": 0
     },
     "dcmSchedule": {
       "title": "Restrict Scheduling",

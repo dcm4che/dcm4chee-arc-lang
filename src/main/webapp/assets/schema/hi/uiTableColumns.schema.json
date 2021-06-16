@@ -1,6 +1,6 @@
 {
-  "title": "UI स्टडी सारिणी कॉलम विन्यास",
-  "description": "स्टडी सारिणी कॉलम ।",
+  "title": "UI Study Table Columns Configuration",
+  "description": "Study Table Columns",
   "type": "object",
   "required": [
     "dcmuiColumnName",
@@ -9,23 +9,23 @@
   ],
   "properties": {
     "dcmuiColumnName": {
-      "title": "कॉलम का नाम",
-      "description": "स्टडी सारिणी में कॉलम का नाम ।",
+      "title": "Column Name",
+      "description": "The Name of the Column in the Study Table",
       "type": "string"
     },
     "dcmuiColumnTitle": {
-      "title": "कॉलम का वर्णन",
-      "description": "मंडराने पे दिखाए जानेवाला कॉलम का वर्णन ।",
+      "title": "Column Description",
+      "description": "Description of the Column, shown on hover",
       "type": "string"
     },
     "dcmuiValuePath": {
-      "title": "मूल्य का पथ",
-      "description": "कॉलम के मूल्य (json-Object) का पथ (उदाहरण के तौर पे: मरीज़ के नाम के लिए '00100010.Value[0].Alphabetic' या मरीज़़ के आई.डी. के लिए '00100020.Value[0]') ।",
+      "title": "Value path",
+      "description": "Value (json-Object) Path of the column (for Example: '00100010.Value[0].Alphabetic' for Patient's Name or '00100020.Value[0]' for Patient ID",
       "type": "string"
     },
     "dcmuiValueType": {
-      "title": "मूल्य का प्रकार",
-      "description": "मूल्य प्राप्त करने के लिए कॉलम का प्रकार, डिफ़ॉल्ट 'value' होगा ।",
+      "title": "Type of the value",
+      "description": "Type of the column how to get the value, default should be 'value'",
       "type": "string",
       "enum": [
         "value",
@@ -33,13 +33,13 @@
       ]
     },
     "dcmuiColumnWidth": {
-      "title": "कॉलम प्रभाव की चौड़ाई",
-      "description": "कॉलम प्रभाव की चौड़ाई ( x > 0.1 - x < infinite ), डिफ़ॉल्ट मूल्य १ होगा",
+      "title": "Column width in weight",
+      "description": "Width of the column in weight ( x > 0.1 - x < infinite ) default 1",
       "type":  "string"
     },
     "dcmuiColumnOrder": {
-      "title": "कॉलम का क्रम",
-      "description": "कॉलम का क्रम",
+      "title": "Order of the Column",
+      "description": "Order of the Column",
       "type":  "string"
     }
   }

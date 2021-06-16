@@ -1,6 +1,6 @@
 {
-  "title": "MWL निष्क्रिय समय नियम",
-  "description": "MWL निष्क्रिय समय नियम ।",
+  "title": "MWL Idle Timeout",
+  "description": "MWL Idle Timeout",
   "type": "object",
   "required": [
     "cn",
@@ -10,19 +10,19 @@
   ],
   "properties": {
     "cn": {
-      "title": "नाम",
-      "description": "MWL निष्क्रिय समय नियम का मनमाना/सार्थक नाम ।",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the MWL Idle Timeout.",
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "MWL SCP AE का नाम",
-      "description": "MWL SCP के आर्काइव AE का नाम जिसपे MWL निष्क्रिय समय नियम लागू होगा ।",
+      "title": "MWL SCP AE Title",
+      "description": "Archive AE Title of MWL SCP on which the MWL Idle Timeout shall be applied.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmAETitle": {
-      "title": "अनुसूचित स्टेशन AE का नाम",
-      "description": "अनुसूचित प्रक्रिया स्टेप्स के अनुसूचित स्टेशन AE के नाम जिनपे MWL निष्क्रिय समय नियम लागू होगा । यदि निर्दिष्ट नहीं किया गया है, तो MWL SCP द्वारा उपलब्ध कराये गए सारे अनुसूचित प्रक्रिया स्टेप्स पे MWL निष्क्रिय समय नियम लागू होगा ।",
+      "title": "Scheduled Station AE Title",
+      "description": "Scheduled Station AE Title(s) of Scheduled Procedure Steps for which the MWL Idle Timeout shall be applied. If none is specified, the MWL Idle Timeout is applied to all Scheduled Procedure Steps provided by the MWL SCP.",
       "type": "array",
       "items": {
         "type": "string"
@@ -30,8 +30,8 @@
       "format": "dcmAETitle"
     },
     "dcmMWLStatusOnIdle": {
-      "title": "निष्क्रिय होने पे MWL की स्थिति",
-      "description": "निष्क्रिय अनुसूचित प्रक्रिया स्टेप्स की स्थिति को निर्दिष्ट मूल्य से बदले ।",
+      "title": "MWL Status on Idle",
+      "description": "Change Status of idle Scheduled Procedure Steps to specified value.",
       "type": "string",
       "enum":[
         "CANCELED",
@@ -40,8 +40,8 @@
       ]
     },
     "dcmDuration": {
-      "title": "निष्क्रिय समय",
-      "description": "समय जिसके बाद मिलान अनुसूचित प्रक्रिया स्टेप्स की स्थिति को निर्दिष्ट अंतिम स्थिति से बदला जाएगा ।",
+      "title": "Idle Timeout",
+      "description": "Timeout after which the Status of matching Scheduled Procedure Steps is changed to the specified final status.",
       "type": "string",
       "format": "dcmDuration"
     }

@@ -1,6 +1,6 @@
 {
-  "title": "संचय प्रवेश निरीक्षण ID नियम",
-  "description": "संचय प्रवेश निरीक्षण ID नियम ।",
+  "title": "Store Access Control ID Rule",
+  "description": "Store Access Control ID Rule",
   "type": "object",
   "required": [
     "cn",
@@ -9,25 +9,25 @@
   ],
   "properties": {
     "cn": {
-      "title": "नाम",
-      "description": "संचय प्रवेश निरीक्षण ID नियम का मनमाना/सार्थक नाम ।",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the Store Access Control ID Rule",
       "type": "string"
     },
     "dcmStoreAccessControlID": {
-      "title": "संचय प्रवेश निरीक्षण ID",
-      "description": "सारे गुणों के नियम मिलने पे स्टडीज पे निरूपण किया गया प्रवेश निरीक्षण ID ।",
+      "title": "Store Access Control ID",
+      "description": "Access Control ID assigned to Studies which attributes match all conditions",
       "type": "string"
     },
     "dcmRulePriority": {
-      "title": "नियम प्राथमिकता",
-      "description": "नियम प्राथमिकता ।",
+      "title": "Rule Priority",
+      "description": "Rule Priority.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmProperty": {
-      "title": "नियम",
-      "description": "नियम इस प्रारूप में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} । किसी दिए गए विशेषता के लिए एक से अधिक मूल्य निर्दिष्ट करने के लिए उन्हें | प्रतीक के सहारे अलग किया जा सकता है । उदाहरण के तौर पे : SendingApplicationEntityTitle=FORWARD या Modality=MR|CT या ProcedureCodeSequence.CodeValue=MRProcedure या 00180015=KNEE या 00321034.00080100=RequestingServiceCode या ImageType[3]=LOCALIZER",
+      "title": "Conditions",
+      "description": "Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER",
       "type": "array",
       "items": {
         "type": "string"

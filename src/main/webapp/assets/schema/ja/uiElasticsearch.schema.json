@@ -1,19 +1,19 @@
 {
-  "title": "UI エラスティクサーチ 構成",
-  "description": "プロ 版の エラスティクサーチ 構成",
+  "title": "UI Elasticsearch Configuration",
+  "description": "Elasticsearch Configuration for the pro version",
   "type": "object",
   "required": [
     "dcmuiElasticsearchConfigName"
   ],
   "properties": {
     "dcmuiElasticsearchConfigName": {
-      "title": "UI エラスティクサーチ 構成名",
-      "description": "UI エラスティクサーチ 構成名",
+      "title": "UI Elasticsearch Configuration Name",
+      "description": "UI Elasticsearch Configuration Name",
       "type": "string"
     },
     "dcmuiElasticsearchURLObjects": {
-      "title": "UI エラスティクサーチ URL",
-      "description": "UI エラスティクサーチ URL",
+      "title": "UI Elasticsearch URL",
+      "description": "UI Elasticsearch URL",
       "titleKey":"{dcmuiElasticsearchURLName}",
       "type": "array",
       "items" : {

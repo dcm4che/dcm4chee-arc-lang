@@ -1,6 +1,6 @@
 {
-  "title": "डिव्हाइस",
-  "description": "DICOM डिव्हाइसशी संबंधित माहिती.",
+  "title": "Device",
+  "description": "DICOM Device related information",
   "type": "object",
   "required": ["dicomDeviceName", "dicomInstalled"],
   "groups": {
@@ -34,14 +34,14 @@
   },
   "properties": {
     "dicomDeviceName": {
-      "title": "डिव्हाइस नाव",
-      "description": "या डिव्हाइससाठी एक अद्वितीय नाव.",
+      "title": "Device Name",
+      "description": "A unique name for this device",
       "type": "string",
       "order":1
     },
     "dicomDescription": {
-      "title": "डिव्हाइसचे वर्णन",
-      "description": "डिव्हाइसचे अनियंत्रित मजकूर वर्णन.",
+      "title": "Device Description",
+      "description": "Unconstrained text description of the device",
       "type": "string",
       "order":2
     },
@@ -52,27 +52,27 @@
       "order":2
     },
     "dicomDeviceUID": {
-      "title": "डिव्हाइस UID",
-      "description": "डिव्हाइसचा अद्वितीय अभिज्ञापक.",
+      "title": "Device UID",
+      "description": "Unique identifier of the device",
       "type": "string",
       "pattern": "^[0-2]((\\.0)|(\\.[1-9][0-9]*))*$",
       "order":3
     },
     "dicomManufacturer": {
-      "title": "उत्पादक",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये उत्पादकाच्या (०००८,००७०) मूल्यासारखेच असावे.",
+      "title": "Manufacturer",
+      "description": "Should be the same as the value of Manufacturer (0008,0070) in SOP instances created by this device",
       "type": "string",
       "order":4
     },
     "dicomManufacturerModelName": {
-      "title": "उत्पादक मॉडेल नाव",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये उत्पादक मॉडेल नावाच्या (०००८,१०९०) मूल्यासारखेच असावे.",
+      "title": "Manufacturer Model Name",
+      "description": "Should be the same as the value of Manufacturer Model Name (0008,1090) in SOP instances created by this device",
       "type": "string",
       "order":5
     },
     "dicomSoftwareVersion": {
-      "title": "सॉफ्टवेअर आवृत्ती",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये सॉफ्टवेअर आवृत्ती (००१८,१०२०) मूल्यासारखेच असावे.",
+      "title": "Software Version",
+      "description": "Should be the same as the values of Software Versions (0018,1020) in SOP instances created by this device",
       "type": "array",
       "order":6,
       "items": {
@@ -80,20 +80,20 @@
       }
     },
     "dicomStationName": {
-      "title": "स्टेशनचे नाव",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये स्टेशनच्या नावाचे (०००८,१०१०) मूल्यासारखेच असावे.",
+      "title": "Station Name",
+      "description": "Should be the same as the value of Station Name (0008,1010) in SOP instances created by this device",
       "type": "string",
       "order":7
     },
     "dicomDeviceSerialNumber": {
-      "title": "डिव्हाइस अनुक्रमांक",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये डिव्हाइस अनुक्रमांक (००१८,१०००) च्या मूल्यासारखेच असावे.",
+      "title": "Device Serial Number",
+      "description": "Should be the same as the value of Device Serial Number (0018,1000) in SOP instances created by this device",
       "type": "string",
       "order":8
     },
     "dicomPrimaryDeviceType": {
-      "title": "प्राथमिक डिव्हाइस प्रकार",
-      "description": "डिव्हाइसच्या प्रकाराचे प्रतिनिधित्व करतो आणि संपादन मोडॅलिटीजसाठी सर्वात लागू आहे.",
+      "title": "Primary Device Type",
+      "description": "Represents the kind of device and is most applicable for acquisition modalities",
       "type": "array",
       "order":9,
       "items" : {
@@ -154,8 +154,8 @@
       }
     },
     "dicomInstitutionName": {
-      "title": "संस्थेचे नाव",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये संस्था नावाच्या (०००८,००८०) मूल्यासारखेच असावे.",
+      "title": "Institution Name",
+      "description": "Should be the same as the value of Institution Name (0008,0080) in SOP Instances created by this device",
       "type": "array",
       "order":10,
       "items": {
@@ -163,8 +163,8 @@
       }
     },
     "dicomInstitutionCode": {
-      "title": "संस्था कोड",
-      "description": "संस्था कोड या प्रारूपात (CV, CSD, \"CM\").",
+      "title": "Institution Code",
+      "description": "Institution Code(s) in format (CV, CSD, \"CM\")",
       "type": "array",
       "order":11,
       "items": {
@@ -172,8 +172,8 @@
       }
     },
     "dicomInstitutionAddress": {
-      "title": "संस्थेचा पत्ता",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये संस्थेच्या पत्त्याच्या (०००८,००८१) मूल्यासारखेच असावे.",
+      "title": "Institution Address",
+      "description": "Should be the same as the value of Institution Address (0008,0081) attribute in SOP Instances created by this device",
       "type": "array",
       "order":12,
       "items": {
@@ -181,8 +181,8 @@
       }
     },
     "dicomInstitutionDepartmentName": {
-      "title": "संस्था विभागाचे नाव",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये संस्थात्मक विभागाच्या नावाच्या (०००८,१०४०) मूल्यासारखेच असावे.",
+      "title": "Institution Department Name",
+      "description": "Should be the same as the value of Institutional Department Name (0008,1040) in SOP Instances created by this device",
       "type": "array",
       "order":13,
       "items": {
@@ -190,56 +190,56 @@
       }
     },
     "dicomIssuerOfPatientID": {
-      "title": "रुग्णाच्या ID चा जारीकर्ता",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये रुग्णाच्या ID चा जारीकर्ता (००१०,००२१), आणि वैकल्पिकरित्यादेखील रुग्णाच्या ID चा जारीकर्ता क्रम (००१०,००२४) च्या आयटमचा युनिव्हर्सल एंटिटी ID (००४०,००३२) आणि युनिव्हर्सल एंटिटी ID प्रकार (००४०,००३३) चे डीफॉल्ट मूल्य, या प्रारूपात : <Issuer of Patient ID>['&'<युनिव्हर्सल एंटिटी ID>'&'<युनिव्हर्सल एंटिटी ID प्रकार>].",
+      "title": "Issuer of Patient ID",
+      "description": "Default value for the Issuer of Patient ID (0010,0021), and optionally also default values for the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Patient ID Qualifiers Sequence (0010,0024) for SOP Instances created or queried by this device. Format: <Issuer of Patient ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":14
     },
     "dicomIssuerOfAccessionNumber": {
-      "title": "एक्सेशन क्रमांकाचा जारीकर्ता",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये एक्सेशन क्रमांकाचा जारीकर्ता क्रम (०००८,००५१) च्या आयटमचा स्थानिक नेमस्पेस एंटिटी ID (००४०,००३१), युनिव्हर्सल एंटिटी ID (००४०,००३२) आणि युनिव्हर्सल एंटिटी ID प्रकार (००४०,००३३) चे डीफॉल्ट मूल्य, या प्रारूपात : <स्थानिक नेमस्पेस एंटिटी ID>['&'<युनिव्हर्सल एंटिटी ID>'&'<युनिव्हर्सल एंटिटी ID प्रकार>].",
+      "title": "Issuer of Accession Number",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Accession Number Sequence (0008,0051) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":15
     },
     "dicomOrderPlacerIdentifier": {
-      "title": "ऑर्डर प्लेसर अभिज्ञापक",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये ऑर्डर प्लेसर अभिज्ञापक क्रम (००४०,००२६) च्या आयटमचा स्थानिक नेमस्पेस एंटिटी ID (००४०,००३१), युनिव्हर्सल एंटिटी ID (००४०,००३२) आणि युनिव्हर्सल एंटिटी ID प्रकार (००४०,००३३) चे डीफॉल्ट मूल्य, या प्रारूपात : <स्थानिक नेमस्पेस एंटिटी ID>['&'<युनिव्हर्सल एंटिटी ID>'&'<युनिव्हर्सल एंटिटी ID प्रकार>].",
+      "title": "Order Placer Identifier",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Placer Identifier Sequence (0040,0026) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":16
     },
     "dicomOrderFillerIdentifier": {
-      "title": "ऑर्डर फिलर अभिज्ञापक",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये ऑर्डर फिलर अभिज्ञापक क्रम (००४०,००२७) च्या आयटमचा स्थानिक नेमस्पेस एंटिटी ID (००४०,००३१), युनिव्हर्सल एंटिटी ID (००४०,००३२) आणि युनिव्हर्सल एंटिटी ID प्रकार (००४०,००३३) चे डीफॉल्ट मूल्य, या प्रारूपात : <स्थानिक नेमस्पेस एंटिटी ID>['&'<युनिव्हर्सल एंटिटी ID>'&'<युनिव्हर्सल एंटिटी ID प्रकार>].",
+      "title": "Order Filler Identifier",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Filler Identifier Sequence (0040,0027) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":17
     },
     "dicomIssuerOfAdmissionID": {
-      "title": "प्रवेश ID चा जारीकर्ता",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये प्रवेश ID चा जारीकर्ता क्रम (००३८,००१४) च्या आयटमचा स्थानिक नेमस्पेस एंटिटी ID (००४०,००३१), युनिव्हर्सल एंटिटी ID (००४०,००३२) आणि युनिव्हर्सल एंटिटी ID प्रकार (००४०,००३३) चे डीफॉल्ट मूल्य, या प्रारूपात : <स्थानिक नेमस्पेस एंटिटी ID>['&'<युनिव्हर्सल एंटिटी ID>'&'<युनिव्हर्सल एंटिटी ID प्रकार>].",
+      "title": "Issuer of Admission ID",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":18
     },
     "dicomIssuerOfServiceEpisodeID": {
-      "title": "सेवा एपिसोड ID चा जारीकर्ता",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये सेवा एपिसोड ID चा जारीकर्ता क्रम (००३८,००६४) च्या आयटमचा स्थानिक नेमस्पेस एंटिटी ID (००४०,००३१), युनिव्हर्सल एंटिटी ID (००४०,००३२) आणि युनिव्हर्सल एंटिटी ID प्रकार (००४०,००३३) चे डीफॉल्ट मूल्य, या प्रारूपात : <स्थानिक नेमस्पेस एंटिटी ID>['&'<युनिव्हर्सल एंटिटी ID>'&'<युनिव्हर्सल एंटिटी ID प्रकार>].",
+      "title": "Issuer of Service Episode ID",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Service Episode ID Sequence (0038,0064) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":19
     },
     "dicomIssuerOfContainerIdentifier": {
-      "title": "कंटेनर अभिज्ञापकाचा जारीकर्ता",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये कंटेनर अभिज्ञापकाचा जारीकर्ता क्रम (००४०,०५१३) च्या आयटमचा स्थानिक नेमस्पेस एंटिटी ID (००४०,००३१), युनिव्हर्सल एंटिटी ID (००४०,००३२) आणि युनिव्हर्सल एंटिटी ID प्रकार (००४०,००३३) चे डीफॉल्ट मूल्य, या प्रारूपात : <स्थानिक नेमस्पेस एंटिटी ID>['&'<युनिव्हर्सल एंटिटी ID>'&'<युनिव्हर्सल एंटिटी ID प्रकार>].",
+      "title": "Issuer of Container Identifier",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Container Identifier Sequence (0040,0513) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":20
     },
     "dicomIssuerOfSpecimenIdentifier": {
-      "title": "नमुना अभिज्ञापकाचा जारीकर्ता",
-      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये नमुना अभिज्ञापकाचा जारीकर्ता क्रम (००४०,०५६२) च्या आयटमचा स्थानिक नेमस्पेस एंटिटी ID (००४०,००३१), युनिव्हर्सल एंटिटी ID (००४०,००३२) आणि युनिव्हर्सल एंटिटी ID प्रकार (००४०,००३३) चे डीफॉल्ट मूल्य, या प्रारूपात : <स्थानिक नेमस्पेस एंटिटी ID>['&'<युनिव्हर्सल एंटिटी ID>'&'<युनिव्हर्सल एंटिटी ID प्रकार>].",
+      "title": "Issuer of Specimen Identifier",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Specimen Identifier Sequence (0040,0562) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":21
     },
     "dicomAuthorizedNodeCertificateReference": {
-      "title": "अधिकृत नोड प्रमाणपत्र संदर्भ",
-      "description": "या डिव्हाइसशी संपर्क साधण्यास अधिकृत असलेल्या नोड्सच्या प्रमाणपत्रांसाठी डोमेन नावे.",
+      "title": "Authorized Node Certificate Reference",
+      "description": "The DNs for the certificates of nodes that are authorized to connect to this device",
       "type": "array",
       "order":22,
       "items": {
@@ -247,8 +247,8 @@
       }
     },
     "dicomThisNodeCertificateReference": {
-      "title": "या नोडचे प्रमाणपत्र संदर्भ",
-      "description": "या नोडसाठी सार्वजनिक प्रमाणपत्रांची डोमेन नावे.",
+      "title": "This Node Certificate Reference",
+      "description": "The DNs of the public certificate(s) for this node",
       "type": "array",
       "order":23,
       "items": {
@@ -256,15 +256,15 @@
       }
     },
     "dicomInstalled": {
-      "title": "स्थापित",
-      "description": "हे डिव्हाइस सध्या नेटवर्कवर स्थापित आहे की नाही हे दर्शविणारे बूलियन.",
+      "title": "installed",
+      "description": "Boolean to indicate whether this device is presently installed on the network",
       "type": "boolean",
       "order":24,
       "default": true
     },
     "dicomNetworkConnection": {
-      "title": "नेटवर्क कनेक्शन",
-      "description": "डिव्हाइसचे नेटवर्क कनेक्शन.",
+      "title": "Network Connections",
+      "description": "network connections of the device",
       "type": "array",
       "order":25,
       "titleKey":"{dicomHostname}:{dicomPort} {cn}",
@@ -273,8 +273,8 @@
       }
     },
     "dicomNetworkAE": {
-      "title": "नेटवर्क AE",
-      "description": "डिव्हाइसद्वारे प्रदान केलेले अनुप्रयोग घटक.",
+      "title": "Network AEs",
+      "description": "Application entity provided by the device",
       "type": "array",
       "titleKey":"{dicomAETitle}",
       "order":26,
@@ -283,8 +283,8 @@
       }
     },
     "dcmDevice": {
-      "title": "डिव्हाइस विस्तार",
-      "description": "DCM4CHE मालकीचे डिव्हाइस विशेषता.",
+      "title": "Device Extension",
+      "description": "dcm4che proprietary Device Attributes",
       "$ref": "dcmDevice.schema.json",
       "order":27
     }

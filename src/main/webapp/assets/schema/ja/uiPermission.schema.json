@@ -1,6 +1,6 @@
 {
-  "title": "UI 許可",
-  "description": "UI 許可",
+  "title": "UI Permission",
+  "description": "UI Permission",
   "type": "object",
   "required": [
     "dcmuiPermissionName",
@@ -8,13 +8,13 @@
   ],
   "properties": {
     "dcmuiPermissionName": {
-      "title": "UI アクセス 許可 名前",
-      "description": "UI アクションの アクセス 許可の 名前",
+      "title": "UI Permission Name",
+      "description": "Name of Permission for UI Action",
       "type": "string"
     },
     "dcmuiAction": {
-      "title": "UI アクション",
-      "description": "UI アクション",
+      "title": "UI Action",
+      "description": "UI Action",
       "type": "string",
       "enum": [
         "menu-studies",
@@ -82,8 +82,8 @@
       ]
     },
     "dcmuiActionParam": {
-      "title": "UI アクション パラメータ",
-      "description": "UI アクション パラメータ",
+      "title": "UI Action Parameter",
+      "description": "UI Action Parameter",
       "type": "array",
       "items" : {
         "type": "string",
@@ -102,8 +102,8 @@
       }
     },
     "dcmAcceptedUserRole": {
-      "title": "承認された ユーザー 役割",
-      "description": "承認された ユーザー 役割",
+      "title": "Accepted User Role",
+      "description": "Accepted User Role",
       "type": "array",
       "items" : {
         "type": "string"

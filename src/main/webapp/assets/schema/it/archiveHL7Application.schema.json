@@ -1,25 +1,25 @@
 {
-  "title": "Applicazione HL7 dell'archivio",
-  "description": "Informazioni relative all'applicazione HL7 dell'archivio DICOM",
+  "title": "Archive HL7 Application",
+  "description": "DICOM Archive HL7 Application related information",
   "type": "object",
   "required": [
     "dicomAETitle"
   ],
   "properties": {
     "dicomAETitle": {
-      "title": "Titolo AE",
-      "description": "Titolo dell'archivio AE associato a questa applicazione HL7.",
+      "title": "AE Title",
+      "description": "Archive AE Title associated with this HL7 Application.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmRecordAttributeModification": {
-      "title": "Modifica degli attributi del Record",
-      "description": "Indica se le modifiche degli attributi degli oggetti memorizzati da questa applicazione HL7 sono registrate negli elementi della sequenza degli attributi originali. Sovrascrive i valori specificati a livello del dispositivo.",
+      "title": "Record Attribute Modification",
+      "description": "Indicates if modifications of attributes of stored objects by this HL7 Application are recorded in Items of the Original Attributes Sequence. Overwrites value specified on Device level.",
       "type": "boolean"
     },
     "hl7ORUAction": {
-      "title": "Azione ORU HL7",
-      "description": "Specifica l'azione alla ricezione del messaggio HL7 ORU ^ R01: IMPORT_REPORT (= transcodifica ricevuta HL7 ORU ^ R01 in DICOM SR), MWL_COMPLETED (= imposta lo stato degli elementi MWL corrispondenti su COMPLETED). Sovrascrive i valori specificati a livello del dispositivo.",
+      "title": "HL7 ORU Action",
+      "description": "Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). Overwrites value specified on Device level.",
       "type": "array",
       "items": {
         "type": "string",
@@ -30,18 +30,18 @@
       }
     },
     "hl7PatientUpdateTemplateURI": {
-      "title": "URI del modello di aggiornamento del paziente HL7",
-      "description": "Specifica l'URI per il foglio di stile utilizzato da servizio di aggiornamento del paziente in HL7v2. Sovrascrive i valori specificati a livello del dispositivo.",
+      "title": "HL7 Patient Update Template URI",
+      "description": "Specifies URI for the style sheet used by HL7v2 Patient Update Service. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7ImportReportTemplateURI": {
-      "title": "URI del modello di transcodifica per l'importazione dei messaggi HL7",
-      "description": "Specifica l'URI per il foglio di stile da transcodificare ricevuto HL7 ORU ^ R01 in DICOM SR. Sovrascrive il valore specificato a livello di dispositivo.",
+      "title": "HL7 Import Report Template URI",
+      "description": "Specifies URI for the style sheet to transcode received HL7 ORU^R01 to DICOM SR. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7ImportReportTemplateParam": {
-      "title": "Parametro del modello di report di importazione HL7",
-      "description": "Parametri XSLT passati al foglio di stile specificato dall'URI del modello di report di importazione HL7. Formato: {nome}={valore}. Ad esempio: \"langCodeValue=et\", \"langCodingSchemeDesignator=RFC5646\", \"langCodeMeaning=Estonian\". Sovrascrive i valori specificati a livello del dispositivo.",
+      "title": "HL7 Import Report Template Parameter",
+      "description": "XSLT parameters passed to style sheet specified by HL7 Import Report Template URI. Format: {name}={value}. E.g.: 'langCodeValue=et', 'langCodingSchemeDesignator=RFC5646', 'langCodeMeaning=Estonian'. Overwrites value specified on Device level.",
       "type": "array",
       "items": {
         "type": "string"
@@ -49,12 +49,12 @@
     },
     "hl7ScheduleProcedureTemplateURI": {
       "title": "HL7 Schedule Procedure Template URI",
-      "description": "Specifica l'URI per il foglio di stile con cui transcodificare i messaggi HL7 ORM^O01, OMI^O23, OMG^O19 in elementi DICOM MWL ricevuti. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Specifies URI for the style sheet to transcode received HL7 ORM^O01, OMI^O23, OMG^O19 to DICOM MWL items. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7ScheduledProtocolCodeInOrder": {
       "title": "HL7 Schedule Protocol Code in Order",
-      "description": "Specifica la posizione del codice del protocollo pianificato nel messaggio di ordine HL7 ricevuto. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Specifies location of Scheduled Protocol Code in received HL7 Order message. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
         "OBR_4_1",
@@ -63,7 +63,7 @@
     },
     "hl7ScheduledStationAETInOrder": {
       "title": "HL7 Schedule Station AET in Order",
-      "description": "Specifica la posizione del titolo AE della stazione pianificata nel messaggio di ordine HL7 ricevuto. Non deve essere configurato per HL7 v2.5.1 OMI^O23 con segmento IPC. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Specifies location of Scheduled Station AE Title in received HL7 Order message. Should not be configured for HL7 v2.5.1 OMI^O23 with IPC segment. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
         "ORC_18"
@@ -71,17 +71,17 @@
     },
     "hl7LogFilePattern": {
       "title": "HL7 Log File Pattern",
-      "description": "Percorso dei messaggi HL7 che verranno acquisiti esattamente come ricevuti. Se assente, non c'è registrazione log. Sovrascrive il valore specificato a livello di dispositivo. per esempio. $ {jboss.server.data.dir}/hl7/${date, yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "description": "Path to HL7 messages which will be captured exactly as received. If absent, there is no logging. Overwrites value specified on Device level. eg. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
       "type": "string"
     },
     "hl7ErrorLogFilePattern": {
       "title": "HL7 Error Log File Pattern",
-      "description": "Percorso ai messaggi HL7 che verranno acquisiti esattamente come ricevuti, quando l'elaborazione dei messaggi HL7 fallisce. Se assente, non c'è registrazione log. Sovrascrive il valore specificato a livello di dispositivo. per esempio. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "description": "Path to HL7 messages which will be captured exactly as received, when processing of HL7 messages fails. If absent, there is no logging. Overwrites value specified on Device level. eg. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
       "type": "string"
     },
     "hl7NoPatientCreateMessageType": {
       "title": "HL7 No Patient Create Message Type",
-      "description": "Tipi di messaggio (MessageType^TriggerEvent) dei messaggi HL7 che vengono elaborati solo se nel database è già presente un record paziente, il cui ID paziente corrisponde all'ID paziente nel segmento PID o MRG del messaggio. Pertanto, nessun nuovo record paziente verrà creato dai messaggi del tipo specificato. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Message Type(s) (MessageType^TriggerEvent) of HL7 messages which are only processed, if there is already a Patient record in the database, which Patient ID matches the Patient ID in the PID or MRG segment of the message. Thus no new Patient record will be created by messages of the specified types. Overwrites value specified on Device level.",
       "type": "array",
       "items": {
         "type": "string"
@@ -89,25 +89,25 @@
     },
     "hl7PatientArrivalMessageType": {
       "title": "HL7 Patient Arrival Message Type",
-      "description": "Tipo di messaggio dei messaggi HL7 che attivano la modifica dello stato dei passi della procedura pianificata associate al paziente da SCHEDULED ad ARRIVED. Sovrascrivi il valore specificato a livello di dispositivo.",
+      "description": "Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. Overwrite value specified on Device level.",
       "type": "string",
       "enum": [
         "ADT^A10"
       ]
     },
     "hl7UseNullValue": {
-      "title": "Usa valore nullo HL7",
-      "description": "Specifica se i valori nulli HL7 v2 (specificati nel campo del segmento come |\"\"|) vengono utilizzati nei messaggi HL7 inviati per attributi di entità non presenti o vuoti. Necessario per annullare l'impostazione degli attributi dell'entità nell'applicazione HL7 remota. Sovrascrive i valori specificati a livello del dispositivo.",
+      "title": "Use HL7 Null Value",
+      "description": "Specifies if HL7 v2 null values (specified in segment field as |\"\"|) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.",
       "type": "boolean"
     },
     "hl7VeterinaryUsePatientName": {
-      "title": "Nome Paziente HL7 per uso Veterinario",
-      "description": "Indica di forzare l'uso veterinario dei nomi dei pazienti nella mappatura dei campi PID HL7 agli attributi DICOM: utilizzare solo i primi due componenti del PID.5 come nome paziente DICOM; se PID.5 contiene solo un componente, usa quel valore come nome e il primo componente di PID.9 come cognome del nome paziente DICOM. Sovrascrive i valori specificati a livello del dispositivo.",
+      "title": "HL7 Veterinary use Patient Name",
+      "description": "Indicates to force veterinary use of Patient Names on mapping HL7 PID fields to DICOM attributes: only use the first two components of PID.5 as DICOM Patient Name; if PID.5 only contains one component, use that value as given name, and the first component of PID.9 as family name of the DICOM Patient Name. Overwrites value specified on Device level.",
       "type": "boolean"
     },
     "hl7OrderMissingStudyIUIDPolicy": {
-      "title": "Politica usata per l'UID di un ordiine di un'istanza con studio mancante",
-      "description": "Specifica la politica per l'UID dell'istanza di studio mancante nei messaggi dell'ordine HL7 in arrivo. Sovrascrive i valori specificati a livello del dispositivo.",
+      "title": "HL7 Order Missing Study Instance UID Policy",
+      "description": "Specifies policy for missing Study Instance UID in incoming HL7 Order messages. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
         "REJECT",
@@ -116,8 +116,8 @@
       ]
     },
     "hl7ImportReportMissingStudyIUIDPolicy": {
-      "title": "Politica usata per l'UID dell'importazione di un report HL7 in un istanza con studio mancante",
-      "description": "Specifica la politica per l'UID dell'istanza di studio mancante nei messaggi ORU (Report di importazione HL7) in arrivo. Sovrascrive i valori specificati a livello del dispositivo.",
+      "title": "HL7 Import Report Missing Study Instance UID Policy",
+      "description": "Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
         "REJECT",
@@ -125,9 +125,15 @@
         "ACCESSION_BASED"
       ]
     },
+    "hl7ImportReportMissingStudyIUIDCFindSCP": {
+      "title": "HL7 Import Report Missing Study Instance UID C-FIND SCP",
+      "description": "AE Title of external C-FIND SCP to query for missing Study Instance UID in incoming HL7 Import Report (ORU) messages by given Accession Number. Overwrites value specified on Device level.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
     "hl7ReferredMergedPatientPolicy": {
-      "title": "Politica per il paziente unito referenziato HL7",
-      "description": "Specifica la politica sui messaggi HL7 in arrivo che fanno riferimento a un paziente già unito. REJECT: rifiuta qualsiasi messaggio HL7 di questo tipo, IGNORE: ignora qualsiasi messaggio HL7 di questo tipo, IGNORE_DUPLICATE_MERGE: ignora solo i messaggi di unione HL7 duplicati, rifiuta qualsiasi altro messaggio simile. Sovrascrive i valori specificati a livello del dispositivo.",
+      "title": "HL7 Referred Merged Patient Policy",
+      "description": "Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
         "REJECT",
@@ -137,13 +143,13 @@
     },
     "hl7DicomCharacterSet": {
       "title": "HL7 Dicom Character Set",
-      "description": "Indica di utilizzare il valore specificato del set di caratteri specifico (0008,0005) nei set di dati transcodificati dai messaggi HL7 ricevuti. Utilizzare il valore corrispondente al set di caratteri del messaggio HL7 specificato da MSH-18, se assente.",
+      "description": "Indicates to use specified Value of Specific Character Set (0008,0005) in Data Sets transcoded from received HL7 messages. Use Value corresponding to Character Set of the HL7 message specified by MSH-18 if absent.",
       "type": "string",
       "format": "dcmCharset"
     },
     "hl7ForwardRule": {
-      "title": "Regola di inoltro HL7",
-      "description": "HL7 Forward Rule. Integra i valori specificati a livello di dispositivo.",
+      "title": "HL7 Forward Rule",
+      "description": "HL7 Forward Rule. Supplements values specified on Device level.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -151,8 +157,8 @@
       }
     },
     "hl7ExportRule": {
-      "title": "Regola di esportazione HL7",
-      "description": "Regole di esportazione applicate ai messaggi HL7 ricevuti da questa applicazione HL7. Integra le regole di esportazione HL7 specificate a livello di dispositivo.",
+      "title": "HL7 Export Rule",
+      "description": "Export Rules applied to HL7 messages received by this HL7 Application. Supplements HL7 Export Rules specified on Device level.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -160,8 +166,8 @@
       }
     },
     "hl7UPSOnHL7": {
-      "title": "UPS su regole HL7",
-      "description": "UPS su HL7 Regole applicate ai messaggi HL7 ricevuti da qualsiasi Applicazione HL7. Integra le regole di esportazione HL7 specificate a livello di dispositivo.",
+      "title": "UPS on HL7 Rules",
+      "description": "UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. Supplements UPS on HL7 Rules specified on Device level.",
       "type": "array",
       "titleKey": "{hl7UPSOnHL7ID}",
       "items": {
@@ -169,8 +175,8 @@
       }
     },
     "hl7PrefetchRule": {
-      "title": "Regole di Prefetch HL7",
-      "description": "Regole di esportazione applicate ai messaggi HL7 ricevuti da questa applicazione HL7. Integra le regole di esportazione HL7 specificate a livello di dispositivo.",
+      "title": "HL7 Prefetch Rule",
+      "description": "Prefetch Rules applied to HL7 messages received by this HL7 Application. Supplements HL7 Prefetch Rules specified on Device level.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -178,8 +184,8 @@
       }
     },
     "hl7StudyRetentionPolicy": {
-      "title": "Criteri di Conservazione Studio HL7",
-      "description": "Criteri di conservazione dello studio HL7 attivati dai messaggi HL7 ricevuti da questa applicazione HL7. Integra i valori specificati a livello di dispositivo.",
+      "title": "HL7 Study Retention Policy",
+      "description": "HL7 Study Retention Policies triggered by HL7 messages received by this HL7 Application. Supplements values specified on Device level.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -187,8 +193,8 @@
       }
     },
     "hl7OrderScheduledStation": {
-      "title": "Stazione Pianificata per un Ordine HL7",
-      "description": "Scheduled Station selected on MWL HL7 Order Feed. Integra i valori specificati a livello di dispositivo.",
+      "title": "Scheduled Station for HL7 Order",
+      "description": "Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -196,8 +202,8 @@
       }
     },
     "hl7OrderSPSStatus": {
-      "title": "Stato SPS per un Ordine HL7",
-      "description": "Specifica lo stato SPS degli elementi DICOM MWL creati/aggiornati sui messaggi HL7 ORM ^ O01, OMI ^ O23, OMG ^ O19 ricevuti. Sovrascrive i valori specificati a livello di dispositivo.",
+      "title": "SPS Status for HL7 Order",
+      "description": "Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level.",
       "type": "array",
       "titleKey":"{dcmSPSStatus}",
       "items" : {

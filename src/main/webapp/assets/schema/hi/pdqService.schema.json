@@ -1,6 +1,6 @@
 {
-  "title": "PDQ सेवा",
-  "description": "PDQ सेवा वर्णनकर्ता ।",
+  "title": "PDQ Service",
+  "description": "PDQ Service Descriptor",
   "type": "object",
   "required": [
     "dcmPDQServiceID",
@@ -9,26 +9,26 @@
   ],
   "properties": {
     "dcmPDQServiceID": {
-      "title": "PDQ सेवा ID",
-      "description": "PDQ सेवा ID ।",
+      "title": "PDQ Service ID",
+      "description": "PDQ Service ID",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
       ]
     },
     "dcmURI": {
-      "title": "PDQ सेवा URI",
-      "description": "PDQ सेवा URI, उदाहरण के तौर पे 'pdq-dicom:FINDSCP' ।",
+      "title": "PDQ Service URI",
+      "description": "PDQ Service URI, e.g. 'pdq-dicom:FINDSCP'.",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "PDQ सेवा का वर्णन",
-      "description": "PDQ सेवा का स्वैछिक विषय वर्णन ।",
+      "title": "PDQ Service Description",
+      "description": "Unconstrained text description of the PDQ Service",
       "type": "string"
     },
     "dcmTag": {
-      "title": "मरीज़ रेकॉर्ड के गुण",
-      "description": "प्राप्त किए गए मरीज़ के रेकॉर्ड के गुण, अगर निर्दिष्ट न किया हो तो मरीज़ के रेकॉर्ड के सारे मौजूद गुणों को प्राप्त किया जाएगा ।",
+      "title": "Patient Attributes",
+      "description": "Queried Patient Attributes - if not specified all available Patient attributes will be queried",
       "type": "array",
       "items": {
         "type": "string"
@@ -36,15 +36,15 @@
       "format": "dcmTag"
     },
     "dcmEntity": {
-      "title": "तत्त्व प्राप्ति",
-      "description": "C-FIND SCP से मरीज़ के रेकॉर्ड या मरीज़ के स्टडीज की प्राप्ति का संकेत करता है । सिर्फ DICOM PDQ सेवाओं के लिए प्रभावशाली ('PDQ सेवा URI': pdq-dicom:{AETitle}) ।",
+      "title": "Query Entity",
+      "description": "Indicates if the C-FIND SCP is queried for a particular Patient or for Studies of a particular Patient. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle}).",
       "type": "string",
       "enum": [ "Patient", "Study" ],
       "default": "Patient"
     },
     "dcmProperty": {
-      "title": "PDQ सेवा गुण",
-      "description": "गुण इस प्रारूप में <नाम>=<मूल्य>, उदाहरण के तौर पे 'LocalAET=DCM4CHEE' ।",
+      "title": "PDQ Service Property",
+      "description": "Property in format <name>=<value>, e.g. 'LocalAET=DCM4CHEE'",
       "type": "array",
       "items": {
         "type": "string"

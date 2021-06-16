@@ -1,6 +1,6 @@
 {
-  "title": "Estensione della capacità di trasferimento",
-  "description": "attributi di capacità di trasferimento proprietari di dcm4che",
+  "title": "Transfer Capability Extension",
+  "description": "dcm4che proprietary Transfer Capability Attributes",
   "type": "object",
   "required": [
     "dcmRelationalQueries",
@@ -11,7 +11,7 @@
   "properties": {
     "dcmPreferredTransferSyntax": {
       "title": "PreferredTransferSyntax",
-      "description": "Sintassi di trasferimento preferita per la selezione della sintassi di trasferimento all'interno di un contesto di presentazione, ordinata per priorità. Sovrascrive i valori specificati a livello AE.",
+      "description": "Preferred Transfer Syntax for selection of Transfer Syntax within a Presentation Context, ordered by priority. Overwrites values specified on AE level.",
       "type": "array",
       "format": "dcmTransferSyntax",
       "items": {
@@ -19,32 +19,32 @@
       }
     },
     "dcmRelationalQueries": {
-      "title": "Query relazionali",
-      "description": "Abilita/disabilita le query relazionali.",
+      "title": "Relational Queries",
+      "description": "Enable/disable relational queries.",
       "type": "boolean",
       "default": false
     },
     "dcmCombinedDateTimeMatching": {
-      "title": "Corrispondenza combinata di data e ora",
-      "description": "Abilita/disabilita la corrispondenza combinata di data e ora.",
+      "title": "Combined Date Time Matching",
+      "description": "Enable/disable combined date time matching.",
       "type": "boolean",
       "default": false
     },
     "dcmFuzzySemanticMatching": {
-      "title": "Corrispondenza semantica fuzzy",
-      "description": "Abilita/disabilita la corrispondenza semantica fuzzy dei nomi delle persone.",
+      "title": "Fuzzy Semantic Matching",
+      "description": "Enable/disable fuzzy semantic matching of person  names.",
       "type": "boolean",
       "default": false
     },
     "dcmTimezoneQueryAdjustment": {
-      "title": "Regolazione della query sul fuso orario",
-      "description": "Abilita / disabilita la regolazione della query del fuso orario",
+      "title": "Timezone Query Adjustment",
+      "description": "Enable/disable timezone query adjustment",
       "type": "boolean",
       "default": false
     },
     "dcmStorageConformance": {
-      "title": "Conformità dello storage",
-      "description": "Indica il livello di conformità di un SCP di archiviazione",
+      "title": "Storage Conformance",
+      "description": "Indicates level of Conformance of a Storage SCP",
       "type": "integer",
       "enum": [
         0,
@@ -54,8 +54,8 @@
       ]
     },
     "dcmDigitalSignatureSupport": {
-      "title": "Supporto per la firma digitale",
-      "description": "Indica il livello di supporto della firma digitale di un SCP di archiviazione",
+      "title": "Digital Signature Support",
+      "description": "Indicates level of Digital Signature Support of a Storage SCP",
       "type": "integer",
       "enum": [
         0,
@@ -65,8 +65,8 @@
       ]
     },
     "dcmDataElementCoercion": {
-      "title": "Coercizione degli elementi dei dati",
-      "description": "Indica la coercizione di elementi di dati di un SCP di archiviazione",
+      "title": "Data Element Coercion",
+      "description": "Indicates coercion of Data Elements of a Storage SCP",
       "type": "integer",
       "enum": [
         0,

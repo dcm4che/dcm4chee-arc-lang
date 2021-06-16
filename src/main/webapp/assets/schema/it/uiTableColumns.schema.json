@@ -1,6 +1,6 @@
 {
-  "title": "Configurazione delle colonne della tabella di studio dell'interfaccia utente",
-  "description": "Colonne della tabella dello studio",
+  "title": "UI Study Table Columns Configuration",
+  "description": "Study Table Columns",
   "type": "object",
   "required": [
     "dcmuiColumnName",
@@ -9,23 +9,23 @@
   ],
   "properties": {
     "dcmuiColumnName": {
-      "title": "Nome colonna",
-      "description": "Il nome della colonna nella tabella di studio",
+      "title": "Column Name",
+      "description": "The Name of the Column in the Study Table",
       "type": "string"
     },
     "dcmuiColumnTitle": {
-      "title": "Descrizione colonna",
-      "description": "Descrizione della colonna, mostrata al passaggio del mouse",
+      "title": "Column Description",
+      "description": "Description of the Column, shown on hover",
       "type": "string"
     },
     "dcmuiValuePath": {
-      "title": "Percorso",
-      "description": "Valore (json-Object) Percorso della colonna, ad esempio: '00100010.Value[0].Alfabetico \"per il nome del paziente o\" 00100020.Value[0]' for Patient ID",
+      "title": "Value path",
+      "description": "Value (json-Object) Path of the column (for Example: '00100010.Value[0].Alphabetic' for Patient's Name or '00100020.Value[0]' for Patient ID",
       "type": "string"
     },
     "dcmuiValueType": {
-      "title": "Tipo di valore",
-      "description": "Tipo di colonna come ottenere il valore, il valore predefinito dovrebbe essere \"valore\"",
+      "title": "Type of the value",
+      "description": "Type of the column how to get the value, default should be 'value'",
       "type": "string",
       "enum": [
         "value",
@@ -33,13 +33,13 @@
       ]
     },
     "dcmuiColumnWidth": {
-      "title": "Larghezza della colonna in peso",
-      "description": "Larghezza della colonna in peso (x> 0,1 - x <infinito) default 1",
+      "title": "Column width in weight",
+      "description": "Width of the column in weight ( x > 0.1 - x < infinite ) default 1",
       "type":  "string"
     },
     "dcmuiColumnOrder": {
-      "title": "Ordine della Colonna",
-      "description": "Ordine della Colonna",
+      "title": "Order of the Column",
+      "description": "Order of the Column",
       "type":  "string"
     }
   }

@@ -1,31 +1,31 @@
 {
-  "title": "नेटवर्क संपर्क",
-  "description": "एका डिव्हाइसवर एका TCP/UDP पोर्टचे वर्णन.",
+  "title": "Network Connection",
+  "description": "Describes one TCP/UDP port on one network device.",
   "type": "object",
   "required": [
     "dicomHostname"
   ],
   "properties": {
     "cn": {
-      "title": "नाव",
-      "description": "नेटवर्क संपर्काचे अनियंत्रित / अर्थपूर्ण नाव.",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name for the Network Connection object",
       "type": "string"
     },
     "dicomHostname": {
-      "title": "होस्टचे नाव",
-      "description": "या विशिष्ट संपर्काचे DNS नाव.",
+      "title": "Hostname",
+      "description": "DNS name for this particular connection",
       "type": "string"
     },
     "dicomPort": {
-      "title": "पोर्ट",
-      "description": "सेवा ऐकत असलेले TCP/UDP पोर्ट. कदाचित अनुपस्थित होऊ शकते, जर हे नेटवर्क संपर्क केवळ आउटबाउंड संपर्कांसाठी वापरले .",
+      "title": "Port",
+      "description": "TCP/UDP port that a service is listening on. May be missing if this network connection is only used for outbound connections",
       "type": "integer",
       "minimum": 1,
       "maximum": 99999
     },
     "dicomTLSCipherSuite": {
-      "title": "TLS सायफर सुइट्स",
-      "description": "या विशिष्ट संपर्कवर समर्थित TLS सायफर सुइट्स. उपस्थित नसल्यास, TLS अक्षम केले जाईल.",
+      "title": "TLS CipherSuites",
+      "description": "The TLS CipherSuites that are supported on this particular connection. If not present TLS is disabled",
       "type": "array",
       "items": {
         "type": "string",
@@ -41,13 +41,13 @@
       }
     },
     "dicomInstalled": {
-      "title": "स्थापित",
-      "description": "'हो' असल्यास हा नेटवर्क संपर्क या नेटवर्कवर स्थापित आहे. उपलब्ध नसल्यास, नेटवर्क कनेक्शनच्या स्थापित स्थितीबद्दलची माहिती डिव्हाइसमधून प्राप्त केली जाते.",
+      "title": "installed",
+      "description": "True if the Network Connection is installed on the network. If not present, information about the installed status of the Network Connection is inherited from the device",
       "type": "boolean"
     },
     "dcmNetworkConnection": {
-      "title": "नेटवर्क संपर्क विस्तार",
-      "description": "DCM4CHE मालकीचे नेटवर्क संपर्क विशेषता.",
+      "title": "Network Connection Extension",
+      "description": "dcm4che proprietary Network Connection Attributes",
       "$ref": "dcmNetworkConnection.schema.json"
     }
   }

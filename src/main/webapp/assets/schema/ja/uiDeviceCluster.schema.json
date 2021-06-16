@@ -1,6 +1,6 @@
 {
-  "title": "UI クラスター 構成",
-  "description": "UI クラスター 構成",
+  "title": "UI Cluster Configuration",
+  "description": "Configuration of Device URL to use beside the main UI URL",
   "type": "object",
   "required": [
     "dcmuiDeviceClusterName",
@@ -9,31 +9,31 @@
   ],
   "properties": {
     "dcmuiDeviceClusterName": {
-      "title": "名前",
-      "description": "クラスター名",
+      "title": "Name",
+      "description": "Cluster Name",
       "type": "string"
     },
     "dcmuiDeviceClusterDescription": {
-      "title": "説明",
-      "description": "クラスターの 説明",
+      "title": "Description",
+      "description": "Cluster Description",
       "type": "string"
     },
     "dcmuiDeviceClusterDevices": {
-      "title": "デバイス用の ウェブ アプリケーション",
-      "description": "対応 する デバイスへの アクセスに 使用 する 構成済み ウェブ アプリケーションを 選択します",
+      "title": "Web Application for Devices",
+      "description": "Select configured WebApps to used to access the corresponding devices",
       "type": "array",
       "items" : { "type": "string" },
       "format": "webApp"
     },
     "dcmuiClusterWebApp": {
-      "title": "ウェブ アプリケーション",
-      "description": "QIDO-RS クラスの ウェブ アプリケーション",
+      "title": "Web Application",
+      "description": "Web Application with the class QIDO-RS",
       "type":  "string",
       "format": "webApp"
     },
     "dcmuiDeviceClusterInstalled": {
-      "title": "インストール済み",
-      "description": "UIで この URLを 使用 する。",
+      "title": "Installed",
+      "description": "Use this URL in the UI",
       "type": "boolean",
       "default": true
     }
