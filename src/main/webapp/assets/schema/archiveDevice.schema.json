@@ -87,6 +87,7 @@
     "dcmStowRetiredTransferSyntax",
     "dcmAuditSoftwareConfigurationVerbose",
     "dcmWadoIgnorePresentationLUTShape",
+    "dcmWadoMetadataExcludePrivate",
     "dcmStowExcludeAPPMarkers",
     "dcmStowQuicktime2MP4",
     "hl7PSUForRequestedProcedure",
@@ -462,6 +463,12 @@
     "dcmWadoIgnorePresentationLUTShape": {
       "title": "Wado Ignore Presentation LUT Shape",
       "description": "Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmWadoMetadataExcludePrivate": {
+      "title": "Wado Metadata Exclude Private",
+      "description": "Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },
