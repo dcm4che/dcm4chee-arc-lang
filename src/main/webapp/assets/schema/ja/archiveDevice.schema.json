@@ -89,6 +89,7 @@
     "dcmStowExcludeAPPMarkers",
     "dcmStowQuicktime2MP4",
     "dcmWadoIgnorePresentationLUTShape",
+    "dcmWadoMetadataExcludePrivate",
     "hl7PSUForRequestedProcedure",
     "hl7PSURequestedProcedureID",
     "hl7PSUAccessionNumber",
@@ -450,6 +451,12 @@
     "dcmWadoIgnorePresentationLUTShape": {
       "title": "Wado プレゼンテーション LUT 状態を 無視 する",
       "description": "Indicates to ignore Presentation LUT Shape (2050,0020), but prioritize value of Photometric Interpretation (0028,0004) to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmWadoMetadataExcludePrivate": {
+      "title": "Wado Metadata Exclude Private",
+      "description": "Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },

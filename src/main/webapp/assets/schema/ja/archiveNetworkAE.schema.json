@@ -222,6 +222,11 @@
       "description": "Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. デバイス レベルで 指定された 値を 上書きします。",
       "type": "boolean"
     },
+    "dcmWadoMetadataExcludePrivate": {
+      "title": "Wado Metadata Exclude Private",
+      "description": "Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmQueryMaxNumberOfResults": {
       "title": "クエリの 結果の 最大数",
       "description": "C-FIND SCPに よる 戻り 結果の 最大数。 一致の 数が 制限を 超えると、 C-FIND 要求は 拒否されます。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。",
