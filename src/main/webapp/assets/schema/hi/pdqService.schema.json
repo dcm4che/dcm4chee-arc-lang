@@ -18,7 +18,7 @@
     },
     "dcmURI": {
       "title": "PDQ सेवा URI",
-      "description": "PDQ सेवा URI, उदाहरण के तौर पे 'pdq-dicom:FINDSCP' ।",
+      "description": "PDQ सेवा URI, उदाहरण के तौर पे 'pdq-dicom:FINDSCP' या 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility' ।",
       "type": "string"
     },
     "dicomDescription": {
@@ -44,7 +44,7 @@
     },
     "dcmProperty": {
       "title": "PDQ सेवा गुण",
-      "description": "गुण इस प्रारूप में <नाम>=<मूल्य>, उदाहरण के तौर पे 'LocalAET=DCM4CHEE' ।",
+      "description": "गुण इस प्रारूप में <नाम>=<मूल्य>, उदाहरण के तौर पे 'LocalAET=DCM4CHEE' या 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl' ।",
       "type": "array",
       "items": {
         "type": "string"

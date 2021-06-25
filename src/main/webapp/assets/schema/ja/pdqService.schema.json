@@ -18,7 +18,7 @@
     },
     "dcmURI": {
       "title": "PDQ サービス URI",
-      "description": "PDQ サービス URI, 例 : 'pdq-dicom:FINDSCP'",
+      "description": "PDQ サービス URI, 例 : 'pdq-dicom:FINDSCP' または 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility'",
       "type": "string"
     },
     "dicomDescription": {
@@ -44,7 +44,7 @@
     },
     "dcmProperty": {
       "title": "PDQ サービス 属性",
-      "description": "<name>=<value> 形式で 属性, 例 : 'LocalAET=DCM4CHEE'",
+      "description": "<name>=<value> 形式で 属性, 例 : 'LocalAET=DCM4CHEE' または 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl'",
       "type": "array",
       "items": {
         "type": "string"
