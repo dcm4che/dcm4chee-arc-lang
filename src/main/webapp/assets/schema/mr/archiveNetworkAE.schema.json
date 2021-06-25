@@ -222,6 +222,11 @@
       "description": "दर्शवते कि प्रेजेंटेशन LUT शेप (2050,0020) ला दुर्लक्ष करा, फोटोमैट्रिक इंटरप्रिटेशन (0028,0004) ला जास्त महत्व द्या जेणेकरून WADO-RS किंवा WADO-URI सेवेद्वारा पुनर्प्राप्त केलेल्या रेंडर्ड DICOM प्रतिमांच्या न्यूनतम नमुना मूल्यला सफेद (=MONCHROME1) किंवा काळे (=MONCHROME2) दाखवण्यासाठी निश्चित होईल. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
       "type": "boolean"
     },
+    "dcmWadoMetadataExcludePrivate": {
+      "title": "Wado Metadata Exclude Private",
+      "description": "Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmQueryMaxNumberOfResults": {
       "title": "प्राप्ती परिणामांची कमाल संख्या",
       "description": "C-Find SCP द्वारे परत केलेले परिणामांची कमाल संख्या. जर परिणामांची संख्या सीमा ओलांडली, तर C-FIND विनंती अस्वीकार होतील. ० = असीमित. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",

@@ -89,6 +89,7 @@
     "dcmStowExcludeAPPMarkers",
     "dcmStowQuicktime2MP4",
     "dcmWadoIgnorePresentationLUTShape",
+    "dcmWadoMetadataExcludePrivate",
     "hl7PSUForRequestedProcedure",
     "hl7PSURequestedProcedureID",
     "hl7PSUAccessionNumber",
@@ -450,6 +451,12 @@
     "dcmWadoIgnorePresentationLUTShape": {
       "title": "Wado प्रेजेंटेशन LUT शेप दुर्लक्ष करा",
       "description": "दर्शवते कि प्रेजेंटेशन LUT शेप (2050,0020) ला दुर्लक्ष करा, फोटोमैट्रिक इंटरप्रिटेशन (0028,0004) ला जास्त महत्व द्या जेणेकरून WADO-RS किंवा WADO-URI सेवेद्वारा पुनर्प्राप्त केलेल्या रेंडर्ड DICOM प्रतिमांच्या न्यूनतम नमुना मूल्यला सफेद (=MONCHROME1) किंवा काळे (=MONCHROME2) दाखवण्यासाठी निश्चित होईल. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्याद्वारे अधिलिखित केले जाऊ शकते.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmWadoMetadataExcludePrivate": {
+      "title": "Wado Metadata Exclude Private",
+      "description": "Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },

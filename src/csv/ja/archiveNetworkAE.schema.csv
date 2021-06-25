@@ -30,6 +30,7 @@
 "dcmWadoThumbnailViewport","WADO サムネイル ビューポート","要求で ビューポートが 指定されて いない 場合、 インスタンス サムネイルの WADO 読み出し時 返される サムネイルの 寸法。 形式 : <width>,<height>。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmWadoZIPEntryNameFormat","WADO ZIP エントリ名の 形式","WADO-RSに よって 返される ZIP アーカイブ内の エントリ名の 形式。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmWadoIgnorePresentationLUTShape","Wado プレゼンテーション LUT 状態を 無視 する","Indicates to ignore Presentation LUT Shape (2050,0020), but prioritize value of Photometric Interpretation (0028,0004) to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. デバイス レベルで 指定された 値を 上書きします。"
+"dcmWadoMetadataExcludePrivate","Wado Metadata Exclude Private","Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. Overwrites value specified on Device level."
 "dcmQueryMaxNumberOfResults","クエリの 結果の 最大数","C-FIND SCPに よる 戻り 結果の 最大数。 一致の 数が 制限を 超えると、 C-FIND 要求は 拒否されます。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmQidoMaxNumberOfResults","QIDO 結果の 最大数","QIDO-RS サービスに よる 戻り 結果の 最大数。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。"
 "dcmQidoETag","Qido ETag","Indicates to return Last-Modified and ETag for Search Series or Instances of a Study; disabled if absent. Overwrites value specified on Device level."
