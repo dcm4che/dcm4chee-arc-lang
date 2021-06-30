@@ -1322,6 +1322,7 @@
 		"studies_rejected_successfully": "Studi rifiutati con successo",
 		"studies_stored_count": "Conteggio degli studi memorizzati",
 		"studies_total_count": "Conteggio totale degli studi",
+		"study_status_id_agfa": "Study Status ID - AGFA",
 		"study-transferring-overview.studuid_from_patient_report": "UID dell'istanza dello Studio: {$START_BOLD_TEXT}{$INTERPOLATION}{$CLOSE_BOLD_TEXT} dal Paziente {$START_BOLD_TEXT}{$INTERPOLATION_1}{$CLOSE_BOLD_TEXT} con il Patient ID {$START_BOLD_TEXT}{$INTERPOLATION_2}{$CLOSE_BOLD_TEXT}",
 		"study-transferring_overview.an_empty_study_will_be_automatically_created": "Verrà creato automaticamente uno studio vuoto, in modo che possa essere utilizzato come studio target!",
 		"study.add_new_mwl": "Aggiungi nuovo MWL",
