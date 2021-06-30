@@ -34,9 +34,8 @@
     "dcmSpanningCFindSCPPolicy",
     "dcmFallbackCMoveSCPRetries",
     "dcmFallbackWadoURIHttpStatusCode",
-    "dcmTaskProcessingFetchSize",
+    "dcmTaskFetchSize",
     "dcmUPSProcessingFetchSize",
-    "dcmExportTaskFetchSize",
     "dcmRetrieveTaskWarningOnNoMatch",
     "dcmRetrieveTaskWarningOnWarnings",
     "dcmPurgeStorageFetchSize",
@@ -640,15 +639,15 @@
       },
       "format": "dcmProperty"
     },
-    "dcmTaskProcessingPollingInterval": {
-      "title": "Task Processing Polling Interval",
-      "description": "Polling Interval for scheduled Tasks ready for processing in ISO-8601 duration format PnDTnHnMnS. If absent, Tasks will not get processed.",
+    "dcmTaskPollingInterval": {
+      "title": "Task Polling Interval",
+      "description": "Polling Interval for scheduled Tasks in ISO-8601 duration format PnDTnHnMnS. If absent, Tasks will not get processed.",
       "type": "string",
       "format": "dcmDuration"
     },
-    "dcmTaskProcessingFetchSize": {
-      "title": "Task Processing  Fetch Size",
-      "description": "Limit result set of DB query for scheduled Tasks ready for processing.",
+    "dcmTaskFetchSize": {
+      "title": "Task Fetch Size",
+      "description": "Limit result set of DB query for scheduled Tasks.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
@@ -663,20 +662,6 @@
     "dcmUPSProcessingFetchSize": {
       "title": "UPS Processing  Fetch Size",
       "description": "Limit result set of DB query for Workitems ready for processing.",
-      "type": "integer",
-      "default": 100,
-      "minimum": 0,
-      "exclusiveMinimum": true
-    },
-    "dcmExportTaskPollingInterval": {
-      "title": "Export Task Polling Interval",
-      "description": "Export Task Polling Interval in ISO-8601 duration format PnDTnHnMnS.",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "dcmExportTaskFetchSize": {
-      "title": "Export Task Fetch Size",
-      "description": "Limit result set of DB query for Export Tasks ready for processing.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
