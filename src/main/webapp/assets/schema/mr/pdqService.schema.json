@@ -1,6 +1,6 @@
 {
-  "title": "PDQ Service",
-  "description": "PDQ Service Descriptor",
+  "title": "PDQ सेवा",
+  "description": "PDQ सेवा वर्णनकर्ता.",
   "type": "object",
   "required": [
     "dcmPDQServiceID",
@@ -9,26 +9,26 @@
   ],
   "properties": {
     "dcmPDQServiceID": {
-      "title": "PDQ Service ID",
-      "description": "PDQ Service ID",
+      "title": "PDQ सेवा ID",
+      "description": "PDQ सेवा ID.",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
       ]
     },
     "dcmURI": {
-      "title": "PDQ Service URI",
-      "description": "PDQ Service URI, e.g. 'pdq-dicom:FINDSCP'.",
+      "title": "PDQ सर्व्हिस URI",
+      "description": "PDQ सर्व्हिस URI, उदाहरण 'pdq-dicom:FINDSCP' किंवा 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility'",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "PDQ Service Description",
-      "description": "Unconstrained text description of the PDQ Service",
+      "title": "PDQ सेवेचे वर्णन",
+      "description": "PDQ सेवेचे अनियंत्रित मजकूर वर्णन.",
       "type": "string"
     },
     "dcmTag": {
-      "title": "Patient Attributes",
-      "description": "Queried Patient Attributes - if not specified all available Patient attributes will be queried",
+      "title": "रुग्णाच्या रेकॉर्डचे गुणधर्म",
+      "description": "रुग्णाच्या रेकॉर्डचे गुणधर्म - निर्दिष्ट नसल्यास सर्व उपलब्ध रुग्णाच्या रेकॉर्डचे गुणधर्मांची चौकशी केली जाईल.",
       "type": "array",
       "items": {
         "type": "string"
@@ -36,15 +36,15 @@
       "format": "dcmTag"
     },
     "dcmEntity": {
-      "title": "Query Entity",
-      "description": "Indicates if the C-FIND SCP is queried for a particular Patient or for Studies of a particular Patient. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle}).",
+      "title": "घटक प्राप्ति",
+      "description": "C-FIND SCP वरून रुग्णाचे रेकॉर्ड किंवा रुग्णाच्या रेकॉर्डचे अभ्यासांची प्राप्ती सूचित करते. फक्त DICOM PDQ सेवेंसाठी प्रभावी ('PDQ सेवा URI': pdq-dicom:{AETitle})",
       "type": "string",
       "enum": [ "Patient", "Study" ],
       "default": "Patient"
     },
     "dcmProperty": {
-      "title": "PDQ Service Property",
-      "description": "Property in format <name>=<value>, e.g. 'LocalAET=DCM4CHEE'",
+      "title": "PDQ सेवा गुणधर्म",
+      "description": "गुणधर्म या स्वरूपात <नाव> = <मूल्य>, उदाहरण 'LocalAET=DCM4CHEE' किंवा 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl'",
       "type": "array",
       "items": {
         "type": "string"

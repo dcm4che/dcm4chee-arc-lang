@@ -1,6 +1,6 @@
 {
-  "title": "PDQ Service",
-  "description": "PDQ Service Descriptor",
+  "title": "Servizio PDQ",
+  "description": "Descrittore del servizio PDQ",
   "type": "object",
   "required": [
     "dcmPDQServiceID",
@@ -9,26 +9,26 @@
   ],
   "properties": {
     "dcmPDQServiceID": {
-      "title": "PDQ Service ID",
-      "description": "PDQ Service ID",
+      "title": "ID servizio PDQ",
+      "description": "ID servizio PDQ",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
       ]
     },
     "dcmURI": {
-      "title": "PDQ Service URI",
-      "description": "PDQ Service URI, e.g. 'pdq-dicom:FINDSCP'.",
+      "title": "URI del servizio PDQ",
+      "description": "URI del servizio PDQ, ad esempio \"pdq-dicom: FINDSCP\" or 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility'.",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "PDQ Service Description",
-      "description": "Unconstrained text description of the PDQ Service",
+      "title": "Descrizione del servizio PDQ",
+      "description": "Descrizione testuale non vincolata del servizio PDQ",
       "type": "string"
     },
     "dcmTag": {
-      "title": "Patient Attributes",
-      "description": "Queried Patient Attributes - if not specified all available Patient attributes will be queried",
+      "title": "Attributi del paziente",
+      "description": "Attributi paziente interrogati: se non specificato, verranno interrogati tutti gli attributi del paziente disponibili",
       "type": "array",
       "items": {
         "type": "string"
@@ -36,15 +36,15 @@
       "format": "dcmTag"
     },
     "dcmEntity": {
-      "title": "Query Entity",
-      "description": "Indicates if the C-FIND SCP is queried for a particular Patient or for Studies of a particular Patient. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle}).",
+      "title": "Entità Query",
+      "description": "Indica se viene richiesto al C-FIND SCP per un particolare paziente o per gli studi di un particolare paziente. Efficace solo per i servizi DICOM PDQ (URI: pdq-dicom: {AETitle}).",
       "type": "string",
       "enum": [ "Patient", "Study" ],
       "default": "Patient"
     },
     "dcmProperty": {
-      "title": "PDQ Service Property",
-      "description": "Property in format <name>=<value>, e.g. 'LocalAET=DCM4CHEE'",
+      "title": "Proprietà del servizio PDQ",
+      "description": "Proprietà in formato <name>=<value>, ad es. \"LocalAET = DCM4CHEE\" or 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl'",
       "type": "array",
       "items": {
         "type": "string"

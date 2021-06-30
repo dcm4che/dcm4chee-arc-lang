@@ -1,6 +1,6 @@
 {
-  "title": "PDQ Service",
-  "description": "PDQ Service Descriptor",
+  "title": "PDQ サービス",
+  "description": "PDQ サービス 記述子",
   "type": "object",
   "required": [
     "dcmPDQServiceID",
@@ -9,26 +9,26 @@
   ],
   "properties": {
     "dcmPDQServiceID": {
-      "title": "PDQ Service ID",
-      "description": "PDQ Service ID",
+      "title": "PDQ サービス ID",
+      "description": "PDQ サービス ID",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
       ]
     },
     "dcmURI": {
-      "title": "PDQ Service URI",
-      "description": "PDQ Service URI, e.g. 'pdq-dicom:FINDSCP'.",
+      "title": "PDQ サービス URI",
+      "description": "PDQ サービス URI, 例 : 'pdq-dicom:FINDSCP' または 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility'",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "PDQ Service Description",
-      "description": "Unconstrained text description of the PDQ Service",
+      "title": "PDQ サービスの 説明",
+      "description": "PDQ サービスの 制約のない テキスト 説明",
       "type": "string"
     },
     "dcmTag": {
-      "title": "Patient Attributes",
-      "description": "Queried Patient Attributes - if not specified all available Patient attributes will be queried",
+      "title": "患者 属性",
+      "description": "クエリされた 患者 属性 - 指定されて いない 場合、 使用 可能な すべての 患者 属性が クエリされます",
       "type": "array",
       "items": {
         "type": "string"
@@ -36,15 +36,15 @@
       "format": "dcmTag"
     },
     "dcmEntity": {
-      "title": "Query Entity",
-      "description": "Indicates if the C-FIND SCP is queried for a particular Patient or for Studies of a particular Patient. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle}).",
+      "title": "クエリ エンティティ",
+      "description": "特定の 患者 または 特定の 患者の 検査に 対して C-FIND SCPが クエリされるか どうかを 示します。 DICOM PDQ サービスに 対してのみ 有効 (URI: pdq-dicom:{AETitle})",
       "type": "string",
       "enum": [ "Patient", "Study" ],
       "default": "Patient"
     },
     "dcmProperty": {
-      "title": "PDQ Service Property",
-      "description": "Property in format <name>=<value>, e.g. 'LocalAET=DCM4CHEE'",
+      "title": "PDQ サービス 属性",
+      "description": "<name>=<value> 形式で 属性, 例 : 'LocalAET=DCM4CHEE' または 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl'",
       "type": "array",
       "items": {
         "type": "string"

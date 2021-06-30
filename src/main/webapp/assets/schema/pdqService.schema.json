@@ -18,7 +18,7 @@
     },
     "dcmURI": {
       "title": "PDQ Service URI",
-      "description": "PDQ Service URI, e.g. 'pdq-dicom:FINDSCP'.",
+      "description": "PDQ Service URI, e.g. 'pdq-dicom:FINDSCP' or 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility'.",
       "type": "string"
     },
     "dicomDescription": {
@@ -44,7 +44,7 @@
     },
     "dcmProperty": {
       "title": "PDQ Service Property",
-      "description": "Property in format <name>=<value>, e.g. 'LocalAET=DCM4CHEE'",
+      "description": "Property in format <name>=<value>, e.g. 'LocalAET=DCM4CHEE' or 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl'",
       "type": "array",
       "items": {
         "type": "string"
