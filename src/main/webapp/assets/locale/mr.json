@@ -1322,6 +1322,7 @@
     "studies_rejected_successfully": "अभ्यास यशस्वीरित्या नाकारले",
     "studies_stored_count": "अभ्यास संग्रहित गणना",
     "studies_total_count": "अभ्यास एकूण गणना",
+    "study_status_id_agfa": "Study Status ID - AGFA",
     "study-transferring-overview.studuid_from_patient_report": "अभ्यास दृष्टांत UID: {$START_BOLD_TEXT}{$INTERPOLATION}{$CLOSE_BOLD_TEXT} रूग्णकडून {$START_BOLD_TEXT}{$INTERPOLATION_1}{$CLOSE_BOLD_TEXT} रुग्णाचा ID सह {$START_BOLD_TEXT}{$INTERPOLATION_2}{$CLOSE_BOLD_TEXT}",
     "study-transferring_overview.an_empty_study_will_be_automatically_created": "एक रिक्त अभ्यास स्वयंचलितपणे निर्माण होईल, जेणेकरून ते लक्ष्य अभ्यासाच्या रूपात वापरले जाईल!",
     "study.add_new_mwl": "नवीन MWL जोडा",

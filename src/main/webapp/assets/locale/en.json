@@ -1322,6 +1322,7 @@
     "studies_rejected_successfully": "Studies rejected successfully",
     "studies_stored_count": "Studies Stored Count",
     "studies_total_count": "Studies Total Count",
+    "study_status_id_agfa": "Study Status ID - AGFA",
     "study-transferring-overview.studuid_from_patient_report": "Study instance UID: {$START_BOLD_TEXT}{$INTERPOLATION}{$CLOSE_BOLD_TEXT} from the patient {$START_BOLD_TEXT}{$INTERPOLATION_1}{$CLOSE_BOLD_TEXT} with the Patient ID {$START_BOLD_TEXT}{$INTERPOLATION_2}{$CLOSE_BOLD_TEXT}",
     "study-transferring_overview.an_empty_study_will_be_automatically_created": "An empty study will be automatically created, so it can be used as target study!",
     "study.add_new_mwl": "Add new MWL",
