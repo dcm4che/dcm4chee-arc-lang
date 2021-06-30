@@ -2,7 +2,6 @@
 "","Queue","Managed JMS Queue"
 "dcmQueueName","Queue Name","JMS Queue Name"
 "dicomDescription","Queue Description","Unconstrained text description of the Queue"
-"dcmTaskProcessorName","Task Processor Name","Name of Task Processor associated with the Queue."
 "dicomInstalled","installed","If false, processing of tasks in this queue is paused."
 "dcmMaxTasksParallel","Maximum parallel Tasks","Maximal number of tasks processed in parallel."
 "dcmMaxRetries","Maximum Number of Retries","Maximal number of retries to process tasks scheduled in a specific queue."

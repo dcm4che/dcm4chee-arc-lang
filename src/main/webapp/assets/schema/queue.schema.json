@@ -4,7 +4,6 @@
   "type": "object",
   "required": [
     "dcmQueueName",
-    "dcmTaskProcessorName",
     "dcmMaxTasksParallel",
     "dcmRetryDelay",
     "dcmRetryOnWarning",
@@ -26,24 +25,6 @@
       "title": "Queue Description",
       "description": "Unconstrained text description of the Queue",
       "type": "string"
-    },
-    "dcmTaskProcessorName": {
-      "title": "Task Processor Name",
-      "description": "Name of Task Processor associated with the Queue.",
-      "type": "string",
-      "enum" : [
-        "EXPORTER",
-        "MOVE_SCU",
-        "MPPS_SCU",
-        "IAN_SCU",
-        "STGCMT_SCP",
-        "STGCMT_SCU",
-        "STG_VERIFIER",
-        "HL7_SENDER",
-        "REST_CLIENT",
-        "REJECT_SCU",
-        "DIFF_SCU"
-      ]
     },
     "dicomInstalled": {
       "title": "installed",
