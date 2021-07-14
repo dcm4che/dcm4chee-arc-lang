@@ -1081,6 +1081,8 @@
 		"save_this_template": "Salva questo modello",
 		"schedule-picker.drop_here_some_element": "Rilascia qui qualche elemento da modificare",
 		"schedule-picker.schedule_picker": "Selettore di pianificazione",
+		"schedule_at": "Schedule at",
+		"schedule_at_desc": "Schedule at (if not set, schedule immediately)",
 		"schedule_instance_availability_of_matching_studies_to_external_instance_availability_scp": "Pianifica la disponibilità delle istanze degli studi corrispondenti alla disponibilità dell'istanza esterna SCP",
 		"schedule_storage_commitment_of_matching_studies_from_external_storage_commitment_scp": "Pianifica la disponibilità delle istanze degli studi corrispondenti da SCP di Storage Commitment esterno",
 		"scheduled": "Pianificato",

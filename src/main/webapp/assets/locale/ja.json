@@ -1081,6 +1081,8 @@
     "save_this_template": "この テンプレートを 保存 する",
     "schedule-picker.drop_here_some_element": "編集 する 要素を ここに ドロップ する",
     "schedule-picker.schedule_picker": "予定 ピッカー",
+    "schedule_at": "Schedule at",
+    "schedule_at_desc": "Schedule at (if not set, schedule immediately)",
     "schedule_instance_availability_of_matching_studies_to_external_instance_availability_scp": "一致する 検査の インスタンスの 可用性を 外部 インスタンスの 可用性 SCPに 予定 する",
     "schedule_storage_commitment_of_matching_studies_from_external_storage_commitment_scp": "一致する 検査の 格納 コミットメントを 外部 格納 コミットメント SCPから 予定 する",
     "scheduled": "予定された",

@@ -1081,6 +1081,8 @@
     "save_this_template": "Save this template",
     "schedule-picker.drop_here_some_element": "Drop here some element to edit",
     "schedule-picker.schedule_picker": "Schedule picker",
+    "schedule_at": "Schedule at",
+    "schedule_at_desc": "Schedule at (if not set, schedule immediately)",
     "schedule_instance_availability_of_matching_studies_to_external_instance_availability_scp": "Schedule Instance Availability of matching Studies to external Instance Availability SCP",
     "schedule_storage_commitment_of_matching_studies_from_external_storage_commitment_scp": "Schedule Storage Commitment of matching Studies from external Storage Commitment SCP",
     "scheduled": "Scheduled",

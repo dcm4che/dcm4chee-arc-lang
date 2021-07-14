@@ -1081,6 +1081,8 @@
     "save_this_template": "इस फर्मा को सहेजे",
     "schedule-picker.drop_here_some_element": "संपादित करने के लिए एक तत्व खींचें",
     "schedule-picker.schedule_picker": "समय-सारणी चुने ।",
+    "schedule_at": "Schedule at",
+    "schedule_at_desc": "Schedule at (if not set, schedule immediately)",
     "schedule_instance_availability_of_matching_studies_to_external_instance_availability_scp": "मिलान स्टडीज के दृष्टांत उपलब्धता को बाहरी दृष्टांत उपलब्धता SCP पे अनुसूचित करें ।",
     "schedule_storage_commitment_of_matching_studies_from_external_storage_commitment_scp": "मिलान स्टडीज के स्टोरेज प्रतिबद्धता को बाहरी स्टोरेज प्रतिबद्धता SCP से अनुसूचित करें ।",
     "scheduled": "अनुसूचित",

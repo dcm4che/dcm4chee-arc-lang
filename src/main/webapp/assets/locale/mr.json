@@ -1081,6 +1081,8 @@
     "save_this_template": "हे साचा जतन करा.",
     "schedule-picker.drop_here_some_element": "संपादित करण्यासाठी येथे काही घटक निवडून इथे आणा.",
     "schedule-picker.schedule_picker": "वेळापत्रक निवडकर्ता",
+    "schedule_at": "Schedule at",
+    "schedule_at_desc": "Schedule at (if not set, schedule immediately)",
     "schedule_instance_availability_of_matching_studies_to_external_instance_availability_scp": "जुळणार्‍या अभ्यासांची दृष्टांत उपलब्धता बाह्य दृष्टांत उपलब्धता SCP वर अनुसूचित करा.",
     "schedule_storage_commitment_of_matching_studies_from_external_storage_commitment_scp": "जुळणार्‍या अभ्यासांची साठवण वचनबद्धता बाह्य दृष्टांत उपलब्धता SCP कडून अनुसूचित करा.",
     "scheduled": "अनुसूचित",
