@@ -1622,7 +1622,6 @@
 		"title.use_duration_format": "Usa il formato della durata (ISO 8601) ((P)nYnMnDTnHnMnS o (P)nW) per impostare la prima data/ora dell'intervallo sottratto da oggi/adesso (il formato non fa distinzione tra maiuscole e minuscole e P all'avvio è opzionale). Ad esempio 1y => un anno fa, 2y3m => 2 anni e 3 mesi indietro, t2h12m => 2 ore e 12 minuti da adesso ecc..",
 		"title.verify_aet_host_port": "Verifica AET, host e porta prima di salvare",
 		"title.xds.search_the_table_local": "Cerca nella tabella locale",
-		"to_schedule": "ALLA PIANIFICAZIONE",
 		"today": "Oggi",
 		"toggle_checkboxes": "Attiva/disattiva le caselle di controllo",
 		"toggle_checkboxes_for_selection": "Attiva/disattiva le caselle di controllo per la selezione",

@@ -1622,7 +1622,6 @@
     "title.use_duration_format": "期間 形式を (ISO 8601) ((P)nYnMnDTnHnMnS または (P)nW) 使用して、 今日 / 現在から 差し引いた 範囲の 最初の 日付 / 時刻を 設定します (形式では 大文字と 小文字が 区別されず、 開始時の Pは 任意信号です)。例 1y => 1年前、 2y3m => 2年3か月前、 t2h12m => 2時間 12分後 など。",
     "title.verify_aet_host_port": "保存 する 前に AET、 ホスト、 ポートを 確認して ください",
     "title.xds.search_the_table_local": "局所的 テーブルを 検索 する",
-    "to_schedule": "予定 する ために",
     "today": "今日",
     "toggle_checkboxes": "チェックボックスを 切り替えます",
     "toggle_checkboxes_for_selection": "選択用の チェックボックスを 切り替える",

@@ -1623,7 +1623,6 @@
     "title.use_duration_format": "Use duration format (ISO 8601) ((P)nYnMnDTnHnMnS or (P)nW) to set first date/time of the range subtracted from today/now (Format is not case sensitive and P on start is optional). For Example 1y => one year back, 2y3m => 2 years and 3 months back, t2h12m => 2 hours and 12 minutes from now etc.",
     "title.verify_aet_host_port": "Verify AET, host and port before saving",
     "title.xds.search_the_table_local": "Search the table local",
-    "to_schedule": "TO SCHEDULE",
     "today": "Heute",
     "toggle_checkboxes": "Toggle checkboxes",
     "toggle_checkboxes_for_selection": "Toggle checkboxes for selection",
