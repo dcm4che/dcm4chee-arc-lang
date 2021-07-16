@@ -939,8 +939,8 @@
       "type": "string"
     },
     "dcmPurgeQueueMessagePollingInterval": {
-      "title": "Purge Queue Messages Polling Interval",
-      "description": "Polling Interval for purging queue messages in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion",
+      "title": "Purge Task Polling Interval",
+      "description": "Polling Interval for purging tasks in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion",
       "type": "string",
       "format": "dcmDuration"
     },

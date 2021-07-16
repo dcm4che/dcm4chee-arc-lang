@@ -73,26 +73,26 @@
       "default": false
     },
     "dcmPurgeQueueMessageCompletedDelay": {
-      "title": "Delay for purging completed queue messages",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed queue messages are purged. If absent, there is no deletion for that particular queue",
+      "title": "Delay for purging completed tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed tasks are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageFailedDelay": {
-      "title": "Delay for purging failed queue messages",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which failed queue messages are purged. If absent, there is no deletion for that particular queue",
+      "title": "Delay for purging failed tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which failed tasks are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageWarningDelay": {
-      "title": "Delay for purging warning queue messages",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning queue messages are purged. If absent, there is no deletion for that particular queue",
+      "title": "Delay for purging warning tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning tasks are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageCanceledDelay": {
-      "title": "Delay for purging canceled queue messages",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled queue messages are purged. If absent, there is no deletion for that particular queue",
+      "title": "Delay for purging canceled tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled tasks are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
