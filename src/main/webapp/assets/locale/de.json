@@ -1512,6 +1512,7 @@
     "tasks_marked_for_export_param": "{$@@count} tasks marked for export successfully!",
     "tasks_marked_for_retrieve": "Tasks marked for retrieve successfully!",
     "tasks_marked_for_retrieve_param": "{$@@count} tasks marked for retrieve successfully!",
+    "tasks_queue_canceled": "{$PH} tasks in queue canceled successfully!",
     "tasks_queue_deleted": "{$PH} tasks in queue deleted successfully!",
     "tasks_queue_rescheduled": "{$PH} tasks in queue rescheduled successfully!",
     "tasks_rescheduled": "Tasks rescheduled successfully!",

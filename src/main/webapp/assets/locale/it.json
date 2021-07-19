@@ -1511,6 +1511,7 @@
 		"tasks_marked_for_export_param": "{$@@count} tasks marked for export successfully!",
 		"tasks_marked_for_retrieve": "Tasks marked for retrieve successfully!",
 		"tasks_marked_for_retrieve_param": "{$@@count} tasks marked for retrieve successfully!",
+		"tasks_queue_canceled": "{$PH} tasks in queue canceled successfully!",
 		"tasks_queue_deleted": "{$PH} attività in coda eliminate con successo!",
 		"tasks_queue_rescheduled": "{$PH} attività in coda riprogrammate con successo!",
 		"tasks_rescheduled": "Attività riprogrammate con successo!",
