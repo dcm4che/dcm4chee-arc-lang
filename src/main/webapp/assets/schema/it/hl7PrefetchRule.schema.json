@@ -115,6 +115,14 @@
       "type": "string",
       "format": "dcmDuration"
     },
+    "dcmHistorySize": {
+      "title": "Suppress Duplicate History Size",
+      "description": "Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.",
+      "type": "integer",
+      "default" : 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
     "dcmPrefetchDateTimeField": {
       "title": "Prefetch Date Time Field",
       "description": "Delay retrieve of selected Studies to time from referred HL7 TS field in format {SEG}-{Seq#}[.{Comp#}]. Example: TQ1-7 or SCH-11.4. Schedule retrieve of selected Studies immediate if absent.",
@@ -132,14 +140,6 @@
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"
-    },
-    "dcmHistorySize": {
-      "title": "Suppress Duplicate History Size",
-      "description": "Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.",
-      "type": "integer",
-      "default" : 100,
-      "minimum": 0,
-      "exclusiveMinimum": true
     }
   }
 }
