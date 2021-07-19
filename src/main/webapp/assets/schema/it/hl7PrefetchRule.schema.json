@@ -9,7 +9,8 @@
     "dcmPrefetchCFindSCP",
     "dcmPrefetchCMoveSCP",
     "dcmPrefetchCStoreSCP",
-    "dcmDuration"
+    "dcmDuration",
+    "dcmHistorySize"
   ],
   "properties": {
     "cn": {
@@ -131,6 +132,14 @@
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"
+    },
+    "dcmHistorySize": {
+      "title": "Suppress Duplicate History Size",
+      "description": "Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.",
+      "type": "integer",
+      "default" : 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
     }
   }
 }

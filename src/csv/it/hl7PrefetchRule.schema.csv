@@ -18,3 +18,4 @@
 "dcmPrefetchDateTimeField","Prefetch Date Time Field","Delay retrieve of selected Studies to time from referred HL7 TS field in format {SEG}-{Seq#}[.{Comp#}]. Example: TQ1-7 or SCH-11.4. Schedule retrieve of selected Studies immediate if absent."
 "dcmPrefetchInAdvance","Prefetch In Advance","Schedule retrieve of selected Studies given time span in ISO-8601 duration format PnDTnHnMn.nS in advance to the time from configured dcmPrefetchDateTimeField. Not effective, if dcmPrefetchDateTimeField is absent."
 "dcmSchedule","Pianificazione di Prefetch","Ritarda il precaricamento a periodi di tempo specificati. Se non viene specificato alcun programma di precaricamento, mettere immediatamente in coda un'attività di prefetch per gli studi selezionati del paziente. Formato: 'hour=[0-23] dayOfWeek=[0-6]' (0=Domenica)"
+"dcmHistorySize","Suppress Duplicate History Size","Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list."
