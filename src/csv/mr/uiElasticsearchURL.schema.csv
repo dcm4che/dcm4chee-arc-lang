@@ -1,7 +1,0 @@
-"property","title","description"
-"","UI इलास्टिकसर्च URL कॉन्फिगरेशन","इलास्टिकसर्च URL."
-"dcmuiElasticsearchURLName","इलास्टिकसर्च URL चे नाव","UI इलास्टिकसर्च URL चे नाव."
-"dcmuiElasticsearchWebApp","इलास्टिकसर्च वेब अनुप्रयोग","इलास्टिकसर्च URL काढून इलास्टिकसर्चचा उपयोग करण्यासाठी वापरलेले वेब अनुप्रयोग."
-"dcmuiAuditEnterpriseSiteID","ऑडिट एंटरप्राइझ साइट ID","इलास्टिकसर्च क्वेरीवर वापरले जाणारे ऑडिट एंटरप्राइझ साइट ID संच करा."
-"dcmuiElasticsearchIsDefault","डीफॉल्ट आहे","या URL कॉन्फिगरेशनला डीफॉल्ट म्हणून संच करा. (खात्री करा की फक्त एका URL कॉन्फिगरेशनला डीफॉल्ट म्हणून संच करा)."
-"dcmuiElasticsearchInstalled","स्थापित","या URL ला UI मध्ये वापरा."

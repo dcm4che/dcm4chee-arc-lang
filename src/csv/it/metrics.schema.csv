@@ -1,6 +1,0 @@
-"property","title","description"
-"","Descrittore delle metriche","Descrittore delle metriche"
-"dcmMetricsName","Nome Metriche","Nome Metriche"
-"dicomDescription","Metrics Description","Descrizione testuale libera delle metriche"
-"dcmMetricsRetentionPeriod","Periodo di conservazione delle metriche","Periodo di conservazione delle metriche in minuti"
-"dcmUnit","Unità metriche","Unità metriche"

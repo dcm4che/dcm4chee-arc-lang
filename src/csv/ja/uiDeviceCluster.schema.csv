@@ -1,7 +1,0 @@
-"property","title","description"
-"","UI クラスター 構成","UI クラスター 構成"
-"dcmuiDeviceClusterName","名前","クラスター名"
-"dcmuiDeviceClusterDescription","説明","クラスターの 説明"
-"dcmuiDeviceClusterDevices","デバイス用の ウェブ アプリケーション","対応 する デバイスへの アクセスに 使用 する 構成済み ウェブ アプリケーションを 選択します"
-"dcmuiClusterWebApp","ウェブ アプリケーション","QIDO-RS クラスの ウェブ アプリケーション"
-"dcmuiDeviceClusterInstalled","インストール済み","UIで この URLを 使用 する。"

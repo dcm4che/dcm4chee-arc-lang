@@ -1,6 +1,0 @@
-"property","title","description"
-"","Regola ID controllo accesso all'archivio","Regola ID controllo accesso all'archivio"
-"cn","Nome","Nome arbitrario/significativo della regola dell'ID di controllo dell'accesso allo storage"
-"dcmStoreAccessControlID","ID controllo accesso all'archivio","ID controllo accesso assegnato agli studi i cui attributi soddisfano tutte le condizioni"
-"dcmRulePriority","Priorità delle regole","Priorità della regola."
-"dcmProperty","Condizioni","Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Esempio: SendingApplicationEntityTitle=FORWARD o Modality=MR|CT o ProcedureCodeSequence.CodeValue=MRProcedure o 00180015=KNEE o 00321034.00080100=RequestingServiceCode o ImageType[3]=LOCALIZER"
