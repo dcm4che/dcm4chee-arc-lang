@@ -52,7 +52,7 @@ invoking (e.g.)
    src/main/webapp/assets/schema/hi/metrics.schema.json=>src/props/hi/metrics.properties
    ```
    will add the previous missing entries in the key/value properties files, where title and description in English
-   separated by '|' can be replaced by translated terms.
+   separated by `|` can be replaced by translated terms.
 
 4. After the replacement of the supplemented new properties, the language specific JSON Schema files can be updated with
 the new translated terms by converting the updated key/value properties files back to JSON Schema files as described in 2..
