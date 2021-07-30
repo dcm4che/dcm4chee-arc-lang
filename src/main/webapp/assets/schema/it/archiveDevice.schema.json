@@ -321,8 +321,26 @@
       "default": "${jboss.server.temp.dir}"
     },
     "dcmHideSPSWithStatusFromMWL": {
-      "title": "Nascondi SPS con Stato",
+      "title": "Nascondi SPS con Stato - MWL SCP",
       "description": "Codici di stato del passo della procedura pianificata degli articoli MWL che non devono essere restituiti da MWL SCP. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "SCHEDULED",
+          "ARRIVED",
+          "READY",
+          "STARTED",
+          "DEPARTED",
+          "CANCELED",
+          "DISCONTINUED",
+          "COMPLETED"
+        ]
+      }
+    },
+    "dcmHideSPSWithStatusFromMWLRS": {
+      "title": "Nascondi SPS con Stato - MWL RS",
+      "description": "Codici di stato del passo della procedura pianificata degli articoli MWL che non devono essere restituiti da MWL RS. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "array",
       "items" : {
         "type": "string",

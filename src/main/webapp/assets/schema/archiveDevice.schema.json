@@ -340,8 +340,26 @@
       "default": "${jboss.server.temp.dir}"
     },
     "dcmHideSPSWithStatusFromMWL": {
-      "title": "Hide SPS with Status",
+      "title": "Hide SPS with Status by MWL SCP",
       "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "SCHEDULED",
+          "ARRIVED",
+          "READY",
+          "STARTED",
+          "DEPARTED",
+          "CANCELED",
+          "DISCONTINUED",
+          "COMPLETED"
+        ]
+      }
+    },
+    "dcmHideSPSWithStatusFromMWLRS": {
+      "title": "Hide SPS with Status by MWL RS",
+      "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items" : {
         "type": "string",

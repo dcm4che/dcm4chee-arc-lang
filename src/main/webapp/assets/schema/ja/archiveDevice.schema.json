@@ -329,8 +329,26 @@
       "default": "${jboss.server.temp.dir}"
     },
     "dcmHideSPSWithStatusFromMWL": {
-      "title": "SPS ステータスを 非表示 する",
+      "title": "SPS ステータスを 非表示 する - MWL SCP",
       "description": "MWL SCPに よって 返されない MWL アイテムの 予定された 手順 ステップ ステータス コード。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "SCHEDULED",
+          "ARRIVED",
+          "READY",
+          "STARTED",
+          "DEPARTED",
+          "CANCELED",
+          "DISCONTINUED",
+          "COMPLETED"
+        ]
+      }
+    },
+    "dcmHideSPSWithStatusFromMWLRS": {
+      "title": "SPS ステータスを 非表示 する - MWL RS",
+      "description": "MWL RSに よって 返されない MWL アイテムの 予定された 手順 ステップ ステータス コード。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
       "type": "array",
       "items" : {
         "type": "string",
