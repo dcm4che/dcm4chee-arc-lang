@@ -1,7 +1,0 @@
-"property","title","description"
-"","Capacità di trasferimento","Ogni capacità di trasferimento specifica la classe SOP che l'AE di rete può supportare, la modalità che può utilizzare (SCP o SCU) e la sintassi di trasferimento che può utilizzare"
-"cn","Nome","Nome arbitrario/significativo per l'oggetto Capacità di trasferimento"
-"dicomSOPClass","SOP Class","UID SOP Class "
-"dicomTransferRole","Ruolo di trasferimento DICOM","Ruolo di trasferimento DICOM."
-"dicomTransferSyntax","Sintassi di trasferimento","Sintassi di trasferimento che possono essere richieste come SCU o che vengono offerte come SCP."
-"dcmTransferCapability","Estensione della capacità di trasferimento","attributi di capacità di trasferimento proprietari di dcm4che"

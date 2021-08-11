@@ -1,7 +1,0 @@
-"property","title","description"
-"","UI Cluster Configuration","Configuration of Device URL to use beside the main UI URL"
-"dcmuiDeviceClusterName","Name","Cluster Name"
-"dcmuiDeviceClusterDescription","Description","Cluster Description"
-"dcmuiDeviceClusterDevices","Web Application for Devices","Select configured WebApps to used to access the corresponding devices"
-"dcmuiClusterWebApp","Web Application","Web Application with the class QIDO-RS"
-"dcmuiDeviceClusterInstalled","Installed","Use this URL in the UI"

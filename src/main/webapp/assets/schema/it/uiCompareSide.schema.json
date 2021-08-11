@@ -1,6 +1,6 @@
 {
-  "title": "Confronta Lato",
-  "description": "Confronta Lato",
+  "title": "Compare Side",
+  "description": "Compare Side",
   "type": "object",
   "required": [
     "dcmuiCompareSideName",
@@ -11,13 +11,13 @@
   ],
   "properties": {
     "dcmuiCompareSideName": {
-      "title": "Nome",
-      "description": "Nome del lato di Confronto",
+      "title": "Name",
+      "description": "Compare Side Name",
       "type": "string"
     },
     "dcmuiCompareSideDescription": {
-      "title": "Descrizione",
-      "description": "Una breve descrizione di questo Gruppo",
+      "title": "Description",
+      "description": "A short description about this Group",
       "type": "string"
     },
     "dcmuiCompareSideOrder": {
@@ -26,31 +26,31 @@
       "type": "integer",
       "default":0,
       "enum":[
-        0,
-        1
+         0,
+         1
       ]
     },
     "dcmuiCompareSideCluster": {
       "title": "Cluster",
-      "description": "Seleziona un cluster",
+      "description": "Select a Cluster",
       "type": "string",
       "format":"dcmuiDeviceClusterObject"
     },
     "dcmuiCompareSideElasticsearch": {
       "title": "Elasticsearch",
-      "description": "Seleziona un URL di Elasticsearch",
+      "description": "Select an Elasticsearch URL",
       "type": "string",
       "format":"dcmuiElasticsearchConfig"
     },
     "dcmuiCompareSideQueueName": {
-      "title": "Coda",
-      "description": "Seleziona il QueueName da utilizzare per il confronto",
+      "title": "Queue",
+      "description": "Select the QueueName that should be used for the compare side",
       "type": "string",
       "format":"dcmQueueName"
     },
     "dcmuiCompareSideInstalled": {
-      "title": "Installato",
-      "description": "Se true, questo lato di confronto è attivo nel dashboard",
+      "title": "Installed",
+      "description": "If true this Compare side is active in the dashboard",
       "type": "boolean",
       "default": true
     }

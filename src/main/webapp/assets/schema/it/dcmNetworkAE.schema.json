@@ -1,24 +1,24 @@
 {
-  "title": "Estensione AE di rete",
-  "description": "Attributi proprietari di Network AE di dcm4che",
+  "title": "Network AE Extension",
+  "description": "dcm4che proprietary Attributes of Network AE",
   "type": "object",
   "properties": {
     "dcmRoleSelectionNegotiationLenient": {
-      "title": "Negoziazione di selezione del ruolo clemente",
-      "description": "Indica di disabilitare il controllo per la negoziazione della selezione del ruolo SCP/SCU richiesta sull'invio di DIMSE-RQ. Sovrascrive i valori specificati a livello del dispositivo.",
+      "title": "Role Selection Negotiation Lenient",
+      "description": "Indicates to disable check for required SCP/SCU role selection negotiation on sending of DIMSE-RQs. Overwrites value specified on Device level.",
       "type": "boolean"
     },
     "dcmAcceptedCallingAETitle": {
-      "title": "Titolo AE di chiamata accettato",
-      "description": "Proibisci l'accettazione di associazioni da AE non in elenco. Se non presente, sarà accettato qualsiasi AE",
+      "title": "Accepted Calling AE Title",
+      "description": "Prohibit accepting associations from unlisted AE. If not present, any AE will be accepted",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmOtherAETitle": {
-      "title": "Altro titolo AE",
-      "description": "Titolo AE aggiuntivo - Verrà accettata anche l'associazione con questo titolo AE",
+      "title": "Other AE Title",
+      "description": "Additional AE Title of Network AE - will also accept Association RQs with such Called AE Title",
       "type": "array",
       "items": {
         "type": "string"
@@ -26,15 +26,15 @@
     },
     "dcmMasqueradeCallingAETitle": {
       "title": "Masquerade Calling AE Title",
-      "description": "Titolo AE utilizzato per avviare associazioni di rete, mascherando il titolo AE effettivo per questo AE di rete - il prefisso opzionale [<titolo AE chiamato>] limita il mascheramento all'associazione a un particolare titolo AE",
+      "description": "AE Title used for initiating network associations, masquerading the actual AE Title for this Network AE - optional prefix [<Called AE Title>] limits the masquerading to association to a particular AE Title",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmPreferredTransferSyntax": {
-      "title": "Sintassi di trasferimento preferita",
-      "description": "Sintassi di trasferimento preferita per la selezione della sintassi di trasferimento all'interno di un contesto di presentazione, ordinata per priorità. Se assente, verrà selezionata la prima sintassi di trasferimento accettabile nel contesto di presentazione offerto. Può essere sovrascritto da valori configurati per particolari capacità di trasferimento di questo AE.",
+      "title": "Preferred Transfer Syntax",
+      "description": "Preferred Transfer Syntax for selection of Transfer Syntax within a Presentation Context, ordered by priority. If absent, the first acceptable Transfer Syntax in the offered Presentation Context will be selected. May be overwritten by configured values for particular Transfer Capabilities of this AE.",
       "type": "array",
       "format": "dcmTransferSyntax",
       "items": {
@@ -42,14 +42,14 @@
       }
     },
     "hl7ApplicationName": {
-      "title": "Nome dell'applicazione HL7",
-      "description": "Applicazione HL7 e nome della struttura (Applicazione | Struttura) associati a questo AE",
+      "title": "HL7 Application name",
+      "description": "HL7 Application and Facility name (Application|Facility) associated with this AE",
       "type": "string",
       "format": "hl7ApplicationName"
     },
     "dcmArchiveNetworkAE": {
-      "title": "AEdell'Archivio di rete",
-      "description": "Informazioni relative al l'AE di rete del dispositivo di archiviazione DICOM",
+      "title": "Archive Network AE",
+      "description": "DICOM Archive Network AE related information",
       "$ref": "archiveNetworkAE.schema.json"
     }
   }

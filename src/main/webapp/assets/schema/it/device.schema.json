@@ -1,6 +1,6 @@
 {
-  "title": "Dispositivo",
-  "description": "Informazioni relative al dispositivo DICOM",
+  "title": "Device",
+  "description": "DICOM Device related information",
   "type": "object",
   "required": ["dicomDeviceName", "dicomInstalled"],
   "groups": {
@@ -34,14 +34,14 @@
   },
   "properties": {
     "dicomDeviceName": {
-      "title": "Nome dispositivo",
-      "description": "Un nome univoco per questo dispositivo",
+      "title": "Device Name",
+      "description": "A unique name for this device",
       "type": "string",
       "order":1
     },
     "dicomDescription": {
-      "title": "Descrizione del dispositivo",
-      "description": "Descrizione testuale libera del dispositivo",
+      "title": "Device Description",
+      "description": "Unconstrained text description of the device",
       "type": "string",
       "order":2
     },
@@ -52,27 +52,27 @@
       "order":2
     },
     "dicomDeviceUID": {
-      "title": "UID del dispositivo",
-      "description": "Identificativo unico del dispositivo",
+      "title": "Device UID",
+      "description": "Unique identifier of the device",
       "type": "string",
       "pattern": "^[0-2]((\\.0)|(\\.[1-9][0-9]*))*$",
       "order":3
     },
     "dicomManufacturer": {
-      "title": "Produttore",
-      "description": "Dovrebbe essere uguale al valore del produttore (0008,0070) nelle istanze SOP create da questo dispositivo",
+      "title": "Manufacturer",
+      "description": "Should be the same as the value of Manufacturer (0008,0070) in SOP instances created by this device",
       "type": "string",
       "order":4
     },
     "dicomManufacturerModelName": {
-      "title": "Nome del modello del produttore",
-      "description": "Dovrebbe essere uguale al valore del nome del modello del produttore (0008,1090) nelle istanze SOP create da questo dispositivo",
+      "title": "Manufacturer Model Name",
+      "description": "Should be the same as the value of Manufacturer Model Name (0008,1090) in SOP instances created by this device",
       "type": "string",
       "order":5
     },
     "dicomSoftwareVersion": {
-      "title": "Versione del software",
-      "description": "Dovrebbe essere uguale ai valori delle versioni software (0018,1020) nelle istanze SOP create da questo dispositivo",
+      "title": "Software Version",
+      "description": "Should be the same as the values of Software Versions (0018,1020) in SOP instances created by this device",
       "type": "array",
       "order":6,
       "items": {
@@ -80,20 +80,20 @@
       }
     },
     "dicomStationName": {
-      "title": "Nome della stazione",
-      "description": "Dovrebbe essere uguale al valore di Station Name (0008,1010) nelle istanze SOP create da questo dispositivo",
+      "title": "Station Name",
+      "description": "Should be the same as the value of Station Name (0008,1010) in SOP instances created by this device",
       "type": "string",
       "order":7
     },
     "dicomDeviceSerialNumber": {
-      "title": "Numero di serie del dispositivo",
-      "description": "Deve essere uguale al valore del numero di serie del dispositivo (0018,1000) nelle istanze SOP create da questo dispositivo",
+      "title": "Device Serial Number",
+      "description": "Should be the same as the value of Device Serial Number (0018,1000) in SOP instances created by this device",
       "type": "string",
       "order":8
     },
     "dicomPrimaryDeviceType": {
-      "title": "Tipo di dispositivo principale",
-      "description": "Rappresenta il tipo di dispositivo ed è più applicabile per le modalità di acquisizione",
+      "title": "Primary Device Type",
+      "description": "Represents the kind of device and is most applicable for acquisition modalities",
       "type": "array",
       "order":9,
       "items" : {
@@ -154,8 +154,8 @@
       }
     },
     "dicomInstitutionName": {
-      "title": "Nome istituto",
-      "description": "Deve essere uguale al valore del nome dell'istituto (0008,0080) nelle istanze SOP create da questo dispositivo",
+      "title": "Institution Name",
+      "description": "Should be the same as the value of Institution Name (0008,0080) in SOP Instances created by this device",
       "type": "array",
       "order":10,
       "items": {
@@ -163,8 +163,8 @@
       }
     },
     "dicomInstitutionCode": {
-      "title": "Codice istituto",
-      "description": "Codice/i istituto in formato (CV, CSD, \"CM\")",
+      "title": "Institution Code",
+      "description": "Institution Code(s) in format (CV, CSD, \"CM\")",
       "type": "array",
       "order":11,
       "items": {
@@ -172,8 +172,8 @@
       }
     },
     "dicomInstitutionAddress": {
-      "title": "Indirizzo dell'istituto",
-      "description": "Deve essere uguale al valore dell'attributo Indirizzo istituto (0008,0081) nelle istanze SOP create da questo dispositivo",
+      "title": "Institution Address",
+      "description": "Should be the same as the value of Institution Address (0008,0081) attribute in SOP Instances created by this device",
       "type": "array",
       "order":12,
       "items": {
@@ -181,8 +181,8 @@
       }
     },
     "dicomInstitutionDepartmentName": {
-      "title": "Nome del dipartimento",
-      "description": "Dovrebbe essere uguale al valore del nome del dipartimento istituzionale (0008,1040) nelle istanze SOP create da questo dispositivo",
+      "title": "Institution Department Name",
+      "description": "Should be the same as the value of Institutional Department Name (0008,1040) in SOP Instances created by this device",
       "type": "array",
       "order":13,
       "items": {
@@ -190,56 +190,56 @@
       }
     },
     "dicomIssuerOfPatientID": {
-      "title": "Emittente dell'ID paziente",
-      "description": "Valore predefinito per l'emittente dell'ID paziente (0010,0021) e facoltativamente anche valori predefiniti per l'ID entità universale (0040,0032) e il tipo ID entità universale (0040,0033) dell'elemento Sequenza dell'emittente dei qualificatori ID paziente (0010,0024) per le istanze SOP create o interrogate da questo dispositivo. Formato: <Issuer of Patient ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "title": "Issuer of Patient ID",
+      "description": "Default value for the Issuer of Patient ID (0010,0021), and optionally also default values for the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Patient ID Qualifiers Sequence (0010,0024) for SOP Instances created or queried by this device. Format: <Issuer of Patient ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":14
     },
     "dicomIssuerOfAccessionNumber": {
-      "title": "Emittente del numero di accesso",
-      "description": "Valori predefiniti per l'ID entità spazio dei nomi locale (0040,0031), l'ID entità universale (0040,0032) e il tipo ID entità universale (0040,0033) dell'articolo della sequenza del numero di accesso dell'emittente (0008,0051) per Istanze SOP create o interrogate da questo dispositivo. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "title": "Issuer of Accession Number",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Accession Number Sequence (0008,0051) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":15
     },
     "dicomOrderPlacerIdentifier": {
       "title": "Order Placer Identifier",
-      "description": "Valori predefiniti per l'ID entità  dello spazio dei nomi locale (0040,0031), l'ID entità universale (0040,0032) e il tipo ID entità universale (0040,0033) dell'articolo della sequenza del numero di accesso dell'emittente (0008,0051) per Istanze SOP create o interrogate da questo dispositivo. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Placer Identifier Sequence (0040,0026) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":16
     },
     "dicomOrderFillerIdentifier": {
-      "title": "Identificatore Order Filler",
-      "description": "Valori predefiniti per l'ID entità dello spazio dei nomi locale (0040,0031), l'ID entità universale (0040,0032) e il tipo ID entità universale (0040,0033) dell'articolo della sequenza del numero di accesso dell'emittente (0008,0051) per Istanze SOP create o interrogate da questo dispositivo. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "title": "Order Filler Identifier",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Order Filler Identifier Sequence (0040,0027) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":17
     },
     "dicomIssuerOfAdmissionID": {
-      "title": "Emittente dell'ID di ammissione",
-      "description": "Valori predefiniti per l'ID entità spazio dei nomi locale (0040,0031), l'ID entità universale (0040,0032) e il tipo ID entità universale (0040,0033) dell'articolo della sequenza del numero di accesso dell'emittente (0008,0051) per Istanze SOP create o interrogate da questo dispositivo. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "title": "Issuer of Admission ID",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":18
     },
     "dicomIssuerOfServiceEpisodeID": {
-      "title": "Emittente dell'ID episodio di servizio",
-      "description": "Valori predefiniti per l'ID entità spazio dei nomi locale (0040,0031), l'ID entità universale (0040,0032) e il tipo ID entità universale (0040,0033) dell'articolo dell'emittente della sequenza ID dell'episodio di servizio (0038,0064) per Istanze SOP create o interrogate da questo dispositivo. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "title": "Issuer of Service Episode ID",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Service Episode ID Sequence (0038,0064) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":19
     },
     "dicomIssuerOfContainerIdentifier": {
-      "title": "Emittente dell'identificatore del contenitore",
-      "description": "Valori predefiniti per l'ID entità spazio dei nomi locale (0040,0031), l'ID entità universale (0040,0032) e il tipo ID entità universale (0040,0033) dell'articolo della sequenza dell'identificatore del contenitore (0040,0513) per Istanze SOP create o interrogate da questo dispositivo. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "title": "Issuer of Container Identifier",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Container Identifier Sequence (0040,0513) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":20
     },
     "dicomIssuerOfSpecimenIdentifier": {
-      "title": "Emittente dell'identificatore del campione",
-      "description": "Valori predefiniti per l'ID entità spazio dei nomi locale (0040,0031), l'ID entità universale (0040,0032) e il tipo ID entità universale (0040,0033) dell'articolo dell'emittente della sequenza dell'identificativo del campione (0040,0562) per Istanze SOP create o interrogate da questo dispositivo. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "title": "Issuer of Specimen Identifier",
+      "description": "Default values for the Local Namespace Entity ID (0040,0031), the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Specimen Identifier Sequence (0040,0562) for SOP Instances created or queried by this device. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string",
       "order":21
     },
     "dicomAuthorizedNodeCertificateReference": {
-      "title": "Riferimento al certificato del nodo autorizzato",
-      "description": "I DN per i certificati dei nodi autorizzati a connettersi a questo dispositivo",
+      "title": "Authorized Node Certificate Reference",
+      "description": "The DNs for the certificates of nodes that are authorized to connect to this device",
       "type": "array",
       "order":22,
       "items": {
@@ -247,8 +247,8 @@
       }
     },
     "dicomThisNodeCertificateReference": {
-      "title": "Questo riferimento al certificato del nodo",
-      "description": "I DN dei certificati pubblici per questo nodo",
+      "title": "This Node Certificate Reference",
+      "description": "The DNs of the public certificate(s) for this node",
       "type": "array",
       "order":23,
       "items": {
@@ -256,15 +256,15 @@
       }
     },
     "dicomInstalled": {
-      "title": "installato",
-      "description": "Valore booleano per indicare se questo dispositivo è attualmente installato sulla rete",
+      "title": "installed",
+      "description": "Boolean to indicate whether this device is presently installed on the network",
       "type": "boolean",
       "order":24,
       "default": true
     },
     "dicomNetworkConnection": {
-      "title": "Connessioni di rete",
-      "description": "connessioni di rete del dispositivo",
+      "title": "Network Connections",
+      "description": "network connections of the device",
       "type": "array",
       "order":25,
       "titleKey":"{dicomHostname}:{dicomPort} {cn}",
@@ -273,8 +273,8 @@
       }
     },
     "dicomNetworkAE": {
-      "title": "AE di rete",
-      "description": "Entità dell'applicazione fornita dal dispositivo",
+      "title": "Network AEs",
+      "description": "Application entity provided by the device",
       "type": "array",
       "titleKey":"{dicomAETitle}",
       "order":26,
@@ -283,8 +283,8 @@
       }
     },
     "dcmDevice": {
-      "title": "Estensione del dispositivo",
-      "description": "Attributi del dispositivo proprietari di dcm4che",
+      "title": "Device Extension",
+      "description": "dcm4che proprietary Device Attributes",
       "$ref": "dcmDevice.schema.json",
       "order":27
     }

@@ -1,31 +1,31 @@
 {
-  "title": "Connessione di Rete",
-  "description": "Descrive una porta TCP/UDP su un dispositivo di rete.",
+  "title": "Network Connection",
+  "description": "Describes one TCP/UDP port on one network device.",
   "type": "object",
   "required": [
     "dicomHostname"
   ],
   "properties": {
     "cn": {
-      "title": "Nome",
-      "description": "Nome arbitrario/significativo per l'oggetto Connessione di rete",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name for the Network Connection object",
       "type": "string"
     },
     "dicomHostname": {
-      "title": "Nome host",
-      "description": "Nome DNS per questa particolare connessione",
+      "title": "Hostname",
+      "description": "DNS name for this particular connection",
       "type": "string"
     },
     "dicomPort": {
-      "title": "Porta",
-      "description": "Porta TCP/UDP su cui è in ascolto un servizio. Potrebbe mancare se questa connessione di rete viene utilizzata solo per le connessioni in uscita",
+      "title": "Port",
+      "description": "TCP/UDP port that a service is listening on. May be missing if this network connection is only used for outbound connections",
       "type": "integer",
       "minimum": 1,
       "maximum": 99999
     },
     "dicomTLSCipherSuite": {
       "title": "TLS CipherSuites",
-      "description": "Le CipherSuite TLS supportate su questa particolare connessione. Se non presente TLS è disabilitato",
+      "description": "The TLS CipherSuites that are supported on this particular connection. If not present TLS is disabled",
       "type": "array",
       "items": {
         "type": "string",
@@ -41,13 +41,13 @@
       }
     },
     "dicomInstalled": {
-      "title": "installato",
-      "description": "Vero se la connessione di rete è installata sulla rete. Se non presente, le informazioni sullo stato di installazione dell'ARR vengono ereditate dal dispositivo",
+      "title": "installed",
+      "description": "True if the Network Connection is installed on the network. If not present, information about the installed status of the Network Connection is inherited from the device",
       "type": "boolean"
     },
     "dcmNetworkConnection": {
-      "title": "Estensione della connessione di rete",
-      "description": "Attributi di connessione di rete proprietari di dcm4che",
+      "title": "Network Connection Extension",
+      "description": "dcm4che proprietary Network Connection Attributes",
       "$ref": "dcmNetworkConnection.schema.json"
     }
   }

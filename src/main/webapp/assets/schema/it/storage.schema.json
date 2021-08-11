@@ -1,6 +1,6 @@
 {
   "title": "Storage",
-  "description": "Descrittore di archiviazione",
+  "description": "Storage Descriptor",
   "type": "object",
   "required": [
     "dcmStorageID",
@@ -30,13 +30,13 @@
       ]
     },
     "dcmURI": {
-      "title": "URI di archiviazione",
+      "title": "Storage URI",
       "description": "RFC2079: Uniform Resource Identifier",
       "type": "string"
     },
     "dcmDigestAlgorithm": {
-      "title": "Algoritmo per il Digest",
-      "description": "Algoritmo per la generazione dei checksum.",
+      "title": "Digest Algorithm",
+      "description": "Algorithm for generation of check sums.",
       "type": "string",
       "enum" : [
         "MD5",
@@ -44,21 +44,21 @@
       ]
     },
     "dcmMaxRetries": {
-      "title": "Numero massimo di tentativi",
-      "description": "Numero massimo di tentativi per memorizzare un oggetto nel sistema di archiviazione.",
+      "title": "Maximum Number of Retries",
+      "description": "Maximum number of retries to store an object on the storage system.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmRetryDelay": {
-      "title": "Intervallo tra i tentativi:",
-      "description": "Ritardo per riprovare a memorizzare un oggetto sul sistema di archiviazione nel formato di durata ISO-8601 PnDTnHnMn.nS. Riprova immediatamente se assente.",
+      "title": "Retry Delay",
+      "description": "Delay to retry to store an object on the storage system in ISO-8601 duration format PnDTnHnMn.nS. Retry immediately if absent.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmInstanceAvailability": {
-      "title": "Disponibilità dell'istanza",
-      "description": "Disponibilità dell'istanza.",
+      "title": "Instance Availability",
+      "description": "Instance Availability.",
       "type": "string",
       "default": "ONLINE",
       "enum": [
@@ -68,8 +68,8 @@
       ]
     },
     "dcmStorageDuration": {
-      "title": "Tempo di conservazione",
-      "description": "Indica se l'archivio viene utilizzato come archivio permanente (= PERMANENT), cache (= CACHE) o temporaneo (= TEMPORARY). Gli oggetti vengono eliminati dalla cache e dall'archiviazione temporanea in base alle soglie di eliminazione configurate oppure, se non viene specificata alcuna soglia di eliminazione e non sono configurati periodi di conservazione, tutti gli oggetti nell'archiviazione verranno eliminati. In caso di archiviazione temporanea, vengono eliminati dal database anche gli studi di cui sono stati eliminati gli oggetti.",
+      "title": "Storage Duration",
+      "description": "Indicates if the Storage is used as permanent (=PERMANENT), cache (=CACHE) or temporary (=TEMPORARY) storage. Objects get purged from cache and temporary storage according configured deleter thresholds or - if no deleter threshold is specified and no Retention Periods are configured - all objects on the Storage will get purged. In the case of temporary storage, the studies which objects were purged are also deleted from the database.",
       "type": "string",
       "default": "PERMANENT",
       "enum": [
@@ -79,49 +79,49 @@
       ]
     },
     "dcmReadOnly": {
-      "title": "Sola lettura",
-      "description": "Indica se un sistema di archiviazione è di sola lettura.",
+      "title": "Read Only",
+      "description": "Indicates if a Storage System is read only.",
       "type": "boolean",
       "default": false
     },
     "dcmStorageClusterID": {
-      "title": "ID cluster di archiviazione",
-      "description": "Identifica uno spazio di archiviazione che appartiene a un cluster di archiviazione. Gli oggetti di uno studio possono essere distribuiti sui sistemi di archiviazione di un cluster di archiviazione. Utilizzato dalla cancellazione attivata dalla soglia.",
+      "title": "Storage Cluster ID",
+      "description": "Identifies a Storage to belong to a Storage Cluster. Objects of one Study may be distributed over Storage Systems of one Storage Cluster. Used by threshold triggered deletion.",
       "type": "string"
     },
     "dcmStorageThreshold": {
-      "title": "Soglia di archiviazione",
-      "description": "Spazio utilizzabile minimo sul sistema di archiviazione. Se lo spazio utilizzabile scende al di sotto di tale valore, il sistema di archiviazione verrà contrassegnato come pieno impostando la soglia di archiviazione oltre l'ora corrente e, se la soglia di archiviazione viene superata in modo permanente, il sistema di archiviazione verrà rimosso dall'elenco dei sistemi di archiviazione configurati del Network AE relativo al sistema di archiviazione. Formato nnn (MB | GB | MiB | GiB)",
+      "title": "Storage Threshold",
+      "description": "Minimal Usable Space on Storage System. If the usable space falls below that value the Storage System will be marked as full by setting Storage Threshold Exceeds to the current time and - if Storage Threshold Exceeds Permanently is true - the Storage System will be removed from the list of configured Storage Systems of the Network AE requesting that Storage System. Format nnn(MB|GB|MiB|GiB)",
       "type": "string"
     },
     "dcmStorageThresholdExceeded": {
-      "title": "Soglia di archiviazione superata",
-      "description": "Data e ora nel formato AAAAMMGGHHMMSS.FFFFFF in cui è stata superata la soglia di archiviazione.",
+      "title": "Storage Threshold Exceeded",
+      "description": "Date and time in format YYYYMMDDHHMMSS.FFFFFF when the Storage Threshold exceeded.",
       "type": "string"
     },
     "dcmStorageThresholdExceedsPermanently": {
-      "title": "La soglia di archiviazione superata in modo permanente",
-      "description": "Indica di rimuovere il sistema di archiviazione dall'elenco dei sistemi di archiviazione configurati per l'AE di rete quando viene superata la soglia di archiviazione.",
+      "title": "Storage Threshold Exceeds Permanently",
+      "description": "Indicates to removed the Storage System from the list of configured Storage Systems of the Network AE requesting that Storage System when the Storage Threshold exceeds.",
       "type": "boolean",
       "default": true
     },
     "dcmNoDeletionConstraint": {
-      "title": "Nessun vincolo di cancellazione",
-      "description": "Elimina studi dalla cache/sistema di archiviazione temporaneo, se non è configurata alcuna soglia di eliminazione e nessun altro vincolo di eliminazione.",
+      "title": "No Deletion Constraint",
+      "description": "Delete Studies from cache/temporary Storage System, if no Deleter Threshold and no other deletion constraint is configured.",
       "type": "boolean",
       "default": false
     },
     "dcmDeleterThreshold": {
-      "title": "Soglia di cancellazione",
-      "description": "Spazio utilizzabile minimo sul sistema di archiviazione per attivare l'eliminazione. Se presenti, gli studi vengono eliminati dal sistema di archiviazione configurato per l'archiviazione cache (Durata archiviazione = CACHE) o temporanea (Durata archiviazione = TEMPORARY), se lo spazio utilizzabile è inferiore a tale valore. Formato [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).",
+      "title": "Deleter Threshold",
+      "description": "Minimal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the usable space fall below that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmDeleteStudiesOlderThan": {
-      "title": "Elimina gli Studi più vecchi di",
-      "description": "Eliminare gli studi dal sistema di archiviazione configurato per l'archiviazione cache (dcmStorageDuration = CACHE) o temporanea (dcmStorageDuration = TEMPORARY), se la data dello studio è più grande del valore specificato nel formato periodo ISO-8601. Formato [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
+      "title": "Delete Studies Older Than",
+      "description": "Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if their Study Date is longer ago than the specified value in ISO-8601 period format. Format [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
       "type": "array",
       "items": {
         "type": "string"
@@ -129,8 +129,8 @@
       "format": "dcmPeriod"
     },
     "dcmDeleteStudiesReceivedBefore": {
-      "title": "Elimina studi ricevuti prima di",
-      "description": "Eliminare gli studi dal sistema di archiviazione configurato per l'archiviazione cache (dcmStorageDuration = CACHE) o temporanea (dcmStorageDuration = TEMPORARY), se la data dello studio è più grande del valore specificato nel formato periodo ISO-8601. Formato [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
+      "title": "Delete Studies Received Before",
+      "description": "Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if they were received longer ago than the specified value in ISO-8601 period format. Format [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
       "type": "array",
       "items": {
         "type": "string"
@@ -138,8 +138,8 @@
       "format": "dcmPeriod"
     },
     "dcmDeleteStudiesNotUsedSince": {
-      "title": "Elimina studi non utilizzati da",
-      "description": "Eliminare gli studi dal sistema di archiviazione configurato per l'archiviazione cache (dcmStorageDuration = CACHE) o temporanea (dcmStorageDuration = TEMPORARY), se l'ultimo accesso è stato effettuato da più tempo rispetto al valore specificato nel formato periodo ISO-8601. Formato [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
+      "title": "Delete Studies Not Used Since",
+      "description": "Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if they were last accessed longer ago than the specified value in ISO-8601 period format. Format [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
       "type": "array",
       "items": {
         "type": "string"
@@ -147,8 +147,8 @@
       "format": "dcmPeriod"
     },
     "dcmDeleterThreads": {
-      "title": "Threads di cancellazione",
-      "description": "Numero di thread utilizzati per l'eliminazione di oggetti dal sistema di archiviazione.",
+      "title": "Deleter Threads",
+      "description": "Number of Threads used for deletion of objects from the Storage System.",
       "type": "integer",
       "default" : 1,
       "minimum": 0,
@@ -156,7 +156,7 @@
     },
     "dcmExternalRetrieveAET": {
       "title": "External Retrieve AETs",
-      "description": "Limita la cancellazione degli studi, oltre alle soglie di cancellazione configurate e/o ai vincoli del periodo di conservazione della cancellazione, dal sistema di archiviazione per gli studi che possono essere recuperabili utilizzando uno degli AE  SCP C-MOVE esterni",
+      "description": "Constrains deletion of Studies, additionally to configured deleter thresholds and/or deletion retention period constraints, from the Storage System to Studies which objects are retrievable using one of the AEs from an external C-MOVE SCP.",
       "type": "array",
       "items": {
         "type": "string"
@@ -175,7 +175,7 @@
     },
     "dcmExportStorageID": {
       "title": "Export Storage ID",
-      "description": "Limita l'eliminazione degli studi, oltre alle soglie di cancellazione configurate e/o ai vincoli del periodo di conservazione dell'eliminazione, dal sistema di archiviazione agli studi i cui oggetti sono accessibili anche dall'altro archivio specificato.",
+      "description": "Constrains deletion of Studies, additionally to configured deleter thresholds and/or deletion retention period constraints, from the Storage System to Studies whose objects are also accessible from the specified other storages.",
       "type": "array",
       "items": {
         "type": "string"
@@ -184,21 +184,21 @@
     },
     "dcmRetrieveCacheStorageID": {
       "title": "Retrieve Cache Storage ID",
-      "description": "Specifica un altro archivio in cui gli oggetti vengono copiati in parallelo durante il recupero per aumentare le prestazioni di accesso ai sistemi di archiviazione in modo da fornire maggiore banda usando più connessioni in parallelo.",
+      "description": "Specifies another Storage to which objects are copied in parallel on retrieve to increase the performance on accessing storage systems which provides more bandwidth using multiple connections in parallel.",
       "type": "string",
       "format": "dcmStorageID"
     },
     "dcmRetrieveCacheMaxParallel": {
       "title": "Retrieve Cache Max Parallel",
-      "description": "Numero massimo di copie parallele da memorizzare nella cache durante il recupero. Efficace solo se è configurato un ID di archiviazione cache di recupero.",
+      "description": "Maximal number of parallel copies to cache storage on retrieve. Only effective if a Retrieve Cache Storage ID is configured.",
       "type": "integer",
       "default" : 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmProperty": {
-      "title": "Proprietà di archiviazione",
-      "description": "Proprietà nel formato <name>=<value> ",
+      "title": "Storage Property",
+      "description": "Property in format <name>=<value>",
       "type": "array",
       "items": {
         "type": "string"

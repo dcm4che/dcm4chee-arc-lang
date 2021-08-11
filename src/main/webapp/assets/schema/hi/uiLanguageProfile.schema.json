@@ -1,6 +1,6 @@
 {
-  "title": "UI भाषा प्रोफ़ाइल विन्यास",
-  "description": "UI भाषा प्रोफ़ाइल विन्यास ।",
+  "title": "UI Elasticsearch URL Configuration",
+  "description": "Elasticsearch URL",
   "type": "object",
   "required": [
     "dcmuiLanguageProfileName",
@@ -8,13 +8,13 @@
   ],
   "properties": {
     "dcmuiLanguageProfileName": {
-      "title": "नाम",
-      "description": "भाषा प्रोफ़ाइल का नाम ।",
+      "title": "Name",
+      "description": "Language profile name",
       "type": "string"
     },
     "dcmDefaultLanguage": {
-      "title": "डिफ़ॉल्ट भाषा",
-      "description": "UI के लिए डिफ़ॉल्ट भाषा चुने ।",
+      "title": "Default language",
+      "description": "Select default language for the UI",
       "type": "string",
       "items" : {
         "type": "string"
@@ -22,16 +22,16 @@
       "format": "dcmDefaultLanguage"
     },
     "dcmuiLanguageProfileRole": {
-      "title": "भूमिका",
-      "description": "उपभोक्ता की भूमिकाएँ जिनपे यह भाषा प्रोफ़ाइल लागू होंगी ।",
+      "title": "Role",
+      "description": "Username role that this language profile should apply to",
       "type": "array",
       "items" : {
         "type": "string"
       }
     },
     "dcmuiLanguageProfileUsername": {
-      "title": "उपभोक्ता का नाम",
-      "description": "भाषा प्रोफ़ाइल के लिए उपभोक्ता का नाम ।",
+      "title": "Username",
+      "description": "Username for the language profile",
       "type": "string"
     }
   }

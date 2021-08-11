@@ -1,19 +1,19 @@
 {
-  "title": "UI इलास्टिकसर्च विन्यास",
-  "description": "प्रो संस्करण के लिए इलास्टिकसर्च विन्यास ।",
+  "title": "UI Elasticsearch Configuration",
+  "description": "Elasticsearch Configuration for the pro version",
   "type": "object",
   "required": [
     "dcmuiElasticsearchConfigName"
   ],
   "properties": {
     "dcmuiElasticsearchConfigName": {
-      "title": "UI इलास्टिकसर्च विन्यास का नाम",
-      "description": "UI इलास्टिकसर्च विन्यास का नाम",
+      "title": "UI Elasticsearch Configuration Name",
+      "description": "UI Elasticsearch Configuration Name",
       "type": "string"
     },
     "dcmuiElasticsearchURLObjects": {
-      "title": "UI इलास्टिकसर्च URL",
-      "description": "UI इलास्टिकसर्च URL",
+      "title": "UI Elasticsearch URL",
+      "description": "UI Elasticsearch URL",
       "titleKey":"{dcmuiElasticsearchURLName}",
       "type": "array",
       "items" : {

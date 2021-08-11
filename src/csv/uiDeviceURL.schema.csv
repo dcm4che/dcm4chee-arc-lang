@@ -1,6 +1,0 @@
-"property","title","description"
-"","UI Device URL","Configuration of Device URL to use beside the main UI URL"
-"dcmuiDeviceURLName","Device URL Name","Device Configured URL Name"
-"dcmuiDeviceURL","Device URL","Access URL of Device. E.g. http(s)://<myDevice-host>:<myDevice-port>"
-"dcmuiDeviceURLDescription","Description","Device URL Description"
-"dcmuiDeviceURLInstalled","Installed","Use this URL in the UI"

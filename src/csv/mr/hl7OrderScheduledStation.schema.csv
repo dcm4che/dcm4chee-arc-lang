@@ -1,6 +1,0 @@
-"property","title","description"
-"","HL7 ऑर्डरसाठी अनुसूचित स्टेशन","HL7 ऑर्डर फीडवर निवडलेला अनुसूचित स्टेशन."
-"cn","नाव","अनुसूचित स्टेशन ऑर्डर मॅपिंगचे अनियंत्रित / अर्थपूर्ण नाव."
-"hl7OrderScheduledStationDeviceName","अनुसूचित स्टेशन डिव्हाइसचे नाव","HL7 ऑर्डर संदेशांसाठी वापरलेल्या अनुसूचित स्टेशन डिव्हाइसचे नाव."
-"dcmRulePriority","प्राधान्य मॅपिंग","प्राधान्य मॅपिंग."
-"dcmProperty","अटी","अटी या स्वरूपात {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. उदाहरणे: MSH-4=FORWARD किंवा MSH-9=ADT\^A28\^ADT_A05 किंवा PID-3[.3]=PIDIssuer किंवा PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType"

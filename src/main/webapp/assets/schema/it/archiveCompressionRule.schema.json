@@ -1,6 +1,6 @@
 {
-  "title": "Regola di compressione dell'archivio",
-  "description": "Regola di compressione dell'archivio",
+  "title": "Archive Compression rule",
+  "description": "Archive Compression rule",
   "type": "object",
   "required": [
     "cn",
@@ -9,42 +9,42 @@
   ],
   "properties": {
     "cn": {
-      "title": "Nome",
-      "description": "Nome arbitrario/significativo della regola di compressione dell'archivio",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the Archive Compression Rule",
       "type": "string"
     },
     "dicomTransferSyntax": {
-      "title": "UID della Sintassi di trasferimento DICOM",
-      "description": "Un UID della sintassi di trasferimento",
+      "title": "DICOM Transfer Syntax UID",
+      "description": "Transfer Syntax to which received images shall be compressed",
       "type": "string",
       "format": "dcmTransferSyntax"
     },
     "dcmRulePriority": {
-      "title": "Priorità delle regole",
-      "description": "Priorità delle regole",
+      "title": "Rule Priority",
+      "description": "If the condition of several Compression rules matches for a received image, the rule with the highest priority will get applied. If there are several matching rules with equal priority it is undefined which rule get applied.",
       "type": "integer",
       "default" : 0,
       "minimum": 0
     },
     "dcmProperty": {
-      "title": "Condizioni",
-      "description": "Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Esempio: SendingApplicationEntityTitle=FORWARD o Modality=MR|CT o ProcedureCodeSequence.CodeValue=MRProcedure o 00180015=KNEE o 00321034.00080100=RequestingServiceCode o ImageType[3]=LOCALIZER",
+      "title": "Conditions",
+      "description": "Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmImageWriteParam": {
-      "title": "Parametri di scrittura immagine",
-      "description": "Parametri di scrittura immagine (nome=valore) impostati su Image Writer prima della compressione",
+      "title": "Image Write Param",
+      "description": "Image Write Parameter(s) (name=value) set at on Image Writer before compression",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmCompressionDelay": {
-      "title": "Ritardo di compressione",
-      "description": "Ritardo di compressione nel formato di durata ISO-8601 PnDTnHnMn.nS. Comprimi in ricezione se assente.",
+      "title": "Compression Delay",
+      "description": "Compression delay in ISO-8601 duration format PnDTnHnMn.nS. Compress on receive if absent.",
       "type": "string",
       "format": "dcmDuration"
     }

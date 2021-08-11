@@ -1,6 +1,6 @@
 {
-  "title": "属性 セット",
-  "description": "QIDO-RSと WADO-RS メタデータの クエリ パラメーター 'includefields' に よって、 または DIFF-RS 要求の クエリ パラメーター 'comparefield' に よって 使用された 名前付き 属性 セット",
+  "title": "Attribute Set",
+  "description": "Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests.",
   "type": "object",
   "required": [
     "dcmAttributeSetType",
@@ -10,13 +10,13 @@
   ],
   "properties": {
     "dicomDescription": {
-      "title": "属性 セットの 説明",
-      "description": "この 属性 セットの 制約のない テキスト 説明",
+      "title": "Attribute Set Description",
+      "description": "Unconstrained text description of this Attribute Set",
       "type": "string"
     },
     "dcmAttributeSetType": {
-      "title": "属性 セット タイプ",
-      "description": "この 属性 セットが QIDO-RSと WADO-RS メタデータの クエリ パラメーター 'includefields' に よって、 または DIFF-RS 要求の クエリ パラメーター 'comparefield' に よって 使用されるか どうかを 指定します。",
+      "title": "Attribute Set Type",
+      "description": "Specifies if this Attribute Set is used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests.",
       "type": "string",
       "enum": [
         "QIDO_RS",
@@ -26,29 +26,29 @@
       ]
     },
     "dcmAttributeSetID": {
-      "title": "属性 セット ID",
-      "description": "この 属性 セットを 参照する QIDO-RSと WADO-RS メタデータの クエリ パラメーター 'includefields' に よって、 または DIFF-RS 要求の クエリ パラメーター 'comparefield' に よって 使用された ID。",
+      "title": "Attribute Set ID",
+      "description": "ID used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata requests and by Query Parameter 'comparefield' of DIFF-RS requests to refer this Attribute Set.",
       "type": "string"
     },
     "dcmAttributeSetTitle": {
-      "title": "属性 セットの タイトル",
-      "description": "この 属性 セットの タイトル。",
+      "title": "Attribute Set Title",
+      "description": "Title of this Attribute Set.",
       "type": "string"
     },
     "dcmAttributeSetNumber": {
-      "title": "属性 セット 番号",
-      "description": "属性 セットの 注文に 使用される 番号。",
+      "title": "Attribute Set Number",
+      "description": "Number used to order Attribute Sets.",
       "type": "integer"
     },
     "dicomInstalled": {
-      "title": "インストール済み",
-      "description": "この 属性 セットが 現在 アーカイブ デバイスに インストールされて いるか どうかを 示しされた ブーリアン。",
+      "title": "installed",
+      "description": "Boolean to indicate whether this Attribute Set is presently installed on the archive device",
       "type": "boolean",
       "default": true
     },
     "dcmTag": {
-      "title": "属性 タグ",
-      "description": "16進 文字列としての DICOM タグ",
+      "title": "Attribute Tag",
+      "description": "DICOM Tag as hex string",
       "type": "array",
       "items": {
         "type": "string"
@@ -56,8 +56,8 @@
       "format": "dcmTag"
     },
     "dcmProperty": {
-      "title": "属性",
-      "description": "<name>=<value> 形式で 属性。",
+      "title": "Property",
+      "description": "Property in format <name>=<value>",
       "type": "array",
       "items": {
         "type": "string"

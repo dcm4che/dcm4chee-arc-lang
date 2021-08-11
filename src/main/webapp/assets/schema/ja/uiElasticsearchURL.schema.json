@@ -1,6 +1,6 @@
 {
-  "title": "UI エラスティクサーチ URL 構成",
-  "description": "エラスティクサーチ URL",
+  "title": "UI Elasticsearch URL Configuration",
+  "description": "Elasticsearch URL",
   "type": "object",
   "required": [
     "dcmuiElasticsearchURLName",
@@ -10,30 +10,30 @@
   ],
   "properties": {
     "dcmuiElasticsearchURLName": {
-      "title": "エラスティクサーチ URL名",
-      "description": "UI エラスティクサーチ URL名",
+      "title": "Elasticsearch URL Name",
+      "description": "UI Elasticsearch URL Name",
       "type": "string"
     },
     "dcmuiElasticsearchWebApp": {
-      "title": "エラスティクサーチ ウェブ アプリケーション",
-      "description": "使用 する ウェブ アプリケーションは エラスティクサーチ URLを 抽出し、 エラスティクサーチに アクセス します",
+      "title": "Elasticsearch WebApp",
+      "description": "Web Application that will be used te extract the Elasticsearch URL and access Elasticsearch",
       "type": "string",
       "format": "webApp"
     },
     "dcmuiAuditEnterpriseSiteID": {
-      "title": "監査 エンタープライズ サイト ID",
-      "description": "エラスティクサーチ クエリで 使用 する 監査 エンタープライズ サイト IDを 設定 します",
+      "title": "Audit Enterprise SiteID",
+      "description": "Set Audit Enterprise SiteID which should be used on Elasticsearch queries",
       "type": "string"
     },
     "dcmuiElasticsearchIsDefault": {
-      "title": "デフォルトです",
-      "description": "この URLを デフォルトに 設定します。(URL 兄弟の 子の 1つだけが デフォルトに 設定されて いる ことを 確認して ください)。",
+      "title": "Is Default",
+      "description": "Set this URL to the default one. (Make sure that only one of the urls - siblings child is set to default).",
       "type": "boolean",
       "default": false
     },
     "dcmuiElasticsearchInstalled": {
-      "title": "インストール済み",
-      "description": "UIで この URLを 使用 する",
+      "title": "Installed",
+      "description": "Use this URL in the UI",
       "type": "boolean",
       "default": true
     }

@@ -1,7 +1,0 @@
-"property","title","description"
-"","Timeout per inattività MWL","Timeout per inattività MWL"
-"cn","Nome","Nome arbitrario/significativo del timeout di inattività MWL."
-"dicomAETitle","Titolo AE MWL ","Titolo AE di Archivio di MWL SCP su cui deve essere applicato il timeout di inattività MWL."
-"dcmAETitle","Titolo AE stazione pianificata","Titolo AE stazione pianificata/e delle fasi della procedura pianificata per le quali deve essere applicato il timeout di inattività MWL. Se non viene specificato nessuno, il timeout di inattività MWL viene applicato a tutti i passaggi della procedura pianificata forniti da MWL SCP."
-"dcmMWLStatusOnIdle","Stato MWL in inattivo","Modificare lo stato dei passaggi della procedura pianificata inattiva al valore specificato."
-"dcmDuration","Timeout per inattività","Timeout dopo il quale lo stato di corrispondenza dei passaggi della procedura pianificata viene modificato nello stato finale specificato."

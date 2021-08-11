@@ -1,7 +1,0 @@
-"property","title","description"
-"","UI エラスティクサーチ URL 構成","エラスティクサーチ URL"
-"dcmuiElasticsearchURLName","エラスティクサーチ URL名","UI エラスティクサーチ URL名"
-"dcmuiElasticsearchWebApp","エラスティクサーチ ウェブ アプリケーション","使用 する ウェブ アプリケーションは エラスティクサーチ URLを 抽出し、 エラスティクサーチに アクセス します"
-"dcmuiAuditEnterpriseSiteID","監査 エンタープライズ サイト ID","エラスティクサーチ クエリで 使用する 監査 エンタープライズ サイト IDを 設定 する"
-"dcmuiElasticsearchIsDefault","デフォルトです","この URLを デフォルトに 設定します。(URL 兄弟の 子の 1つだけが デフォルトに 設定されて いる ことを 確認して ください)。"
-"dcmuiElasticsearchInstalled","インストール済み","UIで この URLを 使用 する"

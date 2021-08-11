@@ -1,6 +1,6 @@
 {
-  "title": "वेब अनुप्रयोगों की सूची",
-  "description": "वेब अनुप्रयोगों की सूची ।",
+  "title": "Web App drop-down list",
+  "description": "Web App drop-down list",
   "type": "object",
   "required": [
     "dcmuiWebAppListName",
@@ -9,18 +9,18 @@
   ],
   "properties": {
     "dcmuiWebAppListName": {
-      "title": "सूची का नाम",
-      "description": "इस कॉन्फिग के लिए एक नाम परिभाषित करें ।",
+      "title": "List Name",
+      "description": "Define a name for this config",
       "type": "string"
     },
     "dcmuiWebAppListDescription": {
-      "title": "वर्णन",
-      "description": "वेब अनुप्रयोगों की सूची का वर्णन ।",
+      "title": "Description",
+      "description": "Web Application List description",
       "type": "string"
     },
     "dcmuiMode": {
-      "title": "सूची का प्रकार",
-      "description": "आपके पास परिभाषित सूची को दिखाने की २ सम्भावनाए है: १.) शेष सूची के शीर्ष पर एक पंक्ति के साथ 'अलग', २.) केवल जो यहाँ परिभाषित है उन्हें दिखाए 'अनन्य' ।",
+      "title": "List mode",
+      "description": "You have two possibilities how to show the defined list: 1.) On top on the rest of list 'separated' with a line, 2.) Show only those hir defined ( 'exclusive' ).",
       "type": "string",
       "default":"separated",
       "enum": [
@@ -29,8 +29,8 @@
       ]
     },
     "dcmuiWebApps": {
-      "title": "वेब अनुप्रयोग",
-      "description": "वेब अनुप्रयोग ।",
+      "title": "WebApps",
+      "description": "Web Application",
       "format": "webApp",
       "type": "array",
       "items" : {
@@ -38,16 +38,16 @@
       }
     },
     "dcmAcceptedUserRole": {
-      "title": "स्वीकृत उपभोक्ता की भूमिका",
-      "description": "उन भूमिकाओं को परिभाषित करें जिनके लिए यह कॉन्फिग उपलब्ध होना चाहिए, सारे भूमिकाओं पे उपलब्ध होने के लिए 'user' का इस्तमाल करें । स्वीकृत उपभोक्ता की भूमिका या स्वीकृत उपभोक्ता का नाम, सिर्फ किसी एक को ही परिभाषित करें ।",
+      "title": "Accepted User Role",
+      "description": "Define the roles for which this config should be available, use 'user' to be available for all roles ( You should either define a username ( following attribute ) or user role ( this attribute ))",
       "type": "array",
       "items" : {
         "type": "string"
       }
     },
     "dcmAcceptedUserName": {
-      "title": "स्वीकृत उपभोक्ता का नाम",
-      "description": "उन उपभोक्ताओं के नामों को परिभाषित करें जिनके लिए यह कॉन्फिग उपलब्ध होना चाहिए । स्वीकृत उपभोक्ता का नाम या स्वीकृत उपभोक्ता की भूमिका, सिर्फ किसी एक को ही परिभाषित करें ।",
+      "title": "Accepted User Name",
+      "description": "Define the Username for which this config should be available ( You should either define a username ( this attribute ) or user role ( previous attribute ))",
       "type": "array",
       "items" : {
         "type": "string"

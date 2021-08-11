@@ -1,6 +1,6 @@
 {
-  "title": "HL7 अभ्यास धारणा धोरण",
-  "description": "HL7 अभ्यास धारणा धोरण.",
+  "title": "HL7 Study Retention Policy",
+  "description": "HL7 Study Retention Policy",
   "type": "object",
   "required": [
     "cn",
@@ -13,64 +13,64 @@
   ],
   "properties": {
     "cn": {
-      "title": "नाव",
-      "description": "HL7 अभ्यास धारणा धोरणाचे अनियंत्रित / अर्थपूर्ण नाव.",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the HL7 Study Retention Policy",
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "अनुप्रयोग घटक AE चे शीर्षक",
-      "description": "अनुप्रयोग घटक AE चे शीर्षक.",
+      "title": "Application Entity (AE) title",
+      "description": "Application Entity (AE) title",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmRetentionPeriod": {
-      "title": "किमान अभ्यास धारणा कालावधी",
-      "description": "ISO-8601 कालावधी स्वरूपात PnYnMnD किंवा PnW किमान अभ्यास धारणा कालावधी.",
+      "title": "Minimal Study Retention Period",
+      "description": "Minimal Study Retention Period in ISO-8601 period format PnYnMnD or PnW",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmMaxRetentionPeriod": {
-      "title": "कमाल अभ्यास धारणा कालावधी",
-      "description": "ISO-8601 कालावधी स्वरूपात PnYnMnD किंवा PnW मध्ये अधिकतम अभ्यास धारणा कालावधी.",
+      "title": "Maximal Study Retention Period",
+      "description": "Maximal Study Retention Period in ISO-8601 period format PnYnMnD or PnW",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmRulePriority": {
-      "title": "नियम प्राधान्य",
-      "description": "नियम प्राधान्य.",
+      "title": "Rule Priority",
+      "description": "Rule Priority.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmProperty": {
-      "title": "अटी",
-      "description": "अटी या स्वरूपात {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. उदाहरणे: MSH-4=FORWARD किंवा MSH-9=ADT\\^A28\\^ADT_A05 किंवा PID-3[.3]=PIDIssuer किंवा PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "title": "Conditions",
+      "description": "Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmStartRetentionPeriodOnStudyDate": {
-      "title": "अभ्यासाच्या तारखेपासून धारणा कालावधी प्रारंभ करा",
-      "description": "हा नियम ट्रिगर करणारे HL7 संदेश प्राप्त तारखेऐवजी वैयक्तिक अभ्यासाच्या तारखांवर धारणा कालावधी सुरू केला पाहिजे का हे सूचित करते.",
+      "title": "Start Retention Period on Study Date",
+      "description": "Indicates if retention period should be started on individual Study Dates instead on receive of the HL7 message triggering this rule.",
       "type": "boolean",
       "default": false
     },
     "dcmExporterID": {
-      "title": "कालबाह्य झालेला अभ्यास निर्यात करा",
-      "description": "निर्दिष्ट निर्यातकाचा वापर करुन कालबाह्य झालेला अभ्यास / मालिका निर्यात करा.",
+      "title": "Export expired Study",
+      "description": "Export expired Study/Series using the specified Exporter",
       "type": "string",
       "format": "dcmExporterID"
     },
     "dcmFreezeExpirationDate": {
-      "title": "समाप्ती तारीख गोठवा",
-      "description": "खालील कार्यक्रमांद्वारे कालबाह्यता तारखेचे बदल अक्षम करण्यासाठी सूचित करा.",
+      "title": "Freeze Expiration Date",
+      "description": "Indicate to disable changes of the Expiration Date by following events.",
       "type": "boolean",
       "default": false
     },
     "dcmRevokeExpiration": {
-      "title": "कालबाह्यता तारीख मागे घ्या",
-      "description": "मागील संच कालबाह्यता तारीख मागे घेण्यासाठी सूचित करा.",
+      "title": "Revoke Expiration Date",
+      "description": "Indicate to revoke a previous set Expiration Date.",
       "type": "boolean",
       "default": false
     }

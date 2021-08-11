@@ -1,4 +1,0 @@
-"property","title","description"
-"","SPS Status for HL7 Order","Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages"
-"dcmSPSStatus","Scheduled Procedure Step Status code","Scheduled Procedure Step Status code"
-"hl7OrderControlStatus","HL7 Order Control Status","HL7 Order Control Status Code combinations."

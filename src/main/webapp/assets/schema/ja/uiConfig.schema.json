@@ -1,19 +1,19 @@
 {
-  "title": "UI 構成",
-  "description": "UI 構成",
+  "title": "UI Configuration",
+  "description": "UI Configuration",
   "type": "object",
   "required": [
     "dcmuiConfigName"
   ],
   "properties": {
     "dcmuiConfigName": {
-      "title": "UI 構成名",
-      "description": "UI 構成名",
+      "title": "UI Configuration Name",
+      "description": "UI Configuration Name",
       "type": "string"
     },
     "dcmuiModalities": {
-      "title": "統計 モダリティ",
-      "description": "統計 ページに 表示される 事前選択された モダリティ",
+      "title": "Statistic Modalities",
+      "description": "Preselected Modalities that should show in the Statistic page",
       "type": "array",
       "items" : {
         "type": "string"
@@ -29,8 +29,8 @@
       }
     },
     "dcmuiWidgetAets": {
-      "title": "ウィジェット AETs",
-      "description": "AET ウィジェットに 表示したく AETを 選択します。ここで、新しく 追加された AETを 'Accepted Calling AE Title' として 選択する ことが できます。",
+      "title": "Widget AETs",
+      "description": "Select the AETs that you wan't to see in the AET widget, where you can select in which of them the newly added AET should be as `Accepted Calling AE Title`",
       "type": "array",
       "items" : {
         "type": "string"
@@ -38,18 +38,18 @@
       "format": "dcmAETitle"
     },
     "dcmuiBackgroundURL": {
-      "title": "背景 URL",
-      "description": "UIの 背景を 変更するための 背景 URL。相対 URL または 絶対 URLに する ことが できます、画像の 幅は 少なくとも 1024pxで ある 必要が あります。",
+      "title": "Background URL",
+      "description": "Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px ",
       "type": "string"
     },
     "dcmuiLogoURL": {
-      "title": "ロゴ URL",
-      "description": "UIの ロゴを 変更するための ロゴ URL、相対 URL または 絶対 URLに する ことが できます, 画像の 幅は 140pxで、png 形式で あり、背景は 透明で ある 必要が あります。",
+      "title": "Logo URL",
+      "description": "Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background",
       "type": "string"
     },
     "dcmuiDefaultWidgetAets": {
-      "title": "デフォルトの ウィジェット AETs",
-      "description": "ウィジェット AETで 事前 選択する 必要が ある AETを 選択 します。",
+      "title": "Default Widget AETs",
+      "description": "Select the AETs that should be preselected on Widget AETs",
       "type": "array",
       "items" : {
         "type": "string"
@@ -57,8 +57,8 @@
       "format": "dcmAETitle"
     },
     "dcmuiAetConfig": {
-      "title": "AET ドロップダウン リスト",
-      "description": "UIの ドロップダウン リストに 表示する AETを 定義 します。",
+      "title": "AET drop-down list",
+      "description": "Define which AETs should be visible in the drop-down lists in the UI",
       "titleKey":"{dcmuiAetListName}",
       "type": "array",
       "items" : {
@@ -66,8 +66,8 @@
       }
     },
     "dcmuiWebAppConfig": {
-      "title": "ウェブ アプリケーション ドロップダウン リスト",
-      "description": "UIの ドロップダウン リストの 一番上に 表示する ウェブ アプリケーションを 定義 します",
+      "title": "Web App drop-down list",
+      "description": "Define which WebApps should be visible on the top of the drop-down list in the UI",
       "titleKey":"{dcmuiWebAppListName}",
       "type": "array",
       "items" : {
@@ -75,8 +75,8 @@
       }
     },
     "dcmuiPermission": {
-      "title": "許可",
-      "description": "許可",
+      "title": "Permission",
+      "description": "Permission",
       "titleKey":"{dcmuiPermissionName}",
       "type": "array",
       "items" : {
@@ -92,8 +92,8 @@
       }
     },
     "dcmuiDiffConfig": {
-      "title": "検査 違い 構成",
-      "description": "検査 違い 構成",
+      "title": "Study Diff Configuration",
+      "description": "Study Diff Configuration",
       "titleKey":"{dcmuiDiffConfigName}",
       "type": "array",
       "items" : {
@@ -101,8 +101,8 @@
       }
     },
     "dcmuiStudyTableConfig": {
-      "title": "UI 検査 テーブル 構成",
-      "description": "テーブルの 構成",
+      "title": "UI Study Table Configuration",
+      "description": "Configuration of table",
       "titleKey":"{dcmuiStudyTableConfigName}",
       "type": "array",
       "items" : {
@@ -110,8 +110,8 @@
       }
     },
     "dcmuiElasticsearchConfig": {
-      "title": "UI エラスティクサーチ 構成",
-      "description": "プロ版の エラスティクサーチ 構成",
+      "title": "UI Elasticsearch Configuration",
+      "description": "Elasticsearch Configuration for the pro version",
       "titleKey":"{dcmuiElasticsearchConfigName}",
       "type": "array",
       "items" : {
@@ -119,8 +119,8 @@
       }
     },
     "dcmuiDeviceClusterObject": {
-      "title": "UI クラスター 構成",
-      "description": "クラスター 内の デバイスの グループ化。",
+      "title": "UI Cluster Configuration",
+      "description": "Group Devices in Clusters",
       "titleKey":"{dcmuiDeviceClusterName}",
       "type": "array",
       "items" : {
@@ -128,8 +128,8 @@
       }
     },
     "dcmuiDashboardConfig": {
-      "title": "UI ダッシュボード 構成",
-      "description": "UI ダッシュボード 構成",
+      "title": "UI Dashboard Configuration",
+      "description": "UI Dashboard Configuration",
       "titleKey":"{dcmuiDashboardConfigName}",
       "type": "array",
       "items" : {

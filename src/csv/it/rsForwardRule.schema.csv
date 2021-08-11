@@ -1,8 +1,0 @@
-"property","title","description"
-"","Regola di inoltro RESTful","Regola di inoltro RESTful"
-"cn","Nome","Nome arbitrario/significativo della regola forward RESTful"
-"dcmWebAppName","Nome dell'applicazione web","Nome dell'applicazione Web"
-"dcmTLSAllowAnyHostname","TLS Consente qualsiasi nome host","Se l'altro server richiede HTTPS e questa opzione di configurazione è impostata su true, il certificato dell'altro server viene convalidato tramite il truststore, ma la convalida del nome host non viene eseguita."
-"dcmTLSDisableTrustManager","TLS Disabilita Trust Manager","Se l'altro server richiede HTTPS e questa opzione di configurazione è impostata su true, non è necessario specificare un truststore"
-"dcmURIPattern","Richiedi pattern URL","Inoltra solo le richieste che corrispondono alla data espressione regolare. Se preceduto da ! , Inoltra solo le richieste che non corrispondono all'espressione regolare data."
-"dcmRSOperation","Operazione RESTful","Nome dell'operazione RESTful che deve essere inoltrata a un'altra istanza di archivio."

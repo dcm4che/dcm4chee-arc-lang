@@ -1,6 +1,6 @@
 {
-  "title": "HL7 転送 規則",
-  "description": "HL7 転送 規則",
+  "title": "HL7 Forward Rule",
+  "description": "HL7 Forward Rule",
   "type": "object",
   "required": [
     "cn",
@@ -8,13 +8,13 @@
   ],
   "properties": {
     "cn": {
-      "title": "名前",
-      "description": "HL7 転送 規則の 任意 / 意味の ある 名前",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the HL7 Forward Rule",
       "type": "string"
     },
     "hl7FwdApplicationName": {
-      "title": "HL7 転送 アプリケーション名",
-      "description": "HL7 転送 宛先 アプリケーションと 施設名 (アプリケーション|施設)",
+      "title": "HL7 Forward Application Name",
+      "description": "HL7 Forward Destination Application and Facility name (Application|Facility)",
       "type": "array",
       "items": {
         "type": "string"
@@ -22,8 +22,8 @@
       "format": "hl7ApplicationName"
     },
     "dcmProperty": {
-      "title": "条件",
-      "description": "<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]][!]=<regEx> 形式で 条件。 例えば : MSH-4=FORWARD または MSH-9=ADT\\^A28\\^ADT_A05 または PID-3[.3]=PIDIssuer または PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "title": "Conditions",
+      "description": "Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
       "items": {
         "type": "string"

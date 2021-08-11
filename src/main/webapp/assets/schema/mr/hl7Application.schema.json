@@ -1,6 +1,6 @@
 {
-  "title": "HL7 अनुप्रयोग",
-  "description": "HL7 अनुप्रयोगाची माहिती.",
+  "title": "HL7 Application",
+  "description": "HL7 Application information",
   "type": "object",
   "required": [
     "hl7ApplicationName",
@@ -10,8 +10,8 @@
   ],
   "properties": {
     "hl7ApplicationName": {
-      "title": "HL7 अनुप्रयोगाचे नाव",
-      "description": "HL7 अनुप्रयोग आणि सुविधेचे नाव (अनुप्रयोग|सुविधा)",
+      "title": "HL7 Application name",
+      "description": "HL7 Application and Facility name (Application|Facility)",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.hl7ADTSendingApplication",
@@ -26,72 +26,72 @@
       ]
     },
     "dicomNetworkConnectionReference": {
-      "title": "नेटवर्क कनेक्शन संदर्भ",
-      "description": "या HL7 अनुप्रयोगाद्वारे उपयोग केलेल्या नेटवर्क कनेक्शन ऑब्जेक्ट्सचे जेसन पॉईंटर्स.",
+      "title": "Network Connection Reference",
+      "description": "The JSON Pointers to the Network Connection objects for this HL7 Application",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7AcceptedSendingApplication": {
-      "title": "स्वीकारलेला पाठवणारा अनुप्रयोग",
-      "description": "पाठवणाऱ्या अनुप्रयोग|सुविधा चे नाव; अनुपस्थित असल्यास कोणतीही अनुप्रयोग वापरली जाईल.",
+      "title": "Accepted Sending Application",
+      "description": "Application|Facility name of accepted Sending Application(s); any if absent",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7OtherApplicationName": {
-      "title": "इतर HL7 अनुप्रयोगाचे नाव",
-      "description": "अतिरिक्त HL7 अनुप्रयोग आणि सुविधेचे नाव (अनुप्रयोग|सुविधा) - अशा प्राप्त अनुप्रयोग आणि सुविधेच्या नावासह HL7 संदेश देखील  स्वीकारले जातील.",
+      "title": "Other HL7 Application Name",
+      "description": "Additional HL7 Application and Facility name (Application|Facility) - will also accept HL7 messages with such Receiving Application and Facility name",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7AcceptedMessageType": {
-      "title": "स्वीकारलेल्या संदेशांचे प्रकार",
-      "description": "स्वीकारलेल्या संदेशांचे संदेश प्रकार (MessageType^TriggerEvent).",
+      "title": "Accepted Message Type",
+      "description": "Message Type(s) (MessageType^TriggerEvent) of accepted messages",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7DefaultCharacterSet": {
-      "title": "डीफॉल्ट कॅरेक्टर सेट",
-      "description": "MSH सेगमेंटच्या अठराव्या फील्डमध्ये (MSH-18) द्वारे निर्दिष्ट नसल्यास प्राप्त संदेश डीकोड करण्यासाठी वापरलेला कॅरेक्टर सेट.",
+      "title": "Default Character Set",
+      "description": "Character Set used to decode received messages if not specified by MSH-18.",
       "type": "string",
       "default": "ASCII",
       "format": "hl7Charset"
     },
     "hl7SendingCharacterSet": {
-      "title": "पाठवलेला कॅरेक्टर सेट",
-      "description": "संग्रहणातून पाठविलेले HL7 संदेश एन्कोड करण्यासाठी वापरलेला कॅरेक्टर सेट.",
+      "title": "Sending Character Set",
+      "description": "Character Set used to encode HL7 messages sent from archive.",
       "type": "string",
       "default": "ASCII",
       "format": "hl7Charset"
     },
     "dicomDescription": {
-      "title": "HL7 वर्णन",
-      "description": "HL7 अनुप्रयोगाचे असंक्रमित मजकूर वर्णन.",
+      "title": "HL7 Description",
+      "description": "Unconstrained text description of the HL7 Application",
       "type": "string"
     },
     "dicomApplicationCluster": {
-      "title": "अनुप्रयोग क्लस्टर",
-      "description": "संबंधित अनुप्रयोगांच्या उपसेटसाठी स्थानिकरित्या परिभाषित नावे.",
+      "title": "Application Cluster",
+      "description": "Locally defined names for a subset of related applications",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dicomInstalled": {
-      "title": "स्थापित",
-      "description": "'हो' जर HL7 अनुप्रयोग नेटवर्कवर स्थापित आहे. उपस्थित नसल्यास, HL7 अनुप्रयोगाच्या स्थापित स्थितीबद्दल माहिती डिव्हाइसमधून प्राप्त केली जाईल.",
+      "title": "installed",
+      "description": "True if the HL7 Application is installed on network. If not present, information about the installed status of the HL7 Application is inherited from the device",
       "type": "boolean"
     },
     "dcmArchiveHL7Application": {
-      "title": "आर्काइव्ह HL7 अनुप्रयोग",
-      "description": "DICOM आर्काइव्ह HL7 अनुप्रयोग संबंधित माहिती.",
+      "title": "Archive HL7 Application",
+      "description": "DICOM Archive HL7 Application related information",
       "$ref": "archiveHL7Application.schema.json"
     }
   }

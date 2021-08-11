@@ -1,6 +1,6 @@
 {
-  "title": "बाजूंची तुलना करा",
-  "description": "बाजूंची तुलना करा",
+  "title": "Compare Side",
+  "description": "Compare Side",
   "type": "object",
   "required": [
     "dcmuiCompareSideName",
@@ -11,46 +11,46 @@
   ],
   "properties": {
     "dcmuiCompareSideName": {
-      "title": "नाव",
-      "description": "बाजूंची तुलना करण्याचे नाव",
+      "title": "Name",
+      "description": "Compare Side Name",
       "type": "string"
     },
     "dcmuiCompareSideDescription": {
-      "title": "वर्णन",
-      "description": "या गटाबद्दल एक लहान वर्णन.",
+      "title": "Description",
+      "description": "A short description about this Group",
       "type": "string"
     },
     "dcmuiCompareSideOrder": {
-      "title": "क्रम",
-      "description": "बाजूंची तुलनाचे क्रम.",
+      "title": "Order",
+      "description": "Order of the Compare side",
       "type": "integer",
       "default":0,
       "enum":[
-        0,
-        1
+         0,
+         1
       ]
     },
     "dcmuiCompareSideCluster": {
-      "title": "क्लस्टर",
-      "description": "क्लस्टर निवडा.",
+      "title": "Cluster",
+      "description": "Select a Cluster",
       "type": "string",
       "format":"dcmuiDeviceClusterObject"
     },
     "dcmuiCompareSideElasticsearch": {
-      "title": "इलास्टिकसर्च",
-      "description": "इलास्टिकसर्च URL निवडा.",
+      "title": "Elasticsearch",
+      "description": "Select an Elasticsearch URL",
       "type": "string",
       "format":"dcmuiElasticsearchConfig"
     },
     "dcmuiCompareSideQueueName": {
-      "title": "रांगेचे नाव",
-      "description": "बाजूंची तुलना करण्यासाठी वापरला जाणारा रांगेचे नाव निवडा.",
+      "title": "Queue",
+      "description": "Select the QueueName that should be used for the compare side",
       "type": "string",
       "format":"dcmQueueName"
     },
     "dcmuiCompareSideInstalled": {
-      "title": "स्थापित",
-      "description": "'हो' असल्यास या बाजूंची तुलना डॅशबोर्डमध्ये सक्रिय करते.",
+      "title": "Installed",
+      "description": "If true this Compare side is active in the dashboard",
       "type": "boolean",
       "default": true
     }

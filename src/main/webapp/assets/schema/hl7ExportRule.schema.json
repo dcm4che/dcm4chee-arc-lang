@@ -5,7 +5,8 @@
   "required": [
     "cn",
     "dcmExporterID",
-    "dcmDuration"
+    "dcmDuration",
+    "dcmHistorySize"
   ],
   "properties": {
     "cn": {
@@ -59,6 +60,14 @@
       "description": "Suppress Export of Studies already exported not earlier than the specified interval to avoid duplicate exports.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmHistorySize": {
+      "title": "Suppress Duplicate History Size",
+      "description": "Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.",
+      "type": "integer",
+      "default" : 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
     }
   }
 }

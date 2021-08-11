@@ -1,6 +1,6 @@
 {
-  "title": "Regole di Prefetch HL7",
-  "description": "Regole di Prefetch HL7",
+  "title": "HL7 Prefetch Rule",
+  "description": "HL7 Prefetch Rule",
   "type": "object",
   "required": [
     "cn",
@@ -9,18 +9,18 @@
     "dcmPrefetchCFindSCP",
     "dcmPrefetchCMoveSCP",
     "dcmPrefetchCStoreSCP",
-    "dcmPrefetchPriority",
-    "dcmDuration"
+    "dcmDuration",
+    "dcmHistorySize"
   ],
   "properties": {
     "cn": {
-      "title": "Nome",
-      "description": "Nome arbitrario/significativo della regola di prefetch",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the Prefetch Rule",
       "type": "string"
     },
     "dcmQueueName": {
-      "title": "Nome coda",
-      "description": "Nome della coda JMS utilizzata per la pianificazione delle attività di recupero attivate da questa regola di prefetch",
+      "title": "Queue Name",
+      "description": "Name of JMS Queue used for scheduling retrieve tasks triggered by this Prefetch Rule",
       "type": "string",
       "enum" : [
         "Retrieve1",
@@ -38,42 +38,34 @@
         "Retrieve13"
       ]
     },
-    "dcmPrefetchPriority": {
-      "title": "Prefetch Priority",
-      "description": "JMS Priority Level for processing the retrieve tasks from 0 (lowest) to 9 (highest).",
-      "type": "integer",
-      "default" : 4,
-      "minimum": 0,
-      "maximum": 9
-    },
     "dicomAETitle": {
-      "title": "Titolo AE dell'archivio",
-      "description": "Titolo AE dell'entità dell'applicazione di archiviazione utilizzato per recuperare studi selezionati da Prefetch C-Move SCP.",
+      "title": "Archive AE title",
+      "description": "AE Title of Archive Application Entity used for retrieving selected Studies from Prefetch C-Move SCP.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmPrefetchCFindSCP": {
       "title": "Prefetch C-Find SCP",
-      "description": "Titolo AE di C-FIND SCP che viene richiesto per gli studi che corrispondono al selettore di entità specificato.",
+      "description": "AE Title of C-FIND SCP which is queried for Studies matching the specified Entity Selector.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmPrefetchCMoveSCP": {
       "title": "Prefetch C-Move SCP",
-      "description": "Titolo AE  di C-MOVE SCP da cui vengono recuperati gli studi selezionati.",
+      "description": "AE Title of C-MOVE SCP from which selected Studies are retrieved.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmPrefetchCStoreSCP": {
       "title": "Prefetch C-Store SCP",
-      "description": "Titolo AE di C-MOVE SCP da cui vengono recuperati gli studi selezionati.",
+      "description": "AE Title of C-STORE SCP to which selected Studies are retrieved.",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmDestinationCFindSCP": {
-      "title": "Destination C-Find SCP",
-      "description": "Suppress retrieve of selected Studies from Prefetch C-Move SCP which are (already) available at specified Destination C-FIND SCP with equal or more Number of Study Related Instances as returned by Prefetch C-FIND SCP. Retrieve all selected Studies if absent. ",
+      "title": "Destination C-FIND SCP",
+      "description": "Suppress retrieve of selected Studies from Prefetch C-Move SCP which are (already) available at specified Destination C-FIND SCP with equal or more Number of Study Related Instances as returned by Prefetch C-FIND SCP. Retrieve all selected Studies if absent.",
       "type": "string",
       "format": "dcmAETitle"
     },
@@ -84,21 +76,21 @@
       "format": "dicomDeviceName"
     },
     "dcmProperty": {
-      "title": "Condizioni",
-      "description": "Condizioni nel formato {SEG}-{Seq #}[.{Comp#}[.{SubComp#}]][!]={regEx}. Esempio: MSH-4=FORWARD o MSH-9=ORM\\^O01 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "title": "Conditions",
+      "description": "Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Example: MSH-4=FORWARD or MSH-9=ORM\\^O01 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
       "items": { "type": "string" }
     },
     "dcmEntitySelector": {
-      "title": "Selettore entità",
-      "description": "Specifica le chiavi di corrispondenza utilizzate per selezionare gli studi da precaricare. Formato: {key}={value}[&{key}={value)]..., with {key} = 'priors' | 'StudyAge' | {attributeID}. {value} nel formato '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] vengono sostituiti dal valore del campo HL7 specificato dal messaggio HL7 ricevuto che ha attivato il prefetch. Se non viene specificato alcun selettore di entità, tutti gli studi per il paziente verranno precaricati. Esempio: 'priors = 2 & StudyAge = -5Y & ModalityInStudy = $OBR-24' => seleziona al massimo 2 studi precedenti non più vecchi di 5 anni contenenti almeno una serie con modalità da OBR-24.>",
+      "title": "Entity Selector",
+      "description": "Specifies matching keys used to select Studies to prefetch. Format: {key}={value}[&{key}={value)]..., with {key} = 'priors' | 'StudyAge' | {attributeID}. {value} in the format '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] are replaced by the value of the specified HL7 field from the received HL7 message which triggered the prefetch. If no Entity Selector is specified, all Studies for the Patient will be pre-fetched. Example: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=$OBR-24' => select at most 2 prior Studies not older than 5 years containing at least one Series with Modality from OBR-24.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
-      "title": "Ignora l'assegnazione dell'autorità dell'ID paziente",
-      "description": "Ignorare in modo condizionale l'autorità di assegnazione dell'ID paziente (PID-3.4) nel messaggio HL7 ricevuto che ha attivato il prefetch per la selezione degli studi del paziente.",
+      "title": "Ignore Assigning Authority of Patient ID",
+      "description": "Conditionally ignore Assigning Authority of Patient ID (PID-3.4) in received HL7 message which triggered the prefetch for selecting Studies of the Patient.",
       "type": "string",
       "enum": [
         "ALWAYS",
@@ -107,8 +99,8 @@
       ]
     },
     "dcmIssuerOfPatientID": {
-      "title": "Assegnazione dell'autorità dell'ID paziente",
-      "description": "Sono confrontati l'assegnazione dell'autorità dell'ID paziente con i valori nel messaggio HL7 ricevuto, se l'assegnazione dell'autorità dell'ID paziente è impostata su MATCHING o NOT_MATCHING. Formato: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "title": "Assigning Authority of Patient ID",
+      "description": "Assigning Authority of Patient ID against values in received HL7 message are matched, if Assigning Authority of Patient ID is set to MATCHING or NOT_MATCHING. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
       "type": "array",
       "items": { "type": "string" }
     },
@@ -118,10 +110,18 @@
       "type": "string"
     },
     "dcmDuration": {
-      "title": "Sopprimi intervallo di recupero duplicato",
-      "description": "Sopprimere il recupero degli studi già recuperati non prima dell'intervallo specificato per evitare recuperi duplicati.",
+      "title": "Suppress Duplicate Retrieve Interval",
+      "description": "Suppress Retrieve of Studies already retrieved not earlier than the specified interval to avoid duplicate retrieves.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmHistorySize": {
+      "title": "Suppress Duplicate History Size",
+      "description": "Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.",
+      "type": "integer",
+      "default" : 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
     },
     "dcmPrefetchDateTimeField": {
       "title": "Prefetch Date Time Field",
@@ -135,8 +135,8 @@
       "format": "dcmDuration"
     },
     "dcmSchedule": {
-      "title": "Pianificazione di Prefetch",
-      "description": "Ritarda il precaricamento a periodi di tempo specificati. Se non viene specificato alcun programma di precaricamento, mettere immediatamente in coda un'attività di prefetch per gli studi selezionati del paziente. Formato: 'hour=[0-23] dayOfWeek=[0-6]' (0=Domenica)",
+      "title": "Prefetch Schedule",
+      "description": "Delay prefetch to specified time periods in addition to configured Prefetch Date Time field. If no Prefetch Schedule is specified, queue a Prefetch Task for the selected Studies of the Patient based on configured Prefetch Date Time field. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"
