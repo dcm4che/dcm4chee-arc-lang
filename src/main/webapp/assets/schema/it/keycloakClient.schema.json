@@ -1,6 +1,6 @@
 {
-  "title": "Client Keycloak",
-  "description": "Client Keycloak",
+  "title": "Keycloak Client",
+  "description": "Keycloak Client",
   "type": "object",
   "required": [
     "dcmKeycloakClientID",
@@ -12,8 +12,8 @@
   ],
   "properties": {
     "dcmKeycloakClientID": {
-      "title": "ID client Keycloak",
-      "description": "ID client utilizzato nelle richieste di token.",
+      "title": "Keycloak Client ID",
+      "description": "Client ID used in token requests.",
       "type": "string",
       "use": [
         "$.dcmWebApp[*].dcmKeycloakClientID",
@@ -22,18 +22,18 @@
       ]
     },
     "dcmURI": {
-      "title": "Url del server",
-      "description": "L'URL di base del server Keycloak.",
+      "title": "Server URL",
+      "description": "The base URL of the Keycloak server.",
       "type": "string"
     },
     "dcmKeycloakRealm": {
       "title": "Keycloak Realm",
-      "description": "Nome del realm nelle richieste di token.",
+      "description": "Name of the realm in token requests.",
       "type": "string"
     },
     "dcmKeycloakGrantType": {
-      "title": "Tipo di concessione di Keycloak",
-      "description": "Tipo di concessione Keycloak utilizzato nelle richieste di token.",
+      "title": "Keycloak grant type",
+      "description": "Keycloak grant type used in token requests.",
       "type": "string",
       "enum": [
         "client_credentials",
@@ -42,19 +42,19 @@
       "default": "client_credentials"
     },
     "dcmKeycloakClientSecret": {
-      "title": "Segreto del client Keycloak ",
-      "description": "Segreto del client Keycloak. Obbligatorio se tipo di concessione = client_credentials.",
+      "title": "Keycloak Client secret",
+      "description": "Keycloak client secret. Required if grant type = client_credentials.",
       "type": "string"
     },
     "dcmTLSAllowAnyHostname": {
-      "title": "TLS Consente qualsiasi nome host",
-      "description": "Se l'altro server richiede HTTPS e questa opzione di configurazione è impostata su true, il certificato dell'altro server viene convalidato tramite il truststore, ma la convalida del nome host non viene eseguita.",
+      "title": "TLS Allow Any Hostname",
+      "description": "If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done.",
       "type": "boolean",
       "default": false
     },
     "dcmTLSDisableTrustManager": {
-      "title": "TLS Disabilita Trust Manager",
-      "description": "Se l'altro server richiede HTTPS e questa opzione di configurazione è impostata su true, non è necessario specificare un truststore",
+      "title": "TLS Disable Trust Manager",
+      "description": "If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore",
       "type": "boolean",
       "default": false
     },

@@ -1,6 +1,6 @@
 {
-  "title": "AET ドロップダウン リスト",
-  "description": "AET ドロップダウン リスト",
+  "title": "Aet drop-down list",
+  "description": "Aet drop-down list",
   "type": "object",
   "required": [
     "dcmuiAetListName",
@@ -10,18 +10,18 @@
   ],
   "properties": {
     "dcmuiAetListName": {
-      "title": "リストの 名前",
-      "description": "この 構成の 名前を 定義",
+      "title": "List Name",
+      "description": "Define a name for this config",
       "type": "string"
     },
     "dcmuiAetListDescription": {
-      "title": "説明",
-      "description": "AET リストの 説明",
+      "title": "Description",
+      "description": "Aet List description",
       "type": "string"
     },
     "dcmuiMode": {
-      "title": "AET リスト モード",
-      "description": "この 構成を どの モードで 使用 できるように する か を 定義 します。 '内部' (アーカイブの 自身の AETs、一部の 場所に 'ホーム AET' または 'ローカル AET' とも 呼ばれる) または '外部' (または 一部の 場所に 'リモート AET' とも 呼ばれる) AET ドロップダウン リスト。 両方で使用可能にするには、いずれも選択しないでください。",
+      "title": "AEt list mode",
+      "description": "Define in which mode should be this config available in 'internal' ( archive own AETs, in some places called also 'Home AET' or 'Local AET' ) or 'external' ( or in some places also called 'Remote AET' ) aet drop-down list, to be available for both don't select any of them",
       "type": "string",
       "enum": [
         "internal",
@@ -30,7 +30,7 @@
     },
     "dcmuiAets": {
       "title": "AETs",
-      "description": "UI アクション パラメータ",
+      "description": "UI Action Parameter",
       "format": "dcmAETitle",
       "type": "array",
       "items" : {
@@ -38,8 +38,8 @@
       }
     },
     "dcmAcceptedUserRole": {
-      "title": "承認された ユーザー 役割",
-      "description": "この 構成を 使用 できる 役割を 定義し、すべての 役割で 使用できるように 'ユーザー' を 使用 します。",
+      "title": "Accepted User Role",
+      "description": "Define the roles for which this config should be available, use 'user' to be available for all roles",
       "type": "array",
       "items" : {
         "type": "string"

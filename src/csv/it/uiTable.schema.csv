@@ -1,7 +1,0 @@
-"property","title","description"
-"","Configurazione della tabella di studio dell'interfaccia utente","Configurazione Study Table per la versione pro"
-"dcmuiStudyTableConfigName","Nome di configurazione","Nome configurazione tabella studio interfaccia utente"
-"dcmuiStudyTableConfigUsername","Nome utente","Nome utente a cui dovrebbe essere disponibile questo set"
-"dcmuiStudyTableConfigRoles","Ruolo","Ruolo del nome utente che può utilizzare questo set (se imposti il nome utente, il ruolo verrà ignorato)"
-"dcmuiStudyTableConfigIsDefault","È predefinito","Imposta questo set di colonne su quello predefinito. (Assicurati che solo uno dei Set - fratelli sia impostato come predefinito)."
-"dcmuiStudyTableColumnConfigObjects","Colonne della tabella dello studio","Definire le colonne della tabella di studio"

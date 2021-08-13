@@ -1,6 +1,6 @@
 {
-  "title": "Stazione Pianificata per un Ordine HL7",
-  "description": "Stazione pianificata selezionata su MWL HL7 Order Feed",
+  "title": "Scheduled Station for HL7 Order",
+  "description": "Scheduled Station selected on MWL HL7 Order Feed",
   "type": "object",
   "required": [
     "cn",
@@ -9,26 +9,26 @@
   ],
   "properties": {
     "cn": {
-      "title": "Nome",
-      "description": "Nome arbitrario/significativo per la mappatura dell'ordine delle stazioni programmate",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name for the Scheduled Station Order Mapping",
       "type": "string"
     },
     "hl7OrderScheduledStationDeviceName": {
-      "title": "Nome dispositivo stazione pianificata",
-      "description": "Nome dispositivo della stazione pianificata utilizzato per i messaggi di ordine HL7.",
+      "title": "Scheduled Station Device Name",
+      "description": "Device name of Scheduled Station used for HL7 Order Messages.",
       "type": "string",
       "format": "dicomDeviceName"
     },
     "dcmRulePriority": {
-      "title": "Priorità di mappatura",
-      "description": "Priorità di mappatura.",
+      "title": "Mapping Priority",
+      "description": "Mapping Priority.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmProperty": {
-      "title": "Condizioni",
-      "description": "Condizioni nel formato {SEG}-{Seq #}[.{Comp#}[.{SubComp#}]][!]={regEx}. Esempi: MSH-4=FORWARD o MSH-9=ADT\\^A28\\^ADT_A05 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "title": "Conditions",
+      "description": "Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
       "items": {
         "type": "string"

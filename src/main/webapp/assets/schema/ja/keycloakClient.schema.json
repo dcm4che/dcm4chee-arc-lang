@@ -1,6 +1,6 @@
 {
-  "title": "キークローク クライアント",
-  "description": "キークローク クライアント",
+  "title": "Keycloak Client",
+  "description": "Keycloak Client",
   "type": "object",
   "required": [
     "dcmKeycloakClientID",
@@ -12,8 +12,8 @@
   ],
   "properties": {
     "dcmKeycloakClientID": {
-      "title": "キークローク クライアント ID",
-      "description": "トークン 要求で 使用される クライアント ID。",
+      "title": "Keycloak Client ID",
+      "description": "Client ID used in token requests.",
       "type": "string",
       "use": [
         "$.dcmWebApp[*].dcmKeycloakClientID",
@@ -22,18 +22,18 @@
       ]
     },
     "dcmURI": {
-      "title": "サーバー URL",
-      "description": "キークローク サーバーの ベース URL。",
+      "title": "Server URL",
+      "description": "The base URL of the Keycloak server.",
       "type": "string"
     },
     "dcmKeycloakRealm": {
-      "title": "キークローク レルム",
-      "description": "トークン 要求内の レルムの 名前。",
+      "title": "Keycloak Realm",
+      "description": "Name of the realm in token requests.",
       "type": "string"
     },
     "dcmKeycloakGrantType": {
-      "title": "キークローク 付与 タイプ",
-      "description": "トークン 要求で 使用される キークローク 付与 タイプ。",
+      "title": "Keycloak grant type",
+      "description": "Keycloak grant type used in token requests.",
       "type": "string",
       "enum": [
         "client_credentials",
@@ -42,19 +42,19 @@
       "default": "client_credentials"
     },
     "dcmKeycloakClientSecret": {
-      "title": "キークローク クライアント シークレット",
-      "description": "キークローク クライアント シークレット。 'キークローク 付与 タイプ'が 'クライアント'として 場合は 必要です。",
+      "title": "Keycloak Client secret",
+      "description": "Keycloak client secret. Required if grant type = client_credentials.",
       "type": "string"
     },
     "dcmTLSAllowAnyHostname": {
-      "title": "TLS 任意の ホスト名を 許可 する",
-      "description": "他の サーバーが HTTPSを 必要とし、 この 構成 オプションが '真'に 設定されて いる 場合、 他の サーバーの 証明書は トラストストアを 介して 検証されますが、 ホスト名の 検証は 行われません。",
+      "title": "TLS Allow Any Hostname",
+      "description": "If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done.",
       "type": "boolean",
       "default": false
     },
     "dcmTLSDisableTrustManager": {
-      "title": "TLS トラストマネージャーを 無効 する",
-      "description": "他の サーバーが HTTPSを 必要とし、 この 構成 オプションが '真'に 設定されて いる 場合、 トラストストアを 指定する 必要は ありません。",
+      "title": "TLS Disable Trust Manager",
+      "description": "If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore",
       "type": "boolean",
       "default": false
     },

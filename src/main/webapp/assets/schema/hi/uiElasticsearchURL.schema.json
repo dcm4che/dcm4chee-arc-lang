@@ -1,6 +1,6 @@
 {
-  "title": "UI इलास्टिकसर्च URL विन्यास",
-  "description": "इलास्टिकसर्च URL ।",
+  "title": "UI Elasticsearch URL Configuration",
+  "description": "Elasticsearch URL",
   "type": "object",
   "required": [
     "dcmuiElasticsearchURLName",
@@ -10,30 +10,30 @@
   ],
   "properties": {
     "dcmuiElasticsearchURLName": {
-      "title": "इलास्टिकसर्च URL का नाम",
-      "description": "UI इलास्टिकसर्च URL का नाम ।",
+      "title": "Elasticsearch URL Name",
+      "description": "UI Elasticsearch URL Name",
       "type": "string"
     },
     "dcmuiElasticsearchWebApp": {
-      "title": "इलास्टिकसर्च वेब अनुप्रयोग",
-      "description": "इलास्टिकसर्च URL निकालकर इलास्टिकसर्च उपयोग करने के लिए इस्तमाल किया गया वेब अनुप्रयोग ।",
+      "title": "Elasticsearch WebApp",
+      "description": "Web Application that will be used te extract the Elasticsearch URL and access Elasticsearch",
       "type": "string",
       "format": "webApp"
     },
     "dcmuiAuditEnterpriseSiteID": {
-      "title": "ऑडिट एंटरप्राइज साइट ID",
-      "description": "इलास्टिकसर्च प्रश्नों पे इस्तमाल किए जानेवाले ऑडिट एंटरप्राइज साइट ID को सेट करें ।",
+      "title": "Audit Enterprise SiteID",
+      "description": "Set Audit Enterprise SiteID which should be used on Elasticsearch queries",
       "type": "string"
     },
     "dcmuiElasticsearchIsDefault": {
-      "title": "डिफ़ॉल्ट है",
-      "description": "इस URL विन्यास को डिफ़ॉल्ट के रूप में सेट करें । (सुनिश्चित करें की सिर्फ किसी एक URL विन्यास को डिफ़ॉल्ट के रूप में सेट करें) ।",
+      "title": "Is Default",
+      "description": "Set this URL to the default one. (Make sure that only one of the urls - siblings child is set to default).",
       "type": "boolean",
       "default": false
     },
     "dcmuiElasticsearchInstalled": {
-      "title": "स्थापित",
-      "description": "इस URL को UI में इस्तमाल करें ।",
+      "title": "Installed",
+      "description": "Use this URL in the UI",
       "type": "boolean",
       "default": true
     }

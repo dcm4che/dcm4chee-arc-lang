@@ -9,8 +9,8 @@
     "dcmPrefetchCFindSCP",
     "dcmPrefetchCMoveSCP",
     "dcmPrefetchCStoreSCP",
-    "dcmPrefetchPriority",
-    "dcmDuration"
+    "dcmDuration",
+    "dcmHistorySize"
   ],
   "properties": {
     "cn": {
@@ -37,14 +37,6 @@
         "Retrieve12",
         "Retrieve13"
       ]
-    },
-    "dcmPrefetchPriority": {
-      "title": "Prefetch Priority",
-      "description": "JMS Priority Level of scheduled retrieve tasks from 0 (lowest) to 9 (highest).",
-      "type": "integer",
-      "default" : 4,
-      "minimum": 0,
-      "maximum": 9
     },
     "dicomAETitle": {
       "title": "Archive AE title",
@@ -122,6 +114,14 @@
       "description": "Suppress Retrieve of Studies already retrieved not earlier than the specified interval to avoid duplicate retrieves.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmHistorySize": {
+      "title": "Suppress Duplicate History Size",
+      "description": "Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.",
+      "type": "integer",
+      "default" : 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
     },
     "dcmPrefetchDateTimeField": {
       "title": "Prefetch Date Time Field",

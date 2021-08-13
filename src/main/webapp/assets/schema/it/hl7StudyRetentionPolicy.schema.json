@@ -1,6 +1,6 @@
 {
-  "title": "Criteri di Conservazione Studio HL7",
-  "description": "Criteri di Conservazione Studio HL7",
+  "title": "HL7 Study Retention Policy",
+  "description": "HL7 Study Retention Policy",
   "type": "object",
   "required": [
     "cn",
@@ -13,64 +13,64 @@
   ],
   "properties": {
     "cn": {
-      "title": "Nome",
-      "description": "Nome arbitrario/significativo della politica di conservazione dello studio HL7",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the HL7 Study Retention Policy",
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "Titolo dell'entità dell'applicazione (AE)",
-      "description": "Titolo dell'entità dell'applicazione (AE)",
+      "title": "Application Entity (AE) title",
+      "description": "Application Entity (AE) title",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmRetentionPeriod": {
-      "title": "Periodo di conservazione minimo dello studio",
-      "description": "Periodo minimo di conservazione dello studio in formato periodo ISO-8601 PnYnMnD o PnW",
+      "title": "Minimal Study Retention Period",
+      "description": "Minimal Study Retention Period in ISO-8601 period format PnYnMnD or PnW",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmMaxRetentionPeriod": {
-      "title": "Periodo massimo di conservazione dello studio",
-      "description": "Periodo massimo di conservazione dello studio in formato periodo ISO-8601 PnYnMnD o PnW",
+      "title": "Maximal Study Retention Period",
+      "description": "Maximal Study Retention Period in ISO-8601 period format PnYnMnD or PnW",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmRulePriority": {
-      "title": "Priorità delle regole",
-      "description": "Priorità della regola.",
+      "title": "Rule Priority",
+      "description": "Rule Priority.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmProperty": {
-      "title": "Condizioni",
-      "description": "Condizioni nel formato {SEG}-{Seq #}[.{Comp#}[.{SubComp#}]][!]={regEx}. Esempi: MSH-4=FORWARD o MSH-9=ADT\\^A28\\^ADT_A05 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "title": "Conditions",
+      "description": "Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmStartRetentionPeriodOnStudyDate": {
-      "title": "Inizia il Periodo di conservazione sulla data dello Studio",
-      "description": "Indica se il periodo di conservazione deve essere avviato nelle singole Date di studio anziché alla ricezione del messaggio HL7 che attiva questa regola.",
+      "title": "Start Retention Period on Study Date",
+      "description": "Indicates if retention period should be started on individual Study Dates instead on receive of the HL7 message triggering this rule.",
       "type": "boolean",
       "default": false
     },
     "dcmExporterID": {
-      "title": "Esporta studio scaduto",
-      "description": "Esporta studi/serie scaduti utilizzando l'esportatore specificato",
+      "title": "Export expired Study",
+      "description": "Export expired Study/Series using the specified Exporter",
       "type": "string",
       "format": "dcmExporterID"
     },
     "dcmFreezeExpirationDate": {
-      "title": "Congela la data di scadenza",
-      "description": "Indica di disabilitare le modifiche della Data di Scadenza dagli eventi seguenti.",
+      "title": "Freeze Expiration Date",
+      "description": "Indicate to disable changes of the Expiration Date by following events.",
       "type": "boolean",
       "default": false
     },
     "dcmRevokeExpiration": {
-      "title": "Revoca data di scadenza",
-      "description": "Indica i revocare una data di scadenza impostata in precedenza.",
+      "title": "Revoke Expiration Date",
+      "description": "Indicate to revoke a previous set Expiration Date.",
       "type": "boolean",
       "default": false
     }

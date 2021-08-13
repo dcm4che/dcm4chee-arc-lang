@@ -1,6 +1,6 @@
 {
-  "title": "इमेज राइटर",
-  "description": "DICOM दृष्टांतों के संपीडन में इस्तमाल किए जानेवाले लेखन मापदण्डों के साथ जावा इमेज IO इमेज राइटर को निर्दिष्ट करता है ।",
+  "title": "Image Writer",
+  "description": "Specifies Java Image IO Image Writer and Write Parameter used for compressing DICOM images",
   "type": "object",
   "required": [
     "dicomTransferSyntax",
@@ -8,24 +8,24 @@
   ],
   "properties": {
     "dicomTransferSyntax": {
-      "title": "हस्तांतरण वाक्यविन्यास",
-      "description": "DICOM इमेज संपीडित करने के लिए इस्तमाल किया गया हस्तांतरण वाक्यविन्यास",
+      "title": "Transfer Syntax",
+      "description": "Transfer Syntax to which to compress the DICOM image",
       "type": "string",
       "format": "dcmTransferSyntax"
     },
     "dcmIIOFormatName": {
-      "title": "इमेज IO राइटर प्रारूप का नाम",
-      "description": "इमेज IO राइटर प्रारूप का नाम ।",
+      "title": "Image IO Writer Format Name",
+      "description": "Image IO Writer Format Name",
       "type": "string"
     },
     "dcmJavaClassName": {
-      "title": "JAVA वर्ग का नाम",
-      "description": "इमेज IO राइटर का पूरी तरह से योग्य JAVA वर्ग । यदि निर्दिष्ट नहीं किया गया है, तो निर्दिष्ट प्रारूप के नाम से पाए जानेवाले किसी भी इमेज राइटर का इस्तमाल करें ।",
+      "title": "Java Class Name",
+      "description": "Fully qualified Java class of Image IO Writer. If absent, use any Image Writer found for specified Format Name",
       "type": "string"
     },
     "dcmPatchJPEGLS": {
-      "title": "पैच JPEG-LS",
-      "description": "संपीडन के बाद JPEG-LS पैच करें ।",
+      "title": "Patch JPEG-LS",
+      "description": "Patch JPEG-LS after compressing",
       "type": "string",
       "enum": [
           "JAI2ISO",
@@ -34,8 +34,8 @@
       ]
     },
     "dcmImageWriteParam": {
-      "title": "इमेज लेखन मापदण्ड",
-      "description": "संपीड़न होने से पहले इमेज लेखन पे कॉन्फ़िगर किए गए इमेज लेखन मापदण्ड (नाम=मूल्य) ।",
+      "title": "Image Write Param",
+      "description": "Image Write Parameter(s) (name=value) set at on Image Writer before compression",
       "type": "array",
       "items": {
         "type": "string"

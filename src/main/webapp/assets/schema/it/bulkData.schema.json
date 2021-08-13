@@ -1,6 +1,6 @@
 {
-  "title": "Descrittore dati in blocco",
-  "description": "Descrittore dati in blocco",
+  "title": "Bulk Data Descriptor",
+  "description": "Bulk Data Descriptor",
   "type": "object",
   "required": [
     "dcmBulkDataDescriptorID",
@@ -8,22 +8,22 @@
   ],
   "properties": {
     "dcmBulkDataDescriptorID": {
-      "title": "ID descrittore dati in blocco",
-      "description": "ID descrittore dati in blocco",
+      "title": "Bulk Data Descriptor ID",
+      "description": "Bulk Data Descriptor ID",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmBulkDataDescriptorID"
       ]
     },
     "dcmBulkDataExcludeDefaults": {
-      "title": "Escludi impostazioni predefinite",
-      "description": "Indica se gli attributi specificati dalla \"Classe Composite Instance Retrieve Without Bulk Data Service\" devono essere implicitamente trattati come Massa di dati (= false) o meno (= true).",
+      "title": "Exclude Defaults",
+      "description": "Indicates if Attributes specified by the 'Composite Instance Retrieve Without Bulk Data Service Class' shall be implicitly treated as Bulk Data (=false) or not (=true).",
       "type": "boolean",
       "default": false
     },
     "dcmAttributeSelector": {
-      "title": "Selettore attributi",
-      "description": "Specifica i singoli attributi trattati come dati in blocco da XPath (per esempio 'DicomAttribute[@tag=\"54000100\"]/Item/DicomAttribute[@tag=\"54001010\"]').",
+      "title": "Attribute Selector",
+      "description": "Specifies individual Attributes treated as Bulk Data by XPath (e.g. 'DicomAttribute[@tag=\"54000100\"]/Item/DicomAttribute[@tag=\"54001010\"]' ).",
       "type": "array",
       "items": {
         "type": "string"
@@ -31,8 +31,8 @@
       "format": "dcmAttributeSelector"
     },
     "dcmBulkDataVRLengthThreshold": {
-      "title": "Soglia di lunghezza del VR",
-      "description": "Specifica di trattare tutti gli attributi con una particolare rappresentazione del valore (VR) la cui lunghezza del valore supera la soglia specificata come massa di dati. Formato: <VR>=<length-threshold>.",
+      "title": "VR Length Threshold",
+      "description": "Specifies to treat all Attributes with a particular Value Representation (VR) which value length exceeds the specified threshold as Bulk Date. Format: <VR>=<length-threshold>.",
       "type": "array",
       "items": {
         "type": "string"

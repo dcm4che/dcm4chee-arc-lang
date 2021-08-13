@@ -1,40 +1,40 @@
 {
-  "title": "नेटवर्क AE विस्तार",
-  "description": "DCM4CHE मालकीचे नेटवर्क AE विशेषता.",
+  "title": "Network AE Extension",
+  "description": "dcm4che proprietary Attributes of Network AE",
   "type": "object",
   "properties": {
     "dcmRoleSelectionNegotiationLenient": {
-      "title": "भूमिका निवड उदार वाटाघाटी",
-      "description": "DIMSE विनंती पाठविण्याबाबत आवश्यक SCP/SCU भूमिका निवड वाटाघाटीसाठी तपासणी अक्षम करण्यासाठी सूचित करते. डिव्हाइस पातळीवर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
+      "title": "Role Selection Negotiation Lenient",
+      "description": "Indicates to disable check for required SCP/SCU role selection negotiation on sending of DIMSE-RQs. Overwrites value specified on Device level.",
       "type": "boolean"
     },
     "dcmAcceptedCallingAETitle": {
-      "title": "स्वीकृति बोलावणाऱ्या AE चे शीर्षक",
-      "description": "यादीत नसलेले AE वरून असोसिएशन अस्वीकार करा. उपस्थित नसल्यास कोणतीही AE स्वीकारली जाईल.",
+      "title": "Accepted Calling AE Title",
+      "description": "Prohibit accepting associations from unlisted AE. If not present, any AE will be accepted",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmOtherAETitle": {
-      "title": "इतर AE चे शीर्षक",
-      "description": "नेटवर्क AE च्या अतिरिक्त AE चे शीर्षक - अर्थात अशा कुठल्याही बोलावलेल्या AE चे शीर्षकांबरोबर असोसिएशन विनंती स्वीकारले जातील.",
+      "title": "Other AE Title",
+      "description": "Additional AE Title of Network AE - will also accept Association RQs with such Called AE Title",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmMasqueradeCallingAETitle": {
-      "title": "मास्करेड बोलावणाऱ्या AE चे शीर्षक",
-      "description": "नेटवर्क असोसिएशन सुरू करण्यासाठी वापरले जाणारे मास्करेड बोलावणाऱ्या AE चे शीर्षक जे या नेटवर्क AE साठी वास्तविक AE च्या शीर्षकाला मास्करेड करतो - पर्यायी उपसर्ग [<बोलावलेल्या AE चे शीर्षक>] लागू केल्यावर कुठल्याही विशिष्ट AE च्या शीर्षकाबरोबर असोसिएशनला मास्करेड करण्याला मर्यादित करते.",
+      "title": "Masquerade Calling AE Title",
+      "description": "AE Title used for initiating network associations, masquerading the actual AE Title for this Network AE - optional prefix [<Called AE Title>] limits the masquerading to association to a particular AE Title",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmPreferredTransferSyntax": {
-      "title": "प्राधान्यीकृत हस्तांतरण वाक्यरचना",
-      "description": "प्रेझेंटेशन कॉन्टॅक्टमध्ये हस्तांतरण वाक्यरचना निवडण्यासाठी प्राधान्यीकृत हस्तांतरण वाक्यरचना, प्राधान्यानुसार क्रमानुरूप केले जाईल. अनुपस्थित असल्यास, उपलब्ध केलेल्या प्रेझेंटेशन कॉन्टॅक्टमधून प्रथम स्वीकार्य हस्तांतरण वाक्यरचना निवडली जाईल. या AE च्या विशिष्ट हस्तांतरण क्षमतांनी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
+      "title": "Preferred Transfer Syntax",
+      "description": "Preferred Transfer Syntax for selection of Transfer Syntax within a Presentation Context, ordered by priority. If absent, the first acceptable Transfer Syntax in the offered Presentation Context will be selected. May be overwritten by configured values for particular Transfer Capabilities of this AE.",
       "type": "array",
       "format": "dcmTransferSyntax",
       "items": {
@@ -42,14 +42,14 @@
       }
     },
     "hl7ApplicationName": {
-      "title": "HL7 अनुप्रयोगाचे नाव",
-      "description": "या AE शी संबंधित HL7 अनुप्रयोग आणि सुविधेचे नाव (अनुप्रयोग|सुविधा).",
+      "title": "HL7 Application name",
+      "description": "HL7 Application and Facility name (Application|Facility) associated with this AE",
       "type": "string",
       "format": "hl7ApplicationName"
     },
     "dcmArchiveNetworkAE": {
-      "title": "आर्काइव्ह नेटवर्क AE",
-      "description": "DICOM आर्काइव्ह नेटवर्क AE शी संबंधित माहिती.",
+      "title": "Archive Network AE",
+      "description": "DICOM Archive Network AE related information",
       "$ref": "archiveNetworkAE.schema.json"
     }
   }

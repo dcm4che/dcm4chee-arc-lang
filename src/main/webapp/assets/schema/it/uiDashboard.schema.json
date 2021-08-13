@@ -1,6 +1,6 @@
 {
-  "title": "Configurazione dashboard dell'interfaccia utente",
-  "description": "Configurazione dashboard dell'interfaccia utente",
+  "title": "UI Dashboard Configuration",
+  "description": "UI Dashboard Configuration",
   "type": "object",
   "required": [
     "dcmuiDashboardConfigName",
@@ -8,8 +8,8 @@
   ],
   "properties": {
     "dcmuiDashboardConfigName": {
-      "title": "Nome configurazione dashboard UI",
-      "description": "Nome configurazione dashboard UI",
+      "title": "UI Dashboard Configuration Name",
+      "description": "UI Dashboard Configuration Name",
       "type": "string"
     },
     "dcmuiShowStarBlock":{
@@ -19,41 +19,41 @@
       "default" : true
     },
     "dcmuiQueueName": {
-      "title": "Code",
-      "description": "Nomi delle code per la configurazione del dashboard dell'interfaccia utente utilizzati nel blocco della coda",
+      "title": "Queues",
+      "description": "Queue Names for UI Dashboard Configuration used in queue block",
       "type": "array",
       "items" : { "type": "string" },
       "format" : "dcmQueueName"
     },
     "dcmuiExportName": {
-      "title": "IDs Esportatori",
-      "description": "ID esportatori per la configurazione del dashboard dell'interfaccia utente utilizzati nel blocco della coda e del confronto",
+      "title": "Exporter IDs",
+      "description": "Exporter ID-s for UI Dashboard Configuration used in queue and compare block",
       "type": "array",
       "items" : { "type": "string" },
       "format" : "dcmExporterID"
     },
     "dicomuiDeviceName": {
-      "title": "Nomi dei dispositivi",
-      "description": "Nomi dei dispositivi per la configurazione del dashboard dell'interfaccia utente utilizzati per generare il blocco Recupera ed esporta",
+      "title": "Device Names",
+      "description": "Device Names for UI Dashboard Configuration used for generating the Retrieve and Export block",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dicomDeviceName"
     },
     "dicomuiIgnoreParams": {
-      "title": "Parametri da ignorare negli eventi di controllo",
-      "description": "Imposta i parametri Elasticsearch da ignorare negli eventi di controllo. Ad esempio Source.UserID = TESTVALUE",
+      "title": "Audit Events Ignore Parameters",
+      "description": "Set Elasticsearch parameters that should be ignored in the Audit Events. E.g. Source.UserID=TESTVALUE",
       "type": "array",
       "items" : { "type": "string" }
     },
     "dcmuiCountWebApp": {
-      "title": "Conteggio Web APp",
-      "description": "L'Web App selezionato verrà utilizzato per ottenere il conteggio degli studi nella dashboard",
+      "title": "Count Web App",
+      "description": "Selected Web App, It will be used to get the count of studies in the dashboard",
       "type": "string",
       "format": "webApp"
     },
     "dcmuiCompareSideObjects": {
-      "title": "Confronta i lati",
-      "description": "Confronta i lati",
+      "title": "Compare Sides",
+      "description": "Compare Sides",
       "titleKey":"{dcmuiCompareSideName}",
       "type": "array",
       "items" : {
@@ -61,8 +61,8 @@
       }
     },
     "dicomuiDockerContainer": {
-      "title": "Archivio Docker Containers",
-      "description": "Nomi dei contenitori dei container docker di archivio utilizzati nella pagina hardware",
+      "title": "Archive Docker Containers",
+      "description": "Names of the archive docker containers used in the hardware page",
       "type": "array",
       "items" : { "type": "string" }
     }

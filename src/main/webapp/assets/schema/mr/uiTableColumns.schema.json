@@ -1,6 +1,6 @@
 {
-  "title": "UI अभ्यास टेबल कॉलम कॉन्फिगरेशन",
-  "description": "अभ्यास टेबल कॉलम.",
+  "title": "UI Study Table Columns Configuration",
+  "description": "Study Table Columns",
   "type": "object",
   "required": [
     "dcmuiColumnName",
@@ -9,23 +9,23 @@
   ],
   "properties": {
     "dcmuiColumnName": {
-      "title": "कॉलमचे नाव",
-      "description": "अभ्यास टेबल में कॉलमचे नाव.",
+      "title": "Column Name",
+      "description": "The Name of the Column in the Study Table",
       "type": "string"
     },
     "dcmuiColumnTitle": {
-      "title": "कॉलमचे वर्णन",
-      "description": "होव्हर वर दर्शविलेले कॉलमचे वर्णन.",
+      "title": "Column Description",
+      "description": "Description of the Column, shown on hover",
       "type": "string"
     },
     "dcmuiValuePath": {
-      "title": "मूल्य पथ",
-      "description": "कॉलमचे मूल्य (json-Object) चा पथ (उदाहरण : रुग्णाच्या नावासाठी '00100010.Value[0].Alphabetic' किंवा रुग्णाच्या ID साठी '00100020.Value[0]').",
+      "title": "Value path",
+      "description": "Value (json-Object) Path of the column (for Example: '00100010.Value[0].Alphabetic' for Patient's Name or '00100020.Value[0]' for Patient ID",
       "type": "string"
     },
     "dcmuiValueType": {
-      "title": "मूल्याचा प्रकार",
-      "description": "मूल्य प्राप्त करण्यासाठी कॉलमचा प्रकार, डीफॉल्ट 'value' असावे.",
+      "title": "Type of the value",
+      "description": "Type of the column how to get the value, default should be 'value'",
       "type": "string",
       "enum": [
         "value",
@@ -33,13 +33,13 @@
       ]
     },
     "dcmuiColumnWidth": {
-      "title": "वजनात कॉलमची रुंदी",
-      "description": "वजनात कॉलमची रुंदी ( x > 0.1 - x < अनंत ), डीफॉल्ट १",
+      "title": "Column width in weight",
+      "description": "Width of the column in weight ( x > 0.1 - x < infinite ) default 1",
       "type":  "string"
     },
     "dcmuiColumnOrder": {
-      "title": "कॉलमची क्रमानुरूप",
-      "description": "कॉलमची क्रमानुरूप",
+      "title": "Order of the Column",
+      "description": "Order of the Column",
       "type":  "string"
     }
   }

@@ -1,6 +1,6 @@
 {
-  "title": "Lettore di immagini",
-  "description": "Specifica i lettori java di immagini utilizzati per decomprimere immagini DICOM compresse",
+  "title": "Image Reader",
+  "description": "Specifies Java Image IO Image Readers used for decompressing compressed DICOM images",
   "type": "object",
   "required": [
     "dicomTransferSyntax",
@@ -8,8 +8,8 @@
   ],
   "properties": {
     "dicomTransferSyntax": {
-      "title": "Sintassi di trasferimento",
-      "description": "Sintassi di trasferimento dell'immagine DICOM compressa",
+      "title": "Transfer Syntax",
+      "description": "Transfer Syntax of compressed DICOM image",
       "type": "string",
       "format": "dcmTransferSyntax"
     },
@@ -19,13 +19,13 @@
       "type": "string"
     },
     "dcmJavaClassName": {
-      "title": "Nome classe Java",
-      "description": "Classe Java pienamente qualificata di Image IO Reader. Se assente, utilizzare qualsiasi lettore di immagini trovato per il nome del formato specificato",
+      "title": "Java Class Name",
+      "description": "Fully qualified Java class of Image IO Reader. If absent, use any Image Reader found for specified Format Name",
       "type": "string"
     },
     "dcmPatchJPEGLS": {
-      "title": "Aggiusta JPEG-LS",
-      "description": "Aggiusta JPEG-LS prima della decompressione",
+      "title": "Patch JPEG-LS",
+      "description": "Patch JPEG-LS before decompressing",
       "type": "string",
       "enum": [
           "JAI2ISO",
@@ -34,8 +34,8 @@
       ]
     },
     "dcmImageReadParam": {
-      "title": "Parametro lettura immagine",
-      "description": "Parametri di lettura immagine (nome = valore)",
+      "title": "Image Read Param",
+      "description": "Image Read Parameter(s) (name=value)",
       "type": "array",
       "items": {
         "type": "string"

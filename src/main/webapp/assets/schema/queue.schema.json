@@ -4,13 +4,12 @@
   "type": "object",
   "required": [
     "dcmQueueName",
-    "dcmJndiName",
+    "dcmMaxTasksParallel",
     "dcmRetryDelay",
     "dcmRetryOnWarning",
-    "dcmRetryInProcessOnStartup",
     "dcmRetryDelayMultiplier",
     "dcmMaxRetries",
-    "dcmMaxQueueSize"
+    "dicomInstalled"
   ],
   "properties": {
     "dcmQueueName": {
@@ -22,15 +21,23 @@
         "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiCompareSideObjects[*].dcmuiCompareSideQueueName"
       ]
     },
-    "dcmJndiName": {
-      "title": "JNDI Name",
-      "description": "JNDI Name",
+    "dicomDescription": {
+      "title": "Queue Description",
+      "description": "Unconstrained text description of the Queue",
       "type": "string"
     },
-    "dicomDescription": {
-      "title": "DICOM Description",
-      "description": "Textual description of the DICOM entity",
-      "type": "string"
+    "dicomInstalled": {
+      "title": "installed",
+      "description": "If false, processing of tasks in this queue is paused.",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmMaxTasksParallel": {
+      "title": "Maximum parallel Tasks",
+      "description": "Maximal number of tasks processed in parallel.",
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
     },
     "dcmMaxRetries": {
       "title": "Maximum Number of Retries",
@@ -65,42 +72,29 @@
       "type": "boolean",
       "default": false
     },
-    "dcmRetryInProcessOnStartup": {
-      "title": "Retry IN PROCESS on Startup",
-      "description": "Indicates to retry tasks left in status IN PROCESS on system start-up.",
-      "type": "boolean",
-      "default": false
-    },
     "dcmPurgeQueueMessageCompletedDelay": {
-      "title": "Delay for purging completed queue messages",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed queue messages are purged. If absent, there is no deletion for that particular queue",
+      "title": "Delay for purging completed tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed tasks are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageFailedDelay": {
-      "title": "Delay for purging failed queue messages",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which failed queue messages are purged. If absent, there is no deletion for that particular queue",
+      "title": "Delay for purging failed tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which failed tasks are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageWarningDelay": {
-      "title": "Delay for purging warning queue messages",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning queue messages are purged. If absent, there is no deletion for that particular queue",
+      "title": "Delay for purging warning tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning tasks are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageCanceledDelay": {
-      "title": "Delay for purging canceled queue messages",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled queue messages are purged. If absent, there is no deletion for that particular queue",
+      "title": "Delay for purging canceled tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled tasks are purged. If absent, there is no deletion for that particular queue",
       "type": "string",
       "format": "dcmDuration"
-    },
-    "dcmMaxQueueSize": {
-      "title": "Maximum Queue Size",
-      "description": "Maximal number of scheduled tasks in the queue. If the number of scheduled tasks reaches the limit, an attempt to schedule another tasks will fail. 0 = no limitation.",
-      "type": "integer",
-      "default": 0,
-      "minimum": 0
     },
     "dcmSchedule": {
       "title": "Restrict Scheduling",

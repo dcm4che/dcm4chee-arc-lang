@@ -1,6 +1,0 @@
-"property","title","description"
-"","Descrittore dati in blocco","Descrittore dati in blocco"
-"dcmBulkDataDescriptorID","ID descrittore dati in blocco","ID descrittore dati in blocco"
-"dcmBulkDataExcludeDefaults","Escludi impostazioni predefinite","Indica se gli attributi specificati dalla ""Classe Composite Instance Retrieve Without Bulk Data Service"" devono essere implicitamente trattati come Massa di dati (= false) o meno (= true)."
-"dcmAttributeSelector","Selettore attributi","Specifica i singoli attributi trattati come dati in blocco da XPath (per esempio 'DicomAttribute[@tag=""54000100""]/Item/DicomAttribute[@tag=""54001010""]')."
-"dcmBulkDataVRLengthThreshold","Soglia di lunghezza del VR","Specifica di trattare tutti gli attributi con una particolare rappresentazione del valore (VR) la cui lunghezza del valore supera la soglia specificata come massa di dati. Formato: <VR>=<length-threshold>."

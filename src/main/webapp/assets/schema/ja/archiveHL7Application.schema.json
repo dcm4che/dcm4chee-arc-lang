@@ -1,25 +1,25 @@
 {
-  "title": "アーカイブ HL7 アプリケーション",
-  "description": "DICOM アーカイブ HL7 アプリケーション 関連 情報",
+  "title": "Archive HL7 Application",
+  "description": "DICOM Archive HL7 Application related information",
   "type": "object",
   "required": [
     "dicomAETitle"
   ],
   "properties": {
     "dicomAETitle": {
-      "title": "AE タイトル",
-      "description": "この HL7 アプリケーションに 関連付けられて いる アーカイブ AE タイトル。",
+      "title": "AE Title",
+      "description": "Archive AE Title associated with this HL7 Application.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmRecordAttributeModification": {
-      "title": "属性 変更の 記録",
-      "description": "この HL7 アプリケーションに よって 格納された オブジェクトの 属性の 変更が 元の 属性 シーケンスの アイテムに 記録されるか どうかを 示します。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "Record Attribute Modification",
+      "description": "Indicates if modifications of attributes of stored objects by this HL7 Application are recorded in Items of the Original Attributes Sequence. Overwrites value specified on Device level.",
       "type": "boolean"
     },
     "hl7ORUAction": {
-      "title": "HL7 ORU アクション",
-      "description": "HL7 ORU^R01 メッセージの 受信時の アクションを 指定します : IMPORT_REPORT (= 受信した HL7 ORU^R01を DICOM SRにトランスコード する), MWL_COMPLETED (= 一致 する MWL アイテムの ステータスを COMPLETEDに 設定 する)。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 ORU Action",
+      "description": "Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). Overwrites value specified on Device level.",
       "type": "array",
       "items": {
         "type": "string",
@@ -30,31 +30,31 @@
       }
     },
     "hl7PatientUpdateTemplateURI": {
-      "title": "HL7 患者 更新 テンプレート URI",
-      "description": "HL7v2 患者 更新 サービスで 使用される スタイルシートの URIを 指定します。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 Patient Update Template URI",
+      "description": "Specifies URI for the style sheet used by HL7v2 Patient Update Service. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7ImportReportTemplateURI": {
-      "title": "HL7 インポート レポート テンプレート URI",
-      "description": "受信した HL7 ORU^R01を DICOM SR に トランスコード する スタイルシートの URIを 指定します。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 Import Report Template URI",
+      "description": "Specifies URI for the style sheet to transcode received HL7 ORU^R01 to DICOM SR. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7ImportReportTemplateParam": {
-      "title": "HL7 インポート レポート テンプレート パラメータ",
-      "description": "XSLT HL7 インポート レポート テンプレート URIで 指定された スタイルシートに 渡される XSLT パラメータ。 形式 : {name}={value}. 例 : 'langCodeValue=et', 'langCodingSchemeDesignator=RFC5646', 'langCodeMeaning=Estonian'。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 Import Report Template Parameter",
+      "description": "XSLT parameters passed to style sheet specified by HL7 Import Report Template URI. Format: {name}={value}. E.g.: 'langCodeValue=et', 'langCodingSchemeDesignator=RFC5646', 'langCodeMeaning=Estonian'. Overwrites value specified on Device level.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7ScheduleProcedureTemplateURI": {
-      "title": "HL7 予定された 手順 テンプレート URI",
-      "description": "受信した HL7 ORM^O01, OMI^O23, OMG^O19 を DICOM MWL アイテムに トランスコード する スタイルシートの URI を 指定します。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 Schedule Procedure Template URI",
+      "description": "Specifies URI for the style sheet to transcode received HL7 ORM^O01, OMI^O23, OMG^O19 to DICOM MWL items. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7ScheduledProtocolCodeInOrder": {
-      "title": "HL7 オーダーに 予定された プロトコル コード",
-      "description": "受信した HL7 オーダー メッセージの 予定された プロトコル コードの 場所を 指定します。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 Schedule Protocol Code in Order",
+      "description": "Specifies location of Scheduled Protocol Code in received HL7 Order message. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
         "OBR_4_1",
@@ -62,52 +62,52 @@
       ]
     },
     "hl7ScheduledStationAETInOrder": {
-      "title": "HL7 オーダーに 予定された ステーション AET",
-      "description": "受信した HL7 オーダー メッセージ内の 予定された ステーション AE タイトルの 場所を 指定します。 IPC セグメントを 持つ HL7 v2.5.1 OMI^O23には 構成しないで ください。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 Schedule Station AET in Order",
+      "description": "Specifies location of Scheduled Station AE Title in received HL7 Order message. Should not be configured for HL7 v2.5.1 OMI^O23 with IPC segment. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
         "ORC_18"
       ]
     },
     "hl7LogFilePattern": {
-      "title": "HL7 ログ ファイル パターン",
-      "description": "受信したとおりに キャプチャされる HL7 メッセージへの パス。 存在しない 場合、 ログは 記録されません。 デバイス レベルで 指定された 値を 上書きします。 例 : ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "title": "HL7 Log File Pattern",
+      "description": "Path to HL7 messages which will be captured exactly as received. If absent, there is no logging. Overwrites value specified on Device level. eg. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
       "type": "string"
     },
     "hl7ErrorLogFilePattern": {
-      "title": "HL7 エラー ログ ファイル パターン",
-      "description": "HL7 メッセージの 処理が 失敗したときに 受信したとおりに キャプチャされる HL7 メッセージへの パス。 存在しない 場合、 ログは 記録されません。 デバイス レベルで 指定された 値を 上書きします。 例 : ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "title": "HL7 Error Log File Pattern",
+      "description": "Path to HL7 messages which will be captured exactly as received, when processing of HL7 messages fails. If absent, there is no logging. Overwrites value specified on Device level. eg. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
       "type": "string"
     },
     "hl7NoPatientCreateMessageType": {
-      "title": "HL7 患者を 作成しない メッセージ タイプ",
-      "description": "データベースに 既に 患者 レコードが あり、 その 患者 IDが PID または MRG セグメントの 患者 IDと 一致 する 場合 のみ 処理される HL7 メッセージのメッセージ タイプ (MessageType^TriggerEvent)。 したがって、 指定された タイプの メッセージに よって 新しい 患者 レコードが 作成される ことは ありません。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 No Patient Create Message Type",
+      "description": "Message Type(s) (MessageType^TriggerEvent) of HL7 messages which are only processed, if there is already a Patient record in the database, which Patient ID matches the Patient ID in the PID or MRG segment of the message. Thus no new Patient record will be created by messages of the specified types. Overwrites value specified on Device level.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7PatientArrivalMessageType": {
-      "title": "HL7 患者 到着 メッセージ タイプ",
-      "description": "患者に 関連付けられた 予定された 手順 ステップの ステータスを SCHEDULEDから ARRIVEDに 変更 する トリガーと なる HL7 メッセージの メッセージ タイプ。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 Patient Arrival Message Type",
+      "description": "Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. Overwrite value specified on Device level.",
       "type": "string",
       "enum": [
         "ADT^A10"
       ]
     },
     "hl7UseNullValue": {
-      "title": "HL7 ヌル 値を 使用 する",
-      "description": "送信された HL7 メッセージで、 存在しない または 空の エンティティ 属性に 対して HL7 v2 ヌル 値 (セグメント フィールドで |\"\"| として 指定された) が 使用されるか どうかを 指定します。 リモート HL7 アプリケーションで エンティティ 属性を 設定 解除 する ために 必要です。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "Use HL7 Null Value",
+      "description": "Specifies if HL7 v2 null values (specified in segment field as |\"\"|) are used in sent HL7 messages for not present or empty entity attributes. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.",
       "type": "boolean"
     },
     "hl7VeterinaryUsePatientName": {
-      "title": "HL7 獣医 使用 患者名",
-      "description": "HL7 PID フィールドを DICOM 属性に マッピングするときに 患者名の 獣医 使用を 強制する ことを 示します。 PID.5の 最初の 2つの コンポーネントのみを DICOM 患者名として 使用します。 PID.5に 1つの コンポーネントのみ 場合には その 値を 名前として 使用し、PID.9の 最初の コンポーネントを DICOM 患者名の 姓として 使用します。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 Veterinary use Patient Name",
+      "description": "Indicates to force veterinary use of Patient Names on mapping HL7 PID fields to DICOM attributes: only use the first two components of PID.5 as DICOM Patient Name; if PID.5 only contains one component, use that value as given name, and the first component of PID.9 as family name of the DICOM Patient Name. Overwrites value specified on Device level.",
       "type": "boolean"
     },
     "hl7OrderMissingStudyIUIDPolicy": {
-      "title": "HL7 オーダー ために 欠落 スタディ インスタンス UID ポリシー",
-      "description": "受信した HL7 オーダー メッセージに スタディ インスタンス UIDがない 場合の ポリシーを 指定します。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 Order Missing Study Instance UID Policy",
+      "description": "Specifies policy for missing Study Instance UID in incoming HL7 Order messages. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
         "REJECT",
@@ -116,8 +116,8 @@
       ]
     },
     "hl7ImportReportMissingStudyIUIDPolicy": {
-      "title": "HL7 インポート レポート ために 欠落 スタディ インスタンス UID ポリシー",
-      "description": "受信した HL7 インポート レポート (ORU) メッセージに スタディ インスタンス UIDがない 場合の ポリシーを 指定します。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 Import Report Missing Study Instance UID Policy",
+      "description": "Specifies policy for missing Study Instance UID in incoming HL7 Import Report (ORU) messages. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
         "REJECT",
@@ -125,9 +125,15 @@
         "ACCESSION_BASED"
       ]
     },
+    "hl7ImportReportMissingStudyIUIDCFindSCP": {
+      "title": "HL7 Import Report Missing Study Instance UID C-FIND SCP",
+      "description": "AE Title of external C-FIND SCP to query for missing Study Instance UID in incoming HL7 Import Report (ORU) messages by given Accession Number. Overwrites value specified on Device level.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
     "hl7ReferredMergedPatientPolicy": {
-      "title": "HL7 参照された マージ済み 患者 ポリシー",
-      "description": "すでに マージ済みの 患者を 参照する 着信 HL7 メッセージに 関する ポリシーを 指定します。 REJECT: その ような HL7 メッセージを 拒否します, IGNORE: その ような HL7メッセージを 無視します, IGNORE_DUPLICATE_MERGE：重複する HL7 マージ メッセージのみを 無視し、その 他の その ような メッセージを 拒否します。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "HL7 Referred Merged Patient Policy",
+      "description": "Specifies policy on incoming HL7 messages referring an already merged Patient. REJECT: reject any such HL7 message, IGNORE: ignore any such HL7 message, IGNORE_DUPLICATE_MERGE: Ignore only duplicate HL7 Merge messages, Reject any other such Message. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
         "REJECT",
@@ -136,14 +142,14 @@
       ]
     },
     "hl7DicomCharacterSet": {
-      "title": "HL7 Dicom 文字 セット",
-      "description": "受信した HL7 メッセージから トランスコードされた データセットで 特定の 文字 セットの 指定された 値 (0008,0005)を 使用する ことを 示します。 存在しない 場合、 MSH-18で 指定された HL7 メッセージの 文字 セットに 対応する 値を 使用します。",
+      "title": "HL7 Dicom Character Set",
+      "description": "Indicates to use specified Value of Specific Character Set (0008,0005) in Data Sets transcoded from received HL7 messages. Use Value corresponding to Character Set of the HL7 message specified by MSH-18 if absent.",
       "type": "string",
       "format": "dcmCharset"
     },
     "hl7ForwardRule": {
-      "title": "HL7 転送 規則",
-      "description": "HL7 転送 規則。 デバイス レベルで 指定された HL7上の UPS 規則を 補足します。",
+      "title": "HL7 Forward Rule",
+      "description": "HL7 Forward Rule. Supplements values specified on Device level.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -151,8 +157,8 @@
       }
     },
     "hl7ExportRule": {
-      "title": "HL7 エクスポート 規則",
-      "description": "この HL7 アプリケーションが 受信した HL7 メッセージに 適用される エクスポート 規則。 デバイス レベルで 指定された HL7上の UPS 規則を 補足します。",
+      "title": "HL7 Export Rule",
+      "description": "Export Rules applied to HL7 messages received by this HL7 Application. Supplements HL7 Export Rules specified on Device level.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -160,8 +166,8 @@
       }
     },
     "hl7UPSOnHL7": {
-      "title": "HL7上の UPS 規則",
-      "description": "この HL7 アプリケーションに よって 受信された HL7 メッセージに 適用された HL7上の UPS 規則。 デバイス レベルで 指定された HL7上の UPS 規則を 補足します。",
+      "title": "UPS on HL7 Rules",
+      "description": "UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. Supplements UPS on HL7 Rules specified on Device level.",
       "type": "array",
       "titleKey": "{hl7UPSOnHL7ID}",
       "items": {
@@ -169,8 +175,8 @@
       }
     },
     "hl7PrefetchRule": {
-      "title": "HL7 プリフェッチ 規則",
-      "description": "この HL7 アプリケーションが 受信した HL7 メッセージに 適用される HL7 プリフェッチ 規則。 デバイス レベルで 指定された HL7上の UPS 規則を 補足します。",
+      "title": "HL7 Prefetch Rule",
+      "description": "Prefetch Rules applied to HL7 messages received by this HL7 Application. Supplements HL7 Prefetch Rules specified on Device level.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -178,8 +184,8 @@
       }
     },
     "hl7StudyRetentionPolicy": {
-      "title": "HL7 検査 保存 ポリシー",
-      "description": "この HL7 アプリケーションが 受信した HL7 メッセージに よって トリガーされる HL7 検査 保存 ポリシー。 デバイス レベルで 指定された HL7上の UPS 規則を 補足します。",
+      "title": "HL7 Study Retention Policy",
+      "description": "HL7 Study Retention Policies triggered by HL7 messages received by this HL7 Application. Supplements values specified on Device level.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -187,8 +193,8 @@
       }
     },
     "hl7OrderScheduledStation": {
-      "title": "HL7 オーダーの 予定された ステーション",
-      "description": "この HL7 アプリケーションが 受信した MWL HL7 オーダー フィードで 選択された 予定された ステーション。 デバイス レベルで 指定された HL7上の UPS 規則を 補足します。",
+      "title": "Scheduled Station for HL7 Order",
+      "description": "Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -196,8 +202,8 @@
       }
     },
     "hl7OrderSPSStatus": {
-      "title": "HL7 オーダーの SPS ステータス",
-      "description": "受信した HL7 ORM^O01, OMI^O23, OMG^O19 メッセージで 作成 / 更新された DICOM MWL アイテムの SPS ステータスを 指定します。 デバイス レベルで 指定された 値を 上書きします。",
+      "title": "SPS Status for HL7 Order",
+      "description": "Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level.",
       "type": "array",
       "titleKey":"{dcmSPSStatus}",
       "items" : {

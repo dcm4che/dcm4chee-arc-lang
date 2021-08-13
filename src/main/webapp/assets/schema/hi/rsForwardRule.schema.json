@@ -1,6 +1,6 @@
 {
-  "title": "RESTful फॉरवर्ड नियम",
-  "description": "RESTful फॉरवर्ड नियम ।",
+  "title": "RESTful Forward Rule",
+  "description": "RESTful Forward Rule",
   "type": "object",
   "required": [
     "cn",
@@ -10,36 +10,36 @@
   ],
   "properties": {
     "cn": {
-      "title": "नाम",
-      "description": "RESTful फॉरवर्ड नियम का मनमाना/सार्थक नाम ।",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the RESTful Forward Rule",
       "type": "string"
     },
     "dcmWebAppName": {
-      "title": "वेब अनुप्रयोग का नाम",
-      "description": "वेब अनुप्रयोग का नाम ।",
+      "title": "Web Application name",
+      "description": "Name of the Web Application",
       "type": "string",
       "format": "webApp"
     },
     "dcmTLSAllowAnyHostname": {
-      "title": "TLS किसी भी मेज़बान को अनुमति दे",
-      "description": "यदि अन्य सर्वर पे HTTPS ज़रूरी हो तो और इस कॉन्फिग विकल्प को 'हाँ' सेट किया हो तो, अन्य सर्वर के प्रमाणपत्र को ट्रस्टस्टोर द्वारा मान्य किया जाएगा, लेकिन मेज़बान के नाम की मान्यता नहीं की जाएगी ।",
+      "title": "TLS Allow Any Hostname",
+      "description": "If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done.",
       "type": "boolean",
       "default": false
     },
     "dcmTLSDisableTrustManager": {
-      "title": "TLS ट्रस्ट मैनेजर को असक्षम करें",
-      "description": "यदि अन्य सर्वर पे HTTPS ज़रूरी हो तो और इस कॉन्फिग विकल्प को 'हाँ' सेट किया हो तो, ट्रस्टस्टोर को निर्दिष्ट करने की आवश्यकता नहीं है ।",
+      "title": "TLS Disable Trust Manager",
+      "description": "If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore",
       "type": "boolean",
       "default": false
     },
     "dcmURIPattern": {
-      "title": "अनुरोध URL पैटर्न",
-      "description": "सिर्फ वही अनुरोध फॉरवर्ड करें जो दिए गए रेगुलर एक्सप्रेशन से मिलता हो । अगर ! से उपसर्ग किया हो तो, सिर्फ वही अनुरोध फॉरवर्ड करें जो दिए गए रेगुलर एक्सप्रेशन से न मिलता हो ।",
+      "title": "Request URL Pattern",
+      "description": "Only forward requests which match the given Regular Expression. If prefixed with !, only forward requests which does not match the given Regular Expression.",
       "type": "string"
     },
     "dcmRSOperation": {
-      "title": "RESTful कतृत्व",
-      "description": "अन्य आर्काइव पे फॉरवर्ड करने के लिए RESTful कतृत्वों के नाम ।",
+      "title": "RESTful Operation",
+      "description": "Name of RESTful Operation which shall be forwarded to another archive instance.",
       "type": "array",
       "items" : {
         "type": "string",

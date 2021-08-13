@@ -1,6 +1,6 @@
 {
-  "title": "ID 発生器",
-  "description": "ID 発生器",
+  "title": "ID Generator",
+  "description": "ID Generator",
   "type": "object",
   "required": [
     "dcmIDGeneratorName",
@@ -9,8 +9,8 @@
   ],
   "properties": {
     "dcmIDGeneratorName": {
-      "title": "ID 発生器名",
-      "description": "ID 発生器名。",
+      "title": "ID Generator Name",
+      "description": "ID Generator Name.",
       "type": "string",
       "enum": [
         "PatientID",
@@ -20,13 +20,13 @@
       ]
     },
     "dcmIDGeneratorFormat": {
-      "title": "ID 発生器 形式",
-      "description": "この ID 発生器で 使用される 形式 文字列。 %0<width>dは、 指定された 幅に 従って 先行 ゼロを 持つ 連続 番号に 置き換えられます",
+      "title": "ID Generator Format",
+      "description": "Format string used by this ID Generator. %0<width>d will be replaced by a sequential number with leading zeros according the given width",
       "type": "string"
     },
     "dcmIDGeneratorInitialValue": {
-      "title": "ID 発生器 初期値",
-      "description": "この ID 発生器が 使用 する シーケンスの 初期値。",
+      "title": "ID Generator Initial Value",
+      "description": "Initial value for sequence used by this ID Generator.",
       "type": "integer",
       "minimum": 0,
       "default": 1

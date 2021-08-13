@@ -1,6 +1,6 @@
 {
-  "title": "मेट्रिक्स वर्णनकर्ता",
-  "description": "मेट्रिक्स वर्णनकर्ता",
+  "title": "Metrics Descriptor",
+  "description": "Metrics Descriptor",
   "type": "object",
   "required": [
     "dcmMetricsName",
@@ -8,25 +8,25 @@
   ],
   "properties": {
     "dcmMetricsName": {
-      "title": "मेट्रिक्सचे नाव",
-      "description": "मेट्रिक्सचे नाव.",
+      "title": "Metrics Name",
+      "description": "Metrics Name",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "मेट्रिक्स वर्णन",
-      "description": "मेट्रिक्सचे अनियंत्रित मजकूर वर्णन.",
+      "title": "Metrics Description",
+      "description": "Unconstrained text description of the metrics",
       "type": "string"
     },
     "dcmMetricsRetentionPeriod": {
-      "title": "मेट्रिक्स धारणा कालावधी",
-      "description": "मिनिटांमध्ये मेट्रिक्स धारणा कालावधी.",
+      "title": "Metrics Retention Period",
+      "description": "Metrics Retention Period in minutes",
       "type": "integer",
       "default" : 60,
       "minimum": 1
     },
     "dcmUnit": {
-      "title": "मेट्रिक्स युनिट",
-      "description": "मेट्रिक्स डेटाचे एकक.",
+      "title": "Metrics Unit",
+      "description": "Unit of metrics data",
       "type": "string"
     }
   }

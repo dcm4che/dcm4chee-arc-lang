@@ -1,6 +1,6 @@
 {
-  "title": "इमेज रीडर",
-  "description": "संपीडित DICOM दृष्टांतों के असंपीडन में इस्तमाल किए जानेवाले JAVA इमेज IO इमेज रीडर को निर्दिष्ट करता है ।",
+  "title": "Image Reader",
+  "description": "Specifies Java Image IO Image Readers used for decompressing compressed DICOM images",
   "type": "object",
   "required": [
     "dicomTransferSyntax",
@@ -8,24 +8,24 @@
   ],
   "properties": {
     "dicomTransferSyntax": {
-      "title": "हस्तांतरण वाक्यविन्यास",
-      "description": "संपीडित DICOM इमेज का हस्तांतरण वाक्यविन्यास ।",
+      "title": "Transfer Syntax",
+      "description": "Transfer Syntax of compressed DICOM image",
       "type": "string",
       "format": "dcmTransferSyntax"
     },
     "dcmIIOFormatName": {
-      "title": "इमेज IO रीडर प्रारूप का नाम",
-      "description": "इमेज IO रीडर प्रारूप का नाम ।",
+      "title": "Image IO Reader Format Name",
+      "description": "Image IO Reader Format Name",
       "type": "string"
     },
     "dcmJavaClassName": {
-      "title": "JAVA वर्ग का नाम",
-      "description": "इमेज IO रीडर का पूरी तरह से योग्य JAVA वर्ग । यदि निर्दिष्ट नहीं किया गया है, तो निर्दिष्ट प्रारूप के नाम से पाए जानेवाले किसी भी इमेज रीडर का इस्तमाल करें ।",
+      "title": "Java Class Name",
+      "description": "Fully qualified Java class of Image IO Reader. If absent, use any Image Reader found for specified Format Name",
       "type": "string"
     },
     "dcmPatchJPEGLS": {
-      "title": "पैच JPEG-LS",
-      "description": "असंपीडन के पहले JPEG-LS पैच करें ।",
+      "title": "Patch JPEG-LS",
+      "description": "Patch JPEG-LS before decompressing",
       "type": "string",
       "enum": [
           "JAI2ISO",
@@ -34,8 +34,8 @@
       ]
     },
     "dcmImageReadParam": {
-      "title": "इमेज वाचन मापदण्ड",
-      "description": "इमेज वाचन मापदण्ड (नाम=मूल्य) ।",
+      "title": "Image Read Param",
+      "description": "Image Read Parameter(s) (name=value)",
       "type": "array",
       "items": {
         "type": "string"

@@ -1,6 +1,6 @@
 {
-  "title": "ऑडिट लॉगर",
-  "description": "ऑडिट लॉगरशी संबंधित माहिती.",
+  "title": "Audit Logger",
+  "description": "Audit Logger related information",
   "type": "object",
   "required": [
     "cn",
@@ -21,45 +21,45 @@
   ],
   "properties": {
     "cn": {
-      "title": "नाव",
-      "description": "ऑडिट लॉगरचे अनियंत्रित / अर्थपूर्ण नाव.",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name for the Audit Logger object",
       "type": "string"
     },
     "dicomNetworkConnectionReference": {
-      "title": "नेटवर्क संपर्क संदर्भ",
-      "description": "या ऑडिट लॉगरद्वारे वापरले जाणारे नेटवर्क संपर्क ऑब्जेक्ट्सवरील जेसन पॉईंटर्स.",
+      "title": "Network Connection Reference",
+      "description": "The JSON Pointers to the Network Connection objects used by this Audit Logger",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditRecordRepositoryDeviceName": {
-      "title": "ऑडिट रेकॉर्ड रिपॉझिटरी डिव्हाइसचे नाव",
-      "description": "ऑडिट रेकॉर्ड रिपॉझिटरी डिव्हाइसचे नाव ज्यावर ऑडिट संदेश पाठविले जातात.",
+      "title": "Audit Record Repository Device Name",
+      "description": "Device Name of Audit Record Repository to which Audit Messages are sent",
       "type": "string",
       "format": "dicomDeviceName"
     },
     "dcmAuditSourceID": {
-      "title": "स्त्रोत ID",
-      "description": "RFC 3881 ऑडिट स्त्रोत ID; अनुपस्थित असल्यास डिव्हाइसचे नाव.",
+      "title": "Source ID",
+      "description": "RFC 3881 Audit Source ID; device name if absent",
       "type": "string"
     },
     "dcmAuditEnterpriseSiteID": {
-      "title": "एंटरप्राइझ साइट ID",
-      "description": "RFC 3881 ऑडिट एंटरप्राइझ साइट ID; 'dicomInstitutionName' च्या मूल्यांना DICOM डिव्हाइसच्या संस्थेच्या नावाने बदलले जाईल.",
+      "title": "Enterprise Site ID",
+      "description": "RFC 3881 Audit Enterprise Site ID; value 'dicomInstitutionName' is replaced by the institution name of the DICOM device",
       "type": "string"
     },
     "dcmAuditSourceTypeCode": {
-      "title": "स्त्रोत प्रकार कोड",
-      "description": "RFC 3881 ऑडिट स्त्रोत प्रकार कोड; 'dicomPrimaryDeviceType' च्या मूल्यांना DICOM डिव्हाइसच्या प्राथमिक प्रकाराने बदलले जाईल.",
+      "title": "Source Type Code",
+      "description": "RFC 3881 Audit Source Type Code; value 'dicomPrimaryDeviceType' is replaced by the primary type of the DICOM device",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditFacility": {
-      "title": "सिस्लॉग सुविधा",
-      "description": "ऑडिट संदेशाचा RFC 5424 सिस्लॉग सुविधा स्ट्रिंग मूल्य.",
+      "title": "Syslog Facility",
+      "description": "RFC 5424 Syslog Facility string value of audit message.",
       "type": "string",
       "default": "authpriv",
       "enum": [
@@ -90,8 +90,8 @@
       ]
     },
     "dcmAuditSuccessSeverity": {
-      "title": "सिस्लॉग तीव्रता - यश",
-      "description": "घटना परिणाम सूचक ० (यश) सह ऑडिट संदेशाचा RFC 5424 सिस्लॉग तीव्रता स्ट्रिंग मूल्य.",
+      "title": "Syslog Severity - Success",
+      "description": "RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 0 (Success).",
       "type": "string",
       "default": "notice",
       "enum": [
@@ -106,8 +106,8 @@
       ]
     },
     "dcmAuditMinorFailureSeverity": {
-      "title": "सिस्लॉग तीव्रता - अपयश",
-      "description": "घटना परिणाम सूचक ४ (किरकोळ अपयश) सह ऑडिट संदेशाचा RFC 5424 सिस्लॉग तीव्रता स्ट्रिंग मूल्य.",
+      "title": "Syslog Severity - Failure",
+      "description": "RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 4 (Minor failure).",
       "type": "string",
       "default": "warning",
       "enum": [
@@ -122,8 +122,8 @@
       ]
     },
     "dcmAuditSeriousFailureSeverity": {
-      "title": "सिस्लॉग तीव्रता - गंभीर अपयश",
-      "description": "घटना परिणाम सूचक ८ (गंभीर अपयश) सह ऑडिट संदेशाचा RFC 5424 सिस्लॉग तीव्रता स्ट्रिंग मूल्य.",
+      "title": "Syslog Severity - Failure",
+      "description": "RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 8 (Serious failure).",
       "type": "string",
       "default": "err",
       "enum": [
@@ -138,8 +138,8 @@
       ]
     },
     "dcmAuditMajorFailureSeverity": {
-      "title": "सिस्लॉग तीव्रता - मुख्य अपयश",
-      "description": "घटना परिणाम सूचक १२ (मुख्य अपयश) सह ऑडिट संदेशाचा RFC 5424 सिस्लॉग तीव्रता स्ट्रिंग मूल्य.",
+      "title": "Syslog Severity - Major",
+      "description": "RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 12 (Major failure).",
       "type": "string",
       "default": "crit",
       "enum": [
@@ -154,71 +154,71 @@
       ]
     },
     "dcmAuditApplicationName": {
-      "title": "सिस्लॉग अनुप्रयोगाचे नाव",
-      "description": "ऑडिट संदेशाचा RFC 5424 सिस्लॉग अनुप्रयोगाचे नाव; अनुपस्थित असल्यास ऑडिट स्त्रोत ID.",
+      "title": "Syslog Application Name",
+      "description": "RFC 5424 Syslog APP-NAME of audit message; Audit Source ID if absent",
       "type": "string"
     },
     "dcmAuditMessageID": {
-      "title": "सिस्लॉग संदेश ID",
-      "description": "ऑडिट संदेशाचा RFC 5424 सिस्लॉग संदेश ID.",
+      "title": "Syslog Message ID",
+      "description": "RFC 5424 Syslog MSGID of audit message.",
       "type": "string",
       "default": "IHE+RFC-3881"
     },
     "dcmAuditMessageEncoding": {
-      "title": "संदेश एन्कोडिंग",
-      "description": "ऑडिट संदेशाचा सिस्लॉग संदेश भागाचा RFC 5424 कॅरक्टर एन्कोडिंग.",
+      "title": "Message Encoding",
+      "description": "Character encoding of RFC 5424 Syslog MSG part of audit message.",
       "type": "string",
       "default": "UTF-8"
     },
     "dcmAuditMessageBOM": {
-      "title": "संदेश BOM",
-      "description": "ऑडिट संदेशाचा RFC 5424 सिस्लॉग संदेश भागातील युनिकोड BOM उपसर्ग सक्षम / अक्षम करा; अनुपस्थित असल्यास BOM समावेश करा.",
+      "title": "Message BOM",
+      "description": "Enable/disable Unicode BOM prefix of RFC 5424 Syslog MSG part of audit message; include BOM if absent",
       "type": "boolean",
       "default": true
     },
     "dcmAuditTimestampInUTC": {
-      "title": "UTC मधील वेळ",
-      "description": "समन्वयित युनिव्हर्सल वेळेमध्ये RFC 5424 सिस्लॉग वेळ आणि ऑडिट संदेशाच्या घटना तारीख / वेळ निर्दिष्ट केला असल्यास निर्दिष्ट करा. डीफॉल्ट सूचित करते की ते स्थानिक वेळ क्षेत्रातील मूल्य असेल.",
+      "title": "Timestamp in UTC",
+      "description": "Specify if RFC 5424 Syslog TIMESTAMP and the Event Date/Time of the audit message are specified in Coordinated Universal Time. Default indicates it will be in Local Time zone.",
       "type": "boolean",
       "default": false
     },
     "dcmAuditMessageFormatXML": {
-      "title": "संदेश प्रारूप XML",
-      "description": "ऑडिट संदेश XML ला लाइन फीड आणि इंडेंटेशनसह प्रारूपित करायचे आहे की नाही ते निर्दिष्ट करा.",
+      "title": "Message Format XML",
+      "description": "Specify whether or not the XML audit message is formatted with line feeds and indentation.",
       "type": "boolean",
       "default": false
     },
     "dcmAuditMessageSchemaURI": {
-      "title": "संदेश स्कीमा URI",
-      "description": "ऑडिट संदेशामध्ये संदर्भित DICOM ऑडिट संदेश स्कीमाचा URI.",
+      "title": "Message Schema URI",
+      "description": "URI of DICOM Audit Message Schema referenced in audit message",
       "type": "string",
       "default": "http://www.dcm4che.org/DICOM/audit-message.rnc"
     },
     "dcmAuditIncludeInstanceUID": {
-      "title": "दृष्टांतांचे UID समाविष्ट करा",
-      "description": "ऑडिट लॉग संदेशात पर्यायी दृष्टांतांचे UID असणे आवश्यक आहे असे दर्शवते.",
+      "title": "Include Instance UIDs",
+      "description": "Indicates if Audit Log Message should contain optional Instance UIDs",
       "type": "boolean",
       "default": false
     },
     "dcmAuditLoggerSpoolDirectoryURI": {
-      "title": "स्पूल निर्देशिका URI",
-      "description": "ऑडिट रेकॉर्ड रिपॉझिटरीवर वितरित केले जाऊ शकत नसलेले ऑडिट संदेशांना साठवण्याचे स्पूल निर्देशिकाचे URI; अनुपस्थित असल्यास सिस्टम अस्थायी निर्देशिका वापरले जाईल.",
+      "title": "Spool Directory URI",
+      "description": "URI of spool directory used to store messages which could not delivered to the record repository; use system temporary directory if absent.",
       "type": "string"
     },
     "dcmAuditLoggerRetryInterval": {
-      "title": "पुन्हा प्रयत्न करण्याचे मध्यांतर",
-      "description": "ऑडिट रेकॉर्ड रिपॉझिटरीमध्ये वितरित न होऊ शकलेले संदेश पुन्हा पाठवण्याचा प्रयत्न करण्याचे सेकंदांमध्ये मध्यांतर; अनुपस्थित असल्यास पुन्हा पाठवण्याचा प्रयत्न होणार नाही.",
+      "title": "Retry Interval",
+      "description": "Retry interval in s to re-sent messages which could not delivered to the record repository; do no retry to re-sent messages if absent",
       "type": "integer",
       "minimum": 1
     },
     "dicomInstalled": {
-      "title": "स्थापित",
-      "description": "नेटवर्कवर ऑडिट लॉगर स्थापित असल्यास 'हो'. उपलब्ध नसल्यास ऑडिट लॉगरच्या स्थापित स्थितीबद्दल माहिती डिव्हाइसमधून प्राप्त केली जाते.",
+      "title": "installed",
+      "description": "True if the Audit Logger is installed on network. If not present, information about the installed status of the Audit Logger is inherited from the device",
       "type": "boolean"
     },
     "dcmAuditSuppressCriteria": {
-      "title": "ऑडिट सप्रेस निकष",
-      "description": "ऑडिट सप्रेस निकष.",
+      "title": "Audit Suppress Criteria",
+      "description": "Audit Suppress Criteria",
       "type": "array",
       "titleKey":"{cn}",
       "items": {

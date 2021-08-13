@@ -1,19 +1,19 @@
 {
-  "title": "ऑडिट अधीन मानदण्ड",
-  "description": "ऑडिट अधीन मानदण्ड ।",
+  "title": "Audit Suppress Criteria",
+  "description": "Audit Suppress Criteria",
   "type": "object",
   "required": [
     "cn"
   ],
   "properties": {
     "cn": {
-      "title": "नाम",
-      "description": "ऑडिट अधीन मानदण्ड का मनमाना सार्थक नाम ।",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the Audit Suppress Criteria.",
       "type": "string"
     },
     "dcmAuditEventID": {
-      "title": "ऑडिट घटना ID",
-      "description": "RFC 3881 ऑडिट घटना ID कोड और कोड सिस्टम का नाम इस प्रारूप में (CV, CSD, \"CM\") ।",
+      "title": "Audit Event ID",
+      "description": "DICOM PS 3.15 A.5 Audit Event ID code and codeSystemName in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -42,8 +42,8 @@
       }
     },
     "dcmAuditEventTypeCode": {
-      "title": "ऑडिट घटना प्रकार कोड",
-      "description": "RFC 3881 ऑडिट घटना प्रकार कोड इस प्रारूप में (CV, CSD, \"CM\") ।",
+      "title": "Audit Event Type Code",
+      "description": "DICOM PS 3.15 A.5 Audit Event Type code in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -92,8 +92,8 @@
       }
     },
     "dcmAuditEventActionCode": {
-      "title": "घटना प्रक्रिया कोड",
-      "description": "RFC 3881 ऑडिट घटना प्रक्रिया प्रकार कोड ।",
+      "title": "Event Action Code",
+      "description": "DICOM PS 3.15 A.5 Audit Event Action Type code.",
       "type": "array",
       "items": {
         "type": "string",
@@ -107,8 +107,8 @@
       }
     },
     "dcmAuditEventOutcomeIndicator": {
-      "title": "घटना परिणाम सूचक",
-      "description": "RFC 3881 ऑडिट घटना परिणाम सूचक ।",
+      "title": "Event Outcome Indicator",
+      "description": "DICOM PS 3.15 A.5 Audit Event Outcome Indicator.",
       "type": "array",
       "items": {
         "type": "string",
@@ -121,24 +121,24 @@
       }
     },
     "dcmAuditUserID": {
-      "title": "उपभोक्ता ID",
-      "description": "RFC 3881 ऑडिट सक्रिय सहभागी उपभोक्ता ID ।",
+      "title": "User ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant User ID.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditAlternativeUserID": {
-      "title": "वैकल्पिक उपभोक्ता ID",
-      "description": "RFC 3881 ऑडिट सक्रिय सहभागी वैकल्पिक उपभोक्ता ID ।",
+      "title": "Alternative User ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditUserRoleIDCode": {
-      "title": "उपभोक्ता भूमिका ID कोड",
-      "description": "RFC 3881 ऑडिट सक्रिय सहभागी उपभोक्ता भूमिका ID कोड इस प्रारूप में (CV, CSD, \"CM\") ।",
+      "title": "User Role ID Code",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -153,17 +153,92 @@
       }
     },
     "dcmAuditNetworkAccessPointID": {
-      "title": "नेटवर्क ऐक्सेस अंक ID",
-      "description": "RFC 3881 ऑडिट सक्रिय सहभागी नेटवर्क ऐक्सेस अंक ID ।",
+      "title": "Network Access Point ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditUserIsRequestor": {
-      "title": "उपभोक्ता आरंभकर्ता है",
-      "description": "सक्रिय सहभागी RFC 3881 में निर्दिष्ट ऑडिट घटना का आरंभकर्ता है या नहीं यह संकेत करता है ।",
+      "title": "User is Requestor",
+      "description": "Indicates if Active Participant is initiator/requestor of the Audit Event as specified by DICOM PS 3.15 A.5",
       "type": "boolean"
+    },
+    "dcmParticipantObjectTypeCode": {
+      "title": "Participant Object Type Code",
+      "description": "DICOM PS 3.15 A.5 Participant Object Type Code.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "1",
+          "2",
+          "3",
+          "4"
+        ]
+      }
+    },
+    "dcmParticipantObjectTypeCodeRole": {
+      "title": "Participant Object Type Code Role",
+      "description": "DICOM PS 3.15 A.5 Participant Object Type Code Role.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26"
+        ]
+      }
+    },
+    "dcmParticipantObjectDataLifeCycle": {
+      "title": "Participant Object Data Life Cycle",
+      "description": "DICOM PS 3.15 A.5 Participant Object Data Life Cycle.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "6",
+          "7",
+          "8",
+          "9",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15"
+        ]
+      }
     }
   }
 }

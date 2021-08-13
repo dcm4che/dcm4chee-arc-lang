@@ -1,6 +1,6 @@
 {
-  "title": "Applicazione HL7",
-  "description": "Informazioni sull'applicazione HL7",
+  "title": "HL7 Application",
+  "description": "HL7 Application information",
   "type": "object",
   "required": [
     "hl7ApplicationName",
@@ -10,8 +10,8 @@
   ],
   "properties": {
     "hl7ApplicationName": {
-      "title": "Nome dell'applicazione HL7",
-      "description": "Applicazione HL7 e nome della struttura (applicazione | struttura)",
+      "title": "HL7 Application name",
+      "description": "HL7 Application and Facility name (Application|Facility)",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.hl7ADTSendingApplication",
@@ -26,72 +26,72 @@
       ]
     },
     "dicomNetworkConnectionReference": {
-      "title": "Riferimento per la connessione di rete",
-      "description": "I puntatori JSON agli oggetti connessione di rete per questa applicazione HL7",
+      "title": "Network Connection Reference",
+      "description": "The JSON Pointers to the Network Connection objects for this HL7 Application",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7AcceptedSendingApplication": {
-      "title": "Applicazione di invio accettata",
-      "description": "Applicazione|Nome della struttura delle applicazioni di invio accettate; qualsiasi se assente",
+      "title": "Accepted Sending Application",
+      "description": "Application|Facility name of accepted Sending Application(s); any if absent",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7OtherApplicationName": {
-      "title": "Altro nome dell'Applicazione HL7",
-      "description": "Applicazione HL7 aggiuntiva e nome della struttura (Applicazione|Struttura) - accetterà anche messaggi HL7 con tale Applicazione di ricezione e con il nome della struttura",
+      "title": "Other HL7 Application Name",
+      "description": "Additional HL7 Application and Facility name (Application|Facility) - will also accept HL7 messages with such Receiving Application and Facility name",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7AcceptedMessageType": {
-      "title": "Tipo di messaggio accettato",
-      "description": "Tipi di messaggio (MessageType^TriggerEvent) dei messaggi accettati",
+      "title": "Accepted Message Type",
+      "description": "Message Type(s) (MessageType^TriggerEvent) of accepted messages",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7DefaultCharacterSet": {
-      "title": "Set di caratteri predefinito",
-      "description": "Set di caratteri utilizzato per decodificare i messaggi ricevuti se non specificato da MSH-18.",
+      "title": "Default Character Set",
+      "description": "Character Set used to decode received messages if not specified by MSH-18.",
       "type": "string",
       "default": "ASCII",
       "format": "hl7Charset"
     },
     "hl7SendingCharacterSet": {
-      "title": "Set di caratteri dell'inviante",
-      "description": "Set di caratteri utilizzato per codificare i messaggi HL7 inviati dall'archivio.",
+      "title": "Sending Character Set",
+      "description": "Character Set used to encode HL7 messages sent from archive.",
       "type": "string",
       "default": "ASCII",
       "format": "hl7Charset"
     },
     "dicomDescription": {
-      "title": "Descrizione HL7",
-      "description": "Descrizione testuale non vincolata dell'applicazione HL7",
+      "title": "HL7 Description",
+      "description": "Unconstrained text description of the HL7 Application",
       "type": "string"
     },
     "dicomApplicationCluster": {
-      "title": "Cluster di applicazioni",
-      "description": "Nomi definiti localmente per un sottoinsieme di applicazioni correlate",
+      "title": "Application Cluster",
+      "description": "Locally defined names for a subset of related applications",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dicomInstalled": {
-      "title": "installato",
-      "description": "Vero se l'applicazione HL7 è installata sulla rete. Se non presenti, le informazioni sullo stato di installazione dell'applicazione HL7 vengono ereditate dal dispositivo",
+      "title": "installed",
+      "description": "True if the HL7 Application is installed on network. If not present, information about the installed status of the HL7 Application is inherited from the device",
       "type": "boolean"
     },
     "dcmArchiveHL7Application": {
-      "title": "Applicazione HL7 dell'archivio",
-      "description": "Informazioni relative all'applicazione HL7 dell'archivio DICOM",
+      "title": "Archive HL7 Application",
+      "description": "DICOM Archive HL7 Application related information",
       "$ref": "archiveHL7Application.schema.json"
     }
   }

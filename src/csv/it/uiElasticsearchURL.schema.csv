@@ -1,8 +1,0 @@
-"property","title","description"
-"","Configurazione dell'URL dell'interfaccia utente di Elasticsearch ","URL dell'interfaccia utente di Elasticsearch"
-"dcmuiElasticsearchURLName","Nome URL Elasticsearch","URL dell'interfaccia utente di Elasticsearch"
-"dcmuiElasticsearchURL","URL dell'interfaccia utente di Elasticsearch","URL di accesso di Elasticsearch. Ad esempio: http(s)://<elasticsearch-host>:<elasticsearch-port> "
-"dcmuiElasticsearchURLKeycloakServer","Server Keycloak ","Seleziona Keycloak Server da cui ottenere il token portatore per accedere a Elasticsearch"
-"dcmuiAuditEnterpriseSiteID","Audit Enterprise SiteID","Imposta Audit Enterprise SiteID che dovrebbe essere usato nelle query Elasticsearch"
-"dcmuiElasticsearchIsDefault","È predefinito","Imposta questo URL su quello predefinito. (Assicurati che solo uno dei Set - fratelli sia impostato come predefinito)."
-"dcmuiElasticsearchInstalled","Installato","Utilizza questo URL nell'interfaccia utente"

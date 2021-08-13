@@ -1,6 +1,6 @@
 {
-  "title": "UI アーカイブの 比較 基準",
-  "description": "UI アーカイブの 比較 基準",
+  "title": "UI Diff Criteria",
+  "description": "UI Diff Criteria",
   "type": "object",
   "required": [
     "dcmuiDiffCriteriaTitle",
@@ -8,36 +8,36 @@
   ],
   "properties": {
     "dcmuiDiffCriteriaTitle": {
-      "title": "UI アーカイブの 比較 基準 タイトル",
-      "description": "アーカイブの 比較 基準の タイトル",
+      "title": "UI Diff Criteria Title",
+      "description": "Title of Diff Criteria",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "UI アーカイブの 比較 基準 説明",
-      "description": "この UI アーカイブの 比較 基準の 制約のない テキスト 説明",
+      "title": "UI Diff Criteria Description",
+      "description": "Unconstrained text description of this UI Diff Criteria",
       "type": "string"
     },
     "dcmuiDiffCriteriaNumber": {
-      "title": "UI アーカイブの 比較 基準 番号",
-      "description": "属性 セットの 順序付けに 使用される 属性 セット 番号。",
+      "title": "UI Diff Criteria Number",
+      "description": "Attribute Set Number used to order Attribute Sets.",
       "type": "integer",
       "minimum": 1
     },
     "dcmuiDiffIncludeMissing": {
-      "title": "UI 欠落を 含む",
-      "description": "欠落して いる 検査を 含めるか どうかを 示します。",
+      "title": "UI Including Missing",
+      "description": "Indicate if missing Studies shall be included",
       "type": "boolean",
       "default": false
     },
     "dcmAttributeSetID": {
-      "title": "属性 セット ID",
-      "description": "比較された 属性を 指定 する 属性 セットの ID",
+      "title": "Attribute Set ID",
+      "description": "ID of Attribute Set specifying compared attributes",
       "type": "string",
       "format": "dcmAttributeSetID"
     },
     "dcmuiDiffGroupButton": {
-      "title": "UI アーカイブの 比較 グループ ボタン",
-      "description": "UI アーカイブの 比較 グループ ボタン",
+      "title": "UI Diff Group Button",
+      "description": "UI Diff Group Button",
       "type": "array",
       "items": {
         "type": "string",
@@ -49,8 +49,8 @@
       }
     },
     "dcmuiDiffAction": {
-      "title": "UI アーカイブの 比較 アクション",
-      "description": "UI アーカイブの 比較 アクション",
+      "title": "UI Diff Action",
+      "description": "UI Diff Action",
       "type": "array",
       "items": {
         "type": "string",

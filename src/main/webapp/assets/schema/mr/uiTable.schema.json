@@ -1,35 +1,35 @@
 {
-  "title": "UI अभ्यास टेबल कॉन्फिगरेशन",
-  "description": "प्रो संस्करण के लिए अभ्यास टेबल कॉन्फिगरेशन.",
+  "title": "UI Study Table Configuration",
+  "description": "Study Table configuration for the pro version",
   "type": "object",
   "required": [
     "dcmuiStudyTableConfigName"
   ],
   "properties": {
     "dcmuiStudyTableConfigName": {
-      "title": "कॉन्फिगरेशनचे नाव",
-      "description": "UI अभ्यास टेबल कॉन्फिगरेशनचे नाव.",
+      "title": "Configuration Name",
+      "description": "UI Study Table Configuration Name",
       "type": "string"
     },
     "dcmuiStudyTableConfigUsername": {
-      "title": "वापरकर्ताचे नाव",
-      "description": "वापरकर्ताचे नाव ज्यासाठी हा सेट उपलब्ध असावा.",
+      "title": "Username",
+      "description": "Username to which this set should be available",
       "type": "string"
     },
     "dcmuiStudyTableConfigRoles": {
-      "title": "भूमिका",
-      "description": "वापरकर्त्याची भूमिका जो हा सेट वापरेल ('वापरकर्ताचे नाव' निर्दिष्ट असेल तर, भूमिका दुर्लक्ष केले जाईल).",
+      "title": "Role",
+      "description": "Username role that can use this Set ( If you set the username, the role will be ignored )",
       "type": "string"
     },
     "dcmuiStudyTableConfigIsDefault": {
-      "title": "डीफॉल्ट आहे",
-      "description": "या कॉलम-सेटला डीफॉल्ट म्हणून संच करा. (खात्री करा की फक्त कोणत्याही एका सेटला डीफॉल्ट म्हणून संच करा).",
+      "title": "Is Default",
+      "description": "Set this Column-Set to the default one. (Make sure that only one of the Set - siblings child is set to default).",
       "type": "boolean",
       "default": false
     },
     "dcmuiStudyTableColumnConfigObjects": {
-      "title": "अभ्यास टेबल कॉलम",
-      "description": "अभ्यास टेबल कॉलम परिभाषित करा.",
+      "title": "Study Table Columns",
+      "description": "Define Study Table Columns",
       "titleKey":"{dcmuiColumnName}",
       "type": "array",
       "items" : {

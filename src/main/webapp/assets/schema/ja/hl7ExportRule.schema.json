@@ -1,41 +1,42 @@
 {
-  "title": "HL7 書き出し 規則",
-  "description": "HL7 書き出し 規則",
+  "title": "HL7 Export Rule",
+  "description": "HL7 Export Rule",
   "type": "object",
   "required": [
     "cn",
     "dcmExporterID",
-    "dcmDuration"
+    "dcmDuration",
+    "dcmHistorySize"
   ],
   "properties": {
     "cn": {
-      "title": "名前",
-      "description": "HL7 書き出し 規則の 任意 / 意味の ある 名前",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the HL7 Export Rule",
       "type": "string"
     },
     "dcmExporterID": {
-      "title": "エクスポーター ID",
-      "description": "エクスポーター ID",
+      "title": "Exporter ID",
+      "description": "Exporter ID",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmExporterID"
     },
     "dcmProperty": {
-      "title": "条件",
-      "description": "{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx} 形式で 条件。 例: MSH-4=FORWARD または MSH-9=ORM\\^O01 または PID-3[.3]=PIDIssuer または PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "title": "Conditions",
+      "description": "Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Example: MSH-4=FORWARD or MSH-9=ORM\\^O01 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
       "items": { "type": "string" }
     },
     "dcmEntitySelector": {
-      "title": "エンティティ セレクタ",
-      "description": "書き出し する 検査の 選択に 使用された 一致 する キーを 指定します。 形式: {key}={value}[&{key}={value)]..., ここは {key} = 'StudyAge' | {attributeID}。 '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] 形式で {value}は、書き出しを トリガーした 受信した  HL7 メッセージからの 指定された HL7 フィールドの 値に 置き換えられます。 エンティティ セレクタが 指定されて いない 場合、 患者の すべての 検査が 書き出しされます。 例: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => 少なくとも 1つの CT シリーズを 含む、 5年 以内の 最大 2つの 先行 検査を 選択します。",
+      "title": "Entity Selector",
+      "description": "Specifies matching keys used to select Studies to export. Format: {key}={value}[&{key}={value)]..., with {key} = 'StudyAge' | {attributeID}. {value} in the format '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] are replaced by the value of the specified HL7 field from the received HL7 message which triggered the export. If no Entity Selector is specified, all Studies for the Patient will be exported. Example: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => select at most 2 prior Studies not older than 5 years containing at least one CT Series.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
-      "title": "患者 IDの 割り当て 権限を ヌル する",
-      "description": "条件付きで 患者 IDの 割り当て 権限 (PID-3.4) を ヌルします。 これは、患者の 検査を 選択 する ための 書き出しを トリガーした 受信 HL7 メッセージに あります。",
+      "title": "Ignore Assigning Authority of Patient ID",
+      "description": "Conditionally ignore Assigning Authority of Patient ID (PID-3.4) in received HL7 message which triggered the export for selecting Studies of the Patient.",
       "type": "string",
       "enum": [
         "ALWAYS",
@@ -44,8 +45,8 @@
       ]
     },
     "dcmIssuerOfPatientID": {
-      "title": "患者 IDの 割り当て 権限",
-      "description": "「患者 IDの 割り当て 権限」が MATCHING または NOT_MATCHINGに 設定されて いる 場合、 受信した HL7 メッセージの その 値と 照合されます。 形式: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "title": "Assigning Authority of Patient ID",
+      "description": "Assigning Authority of Patient ID against values in received HL7 message are matched, if Assigning Authority of Patient ID is set to MATCHING or NOT_MATCHING. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
       "type": "array",
       "items": { "type": "string" }
     },
@@ -55,10 +56,18 @@
       "type": "string"
     },
     "dcmDuration": {
-      "title": "重複の 書き出しを 抑制する 間隔",
-      "description": "重複した 書き出しを 回避 する ために、 指定された 間隔 よりも 前に すでに 書き出しされた 検査の 書き出しを 抑制します。",
+      "title": "Suppress Duplicate Export Interval",
+      "description": "Suppress Export of Studies already exported not earlier than the specified interval to avoid duplicate exports.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmHistorySize": {
+      "title": "Suppress Duplicate History Size",
+      "description": "Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.",
+      "type": "integer",
+      "default" : 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
     }
   }
 }

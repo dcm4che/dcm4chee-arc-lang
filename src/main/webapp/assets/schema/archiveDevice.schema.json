@@ -34,9 +34,8 @@
     "dcmSpanningCFindSCPPolicy",
     "dcmFallbackCMoveSCPRetries",
     "dcmFallbackWadoURIHttpStatusCode",
+    "dcmTaskFetchSize",
     "dcmUPSProcessingFetchSize",
-    "dcmExportTaskFetchSize",
-    "dcmRetrieveTaskFetchSize",
     "dcmRetrieveTaskWarningOnNoMatch",
     "dcmRetrieveTaskWarningOnWarnings",
     "dcmPurgeStorageFetchSize",
@@ -341,8 +340,26 @@
       "default": "${jboss.server.temp.dir}"
     },
     "dcmHideSPSWithStatusFromMWL": {
-      "title": "Hide SPS with Status",
+      "title": "Hide SPS with Status by MWL SCP",
       "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "SCHEDULED",
+          "ARRIVED",
+          "READY",
+          "STARTED",
+          "DEPARTED",
+          "CANCELED",
+          "DISCONTINUED",
+          "COMPLETED"
+        ]
+      }
+    },
+    "dcmHideSPSWithStatusFromMWLRS": {
+      "title": "Hide SPS with Status by MWL RS",
+      "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items" : {
         "type": "string",
@@ -640,6 +657,20 @@
       },
       "format": "dcmProperty"
     },
+    "dcmTaskPollingInterval": {
+      "title": "Task Polling Interval",
+      "description": "Polling Interval for scheduled Tasks in ISO-8601 duration format PnDTnHnMnS. If absent, Tasks will not get processed.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmTaskFetchSize": {
+      "title": "Task Fetch Size",
+      "description": "Limit result set of DB query for scheduled Tasks.",
+      "type": "integer",
+      "default": 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
     "dcmUPSProcessingPollingInterval": {
       "title": "UPS Processing Polling Interval",
       "description": "Polling Interval for Workitems ready for processing in ISO-8601 duration format PnDTnHnMnS.",
@@ -649,34 +680,6 @@
     "dcmUPSProcessingFetchSize": {
       "title": "UPS Processing  Fetch Size",
       "description": "Limit result set of DB query for Workitems ready for processing.",
-      "type": "integer",
-      "default": 100,
-      "minimum": 0,
-      "exclusiveMinimum": true
-    },
-    "dcmExportTaskPollingInterval": {
-      "title": "Export Task Polling Interval",
-      "description": "Export Task Polling Interval in ISO-8601 duration format PnDTnHnMnS.",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "dcmExportTaskFetchSize": {
-      "title": "Export Task Fetch Size",
-      "description": "Limit result set of DB query for Export Tasks ready for processing.",
-      "type": "integer",
-      "default": 100,
-      "minimum": 0,
-      "exclusiveMinimum": true
-    },
-    "dcmRetrieveTaskPollingInterval": {
-      "title": "Retrieve Task Polling Interval",
-      "description": "Retrieve Task Polling Interval in ISO-8601 duration format PnDTnHnMnS.",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "dcmRetrieveTaskFetchSize": {
-      "title": "Retrieve Task Fetch Size",
-      "description": "Limit result set of DB query for Retrieve Tasks ready for processing.",
       "type": "integer",
       "default": 100,
       "minimum": 0,
@@ -954,8 +957,8 @@
       "type": "string"
     },
     "dcmPurgeQueueMessagePollingInterval": {
-      "title": "Purge Queue Messages Polling Interval",
-      "description": "Polling Interval for purging queue messages in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion",
+      "title": "Purge Task Polling Interval",
+      "description": "Polling Interval for purging tasks in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion",
       "type": "string",
       "format": "dcmDuration"
     },

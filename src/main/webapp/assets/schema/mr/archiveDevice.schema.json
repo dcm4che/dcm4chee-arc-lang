@@ -329,8 +329,26 @@
       "default": "${jboss.server.temp.dir}"
     },
     "dcmHideSPSWithStatusFromMWL": {
-      "title": "या स्थितींमध्ये SPS लपवा",
+      "title": "MWL SCP द्वारे या स्थितींमध्ये SPS लपवा",
       "description": "MWL SCP वरून न पाठवलेले MWL आयटम्सचे अनुसूचित प्रक्रिया स्टेप कोड. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "SCHEDULED",
+          "ARRIVED",
+          "READY",
+          "STARTED",
+          "DEPARTED",
+          "CANCELED",
+          "DISCONTINUED",
+          "COMPLETED"
+        ]
+      }
+    },
+    "dcmHideSPSWithStatusFromMWLRS": {
+      "title": "MWL RS द्वारे या स्थितींमध्ये SPS लपवा",
+      "description": "MWL RS वरून न पाठवलेले MWL आयटम्सचे अनुसूचित प्रक्रिया स्टेप कोड. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "array",
       "items" : {
         "type": "string",
