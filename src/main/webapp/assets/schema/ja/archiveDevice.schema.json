@@ -611,7 +611,7 @@
       "title": "フォールバック WADO-URI ウェブ アプリケーション名",
       "description": "要求された オブジェクトが この アーカイブで 利用できない 場合に WADO URI 要求を リダイレクト する 外部 ウェブ アプリケーションの 名前。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
       "type": "string",
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmFallbackWadoURIHttpStatusCode": {
       "title": "フォールバック WADO URI HTTP ステータス コード",

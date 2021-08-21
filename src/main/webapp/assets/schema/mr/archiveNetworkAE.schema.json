@@ -350,7 +350,7 @@
       "title": "Fallback WADO-URI Web Application Name",
       "description": "Name of external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. Overwrites value specified on Device level.",
       "type": "string",
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmFallbackWadoURIHttpStatusCode": {
       "title": "Fallback WADO-URI HTTP Status Code",

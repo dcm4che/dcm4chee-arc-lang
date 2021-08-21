@@ -611,7 +611,7 @@
       "title": "पलटाव WADO-URI वेब अनुप्रयोग का नाम",
       "description": "यदि अनुरोधित दृष्टांत इस आर्काइव पे अनुपस्थित हो तो, बाहरी वेब अनुप्रयोग का नाम जहा पे WADO-URI अनुरोधों को अनुप्रेषित किया जाएगा । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmFallbackWadoURIHttpStatusCode": {
       "title": "पलटाव WADO-URI HTTP स्थिति कोड",

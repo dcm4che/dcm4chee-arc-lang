@@ -622,7 +622,7 @@
       "title": "Fallback WADO-URI Web Application Name",
       "description": "Name of external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmFallbackWadoURIHttpStatusCode": {
       "title": "Fallback Wado URI Http Status Code",

@@ -589,7 +589,7 @@
       "title": "Nome applicazione Web WADO-URI di fallback",
       "description": "Nome dell'applicazione Web esterna per reindirizzare le richieste URI WADO se l'oggetto richiesto non è disponibile in questo archivio. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmFallbackWadoURIHttpStatusCode": {
       "title": "Codice di stato Http URI Wado di fallback",
