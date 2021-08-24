@@ -1496,7 +1496,7 @@
       "type": "string",
       "format": "dcmDuration"
     },
-    "hl7PSUConditions": {
+    "hl7PSUCondition": {
       "title": "HL7 手順 ステータス 更新 属性の 条件",
       "description": "受信した 複合 オブジェクトの 属性の (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} 形式で 指定した 条件に よって、 手順 ステータス 更新の 通知を 構成された 「HL7 手順 ステータス 更新 受け取り アプリケーション」に 限る。 「|」 シンボルで 区切る ことに より、 特定の 属性に 複数の 値を 指定できます。 例 : SendingApplicationEntityTitle=FORWARD または Modality=MR|CT または ProcedureCodeSequence.CodeValue=MRProcedure または 00180015=KNEE または 00321034.00080100=RequestingServiceCode または ImageType[3]=LOCALIZER。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
       "type": "array",

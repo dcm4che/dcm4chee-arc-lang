@@ -1458,7 +1458,7 @@
       "type": "string",
       "format": "dcmDuration"
     },
-    "hl7PSUConditions": {
+    "hl7PSUCondition": {
       "title": "Condizioni degli attributi di aggiornamento dello stato della procedura HL7",
       "description": "Limita la notifica dell'aggiornamento dello stato della procedura configurata HL7 di Ricezione delle applicazioni sull'aggiornamento dello stato della procedura in base alle condizioni sugli attributi dell'oggetto composito ricevuto nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Esempio: SendingApplicationEntityTitle=FORWARD o Modality=MR|CT o ProcedureCodeSequence.CodeValue=MRProcedure o 00180015=KNEE o 00321034.00080100=RequestingServiceCode o ImageType[3]=LOCALIZER. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "array",
