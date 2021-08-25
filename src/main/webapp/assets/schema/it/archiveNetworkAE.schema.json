@@ -696,6 +696,11 @@
       "type": "string",
       "format": "dcmAETitle"
     },
+    "dcmFilterByIssuerOfPatientID": {
+      "title": "Filter by Issuer of Patient ID",
+      "description": "Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmExportRule": {
       "title": "Export Rule",
       "description": "Export Rules applied to DICOM objects received by this AE. Supplements Export Rules specified on Device level.",
