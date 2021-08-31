@@ -90,6 +90,7 @@
     "dcmStowQuicktime2MP4",
     "dcmWadoIgnorePresentationLUTShape",
     "dcmWadoMetadataExcludePrivate",
+    "dcmFilterByIssuerOfPatientID",
     "hl7PSUForRequestedProcedure",
     "hl7PSURequestedProcedureID",
     "hl7PSUAccessionNumber",
@@ -611,7 +612,7 @@
       "title": "पलटाव WADO-URI वेब अनुप्रयोग का नाम",
       "description": "यदि अनुरोधित दृष्टांत इस आर्काइव पे अनुपस्थित हो तो, बाहरी वेब अनुप्रयोग का नाम जहा पे WADO-URI अनुरोधों को अनुप्रेषित किया जाएगा । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmFallbackWadoURIHttpStatusCode": {
       "title": "पलटाव WADO-URI HTTP स्थिति कोड",
@@ -1496,7 +1497,7 @@
       "type": "string",
       "format": "dcmDuration"
     },
-    "hl7PSUConditions": {
+    "hl7PSUCondition": {
       "title": "HL7 प्रक्रिया स्थिति अपडेट गुण नियम",
       "description": "प्राप्त हुए मिश्र दृष्टांत के गुणों पे नियमों के द्वारा कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट प्राप्ति अनुप्रयोगों' पे भेजे गए प्रक्रिया स्थिति अपडेट संदेश के अधिसूचना को सीमित करें, इस प्रारूप में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} । किसी दिए गए विशेषता के लिए एक से अधिक मूल्य निर्दिष्ट करने के लिए उन्हें | प्रतीक के सहारे अलग किया जा सकता है । उदाहरण के तौर पे : SendingApplicationEntityTitle=FORWARD या Modality=MR|CT या ProcedureCodeSequence.CodeValue=MRProcedure या 00180015=KNEE या 00321034.00080100=RequestingServiceCode या ImageType[3]=LOCALIZER । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "array",
@@ -1721,6 +1722,12 @@
       "description": "Indicates change requester AET in rejections triggered by archive. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmAETitle"
+    },
+    "dcmFilterByIssuerOfPatientID": {
+      "title": "Filter by Issuer of Patient ID",
+      "description": "Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. May be overwritten by configured value for particular Archive Network AEs.",
+      "type": "boolean",
+      "default" : false
     },
     "dcmAttributeFilter": {
       "title": "गुण फ़िल्टर",

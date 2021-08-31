@@ -86,6 +86,7 @@
     "dcmAuditSoftwareConfigurationVerbose",
     "dcmStowExcludeAPPMarkers",
     "dcmStowQuicktime2MP4",
+    "dcmFilterByIssuerOfPatientID",
     "dcmWadoIgnorePresentationLUTShape",
     "dcmWadoMetadataExcludePrivate",
     "hl7PSUForRequestedProcedure",
@@ -589,7 +590,7 @@
       "title": "Nome applicazione Web WADO-URI di fallback",
       "description": "Nome dell'applicazione Web esterna per reindirizzare le richieste URI WADO se l'oggetto richiesto non è disponibile in questo archivio. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
-      "format": "dcmWebApp"
+      "format": "webApp"
     },
     "dcmFallbackWadoURIHttpStatusCode": {
       "title": "Codice di stato Http URI Wado di fallback",
@@ -1458,7 +1459,7 @@
       "type": "string",
       "format": "dcmDuration"
     },
-    "hl7PSUConditions": {
+    "hl7PSUCondition": {
       "title": "Condizioni degli attributi di aggiornamento dello stato della procedura HL7",
       "description": "Limita la notifica dell'aggiornamento dello stato della procedura configurata HL7 di Ricezione delle applicazioni sull'aggiornamento dello stato della procedura in base alle condizioni sugli attributi dell'oggetto composito ricevuto nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Esempio: SendingApplicationEntityTitle=FORWARD o Modality=MR|CT o ProcedureCodeSequence.CodeValue=MRProcedure o 00180015=KNEE o 00321034.00080100=RequestingServiceCode o ImageType[3]=LOCALIZER. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "array",
@@ -1683,6 +1684,12 @@
       "description": "Indicates change requester AET in rejections triggered by archive. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmAETitle"
+    },
+    "dcmFilterByIssuerOfPatientID": {
+      "title": "Filter by Issuer of Patient ID",
+      "description": "Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. May be overwritten by configured value for particular Archive Network AEs.",
+      "type": "boolean",
+      "default" : false
     },
     "dcmAttributeFilter": {
       "title": "Filtro attributi",
