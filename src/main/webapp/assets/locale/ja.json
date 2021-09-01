@@ -1222,6 +1222,7 @@
     "specific_time": "特定な 時間",
     "split_study_date_range": "検査 開始 範囲を 分割 する",
     "split_study_date_range_duration_format": "期間 形式で 検査 開始 範囲を 分割 する",
+    "sps_description": "SPS Description",
     "sps_start_date": "SPS 開始日",
     "sps_start_time": "SPS 開始 時間",
     "sps_status": "SPS ステータス",
