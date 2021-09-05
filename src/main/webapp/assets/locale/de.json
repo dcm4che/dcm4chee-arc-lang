@@ -322,6 +322,7 @@
     "dashboard.archive_device_not_configured": "Archive device(s) nicht konfiguriert!",
     "dashboard.archive_device_not_found_in_elasticsearch": "Archive device(s) not found in the devices coming from Elasticsearch",
     "data_bin_size_in_minutes": "Data bin size in minutes",
+    "date_time_picker": "Date Time Picker",
     "day": "Tag:",
     "day_plural": "Tage",
     "day_range": "Tageinterval",

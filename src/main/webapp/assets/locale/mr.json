@@ -320,6 +320,7 @@
     "dashboard.archive_device_not_configured": "संग्रहण डिव्हाइस कॉन्फिगर केलेले नाही!",
     "dashboard.archive_device_not_found_in_elasticsearch": "इलास्टीकसर्चकडून आलेल्या उपकरणांमध्ये संग्रहण डिव्हाइस आढळले नाही",
     "data_bin_size_in_minutes": "डेटा बिन आकार मिनिटांमधे",
+    "date_time_picker": "Date Time Picker",
     "day": "दिवस:",
     "day_plural": "दिवस",
     "day_range": "दिवसाची श्रेणी",

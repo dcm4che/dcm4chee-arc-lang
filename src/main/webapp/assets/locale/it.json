@@ -320,6 +320,7 @@
 		"dashboard.archive_device_not_configured": "Dispositivi di archiviazione non configurati!",
 		"dashboard.archive_device_not_found_in_elasticsearch": "Dispositivi di archiviazione non trovati nei dispositivi provenienti da Elasticsearch",
 		"data_bin_size_in_minutes": "Dimensioni del contenitore dati in minuti",
+		"date_time_picker": "Date Time Picker",
 		"day": "giorno:",
 		"day_plural": "giorni",
 		"day_range": "Estensione in giorni",

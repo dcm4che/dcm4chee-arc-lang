@@ -320,6 +320,7 @@
     "dashboard.archive_device_not_configured": "アーカイブ デバイスが 構成されて いません!",
     "dashboard.archive_device_not_found_in_elasticsearch": "エラスティクサーチから 来ての デバイス リストに アーカイブ デバイスが 見つかりません",
     "data_bin_size_in_minutes": "分単位の データ ビン サイズ",
+    "date_time_picker": "Date Time Picker",
     "day": "日:",
     "day_plural": "日",
     "day_range": "日範囲",

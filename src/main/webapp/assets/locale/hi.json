@@ -320,6 +320,7 @@
     "dashboard.archive_device_not_configured": "आर्काइव डिवाइस कॉन्फ़िगर्ड नहीं है!",
     "dashboard.archive_device_not_found_in_elasticsearch": "इलास्टिकसर्च से पाए गए डिवाइस सूची में आर्काइव डिवाइस नहीं मिले ।",
     "data_bin_size_in_minutes": "डेटा बिन का माप मिनटों में",
+    "date_time_picker": "Date Time Picker",
     "day": "दिन:",
     "day_plural": "कुछ दिन",
     "day_range": "दिन की सीमा",
