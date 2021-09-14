@@ -39,18 +39,7 @@
       "title": "Queue Name",
       "description": "JMS Queue Name",
       "type": "string",
-      "enum" : [
-        "Export1",
-        "Export2",
-        "Export3",
-        "Export4",
-        "Export5",
-        "Export6",
-        "Export7",
-        "Export8",
-        "Export9",
-        "Export10"
-      ]
+      "format":"dcmQueueName"
     },
     "dicomDescription": {
       "title": "Exporter Description",
