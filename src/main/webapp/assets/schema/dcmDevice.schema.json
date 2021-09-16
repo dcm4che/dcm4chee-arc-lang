@@ -185,6 +185,12 @@
       "description": "Study Updater Configuration",
       "order":37,
       "$ref": "studyUpdaterConfig.schema.json" 
+    },
+    "j4careRouter": {
+      "title": "DICOM Router Configuration",
+      "description": "DICOM Router Configuration",
+      "order":38,
+      "$ref": "j4careRouterConfig.schema.json" 
     }
   }
 }

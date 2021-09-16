@@ -1,0 +1,118 @@
+{
+  "title": "Route Configuration",
+  "description": "Route Configuration",
+  "type": "object",
+  "required": [
+    "j4careRouterRouteConfiguration",
+    "j4careRouterRouteConfigurationDisplayName",
+    "j4careRouterRouteConfigurationQueueName",
+    "j4careRouterRouteConfigurationSourceFindAET",
+    "j4careRouterRouteConfigurationSourceRetrieveAET",
+    "j4careRouterRouteConfigurationSourceURL",
+    "j4careRouterRouteConfigurationRouteType",
+    "j4careRouterRouteConfigurationWorkerThreads",
+    "j4careRouterRouteConfigurationDestinationAETs",
+    "j4careRouterRouteConfigurationAET2AssigningAuthority"
+  ],
+  "properties": {
+    "j4careRouterRouteConfiguration": {
+      "title": "Route Configuration Name (internal)",
+      "description": "Route Configuration Name (internal)",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationDisplayName": {
+      "title": "Route Configuration Name (UI)",
+      "description": "Route Configuration Name (UI)",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationQueueName": {
+      "title": "Queue Name",
+      "description": "DCM4CHEE Queue Name used for Jobs",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationSourceFindAET": {
+      "title": "Source Find AET",
+      "description": "AET to Query when retrieving Input Data (HL7,IAN,...) to search for studies",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationSourceRetrieveAET": {
+      "title": "Source Retrieve AET",
+      "description": "AET to Retrieve Study from Input Data",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationSourceURL": {
+      "title": "Source URL",
+      "description": "Listening Source URL",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationRouteType": {
+      "title": "Route Type",
+      "description": "Route Type",
+      "default": "ORU",
+      "type": "string",
+      "enum": [
+          "IAN",
+          "ORU",
+          "ORM",
+          "REST"
+      ]
+    },
+    "j4careRouterRouteConfigurationWorkerThreads": {
+      "title": "Worker Threads",
+      "description": "Worker Threads",
+      "type": "integer",
+      "default": 5,
+      "minimum": 1
+    },
+    "j4careRouterRouteConfigurationDestinationAETs": {
+      "title": "Destination AETs",
+      "description": "Listening Source URL",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "j4careRouterRouteConfigurationAET2AssigningAuthority": {
+      "title": "AET - Assigining Authority Mapping",
+      "description": "AET - Assigining Authority Mapping",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "j4careRouterRouteConfigurationHL7ConfigurationReceivingApplication": {
+      "title": "HL7 Configuration Receiving Application",
+      "description": "HL7 Configuration Receiving Application",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationHL7ConfigurationReceivingFacility": {
+      "title": "HL7 Configuration Receiving Facility",
+      "description": "HL7 Configuration Receiving Facility",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationHL7ConfigurationSendingApplication": {
+      "title": "HL7 Configuration Sending Application",
+      "description": "HL7 Configuration Sending Application",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationHL7ConfigurationSendingFacility": {
+      "title": "HL7 Configuration Sending Facility",
+      "description": "HL7 Configuration Sending Facility",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationHL7ConfigurationURIPrefix": {
+      "title": "HL7 Configuration URI Prefix",
+      "description": "URI Prefix to setup the HL7 Listener",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationPixConfiguration":{
+      "title": "PIX Configurations",
+      "description": "PIX Configurations",
+      "titleKey":"{j4careRouterRouteConfigurationPixConfiguration}",
+      "type": "array",
+      "items" : {
+        "$ref": "j4careRouterRouteConfigurationPixConfiguration.schema.json"
+      }
+    }
+  }
+}
