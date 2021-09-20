@@ -1023,6 +1023,7 @@
     "reload_successful": "Neuladen erfolgreich",
     "remote_aet": " Entfernter AE Title ",
     "remoteaet": "Entfernter AET",
+    "remote_ae_title_to_filter_by": "Remote AE Title to filter by",
     "remove_all_selections": "Jede Auswahl entfernen",
     "remove_extension_from_device": "Remove {$PH} extension from device",
     "remove_filter_template": "Are you sure you want to remove this filter-template?",

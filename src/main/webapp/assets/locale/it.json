@@ -1021,6 +1021,7 @@
 		"reload_successful": "Ricarica riuscita",
 		"remote_aet": "Titolo AE remoto ",
 		"remoteaet": "AET remoto",
+		"remote_ae_title_to_filter_by": "Remote AE Title to filter by",
 		"remove_all_selections": "Rimuovi tutte le selezioni",
 		"remove_extension_from_device": "Rimuovi l'estensione {$PH} dal dispositivo",
 		"remove_filter_template": "Sei sicuro di voler rimuovere questo modello di filtro?",

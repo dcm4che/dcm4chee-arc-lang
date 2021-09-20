@@ -1021,6 +1021,7 @@
     "reload_successful": "リロードが 成功します",
     "remote_aet": " リモート AE タイトル",
     "remoteaet": "リモート AET",
+    "remote_ae_title_to_filter_by": "Remote AE Title to filter by",
     "remove_all_selections": "すべての 選択を 削除 する",
     "remove_extension_from_device": "デバイスから {$PH} 拡張機能を 削除 する",
     "remove_filter_template": "この フィルター テンプレートを 削除しても よろしいですか?",

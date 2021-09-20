@@ -1021,6 +1021,7 @@
     "reload_successful": "पुनः लोड सफलतापूर्वक पूरा हुआ ।",
     "remote_aet": " दूरवर्ती AE का नाम ",
     "remoteaet": "दूरवर्ती AET",
+    "remote_ae_title_to_filter_by": "Remote AE Title to filter by",
     "remove_all_selections": "सारे चयन निकाले",
     "remove_extension_from_device": "{$PH} एक्सटेंशन डिवाइस से निकाले",
     "remove_filter_template": "क्या आप निस्चय ही इस फ़िल्टर फर्मा को निकालना चाहते हैं?",
