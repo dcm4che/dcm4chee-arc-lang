@@ -48,9 +48,12 @@
           "UpdatePatient",
           "DeletePatient",
           "ChangePatientID",
+          "ChangePatientID2",
           "MergePatient",
-          "MergePatients",
+          "MergePatient2",
+          "UnmergePatient",
           "UpdateStudy",
+          "UpdateSeries",
           "DeleteStudy",
           "RejectStudy",
           "RejectSeries",
@@ -61,7 +64,9 @@
           "CreateMWL",
           "UpdateMWL",
           "DeleteMWL",
-          "UpdateStudyAccessControlID"
+          "UpdateStudyAccessControlID",
+          "MoveStudyToPatient",
+          "SupplementIssuer"
         ]
       }
     }
