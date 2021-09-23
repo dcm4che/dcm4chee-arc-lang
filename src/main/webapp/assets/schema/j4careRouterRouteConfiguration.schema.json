@@ -80,6 +80,14 @@
         "type": "string"
       }
     },
+    "j4careRouterRouteConfigurationBodyPartMap": {
+      "title": "Body Part Mapping",
+      "description": "Map Body Parts to make them compareable (f.e. HEAD=HEAD,SKULL,HEADNECK)",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "j4careRouterRouteConfigurationHL7ConfigurationReceivingApplication": {
       "title": "HL7 Configuration Receiving Application",
       "description": "HL7 Configuration Receiving Application",
