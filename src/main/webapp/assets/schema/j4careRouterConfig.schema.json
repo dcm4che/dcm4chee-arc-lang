@@ -41,6 +41,14 @@
       "description": "Keycloak Secret for Authentication",
       "type": "string"
     },
+    "j4careRouterModalityImageSizeMap": {
+      "title": "Modality Image Size Map",
+      "description": "Standard Mapping for estimating Study Sizes in kb (f.e. MR=250 will map MR with 250kb for each image) ",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "j4careRouterPIXDicomCFindFacadeConfigurationDcm4cheeAET": {
       "title": "PIX DICOM C-FIND Facade DCM4CHEE AET",
       "description": "PIX DICOM C-FIND Facade DCM4CHEE AET",
