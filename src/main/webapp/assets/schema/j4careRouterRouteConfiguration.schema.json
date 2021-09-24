@@ -88,6 +88,24 @@
         "type": "string"
       }
     },
+    "j4careRouterRouteConfigurationBodyPartScore": {
+      "title": "Body Part Score",
+      "description": "Score that should be used if a body part was matched translated via the configured Body Part Map - 0 will deactivate the body part matching",
+      "type": "integer",
+      "default": 0
+    },
+    "j4careRouterRouteConfigurationMaxRetrieveTasks": {
+      "title": "Maximum Retrieve Tasks",
+      "description": "The maximum number of Retrieve Tasks that should be created based on the found datasets ordered by score - 0 will deactivate the feature",
+      "type": "integer",
+      "default": 0
+    },
+    "j4careRouterRouteConfigurationMinScore": {
+      "title": "Minimum Score",
+      "description": "The minimum score a study needs to reach to be considered for Routing - 0 will deactivate the feature",
+      "type": "integer",
+      "default": 0
+    },    
     "j4careRouterRouteConfigurationHL7ConfigurationReceivingApplication": {
       "title": "HL7 Configuration Receiving Application",
       "description": "HL7 Configuration Receiving Application",
