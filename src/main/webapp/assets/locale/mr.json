@@ -1235,6 +1235,8 @@
     "sort_by_creation_time_desc": "निर्मिती वेळेनुसार क्रमवारी लावा (उतरत्या क्रमाने)",
     "sort_by_updated_time_asc": "अद्यतनित वेळानुसार क्रमवारी लावा (आरोही क्रम)",
     "sort_by_updated_time_desc": "अद्यतनित वेळेनुसार क्रमवारी लावा (उतरत्या क्रमाने)",
+    "sort_by_scheduled_time_asc": "Sort by scheduled time (ASC)",
+    "sort_by_scheduled_time_desc": "Sort by scheduled time (DESC)",
     "source_host": "स्त्रोत",
     "source_user_id": "स्त्रोत वापरकर्ता ID",
     "sp_physicians_family_name": "अनुसूचित प्रक्रिया चिकित्सकचे आडनाव",

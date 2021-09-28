@@ -1234,6 +1234,8 @@
     "sort_by_creation_time_desc": "निर्माण समय के अनुसार क्रमबद्ध करें (अवरोही क्रम)",
     "sort_by_updated_time_asc": "अपडेट की गए समय के अनुसार क्रमबद्ध करें (आरोही क्रम)",
     "sort_by_updated_time_desc": "अपडेट की गए समय के अनुसार क्रमबद्ध करें (अवरोही क्रम)",
+    "sort_by_scheduled_time_asc": "Sort by scheduled time (ASC)",
+    "sort_by_scheduled_time_desc": "Sort by scheduled time (DESC)",
     "source_host": "स्रोत मेजबान",
     "source_user_id": "स्रोत उपभोक्ता ID",
     "sp_physicians_family_name": "अनुसूचित प्रक्रिया चिकित्सक का उपनाम",

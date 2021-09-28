@@ -1235,6 +1235,8 @@
 		"sort_by_creation_time_desc": "Ordina per ora di creazione (DESC)",
 		"sort_by_updated_time_asc": "Ordina per ora aggiornata (ASC)",
 		"sort_by_updated_time_desc": "Ordina per ora aggiornata (DESC)",
+		"sort_by_scheduled_time_asc": "Sort by scheduled time (ASC)",
+		"sort_by_scheduled_time_desc": "Sort by scheduled time (DESC)",
 		"source_host": "Host di origine",
 		"source_user_id": "ID utente di origine",
 		"sp_physicians_family_name": "SP Physician's family name",
