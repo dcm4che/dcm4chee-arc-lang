@@ -1253,6 +1253,8 @@
     "sort_by_creation_time_desc": "Sort by creation time (DESC)",
     "sort_by_updated_time_asc": "Sort by updated time (ASC)",
     "sort_by_updated_time_desc": "Sort by updated time (DESC)",
+    "sort_by_scheduled_time_asc": "Sort by scheduled time (ASC)",
+    "sort_by_scheduled_time_desc": "Sort by scheduled time (DESC)",
     "source_host": "Quellhost",
     "source_user_id": "Quell UserID",
     "sp_physicians_family_name": "SP Physician's family name",

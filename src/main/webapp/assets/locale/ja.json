@@ -1252,6 +1252,8 @@
     "sort_by_creation_time_desc": "作成時間で 並べ替える (DESC)",
     "sort_by_updated_time_asc": "更新時間で 並べ替える (ASC)",
     "sort_by_updated_time_desc": "更新時間で 並べ替える (DESC)",
+    "sort_by_scheduled_time_asc": "Sort by scheduled time (ASC)",
+    "sort_by_scheduled_time_desc": "Sort by scheduled time (DESC)",
     "source_host": "ソース ホスト",
     "source_user_id": "ソース ユーザー ID",
     "sp_physicians_family_name": "予定された 実行 医師の 苗字",
