@@ -1738,7 +1738,7 @@
     },
     "dcmQueue": {
       "title": "Coda",
-      "description": "Coda JMS gestita",
+      "description": "Coda Task gestita",
       "type": "array",
       "titleKey":"{dcmQueueName}",
       "items" : {

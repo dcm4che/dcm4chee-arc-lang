@@ -37,7 +37,7 @@
     },
     "dcmQueueName": {
       "title": "Queue Name",
-      "description": "JMS Queue Name",
+      "description": "Task Queue Name",
       "type": "string",
       "format":"dcmQueueName"
     },

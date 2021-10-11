@@ -1,6 +1,6 @@
 {
   "title": "Queue",
-  "description": "Managed JMS Queue",
+  "description": "Managed Task Queue",
   "type": "object",
   "required": [
     "dcmQueueName",
@@ -14,7 +14,7 @@
   "properties": {
     "dcmQueueName": {
       "title": "Queue Name",
-      "description": "JMS Queue Name",
+      "description": "Task Queue Name",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiQueueName[*]",
