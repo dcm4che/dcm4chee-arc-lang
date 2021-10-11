@@ -1776,7 +1776,7 @@
     },
     "dcmQueue": {
       "title": "कतार",
-      "description": "व्यवस्थापित JMS कतार ।",
+      "description": "व्यवस्थापित Task कतार ।",
       "type": "array",
       "titleKey":"{dcmQueueName}",
       "items" : {
