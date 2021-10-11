@@ -1,0 +1,54 @@
+{
+  "title": "PDQ Service",
+  "description": "PDQ服务描述符",
+  "type": "object",
+  "required": [
+    "dcmPDQServiceID",
+    "dcmURI",
+    "dcmEntity"
+  ],
+  "properties": {
+    "dcmPDQServiceID": {
+      "title": "PDQ Service ID",
+      "description": "PDQ服务ID",
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
+      ]
+    },
+    "dcmURI": {
+      "title": "PDQ Service URI",
+      "description": "PDQ服务URI, 例如'pdq-dicom:FINDSCP'或者'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility'.",
+      "type": "string"
+    },
+    "dicomDescription": {
+      "title": "PDQ Service Description",
+      "description": "PDQ服务的不受约束的文本描述",
+      "type": "string"
+    },
+    "dcmTag": {
+      "title": "Patient Attributes",
+      "description": "查询的患者属性 - 如果未指定，将查询所有可用的患者属性",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmTag"
+    },
+    "dcmEntity": {
+      "title": "查询实体",
+      "description": "指示是否为特定患者或特定患者的检查查询C-FIND SCP。仅对DICOM PDQ服务有效(URI: pdq-dicom:{AETitle}).",
+      "type": "string",
+      "enum": [ "Patient", "Study" ],
+      "default": "Patient"
+    },
+    "dcmProperty": {
+      "title": "PDQ Service Property",
+      "description": "格式为 <name>=<value>的属性, 例如： 'LocalAET=DCM4CHEE' 或者 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl'",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
