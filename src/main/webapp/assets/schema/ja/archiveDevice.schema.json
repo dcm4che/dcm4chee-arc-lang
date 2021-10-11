@@ -1776,7 +1776,7 @@
     },
     "dcmQueue": {
       "title": "キュー",
-      "description": "管理された JMS キュー",
+      "description": "管理された Task キュー",
       "type": "array",
       "titleKey":"{dcmQueueName}",
       "items" : {

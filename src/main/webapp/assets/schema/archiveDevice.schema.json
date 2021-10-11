@@ -1779,7 +1779,7 @@
     },
     "dcmQueue": {
       "title": "Queue",
-      "description": "Managed JMS Queue",
+      "description": "Managed Task Queue",
       "type": "array",
       "titleKey":"{dcmQueueName}",
       "items" : {
