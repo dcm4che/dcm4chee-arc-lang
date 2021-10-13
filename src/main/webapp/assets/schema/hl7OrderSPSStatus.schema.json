@@ -13,10 +13,6 @@
       "type": "string",
       "enum": [
         "SCHEDULED",
-        "ARRIVED",
-        "READY",
-        "STARTED",
-        "DEPARTED",
         "CANCELED",
         "DISCONTINUED",
         "COMPLETED"
