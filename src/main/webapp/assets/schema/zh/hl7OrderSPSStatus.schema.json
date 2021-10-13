@@ -1,6 +1,6 @@
 {
-  "title": "SPS Status for HL7 Order",
-  "description": "Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages",
+  "title": "HL7订单的SPS状态",
+  "description": "指定在收到的HL7 ORM^O01, OMI^O23, OMG^O19消息中创建/更新的DICOM MWL项目的SPS状态",
   "type": "object",
   "required": [
     "dcmSPSStatus",
@@ -19,8 +19,8 @@
       ]
     },
     "hl7OrderControlStatus": {
-      "title": "HL7 Order Control Status",
-      "description": "HL7 Order Control Status Code combinations.",
+      "title": "HL7订单控制状态",
+      "description": "HL7订单控制状态代码的组合。",
       "type": "array",
       "items": {
         "type": "string",

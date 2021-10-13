@@ -1,0 +1,74 @@
+{
+  "title": "RESTful传输规则",
+  "description": "RESTful传输规则",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmWebAppName",
+    "dcmTLSAllowAnyHostname",
+    "dcmTLSDisableTrustManager"
+  ],
+  "properties": {
+    "cn": {
+      "title": "名称",
+      "description": "RESTful传输规则的任意/有意义的名称",
+      "type": "string"
+    },
+    "dcmWebAppName": {
+      "title": "Web应用程序名称",
+      "description": "Web应用程序名称",
+      "type": "string",
+      "format": "webApp"
+    },
+    "dcmTLSAllowAnyHostname": {
+      "title": "TLS允许任何主机名",
+      "description": "如果其他服务器需要HTTPS,并且此配置选项设置为True,则通过信任存储区验证其他服务器的证书,但不验证主机名。 ",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmTLSDisableTrustManager": {
+      "title": "禁用TLS信任管理器",
+      "description": "如果其他服务器需要HTTPS,并且此配置选项设置为True,则不需要指定信任存储区。 ",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmURIPattern": {
+      "title": "Request URL模式",
+      "description": "仅转发与指定正则表达式匹配的请求。如果前缀为!，仅转发与指定正则表达式不匹配的请求。 ",
+      "type": "string"
+    },
+    "dcmRSOperation": {
+      "title": "RESTful Operation",
+      "description": "Name of RESTful Operation which shall be forwarded to another archive instance.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "CreatePatient",
+          "UpdatePatient",
+          "DeletePatient",
+          "ChangePatientID",
+          "ChangePatientID2",
+          "MergePatient",
+          "MergePatient2",
+          "UnmergePatient",
+          "UpdateStudy",
+          "UpdateSeries",
+          "DeleteStudy",
+          "RejectStudy",
+          "RejectSeries",
+          "RejectInstance",
+          "UpdateStudyExpirationDate",
+          "UpdateSeriesExpirationDate",
+          "ApplyRetentionPolicy",
+          "CreateMWL",
+          "UpdateMWL",
+          "DeleteMWL",
+          "UpdateStudyAccessControlID",
+          "MoveStudyToPatient",
+          "SupplementIssuer"
+        ]
+      }
+    }
+  }
+}
