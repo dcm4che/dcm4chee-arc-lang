@@ -11,13 +11,7 @@
     "dcmIDGeneratorName": {
       "title": "ID生成器名称",
       "description": "ID生成器名称",
-      "type": "string",
-      "enum": [
-        "PatientID",
-        "AccessionNumber",
-        "RequestedProcedureID",
-        "ScheduledProcedureStepID"
-      ]
+      "type": "string"
     },
     "dcmIDGeneratorFormat": {
       "title": "ID生成器格式",
