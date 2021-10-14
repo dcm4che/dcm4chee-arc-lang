@@ -1,0 +1,40 @@
+{
+  "title": "UI检查表配置",
+  "description": "检查表配置的专业配置",
+  "type": "object",
+  "required": [
+    "dcmuiStudyTableConfigName"
+  ],
+  "properties": {
+    "dcmuiStudyTableConfigName": {
+      "title": "配置名称",
+      "description": "UI检查表配置名称",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigUsername": {
+      "title": "用户名",
+      "description": "可以使用此集合的用户名",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigRoles": {
+      "title": "角色",
+      "description": "可以使用此集合的用户名角色（如果设置了用户名,则会忽略该角色）",
+      "type": "string"
+    },
+    "dcmuiStudyTableConfigIsDefault": {
+      "title": "默认值",
+      "description": "将该Column-Set设置为默认值。确保集合同级中只有一个子项被设置为默认值） ",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiStudyTableColumnConfigObjects": {
+      "title": "验证表列",
+      "description": "定义检查表的列",
+      "titleKey":"{dcmuiColumnName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiTableColumns.schema.json"
+      }
+    }
+  }
+}
