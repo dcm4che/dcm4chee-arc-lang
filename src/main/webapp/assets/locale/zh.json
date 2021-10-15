@@ -281,7 +281,7 @@
     "create-ae.select_device_to_connect_the_ae": " 选择要连接AE的设备: ",
     "create-ae.select_first_a_device": " 请先选择设备! ",
     "create-ae.select_one_of_the_dicom_connections": " 请选择一个DICOM连接: ",
-    "create-ae.set_the_new_application_entity": "将设置新的应用实体为"可接受调用AE名称"作用到如下AET:",
+    "create-ae.set_the_new_application_entity": "将设置新的应用实体为“可接受调用AE名称”作用到如下AET:",
     "create-ae.should_be_the_same_as_the_value_of_station_name00080080": "须与此设备创建的SOP实例的权威名称的（0008,0080）值相同",
     "create-ae.should_be_the_same_as_the_value_of_station_name00081010": "必须与此设备创建的SOP实例的站名的（0008,1010）值相同",
     "create-ae.should_be_the_same_as_the_value_of_station_name00081040": "必须与此设备创建的SOP实例的权威部门名称的（0008,1040）值相同",
