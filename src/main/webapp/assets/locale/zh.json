@@ -91,7 +91,7 @@
     "accepted_user_roles_in_the_aets_are_missing": "AET没有授权的用户角色,请为每个AET至少添加一个角色。 （存档设备->AET->存档网络AE->授权的用户角色）",
     "access_control_id": "访问控制ID",
     "access_control_id_updated_matching": "访问控制ID已成功更新到匹配的检查",
-    "access_control_id_updated_selected": ""访问控制ID已成功更新到选定的检查！",
+    "access_control_id_updated_selected": "访问控制ID已成功更新到选定的检查！",
     "access_control_id_updated_the_study": "已成功更新访问控制ID到该检查！",
     "accession_number": "登录号",
     "accession_number_00080050": "登录号(0008,0050)",
