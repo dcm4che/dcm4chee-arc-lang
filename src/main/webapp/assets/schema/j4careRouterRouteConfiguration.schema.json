@@ -80,6 +80,14 @@
         "type": "string"
       }
     },
+    "j4careRouterRouteConfigurationAET2ForwardCronExpression": {
+      "title": "AET - Forward Cron Expression",
+      "description": "AET - Forward Cron Expression",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },    
     "j4careRouterRouteConfigurationBodyPartMap": {
       "title": "Body Part Mapping",
       "description": "Map Body Parts to make them compareable (f.e. HEAD=HEAD,SKULL,HEADNECK)",
