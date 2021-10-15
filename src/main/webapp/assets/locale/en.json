@@ -445,6 +445,7 @@
     "dynamic_formatter.configure_first_a_queue": "Configure first an Queue",
     "dynamic_formatter.create_first_aet": "Create first an AE Title!",
     "dynamic_formatter.exporter": "Create first an Exporter!",
+    "dynamic_formatter.id_generator": "Create first an ID Generator!",
     "dynamic_formatter.keycloak_server": "Create first an Keycloak Server!",
     "dynamic_formatter.query_retrieve_view": "Create first an Query Retrieve View!",
     "dynamic_formatter.rejection_note": "Create first an Rejection Note!",

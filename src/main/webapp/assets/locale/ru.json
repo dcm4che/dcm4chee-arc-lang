@@ -447,6 +447,7 @@
     "dynamic_formatter.configure_first_a_queue": "Сперва настройте очередь",
     "dynamic_formatter.create_first_aet": "Сперва создайте AE заголовок!",
     "dynamic_formatter.exporter": "Сперва создайте экспортер!",
+    "dynamic_formatter.id_generator": "Create first an ID Generator!",
     "dynamic_formatter.keycloak_server": "Сперва создайте сервер Keycloak!",
     "dynamic_formatter.query_retrieve_view": "Сперва создайте query Retrieve View!",
     "dynamic_formatter.rejection_note": "Сперва создайте Примечание об отказе!",

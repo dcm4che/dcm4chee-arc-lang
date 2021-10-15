@@ -445,6 +445,7 @@
     "dynamic_formatter.configure_first_a_queue": "पहले कतार कॉन्फ़िगर करें ।",
     "dynamic_formatter.create_first_aet": "पहले AE का नाम निर्माण करें!",
     "dynamic_formatter.exporter": "पहले निर्यातक को निर्माण करें!",
+    "dynamic_formatter.id_generator": "Create first an ID Generator!",
     "dynamic_formatter.keycloak_server": "पहले कीक्लोक सर्वर को निर्माण करें!",
     "dynamic_formatter.query_retrieve_view": "पहले प्राप्ति पुनःप्राप्ति दृश्य को निर्माण करें!",
     "dynamic_formatter.rejection_note": "पहले अस्वीकृति नोट को निर्माण करें!",
