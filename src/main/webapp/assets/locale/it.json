@@ -450,6 +450,7 @@
 		"dynamic_formatter.configure_first_a_queue": "Configurare primo in coda",
 		"dynamic_formatter.create_first_aet": "Crea prima un titolo AE!",
 		"dynamic_formatter.exporter": "Crea prima un esportatore!",
+		"dynamic_formatter.id_generator": "Create first an ID Generator!",
 		"dynamic_formatter.keycloak_server": "Crea prima un server Keycloak!",
 		"dynamic_formatter.query_retrieve_view": "Crea prima una vista di Query Retrieve!",
 		"dynamic_formatter.rejection_note": "Crea prima una nota di rifiuto!",

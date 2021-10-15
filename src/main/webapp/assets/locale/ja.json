@@ -450,6 +450,7 @@
     "dynamic_formatter.configure_first_a_queue": "最初に キューを 設定 する",
     "dynamic_formatter.create_first_aet": "最初に AE タイトルを 作成 する!",
     "dynamic_formatter.exporter": "最初に エクスポーターを 作成 する!",
+    "dynamic_formatter.id_generator": "Create first an ID Generator!",
     "dynamic_formatter.keycloak_server": "最初に キークローク サーバーを 作成 する!",
     "dynamic_formatter.query_retrieve_view": "最初に クエリ 読み出し ビューを 作成 する!",
     "dynamic_formatter.rejection_note": "最初に 拒否 ノートを 作成 する!",
