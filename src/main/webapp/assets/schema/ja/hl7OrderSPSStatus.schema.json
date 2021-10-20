@@ -20,7 +20,7 @@
     },
     "hl7OrderControlStatus": {
       "title": "HL7 Order Control Status",
-      "description": "HL7 Order Control Status Code combinations.",
+      "description": "HL7 Order Control Status Code combinations. These combinations refer to values present in ORC-1_ORC-5.",
       "type": "array",
       "items": {
         "type": "string",

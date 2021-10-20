@@ -20,7 +20,7 @@
     },
     "hl7OrderControlStatus": {
       "title": "HL7订单控制状态",
-      "description": "HL7订单控制状态代码的组合。",
+      "description": "HL7订单控制状态代码的组合。These combinations refer to values present in ORC-1_ORC-5.",
       "type": "array",
       "items": {
         "type": "string",
