@@ -135,6 +135,15 @@
       "items" : {
         "$ref": "uiDashboard.schema.json"
       }
+    },
+    "dcmuiCreateDialogTemplate": {
+      "title": "UI Create-Dialog Template",
+      "description": "Template that will be used on the create-dialogs while crating MWL or Patient",
+      "titleKey":"{dcmuiTemplateName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiCreateDialogTemplate.schema.json"
+      }
     }
   }
 }
