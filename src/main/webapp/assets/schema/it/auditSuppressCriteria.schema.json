@@ -1,19 +1,19 @@
 {
-  "title": "Audit Suppress Criteria",
-  "description": "Audit Suppress Criteria",
+  "title": "Criteri di soppressione dell'audit",
+  "description": "Criteri di soppressione dell'audit",
   "type": "object",
   "required": [
     "cn"
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the Audit Suppress Criteria.",
+      "title": "Nome",
+      "description": "Nome arbitrario/significativo dei criteri di soppressione dell'audit",
       "type": "string"
     },
     "dcmAuditEventID": {
-      "title": "Audit Event ID",
-      "description": "DICOM PS 3.15 A.5 Audit Event ID code and codeSystemName in format (CV, CSD, \"CM\").",
+      "title": "ID evento di audit",
+      "description": "Codice ID evento di controllo RFC 3881 e codeSystemName in formato (CV, CSD, \"CM\")",
       "type": "array",
       "items": {
         "type": "string",
@@ -42,8 +42,8 @@
       }
     },
     "dcmAuditEventTypeCode": {
-      "title": "Audit Event Type Code",
-      "description": "DICOM PS 3.15 A.5 Audit Event Type code in format (CV, CSD, \"CM\").",
+      "title": "Codice del tipo di evento di controllo",
+      "description": "Codice del tipo di evento di controllo RFC 3881 in formato (CV, CSD, \"CM\")",
       "type": "array",
       "items": {
         "type": "string",
@@ -92,8 +92,8 @@
       }
     },
     "dcmAuditEventActionCode": {
-      "title": "Event Action Code",
-      "description": "DICOM PS 3.15 A.5 Audit Event Action Type code.",
+      "title": "Codice di Azione dell'evento",
+      "description": "Codice tipo di azione evento di controllo RFC 3881.",
       "type": "array",
       "items": {
         "type": "string",
@@ -107,8 +107,8 @@
       }
     },
     "dcmAuditEventOutcomeIndicator": {
-      "title": "Event Outcome Indicator",
-      "description": "DICOM PS 3.15 A.5 Audit Event Outcome Indicator.",
+      "title": "Indicatore del risultato dell'evento",
+      "description": "Codice tipo di azione evento di controllo RFC 3881.",
       "type": "array",
       "items": {
         "type": "string",
@@ -121,24 +121,24 @@
       }
     },
     "dcmAuditUserID": {
-      "title": "User ID",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant User ID.",
+      "title": "ID Utente",
+      "description": "ID utente di controllo del partecipante attivo RFC 3881 ",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditAlternativeUserID": {
-      "title": "Alternative User ID",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID.",
+      "title": "ID utente alternativo",
+      "description": "RFC 3881  ID utente alternativo partecipante attivo di controllo",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditUserRoleIDCode": {
-      "title": "User Role ID Code",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, \"CM\").",
+      "title": "Codice ID ruolo utente",
+      "description": "RFC 3881 ID utente di controllo del partecipante attivo RFC 3881 in formato (CV, CSD, \"CM\")",
       "type": "array",
       "items": {
         "type": "string",
@@ -153,92 +153,17 @@
       }
     },
     "dcmAuditNetworkAccessPointID": {
-      "title": "Network Access Point ID",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID.",
+      "title": "ID punto di accesso alla rete",
+      "description": "RFC 3881 Audit Active Participant Network Access Point ID",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditUserIsRequestor": {
-      "title": "User is Requestor",
-      "description": "Indicates if Active Participant is initiator/requestor of the Audit Event as specified by DICOM PS 3.15 A.5",
+      "title": "L'utente è richiedente",
+      "description": "Indica se il partecipante attivo è l'iniziatore/richiedente dell'evento di controllo come specificato da RFC 3881",
       "type": "boolean"
-    },
-    "dcmParticipantObjectTypeCode": {
-      "title": "Participant Object Type Code",
-      "description": "DICOM PS 3.15 A.5 Participant Object Type Code.",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ]
-      }
-    },
-    "dcmParticipantObjectTypeCodeRole": {
-      "title": "Participant Object Type Code Role",
-      "description": "DICOM PS 3.15 A.5 Participant Object Type Code Role.",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24",
-          "25",
-          "26"
-        ]
-      }
-    },
-    "dcmParticipantObjectDataLifeCycle": {
-      "title": "Participant Object Data Life Cycle",
-      "description": "DICOM PS 3.15 A.5 Participant Object Data Life Cycle.",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
-        ]
-      }
     }
   }
 }

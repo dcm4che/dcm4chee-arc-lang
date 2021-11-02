@@ -1,6 +1,6 @@
 {
-  "title": "Network AE",
-  "description": "Application entity that provides services on a network",
+  "title": "नेटवर्क AE",
+  "description": "अनुप्रयोग तत्व जो इस नेटवर्क पे सेवाएँ प्रधान करता है ।",
   "type": "object",
   "required": [
     "dicomAETitle",
@@ -10,8 +10,8 @@
   ],
   "properties": {
     "dicomAETitle": {
-      "title": "AE Title",
-      "description": "Unique AE title for this Network AE",
+      "title": "AE का नाम",
+      "description": "इस नेटवर्क AE का अनन्य नाम ।",
       "type": "string",
       "order":1,
       "use": [
@@ -49,8 +49,8 @@
       ]
     },
     "dicomNetworkConnectionReference": {
-      "title": "Network Connection Reference",
-      "description": "JSON Pointers to the Network Connection objects for this AE",
+      "title": "नेटवर्क संपर् संदर्भ",
+      "description": "इस नेटवर्क AE द्वारा इस्तमाल किए गए नेटवर्क संपर्क ऑब्जेक्ट के जेसन पॉइंटर्स ।",
       "type": "array",
       "order":2,
       "items": {
@@ -58,28 +58,28 @@
       }
     },
     "dicomAssociationInitiator": {
-      "title": "Association Initiator",
-      "description": "True if the Network AE can initiate associations.",
+      "title": "संपर्क आरंभ करनेवाला",
+      "description": "'हाँ' अगर यह नेटवर्क AE संपर्क आरंभ कर सकता है ।",
       "type": "boolean",
       "default": true,
       "order":3
     },
     "dicomAssociationAcceptor": {
-      "title": "Association Acceptor",
-      "description": "True if the Network AE can accept associations.",
+      "title": "संपर्क मंजूर करनेवाला",
+      "description": "'हाँ' अगर यह नेटवर्क AE संपर्क मंजूर कर सकता है ।",
       "type": "boolean",
       "default": true,
       "order":4
     },
     "dicomDescription": {
-      "title": "AE Description",
-      "description": "Unconstrained text description of the application entity",
+      "title": "AE का वर्णन",
+      "description": "अनुप्रयोग तत्व का स्वैछिक विषय वर्णन ।",
       "type": "string",
       "order":5
     },
     "dicomApplicationCluster": {
-      "title": "Application Cluster",
-      "description": "Locally defined names for a subset of related applications",
+      "title": "अनुप्रयोग क्लस्टर",
+      "description": "संबंधित अनुप्रयोगों के सबसेट के लिए स्थानीय रूप से परिभाषित नाम ।",
       "type": "array",
       "order":6,
       "items": {
@@ -87,8 +87,8 @@
       }
     },
     "dicomPreferredCalledAETitle": {
-      "title": "Preferred Called AE Title",
-      "description": "AE Title(s) that are preferred for initiating associations",
+      "title": "अधिमान्य बुलाए गए AE का नाम",
+      "description": "संपर्क आरंभ करने के लिए अधिमान्य AE के नाम ।",
       "type": "array",
       "order":7,
       "items": {
@@ -96,8 +96,8 @@
       }
     },
     "dicomPreferredCallingAETitle": {
-      "title": "Preferred Calling AE Title",
-      "description": "AE Title(s) that are preferred for accepting associations",
+      "title": "अधिमान्य आह्वान AE का नाम",
+      "description": "संपर्क स्वीकार करने के लिए अधिमान्य AE के नाम ।",
       "type": "array",
       "order":8,
       "items": {
@@ -105,8 +105,8 @@
       }
     },
     "dicomSupportedCharacterSet": {
-      "title": "Supported Character Set",
-      "description": "Character Set(s) supported by the Network AE for data sets it receives",
+      "title": "समर्थित कॅरक्टर सेट",
+      "description": "दृष्टांतों के प्राप्ति पे नेटवर्क AE द्वारा समर्थित कॅरक्टर सेट्स ।",
       "type": "array",
       "order":9,
       "items": {
@@ -115,14 +115,14 @@
       "format": "dcmCharset"
     },
     "dicomInstalled": {
-      "title": "installed",
-      "description": "True if the AE is installed on network. If not present, information about the installed status of the AE is inherited from the device",
+      "title": "स्थापित",
+      "description": "'हाँ' अगर यह नेटवर्क AE इस नेटवर्क पे स्थापित है । अनुपलभ्य हो तो, नेटवर्क AE के स्थापित स्थिति की जानकारी डिवाइस से ली जाएगी ।",
       "order":10,
       "type": "boolean"
     },
     "dicomTransferCapability": {
-      "title": "Transfer Capabilities",
-      "description": "Transfer capabilities provided by the application entity",
+      "title": "हस्तांतरण क्षमताएँ",
+      "description": "अनुप्रयोग तत्व द्वारा उपलब्ध कराये गए हस्तांतरण क्षमताएँ ।",
       "type": "array",
       "order":11,
       "titleKey":"{cn}",
@@ -131,8 +131,8 @@
       }
     },
     "dcmNetworkAE": {
-      "title": "Network AE Extension",
-      "description": "dcm4che proprietary Attributes of Network AE",
+      "title": "नेटवर्क AE एक्सटेंशन",
+      "description": "DCM4CHE मालिकाना नेटवर्क AE के गुण ।",
       "$ref": "dcmNetworkAE.schema.json",
       "order":12
     }

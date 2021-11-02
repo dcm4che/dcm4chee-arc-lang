@@ -1,6 +1,6 @@
 {
-  "title": "Web Application",
-  "description": "Web Application information",
+  "title": "Applicazione Web",
+  "description": "Informazioni sull'applicazione Web",
   "type": "object",
   "required": [
     "dcmWebAppName",
@@ -9,8 +9,8 @@
   ],
   "properties": {
     "dcmWebAppName": {
-      "title": "Web Application name",
-      "description": "Name of the Web Application",
+      "title": "Nome dell'applicazione web",
+      "description": "Nome dell'applicazione Web",
       "type": "string",
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackWadoURIWebAppName",
@@ -18,26 +18,26 @@
       ]
     },
     "dicomNetworkConnectionReference": {
-      "title": "Web Application Network Connection(s)",
-      "description": "Network Connection(s) on which the services of the Web application are available",
+      "title": "Connessione/i di rete dell'applicazione web",
+      "description": "Connessioni di rete su cui sono disponibili i servizi dell'applicazione Web",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dicomDescription": {
-      "title": "Web Application Description",
-      "description": "Unconstrained text description of the Web Application",
+      "title": "Descrizione dell'applicazione Web",
+      "description": "Descrizione testuale libera dell'applicazione Web",
       "type": "string"
     },
     "dcmWebServicePath": {
-      "title": "Web Service Path",
-      "description": "HTTP Path of the services of the Web application",
+      "title": "Percorso del servizio Web",
+      "description": "Path HTTP  dei servizi dell'applicazione Web",
       "type": "string"
     },
     "dcmWebServiceClass": {
       "title": "Web Service Class",
-      "description": "Web Service Classes provided by the Web application",
+      "description": "Classi di servizi Web fornite dall'applicazione Web",
       "type": "array",
       "items": {
         "type": "string",
@@ -65,28 +65,28 @@
       }
     },
     "dcmKeycloakClientID": {
-      "title": "Keycloak Client ID",
-      "description": "Keycloak Client ID for the Web application",
+      "title": "ID client Keycloak",
+      "description": "ID client Keycloak per l'applicazione Web",
       "type": "string",
       "format": "dcmKeycloakClient"
     },
     "dicomAETitle": {
-      "title": "AE Title",
-      "description": "AE title of Network AE associated with this Web Application",
+      "title": "Titolo AE",
+      "description": "Titolo AE di Network AE associato a questa applicazione web",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dicomApplicationCluster": {
-      "title": "Application Cluster",
-      "description": "Locally defined names for a subset of related applications",
+      "title": "Cluster di applicazioni",
+      "description": "Nomi definiti localmente per un sottoinsieme di applicazioni correlate",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmProperty": {
-      "title": "Property",
-      "description": "Property in format <name>=<value>. E.g.: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} or IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}}, ( Other valid parameters are: 'patientBirthDate' and 'accessionNumber' ) , you could define the target of the Url by setting it to the parameter 'IID_URL_TARGET=_blank|_self'",
+      "title": "Proprietà",
+      "description": "Proprietà nel formato <name>=<value> Ad esempio: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} o IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType = STUDY &{{studyUID}}studyUID =, (Altri parametri validi sono: 'PatientBirthDate' e 'accessionNumber'), puoi definire il target dell'Url impostandolo sul parametro 'IID_URL_TARGET = _blank|_self'",
       "type": "array",
       "items": {
         "type": "string"
@@ -94,8 +94,8 @@
       "format": "dcmProperty"
     },
     "dicomInstalled": {
-      "title": "installed",
-      "description": "True if the Web Application is installed on network. If not present, information about the installed status of the Web Application is inherited from the device",
+      "title": "installato",
+      "description": "Vero se l'applicazione HL7 è installata sulla rete. Se non presenti, le informazioni sullo stato di installazione dell'applicazione HL7 vengono ereditate dal dispositivo",
       "type": "boolean"
     }
   }

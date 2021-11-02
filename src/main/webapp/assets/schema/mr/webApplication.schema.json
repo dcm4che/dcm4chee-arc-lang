@@ -1,6 +1,6 @@
 {
-  "title": "Web Application",
-  "description": "Web Application information",
+  "title": "वेब अनुप्रयोग",
+  "description": "वेब अनुप्रयोगाची माहिती.",
   "type": "object",
   "required": [
     "dcmWebAppName",
@@ -9,8 +9,8 @@
   ],
   "properties": {
     "dcmWebAppName": {
-      "title": "Web Application name",
-      "description": "Name of the Web Application",
+      "title": "वेब अनुप्रयोगाचे नाव",
+      "description": "वेब अनुप्रयोगाचे नाव.",
       "type": "string",
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackWadoURIWebAppName",
@@ -18,26 +18,26 @@
       ]
     },
     "dicomNetworkConnectionReference": {
-      "title": "Web Application Network Connection(s)",
-      "description": "Network Connection(s) on which the services of the Web application are available",
+      "title": "वेब अनुप्रयोग नेटवर्क संपर्क",
+      "description": "नेटवर्क संपर्क ज्यावर वेब अनुप्रयोगाची सेवा उपलब्ध आहे.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dicomDescription": {
-      "title": "Web Application Description",
-      "description": "Unconstrained text description of the Web Application",
+      "title": "वेब अनुप्रयोगाचे वर्णन",
+      "description": "वेब अनुप्रयोगाचे अनियंत्रित मजकूर वर्णन.",
       "type": "string"
     },
     "dcmWebServicePath": {
-      "title": "Web Service Path",
-      "description": "HTTP Path of the services of the Web application",
+      "title": "वेब सेवा पथ",
+      "description": "वेब अनुप्रयोगाच्या सेवांचा HTTP पथ.",
       "type": "string"
     },
     "dcmWebServiceClass": {
-      "title": "Web Service Class",
-      "description": "Web Service Classes provided by the Web application",
+      "title": "वेब सेवा वर्ग",
+      "description": "वेब अनुप्रयोगाद्वारे प्रदान केलेली वेब सेवा वर्ग.",
       "type": "array",
       "items": {
         "type": "string",
@@ -65,28 +65,28 @@
       }
     },
     "dcmKeycloakClientID": {
-      "title": "Keycloak Client ID",
-      "description": "Keycloak Client ID for the Web application",
+      "title": "कीक्लोक क्लायंट ID",
+      "description": "वेब अनुप्रयोगासाठी कीक्लोक क्लायंट ID",
       "type": "string",
       "format": "dcmKeycloakClient"
     },
     "dicomAETitle": {
-      "title": "AE Title",
-      "description": "AE title of Network AE associated with this Web Application",
+      "title": "AE चे शीर्षक",
+      "description": "या वेब अनुप्रयोगाशी संबंधित नेटवर्क AE चे शीर्षक.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dicomApplicationCluster": {
-      "title": "Application Cluster",
-      "description": "Locally defined names for a subset of related applications",
+      "title": "अनुप्रयोग क्लस्टर",
+      "description": "संबंधित अनुप्रयोगांच्या उपसेटसाठी स्थानिकरित्या परिभाषित नावे.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmProperty": {
-      "title": "Property",
-      "description": "Property in format <name>=<value>. E.g.: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} or IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}}, ( Other valid parameters are: 'patientBirthDate' and 'accessionNumber' ) , you could define the target of the Url by setting it to the parameter 'IID_URL_TARGET=_blank|_self'",
+      "title": "गुणधर्म",
+      "description": "गुणधर्म या प्रारूपात <नाव>=<मूल्य>. उदाहरण: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} किंवा IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}}, (इतर वैध मापदंड : 'patientBirthDate' आणि 'accessionNumber' आहेत), 'IID_URL_TARGET=_blank|_self' मापदंड लागू करून तुम्ही URL च्या लक्ष्यला परिभाषित करू शकता.",
       "type": "array",
       "items": {
         "type": "string"
@@ -94,8 +94,8 @@
       "format": "dcmProperty"
     },
     "dicomInstalled": {
-      "title": "installed",
-      "description": "True if the Web Application is installed on network. If not present, information about the installed status of the Web Application is inherited from the device",
+      "title": "स्थापित",
+      "description": "'सत्य' असल्यास वेब अनुप्रयोग नेटवर्कवर स्थापित आहे. उपलब्ध नसल्यास, वेब अनुप्रयोगाच्या स्थापित स्थितीबद्दलची माहिती डिव्हाइसमधून प्राप्त केली जाईल.",
       "type": "boolean"
     }
   }

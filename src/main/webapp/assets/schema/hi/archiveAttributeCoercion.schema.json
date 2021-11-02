@@ -1,6 +1,6 @@
 {
-  "title": "Archive Attribute Coercion",
-  "description": "Archive Attribute Coercion of received/sent DIMSE",
+  "title": "आर्काइव गुण नियंत्रण",
+  "description": "प्राप्त किये या भेजे हुए DIMSE का आर्काइव गुण नियंत्रण ।",
   "type": "object",
   "required": [
     "cn",
@@ -15,20 +15,20 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the Archive Attribute Coercion",
+      "title": "नाम",
+      "description": "आर्काइव गुण नियंत्रण का मनमाना/सार्थक नाम ।",
       "type": "string"
     },
     "dcmRulePriority": {
-      "title": "Rule Priority",
-      "description": "Rule Priority.",
+      "title": "नियम प्राथमिकता",
+      "description": "नियम प्राथमिकता ।",
       "type": "integer",
       "default" : 0,
       "minimum": 0
     },
     "dcmDIMSE": {
       "title": "DIMSE",
-      "description": "DICOM Message Element on which this Attribute Coercion shall be applied",
+      "description": "DICOM संदेश तत्त्व जिसपे ये गुण नियंत्रण लागू होगा ।",
       "type": "string",
       "enum": [
         "N_CREATE_RQ",
@@ -38,8 +38,8 @@
       ]
     },
     "dicomTransferRole": {
-      "title": "DICOM Transfer Role",
-      "description": "DICOM Transfer Role of peer DICOM AE.",
+      "title": "DICOM स्थानांतरण भूमिका",
+      "description": "समान पदस्थ DICOM AE का DICOM स्थानांतरण भूमिका ।",
       "type": "string",
       "enum": [
         "SCU",
@@ -47,8 +47,8 @@
       ]
     },
     "dcmSOPClass": {
-      "title": "SOP Class UID",
-      "description": "UID of SOP Class for which this Attribute Coercion shall be applied. Apply on any if absent.",
+      "title": "SOP वर्ग UID",
+      "description": "SOP वर्ग की UID जिसपे ये गुण नियंत्रण लागू किया जाएगा. अगर कॉन्फ़िगर ना किया हो तो, किसी SOP वर्ग पे लागू करें ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -56,8 +56,8 @@
       "format": "dcmSOPClass"
     },
     "dcmProperty": {
-      "title": "Conditions",
-      "description": "Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER",
+      "title": "नियम",
+      "description": "नियम इस प्रारूप में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} । किसी दिए गए विशेषता के लिए एक से अधिक मूल्य निर्दिष्ट करने के लिए उन्हें | प्रतीक के सहारे अलग किया जा सकता है । उदाहरण के तौर पे : SendingApplicationEntityTitle=FORWARD या Modality=MR|CT या ProcedureCodeSequence.CodeValue=MRProcedure या 00180015=KNEE या 00321034.00080100=RequestingServiceCode या ImageType[3]=LOCALIZER",
       "type": "array",
       "items": {
         "type": "string"
@@ -65,14 +65,14 @@
       "format": "dcmProperty"
     },
     "dcmRetrieveAsReceived": {
-      "title": "Retrieve as Received",
-      "description": "Disables merge of DB information into the retrieved Composite Object, returning the objects as received. Only effective with DIMSE = C_STORE_RQ and DICOM Transfer Role = SCP.",
+      "title": "प्राप्त हुए रूप में पुनःप्राप्त करें",
+      "description": "पुनःप्राप्त हुए मिश्र ऑब्जेक्ट में डेटाबेस के जानकारी के विलीन को असमर्थ करता है, प्राप्त हुए रूप में ऑब्जेक्ट्स को वापस करता है । सिर्फ प्रभावशाली अगर DIMSE को C_STORE_RQ अनुरोध सेट किया है और DICOM स्थानांतरण भूमिका SCP है ।",
       "type": "boolean",
       "default": false
     },
     "dcmDeIdentification": {
-      "title": "De-identification",
-      "description": "De-identify objects according the Basic Application Level Confidentiality Profile specified in DICOM PS3.15. Selecting any Option implicitly includes the Basic Application Level Confidentiality Profile.",
+      "title": "पहचान हटाना",
+      "description": "DICOM PS 3.15 में निर्दिष्ट मूल अनुप्रयोग स्तर गोपनीयता रुपरेखा के अनुसार ऑब्जेक्ट्स की पहचान हटाए । किसी भी विकल्प को चुनने से मूल अनुप्रयोग स्तर गोपनीयता रुपरेखा हमेशा समावेश करेगा ।",
       "type": "array",
       "items": {
         "type": "string",
@@ -86,19 +86,19 @@
       }
     },
     "dcmURI": {
-      "title": "XSL Stylesheet URI",
-      "description": "Specifies URI of the XSL style sheet for Attribute Coercion",
+      "title": "XSL स्टाइलशीट URI",
+      "description": "गुण नियंत्रण का XSL स्टाइलशीट URI निर्दिष्ट करता है ।",
       "type": "string"
     },
     "dcmNoKeywords": {
-      "title": "No Attribute Keyword",
-      "description": "Indicates if attribute keywords shall be omitted in DICOM XML passed to XSLT",
+      "title": "बिना गुण संकेतशब्द",
+      "description": "गुण संकेतशब्दों को (जिसे XSLT में भेजा जाता है) DICOM XML से हटाने का संकेत करता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmMergeMWLMatchingKey": {
-      "title": "Merge MWL Matching Key",
-      "description": "Specifies attribute of received object to lookup MWL Item used to coerce request attributes. If absent, request attributes of received objects will not be coerced.",
+      "title": "MWL मिलान कुंजी को विलीन करें",
+      "description": "अनुरोधित गुणों का नियंत्रण करने के लिए इस्तमाल किए गए MWL आइटम जो प्राप्त हुए ऑब्जेक्ट के गुण से ढूंढा गया है उसे निर्दिष्ट करता है । अगर कॉन्फ़िगर ना किया हो तो, प्राप्त हुए ऑब्जेक्ट के अनुरोधित गुणों का नियंत्रण नहीं होगा ।",
       "type": "string",
       "enum": [
         "PatientID",
@@ -108,13 +108,13 @@
       ]
     },
     "dcmMergeMWLTemplateURI": {
-      "title": "Merge MWL Template URI",
-      "description": "Specifies URI for the style sheet to coerce request attributes of received objects from matching DICOM MWL items. Only effective, if dcmMergeMWLMatchingKey is specified.",
+      "title": "MWL फर्मा URI को विलीन करें",
+      "description": "मिलान MWL आइटम्स से प्राप्त हुए ऑब्जेक्ट के अनुरोधित गुणों का नियंत्रण करने के लिए इस्तमाल किए गए स्टाइलशीट URI को निर्दिष्ट करता है । सिर्फ प्रभावशाली अगर 'MWL मिलान कुंजी को विलीन करें' भी मौजूद है ।",
       "type": "string"
     },
     "dcmMergeMWLSCP": {
-      "title": "Merge MWL SCP",
-      "description": "AE Title of external MWL SCP to lookup MWL Item used to coerce request attributes of received objects.",
+      "title": "MWL विलीन करने के लिए SCP",
+      "description": "प्राप्त दृष्टांतों में बाहरी MWL आइटम्स के अनुरोध गुणों को विवश करने के लिए उपयोग किए जाने वाले बाहरी MWL SCP AE का शीर्षक ।",
       "type": "string",
       "format": "dcmAETitle"
     },
@@ -125,14 +125,14 @@
       "default": false
     },
     "dcmLeadingCFindSCP": {
-      "title": "Leading C-FIND SCP",
-      "description": "AE Title of external C-FIND SCP for Attribute Coercion with Patient and Study attributes fetched from this AE. If no particular Attribute Set is specified for the C-FIND SCP, all Attributes of the configured Patient and Study Attribute Filter will be fetched.",
+      "title": "प्रमुख C-FIND SCP",
+      "description": "बाहरी C-FIND SCP के AET का नाम जिससे से प्राप्त किये गए मरीज़ों और स्टडीज के रेकॉर्ड्स के गुणों को इस्तमाल कर गुण नियंत्रण करें । C-FIND SCP के लिए अगर कोई विशेष गुण सेट न निर्दिष्ट किया हो तो, मरीज़ और स्टडी गुण फ़िल्टर पे कॉन्फ़िगर किए गए सारे गुणों को प्राप्त किया जाएगा ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmAttributeUpdatePolicy": {
-      "title": "Attribute Update Policy",
-      "description": "Specifies how attributes shall be updated with attributes fetched from Leading C-FIND SCP. PRESERVE (= nullify attributes in the new dataset which are not present in the original dataset), SUPPLEMENT (= attributes not present in original dataset will be supplemented), MERGE (= attribute values will be written from new dataset), OVERWRITE (= attribute values if null in new dataset, will be nullified in original dataset)",
+      "title": "गुण अपडेट नीति",
+      "description": "प्रमुख C-FIND SCP प्राप्त किए गए गुणों के साथ किस तरह गुणों को अपडेट किया जाएगा यह निर्दिष्ट करता है । PRESERVE (= मूल डेटासेट में अनुपलभ्य गुणों को नए डेटासेट में अमान्य करें), SUPPLEMENT (= मूल डेटासेट में अनुपलभ्य गुणों को पूरक किया जाएगा), MERGE (= गुण के मूल्यों को नए डेटासेट से लिखा जाएगा), OVERWRITE (= अगर नए डेटासेट में गुण के मूल्य अनुपलभ्य हो तो मूल डेटासेट में अमान्य किया जाएगा) ।",
       "type": "string",
       "default": "MERGE",
       "enum": [
@@ -143,14 +143,14 @@
       ]
     },
     "dcmTrimISO2022CharacterSet": {
-      "title": "Trim ISO 2022 Character Set",
-      "description": "Replace single code for Single-Byte Character Sets with Code Extensions by code for Single-Byte Character Sets without Code Extensions. Only effective with DIMSE = C_STORE_RQ and DICOM Transfer Role = SCU.",
+      "title": "ट्रिम ISO 2022 कॅरक्टर सेट",
+      "description": "कोड एक्सटेंशन के साथ सिंगल-बाइट कॅरक्टर सेट के कोड को बिना कोड एक्सटेंशन के सिंगल-बाइट कॅरक्टर सेट के कोड के साथ बदले । सिर्फ प्रभावशाली अगर DIMSE = C_STORE_RQ और DICOM स्थानांतरण भूमिका = SCU ।",
       "type": "boolean",
       "default": false
     },
     "dcmUseCallingAETitleAs": {
-      "title": "Use Calling AE Title as",
-      "description": "Identifies the attribute which is set to the value of the Calling AET if it is absent or empty. ScheduledStationAETitle (= Scheduled Station AE Title (0040,0001) in item of Scheduled Procedure Step Sequence (0040,0100)), SendingApplicationEntityTitleOfSeries (= Sending Application Entity Title of Series (7777,xx37)).",
+      "title": "आह्वान AE के नाम को इस रूप में इस्तमाल करें",
+      "description": "अगर गुण अनुपलभ्य या खाली हो तो आह्वान AET के मूल्य को लागू करें ।ScheduledStationAETitle (= अनुसूचित प्रक्रिया स्टेप क्रम (००४०,०१००) के आइटम में अनुसूचित स्टेशन AE का नाम (००४०,०००१)), SendingApplicationEntityTitleOfSeries (= सीरीज भेजनेवाले अनुप्रयोग तत्त्व का नाम (७७७७,xx३७)) ।",
       "type": "string",
       "enum": [
         "ScheduledStationAETitle",
@@ -158,15 +158,15 @@
       ]
     },
     "dcmNullifyTag": {
-      "title": "Nullify Attribute Tag",
-      "description": "DICOM Tag of Attribute to be nullified as hex string",
+      "title": "गुण टैग को अमान्य करें",
+      "description": "हेक्स स्ट्रिंग के रूप में गुण का DICOM टैग जिसे अमान्य करना है ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmTag"
     },
     "dcmMergeAttribute": {
-      "title": "Merge Attribute",
-      "description": "Merge DICOM Attribute in format {attributeID}={value}. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. Example: InstitutionName=RegionalHospital or 00081040=XRay.",
+      "title": "गुणों को विलीन करें",
+      "description": "DICOM गुणों को इस प्रारूप में {attributeID}={value} विलीन करें । {value} के अंदर {attributeID} को मूल डेटासेट में पाए गए गुण के मूल्य के साथ बदला जाएगा । उदाहरण के तौर पे : InstitutionName=RegionalHospital या 00081040=XRay ।",
       "type": "array",
       "items": {
         "type": "string"
@@ -174,8 +174,8 @@
       "format": "dcmProperty"
     },
     "dcmNullifyIssuerOfPatientID": {
-      "title": "Nullify Issuer of Patient ID",
-      "description": "Conditionally nullify Issuer of Patient ID (0010,0021) and Issuer of Patient ID Qualifiers Sequence (0010,0024) from received objects",
+      "title": "मरीज़़ की ID का जारीकर्ता को अमान्य करें",
+      "description": "प्राप्त हुए ऑब्जेक्ट्स में मरीज़़ की ID का जारीकर्ता (००१०,००२१) और मरीज़़ की ID का जारीकर्ता क्वालीफायर क्रम (००१०,००२४) को सशर्त रूप से अमान्य करें ।",
       "type": "string",
       "enum": [
         "ALWAYS",
@@ -184,21 +184,21 @@
       ]
     },
     "dcmIssuerOfPatientID": {
-      "title": "Issuer of Patient ID",
-      "description": "Issuer of Patient ID (0010,0021), and optionally also values for the Universal Entity ID (0040,0032) and the Universal Entity ID Type (0040,0033) of the Item of the Issuer of Patient ID Qualifiers Sequence (0010,0024) against values in received objects are matched, if Nullify Issuer of Patient ID is set to MATCHING or NOT_MATCHING. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "title": "मरीज़़ की ID का जारीकर्ता",
+      "description": "मरीज़़ की ID का जारीकर्ता (००१०,००२१), और इच्छानुसार मरीज़़ की ID का जारीकर्ता क्वालीफ़ायर क्रम (००१०,००२४) के आइटम के यूनिवर्सल एंटिटी ID (००४०,००३२) और यूनिवर्सल एंटिटी ID प्रकार (००४०,००३३) के मूल्य को भी प्राप्त हुए ऑब्जेक्ट्स के गुणों के साथ मिलान किया जाएगा, सिर्फ लागू अगर 'मरीज़़ की ID का जारीकर्ता को अमान्य करें' को MATCHING या NOT_MATCHING कॉन्फ़िगर किया है । प्रारूप: <मरीज़़ की ID का जारीकर्ता> [& <यूनिवर्सल एंटिटी ID> & <यूनिवर्सल एंटिटी ID प्रकार>] ।",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmIssuerOfPatientIDFormat": {
-      "title": "Issuer Of Patient ID Format",
-      "description": "Format of Issuer of Patient ID (0010,0021) derived from other attributes. E.g. \"{00100010,hash}-{00100030}\": use hash value of Patient Name and Birth Date separated by \"-\". For coercion of existing values of Issuer of Patient ID in received objects also dcmNullifyIssuerOfPatientID must be set accordingly.",
+      "title": "मरीज़़ की ID का जारीकर्ता का प्रारूप",
+      "description": "अन्य गुणों से व्युत्पन्न किए गए मरीज़़ की ID का जारीकर्ता (००१०,००२१) का प्रारूप । उदाहरण के तौर पे \"{00100010,hash}-{00100030}\": \"-\" से अलग किए गए मरीज़ का नाम और मरीज़़ की जन्मतिथि का हैश मूल्य को इस्तमाल करें. प्राप्त हुए ऑब्जेक्ट्स में मौजूद मरीज़़ की ID के जारीकर्ता के मूल्यों का नियंत्रण करने के लिए 'मरीज़़ की ID का जारीकर्ता को अमान्य करें' के मूल्य को भी चुने ।",
       "type": "string"
     },
     "dcmSupplementFromDeviceName": {
-      "title": "Supplement from Device",
-      "description": "Name of Device from which Assigning Authorities and other information is taken to supplement received Composite Objects and MPPS.",
+      "title": "डिवाइस से परिशिष्ट करें",
+      "description": "डिवाइस का नाम जिसमे से समनुदेशन प्राधिकारीयां और अन्य जानकारी प्राप्त हुए मिश्र दृष्टांतों और एम्पीपीएस को परिशिष्ट करने के लिए ली जाएगी ।",
       "type": "string",
       "format": "dicomDeviceName"
     }

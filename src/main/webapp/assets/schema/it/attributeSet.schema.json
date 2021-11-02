@@ -1,6 +1,6 @@
 {
-  "title": "Attribute Set",
-  "description": "Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests.",
+  "title": "Insieme di attributi",
+  "description": "Set di attributi con nome per il parametro di query \"includefields\" dei metadati QIDO-RS e WADO-RS o dal parametro di query \"comparefield\" delle richieste DIFF-RS.",
   "type": "object",
   "required": [
     "dcmAttributeSetType",
@@ -10,13 +10,13 @@
   ],
   "properties": {
     "dicomDescription": {
-      "title": "Attribute Set Description",
-      "description": "Unconstrained text description of this Attribute Set",
+      "title": "Descrizione dell'insieme di attributi",
+      "description": "Descrizione di testo non vincolata di questo set di attributi",
       "type": "string"
     },
     "dcmAttributeSetType": {
-      "title": "Attribute Set Type",
-      "description": "Specifies if this Attribute Set is used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests.",
+      "title": "Tipo Insieme di attributi",
+      "description": "Specifica se questo set di attributi viene utilizzato dal parametro di query \"includefields\" dei metadati QIDO-RS e WADO-RS o dal parametro di query \"comparefield\" delle richieste DIFF-RS.",
       "type": "string",
       "enum": [
         "QIDO_RS",
@@ -26,29 +26,29 @@
       ]
     },
     "dcmAttributeSetID": {
-      "title": "Attribute Set ID",
-      "description": "ID used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata requests and by Query Parameter 'comparefield' of DIFF-RS requests to refer this Attribute Set.",
+      "title": "ID dell'Insieme di attributi",
+      "description": "ID utilizzato dal parametro di query \"includefields\" delle richieste di metadati QIDO-RS e WADO-RS e dal parametro di query \"comparefield\" delle richieste DIFF-RS per fare riferimento a questo set di attributi.",
       "type": "string"
     },
     "dcmAttributeSetTitle": {
-      "title": "Attribute Set Title",
-      "description": "Title of this Attribute Set.",
+      "title": "Titolo del set di attributi",
+      "description": "Titolo di questo set di attributi.",
       "type": "string"
     },
     "dcmAttributeSetNumber": {
-      "title": "Attribute Set Number",
-      "description": "Number used to order Attribute Sets.",
+      "title": "Numero di set di attributi",
+      "description": "Numero utilizzato per ordinare i set di attributi.",
       "type": "integer"
     },
     "dicomInstalled": {
-      "title": "installed",
-      "description": "Boolean to indicate whether this Attribute Set is presently installed on the archive device",
+      "title": "installato",
+      "description": "Booleano per indicare se questo set di attributi è attualmente installato sul dispositivo di archiviazione",
       "type": "boolean",
       "default": true
     },
     "dcmTag": {
-      "title": "Attribute Tag",
-      "description": "DICOM Tag as hex string",
+      "title": "Attributo Tag ",
+      "description": "Tag DICOM come stringa esadecimale",
       "type": "array",
       "items": {
         "type": "string"
@@ -56,8 +56,8 @@
       "format": "dcmTag"
     },
     "dcmProperty": {
-      "title": "Property",
-      "description": "Property in format <name>=<value>",
+      "title": "Proprietà",
+      "description": "Proprietà nel formato <name>=<value> ",
       "type": "array",
       "items": {
         "type": "string"

@@ -1,6 +1,6 @@
 {
-  "title": "MWL Idle Timeout",
-  "description": "MWL Idle Timeout",
+  "title": "Timeout per inattività MWL",
+  "description": "Timeout per inattività MWL",
   "type": "object",
   "required": [
     "cn",
@@ -10,19 +10,19 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the MWL Idle Timeout.",
+      "title": "Nome",
+      "description": "Nome arbitrario/significativo del timeout di inattività MWL.",
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "MWL SCP AE Title",
-      "description": "Archive AE Title of MWL SCP on which the MWL Idle Timeout shall be applied.",
+      "title": "Titolo AE MWL ",
+      "description": "Titolo AE di Archivio di MWL SCP su cui deve essere applicato il timeout di inattività MWL.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmAETitle": {
-      "title": "Scheduled Station AE Title",
-      "description": "Scheduled Station AE Title(s) of Scheduled Procedure Steps for which the MWL Idle Timeout shall be applied. If none is specified, the MWL Idle Timeout is applied to all Scheduled Procedure Steps provided by the MWL SCP.",
+      "title": "Titolo AE stazione pianificata",
+      "description": "Titolo AE stazione pianificata/e delle fasi della procedura pianificata per le quali deve essere applicato il timeout di inattività MWL. Se non viene specificato nessuno, il timeout di inattività MWL viene applicato a tutti i passaggi della procedura pianificata forniti da MWL SCP.",
       "type": "array",
       "items": {
         "type": "string"
@@ -30,8 +30,8 @@
       "format": "dcmAETitle"
     },
     "dcmMWLStatusOnIdle": {
-      "title": "MWL Status on Idle",
-      "description": "Change Status of idle Scheduled Procedure Steps to specified value.",
+      "title": "Stato MWL in inattivo",
+      "description": "Modificare lo stato dei passaggi della procedura pianificata inattiva al valore specificato.",
       "type": "string",
       "enum":[
         "CANCELED",
@@ -40,8 +40,8 @@
       ]
     },
     "dcmDuration": {
-      "title": "Idle Timeout",
-      "description": "Timeout after which the Status of matching Scheduled Procedure Steps is changed to the specified final status.",
+      "title": "Timeout per inattività",
+      "description": "Timeout dopo il quale lo stato di corrispondenza dei passaggi della procedura pianificata viene modificato nello stato finale specificato.",
       "type": "string",
       "format": "dcmDuration"
     }

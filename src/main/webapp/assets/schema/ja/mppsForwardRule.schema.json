@@ -1,6 +1,6 @@
 {
-  "title": "MPPS Forward Rule",
-  "description": "MPPS Forward Rule",
+  "title": "MPPS 転送 規則",
+  "description": "MPPS 転送 規則",
   "type": "object",
   "required": [
     "cn",
@@ -8,28 +8,28 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the MPPS Forward Rule",
+      "title": "名前",
+      "description": "MPPS 転送 規則の 任意 / 意味の ある 名前",
       "type": "string"
     },
     "dcmFwdMppsDestination": {
-      "title": "MPPS Forward Destination",
-      "description": "Destination to forward MPPS N-CREATE RQ and N-SET RQ",
+      "title": "MPPS 転送 宛先",
+      "description": "MPPS N-CREATE RQ と N-SET RQを 転送 する 宛先",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmProperty": {
-      "title": "Attribute Conditions",
-      "description": "Attribute Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER",
+      "title": "条件",
+      "description": "(SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} 形式で 条件。 「|」 シンボルで 区切る ことに より、 特定の 属性に 複数の 値を 指定できます。 例 : SendingApplicationEntityTitle=FORWARD または Modality=MR|CT または ProcedureCodeSequence.CodeValue=MRProcedure または 00180015=KNEE または 00321034.00080100=RequestingServiceCode または ImageType[3]=LOCALIZER",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmSchedule": {
-      "title": "Time Conditions",
-      "description": "Apply this rule only within specified time ranges.",
+      "title": "MPPS 転送 予定",
+      "description": "指定した 期間に 書き出しを 遅延 する。",
       "type": "array",
       "items": {
         "type": "string"

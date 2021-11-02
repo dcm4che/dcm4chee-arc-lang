@@ -1,6 +1,6 @@
 {
-  "title": "Metrics Descriptor",
-  "description": "Metrics Descriptor",
+  "title": "Descrittore delle metriche",
+  "description": "Descrittore delle metriche",
   "type": "object",
   "required": [
     "dcmMetricsName",
@@ -8,25 +8,25 @@
   ],
   "properties": {
     "dcmMetricsName": {
-      "title": "Metrics Name",
-      "description": "Metrics Name",
+      "title": "Nome Metriche",
+      "description": "Nome Metriche",
       "type": "string"
     },
     "dicomDescription": {
       "title": "Metrics Description",
-      "description": "Unconstrained text description of the metrics",
+      "description": "Descrizione testuale libera delle metriche",
       "type": "string"
     },
     "dcmMetricsRetentionPeriod": {
-      "title": "Metrics Retention Period",
-      "description": "Metrics Retention Period in minutes",
+      "title": "Periodo di conservazione delle metriche",
+      "description": "Periodo di conservazione delle metriche in minuti",
       "type": "integer",
       "default" : 60,
       "minimum": 1
     },
     "dcmUnit": {
-      "title": "Metrics Unit",
-      "description": "Unit of metrics data",
+      "title": "Unità metriche",
+      "description": "Unità metriche",
       "type": "string"
     }
   }

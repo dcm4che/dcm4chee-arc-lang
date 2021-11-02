@@ -1,6 +1,6 @@
 {
-  "title": "HL7 Export Rule",
-  "description": "HL7 Export Rule",
+  "title": "Regola di esportazione HL7",
+  "description": "Regola di esportazione HL7",
   "type": "object",
   "required": [
     "cn",
@@ -10,33 +10,33 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the HL7 Export Rule",
+      "title": "Nome",
+      "description": "Nome arbitrario/significativo della regola di esportazione HL7",
       "type": "string"
     },
     "dcmExporterID": {
-      "title": "Exporter ID",
-      "description": "Exporter ID",
+      "title": "ID esportatore",
+      "description": "ID esportatore",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmExporterID"
     },
     "dcmProperty": {
-      "title": "Conditions",
-      "description": "Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Example: MSH-4=FORWARD or MSH-9=ORM\\^O01 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "title": "Condizioni",
+      "description": "Condizioni nel formato {SEG}-{Seq #}[.{Comp#}[.{SubComp#}]][!]={regEx}. Esempio: MSH-4=FORWARD o MSH-9=ORM\\^O01 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
       "items": { "type": "string" }
     },
     "dcmEntitySelector": {
-      "title": "Entity Selector",
-      "description": "Specifies matching keys used to select Studies to export. Format: {key}={value}[&{key}={value)]..., with {key} = 'StudyAge' | {attributeID}. {value} in the format '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] are replaced by the value of the specified HL7 field from the received HL7 message which triggered the export. If no Entity Selector is specified, all Studies for the Patient will be exported. Example: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => select at most 2 prior Studies not older than 5 years containing at least one CT Series.",
+      "title": "Selettore entità",
+      "description": "Specifica le chiavi di corrispondenza utilizzate per selezionare gli studi precedenti da esportare. Formato: {key}={value}[&{key}={value)]..., with {key} = 'StudyAge' | {attributeID}. {value} in the format '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] vengono sostituiti dal valore del campo HL7 specificato dal messaggio HL7 ricevuto che ha attivato il prefetch. Se non viene specificato alcun selettore di entità, tutti gli studi per il paziente verranno esportati. Esempio: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => seleziona al massimo 2 studi precedenti non più vecchi di 5 anni contenenti almeno una serie CT.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
-      "title": "Ignore Assigning Authority of Patient ID",
-      "description": "Conditionally ignore Assigning Authority of Patient ID (PID-3.4) in received HL7 message which triggered the export for selecting Studies of the Patient.",
+      "title": "Ignora l'assegnazione dell'autorità dell'ID paziente",
+      "description": "Ignorare in modo condizionale l'autorità di assegnazione dell'ID paziente (PID-3.4) nel messaggio HL7 ricevuto che ha attivato il l'esportazione per la selezione degli studi del paziente.",
       "type": "string",
       "enum": [
         "ALWAYS",
@@ -45,8 +45,8 @@
       ]
     },
     "dcmIssuerOfPatientID": {
-      "title": "Assigning Authority of Patient ID",
-      "description": "Assigning Authority of Patient ID against values in received HL7 message are matched, if Assigning Authority of Patient ID is set to MATCHING or NOT_MATCHING. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "title": "Assegnazione dell'autorità dell'ID paziente",
+      "description": "Sono confrontati l'assegnazione dell'autorità dell'ID paziente con i valori nel messaggio HL7 ricevuto, se l'assegnazione dell'autorità dell'ID paziente è impostata su MATCHING o NOT_MATCHING. Formato: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
       "type": "array",
       "items": { "type": "string" }
     },
@@ -56,8 +56,8 @@
       "type": "string"
     },
     "dcmDuration": {
-      "title": "Suppress Duplicate Export Interval",
-      "description": "Suppress Export of Studies already exported not earlier than the specified interval to avoid duplicate exports.",
+      "title": "Sopprimi intervallo di esportazione duplicato",
+      "description": "Sopprimere l'esportazione di studi già esportati non prima dell'intervallo specificato per evitare esportazioni duplicate.",
       "type": "string",
       "format": "dcmDuration"
     },

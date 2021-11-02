@@ -1,6 +1,6 @@
 {
-  "title": "RESTful Forward Rule",
-  "description": "RESTful Forward Rule",
+  "title": "RESTful फॉरवर्ड नियम",
+  "description": "RESTful फॉरवर्ड नियम.",
   "type": "object",
   "required": [
     "cn",
@@ -10,36 +10,36 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the RESTful Forward Rule",
+      "title": "नाव",
+      "description": "RESTful फॉरवर्ड नियमाचे अनियंत्रित / अर्थपूर्ण नाव.",
       "type": "string"
     },
     "dcmWebAppName": {
-      "title": "Web Application name",
-      "description": "Name of the Web Application",
+      "title": "वेब अनुप्रयोगाचे नाव",
+      "description": "वेब अनुप्रयोगाचे नाव.",
       "type": "string",
       "format": "webApp"
     },
     "dcmTLSAllowAnyHostname": {
-      "title": "TLS Allow Any Hostname",
-      "description": "If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done.",
+      "title": "TLS किसी भी मेज़बान को अनुमति दे",
+      "description": "इतर सर्व्हरला HTTPS आवश्यक असल्यास आणि हा कॉन्फिगरेशन पर्यायाला 'हो' संच केल्यास, इतर सर्व्हरचे प्रमाणपत्र ट्रस्टस्टोअरद्वारे प्रमाणित केले जाईल, परंतु होस्ट नाव प्रमाणीकरण केले जाणार नाही.",
       "type": "boolean",
       "default": false
     },
     "dcmTLSDisableTrustManager": {
-      "title": "TLS Disable Trust Manager",
-      "description": "If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore",
+      "title": "TLS ट्रस्ट मॅनेजर असक्षम करा",
+      "description": "इतर सर्व्हरला HTTPS आवश्यक असल्यास आणि हा कॉन्फिगरेशन पर्यायाला 'हो' संच केल्यास, ट्रस्टस्टोअर निर्दिष्ट करण्याची आवश्यकता नाही.",
       "type": "boolean",
       "default": false
     },
     "dcmURIPattern": {
-      "title": "Request URL Pattern",
-      "description": "Only forward requests which match the given Regular Expression. If prefixed with !, only forward requests which does not match the given Regular Expression.",
+      "title": "विनंतीची URL पॅटर्न",
+      "description": "दिलेल्या नियमित अभिव्यक्तीशी जुळणार्‍या विनंत्या फक्त अग्रेषित करा. जर ! चे प्रीफिक्स केलेले असल्यास, फक्त त्या अग्रेषित करा जे दिलेल्या नियमित अभिव्यक्तीशी जुळत नाहीत.",
       "type": "string"
     },
     "dcmRSOperation": {
-      "title": "RESTful Operation",
-      "description": "Name of RESTful Operation which shall be forwarded to another archive instance.",
+      "title": "RESTful कार्य",
+      "description": "इतर आर्काइव्हसवर RESTful विनंत्या फॉरवर्ड करण्यासाठी RESTful कार्यांचे नाव.",
       "type": "array",
       "items" : {
         "type": "string",

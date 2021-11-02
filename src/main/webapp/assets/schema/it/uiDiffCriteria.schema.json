@@ -8,36 +8,36 @@
   ],
   "properties": {
     "dcmuiDiffCriteriaTitle": {
-      "title": "UI Diff Criteria Title",
-      "description": "Title of Diff Criteria",
+      "title": "Titolo UI Diff Criteria",
+      "description": "Titolo dei criteri di diff",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "UI Diff Criteria Description",
-      "description": "Unconstrained text description of this UI Diff Criteria",
+      "title": "Descrizione dei criteri di confronto dell'interfaccia utente",
+      "description": "Descrizione testuale non vincolata di questi criteri di confronto dell'interfaccia utente",
       "type": "string"
     },
     "dcmuiDiffCriteriaNumber": {
-      "title": "UI Diff Criteria Number",
-      "description": "Attribute Set Number used to order Attribute Sets.",
+      "title": "Numero criteri di confronto UI",
+      "description": "Numero di set di attributi utilizzato per ordinare i set di attributi.",
       "type": "integer",
       "minimum": 1
     },
     "dcmuiDiffIncludeMissing": {
-      "title": "UI Including Missing",
-      "description": "Indicate if missing Studies shall be included",
+      "title": "UI compreso mancante",
+      "description": "Indicare se devono essere inclusi studi mancanti",
       "type": "boolean",
       "default": false
     },
     "dcmAttributeSetID": {
-      "title": "Attribute Set ID",
-      "description": "ID of Attribute Set specifying compared attributes",
+      "title": "ID dell'Insieme di attributi",
+      "description": "ID del set di attributi che specifica gli attributi confrontati",
       "type": "string",
       "format": "dcmAttributeSetID"
     },
     "dcmuiDiffGroupButton": {
-      "title": "UI Diff Group Button",
-      "description": "UI Diff Group Button",
+      "title": "Pulsante gruppo differenze UI",
+      "description": "Pulsante gruppo differenze UI",
       "type": "array",
       "items": {
         "type": "string",
@@ -49,8 +49,8 @@
       }
     },
     "dcmuiDiffAction": {
-      "title": "UI Diff Action",
-      "description": "UI Diff Action",
+      "title": "Azione differenze interfaccia utente",
+      "description": "Azione differenze interfaccia utente",
       "type": "array",
       "items": {
         "type": "string",

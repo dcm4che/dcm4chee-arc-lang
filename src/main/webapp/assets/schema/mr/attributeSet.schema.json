@@ -1,6 +1,6 @@
 {
-  "title": "Attribute Set",
-  "description": "Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests.",
+  "title": "विशेषता सेट",
+  "description": "QIDO-RS आणि WADO-RS मेटाडेटाच्या विनंत्यांचे 'includefields' प्राप्ति मापदंड आणि DIFF-RS विनंतीचे 'comparefield' प्राप्ति मापदंड, यांचा नामित विशेषता सेट.",
   "type": "object",
   "required": [
     "dcmAttributeSetType",
@@ -10,13 +10,13 @@
   ],
   "properties": {
     "dicomDescription": {
-      "title": "Attribute Set Description",
-      "description": "Unconstrained text description of this Attribute Set",
+      "title": "विशेषता सेटचे वर्णन",
+      "description": "विशेषता सेटचे अनियंत्रित मजकूर वर्णन.",
       "type": "string"
     },
     "dcmAttributeSetType": {
-      "title": "Attribute Set Type",
-      "description": "Specifies if this Attribute Set is used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests.",
+      "title": "विशेषता सेट प्रकार",
+      "description": "QIDO-RS आणि WADO-RS मेटाडेटाच्या विनंत्यांचे 'includefields' प्राप्ति मापदंड आणि DIFF-RS विनंतीचे 'comparefield' प्राप्ति मापदंड, यांच्याद्वारे हा विशेषता सेटचा वापर केले जातील, हे निर्दिष्ट करते.",
       "type": "string",
       "enum": [
         "QIDO_RS",
@@ -26,29 +26,29 @@
       ]
     },
     "dcmAttributeSetID": {
-      "title": "Attribute Set ID",
-      "description": "ID used by Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata requests and by Query Parameter 'comparefield' of DIFF-RS requests to refer this Attribute Set.",
+      "title": "विशेषता सेट ID",
+      "description": "QIDO-RS आणि WADO-RS मेटाडेटाच्या विनंत्यांचे 'includefields' प्राप्ति मापदंड आणि DIFF-RS विनंतीचे 'comparefield' प्राप्ति मापदंड, यांच्याद्वारे वापर केलेल्या या विशेषता सेटचे अभिज्ञापक.",
       "type": "string"
     },
     "dcmAttributeSetTitle": {
-      "title": "Attribute Set Title",
-      "description": "Title of this Attribute Set.",
+      "title": "विशेषता सेटचे शीर्षक",
+      "description": "या विशेषता सेटचे शीर्षक.",
       "type": "string"
     },
     "dcmAttributeSetNumber": {
-      "title": "Attribute Set Number",
-      "description": "Number used to order Attribute Sets.",
+      "title": "विशेषता सेट क्रमांक",
+      "description": "विशेषता सेट्स ऑर्डर करण्यासाठी वापरलेली संख्या.",
       "type": "integer"
     },
     "dicomInstalled": {
-      "title": "installed",
-      "description": "Boolean to indicate whether this Attribute Set is presently installed on the archive device",
+      "title": "स्थापित",
+      "description": "हा विशेषता सेट सध्या संग्रहण डिव्हाइसवर स्थापित आहे की नाही हे दर्शवणारा बूलियन.",
       "type": "boolean",
       "default": true
     },
     "dcmTag": {
-      "title": "Attribute Tag",
-      "description": "DICOM Tag as hex string",
+      "title": "विशेषता टॅग",
+      "description": "हेक्स स्ट्रिंग म्हणून DICOM टॅग.",
       "type": "array",
       "items": {
         "type": "string"
@@ -56,8 +56,8 @@
       "format": "dcmTag"
     },
     "dcmProperty": {
-      "title": "Property",
-      "description": "Property in format <name>=<value>",
+      "title": "विशेषता",
+      "description": "विशेषता या प्रारूपात <नाव>=<मूल्य>.",
       "type": "array",
       "items": {
         "type": "string"

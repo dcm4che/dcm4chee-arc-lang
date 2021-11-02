@@ -1,6 +1,6 @@
 {
-  "title": "UI Study Table Columns Configuration",
-  "description": "Study Table Columns",
+  "title": "UI 検査 テーブルの 列 構成",
+  "description": "検査 テーブルの 列",
   "type": "object",
   "required": [
     "dcmuiColumnName",
@@ -9,23 +9,23 @@
   ],
   "properties": {
     "dcmuiColumnName": {
-      "title": "Column Name",
-      "description": "The Name of the Column in the Study Table",
+      "title": "列名",
+      "description": "検査 テーブルの 列の 名前",
       "type": "string"
     },
     "dcmuiColumnTitle": {
-      "title": "Column Description",
-      "description": "Description of the Column, shown on hover",
+      "title": "列の 説明",
+      "description": "列の 説明、ホバーに 表示",
       "type": "string"
     },
     "dcmuiValuePath": {
-      "title": "Value path",
-      "description": "Value (json-Object) Path of the column (for Example: '00100010.Value[0].Alphabetic' for Patient's Name or '00100020.Value[0]' for Patient ID",
+      "title": "値の パス",
+      "description": "値（json-Object）列の パス (例えば: 患者名の ために '00100010.Value[0].Alphabetic' または 患者IDの ために '00100020.Value[0]'",
       "type": "string"
     },
     "dcmuiValueType": {
-      "title": "Type of the value",
-      "description": "Type of the column how to get the value, default should be 'value'",
+      "title": "値の タイプ",
+      "description": "列の タイプ、値の 取得方法、デフォルトは '値'",
       "type": "string",
       "enum": [
         "value",
@@ -33,13 +33,13 @@
       ]
     },
     "dcmuiColumnWidth": {
-      "title": "Column width in weight",
-      "description": "Width of the column in weight ( x > 0.1 - x < infinite ) default 1",
+      "title": "列幅の 重み",
+      "description": "列幅の 重み ( x > 0.1 - x < 無限) デフォルトが 1 です。",
       "type":  "string"
     },
     "dcmuiColumnOrder": {
-      "title": "Order of the Column",
-      "description": "Order of the Column",
+      "title": "列の 順序",
+      "description": "列の 順序",
       "type":  "string"
     }
   }

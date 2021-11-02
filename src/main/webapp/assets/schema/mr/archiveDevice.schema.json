@@ -86,10 +86,10 @@
     "dcmSchedulerMinStartDelay",
     "dcmStowRetiredTransferSyntax",
     "dcmAuditSoftwareConfigurationVerbose",
-    "dcmStowExcludeAPPMarkers",
-    "dcmStowQuicktime2MP4",
     "dcmWadoIgnorePresentationLUTShape",
     "dcmWadoMetadataExcludePrivate",
+    "dcmStowExcludeAPPMarkers",
+    "dcmStowQuicktime2MP4",
     "dcmFilterByIssuerOfPatientID",
     "dcmMWLAccessionNumberGenerator",
     "dcmMWLRequestedProcedureIDGenerator",
@@ -477,8 +477,8 @@
       "default": false
     },
     "dcmWadoMetadataExcludePrivate": {
-      "title": "Wado Metadata Exclude Private",
-      "description": "Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. May be overwritten by configured values for particular Archive Network AEs.",
+      "title": "Wado खाजगी मेटाडेटा वगळा",
+      "description": "WADO-RS पुनर्प्राप्ती ट्रान्झॅक्शनद्वारे परत केलेल्या मेटाडेटामधून खाजगी डेटा घटक वगळण्याचे सूचित करते. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "boolean",
       "default": false
     },
@@ -505,7 +505,7 @@
     },
     "dcmQidoETag": {
       "title": "Qido ETag",
-      "description": "Indicates to return Last-Modified and ETag for Search Series or Instances of a Study; disabled if absent. May be overwritten by configured values for particular Archive Network AEs.",
+      "description": "अभ्यासाच्या मालिका किंवा दृष्टांत शोध सेवेंमध्ये अंतिम-सुधारित आणि ETag परत करण्याचे सूचित करते; अनुपस्थित असल्यास अक्षम. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "boolean",
       "default": false
     },
@@ -875,22 +875,22 @@
       "default": "${jboss.server.temp.dir}"
     },
     "dcmMWLAccessionNumberGenerator": {
-      "title": "MWL Accession Number Generator",
-      "description": "Identifies ID Generator to supplement missing Accession Numbers of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service. May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.",
+      "title": "MWL एक्सेशन क्रमांक जनरेटर",
+      "description": "HL7 ऑर्डर संदेश प्राप्त झाल्यावर किंवा RESTful सेवेद्वारे तयार केलेल्या अनुसूची प्रक्रिया स्टेप्सचे अनुपस्थित असलेल्या एक्सेशन क्रमांक पूरक करण्यासाठी ID जनरेटर दर्शवते. विशिष्ट आर्काइव्ह नेटवर्क AE किंवा आर्काइव्ह HL7 अनुप्रयोगासाठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "string",
       "format": "dcmIDGenerator",
       "default": "AccessionNumber"
     },
     "dcmMWLRequestedProcedureIDGenerator": {
-      "title": "MWL Requested Procedure ID Generator",
-      "description": "Identifies ID Generator to supplement missing Requested Procedure IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service. May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.",
+      "title": "MWL विनंती केलेल्या प्रक्रियाचे ID जनरेटर",
+      "description": "HL7 ऑर्डर संदेश प्राप्त झाल्यावर किंवा RESTful सेवेद्वारे तयार केलेल्या अनुसूची प्रक्रिया स्टेप्सचे अनुपस्थित असलेल्या विनंती केलेल्या प्रक्रियाचे ID पूरक करण्यासाठी ID जनरेटर दर्शवते. विशिष्ट आर्काइव्ह नेटवर्क AE किंवा आर्काइव्ह HL7 अनुप्रयोगासाठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "string",
       "format": "dcmIDGenerator",
       "default": "RequestedProcedureID"
     },
     "dcmMWLScheduledProcedureStepIDGenerator": {
-      "title": "MWL Scheduled Procedure Step ID Generator",
-      "description": "Identifies ID Generator to supplement missing Scheduled Procedure Step IDs of Scheduled Procedures Steps created on receive of HL7 Order messages or by RESTful service. May be overwritten by configured values for particular Archive Network AEs or Archive HL7 Application.",
+      "title": "MWL अनुसूची प्रक्रिया स्टेप ID जनरेटर",
+      "description": "HL7 ऑर्डर संदेश प्राप्त झाल्यावर किंवा RESTful सेवेद्वारे तयार केलेल्या अनुसूची प्रक्रिया स्टेप्सचे अनुपस्थित असलेल्या अनुसूचित प्रक्रिया स्टेप्स ID पूरक करण्यासाठी ID जनरेटर दर्शवते. विशिष्ट आर्काइव्ह नेटवर्क AE किंवा आर्काइव्ह HL7 अनुप्रयोगासाठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "string",
       "format": "dcmIDGenerator",
       "default": "ScheduledProcedureStepID"
@@ -1742,14 +1742,14 @@
       "default" : false
     },
     "dcmChangeRequesterAET": {
-      "title": "Change Requester AET",
-      "description": "Indicates change requester AET in rejections triggered by archive. May be overwritten by configured values for particular Archive Network AEs.",
+      "title": "बदल विनंतीकर्ता AET",
+      "description": "आर्काइव्हद्वारे ट्रिगर केलेल्या अस्वीकृतींमध्ये बदल विनंतीकर्ता AET सूचित करते. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmFilterByIssuerOfPatientID": {
-      "title": "Filter by Issuer of Patient ID",
-      "description": "Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "रुग्णाच्या ID जारीकर्ता द्वारे फिल्टर करा",
+      "description": "रुग्णाच्या ID साठी कोणतीही जुळणारी की नमूद केलेली नसली तरीही रुग्णाच्या ID च्या जारीकर्ता द्वारे फिल्टर करा. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "boolean",
       "default" : false
     },
@@ -1800,7 +1800,7 @@
     },
     "dcmQueue": {
       "title": "रांग",
-      "description": "व्यवस्थापित Task रांग.",
+      "description": "व्यवस्थापित टास्क रांग.",
       "type": "array",
       "titleKey":"{dcmQueueName}",
       "items" : {
@@ -1853,8 +1853,8 @@
       }
     },
     "dcmMPPSForwardRule": {
-      "title": "MPPS Forward Rule",
-      "description": "MPPS Forward Rules applied to MPPS received by any AE. May be supplemented by configured MPPS Forward Rules for particular Archive Network AEs.",
+      "title": "MPPS फॉरवर्ड नियम",
+      "description": "MPPS फॉरवर्ड नियम जे कोणत्याही AE द्वारे प्राप्त MPPS वर लागू होतील. आर्काइव्ह नेटवर्क AE स्तरावर कॉन्फीगर केलेले RESTful फॉरवर्ड नियम पूरक होतील.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
