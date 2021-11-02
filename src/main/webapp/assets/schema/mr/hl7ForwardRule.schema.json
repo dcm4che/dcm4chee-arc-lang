@@ -1,6 +1,6 @@
 {
-  "title": "HL7 Forward Rule",
-  "description": "HL7 Forward Rule",
+  "title": "HL7 फॉरवर्ड नियम",
+  "description": "HL7 फॉरवर्ड नियम.",
   "type": "object",
   "required": [
     "cn",
@@ -8,13 +8,13 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the HL7 Forward Rule",
+      "title": "नाव",
+      "description": "HL7 फॉरवर्ड नियमचे अनियंत्रित / अर्थपूर्ण नाव.",
       "type": "string"
     },
     "hl7FwdApplicationName": {
-      "title": "HL7 Forward Application Name",
-      "description": "HL7 Forward Destination Application and Facility name (Application|Facility)",
+      "title": "HL7 फॉरवर्ड अनुप्रयोगाचे नाव",
+      "description": "HL7 फॉरवर्ड गंतव्य अनुप्रयोगाचे आणि सुविधेचे नाव (अनुप्रयोग|सुविधा).",
       "type": "array",
       "items": {
         "type": "string"
@@ -22,8 +22,8 @@
       "format": "hl7ApplicationName"
     },
     "dcmProperty": {
-      "title": "Conditions",
-      "description": "Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "title": "अटी",
+      "description": "अटी या स्वरूपात {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. उदाहरणे: MSH-4=FORWARD किंवा MSH-9=ADT\\^A28\\^ADT_A05 किंवा PID-3[.3]=PIDIssuer किंवा PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
       "items": {
         "type": "string"

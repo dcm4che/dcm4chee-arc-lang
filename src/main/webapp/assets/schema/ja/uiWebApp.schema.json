@@ -1,6 +1,6 @@
 {
-  "title": "Web App drop-down list",
-  "description": "Web App drop-down list",
+  "title": "ウェブ アプリケーション ドロップダウン リスト",
+  "description": "ウェブ アプリケーション ドロップダウン リスト",
   "type": "object",
   "required": [
     "dcmuiWebAppListName",
@@ -9,18 +9,18 @@
   ],
   "properties": {
     "dcmuiWebAppListName": {
-      "title": "List Name",
-      "description": "Define a name for this config",
+      "title": "リストの 名前",
+      "description": "この 構成の 名前を 定義",
       "type": "string"
     },
     "dcmuiWebAppListDescription": {
-      "title": "Description",
-      "description": "Web Application List description",
+      "title": "説明",
+      "description": "ウェブ アプリケーション リストの 説明",
       "type": "string"
     },
     "dcmuiMode": {
-      "title": "List mode",
-      "description": "You have two possibilities how to show the defined list: 1.) On top on the rest of list 'separated' with a line, 2.) Show only those hir defined ( 'exclusive' ).",
+      "title": "リスト モード",
+      "description": "定義された リストを 表示 する 方法が 二つ あります: 1.) 残りの リストの 上に、行で 区切られて います。 2.) 定義されて いる もののみを 表示 します。('専用').",
       "type": "string",
       "default":"separated",
       "enum": [
@@ -29,8 +29,8 @@
       ]
     },
     "dcmuiWebApps": {
-      "title": "WebApps",
-      "description": "Web Application",
+      "title": "ウェブ アプリケーション",
+      "description": "ウェブ アプリケーション",
       "format": "webApp",
       "type": "array",
       "items" : {
@@ -38,16 +38,16 @@
       }
     },
     "dcmAcceptedUserRole": {
-      "title": "Accepted User Role",
-      "description": "Define the roles for which this config should be available, use 'user' to be available for all roles ( You should either define a username ( following attribute ) or user role ( this attribute ))",
+      "title": "承認された ユーザーの 役割",
+      "description": "この 構成を 使用 できる 役割を 定義し、すべての 役割で 使用できるように 'ユーザー' を 使用 します。('ユーザー名' (次の属性) または 'ユーザーの 役割' (この属性) を 定義 する 必要が あります。)",
       "type": "array",
       "items" : {
         "type": "string"
       }
     },
     "dcmAcceptedUserName": {
-      "title": "Accepted User Name",
-      "description": "Define the Username for which this config should be available ( You should either define a username ( this attribute ) or user role ( previous attribute ))",
+      "title": "承認された ユーザー名",
+      "description": "この 構成を 使用 できる ユーザー名を 定義します。 ('ユーザー名' (この属性) または 'ユーザーの 役割' (以前の属性) を 定義 する 必要が あります。)",
       "type": "array",
       "items" : {
         "type": "string"

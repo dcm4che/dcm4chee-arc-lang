@@ -1,11 +1,12 @@
 {
-  "title": "Exporter Descriptor",
-  "description": "Exporter Descriptor",
+  "title": "निर्यातक वर्णनकर्ता",
+  "description": "निर्यातक वर्णनकर्ता ।",
   "type": "object",
   "required": [
     "dcmExporterID",
     "dcmURI",
     "dcmQueueName",
+    "dcmExportPriority",
     "dcmInstanceAvailability",
     "dicomAETitle",
     "dcmExportAsSourceAE",
@@ -13,8 +14,8 @@
   ],
   "properties": {
     "dcmExporterID": {
-      "title": "Exporter ID",
-      "description": "Exporter ID",
+      "title": "निर्यातक ID",
+      "description": "निर्यातक ID ।",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmExportPriorsRule[*].dcmExporterID[*]",
@@ -32,73 +33,81 @@
     },
     "dcmURI": {
       "title": "URI",
-      "description": "RFC2079: Uniform Resource Identifier",
+      "description": "RFC2071 : समान संसाधन पहचानकर्ता ।",
       "type": "string"
     },
     "dcmQueueName": {
-      "title": "Queue Name",
-      "description": "Task Queue Name",
+      "title": "कतार का नाम",
+      "description": "टास्क कतार का नाम ।",
       "type": "string",
       "format":"dcmQueueName"
     },
+    "dcmExportPriority": {
+      "title": "निर्यातक प्राथमिकता",
+      "description": "निर्यात कार्य के प्रक्रिया के लिए JMS प्राथमिकता स्तर : ० (न्यूतनम) से ९ (अधिकतम) तक ।",
+      "type": "integer",
+      "default" : 4,
+      "minimum": 0,
+      "maximum": 9
+    },
     "dicomDescription": {
-      "title": "Exporter Description",
-      "description": "Unconstrained text description of the exporter",
+      "title": "निर्यातक का वर्णन",
+      "description": "निर्यातक का स्वैच्छिक विषय वर्णन ।",
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "Archive Application Entity (AE) title",
-      "description": "Archive Application Entity (AE) title",
+      "title": "अनुप्रयोग तत्त्व AE का नाम",
+      "description": "अनुप्रयोग तत्त्व AE का नाम ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmExportAsSourceAE": {
-      "title": "Export as Source Application Entity (AE)",
-      "description": "Mask the Archive Application Entity (AE) title by the title of the Application Entity (AE) from which a Series was received on establishing the Association to the Destination Application Entity (AE).",
+      "title": "स्रोत अनुप्रयोग तत्व (AE) के रूप में निर्यात करें",
+      "description": "गंतव्य अनुप्रयोग तत्व (AE) से संपर्क साधते वक्त आर्काइव अनुप्रयोग तत्व (AE) के नाम को सीरीज प्राप्त हुए अनुप्रयोग तत्व (AE) के नाम से मुखौटित करें ।",
       "type": "boolean",
       "default": false
     },
     "dcmDeleteStudyFromStorageID": {
-      "title": "Delete Study From Storage ID",
-      "description": "ID of Storage System from which the objects of the exported Study shall be deleted. Only effective for Export Tasks on Study level.",
+      "title": "स्टोरेज सिस्टम से स्टडी मिटाए",
+      "description": "स्टोरेज सिस्टम का ID जहा से निर्यात हुए स्टडी के दृष्टांतों को मिटाया जाएगा । सिर्फ प्रभावशाली जब निर्यात कार्य स्टडी स्तर पे है ।",
       "type": "string",
       "format": "dcmStorageID"
     },
     "dcmRejectForDataRetentionExpiry": {
-      "title": "Reject Entity for Data Retention Expiry",
-      "description": "Reject entity for Data Retention Expiry after export on completion of Export Task.",
+      "title": "डेटा धारण समाप्ति के लिए तत्व को अस्वीकृत करें",
+      "description": "निर्यात कार्य के समाप्ति पे निर्यात के बाद, डेटा धारण समाप्ति के लिए तत्व को अस्वीकृत करें ।",
       "type": "boolean",
       "default": false
     },
     "dcmStgCmtSCP": {
-      "title": "Storage Commitment SCP AE Title",
-      "description": "AE Title of external Storage Commitment SCP used to verify export to another archive.",
+      "title": "स्टोरेज प्रतिबद्धता SCP AE का नाम",
+      "description": "दूसरे आर्काइव पे निर्यात को जांचने के लिए उपयोग किया गया बाहरी स्टोरेज प्रतिबद्धता SCP AE का नाम ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
-      "title": "Ian Destination",
-      "description": "Destination to send IAN N-CREATE RQ",
+      "title": "IAN गंतव्य",
+      "description": "IAN N-CREATE अनुरोध भेजने के लिए गंतव्य ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmRetrieveAET": {
-      "title": "Retrieve AE Title",
-      "description": "AE Title associated with Network AE",
+      "title": "प्राप्ति AE का नाम",
+      "description": "इस नेटवर्क AE से सम्बंधित AE का नाम ।",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmArchiveAETitle"
     },
     "dcmRetrieveLocationUID": {
-      "title": "Retrieve Location UID",
-      "description": "Retrieve Location UID.",
+      "title": "पुनःप्राप्ति स्थान का UID",
+      "description": "पुनःप्राप्ति स्थान का UID ।",
       "type": "string",
       "pattern": "^[0-2]((\\.0)|(\\.[1-9][0-9]*))*$"
     },
     "dcmInstanceAvailability": {
-      "title": "Instance Availability",
-      "description": "Instance Availability.",
+      "title": "दृष्टांतों की उपलब्धता",
+      "description": "दृष्टांतों की उपलब्धता ।",
       "type": "string",
       "default": "ONLINE",
       "enum": [
@@ -108,15 +117,15 @@
       ]
     },
     "dcmSchedule": {
-      "title": "Export Schedule",
-      "description": "Delay export to specified time periods. If no Export Schedule is specified, queue the export task for processing immediately. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
+      "title": "निर्यात अनुसूची",
+      "description": "निर्यात को अनुसूचित समय में करें । यदि कोई निर्यात अनुसूची निर्दिष्ट नहीं किया है, तो तुरंत ही निर्यात कार्यों पे प्रक्रिया करने के लिए कतार में डाले । प्रारूप : 'hour=[0-23] dayOfWeek=[0-6]' (0=रविवार) ।",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"
     },
     "dcmProperty": {
-      "title": "Property",
-      "description": "Property in format <name>=<value>",
+      "title": "गुण",
+      "description": "गुण इस प्रारूप में <नाम>=<मूल्य> ।",
       "type": "array",
       "items": { "type": "string" }
     }

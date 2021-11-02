@@ -1,19 +1,19 @@
 {
-  "title": "Audit Suppress Criteria",
-  "description": "Audit Suppress Criteria",
+  "title": "監査 抑制 基準",
+  "description": "監査 抑制 基準",
   "type": "object",
   "required": [
     "cn"
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the Audit Suppress Criteria.",
+      "title": "名前",
+      "description": "監査 抑制 基準の 任意 / 意味の ある 名前",
       "type": "string"
     },
     "dcmAuditEventID": {
-      "title": "Audit Event ID",
-      "description": "DICOM PS 3.15 A.5 Audit Event ID code and codeSystemName in format (CV, CSD, \"CM\").",
+      "title": "監査 イベント ID",
+      "description": "RFC 3881 (CV, CSD, \"CM\") 形式で 監査 イベント ID コードと コード システム名",
       "type": "array",
       "items": {
         "type": "string",
@@ -42,8 +42,8 @@
       }
     },
     "dcmAuditEventTypeCode": {
-      "title": "Audit Event Type Code",
-      "description": "DICOM PS 3.15 A.5 Audit Event Type code in format (CV, CSD, \"CM\").",
+      "title": "監査 イベント タイプ コード",
+      "description": "RFC 3881 (CV, CSD, \"CM\") 形式で 監査 イベント タイプ コード",
       "type": "array",
       "items": {
         "type": "string",
@@ -92,8 +92,8 @@
       }
     },
     "dcmAuditEventActionCode": {
-      "title": "Event Action Code",
-      "description": "DICOM PS 3.15 A.5 Audit Event Action Type code.",
+      "title": "イベント アクション コード",
+      "description": "RFC 3881 監査 イベント アクション タイプ コード。",
       "type": "array",
       "items": {
         "type": "string",
@@ -107,8 +107,8 @@
       }
     },
     "dcmAuditEventOutcomeIndicator": {
-      "title": "Event Outcome Indicator",
-      "description": "DICOM PS 3.15 A.5 Audit Event Outcome Indicator.",
+      "title": "イベント 結果 指示",
+      "description": "RFC 3881 監査 イベント 結果 指示。",
       "type": "array",
       "items": {
         "type": "string",
@@ -121,24 +121,24 @@
       }
     },
     "dcmAuditUserID": {
-      "title": "User ID",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant User ID.",
+      "title": "ユーザー ID",
+      "description": "RFC 3881 監査 アクティブな 参加者 ユーザー ID",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditAlternativeUserID": {
-      "title": "Alternative User ID",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID.",
+      "title": "代替 ユーザー ID",
+      "description": "RFC 3881 監査 アクティブな 参加者 代替 ユーザー ID",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditUserRoleIDCode": {
-      "title": "User Role ID Code",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, \"CM\").",
+      "title": "ユーザー 役割 ID コード",
+      "description": "RFC 3881 (CV, CSD, \"CM\") 形式で 監査 アクティブな 参加者 ユーザー 役割 ID コード",
       "type": "array",
       "items": {
         "type": "string",
@@ -153,92 +153,17 @@
       }
     },
     "dcmAuditNetworkAccessPointID": {
-      "title": "Network Access Point ID",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID.",
+      "title": "ネットワーク アクセス ポイント ID",
+      "description": "RFC 3881 監査 アクティブな 参加者 ネットワーク アクセス ポイント ID",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditUserIsRequestor": {
-      "title": "User is Requestor",
-      "description": "Indicates if Active Participant is initiator/requestor of the Audit Event as specified by DICOM PS 3.15 A.5",
+      "title": "ユーザーが 要求者です",
+      "description": "アクティブな 参加者が RFC 3881で 指定されて いる 監査 イベントの 起動側 / 要求者で あるか どうかを 示します",
       "type": "boolean"
-    },
-    "dcmParticipantObjectTypeCode": {
-      "title": "Participant Object Type Code",
-      "description": "DICOM PS 3.15 A.5 Participant Object Type Code.",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": [
-          "1",
-          "2",
-          "3",
-          "4"
-        ]
-      }
-    },
-    "dcmParticipantObjectTypeCodeRole": {
-      "title": "Participant Object Type Code Role",
-      "description": "DICOM PS 3.15 A.5 Participant Object Type Code Role.",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24",
-          "25",
-          "26"
-        ]
-      }
-    },
-    "dcmParticipantObjectDataLifeCycle": {
-      "title": "Participant Object Data Life Cycle",
-      "description": "DICOM PS 3.15 A.5 Participant Object Data Life Cycle.",
-      "type": "array",
-      "items": {
-        "type": "string",
-        "enum": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
-        ]
-      }
     }
   }
 }

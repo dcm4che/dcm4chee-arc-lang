@@ -1,19 +1,19 @@
 {
-  "title": "UI Configuration",
-  "description": "UI Configuration",
+  "title": "Configurazione dell'interfaccia utente",
+  "description": "Configurazione dell'interfaccia utente",
   "type": "object",
   "required": [
     "dcmuiConfigName"
   ],
   "properties": {
     "dcmuiConfigName": {
-      "title": "UI Configuration Name",
-      "description": "UI Configuration Name",
+      "title": "Nome configurazione interfaccia utente",
+      "description": "Nome configurazione interfaccia utente",
       "type": "string"
     },
     "dcmuiModalities": {
       "title": "Statistic Modalities",
-      "description": "Preselected Modalities that should show in the Statistic page",
+      "description": "Modalità preselezionate che dovrebbero essere visualizzate nella pagina Statistiche",
       "type": "array",
       "items" : {
         "type": "string"
@@ -30,7 +30,7 @@
     },
     "dcmuiWidgetAets": {
       "title": "Widget AETs",
-      "description": "Select the AETs that you wan't to see in the AET widget, where you can select in which of them the newly added AET should be as `Accepted Calling AE Title`",
+      "description": "Seleziona gli AET che non vuoi vedere nel widget AET, dove puoi selezionare in quale di essi l'AET appena aggiunto dovrebbe essere come `Titolo AE di chiamata accettato`",
       "type": "array",
       "items" : {
         "type": "string"
@@ -38,18 +38,18 @@
       "format": "dcmAETitle"
     },
     "dcmuiBackgroundURL": {
-      "title": "Background URL",
-      "description": "Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px ",
+      "title": "URL in background",
+      "description": "URL di sfondo per modificare lo sfondo dell'interfaccia utente, può essere un URL relativo o assoluto, l'immagine deve avere una larghezza di almeno 1024px ",
       "type": "string"
     },
     "dcmuiLogoURL": {
-      "title": "Logo URL",
-      "description": "Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background",
+      "title": "URL logo",
+      "description": "URL del logo per cambiare il logo dell'interfaccia utente, può essere un URL relativo o assoluto, l'immagine dovrebbe avere la larghezza di 140px e dovrebbe essere in formato png con sfondo trasparente",
       "type": "string"
     },
     "dcmuiDefaultWidgetAets": {
       "title": "Default Widget AETs",
-      "description": "Select the AETs that should be preselected on Widget AETs",
+      "description": "Seleziona gli AET che dovrebbero essere preselezionati su Widget AETs",
       "type": "array",
       "items" : {
         "type": "string"
@@ -57,8 +57,8 @@
       "format": "dcmAETitle"
     },
     "dcmuiAetConfig": {
-      "title": "AET drop-down list",
-      "description": "Define which AETs should be visible in the drop-down lists in the UI",
+      "title": "Elenco a discesa AET",
+      "description": "Definisci quali AET devono essere visibili negli elenchi a discesa dell'interfaccia utente",
       "titleKey":"{dcmuiAetListName}",
       "type": "array",
       "items" : {
@@ -66,8 +66,8 @@
       }
     },
     "dcmuiWebAppConfig": {
-      "title": "Web App drop-down list",
-      "description": "Define which WebApps should be visible on the top of the drop-down list in the UI",
+      "title": "Elenco a discesa delle app Web",
+      "description": "Definisci quali WebApp devono essere visibili nella parte superiore dell'elenco a discesa nell'interfaccia utente",
       "titleKey":"{dcmuiWebAppListName}",
       "type": "array",
       "items" : {
@@ -92,17 +92,26 @@
       }
     },
     "dcmuiDiffConfig": {
-      "title": "Study Diff Configuration",
-      "description": "Study Diff Configuration",
+      "title": "Configurazione confronto studio",
+      "description": "Configurazione confronto studio",
       "titleKey":"{dcmuiDiffConfigName}",
       "type": "array",
       "items" : {
         "$ref": "uiDiffConfig.schema.json"
       }
     },
+    "dcmuiDashboardConfig": {
+      "title": "Configurazione dashboard dell'interfaccia utente",
+      "description": "Configurazione dashboard dell'interfaccia utente",
+      "titleKey":"{dcmuiDashboardConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDashboard.schema.json"
+      }
+    },
     "dcmuiStudyTableConfig": {
-      "title": "UI Study Table Configuration",
-      "description": "Configuration of table",
+      "title": "Configurazione della tabella di studio dell'interfaccia utente",
+      "description": "Configurazione della tabella",
       "titleKey":"{dcmuiStudyTableConfigName}",
       "type": "array",
       "items" : {
@@ -110,30 +119,30 @@
       }
     },
     "dcmuiElasticsearchConfig": {
-      "title": "UI Elasticsearch Configuration",
-      "description": "Elasticsearch Configuration for the pro version",
+      "title": "Configurazione Elasticsearch dell'interfaccia utente",
+      "description": "Configurazione di Elasticsearch per la versione pro",
       "titleKey":"{dcmuiElasticsearchConfigName}",
       "type": "array",
       "items" : {
         "$ref": "uiElasticsearch.schema.json"
       }
     },
+    "dcmuiDeviceURLObject": {
+      "title": "URL della interfaccia utente del dispositivo",
+      "description": "Altri URL del dispositivo dell'interfaccia utente",
+      "titleKey":"{dcmuiDeviceURLName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDeviceURL.schema.json"
+      }
+    },
     "dcmuiDeviceClusterObject": {
-      "title": "UI Cluster Configuration",
-      "description": "Group Devices in Clusters",
+      "title": "Configurazione cluster UI",
+      "description": "Dispositivi di gruppo in cluster",
       "titleKey":"{dcmuiDeviceClusterName}",
       "type": "array",
       "items" : {
         "$ref": "uiDeviceCluster.schema.json"
-      }
-    },
-    "dcmuiDashboardConfig": {
-      "title": "UI Dashboard Configuration",
-      "description": "UI Dashboard Configuration",
-      "titleKey":"{dcmuiDashboardConfigName}",
-      "type": "array",
-      "items" : {
-        "$ref": "uiDashboard.schema.json"
       }
     },
     "dcmuiCreateDialogTemplate": {

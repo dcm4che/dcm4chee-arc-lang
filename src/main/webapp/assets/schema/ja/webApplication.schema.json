@@ -1,6 +1,6 @@
 {
-  "title": "Web Application",
-  "description": "Web Application information",
+  "title": "ウェブ アプリケーション",
+  "description": "ウェブ アプリケーション 情報 ",
   "type": "object",
   "required": [
     "dcmWebAppName",
@@ -9,8 +9,8 @@
   ],
   "properties": {
     "dcmWebAppName": {
-      "title": "Web Application name",
-      "description": "Name of the Web Application",
+      "title": "ウェブ アプリケーション名",
+      "description": "ウェブ アプリケーションの 名前",
       "type": "string",
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackWadoURIWebAppName",
@@ -18,26 +18,26 @@
       ]
     },
     "dicomNetworkConnectionReference": {
-      "title": "Web Application Network Connection(s)",
-      "description": "Network Connection(s) on which the services of the Web application are available",
+      "title": "ウェブ アプリケーション ネットワーク 接続",
+      "description": "ネットワーク 接続で 利用できる ウェブ アプリケーションの サービス",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dicomDescription": {
-      "title": "Web Application Description",
-      "description": "Unconstrained text description of the Web Application",
+      "title": "ウェブ アプリケーションの 説明",
+      "description": "ウェブ アプリケーションの 制約のない テキスト 説明",
       "type": "string"
     },
     "dcmWebServicePath": {
-      "title": "Web Service Path",
-      "description": "HTTP Path of the services of the Web application",
+      "title": "ウェブ サービス パス",
+      "description": "ウェブ アプリケーションの サービスの HTTP パス",
       "type": "string"
     },
     "dcmWebServiceClass": {
-      "title": "Web Service Class",
-      "description": "Web Service Classes provided by the Web application",
+      "title": "ウェブ サービス クラス",
+      "description": "ウェブ アプリケーションに よって 提供される ウェブ サービス クラス",
       "type": "array",
       "items": {
         "type": "string",
@@ -65,28 +65,28 @@
       }
     },
     "dcmKeycloakClientID": {
-      "title": "Keycloak Client ID",
-      "description": "Keycloak Client ID for the Web application",
+      "title": "キークローク クライアント ID",
+      "description": "ウェブ アプリケーションの キークローク クライアント ID",
       "type": "string",
       "format": "dcmKeycloakClient"
     },
     "dicomAETitle": {
-      "title": "AE Title",
-      "description": "AE title of Network AE associated with this Web Application",
+      "title": "AE タイトル",
+      "description": "この ウェブ アプリケーションに 関連付けられて いる ネットワーク AEの AE タイトル",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dicomApplicationCluster": {
-      "title": "Application Cluster",
-      "description": "Locally defined names for a subset of related applications",
+      "title": "アプリケーション クラスタ",
+      "description": "局所的で 定義された、関連する アプリケーションの サブセットの 名前",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmProperty": {
-      "title": "Property",
-      "description": "Property in format <name>=<value>. E.g.: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} or IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}}, ( Other valid parameters are: 'patientBirthDate' and 'accessionNumber' ) , you could define the target of the Url by setting it to the parameter 'IID_URL_TARGET=_blank|_self'",
+      "title": "属性",
+      "description": "<name>=<value> 形式で 属性。 例: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} または IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}}, (他の 有効な パラメーターは: 'patientBirthDate' と 'accessionNumber') です。 パラメーター 'IID_URL_TARGET=_blank|_self' に 設定 する ことに より、 URLの ターゲットを 定義できます。",
       "type": "array",
       "items": {
         "type": "string"
@@ -94,8 +94,8 @@
       "format": "dcmProperty"
     },
     "dicomInstalled": {
-      "title": "installed",
-      "description": "True if the Web Application is installed on network. If not present, information about the installed status of the Web Application is inherited from the device",
+      "title": "インストール済み",
+      "description": "ウェブ アプリケーションが ネットワークに インストールされて いる 場合は 「真」です。 存在しない 場合、 ウェブ アプリケーションの インストール ステータスに 関する 情報は デバイスから 継承されます",
       "type": "boolean"
     }
   }

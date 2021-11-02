@@ -1,6 +1,6 @@
 {
-  "title": "Keycloak Client",
-  "description": "Keycloak Client",
+  "title": "कीक्लोक क्लाइंट",
+  "description": "कीक्लोक क्लाइंट ।",
   "type": "object",
   "required": [
     "dcmKeycloakClientID",
@@ -12,8 +12,8 @@
   ],
   "properties": {
     "dcmKeycloakClientID": {
-      "title": "Keycloak Client ID",
-      "description": "Client ID used in token requests.",
+      "title": "कीक्लोक क्लाइंट ID",
+      "description": "टोकन अनुरोधों में इस्तमाल किया गया कीक्लोक क्लाइंट ID ।",
       "type": "string",
       "use": [
         "$.dcmWebApp[*].dcmKeycloakClientID",
@@ -22,18 +22,18 @@
       ]
     },
     "dcmURI": {
-      "title": "Server URL",
-      "description": "The base URL of the Keycloak server.",
+      "title": "सर्वर URL",
+      "description": "कीक्लोक सर्वर का आधार URL ।",
       "type": "string"
     },
     "dcmKeycloakRealm": {
-      "title": "Keycloak Realm",
-      "description": "Name of the realm in token requests.",
+      "title": "कीक्लोक रियल्म",
+      "description": "टोकन अनुरोधों में इस्तमाल किए जानेवाले रियल्म का नाम ।",
       "type": "string"
     },
     "dcmKeycloakGrantType": {
-      "title": "Keycloak grant type",
-      "description": "Keycloak grant type used in token requests.",
+      "title": "कीक्लोक अनुदान प्रकार",
+      "description": "टोकन अनुरोधों में इस्तमाल किए जानेवाले कीक्लोक अनुदान प्रकार ।",
       "type": "string",
       "enum": [
         "client_credentials",
@@ -42,19 +42,19 @@
       "default": "client_credentials"
     },
     "dcmKeycloakClientSecret": {
-      "title": "Keycloak Client secret",
-      "description": "Keycloak client secret. Required if grant type = client_credentials.",
+      "title": "OAuth क्लाइंट गुप्त",
+      "description": "OAuth क्लाइंट गुप्त । ज़रूरी है यदि OAuth २.० अनुदान प्रकार को 'client_credentials' सेट किया है ।",
       "type": "string"
     },
     "dcmTLSAllowAnyHostname": {
-      "title": "TLS Allow Any Hostname",
-      "description": "If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done.",
+      "title": "TLS किसी भी मेज़बान को अनुमति दे",
+      "description": "यदि अन्य सर्वर पे HTTPS ज़रूरी हो तो और इस कॉन्फिग विकल्प को 'हाँ' सेट किया हो तो, अन्य सर्वर के प्रमाणपत्र को ट्रस्टस्टोर द्वारा मान्य किया जाएगा, लेकिन मेज़बान के नाम की मान्यता नहीं की जाएगी ।",
       "type": "boolean",
       "default": false
     },
     "dcmTLSDisableTrustManager": {
-      "title": "TLS Disable Trust Manager",
-      "description": "If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore",
+      "title": "TLS ट्रस्ट मैनेजर को असक्षम करें",
+      "description": "यदि अन्य सर्वर पे HTTPS ज़रूरी हो तो और इस कॉन्फिग विकल्प को 'हाँ' सेट किया हो तो, ट्रस्टस्टोर को निर्दिष्ट करने की आवश्यकता नहीं है ।",
       "type": "boolean",
       "default": false
     },

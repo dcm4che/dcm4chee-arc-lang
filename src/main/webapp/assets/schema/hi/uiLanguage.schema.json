@@ -1,6 +1,6 @@
 {
-  "title": "UI Language Config",
-  "description": "UI Language Config",
+  "title": "UI भाषा कॉन्फिग",
+  "description": "UI भाषा कॉन्फिग ।",
   "type": "object",
   "required": [
     "dcmLanguages",
@@ -8,8 +8,8 @@
   ],
   "properties": {
     "dcmuiLanguageConfigName": {
-      "title": "Language Config Name",
-      "description": "Name of the Language Config",
+      "title": "भाषा कॉन्फिग का नाम",
+      "description": "भाषा कॉन्फिग का नाम ।",
       "type": "string"
     },
     "dcmLanguages":{
@@ -22,8 +22,8 @@
       "format": "dcmLanguageChooser"
     },
     "dcmuiLanguageProfileObjects": {
-      "title": "Language Profile",
-      "description": "Language profile for username, role or everyone",
+      "title": "भाषा प्रोफ़ाइल",
+      "description": "उपभोक्ता के नाम, भूमिका या सभी के लिए भाषा प्रोफ़ाइल ।",
       "titleKey":"{dcmuiLanguageProfileName}",
       "type": "array",
       "items" : {

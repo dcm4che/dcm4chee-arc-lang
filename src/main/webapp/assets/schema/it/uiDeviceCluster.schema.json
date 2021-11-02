@@ -1,6 +1,6 @@
 {
-  "title": "UI Cluster Configuration",
-  "description": "Configuration of Device URL to use beside the main UI URL",
+  "title": "Configurazione cluster UI",
+  "description": "Configurazione dell'URL del dispositivo da utilizzare accanto all'URL dell'interfaccia utente principale",
   "type": "object",
   "required": [
     "dcmuiDeviceClusterName",
@@ -9,13 +9,13 @@
   ],
   "properties": {
     "dcmuiDeviceClusterName": {
-      "title": "Name",
-      "description": "Cluster Name",
+      "title": "Nome",
+      "description": "Nome Cluster",
       "type": "string"
     },
     "dcmuiDeviceClusterDescription": {
-      "title": "Description",
-      "description": "Cluster Description",
+      "title": "Descrizione",
+      "description": "Descrizione del cluster",
       "type": "string"
     },
     "dcmuiDeviceClusterDevices": {
@@ -32,8 +32,8 @@
       "format": "webApp"
     },
     "dcmuiDeviceClusterInstalled": {
-      "title": "Installed",
-      "description": "Use this URL in the UI",
+      "title": "Installato",
+      "description": "Utilizza questo URL nell'interfaccia utente",
       "type": "boolean",
       "default": true
     }

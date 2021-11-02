@@ -1,19 +1,19 @@
 {
-  "title": "UI Configuration",
-  "description": "UI Configuration",
+  "title": "UI विन्यास",
+  "description": "UI विन्यास",
   "type": "object",
   "required": [
     "dcmuiConfigName"
   ],
   "properties": {
     "dcmuiConfigName": {
-      "title": "UI Configuration Name",
-      "description": "UI Configuration Name",
+      "title": "UI विन्यास का नाम",
+      "description": "UI विन्यास का नाम",
       "type": "string"
     },
     "dcmuiModalities": {
-      "title": "Statistic Modalities",
-      "description": "Preselected Modalities that should show in the Statistic page",
+      "title": "स्टेटिस्टिक मोडेलिटीज़",
+      "description": "पूर्व चुने हुए मोडेलिटीज़ जो स्टेटिस्टिक पेज में दिखने चाहिए",
       "type": "array",
       "items" : {
         "type": "string"
@@ -29,8 +29,8 @@
       }
     },
     "dcmuiWidgetAets": {
-      "title": "Widget AETs",
-      "description": "Select the AETs that you wan't to see in the AET widget, where you can select in which of them the newly added AET should be as `Accepted Calling AE Title`",
+      "title": "विजेट AET",
+      "description": "उन AET को चुने जो AET विजेट में दिखने चाहिए, जिसमें कौनसे नए जोड़े गए AET को स्वीकृत आह्वान AET के रूप में इस्तमाल किया जाए, यह आप चुन सकते है ।",
       "type": "array",
       "items" : {
         "type": "string"
@@ -38,18 +38,18 @@
       "format": "dcmAETitle"
     },
     "dcmuiBackgroundURL": {
-      "title": "Background URL",
-      "description": "Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px ",
+      "title": "पृष्ठभूमि का URL",
+      "description": "UI का पृष्ठभूमि बदलने के लिए पृष्ठभूमि का URL, यह सापेक्ष या निरपेक्ष URL हो सकता है, छवि की चौड़ाई कम से कम १०२४px होनी चाहिए ।",
       "type": "string"
     },
     "dcmuiLogoURL": {
-      "title": "Logo URL",
-      "description": "Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background",
+      "title": "प्रतीक चिन्ह का URL",
+      "description": "UI का प्रतीक चिन्ह बदलने के लिए प्रतीक चिन्ह का URL, यह सापेक्ष या निरपेक्ष URL हो सकता है, छवि की चौड़ाई १४० पिक्सेल (140px) होनी चाहिए और पारदर्शी पृष्ठभूमि के साथ png प्रारूप में होनी चाहिए ।",
       "type": "string"
     },
     "dcmuiDefaultWidgetAets": {
-      "title": "Default Widget AETs",
-      "description": "Select the AETs that should be preselected on Widget AETs",
+      "title": "डिफ़ॉल्ट विजेट AET",
+      "description": "उन AET का चयन करें, जिन्हें विजेट AET पर पूर्व चुने जाने चाहिए ।",
       "type": "array",
       "items" : {
         "type": "string"
@@ -57,8 +57,8 @@
       "format": "dcmAETitle"
     },
     "dcmuiAetConfig": {
-      "title": "AET drop-down list",
-      "description": "Define which AETs should be visible in the drop-down lists in the UI",
+      "title": "AET की सूची",
+      "description": "UI में AET की सूची के शीर्ष पर जो AET दिखने चाहिए, परिभाषित करें ।",
       "titleKey":"{dcmuiAetListName}",
       "type": "array",
       "items" : {
@@ -66,8 +66,8 @@
       }
     },
     "dcmuiWebAppConfig": {
-      "title": "Web App drop-down list",
-      "description": "Define which WebApps should be visible on the top of the drop-down list in the UI",
+      "title": "वेब अनुप्रयोगों की सूची",
+      "description": "UI में वेब अनुप्रयोगों की सूची के शीर्ष पर जो वेब अनुप्रयोग दिखने चाहिए, परिभाषित करें ।",
       "titleKey":"{dcmuiWebAppListName}",
       "type": "array",
       "items" : {
@@ -75,8 +75,8 @@
       }
     },
     "dcmuiPermission": {
-      "title": "Permission",
-      "description": "Permission",
+      "title": "अनुमति",
+      "description": "अनुमति ।",
       "titleKey":"{dcmuiPermissionName}",
       "type": "array",
       "items" : {
@@ -92,8 +92,8 @@
       }
     },
     "dcmuiDiffConfig": {
-      "title": "Study Diff Configuration",
-      "description": "Study Diff Configuration",
+      "title": "स्टडी तुलना विन्यास",
+      "description": "स्टडी तुलना विन्यास ।",
       "titleKey":"{dcmuiDiffConfigName}",
       "type": "array",
       "items" : {
@@ -101,8 +101,8 @@
       }
     },
     "dcmuiStudyTableConfig": {
-      "title": "UI Study Table Configuration",
-      "description": "Configuration of table",
+      "title": "UI स्टडी सारिणी विन्यास",
+      "description": "सारिणी का विन्यास ।",
       "titleKey":"{dcmuiStudyTableConfigName}",
       "type": "array",
       "items" : {
@@ -110,8 +110,8 @@
       }
     },
     "dcmuiElasticsearchConfig": {
-      "title": "UI Elasticsearch Configuration",
-      "description": "Elasticsearch Configuration for the pro version",
+      "title": "UI इलास्टिकसर्च विन्यास",
+      "description": "प्रो संस्करण के लिए इलास्टिकसर्च विन्यास ।",
       "titleKey":"{dcmuiElasticsearchConfigName}",
       "type": "array",
       "items" : {
@@ -119,8 +119,8 @@
       }
     },
     "dcmuiDeviceClusterObject": {
-      "title": "UI Cluster Configuration",
-      "description": "Group Devices in Clusters",
+      "title": "UI क्लस्टर विन्यास",
+      "description": "डिवाइसेस को क्लस्टर में समूहित करें ।",
       "titleKey":"{dcmuiDeviceClusterName}",
       "type": "array",
       "items" : {
@@ -128,8 +128,8 @@
       }
     },
     "dcmuiDashboardConfig": {
-      "title": "UI Dashboard Configuration",
-      "description": "UI Dashboard Configuration",
+      "title": "UI डैशबोर्ड विन्यास",
+      "description": "UI डैशबोर्ड विन्यास ।",
       "titleKey":"{dcmuiDashboardConfigName}",
       "type": "array",
       "items" : {

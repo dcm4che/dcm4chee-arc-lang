@@ -1,6 +1,6 @@
 {
-  "title": "RESTful Forward Rule",
-  "description": "RESTful Forward Rule",
+  "title": "RESTful 転送 規則",
+  "description": "RESTful 転送 規則",
   "type": "object",
   "required": [
     "cn",
@@ -10,36 +10,36 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the RESTful Forward Rule",
+      "title": "名前",
+      "description": "RESTful 転送 規則の 任意 / 意味の ある 名前",
       "type": "string"
     },
     "dcmWebAppName": {
-      "title": "Web Application name",
-      "description": "Name of the Web Application",
+      "title": "ウェブ アプリケーション名",
+      "description": "ウェブ アプリケーションの 名前",
       "type": "string",
       "format": "webApp"
     },
     "dcmTLSAllowAnyHostname": {
-      "title": "TLS Allow Any Hostname",
-      "description": "If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done.",
+      "title": "TLS 任意の ホスト名を 許可 する",
+      "description": "他の サーバーが HTTPSを 必要とし、 この 構成 オプションが 「真」に 設定されて いる 場合、 他の サーバーの 証明書は トラストストアを 介して 検証されますが、 ホスト名の 検証は 行われません。",
       "type": "boolean",
       "default": false
     },
     "dcmTLSDisableTrustManager": {
-      "title": "TLS Disable Trust Manager",
-      "description": "If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore",
+      "title": "TLS トラスト マネージャーを 無効に する",
+      "description": "他の サーバーが HTTPSを 必要とし、 この 構成 オプションが 「真」に 設定されて いる 場合、 トラストストアを 指定する 必要は ありません。",
       "type": "boolean",
       "default": false
     },
     "dcmURIPattern": {
-      "title": "Request URL Pattern",
-      "description": "Only forward requests which match the given Regular Expression. If prefixed with !, only forward requests which does not match the given Regular Expression.",
+      "title": "要求 URL パターン",
+      "description": "指定された 正規表現に 一致 する 要求のみを 転送します。 接頭辞が ！の 場合、 指定された 正規表現に 一致しない 要求のみを 転送します。",
       "type": "string"
     },
     "dcmRSOperation": {
-      "title": "RESTful Operation",
-      "description": "Name of RESTful Operation which shall be forwarded to another archive instance.",
+      "title": "RESTful 操作",
+      "description": "別の アーカイブ インスタンスに 転送される RESTful 操作の 名前。",
       "type": "array",
       "items" : {
         "type": "string",

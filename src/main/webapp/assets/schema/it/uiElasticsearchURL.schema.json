@@ -1,6 +1,6 @@
 {
-  "title": "UI Elasticsearch URL Configuration",
-  "description": "Elasticsearch URL",
+  "title": "Configurazione dell'URL dell'interfaccia utente di Elasticsearch ",
+  "description": "URL dell'interfaccia utente di Elasticsearch",
   "type": "object",
   "required": [
     "dcmuiElasticsearchURLName",
@@ -10,8 +10,8 @@
   ],
   "properties": {
     "dcmuiElasticsearchURLName": {
-      "title": "Elasticsearch URL Name",
-      "description": "UI Elasticsearch URL Name",
+      "title": "Nome URL Elasticsearch",
+      "description": "URL dell'interfaccia utente di Elasticsearch",
       "type": "string"
     },
     "dcmuiElasticsearchWebApp": {
@@ -26,14 +26,14 @@
       "type": "string"
     },
     "dcmuiElasticsearchIsDefault": {
-      "title": "Is Default",
-      "description": "Set this URL to the default one. (Make sure that only one of the urls - siblings child is set to default).",
+      "title": "È predefinito",
+      "description": "Imposta questo URL su quello predefinito. (Assicurati che solo uno dei Set - fratelli sia impostato come predefinito).",
       "type": "boolean",
       "default": false
     },
     "dcmuiElasticsearchInstalled": {
-      "title": "Installed",
-      "description": "Use this URL in the UI",
+      "title": "Installato",
+      "description": "Utilizza questo URL nell'interfaccia utente",
       "type": "boolean",
       "default": true
     }

@@ -1,6 +1,6 @@
 {
-  "title": "RESTful Forward Rule",
-  "description": "RESTful Forward Rule",
+  "title": "Regola di inoltro RESTful",
+  "description": "Regola di inoltro RESTful",
   "type": "object",
   "required": [
     "cn",
@@ -10,36 +10,36 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the RESTful Forward Rule",
+      "title": "Nome",
+      "description": "Nome arbitrario/significativo della regola forward RESTful",
       "type": "string"
     },
     "dcmWebAppName": {
-      "title": "Web Application name",
-      "description": "Name of the Web Application",
+      "title": "Nome dell'applicazione web",
+      "description": "Nome dell'applicazione Web",
       "type": "string",
       "format": "webApp"
     },
     "dcmTLSAllowAnyHostname": {
-      "title": "TLS Allow Any Hostname",
-      "description": "If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done.",
+      "title": "TLS Consente qualsiasi nome host",
+      "description": "Se l'altro server richiede HTTPS e questa opzione di configurazione è impostata su true, il certificato dell'altro server viene convalidato tramite il truststore, ma la convalida del nome host non viene eseguita.",
       "type": "boolean",
       "default": false
     },
     "dcmTLSDisableTrustManager": {
-      "title": "TLS Disable Trust Manager",
-      "description": "If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore",
+      "title": "TLS Disabilita Trust Manager",
+      "description": "Se l'altro server richiede HTTPS e questa opzione di configurazione è impostata su true, non è necessario specificare un truststore",
       "type": "boolean",
       "default": false
     },
     "dcmURIPattern": {
-      "title": "Request URL Pattern",
-      "description": "Only forward requests which match the given Regular Expression. If prefixed with !, only forward requests which does not match the given Regular Expression.",
+      "title": "Richiedi pattern URL",
+      "description": "Inoltra solo le richieste che corrispondono alla data espressione regolare. Se preceduto da ! , Inoltra solo le richieste che non corrispondono all'espressione regolare data.",
       "type": "string"
     },
     "dcmRSOperation": {
-      "title": "RESTful Operation",
-      "description": "Name of RESTful Operation which shall be forwarded to another archive instance.",
+      "title": "Operazione RESTful",
+      "description": "Nome dell'operazione RESTful che deve essere inoltrata a un'altra istanza di archivio.",
       "type": "array",
       "items" : {
         "type": "string",

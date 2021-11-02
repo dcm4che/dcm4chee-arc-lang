@@ -1,6 +1,6 @@
 {
-  "title": "UI Filter Template",
-  "description": "Defined filter template",
+  "title": "UI फ़िल्टर फर्मा",
+  "description": "परिभाषित फ़िल्टर फर्मा ।",
   "type": "object",
   "required": [
     "dcmuiFilterTemplateGroupName",
@@ -9,41 +9,41 @@
   ],
   "properties": {
     "dcmuiFilterTemplateGroupName": {
-      "title": "Name",
-      "description": "Name of the template",
+      "title": "नाम",
+      "description": "फर्मा का नाम ।",
       "type": "string"
     },
     "dcmuiFilterTemplateID": {
       "title": "ID",
-      "description": "ID of the filter where this template can apply",
+      "description": "फ़िल्टर का ID जहां यह फर्मा लागू हो सकता है ।",
       "type": "string"
     },
     "dcmuiFilterTemplateDescription": {
-      "title": "Description",
-      "description": "Filter template description",
+      "title": "वर्णन",
+      "description": "फ़िल्टर फर्मा का वर्णन ।",
       "type": "string"
     },
     "dcmuiFilterTemplateUsername": {
-      "title": "Username",
-      "description": "Username that can use this template",
+      "title": "उपभोक्ता का नाम",
+      "description": "उपभोक्ता का नाम जो यह फर्मा इस्तमाल कर सकता है ।",
       "type": "string"
     },
     "dcmuiFilterTemplateRole": {
-      "title": "Role",
-      "description": "Username role that can use this template",
+      "title": "भूमिका",
+      "description": "उपभोक्ता की भूमिका जो यह फर्मा इस्तमाल कर सकता है ।",
       "type": "string"
     },
     "dcmuiFilterTemplateFilters": {
-      "title": "Filters",
-      "description": "Default filters in this template, filter pare key=value (example LocalAET=DCM4CHEE). For date filter you can use the predefined keywords (today, yesterday, this_week, this_month, last_week, last_month, this_quarter, last_quarter, this_year, last_year) so the dynamic values of the filters can be generated.",
+      "title": "फिल्टर्स",
+      "description": "इस फर्मा के डिफ़ॉल्ट फिल्टर्स, प्रति key=value के लिए फ़िल्टर परिभाषित करें (उदाहरण के तौर पे LocalAET=DCM4CHEE) । तारीख फ़िल्टर के लिए, आप पूर्वनिर्धारित संकेतशब्द का इस्तमाल कर सकते हैं (आज, बिता कल, यह सप्ताह, यह महीना, पिछला सप्ताह, पिछला महीना, यह तिमाही, पिछला तिमाही, यह साल, पिछला साल) ताकि फिल्टर्स के गतिशील मूल्यों को निर्माण किया जा सकता है ।",
       "type": "array",
       "items" : {
         "type": "string"
       }
     },
     "dcmuiFilterTemplateDefault": {
-      "title": "Default",
-      "description": "Use this template as default",
+      "title": "डिफ़ॉल्ट",
+      "description": "इस फर्मा को डिफ़ॉल्ट के रूप में इस्तमाल करें ।",
       "type": "boolean",
       "default": false
     }

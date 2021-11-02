@@ -1,61 +1,61 @@
 {
-  "title": "UI Diff Configuration",
-  "description": "UI Diff Configuration",
+  "title": "UI アーカイブの 比較 構成",
+  "description": "UI アーカイブの 比較 構成",
   "type": "object",
   "required": [
     "dcmuiDiffConfigName"
   ],
   "properties": {
     "dcmuiDiffConfigName": {
-      "title": "UI Diff Configuration Name",
-      "description": "UI Diff Configuration Name",
+      "title": "UI アーカイブの 比較 構成名",
+      "description": "UI アーカイブの 比較 構成名",
       "type": "string"
     },
     "dcmuiDiffCallingAET": {
-      "title": "Diff Calling AET",
-      "description": "Diff Calling AET",
+      "title": "アーカイブの 比較 呼びかけている AET",
+      "description": "アーカイブの 比較 呼びかけている AET",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmuiDiffPrimaryCFindSCP": {
-      "title": "UI Diff Primary C-FIND SCP",
-      "description": "UI Diff Primary C-FIND SCP",
+      "title": "UI アーカイブの 比較 一次 C-FIND SCP",
+      "description": "UI アーカイブの 比較 一次 C-FIND SCP",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffPrimaryCMoveSCP": {
-      "title": "UI Diff Primary C-MOVE SCP",
-      "description": "UI Diff Primary C-MOVE SCP",
+      "title": "UI アーカイブの 比較 一次 C-MOVE SCP",
+      "description": "UI アーカイブの 比較 一次 C-MOVE SCP",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffPrimaryCStoreSCP": {
-      "title": "UI Diff Primary C-STORE SCP",
-      "description": "UI Diff Primary C-STORE SCP",
+      "title": "UI アーカイブの 比較 一次 C-STORE SCP",
+      "description": "UI アーカイブの 比較 一次 C-STORE SCP",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffSecondaryCFindSCP": {
-      "title": "UI Diff Secondary C-FIND SCP",
-      "description": "UI Diff Secondary C-FIND SCP",
+      "title": "UI アーカイブの 比較 二次 C-FIND SCP",
+      "description": "UI アーカイブの 比較 二次 C-FIND SCP",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffSecondaryCMoveSCP": {
-      "title": "UI Diff Secondary C-MOVE SCP",
-      "description": "UI Diff Secondary C-MOVE SCP",
+      "title": "UI アーカイブの 比較 二次 C-MOVE SCP",
+      "description": "UI アーカイブの 比較 二次 C-MOVE SCP",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffSecondaryCStoreSCP": {
-      "title": "UI Diff Secondary C-STORE SCP",
-      "description": "UI Diff Secondary C-STORE SCP",
+      "title": "UI アーカイブの 比較 二次 C-STORE SCP",
+      "description": "UI アーカイブの 比較 二次 C-STORE SCP",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmuiDiffCriteria": {
-      "title": "UI Diff Criteria",
-      "description": "UI Diff Criteria",
+      "title": "UI アーカイブの 比較 基準",
+      "description": "UI アーカイブの 比較 基準",
       "titleKey":"{dcmuiDiffCriteriaTitle}",
       "type": "array",
       "items" : {

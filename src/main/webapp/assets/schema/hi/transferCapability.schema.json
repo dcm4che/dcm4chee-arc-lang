@@ -1,6 +1,6 @@
 {
-  "title": "Transfer Capability",
-  "description": "Each transfer capability specifies the SOP class that the Network AE can support, the mode that it can utilize (SCP or SCU), and the Transfer Syntax(es) that it can utilize",
+  "title": "हस्तांतरण क्षमता",
+  "description": "हर हस्तांतरण क्षमता SOP वर्ग को निर्दिष्ट करती है जिसे नेटवर्क AE समर्थन कर सकता है, प्रकार (SCP या SCU) और हस्तांतरण वाक्यविन्यास जो वह उपयोग कर सकता है ।",
   "type": "object",
   "required": [
     "dicomSOPClass",
@@ -9,19 +9,19 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name for the Transfer Capability object",
+      "title": "नाम",
+      "description": "हस्तांतरण क्षमता का मनमाना/सार्थक नाम ।",
       "type": "string"
     },
     "dicomSOPClass": {
-      "title": "SOP Class",
-      "description": "SOP Class UID",
+      "title": "SOP वर्ग",
+      "description": "SOP वर्ग UID ।",
       "type": "string",
       "format": "dcmSOPClass"
     },
     "dicomTransferRole": {
-      "title": "DICOM Transfer Role",
-      "description": "DICOM Transfer Role.",
+      "title": "DICOM हस्तांतरण भूमिका",
+      "description": "DICOM हस्तांतरण भूमिका ।",
       "type": "string",
       "enum": [
         "SCP",
@@ -29,8 +29,8 @@
       ]
     },
     "dicomTransferSyntax": {
-      "title": "Transfer Syntax",
-      "description": "Transfer syntax(es) that may be requested as an SCU or that are offered as an SCP.",
+      "title": "हस्तांतरण वाक्यविन्यास",
+      "description": "हस्तांतरण वाक्यविन्यास जिन्हें SCU के रूप में अनुरोध किया जा सकता है या जिन्हें SCP के रूप में पेश किया जाता है ।",
       "type": "array",
       "format": "dcmTransferSyntax",
       "items": {
@@ -38,8 +38,8 @@
       }
     },
     "dcmTransferCapability": {
-      "title": "Transfer Capability Extension",
-      "description": "dcm4che proprietary Transfer Capability Attributes",
+      "title": "हस्तांतरण क्षमता एक्सटेंशन",
+      "description": "DCM4CHE मालिकाना हस्तांतरण क्षमताओं के गुण ।",
       "$ref": "dcmTransferCapability.schema.json"
     }
   }

@@ -1,6 +1,6 @@
 {
-  "title": "UPS on UPS Completed",
-  "description": "Create Workitem in unified Worklist on previous UPS Completed",
+  "title": "以前の UPSの 完了に よって 作成された UPS",
+  "description": "以前の UPSの 完了に よって ワークリストで 作業項目を 作成 する。",
   "type": "object",
   "required": [
     "dcmUPSOnUPSCompletedID",
@@ -15,8 +15,8 @@
   ],
   "properties": {
     "dcmUPSOnUPSCompletedID": {
-      "title": "UPS on UPS Completed Rule ID",
-      "description": "ID of UPS on UPS Completed Rule",
+      "title": "以前の UPSの 完了に よって 作成された UPSの ID",
+      "description": "以前の UPSの 完了に よって 作成された UPS 規則の ID",
       "type": "string"
     },
     "dcmProperty": {
@@ -37,18 +37,18 @@
       }
     },
     "dcmUPSLabel": {
-      "title": "Procedure Step Label",
-      "description": "Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {StudyDescription}",
+      "title": "手順 ステップ ラベル",
+      "description": "作成された UPSの 中で 手順 ステップ ラベルの 値 (0074,1204)。 {attributeID}は、以前の UPSの データセット 内の その 属性の 値に 置き換えられます。 例 : {StudyDescription}。",
       "type": "string"
     },
     "dcmUPSWorklistLabel": {
-      "title": "Worklist Label",
-      "description": "Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {StudyDescription}",
+      "title": "ワークリスト ラベル",
+      "description": "作成された UPSの 中で ワークリスト ラベルの 値 (0074,1202)。 {attributeID}は、以前の UPSの データセット 内の その 属性の 値に 置き換えられます。 例 : {StudyDescription}。",
       "type": "string"
     },
     "dcmUPSPriority": {
-      "title": "Priority",
-      "description": "Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.",
+      "title": "優先度",
+      "description": "作成された UPSの 中で 予定 手順 ステップの 優先度の 値 (0074,1200)。 列挙値: HIGH, MEDIUM, LOW。存在しない 場合、MEDIUMが 適用されます。",
       "type": "string",
       "default": "MEDIUM",
       "enum": [
@@ -58,8 +58,8 @@
       ]
     },
     "dcmUPSInputReadinessState": {
-      "title": "Input Readiness State",
-      "description": "Value of Input Readiness State (0040,4041) in created UPS",
+      "title": "入力 覚悟 状態",
+      "description": "作成された UPSの 中で 入力 覚悟 状態の 値 (0040,4041)",
       "type": "string",
       "default": "READY",
       "enum": [
@@ -69,14 +69,14 @@
       ]
     },
     "dcmUPSStartDateTimeDelay": {
-      "title": "Scheduled Procedure Step Start DateTime Delay",
-      "description": "Delay of Scheduled Procedure Step Start DateTime (0040,4005) in created UPS from receive time in format PnDTnHnMn.nS. No delay if absent.",
+      "title": "予定された 手順 ステップ 開始 日時の 遅延",
+      "description": "作成された UPSの 中で  PnDTnHnMn.nS 形式で 予定 手順 ステップ 開始 日時の 受信 時刻からの 遅延 (0040,4005)。 存在しない 場合、遅延はありません。",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmUPSCompletionDateTimeDelay": {
-      "title": "Expected Completion DateTime Delay",
-      "description": "Delay of Expected Completion DateTime (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.",
+      "title": "予期される 完了 日時の 遅延",
+      "description": "作成された UPSの 中で PnDTnHnMn.nS 形式で 予期される 完了 日時の 受信 時刻からの 遅延 (0040,4011)。存在しない 場合、完了 予期 日時は 設定されません。",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -103,14 +103,14 @@
       "default": true
     },
     "dcmDestinationAE": {
-      "title": "Destination AE",
-      "description": "Title of a DICOM Application Entity to which Instances will be stored.",
+      "title": "宛先 AE",
+      "description": "インスタンスが 格納される DICOM アプリケーション エンティティの タイトル。",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmEntity": {
-      "title": "Scope of Accumulation",
-      "description": "Scope of Accumulation",
+      "title": "累積の 範囲",
+      "description": "累積の 範囲",
       "type": "string",
       "enum": [
         "Study",
@@ -119,70 +119,70 @@
       ]
     },
     "dcmUPSScheduledWorkitemCode": {
-      "title": "Scheduled Workitem Code",
-      "description": "Item of Scheduled Workitem Code Sequence (0040,4018) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "予定された 作業項目 コード",
+      "description": "作成された UPSの 中で 予定された 作業項目 コード シーケンスの (CV, CSD, \"CM\") 形式で アイテム (0040,4018)。",
       "type": "string"
     },
     "dcmUPSScheduledStationNameCode": {
-      "title": "Scheduled Station Name Code",
-      "description": "Item of Scheduled Station Name Code Sequence (0040,4025) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "予定された ステーション名 コード",
+      "description": "作成された UPSの 中で 予定された ステーション名 コード シーケンスの (CV, CSD, \"CM\") 形式で アイテム (0040,4025)。",
       "type": "string"
     },
     "dcmUPSScheduledStationClassCode": {
-      "title": "Scheduled Station Class Code",
-      "description": "Item of Scheduled Station Class Code Sequence (0040,4026) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "予定された ステーション クラス コード",
+      "description": "作成された UPSの 中で 予定された ステーション クラス コード シーケンスの (CV, CSD, \"CM\") 形式で アイテム (0040,4026)。",
       "type": "string"
     },
     "dcmUPSScheduledStationLocationCode": {
-      "title": "Scheduled Station Geographic Location Code",
-      "description": "Item of Scheduled Station Geographic Location Code Sequence (0040,4027) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "予定された ステーション 地理的 ロケーション コード",
+      "description": "作成された UPSの 中で 予定された ステーション 地理的 ロケーション コード シーケンスの (CV, CSD, \"CM\") 形式で アイテム (0040,4027)。",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerCode": {
-      "title": "Scheduled Human Performer Code",
-      "description": "Item of Human Performer Code Sequence (0040,4009) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "予定された 人間の 実行者 コード",
+      "description": "作成された UPSの 中で 予定された 人間の 実行者の シーケンスの（0040,4034）アイテムに おける 人間の 実行者 コードの (CV, CSD, \"CM\") 形式で 値（0040,4009）。",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerName": {
-      "title": "Scheduled Human Performer Name",
-      "description": "Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {PerformingPhysicianName}",
+      "title": "予定された 人間の 実行者名",
+      "description": "作成された UPSの 中で 予定された 人間の 実行者の シーケンスの（0040,4034）アイテムに おける 人間の 実行者名の 値（0040,4037）。{attributeID}は、以前の UPSの データセット 内の その 属性の 値に 置き換えられます。例 : {PerformingPhysicianName}。",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerOrganization": {
-      "title": "Scheduled Human Performer Organization",
-      "description": "Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {ResponsibleOrganization}",
+      "title": "予定された 人間の 実行者の 組織",
+      "description": "作成された UPSの 中で 予定された 人間の 実行者の シーケンスの（0040,4034）アイテムに おける 人間の 実行者の 組織の 値（0040,4036）。{attributeID}は、以前の UPSの データセット 内の その 属性の 値に 置き換えられます。 例 : {ResponsibleOrganization}。",
       "type": "string"
     },
     "dcmAdmissionID": {
-      "title": "Admission Number",
-      "description": "Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {AdmissionID}",
+      "title": "アドミッション 番号",
+      "description": "作成された UPSの 中で アドミッション 番号 (0038,0010) の 値。 {attributeID}は、以前の UPSの データセット 内の その 属性の 値に 置き換えられます。 例 : {AdmissionID}。",
       "type": "string"
     },
     "dicomIssuerOfAdmissionID": {
-      "title": "Issuer of Admission ID",
-      "description": "Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "title": "アドミッション 番号の 発行者",
+      "description": "作成された UPSの 中で, アドミッション 番号の 発行者の シーケンスの アイテムの ローカル 名前空間 エンティティ ID（0040,0031）、ユニバーサル エンティティ IDと（0040,0032）ユニバーサル エンティティ ID タイプ（0040,0033) の 値。 形式 : <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string"
     },
     "dcmUPSIncludeStudyInstanceUID": {
-      "title": "Include Study Instance UID",
-      "description": "Indicates if Study Instance UID (0020,000D) of the previous UPS object shall be included in the created UPS",
+      "title": "検査 インスタンス UIDを 含める",
+      "description": "作成された UPSの 中で 以前の UPSの オブジェクトの 検査 インスタンス UIDを（0020,000D) 含めるか どうかを 示します。",
       "type": "boolean",
       "default": false
     },
     "dcmUPSIncludeReferencedRequest": {
-      "title": "Include Referenced Request",
-      "description": "Indicates if the Referenced Request Sequence (0040,A370) of the previous UPS is included in the created UPS. Otherwise an empty Referenced Request Sequence (0040,A370) is included.",
+      "title": "参照された 要求を 含める",
+      "description": "作成された UPSの 中で, 参照 要求 シーケンス (0040,A370) アイテムの 中で, 以前の UPSの 検査 インスタンス UID (0020,000D) と アクセッション 番号 (0008,0050) と 要求 手順 ID (0040,1001) と 要求された サービス (0032,1033) が 含まれるか どうかを 示します。 それ 以外の 場合は、空の 参照 要求 シーケンス（0040、A370）が 含まれます。",
       "type": "boolean",
       "default": false
     },
     "dcmURI": {
-      "title": "XSL Stylesheet URI",
-      "description": "Specifies URI of the XSL style sheet to include additional attributes in created UPS.",
+      "title": "XSL スタイルシート URI",
+      "description": "作成した UPSに 追加の 属性を 含めるために 受信した HL7 メッセージを トランスコード する XSL スタイルシートの URIを 指定します。",
       "type": "string"
     },
     "dcmNoKeywords": {
-      "title": "No Attribute Keyword",
-      "description": "Indicates if attribute keywords shall be omitted in DICOM XML passed to XSLT.",
+      "title": "属性 キーワード なし",
+      "description": "XSLTに 渡される DICOM XMLで 属性 キーワードが 省略されるか どうかを 示します。",
       "type": "boolean",
       "default": false
     }

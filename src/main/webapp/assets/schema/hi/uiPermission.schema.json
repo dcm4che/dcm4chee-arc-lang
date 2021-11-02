@@ -1,6 +1,6 @@
 {
-  "title": "UI Permission",
-  "description": "UI Permission",
+  "title": "UI अनुमति",
+  "description": "UI अनुमति ।",
   "type": "object",
   "required": [
     "dcmuiPermissionName",
@@ -8,13 +8,13 @@
   ],
   "properties": {
     "dcmuiPermissionName": {
-      "title": "UI Permission Name",
-      "description": "Name of Permission for UI Action",
+      "title": "UI अनुमति का नाम",
+      "description": "UI क्रिया के लिए अनुमति का नाम ।",
       "type": "string"
     },
     "dcmuiAction": {
-      "title": "UI Action",
-      "description": "UI Action",
+      "title": "UI क्रिया",
+      "description": "UI क्रिया ।",
       "type": "string",
       "enum": [
         "menu-studies",
@@ -84,8 +84,8 @@
       ]
     },
     "dcmuiActionParam": {
-      "title": "UI Action Parameter",
-      "description": "UI Action Parameter",
+      "title": "UI क्रिया मापदण्ड",
+      "description": "UI क्रिया मापदण्ड ।",
       "type": "array",
       "items" : {
         "type": "string",
@@ -104,8 +104,8 @@
       }
     },
     "dcmAcceptedUserRole": {
-      "title": "Accepted User Role",
-      "description": "Accepted User Role",
+      "title": "स्वीकृत उपभोक्ता की भूमिका",
+      "description": "स्वीकृत उपभोक्ता की भूमिका ।",
       "type": "array",
       "items" : {
         "type": "string"
