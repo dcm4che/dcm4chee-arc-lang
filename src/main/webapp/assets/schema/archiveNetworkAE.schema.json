@@ -765,12 +765,21 @@
       }
     },
     "dcmArchiveAttributeCoercion": {
-      "title": "Attribute Coercion",
+      "title": "Attribute Coercion (Legacy)",
       "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
         "$ref": "archiveAttributeCoercion.schema.json"
+      }
+    },
+    "dcmArchiveAttributeCoercion2": {
+      "title": "Attribute Coercion (New)",
+      "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
     "dcmStudyRetentionPolicy": {
