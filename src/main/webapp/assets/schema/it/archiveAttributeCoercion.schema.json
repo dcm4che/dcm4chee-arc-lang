@@ -98,7 +98,7 @@
     },
     "dcmMergeMWLMatchingKey": {
       "title": "Unisci chiave di corrispondenza MWL",
-      "description": "Specifica l'attributo dell'oggetto ricevuto per la ricerca dell'elemento MWL utilizzato per forzare gli attributi della richiesta. Se assenti, gli attributi di richiesta degli oggetti ricevuti non verranno forzati.",
+      "description": "AE Title of MWL SCP to lookup MWL Item used to coerce request attributes of received objects. If it refers a MWL SCP of the own Archive Device, the Archive DB is directly queried for a matching MWL item. If it refers an external MWL SCP, Specifica l'attributo dell'oggetto ricevuto per la ricerca dell'elemento MWL utilizzato per forzare gli attributi della richiesta. Se assenti, gli attributi di richiesta degli oggetti ricevuti non verranno forzati. If absent, the Archive DB is queried for a matching MWL items provided by any Archive MWL AE.",
       "type": "string",
       "enum": [
         "PatientID",
