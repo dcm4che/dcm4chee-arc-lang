@@ -1,0 +1,140 @@
+{
+  "title": "UI配置",
+  "description": "UI配置",
+  "type": "object",
+  "required": [
+    "dcmuiConfigName"
+  ],
+  "properties": {
+    "dcmuiConfigName": {
+      "title": "UI配置名称",
+      "description": "UI配置名称",
+      "type": "string"
+    },
+    "dcmuiModalities": {
+      "title": "统计模态",
+      "description": "显示在统计页面上的预选模态",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiLanguageConfig":{
+      "title": "Language Config",
+      "description": "Config the languages of the UI",
+      "titleKey":"{dcmuiLanguageConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiLanguage.schema.json"
+      }
+    },
+    "dcmuiWidgetAets": {
+      "title": "Widget AETs",
+      "description": "选择您不想在AET窗体中看到的AET，您可以在其中选择新添加的AET应作为“Accepted Calling AE Title”。",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiBackgroundURL": {
+      "title": "背景URL",
+      "description": "用于更改UI背景的背景URL。可以是相对URL或绝对URL,图像宽度必须至少为1024px",
+      "type": "string"
+    },
+    "dcmuiLogoURL": {
+      "title": "Logo URL",
+      "description": "用于更改UI徽标的徽标URL,可以是相对URL或绝对URL,图像宽度必须为140px,png格式,背景必须是透明的。",
+      "type": "string"
+    },
+    "dcmuiDefaultWidgetAets": {
+      "title": "默认小部件AETs",
+      "description": "选择小部件AET需要预选的AET。 ",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiAetConfig": {
+      "title": "AET下拉列表",
+      "description": "定义要在UI下拉列表中显示的AET。 ",
+      "titleKey":"{dcmuiAetListName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiAet.schema.json"
+      }
+    },
+    "dcmuiWebAppConfig": {
+      "title": "Web应用程序下拉列表",
+      "description": "定义显示在UI下拉列表顶部的Web应用程序",
+      "titleKey":"{dcmuiWebAppListName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiWebApp.schema.json"
+      }
+    },
+    "dcmuiPermission": {
+      "title": "允许",
+      "description": "允许",
+      "titleKey":"{dcmuiPermissionName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiPermission.schema.json"
+      }
+    },"dcmuiFilterTemplateObject": {
+      "title": "UI Filter Template",
+      "description": "Defined filter template",
+      "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
+      "type": "array",
+      "items" : {
+        "$ref": "uiFilterTemplate.schema.json"
+      }
+    },
+    "dcmuiDiffConfig": {
+      "title": "错误配置",
+      "description": "错误配置",
+      "titleKey":"{dcmuiDiffConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDiffConfig.schema.json"
+      }
+    },
+    "dcmuiStudyTableConfig": {
+      "title": "UI检查表配置",
+      "description": "表配置",
+      "titleKey":"{dcmuiStudyTableConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiTable.schema.json"
+      }
+    },
+    "dcmuiElasticsearchConfig": {
+      "title": "UI弹性搜索配置",
+      "description": "专业弹性搜索配置",
+      "titleKey":"{dcmuiElasticsearchConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiElasticsearch.schema.json"
+      }
+    },
+    "dcmuiDeviceClusterObject": {
+      "title": "UI集群配置",
+      "description": "集群中的设备分组。 ",
+      "titleKey":"{dcmuiDeviceClusterName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDeviceCluster.schema.json"
+      }
+    },
+    "dcmuiDashboardConfig": {
+      "title": "UI仪表板配置",
+      "description": "UI仪表板配置",
+      "titleKey":"{dcmuiDashboardConfigName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDashboard.schema.json"
+      }
+    }
+  }
+}

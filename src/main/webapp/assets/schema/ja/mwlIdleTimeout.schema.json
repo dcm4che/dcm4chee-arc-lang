@@ -1,6 +1,6 @@
 {
-  "title": "MWL Idle Timeout",
-  "description": "MWL Idle Timeout",
+  "title": "MWL アイドル タイムアウト",
+  "description": "MWL アイドル タイムアウト",
   "type": "object",
   "required": [
     "cn",
@@ -10,19 +10,19 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the MWL Idle Timeout.",
+      "title": "名前",
+      "description": "MWL アイドル タイムアウトの 任意 / 意味の ある 名前。",
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "MWL SCP AE Title",
-      "description": "Archive AE Title of MWL SCP on which the MWL Idle Timeout shall be applied.",
+      "title": "MWL SCP AE タイトル",
+      "description": "MWL アイドル タイムアウトが 適用される MWL SCPの アーカイブ AE タイトル。",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmAETitle": {
-      "title": "Scheduled Station AE Title",
-      "description": "Scheduled Station AE Title(s) of Scheduled Procedure Steps for which the MWL Idle Timeout shall be applied. If none is specified, the MWL Idle Timeout is applied to all Scheduled Procedure Steps provided by the MWL SCP.",
+      "title": "予定された ステーション AE タイトル",
+      "description": "MWL アイドル タイムアウトが 適用される 予定された 手順 ステップの 予定された ステーション AE タイトル。 何も 指定されて いない 場合、 MWL アイドル タイムアウトは、 MWL SCPに よって 提供される すべての 予定された 手順 ステップに 適用されます。",
       "type": "array",
       "items": {
         "type": "string"
@@ -30,8 +30,8 @@
       "format": "dcmAETitle"
     },
     "dcmMWLStatusOnIdle": {
-      "title": "MWL Status on Idle",
-      "description": "Change Status of idle Scheduled Procedure Steps to specified value.",
+      "title": "アイドル時の MWL ステータス",
+      "description": "アイドル 予定 手順 ステップの ステータスを 指定した 値に 変更します。",
       "type": "string",
       "enum":[
         "CANCELED",
@@ -40,8 +40,8 @@
       ]
     },
     "dcmDuration": {
-      "title": "Idle Timeout",
-      "description": "Timeout after which the Status of matching Scheduled Procedure Steps is changed to the specified final status.",
+      "title": "アイドル タイムアウト",
+      "description": "タイムアウト後、 一致 する 予定 手順 ステップの ステータスが 指定された 最終 ステータスに 変更されます。",
       "type": "string",
       "format": "dcmDuration"
     }

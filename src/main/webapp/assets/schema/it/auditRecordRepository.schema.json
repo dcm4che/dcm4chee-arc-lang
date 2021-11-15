@@ -1,14 +1,14 @@
 {
-  "title": "Audit Record Repository",
-  "description": "Audit Record Repository related information",
+  "title": "Archivio delle registrazioni di controllo",
+  "description": "Informazioni relative all'archivio delle registrazioni di controllo",
   "type": "object",
   "required": [
     "dicomNetworkConnectionReference"
   ],
   "properties": {
     "dicomNetworkConnectionReference": {
-      "title": "Network Connection Reference",
-      "description": "The JSON Pointers to the Network Connection objects of this Audit Record Repository",
+      "title": "Riferimento per la connessione di rete",
+      "description": "I puntatori JSON agli oggetti di connessione di rete di questo repository di registrazioni di controllo",
       "type": "array",
       "items": {
         "type": "string"
@@ -16,8 +16,8 @@
       "format": "dicomDeviceName"
     },
     "dicomInstalled": {
-      "title": "installed",
-      "description": "True if the ARR is installed on network. If not present, information about the installed status of the ARR is inherited from the device",
+      "title": "installato",
+      "description": "Vero se ARR è installato sulla rete. Se non presente, le informazioni sullo stato di installazione dell'ARR vengono ereditate dal dispositivo",
       "type": "boolean"
     }
   }

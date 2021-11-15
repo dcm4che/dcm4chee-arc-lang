@@ -1,6 +1,6 @@
 {
-  "title": "UI Diff Criteria",
-  "description": "UI Diff Criteria",
+  "title": "UI तुलना निकष",
+  "description": "UI तुलना निकष.",
   "type": "object",
   "required": [
     "dcmuiDiffCriteriaTitle",
@@ -8,36 +8,36 @@
   ],
   "properties": {
     "dcmuiDiffCriteriaTitle": {
-      "title": "UI Diff Criteria Title",
-      "description": "Title of Diff Criteria",
+      "title": "UI तुलना निकषाचे नाव",
+      "description": "तुलना निकषाचे नाव.",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "UI Diff Criteria Description",
-      "description": "Unconstrained text description of this UI Diff Criteria",
+      "title": "UI तुलना मापदंड का वर्णन",
+      "description": "या UI तुलना निकषाचे असंघटित मजकूर वर्णन.",
       "type": "string"
     },
     "dcmuiDiffCriteriaNumber": {
-      "title": "UI Diff Criteria Number",
-      "description": "Attribute Set Number used to order Attribute Sets.",
+      "title": "UI तुलना निकष संख्या",
+      "description": "विशेषता सेट्स ऑर्डर करण्यासाठी वापरलेला विशेषता सेट संख्या.",
       "type": "integer",
       "minimum": 1
     },
     "dcmuiDiffIncludeMissing": {
-      "title": "UI Including Missing",
-      "description": "Indicate if missing Studies shall be included",
+      "title": "UI अनुपस्थित का समावेश",
+      "description": "गहाळ अभ्यास असल्यास समावेश करण्यासाठी सूचित करते.",
       "type": "boolean",
       "default": false
     },
     "dcmAttributeSetID": {
-      "title": "Attribute Set ID",
-      "description": "ID of Attribute Set specifying compared attributes",
+      "title": "विशेषता सेटचा ID",
+      "description": "तुलना केलेल्या गुणधर्म निर्दिष्ट करणारा विशेषता सेटचा ID.",
       "type": "string",
       "format": "dcmAttributeSetID"
     },
     "dcmuiDiffGroupButton": {
-      "title": "UI Diff Group Button",
-      "description": "UI Diff Group Button",
+      "title": "UI तुलना ग्रुप बटण",
+      "description": "UI तुलना ग्रुप बटण.",
       "type": "array",
       "items": {
         "type": "string",
@@ -49,8 +49,8 @@
       }
     },
     "dcmuiDiffAction": {
-      "title": "UI Diff Action",
-      "description": "UI Diff Action",
+      "title": "UI तुलना क्रिया",
+      "description": "UI तुलना क्रिया.",
       "type": "array",
       "items": {
         "type": "string",

@@ -1,6 +1,6 @@
 {
-  "title": "Metrics Descriptor",
-  "description": "Metrics Descriptor",
+  "title": "メトリック 記述子",
+  "description": "メトリック 記述子",
   "type": "object",
   "required": [
     "dcmMetricsName",
@@ -8,25 +8,25 @@
   ],
   "properties": {
     "dcmMetricsName": {
-      "title": "Metrics Name",
-      "description": "Metrics Name",
+      "title": "メトリック名",
+      "description": "メトリック名",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "Metrics Description",
-      "description": "Unconstrained text description of the metrics",
+      "title": "メトリックの 説明",
+      "description": "メトリックの 制約のない テキスト 説明",
       "type": "string"
     },
     "dcmMetricsRetentionPeriod": {
-      "title": "Metrics Retention Period",
-      "description": "Metrics Retention Period in minutes",
+      "title": "メトリック 保持 期間",
+      "description": "分で メトリック 保持 期間",
       "type": "integer",
       "default" : 60,
       "minimum": 1
     },
     "dcmUnit": {
-      "title": "Metrics Unit",
-      "description": "Unit of metrics data",
+      "title": "メトリック 単位",
+      "description": "メトリック データの 単位",
       "type": "string"
     }
   }

@@ -1,6 +1,6 @@
 {
-  "title": "MWL Import",
-  "description": "Specifies import of Scheduled Procedure Step from external MWL SCP",
+  "title": "MWL आयात",
+  "description": "बाहरी MWL SCP से अनुसूचित प्रक्रिया स्टेप्स के आयात को निर्दिष्ट करता है",
   "type": "object",
   "required": [
     "dcmMWLImportID",
@@ -12,63 +12,63 @@
   ],
   "properties": {
     "dcmMWLImportID": {
-      "title": "MWL Import ID",
-      "description": "ID of MWL Import",
+      "title": "MWL आयात ID",
+      "description": "MWL आयात का ID",
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "Calling AE Title",
-      "description": "Calling AE Title used in A-ASSOCIATE-RQ to external MWL SCP",
+      "title": "कॉलिंग AE का शीर्षक",
+      "description": "बाहरी MWL SCP को भेजे गए A-ASSOCIATE-RQ में उपयोग किए गया कॉलिंग AE का शीर्षक ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmMergeMWLSCP": {
-      "title": "Source MWL SCP",
-      "description": "AE Title of external MWL SCP to query for Scheduled Procedure Step to import.",
+      "title": "स्रोत MWL SCP",
+      "description": "आयात करने के लिए अनुसूचित प्रक्रिया स्टेप्स क्वेरी करने के लिए बाहरी MWL SCP के AE का शीर्षक ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmDestinationAE": {
-      "title": "Destination MWL SCP",
-      "description": "AE Title of local MWL SCP feeded/updated by Scheduled Procedure Steps returned by external MWL SCP.",
+      "title": "गंतव्य MWL SCP",
+      "description": "स्थानीय MWL SCP का AE शीर्षक जहा बाहरी MWL SCP द्वारा लौटाए गए अनुसूचित प्रक्रिया स्टेप्स को फीड/अपडेट किया जाएगा ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmDuration": {
-      "title": "Import not before",
-      "description": "Import Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled earlier in the future than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the future.",
+      "title": "इससे पहले आयात न करें",
+      "description": "ISO-8601 कालावधि प्रारूप PnDTnHnMnS में निर्दिष्ट समय अंतराल से पहले भविष्य में अनुसूचित बाहरी MWL SCP से अनुसूचित प्रक्रिया स्टेप्स आयात करें; यदि अनुपस्थित है, तो भविष्य में निर्धारित सभी अनुसूचित प्रक्रिया स्टेप्स को आयात करें ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmMWLImportNotOlder": {
-      "title": "Import not older than",
-      "description": "Import Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled later in the past than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the past.",
+      "title": "इससे पुराने आयात न करें",
+      "description": "ISO-8601 कालावधि प्रारूप PnDTnHnMnS में निर्दिष्ट समय अंतराल से पहले पूर्व में अनुसूचित बाहरी MWL SCP से अनुसूचित प्रक्रिया स्टेप्स आयात करें; यदि अनुपस्थित है, तो पूर्व में निर्धारित सभी अनुसूचित प्रक्रिया स्टेप्स को आयात करें ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmMWLImportFilterBySCU": {
-      "title": "Filter by SCU",
-      "description": "Indicates to apply specified filter on matches returned by external MWL SCP.",
+      "title": "SCU द्वारा फ़िल्टर करें",
+      "description": "बाहरी MWL SCP द्वारा लौटाए गए परिणामों पर निर्दिष्ट फ़िल्टर लागू करने का संकेत देता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmMWLImportDeleteNotFound": {
-      "title": "Delete not found",
-      "description": "Indicates to delete Scheduled Procedure Steps from local MWL not returned by external MWL SCP.",
+      "title": "न लौटाए गए MWL हटाए",
+      "description": "बाहरी MWL SCP द्वारा वापस नहीं किए गए अनुसूचित प्रक्रिया स्टेप्स को स्थानीय MWL से हटाने का संकेत देता है ।",
       "type": "boolean",
       "default": false
     },
     "dcmProperty": {
-      "title": "Matching Keys",
-      "description": "Filter Attributes in format ({AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword})={value}. Eg: ScheduledProcedureStepSequence.ScheduledStationAETitle=MODALITY_XY",
+      "title": "मिलान कुंजी",
+      "description": "मिलान कुंजी इस प्रारूप में ({AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword})={value} । उदहारण: ScheduledProcedureStepSequence.ScheduledStationAETitle=MODALITY_XY",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmIncludeField": {
-      "title": "Return Keys",
-      "description": "Attributes in format (all|{AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword}) requested from the external MWL SCP additional to attributes required to be supported by MWL SCPs according DICOM. 'all' requests all attributes configured by the Patient and the MWL Attribute Filter of the Archive.",
+      "title": "लौटाए कुंजी",
+      "description": "लौटाए कुंजी इस प्रारूप में (all|{AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword}) जो DICOM के अनुसार MWL SCPs द्वारा समर्थित होने के लिए आवश्यक विशेषताओं के अतिरिक्त बाहरी MWL SCP से अनुरोध किया गया । 'all' आर्काइव के मरीज़ और MWL विशेषता फ़िल्टर द्वारा कॉन्फ़िगर की गई सभी विशेषताओं का अनुरोध करता है ।",
       "type": "array",
       "items": {
         "type": "string"

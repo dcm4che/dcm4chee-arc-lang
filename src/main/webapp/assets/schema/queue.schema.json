@@ -21,11 +21,6 @@
         "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiCompareSideObjects[*].dcmuiCompareSideQueueName"
       ]
     },
-    "dicomDescription": {
-      "title": "Queue Description",
-      "description": "Unconstrained text description of the Queue",
-      "type": "string"
-    },
     "dicomInstalled": {
       "title": "installed",
       "description": "If false, processing of tasks in this queue is paused.",
@@ -38,6 +33,11 @@
       "type": "integer",
       "minimum": 1,
       "default": 1
+    },
+    "dicomDescription": {
+      "title": "DICOM Description",
+      "description": "Textual description of the DICOM entity",
+      "type": "string"
     },
     "dcmMaxRetries": {
       "title": "Maximum Number of Retries",

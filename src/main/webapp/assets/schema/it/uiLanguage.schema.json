@@ -1,6 +1,6 @@
 {
-  "title": "UI Language Config",
-  "description": "UI Language Config",
+  "title": "Configurazione della lingua dell'interfaccia utente",
+  "description": "Configurazione della lingua dell'interfaccia utente",
   "type": "object",
   "required": [
     "dcmLanguages",
@@ -8,8 +8,8 @@
   ],
   "properties": {
     "dcmuiLanguageConfigName": {
-      "title": "Language Config Name",
-      "description": "Name of the Language Config",
+      "title": "Nome configurazione lingua",
+      "description": "Nome della configurazione della lingua",
       "type": "string"
     },
     "dcmLanguages":{
@@ -22,8 +22,8 @@
       "format": "dcmLanguageChooser"
     },
     "dcmuiLanguageProfileObjects": {
-      "title": "Language Profile",
-      "description": "Language profile for username, role or everyone",
+      "title": "Profilo della lingua",
+      "description": "Profilo della lingua per nome utente, ruolo o tutti",
       "titleKey":"{dcmuiLanguageProfileName}",
       "type": "array",
       "items" : {

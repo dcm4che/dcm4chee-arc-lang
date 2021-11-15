@@ -1,6 +1,6 @@
 {
-  "title": "Metrics Descriptor",
-  "description": "Metrics Descriptor",
+  "title": "नाप का वर्णनकर्ता",
+  "description": "नाप का वर्णनकर्ता ।",
   "type": "object",
   "required": [
     "dcmMetricsName",
@@ -8,25 +8,25 @@
   ],
   "properties": {
     "dcmMetricsName": {
-      "title": "Metrics Name",
-      "description": "Metrics Name",
+      "title": "नाप का नाम",
+      "description": "नाप का नाम ।",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "Metrics Description",
-      "description": "Unconstrained text description of the metrics",
+      "title": "नाप का वर्णन",
+      "description": "नाप का स्वैछिक विषय वर्णन ।",
       "type": "string"
     },
     "dcmMetricsRetentionPeriod": {
-      "title": "Metrics Retention Period",
-      "description": "Metrics Retention Period in minutes",
+      "title": "नाप धारण कालावधि",
+      "description": "मिनटों में नाप धारण कालावधि ।",
       "type": "integer",
       "default" : 60,
       "minimum": 1
     },
     "dcmUnit": {
-      "title": "Metrics Unit",
-      "description": "Unit of metrics data",
+      "title": "नाप की इकाई",
+      "description": "नाप डेटा की इकाई ।",
       "type": "string"
     }
   }

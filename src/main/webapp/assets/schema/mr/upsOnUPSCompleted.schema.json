@@ -1,6 +1,6 @@
 {
-  "title": "UPS on UPS Completed",
-  "description": "Create Workitem in unified Worklist on previous UPS Completed",
+  "title": "UPS समाप्तीवर पुन्हा UPS निर्माण करायचे नियम",
+  "description": "UPS समाप्तीवर पुन्हा युनिफाइड वर्कलिस्ट मध्ये वर्क आयटम ला निर्माण करा.",
   "type": "object",
   "required": [
     "dcmUPSOnUPSCompletedID",
@@ -15,8 +15,8 @@
   ],
   "properties": {
     "dcmUPSOnUPSCompletedID": {
-      "title": "UPS on UPS Completed Rule ID",
-      "description": "ID of UPS on UPS Completed Rule",
+      "title": "UPS समाप्तीवर पुन्हा UPS निर्माण करायचे नियमाची ID.",
+      "description": "दृष्टांतांच्या साठवण्यावर UPS नियमाची ID.",
       "type": "string"
     },
     "dcmProperty": {
@@ -37,18 +37,18 @@
       }
     },
     "dcmUPSLabel": {
-      "title": "Procedure Step Label",
-      "description": "Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {StudyDescription}",
+      "title": "प्रक्रिया स्टेप लेबल",
+      "description": "तयार केलेल्या UPS मध्ये प्रक्रियेच्या स्टेप लेबलचे मूल्य (००७४,१२०४). पूर्वीचा UPS रेकॉर्डच्या डेटासेटमधील {attributeID} च्या मूल्याने बदलले जाईल. उदाहरण : {StudyDescription}.",
       "type": "string"
     },
     "dcmUPSWorklistLabel": {
-      "title": "Worklist Label",
-      "description": "Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {StudyDescription}",
+      "title": "वर्कलिस्ट लेबल",
+      "description": "तयार केलेल्या UPS मध्ये कार्यसूची लेबलचे मूल्य (००७४,१२०२). पूर्वीचा UPS रेकॉर्डच्या डेटासेटमधील {attributeID} च्या मूल्याने बदलले जाईल. उदाहरण : {StudyDescription}.",
       "type": "string"
     },
     "dcmUPSPriority": {
-      "title": "Priority",
-      "description": "Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.",
+      "title": "अग्रक्रम",
+      "description": "तयार केलेल्या UPS मध्ये अनुसूचित प्रक्रियेच्या स्टेप प्राधान्यचे मूल्य (००७४,१२००). गणित मूल्ये: HIGH, MEDIUM, LOW. गैरहजर राहिल्यास, MEDIUM लागू केले जाईल.",
       "type": "string",
       "default": "MEDIUM",
       "enum": [
@@ -58,8 +58,8 @@
       ]
     },
     "dcmUPSInputReadinessState": {
-      "title": "Input Readiness State",
-      "description": "Value of Input Readiness State (0040,4041) in created UPS",
+      "title": "इनपुट तत्परता स्थिती",
+      "description": "तयार केलेल्या UPS मध्ये इनपुट तत्परता स्थितीचे (००४०,४०४१) मूल्य.",
       "type": "string",
       "default": "READY",
       "enum": [
@@ -69,14 +69,14 @@
       ]
     },
     "dcmUPSStartDateTimeDelay": {
-      "title": "Scheduled Procedure Step Start DateTime Delay",
-      "description": "Delay of Scheduled Procedure Step Start DateTime (0040,4005) in created UPS from receive time in format PnDTnHnMn.nS. No delay if absent.",
+      "title": "अनुसूचित प्रक्रिया स्टेप प्रारंभ तारीख आणि वेळ विलंब",
+      "description": "प्राप्त झालेल्या वेळेपासून अनुसूचित प्रक्रिया स्टेप प्रारंभ तारीख आणि वेळेचे विलंब (००४०,४००५) या प्रारूपात PnDTnHnMn.nS. अनुपस्थित असल्यास, कोणतीही विलंब लागू होणार नाही.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmUPSCompletionDateTimeDelay": {
-      "title": "Expected Completion DateTime Delay",
-      "description": "Delay of Expected Completion DateTime (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.",
+      "title": "अपेक्षित पूर्ण होण्याची तारीख आणि वेळ विलंब",
+      "description": "प्राप्त झालेल्या वेळेपासून अपेक्षित पूर्ण होण्याची तारीख आणि वेळेचे विलंब (००४०,४०११) या प्रारूपात PnDTnHnMn.nS. अनुपस्थित असल्यास, कोणतीही अपेक्षित समाप्ती तारीख आणि वेळ संच केला जाणार नाही.",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -103,14 +103,14 @@
       "default": true
     },
     "dcmDestinationAE": {
-      "title": "Destination AE",
-      "description": "Title of a DICOM Application Entity to which Instances will be stored.",
+      "title": "गंतव्य AE",
+      "description": "DICOM अनुप्रयोग घटकाचे शीर्षक ज्यामध्ये दृष्टांते साठवले जातील.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmEntity": {
-      "title": "Scope of Accumulation",
-      "description": "Scope of Accumulation",
+      "title": "जमा होण्याची व्याप्ती",
+      "description": "जमा होण्याची व्याप्ती.",
       "type": "string",
       "enum": [
         "Study",
@@ -119,70 +119,70 @@
       ]
     },
     "dcmUPSScheduledWorkitemCode": {
-      "title": "Scheduled Workitem Code",
-      "description": "Item of Scheduled Workitem Code Sequence (0040,4018) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "अनुसूचित वर्कआयटम कोड",
+      "description": "तयार केलेल्या UPS मधील अनुसूचित वर्कआयटम कोड क्रमचे (००४०,४०१८) आयटम या प्रारूपात (CV, CSD, \"CM\").",
       "type": "string"
     },
     "dcmUPSScheduledStationNameCode": {
-      "title": "Scheduled Station Name Code",
-      "description": "Item of Scheduled Station Name Code Sequence (0040,4025) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "अनुसूचित स्टेशन नाव कोड",
+      "description": "तयार केलेल्या UPS मधील अनुसूचित स्टेशन नाव कोड क्रमचे (००४०,४०२५) आयटम या प्रारूपात (CV, CSD, \"CM\").",
       "type": "string"
     },
     "dcmUPSScheduledStationClassCode": {
-      "title": "Scheduled Station Class Code",
-      "description": "Item of Scheduled Station Class Code Sequence (0040,4026) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "अनुसूचित स्टेशन वर्ग कोड",
+      "description": "तयार केलेल्या UPS मधील अनुसूचित स्टेशन वर्ग कोड क्रमचे (००४०,४०२६) आयटम या प्रारूपात (CV, CSD, \"CM\").",
       "type": "string"
     },
     "dcmUPSScheduledStationLocationCode": {
-      "title": "Scheduled Station Geographic Location Code",
-      "description": "Item of Scheduled Station Geographic Location Code Sequence (0040,4027) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "अनुसूचित स्टेशन भौगोलिक स्थान कोड",
+      "description": "तयार केलेल्या UPS स्वरूपात अनुसूचित स्टेशन भौगोलिक स्थान कोड क्रम (००४०,४०२७) चे आयटम या प्रारूपात (CV, CSD, \"CM\").",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerCode": {
-      "title": "Scheduled Human Performer Code",
-      "description": "Item of Human Performer Code Sequence (0040,4009) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "अनुसूचित मानव परफॉर्मर कोड",
+      "description": "तयार केलेल्या UPS मधील अनुसूचित मानवी परफॉर्मर्स क्रममधील (००४०,४०३४) मानवी परफॉर्मर कोड क्रमचे (००४०,४००९) आयटम या प्रारूपात (CV, CSD, \"CM\").",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerName": {
-      "title": "Scheduled Human Performer Name",
-      "description": "Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {PerformingPhysicianName}",
+      "title": "अनुसूचित मानवी परफॉर्मर नाव",
+      "description": "तयार केलेल्या UPS मध्ये अनुसूचित मानवी परफॉर्मर्स सीक्वेन्स (००४०,४०३४) च्या आयटममधील मानवी परफॉर्मरचे नाव (००४०,४०३७). पूर्वीचा UPS रेकॉर्डच्या डेटासेटमधील {attributeID} च्या मूल्याने बदलले जाईल. उदाहरण : {PerformingPhysicianName}.",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerOrganization": {
-      "title": "Scheduled Human Performer Organization",
-      "description": "Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {ResponsibleOrganization}",
+      "title": "अनुसूचित मानवी परफॉर्मर संस्था",
+      "description": "तयार केलेल्या UPS मध्ये अनुसूचित मानवी परफॉर्मर्स सीक्वेन्स (००४०,४०३४) च्या आयटममधील मानव परफॉरमर्स संस्थाचे मूल्य (००४०,४०३६). पूर्वीचा UPS रेकॉर्डच्या डेटासेटमधील {attributeID} च्या मूल्याने बदलले जाईल. उदाहरण : {ResponsibleOrganization}.",
       "type": "string"
     },
     "dcmAdmissionID": {
-      "title": "Admission Number",
-      "description": "Value of Admission ID (0038,0010) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {AdmissionID}",
+      "title": "प्रवेश ID",
+      "description": "तयार केलेल्या UPS मधील प्रवेश ID (००३८,००१०) चे मूल्य. पूर्वीचा UPS रेकॉर्डच्या डेटासेटमधील {attributeID} च्या मूल्याने बदलले जाईल. उदाहरण : {AdmissionID}.",
       "type": "string"
     },
     "dicomIssuerOfAdmissionID": {
-      "title": "Issuer of Admission ID",
-      "description": "Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "title": "प्रवेश ID क्रम चा जारीकर्ता",
+      "description": "तयार केलेल्या UPS मधील प्रवेश ID चा जारीकर्ता क्रम (००३८,००१४) च्या आयटममधील स्थानिक नेमस्पेस एंटिटी ID (००४०,००३१), यूनिवर्सल एंटिटी ID (००४०,००३२) व यूनिवर्सल एंटिटी ID प्रकार (००४०,००३३) चे मूल्य, या प्रारूपात : <रुग्णाचे ID चा जारीकर्ता> [& <यूनिवर्सल एंटिटी ID> & <यूनिवर्सल एंटिटी ID प्रकार>].",
       "type": "string"
     },
     "dcmUPSIncludeStudyInstanceUID": {
-      "title": "Include Study Instance UID",
-      "description": "Indicates if Study Instance UID (0020,000D) of the previous UPS object shall be included in the created UPS",
+      "title": "अभ्यास दृष्टांत UID सामावणे",
+      "description": "तयार केलेल्या UPS मधील पूर्वीचा UPS रेकॉर्डच्या अभ्यास दृष्टांत UID (००२०,०००डी) ला सामावण्यासाठी दर्शविते.",
       "type": "boolean",
       "default": false
     },
     "dcmUPSIncludeReferencedRequest": {
-      "title": "Include Referenced Request",
-      "description": "Indicates if the Referenced Request Sequence (0040,A370) of the previous UPS is included in the created UPS. Otherwise an empty Referenced Request Sequence (0040,A370) is included.",
+      "title": "संदर्भित विनंती सामावणे",
+      "description": "तयार केलेल्या UPS मधील संदर्भित विनंती क्रम (००४०,ए३७०) च्या आयटममध्ये पूर्वीचा UPS रेकॉर्डच्या अभ्यास दृष्टांत UID (००२०,०००डी) व निर्दिष्ट एक्सेसियन क्रमांक (०००८,००५०), विनंती केलेली प्रक्रियाची ID (००४०,१००१) व विनंती करणारी सेवा (००३२,१०३३) ला सामावण्यासाठी दर्शविते. निर्दिष्ट केलेले नसेल तर, रिकामे संदर्भित विनंती क्रम (००४०,ए३७०) सामावले जाईल.",
       "type": "boolean",
       "default": false
     },
     "dcmURI": {
-      "title": "XSL Stylesheet URI",
-      "description": "Specifies URI of the XSL style sheet to include additional attributes in created UPS.",
+      "title": "XSL स्टाइलशीट URI",
+      "description": "तयार केलेल्या UPS च्या विशेषता समाविष्ट करून ट्रान्सकोड करणाऱ्या XSL स्टाइलशीट URI निर्दिष्ट करते.",
       "type": "string"
     },
     "dcmNoKeywords": {
-      "title": "No Attribute Keyword",
-      "description": "Indicates if attribute keywords shall be omitted in DICOM XML passed to XSLT.",
+      "title": "विशेषता कीवर्ड नाहीत",
+      "description": "विशेषता कीवर्ड्स (ज्यांना XSLT मध्ये पाठवले जाते) ना DICOM XML मधून वगळण्याचे सूचित करते.",
       "type": "boolean",
       "default": false
     }

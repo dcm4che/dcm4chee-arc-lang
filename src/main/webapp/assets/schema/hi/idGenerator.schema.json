@@ -1,6 +1,6 @@
 {
-  "title": "ID Generator",
-  "description": "ID Generator",
+  "title": "ID जेनरेटर",
+  "description": "ID जेनरेटर ।",
   "type": "object",
   "required": [
     "dcmIDGeneratorName",
@@ -9,24 +9,18 @@
   ],
   "properties": {
     "dcmIDGeneratorName": {
-      "title": "ID Generator Name",
-      "description": "ID Generator Name.",
-      "type": "string",
-      "enum": [
-        "PatientID",
-        "AccessionNumber",
-        "RequestedProcedureID",
-        "ScheduledProcedureStepID"
-      ]
+      "title": "ID जेनरेटर का नाम",
+      "description": "ID जेनरेटर का नाम ।",
+      "type": "string"
     },
     "dcmIDGeneratorFormat": {
-      "title": "ID Generator Format",
-      "description": "Format string used by this ID Generator. %0<width>d will be replaced by a sequential number with leading zeros according the given width",
+      "title": "ID जेनरेटर का प्रारूप",
+      "description": "इस ID जेनरेटर द्वारा इस्तमाल किया गया प्रारूप स्ट्रिंग %०<width>d को दी गई चौड़ाई के अनुसार अग्रणी शून्य के साथ क्रमिक संख्या के साथ बदला जाएगा ।",
       "type": "string"
     },
     "dcmIDGeneratorInitialValue": {
-      "title": "ID Generator Initial Value",
-      "description": "Initial value for sequence used by this ID Generator.",
+      "title": "ID जेनरेटर का प्राथमिक मूल्य",
+      "description": "इस ID जेनरेटर द्वारा इस्तमाल किया गए क्रम का प्राथमिक मूल्य ।",
       "type": "integer",
       "minimum": 0,
       "default": 1

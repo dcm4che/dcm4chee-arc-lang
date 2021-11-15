@@ -1,6 +1,6 @@
 {
-  "title": "HL7 Prefetch Rule",
-  "description": "HL7 Prefetch Rule",
+  "title": "HL7 प्रीफ़ेच नियम",
+  "description": "HL7 प्रीफ़ेच नियम",
   "type": "object",
   "required": [
     "cn",
@@ -14,69 +14,69 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the Prefetch Rule",
+      "title": "नाम",
+      "description": "HL7 प्रीफ़ेच नियम का मनमाना/सार्थक नाम ।",
       "type": "string"
     },
     "dcmQueueName": {
-      "title": "Queue Name",
-      "description": "Name of Task Queue used for scheduling retrieve tasks triggered by this Prefetch Rule",
+      "title": "कतार का नाम",
+      "description": "इस प्रीफ़ेच नियम द्वारा सक्रीय किए गए पुनःप्राप्ति कार्यों को अनुसूचित करनेवाले टास्क कतार का नाम ।",
       "type": "string",
       "format":"dcmQueueName"
     },
     "dicomAETitle": {
-      "title": "Archive AE title",
-      "description": "AE Title of Archive Application Entity used for retrieving selected Studies from Prefetch C-Move SCP.",
+      "title": "आर्काइव AE का नाम",
+      "description": "प्रीफ़ेच C-MOVE SCP से चुने हुए स्टडीज के पुनःप्राप्ति में इस्तमाल किए गए आर्काइव अनुप्रयोग तत्व का नाम ।",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmPrefetchCFindSCP": {
-      "title": "Prefetch C-Find SCP",
-      "description": "AE Title of C-FIND SCP which is queried for Studies matching the specified Entity Selector.",
+      "title": "प्रीफ़ेच C-FIND SCP",
+      "description": "C-FIND SCP AE का नाम जहा से निर्दिष्ट तत्व चयनकर्ता से मेल मिलनेवाले स्टडीज ढूंढे जाएंगे ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmPrefetchCMoveSCP": {
-      "title": "Prefetch C-Move SCP",
-      "description": "AE Title of C-MOVE SCP from which selected Studies are retrieved.",
+      "title": "प्रीफ़ेच C-MOVE SCP",
+      "description": "C-MOVE SCP AE का नाम जहा से चुने हुए स्टडीज का पुनःप्राप्ति होगा ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmPrefetchCStoreSCP": {
-      "title": "Prefetch C-Store SCP",
-      "description": "AE Title of C-STORE SCP to which selected Studies are retrieved.",
+      "title": "प्रीफ़ेच C-STORE SCP",
+      "description": "C-STORE SCP AE का नाम जहा चुने हुए स्टडीज पुनःप्राप्त किए जाएंगे ।",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmDestinationCFindSCP": {
-      "title": "Destination C-FIND SCP",
-      "description": "Suppress retrieve of selected Studies from Prefetch C-Move SCP which are (already) available at specified Destination C-FIND SCP with equal or more Number of Study Related Instances as returned by Prefetch C-FIND SCP. Retrieve all selected Studies if absent.",
+      "title": "गंतव्य C-FIND SCP",
+      "description": "प्रीफ़ेच C-MOVE SCP से चुने हुए स्टडीज पुनःप्राप्त न करें यदि, ये स्टडीज - समान या ज्यादा 'स्टडी से सम्बंधित दृष्टांतों की संख्या' मूल्य के साथ जो प्रीफ़ेच C-FIND SCP द्वारा वापस भेजे गए थे - निर्दिष्ट किए हुए गंतव्य C-FIND SCP पे पहले से ही मौजूद है । अनुपस्थित हो तो, सारे स्टडीज पुनर्प्राप्त करें ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dicomDeviceName": {
-      "title": "Prefetch Device Name",
-      "description": "Specifies Device on which the Retrieve Task(s) shall be scheduled. If not specified, the Retrieve Task(s) is/are scheduled on the Device which received the HL7 messages.",
+      "title": "प्रीफ़ेच डिवाइस का नाम",
+      "description": "जिस डिवाइस पे प्रीफ़ेच कार्यों को अनुसूचित किया जाएगा, यह निर्दिष्ट करता है । यदि निर्दिष्ट नहीं किया है, तो जिस डिवाइस पे HL7 संदेश प्राप्त हुए है, उसपे ही प्रीफ़ेच कार्यों को अनुसूचित किया जाएगा ।",
       "type": "string",
       "format": "dicomDeviceName"
     },
     "dcmProperty": {
-      "title": "Conditions",
-      "description": "Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Example: MSH-4=FORWARD or MSH-9=ORM\\^O01 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "title": "नियम",
+      "description": "नियम इस प्रारूप में {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx} । उदाहरण के तौर पे: MSH-4=FORWARD या MSH-9=ORM\\^O01 या PID-3[.3]=PIDIssuer या PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType ।",
       "type": "array",
       "items": { "type": "string" }
     },
     "dcmEntitySelector": {
-      "title": "Entity Selector",
-      "description": "Specifies matching keys used to select Studies to prefetch. Format: {key}={value}[&{key}={value)]..., with {key} = 'priors' | 'StudyAge' | {attributeID}. {value} in the format '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] are replaced by the value of the specified HL7 field from the received HL7 message which triggered the prefetch. If no Entity Selector is specified, all Studies for the Patient will be pre-fetched. Example: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=$OBR-24' => select at most 2 prior Studies not older than 5 years containing at least one Series with Modality from OBR-24.",
+      "title": "तत्व चयनकर्ता",
+      "description": "प्रीफ़ेच करने के लिए स्टडीज को चुनने में इस्तमाल किए गए मिलान कुंजियों को निर्दिष्ट करता है । प्रारूप : {कुंजी}={मूल्य}[&{कुंजी}={मूल्य)]..., जहा {कुंजी} = 'priors' | 'StudyAge' | {attributeID} । इस प्रारूप में '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] में जो {मूल्य} है, वे HL7 संदेश, जिससे प्रीफ़ेच सक्रीय हुआ, उसके HL7 फील्ड के मूल्य से बदले जाएंगे । यदि कोई तत्व चयनकर्ता निर्दिष्ट नहीं किया है, तो मरीज़ के सारे स्टडीज प्रीफ़ेच होंगे । उदाहरण के तौर पे: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=$OBR-24' => अधिक से अधिक पिछले २ स्टडीज जो ५ साल से पुराने न होकर और जिनमे कम से कम एक सीरीज हो जिसका मोडेलिटी HL7 संदेश के OBR-24 फील्ड से मेल मिलता हो, ऐसे स्टडीज चुने ।",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
-      "title": "Ignore Assigning Authority of Patient ID",
-      "description": "Conditionally ignore Assigning Authority of Patient ID (PID-3.4) in received HL7 message which triggered the prefetch for selecting Studies of the Patient.",
+      "title": "मरीज़़ की ID के जारीकर्ता को नज़रअंदाज़ करें",
+      "description": "प्राप्त हुए HL7 संदेश, जिससे मरीज़़ के चुने हुए स्टडीज का प्रीफ़ेच सक्रीय हुआ, में मरीज़़ की ID के जारीकर्ता जो पी.आई.डी.-३.४ (याने की पी.आई.डी. सेगमेंट के तीसरे फील्ड के चौथे कॉम्पोनेन्ट में पाया जाता है; PID-3.4) को सशर्त रूप से नज़रअंदाज़ करें ।",
       "type": "string",
       "enum": [
         "ALWAYS",
@@ -85,44 +85,44 @@
       ]
     },
     "dcmIssuerOfPatientID": {
-      "title": "Assigning Authority of Patient ID",
-      "description": "Assigning Authority of Patient ID against values in received HL7 message are matched, if Assigning Authority of Patient ID is set to MATCHING or NOT_MATCHING. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "title": "मरीज़़ की ID का जारीकर्ता",
+      "description": "प्राप्त हुए HL7 संदेश में मरीज़़ की ID का जारीकर्ता के मूल्यों के साथ मेल मिलनेवाले मरीज़़ की ID का जारीकर्ता के मूल्य, यदि मरीज़़ की ID का जारीकर्ता को MATCHING या NOT_MATCHING सेट किया है । प्रारूप: <मरीज़़ की ID का जारीकर्ता> [& <यूनिवर्सल एंटिटी ID> & <यूनिवर्सल एंटिटी ID प्रकार>] ।",
       "type": "array",
       "items": { "type": "string" }
     },
     "dcmPrefetchForIssuerOfPatientID": {
-      "title": "Prefetch for Assigning Authority of Patient ID",
-      "description": "Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. Studies matching the specified Entity Selector of this qualified patient identifier shall be queried. If absent, by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "title": "मरीज़़ की ID का जारीकर्ता के लिए प्रीफ़ेच",
+      "description": "प्राप्त हुए HL7 संदेश में मरीज़़ की ID का जारीकर्ता का मूल्य जो PID-3 में पहचानकर्ताओं की सूची में योग्य मरीज़़ पहचानकर्ता को खोजने के लिए इस्तमाल किया जाएगा । इस योग्य मरीज़ के निर्दिष्ट तत्व चयनकर्ता से मेल मिलनेवाले स्टडीज ढूंढे जाएंगे । यदि अनुपस्थित हो तो, PID-3 में से पहला योग्य मरीज़़ की ID का जारीकर्ता इस्तमाल किया जाएगा । प्रारूप: <मरीज़़ की ID का जारीकर्ता> [& <यूनिवर्सल एंटिटी ID> & <यूनिवर्सल एंटिटी ID प्रकार>] ।",
       "type": "string"
     },
     "dcmDuration": {
-      "title": "Suppress Duplicate Retrieve Interval",
-      "description": "Suppress Retrieve of Studies already retrieved not earlier than the specified interval to avoid duplicate retrieves.",
+      "title": "द्वीगुण पुनःप्राप्ति का अधीन अंतराल",
+      "description": "द्वीगुण पुनःप्राप्ति टालने के लिए, जो स्टडीज निर्दिष्ट अंतराल के बाद पुनःप्राप्त किए गए हो, उन स्टडीज को फिरसे पुनःप्राप्त करना अधीन करें ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmHistorySize": {
-      "title": "Suppress Duplicate History Size",
-      "description": "Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.",
+      "title": "डुप्लिकेट प्रीफ़ेच न करने के लिए इतिहास सूची का माप",
+      "description": "इतिहास सूची में नोट की गई, इस नियम को ट्रिगर करने वाले विशिष्ट PID-3 वाले HL7 संदेशों की अधिकतम संख्या ।",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmPrefetchDateTimeField": {
-      "title": "Prefetch Date Time Field",
-      "description": "Delay retrieve of selected Studies to time from referred HL7 TS field in format {SEG}-{Seq#}[.{Comp#}]. Example: TQ1-7 or SCH-11.4. Schedule retrieve of selected Studies immediate if absent.",
+      "title": "प्रीफ़ेच तारीख फील्ड",
+      "description": "{SEG}-{Seq#}[.{Comp#}] प्रारूप में संदर्भित HL7 TS क्षेत्र से समय के मूल्य तक चयनित स्टडीज के पुनःप्राप्ति को देर करें । उदाहरण के तौर पे: TQ1-7 या SCH-11.4 । अनुपस्थित होने पर, चयनित स्टडीज के पुनःप्राप्ति को तुरंत अनुसूचीत करें ।",
       "type": "string"
     },
     "dcmPrefetchInAdvance": {
-      "title": "Prefetch In Advance",
-      "description": "Schedule retrieve of selected Studies in advance to the time from configured dcmPrefetchDateTimeField with given time span in ISO-8601 duration format PnDTnHnMn.nS. Not effective, if dcmPrefetchDateTimeField is absent.",
+      "title": "अग्रिम में प्रीफ़ेच",
+      "description": "कॉन्फ़िगर किए गए 「प्रीफ़ेच तारीख फील्ड」 के समय से पहले ISO-8601 अवधि प्रारूप PnDTnHnMn.nS में दिए गए समय अवधि घटाकर, उस समय पे चयनित स्टडीज की पुनःप्राप्ति अनुसूचीत करें । प्रभावी नहीं है, अगर 「प्रीफ़ेच तारीख फील्ड」 अनुपस्थित है ।",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmSchedule": {
-      "title": "Prefetch Schedule",
-      "description": "Delay prefetch to specified time periods in addition to configured Prefetch Date Time field. If no Prefetch Schedule is specified, queue a Prefetch Task for the selected Studies of the Patient based on configured Prefetch Date Time field. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
+      "title": "प्रीफ़ेच अनुसूची",
+      "description": "कॉन्फ़िगर किए गए 「प्रीफ़ेच तारीख फील्ड」 के साथ प्रीफ़ेच को अनुसूचित समय में करें । यदि कोई प्रीफ़ेच अनुसूची निर्दिष्ट नहीं किया है, तो मरीज़ के चुने हुए स्टडीज को कॉन्फ़िगर किए गए 「प्रीफ़ेच तारीख फील्ड」 के अनुसार प्रीफ़ेच कार्य कतार में डाले । प्रारूप : 'hour=[0-23] dayOfWeek=[0-6]' (0=रविवार) ।",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"

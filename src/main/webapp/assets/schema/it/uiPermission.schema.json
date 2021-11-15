@@ -1,6 +1,6 @@
 {
-  "title": "UI Permission",
-  "description": "UI Permission",
+  "title": "Autorizzazione dell'interfaccia utente",
+  "description": "Autorizzazione dell'interfaccia utente",
   "type": "object",
   "required": [
     "dcmuiPermissionName",
@@ -9,12 +9,12 @@
   "properties": {
     "dcmuiPermissionName": {
       "title": "UI Permission Name",
-      "description": "Name of Permission for UI Action",
+      "description": "Nome dell'autorizzazione per l'azione dell'interfaccia utente",
       "type": "string"
     },
     "dcmuiAction": {
-      "title": "UI Action",
-      "description": "UI Action",
+      "title": "Azione dell'interfaccia utente",
+      "description": "Azione dell'interfaccia utente",
       "type": "string",
       "enum": [
         "menu-studies",
@@ -83,8 +83,8 @@
       ]
     },
     "dcmuiActionParam": {
-      "title": "UI Action Parameter",
-      "description": "UI Action Parameter",
+      "title": "Parametro di azione dell'UI",
+      "description": "Parametro di azione dell'UI",
       "type": "array",
       "items" : {
         "type": "string",
@@ -103,8 +103,8 @@
       }
     },
     "dcmAcceptedUserRole": {
-      "title": "Accepted User Role",
-      "description": "Accepted User Role",
+      "title": "Ruolo utente accettato",
+      "description": "Ruolo utente accettato",
       "type": "array",
       "items" : {
         "type": "string"

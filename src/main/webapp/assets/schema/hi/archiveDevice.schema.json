@@ -33,6 +33,7 @@
     "dcmSpanningCFindSCPPolicy",
     "dcmFallbackCMoveSCPRetries",
     "dcmFallbackWadoURIHttpStatusCode",
+    "dcmTaskFetchSize",
     "dcmUPSProcessingFetchSize",
     "dcmExportTaskFetchSize",
     "dcmRetrieveTaskFetchSize",
@@ -86,11 +87,14 @@
     "dcmSchedulerMinStartDelay",
     "dcmStowRetiredTransferSyntax",
     "dcmAuditSoftwareConfigurationVerbose",
-    "dcmStowExcludeAPPMarkers",
-    "dcmStowQuicktime2MP4",
     "dcmWadoIgnorePresentationLUTShape",
     "dcmWadoMetadataExcludePrivate",
+    "dcmStowExcludeAPPMarkers",
+    "dcmStowQuicktime2MP4",
     "dcmFilterByIssuerOfPatientID",
+    "dcmMWLAccessionNumberGenerator",
+    "dcmMWLRequestedProcedureIDGenerator",
+    "dcmMWLScheduledProcedureStepIDGenerator",
     "hl7PSUForRequestedProcedure",
     "hl7PSURequestedProcedureID",
     "hl7PSUAccessionNumber",
@@ -474,8 +478,8 @@
       "default": false
     },
     "dcmWadoMetadataExcludePrivate": {
-      "title": "Wado Metadata Exclude Private",
-      "description": "Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. May be overwritten by configured values for particular Archive Network AEs.",
+      "title": "Wado निजी मेटाडेटा हटाए",
+      "description": "WADO-RS पुनःप्राप्ति ट्रांजैक्शन द्वारा लौटाए गए मेटाडेटा से निजी डेटा तत्वों को हटाने का संकेत देता है । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
@@ -502,7 +506,7 @@
     },
     "dcmQidoETag": {
       "title": "Qido ETag",
-      "description": "Indicates to return Last-Modified and ETag for Search Series or Instances of a Study; disabled if absent. May be overwritten by configured values for particular Archive Network AEs.",
+      "description": "स्टडीज के सीरीज या दृष्टांत खोज सेवाओंमें अंतिम-संशोधित और ETag वापस करने का संकेत देता है; अनुपस्थित होने पर अक्षम । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
@@ -870,6 +874,27 @@
       "description": "STOW-RS सेवा द्वारा अधिकांश डेटा अनुरोध संदेशों को और XML या JSON मेटाडेटा के अधिकांश डेटा स्पूल किए गए निर्देशिका का पथ ।",
       "type": "string",
       "default": "${jboss.server.temp.dir}"
+    },
+    "dcmMWLAccessionNumberGenerator": {
+      "title": "MWL परिग्रहण संख्या जेनरेटर",
+      "description": "HL7 ऑर्डर संदेश प्राप्त होने पे या RESTful सेवा द्वारा निर्माण किए गए अनुसूचित प्रक्रियाओं स्टेप्स के अनुपस्थित परिग्रहण संख्याओं को पूरक करने के लिए ID जेनरेटर की पहचान करता है । किसी आर्काइव नेटवर्क AE या आर्काइव HL7 अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "type": "string",
+      "format": "dcmIDGenerator",
+      "default": "AccessionNumber"
+    },
+    "dcmMWLRequestedProcedureIDGenerator": {
+      "title": "MWL अनुरोधित प्रक्रिया ID जेनरेटर",
+      "description": "HL7 ऑर्डर संदेश प्राप्त होने पे या RESTful सेवा द्वारा निर्माण किए गए अनुसूचित अनुरोधित प्रक्रिया IDs के अनुपस्थित परिग्रहण संख्याओं को पूरक करने के लिए ID जेनरेटर की पहचान करता है । किसी आर्काइव नेटवर्क AE या आर्काइव HL7 अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "type": "string",
+      "format": "dcmIDGenerator",
+      "default": "RequestedProcedureID"
+    },
+    "dcmMWLScheduledProcedureStepIDGenerator": {
+      "title": "MWL अनुसूचित प्रक्रिया स्टेप ID जेनरेटर",
+      "description": "HL7 ऑर्डर संदेश प्राप्त होने पे या RESTful सेवा द्वारा निर्माण किए गए अनुसूचित प्रक्रियाओं स्टेप्स के अनुपस्थित अनुसूचित प्रक्रिया स्टेप ID को पूरक करने के लिए ID जेनरेटर की पहचान करता है । किसी आर्काइव नेटवर्क AE या आर्काइव HL7 अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "type": "string",
+      "format": "dcmIDGenerator",
+      "default": "ScheduledProcedureStepID"
     },
     "hl7ORUAction": {
       "title": "HL7 ORU क्रिया",
@@ -1718,14 +1743,14 @@
       "default" : false
     },
     "dcmChangeRequesterAET": {
-      "title": "Change Requester AET",
-      "description": "Indicates change requester AET in rejections triggered by archive. May be overwritten by configured values for particular Archive Network AEs.",
+      "title": "परिवर्तन अनुरोधकर्ता AET",
+      "description": "आर्काइव द्वारा ट्रिगर किए गए अस्वीकृतियों में परिवर्तन अनुरोधकर्ता AET को दर्शाता है । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmFilterByIssuerOfPatientID": {
-      "title": "Filter by Issuer of Patient ID",
-      "description": "Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. May be overwritten by configured value for particular Archive Network AEs.",
+      "title": "मरीज़ के ID के जारीकर्ता द्वारा फ़िल्टर करें",
+      "description": "मरीज़ के ID के जारीकर्ता द्वारा फ़िल्टर करें, भले ही मरीज़ के ID के लिए कोई मिलान कुंजी निर्दिष्ट न किया गया हो । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default" : false
     },
@@ -1776,7 +1801,7 @@
     },
     "dcmQueue": {
       "title": "कतार",
-      "description": "व्यवस्थापित Task कतार ।",
+      "description": "व्यवस्थापित टास्क कतार ।",
       "type": "array",
       "titleKey":"{dcmQueueName}",
       "items" : {
@@ -1829,8 +1854,8 @@
       }
     },
     "dcmMPPSForwardRule": {
-      "title": "MPPS Forward Rule",
-      "description": "MPPS Forward Rules applied to MPPS received by any AE. May be supplemented by configured MPPS Forward Rules for particular Archive Network AEs.",
+      "title": "MPPS फॉरवर्ड नियम",
+      "description": "MPPS फॉरवर्ड नियम जो किसी भी AE द्वारा प्राप्त MPPS पर लागू होंगे । आर्काइव नेटवर्क AE स्तर पे कॉन्फ़िगर किए गए MPPS फॉरवर्ड नियम पूरक होंगे ।",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {

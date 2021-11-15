@@ -1,6 +1,6 @@
 {
-  "title": "Study Retention Policy",
-  "description": "Study Retention Policy",
+  "title": "検査 保持 ポリシー",
+  "description": "検査 保持 ポリシー",
   "type": "object",
   "required": [
     "cn",
@@ -13,58 +13,58 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the Study Retention Policy",
+      "title": "名前",
+      "description": "検査 保持 ポリシーの 任意 / 意味の ある 名前",
       "type": "string"
     },
     "dcmRetentionPeriod": {
-      "title": "Study Retention Period",
-      "description": "Study Retention Period in ISO-8601 period format PnYnMnD or PnW",
+      "title": "検査 保持 期間",
+      "description": "ISO-8601 期間 PnYnMnD または PnW 形式で 検査 保持 期間",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmRulePriority": {
-      "title": "Rule Priority",
-      "description": "Rule Priority.",
+      "title": "規則の 優先度",
+      "description": "規則の 優先度。",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmProperty": {
-      "title": "Conditions",
-      "description": "Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER",
+      "title": "条件",
+      "description": "(SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} 形式で 条件。 「|」 シンボルで 区切る ことに より、 特定の 属性に 複数の 値を 指定できます。 例 : SendingApplicationEntityTitle=FORWARD または Modality=MR|CT または ProcedureCodeSequence.CodeValue=MRProcedure または 00180015=KNEE または 00321034.00080100=RequestingServiceCode または ImageType[3]=LOCALIZER",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmExpireSeriesIndividually": {
-      "title": "Expire Series Individually",
-      "description": "Indicates if series should be expired individually or not.",
+      "title": "シリーズを 個別に 期限切れに する",
+      "description": "シリーズを 個別に 期限切れに するか どうかを 示します。",
       "type": "boolean",
       "default": false
     },
     "dcmStartRetentionPeriodOnStudyDate": {
-      "title": "Start Retention Period on Study Date",
-      "description": "Indicates if retention period should be started on Study Date instead on receive of an object of the Study",
+      "title": "検査日に 保存 期間を 開始します",
+      "description": "検査の オブジェクトを 受信したときではなく、 検査日に 保存 期間を 開始するか どうかを 示します",
       "type": "boolean",
       "default": false
     },
     "dcmExporterID": {
-      "title": "Export expired Study",
-      "description": "Export expired Study/Series using the specified Exporter",
+      "title": "期限切れの 検査を 書き出す",
+      "description": "指定された エクスポーターを 使用した 期限切れの 検査 / シリーズを 書き出す",
       "type": "string",
       "format": "dcmExporterID"
     },
     "dcmFreezeExpirationDate": {
-      "title": "Freeze Expiration Date",
-      "description": "Indicate to disable changes of the Expiration Date by following events.",
+      "title": "失効日を 凍結 する",
+      "description": "つぎの イベントに 従うことに よる 失効日の 変更を 無効に する ことを 示します。",
       "type": "boolean",
       "default": false
     },
     "dcmRevokeExpiration": {
-      "title": "Revoke Expiration Date",
-      "description": "Indicate to revoke a previous set Expiration Date.",
+      "title": "失効日を 取り消す",
+      "description": "以前に 設定された 失効日を 取り消す ことを 示します。",
       "type": "boolean",
       "default": false
     }
