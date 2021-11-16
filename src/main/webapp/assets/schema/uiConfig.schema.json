@@ -137,12 +137,12 @@
       }
     },
     "dcmuiCreateDialogTemplate": {
-      "title": "UI Create-Dialog Template",
-      "description": "Template that will be used on the create-dialogs while crating MWL or Patient",
+      "title": "UI Dialog Template",
+      "description": "UI Create Dialog Templates Configuration",
       "titleKey":"{dcmuiTemplateName}",
       "type": "array",
       "items" : {
-        "$ref": "uiCreateDialogTemplate.schema.json"
+        "$ref": "uiDialogTemplate.schema.json"
       }
     }
   }
