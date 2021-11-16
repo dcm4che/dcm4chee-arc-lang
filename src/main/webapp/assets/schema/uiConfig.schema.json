@@ -135,6 +135,15 @@
       "items" : {
         "$ref": "uiDashboard.schema.json"
       }
+    },
+    "dcmuiCreateDialogTemplate": {
+      "title": "UI Dialog Template",
+      "description": "UI Create Dialog Templates Configuration",
+      "titleKey":"{dcmuiTemplateName}",
+      "type": "array",
+      "items" : {
+        "$ref": "uiDialogTemplate.schema.json"
+      }
     }
   }
 }
