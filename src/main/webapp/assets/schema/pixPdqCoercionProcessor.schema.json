@@ -1,0 +1,41 @@
+{
+  "title": "PIX PDQ Coercion Processor Configuration",
+  "description": "PIX PDQ Coercion Processor Configuration",
+  "type": "object",
+  "required": [
+    "j4carePIXPDQCoercionProcessorHL7Sender",
+    "j4carePIXPDQCoercionProcessorHL7Receiver",
+    "j4carePIXPDQCoercionProcessorAETAssigningAuthorityMapping",
+    "j4carePIXPDQCoercionProcessorAETDomainsReturnedMapping"
+  ],
+  "properties": {
+    "j4carePIXPDQCoercionProcessorHL7Sender": {
+      "title": "HL7 Sender",
+      "description": "Hl7 Sender to be used for connecting to PIX Manager in form SendApp|SendFac",
+      "type": "string"
+    },
+    "j4carePIXPDQCoercionProcessorHL7Receiver": {
+      "title": "HL7 Receiver",
+      "description": "Hl7 Receiver to be used for connecting to PIX Manager in form RecApp|RecFac",
+      "type": "string"
+    },
+    "j4carePIXPDQCoercionProcessorAETAssigningAuthorityMapping": {
+      "title": "AET Assigning Authoriy Mapping",
+      "description": "Mapping of AET to Assigning Authorities in the format AET=NamespaceID&Universal ID&Universal ID Type",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+      
+    },
+    "j4carePIXPDQCoercionProcessorAETDomainsReturnedMapping": {
+      "title": "AET Domains Returned Mapping",
+      "description": "Mapping of AET to Domains Returned in the format AET=NamespaceID&Universal ID&Universal ID Type",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
+  
