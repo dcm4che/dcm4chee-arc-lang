@@ -64,6 +64,13 @@
       "default": 5,
       "minimum": 1
     },
+    "j4careRouterRouteConfigurationNextVerificationDelay": {
+      "title": "Next Verification Delay",
+      "description": "Number of Minutes that should be added to Next Verificaton Date to synchronize the Routing Tasks",
+      "type": "integer",
+      "default": 1,
+      "minimum": 1
+    },
     "j4careRouterRouteConfigurationDestinationAETs": {
       "title": "Destination AETs",
       "description": "List of Destination AETs",
