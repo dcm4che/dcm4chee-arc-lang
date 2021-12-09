@@ -4,7 +4,7 @@
   "type": "object",
   "required": [
     "dcmuiTemplateName",
-    "dcmTemplateTag"
+    "dcmTag"
   ],
   "properties": {
     "dcmuiTemplateName": {
