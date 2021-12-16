@@ -95,6 +95,7 @@
     "dcmMWLAccessionNumberGenerator",
     "dcmMWLRequestedProcedureIDGenerator",
     "dcmMWLScheduledProcedureStepIDGenerator",
+    "dcmAuditHL7MsgLimit",
     "hl7PSUForRequestedProcedure",
     "hl7PSURequestedProcedureID",
     "hl7PSUAccessionNumber",
@@ -895,6 +896,12 @@
       "type": "string",
       "format": "dcmIDGenerator",
       "default": "ScheduledProcedureStepID"
+    },
+    "dcmAuditHL7MsgLimit": {
+      "title": "Audit HL7 Message Limit",
+      "description": "Limit length of HL7 messages included in emitted Audit Records. May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "integer",
+      "default": 1000
     },
     "hl7ORUAction": {
       "title": "HL7 ORU क्रिया",

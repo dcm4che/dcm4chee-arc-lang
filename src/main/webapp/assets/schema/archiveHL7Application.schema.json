@@ -35,6 +35,11 @@
       "type": "string",
       "format": "dcmIDGenerator"
     },
+    "dcmAuditHL7MsgLimit": {
+      "title": "Audit HL7 Message Limit",
+      "description": "Limit length of HL7 messages included in emitted Audit Records. Overwrites value specified on Device level.",
+      "type": "integer"
+    },
     "hl7ORUAction": {
       "title": "HL7 ORU Action",
       "description": "Specifies action on receive of HL7 ORU^R01 message: IMPORT_REPORT (= transcode received HL7 ORU^R01 to DICOM SR), MWL_COMPLETED (= set Status of matching MWL items to COMPLETED). Overwrites value specified on Device level.",
