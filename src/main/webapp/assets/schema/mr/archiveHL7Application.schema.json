@@ -35,6 +35,11 @@
       "type": "string",
       "format": "dcmIDGenerator"
     },
+    "dcmAuditHL7MsgLimit": {
+      "title": "Audit HL7 Message Limit",
+      "description": "Limit length of HL7 messages included in emitted Audit Records. Overwrites value specified on Device level.",
+      "type": "integer"
+    },
     "hl7ORUAction": {
       "title": "HL7 ORU क्रिया",
       "description": "HL7 ORU^R01 संदेश प्राप्त झाल्यावर केलेली क्रिया निर्दिष्ट करते : IMPORT_REPORT (= प्राप्त झालेल्या HL7 ORU^R01 ला DICOM SR मध्ये ट्रांसकोड करा), MWL_COMPLETED (= जुळणाऱ्या MWL आयटम्सच्या स्थितीला 'पूर्ण' म्हणून संच करा). डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य अधिलिखित होतील.",

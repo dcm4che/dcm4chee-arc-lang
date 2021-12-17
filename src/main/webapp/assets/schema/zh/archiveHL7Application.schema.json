@@ -35,6 +35,11 @@
       "type": "string",
       "format": "dcmIDGenerator"
     },
+    "dcmAuditHL7MsgLimit": {
+      "title": "Audit HL7 Message Limit",
+      "description": "Limit length of HL7 messages included in emitted Audit Records. Overwrites value specified on Device level.",
+      "type": "integer"
+    },
     "hl7ORUAction": {
       "title": "HL7 ORU动作",
       "description": "HL7 ORU^R01指定接收消息时的动作:IMPORT_REPORT（=将接收到的HL7 ORU^R01转码为DICOM SR）,MWL_COMPLETED（=将匹配的MWL项的状态设置为COMPLETED）。 覆盖在设备级别指定的值。 ",
