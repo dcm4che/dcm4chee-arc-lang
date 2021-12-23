@@ -42,14 +42,6 @@
       "type": "string",
       "format":"dcmQueueName"
     },
-    "dcmExportPriority": {
-      "title": "निर्यातकाचे प्राधान्य",
-      "description": "निर्यात कार्य करण्याच्या प्रक्रियेसाठी JMS प्राधान्य पातळी : ० (सर्वात कमी) पासून ९ (सर्वाधिक) पर्यंत.",
-      "type": "integer",
-      "default" : 4,
-      "minimum": 0,
-      "maximum": 9
-    },
     "dicomDescription": {
       "title": "निर्यातकाचे वर्णन",
       "description": "निर्यातकाचे अनियंत्रित मजकूर वर्णन.",
