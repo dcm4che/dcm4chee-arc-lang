@@ -42,14 +42,6 @@
       "type": "string",
       "format":"dcmQueueName"
     },
-    "dcmExportPriority": {
-      "title": "निर्यातक प्राथमिकता",
-      "description": "निर्यात कार्य के प्रक्रिया के लिए JMS प्राथमिकता स्तर : ० (न्यूतनम) से ९ (अधिकतम) तक ।",
-      "type": "integer",
-      "default" : 4,
-      "minimum": 0,
-      "maximum": 9
-    },
     "dicomDescription": {
       "title": "निर्यातक का वर्णन",
       "description": "निर्यातक का स्वैच्छिक विषय वर्णन ।",
