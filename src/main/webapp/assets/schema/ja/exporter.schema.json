@@ -42,14 +42,6 @@
       "type": "string",
       "format":"dcmQueueName"
     },
-    "dcmExportPriority": {
-      "title": "書き出し 優先度",
-      "description": "書き出し タスクを 処理 する ための JMS 優先度 レベル。 0 (最低) から 9 (最高)。",
-      "type": "integer",
-      "default" : 4,
-      "minimum": 0,
-      "maximum": 9
-    },
     "dicomDescription": {
       "title": "エクスポーターの 説明",
       "description": "エクスポーターの 制約のない テキスト 説明",

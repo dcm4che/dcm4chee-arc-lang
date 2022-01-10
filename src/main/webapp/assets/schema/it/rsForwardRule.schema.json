@@ -58,6 +58,7 @@
           "RejectStudy",
           "RejectSeries",
           "RejectInstance",
+          "ReimportStudy",
           "UpdateStudyExpirationDate",
           "UpdateSeriesExpirationDate",
           "ApplyRetentionPolicy",
@@ -66,7 +67,8 @@
           "DeleteMWL",
           "UpdateStudyAccessControlID",
           "MoveStudyToPatient",
-          "SupplementIssuer"
+          "SupplementIssuer",
+          "UpdateCharset"
         ]
       }
     }

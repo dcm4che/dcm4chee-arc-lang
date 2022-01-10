@@ -8,6 +8,7 @@
     "dicomTransferRole",
     "dcmURI",
     "dcmCoercionSufficient",
+    "dcmCoercionOnFailure",
     "dcmRulePriority",
     "dcmAttributeUpdatePolicy"
   ],
@@ -32,6 +33,17 @@
       "description": "Do not apply other matching Attribute Coercions of lesser priority, if this Attribute Coercion was applied effectively.",
       "type": "boolean",
       "default": false
+    },
+    "dcmCoercionOnFailure": {
+      "title": "Attribute Coercion on Failure",
+      "description": "Behavior on failure applying this Attribute Coercion. RETHROW (= propagate failure to operation applying this Attribute Coercion), CONTINUE (= continue to apply other matching Attribute Coercions of lesser priority) or SUFFICIENT (= do not apply other matching Attribute Coercions of lesser priority).",
+      "type": "string",
+      "default": "RETHROW",
+      "enum": [
+        "RETHROW",
+        "CONTINUE",
+        "SUFFICIENT"
+      ]
     },
     "dcmRulePriority": {
       "title": "Attribute Coercion Priority",
