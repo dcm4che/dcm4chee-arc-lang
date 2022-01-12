@@ -80,8 +80,8 @@
       }
     },
     "j4careRouterRouteConfigurationAET2AssigningAuthority": {
-      "title": "AET - Assigining Authority Mapping",
-      "description": "AET - Assigining Authority Mapping",
+      "title": "AET - Assigning Authority Mapping",
+      "description": "AET - Assigning Authority Mapping",
       "type": "array",
       "items": {
         "type": "string"
