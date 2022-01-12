@@ -59,6 +59,11 @@
       "description": "PIX DICOM C-FIND Facade DCM4CHEE URL",
       "type": "string"
     },
+    "j4careRouterPIXDicomCFindFacadeConfigurationKeycloakURL": {
+      "title": "PIX DICOM C-FIND Facade Keycloak URL",
+      "description": "PIX DICOM C-FIND Facade Keycloak URL",
+      "type": "string"
+    },
     "j4careRouterPIXDicomCFindFacadeConfigurationKeycloakClient": {
       "title": "PIX DICOM C-FIND Facade Keycloak Client",
       "description": "PIX DICOM C-FIND Facade Keycloak Client",
