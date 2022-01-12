@@ -58,8 +58,8 @@
       "type": "string"
     },
     "j4careRouterRouteConfigurationPixConfigurationIssuer2AssigningAuthority": {
-      "title": "Issuer - Assigining Authority Mapping",
-      "description": "Issuer - Assigining Authority Mapping",
+      "title": "Issuer - Assigning Authority Mapping",
+      "description": "Issuer - Assigning Authority Mapping",
       "type": "array",
       "items": {
         "type": "string"
