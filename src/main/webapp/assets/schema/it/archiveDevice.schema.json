@@ -93,6 +93,7 @@
     "dcmMWLRequestedProcedureIDGenerator",
     "dcmMWLScheduledProcedureStepIDGenerator",
     "dcmAuditHL7MsgLimit",
+    "dcmMatchSOPClassOnInstanceLevel",
     "hl7PSUForRequestedProcedure",
     "hl7PSURequestedProcedureID",
     "hl7PSUAccessionNumber",
@@ -1719,6 +1720,12 @@
     "dcmFilterByIssuerOfPatientID": {
       "title": "Filter by Issuer of Patient ID",
       "description": "Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. May be overwritten by configured value for particular Archive Network AEs.",
+      "type": "boolean",
+      "default" : false
+    },
+    "dcmMatchSOPClassOnInstanceLevel": {
+      "title": "Match SOP Class on Instance level",
+      "description": "Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
       "default" : false
     },

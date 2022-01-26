@@ -719,6 +719,11 @@
       "description": "रुग्णाच्या ID साठी कोणतीही जुळणारी की नमूद केलेली नसली तरीही रुग्णाच्या ID च्या जारीकर्ता द्वारे फिल्टर करा. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य अधिलिखित होतील.",
       "type": "boolean"
     },
+    "dcmMatchSOPClassOnInstanceLevel": {
+      "title": "Match SOP Class on Instance level",
+      "description": "Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmExportRule": {
       "title": "निर्यात नियम",
       "description": "या AE द्वारे प्राप्त झालेल्या DICOM दृष्टांतांवर निर्यात नियम लागू करा. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेले निर्यात नियम पूरक होतील.",

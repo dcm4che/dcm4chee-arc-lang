@@ -719,6 +719,11 @@
       "description": "Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. Overwrites value specified on Device level.",
       "type": "boolean"
     },
+    "dcmMatchSOPClassOnInstanceLevel": {
+      "title": "Match SOP Class on Instance level",
+      "description": "Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmExportRule": {
       "title": "导出规则",
       "description": "应用于由此AE接收的DICOM对象的导出规则。 补充在设备级别指定的导出规则。 ",

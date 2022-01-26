@@ -95,6 +95,7 @@
     "dcmMWLRequestedProcedureIDGenerator",
     "dcmMWLScheduledProcedureStepIDGenerator",
     "dcmAuditHL7MsgLimit",
+    "dcmMatchSOPClassOnInstanceLevel",
     "hl7PSUForRequestedProcedure",
     "hl7PSURequestedProcedureID",
     "hl7PSUAccessionNumber",
@@ -1757,6 +1758,12 @@
     "dcmFilterByIssuerOfPatientID": {
       "title": "रुग्णाच्या ID जारीकर्ता द्वारे फिल्टर करा",
       "description": "रुग्णाच्या ID साठी कोणतीही जुळणारी की नमूद केलेली नसली तरीही रुग्णाच्या ID च्या जारीकर्ता द्वारे फिल्टर करा. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
+      "type": "boolean",
+      "default" : false
+    },
+    "dcmMatchSOPClassOnInstanceLevel": {
+      "title": "Match SOP Class on Instance level",
+      "description": "Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
       "default" : false
     },
