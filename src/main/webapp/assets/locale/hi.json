@@ -1393,6 +1393,7 @@
     "study.download_as_csv": "CSV फाइल के रूप में डाउनलोड करें",
     "study.download_dicom_object": "DICOM दृष्टांत डाउनलोड करें",
     "study.download_mwl": "Download MWL as CSV",
+    "study.download_patients": "Download patients as CSV",
     "study.download_series": "Download series as CSV",
     "study.download_studies": "स्टडीज को CSV फाइल में डाउनलोड करें",
     "study.download_uncompressed_dicom_object": "असम्पीडित DICOM दृष्टांत डाउनलोड करें",
