@@ -1394,6 +1394,7 @@
     "study.difference": "Difference",
     "study.download_as_csv": "Als CSV herunterladen",
     "study.download_dicom_object": "DICOM Objekt herunterladen",
+    "study.download_mwl": "Download MWL as CSV",
     "study.download_series": "Download series as CSV",
     "study.download_studies": "Studien as CSV herunterladen",
     "study.download_uncompressed_dicom_object": "Download Uncompressed DICOM Object",

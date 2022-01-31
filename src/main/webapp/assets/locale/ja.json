@@ -1393,6 +1393,7 @@
     "study.difference": "違い",
     "study.download_as_csv": "CSV ファイルとして ダウンロード する",
     "study.download_dicom_object": "DICOM インスタンスを ダウンロード する",
+    "study.download_mwl": "Download MWL as CSV",
     "study.download_series": "Download series as CSV",
     "study.download_studies": "CSV ファイルとして 検査を ダウンロード する",
     "study.download_uncompressed_dicom_object": "DICOM オブジェクトを ダウンロード する",
