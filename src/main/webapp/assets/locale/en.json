@@ -1413,6 +1413,7 @@
     "study.download_as_csv": "Download as CSV",
     "study.download_dicom_object": "Download DICOM Object",
     "study.download_mwl": "Download MWL as CSV",
+    "study.download_patients": "Download patients as CSV",
     "study.download_series": "Download series as CSV",
     "study.download_studies": "Download studies as CSV",
     "study.download_uncompressed_dicom_object": "Download DICOM Object",

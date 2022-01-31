@@ -1360,6 +1360,7 @@
     "study.download_as_csv": "下载为CSV文件",
     "study.download_dicom_object": "下载DICOM实例",
     "study.download_mwl": "Download MWL as CSV",
+    "study.download_patients": "Download patients as CSV",
     "study.download_series": "Download series as CSV",
     "study.download_studies": "将检查下载为CSV文件",
     "study.download_uncompressed_dicom_object": "下载DICOM对象",
