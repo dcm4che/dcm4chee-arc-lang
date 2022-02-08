@@ -126,6 +126,30 @@
       "description": "Cron Expression to determine the next available Schedule Time for the Routing Order to be processed",
       "type": "string"
     },
+    "j4careRouterRouteConfigurationPurgingDelayCanceledTasks": {
+      "title": "Purging Delay Canceled Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which canceled tasks are purged. If absent, there is no deletion for that particular route.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "j4careRouterRouteConfigurationPurgingDelayCompletedTasks": {
+      "title": "Purging Delay Completed Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which completed tasks are purged. If absent, there is no deletion for that particular route.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "j4careRouterRouteConfigurationPurgingDelayFailedTasks": {
+      "title": "Purging Delay Failed Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which failed tasks are purged. If absent, there is no deletion for that particular route.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "j4careRouterRouteConfigurationPurgingDelayWarningTasks": {
+      "title": "Purging Delay Warning Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which warning tasks are purged. If absent, there is no deletion for that particular route.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
     "j4careRouterRouteConfigurationHL7ConfigurationReceivingApplication": {
       "title": "HL7 Configuration Receiving Application",
       "description": "HL7 Configuration Receiving Application",
