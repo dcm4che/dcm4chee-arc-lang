@@ -98,7 +98,7 @@
     },
     "dcmSchedule": {
       "title": "Limita pianificazione",
-      "description": "Limita la pianificazione a intervalli di tempo specificati. Utilizzare la dimensione massima della coda per controllare il numero massimo di attività elaborate tra intervalli di tempo specificati. Efficace solo per la 'TO SCHEDULE' pianificazione delle attività di recupero.",
+      "description": "Limita la pianificazione a intervalli di tempo specificati. Utilizzare la dimensione massima della coda per controllare il numero massimo di attività elaborate tra intervalli di tempo specificati.",
       "type": "array",
       "items": {
         "type": "string"

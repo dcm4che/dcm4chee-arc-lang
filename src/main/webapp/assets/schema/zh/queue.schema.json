@@ -98,7 +98,7 @@
     },
     "dcmSchedule": {
       "title": "限制计划",
-      "description": "将计划限制在指定的时间范围内。使用最大队列大小可控制在指定时间范围内处理的最大任务数。'TO SCHEDULE'（=用于调度）仅对调度读取任务有效。",
+      "description": "将计划限制在指定的时间范围内。使用最大队列大小可控制在指定时间范围内处理的最大任务数。",
       "type": "array",
       "items": {
         "type": "string"
