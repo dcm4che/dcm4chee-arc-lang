@@ -1126,6 +1126,7 @@
     "scheduled": "予定された",
     "scheduled_human_performers_sequence_00404034": "予定された 人間 演奏者 シーケンス (0040,4034)",
     "scheduled_performing_physicians_name": "予定された 実行 医師の 名前",
+    "scheduled_procedure_step_id": "Scheduled Procedure Step ID",
     "scheduled_procedure_step_modification_date_and_time": "予定 手順 ステップ 変更 日時",
     "scheduled_procedure_step_priority": "予定 手順 ステップの 優先度",
     "scheduled_procedure_step_start_date": "予定 手順 ステップ 開始 日時",
