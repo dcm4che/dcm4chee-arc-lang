@@ -37,6 +37,16 @@
       "description": "सिर्फ वही अनुरोध फॉरवर्ड करें जो दिए गए रेगुलर एक्सप्रेशन से मिलता हो । अगर ! से उपसर्ग किया हो तो, सिर्फ वही अनुरोध फॉरवर्ड करें जो दिए गए रेगुलर एक्सप्रेशन से न मिलता हो ।",
       "type": "string"
     },
+    "dcmHostnamePattern": {
+      "title": "Hostname Pattern",
+      "description": "Only forward requests received from clients which hostname match the given Regular Expression. If prefixed with !, only forward requests from clients which hostname does not match the given Regular Expression.",
+      "type": "string"
+    },
+    "dcmIPAddressPattern": {
+      "title": "IP Address Pattern",
+      "description": "Only forward requests received from clients which match the given Regular Expression. If prefixed with !, only forward requests from clients which IP address does not match the given Regular Expression.",
+      "type": "string"
+    },
     "dcmRSOperation": {
       "title": "RESTful कतृत्व",
       "description": "अन्य आर्काइव पे फॉरवर्ड करने के लिए RESTful कतृत्वों के नाम ।",
