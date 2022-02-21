@@ -37,6 +37,16 @@
       "description": "仅转发与指定正则表达式匹配的请求。如果前缀为!，仅转发与指定正则表达式不匹配的请求。 ",
       "type": "string"
     },
+    "dcmHostnamePattern": {
+      "title": "Hostname Pattern",
+      "description": "Only forward requests received from clients which hostname match the given Regular Expression. If prefixed with !, only forward requests from clients which hostname does not match the given Regular Expression.",
+      "type": "string"
+    },
+    "dcmIPAddressPattern": {
+      "title": "IP Address Pattern",
+      "description": "Only forward requests received from clients which match the given Regular Expression. If prefixed with !, only forward requests from clients which IP address does not match the given Regular Expression.",
+      "type": "string"
+    },
     "dcmRSOperation": {
       "title": "RESTful Operation",
       "description": "Name of RESTful Operation which shall be forwarded to another archive instance.",

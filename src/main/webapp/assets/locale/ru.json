@@ -1141,6 +1141,7 @@
     "scheduled": "Запланированное",
     "scheduled_human_performers_sequence_00404034": "Последовательность Запланированных Исполнителей(0040,4034)",
     "scheduled_performing_physicians_name": "Имя врача запланированной процедуры",
+    "scheduled_procedure_step_id": "Scheduled Procedure Step ID",
     "scheduled_procedure_step_modification_date_and_time": "Запланированное Шаг процедуры Изменение Дата and Время",
     "scheduled_procedure_step_priority": "Запланированное Шаг процедуры Приоритет",
     "scheduled_procedure_step_start_date": "Запланированное Шаг процедуры Начало Дата",

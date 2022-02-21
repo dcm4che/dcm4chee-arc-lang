@@ -37,6 +37,16 @@
       "description": "दिलेल्या नियमित अभिव्यक्तीशी जुळणार्‍या विनंत्या फक्त अग्रेषित करा. जर ! चे प्रीफिक्स केलेले असल्यास, फक्त त्या अग्रेषित करा जे दिलेल्या नियमित अभिव्यक्तीशी जुळत नाहीत.",
       "type": "string"
     },
+    "dcmHostnamePattern": {
+      "title": "Hostname Pattern",
+      "description": "Only forward requests received from clients which hostname match the given Regular Expression. If prefixed with !, only forward requests from clients which hostname does not match the given Regular Expression.",
+      "type": "string"
+    },
+    "dcmIPAddressPattern": {
+      "title": "IP Address Pattern",
+      "description": "Only forward requests received from clients which match the given Regular Expression. If prefixed with !, only forward requests from clients which IP address does not match the given Regular Expression.",
+      "type": "string"
+    },
     "dcmRSOperation": {
       "title": "RESTful कार्य",
       "description": "इतर आर्काइव्हसवर RESTful विनंत्या फॉरवर्ड करण्यासाठी RESTful कार्यांचे नाव.",
