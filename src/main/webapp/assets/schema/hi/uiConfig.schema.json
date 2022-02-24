@@ -47,6 +47,11 @@
       "description": "UI का प्रतीक चिन्ह बदलने के लिए प्रतीक चिन्ह का URL, यह सापेक्ष या निरपेक्ष URL हो सकता है, छवि की चौड़ाई १४० पिक्सेल (140px) होनी चाहिए और पारदर्शी पृष्ठभूमि के साथ png प्रारूप में होनी चाहिए ।",
       "type": "string"
     },
+    "dcmuiDateTimeFormat": {
+      "title": "Format Date Time",
+      "description": "Here you can format the date time in the UI by using 'yyyy' for the year, 'MM' for the Month, 'dd' for the date, 'HH' for the hour 'mm' for the minutes, 'ss' and 'SSS' for the seconds",
+      "type": "string"
+    },
     "dcmuiDefaultWidgetAets": {
       "title": "डिफ़ॉल्ट विजेट AET",
       "description": "उन AET का चयन करें, जिन्हें विजेट AET पर पूर्व चुने जाने चाहिए ।",
