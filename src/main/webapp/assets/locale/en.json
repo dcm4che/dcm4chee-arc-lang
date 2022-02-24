@@ -1128,6 +1128,7 @@
     "scheduled": "Scheduled",
     "scheduled_human_performers_sequence_00404034": "Scheduled Human Performers Sequence (0040,4034)",
     "scheduled_performing_physicians_name": "Scheduled Performing Physician's Name",
+    "scheduled_procedure_step_id": "Scheduled Procedure Step ID",
     "scheduled_procedure_step_modification_date_and_time": "Scheduled Procedure Step Modification Date and Time",
     "scheduled_procedure_step_priority": "Scheduled Procedure Step Priority",
     "scheduled_procedure_step_start_date": "Scheduled Procedure Step Start Date",

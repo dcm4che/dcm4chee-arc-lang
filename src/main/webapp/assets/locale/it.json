@@ -1126,6 +1126,7 @@
 		"scheduled": "Pianificato",
 		"scheduled_human_performers_sequence_00404034": "Sequenza pianificata di interpreti umani (0040,4034)",
 		"scheduled_performing_physicians_name": "Nome del medico che esegue l'esecuzione programmata",
+		"scheduled_procedure_step_id": "Scheduled Procedure Step ID",
 		"scheduled_procedure_step_modification_date_and_time": "Data e ora di modifica della fase della procedura pianificata",
 		"scheduled_procedure_step_priority": "Priorità dello Scheduled Procedure Step",
 		"scheduled_procedure_step_start_date": "Data di inizio dello Scheduled Procedure Step",

@@ -47,6 +47,11 @@
       "description": "UIの ロゴを 変更するための ロゴ URL、相対 URL または 絶対 URLに する ことが できます, 画像の 幅は 140pxで、png 形式で あり、背景は 透明で ある 必要が あります。",
       "type": "string"
     },
+    "dcmuiDateTimeFormat": {
+      "title": "Format Date Time",
+      "description": "Here you can format the date time in the UI by using 'yyyy' for the year, 'MM' for the Month, 'dd' for the date, 'HH' for the hour 'mm' for the minutes, 'ss' and 'SSS' for the seconds",
+      "type": "string"
+    },
     "dcmuiDefaultWidgetAets": {
       "title": "デフォルトの ウィジェット AETs",
       "description": "ウィジェット AETで 事前 選択する 必要が ある AETを 選択 します。",
