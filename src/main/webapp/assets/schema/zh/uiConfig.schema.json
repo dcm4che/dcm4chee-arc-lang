@@ -47,6 +47,11 @@
       "description": "用于更改UI徽标的徽标URL,可以是相对URL或绝对URL,图像宽度必须为140px,png格式,背景必须是透明的。",
       "type": "string"
     },
+    "dcmuiDateTimeFormat": {
+      "title": "Format Date Time",
+      "description": "Here you can format the date time in the UI by using 'yyyy' for the year, 'MM' for the Month, 'dd' for the date, 'HH' for the hour 'mm' for the minutes, 'ss' and 'SSS' for the seconds",
+      "type": "string"
+    },
     "dcmuiDefaultWidgetAets": {
       "title": "默认小部件AETs",
       "description": "选择小部件AET需要预选的AET。 ",

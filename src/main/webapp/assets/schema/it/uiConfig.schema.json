@@ -47,6 +47,11 @@
       "description": "URL del logo per cambiare il logo dell'interfaccia utente, può essere un URL relativo o assoluto, l'immagine dovrebbe avere la larghezza di 140px e dovrebbe essere in formato png con sfondo trasparente",
       "type": "string"
     },
+    "dcmuiDateTimeFormat": {
+      "title": "Format Date Time",
+      "description": "Here you can format the date time in the UI by using 'yyyy' for the year, 'MM' for the Month, 'dd' for the date, 'HH' for the hour 'mm' for the minutes, 'ss' and 'SSS' for the seconds",
+      "type": "string"
+    },
     "dcmuiDefaultWidgetAets": {
       "title": "Default Widget AETs",
       "description": "Seleziona gli AET che dovrebbero essere preselezionati su Widget AETs",
