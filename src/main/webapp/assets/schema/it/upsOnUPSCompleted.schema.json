@@ -102,22 +102,34 @@
     "dcmUPSScheduledStationNameCode": {
       "title": "Codice nome stazione pianificata",
       "description": "Elemento della sequenza codice nome stazione pianificata (0040,4025) nell'UPS creato in formato (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationClassCode": {
       "title": "Codice classe stazione pianificata",
       "description": "Elemento della sequenza codice classe stazione pianificata (0040,4026) nell'UPS creato in formato (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationLocationCode": {
       "title": "Codice di posizione geografica della stazione pianificata",
       "description": "Elemento della sequenza del codice di posizione geografica della stazione pianificata (0040,4027) nell'UPS creato in formato (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerCode": {
       "title": "Codice pianificato di esecuzione umana ",
       "description": "Elemento della sequenza del codice degli esecutori umani (0040,4009) nell'elemento della sequenza degli esecutori umani pianificati (0040,4034) nell'UPS creato in formato (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerName": {
       "title": "Nome dell'attore umano pianificato",
