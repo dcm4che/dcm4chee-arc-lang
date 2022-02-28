@@ -1456,6 +1456,7 @@
     "study.pps_start_date": "PPS 開始日",
     "study.pps_start_time": "PPS 開始 時間",
     "study.procedure_step": "手順 ステップ",
+    "study.process_executed_all_failed_detail": "{$@@action} process executed - all failed:<br>\nErrors: {$@@error}",
     "study.process_executed_successfully_detailed": "{$@@action} プロセスは 正常に 実行されました:<br>\nエラー: {$@@error}<br>\n成功: {$@@successfull}",
     "study.query_patient_demographics_service": "患者 人口統計 サービスを クエリ する",
     "study.r._physicians_name": "要求している 医師名",
