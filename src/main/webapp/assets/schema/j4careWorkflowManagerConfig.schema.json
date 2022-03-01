@@ -1,0 +1,55 @@
+{
+  "title": "J4care Workflow Manager Configuration",
+  "description": "J4care Workflow Manager Configuration",
+  "type": "object",
+  "required": [
+    "j4careWorkflowManagerScriptsDirectory",
+    "j4careWorkflowManagerDcm4cheeAET",
+    "j4careWorkflowManagerDcm4cheeURL",
+    "j4careWorkflowManagerKeycloakURL",
+    "j4careWorkflowManagerKeycloakClient",
+    "j4careWorkflowManagerKeycloakSecret"
+  ],
+  "properties": {
+    "j4careWorkflowManagerScriptsDirectory": {
+      "title": "Scripts Directory",
+      "description": "Base Directory for Groovy Scripts",
+      "type": "string"
+    },
+    "j4careWorkflowManagerDcm4cheeAET": {
+      "title": "DCM4CHEE AET",
+      "description": "DCM4CHEE AET for Router Transactions",
+      "type": "string"
+    },
+    "j4careWorkflowManagerDcm4cheeURL": {
+      "title": "DCM4CHEE URL",
+      "description": "DCM4CHEE URL for Router Transactions",
+      "type": "string"
+    },
+    "j4careWorkflowManagerKeycloakURL": {
+      "title": "Keycloak URL",
+      "description": "Keycloak URL for Authentication",
+      "type": "string"
+    },
+    "j4careWorkflowManagerKeycloakClient": {
+      "title": "Keycloak Client",
+      "description": "Keyclock Client for Authentication",
+      "type": "string"
+    },
+    "j4careWorkflowManagerKeycloakSecret": {
+      "title": "Keycloak Secret",
+      "description": "Keycloak Secret for Authentication",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfiguration":{
+      "title": "Workflow Configurations",
+      "description": "Workflow Configurations",
+      "titleKey":"{j4careWorkflowManagerWorkflowConfiguration}",
+      "type": "array",
+      "items" : {
+        "$ref": "j4careWorkflowManagerWorkflowConfiguration.schema.json"
+      }
+    }
+  }
+}
+  
