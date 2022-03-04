@@ -1470,6 +1470,7 @@
     "study.pps_start_date": "PPS प्रारंभ तारीख",
     "study.pps_start_time": "PPS प्रारंभ समय",
     "study.procedure_step": "प्रक्रिया स्टेप",
+    "study.process_executed_all_failed_detail": "{$@@action} process executed - all failed:<br>\nErrors: {$@@error}",
     "study.process_executed_successfully_detailed": "{$@@action} क्रिया को सफलतापूर्वक पूरा किया गया:<br>\nत्रुटियाँ: {$@@error}<br>\nसफल: {$@@successfull}",
     "study.query_patient_demographics_service": "मरीज़ जनसांख्यिकी सेवा को अनुरोध करें ।",
     "study.r._physicians_name": "संदर्भित चिकित्सक का नाम",

@@ -1471,6 +1471,7 @@
 		"study.pps_start_date": "Data di inizio PPS",
 		"study.pps_start_time": "Ora di inizio PPS",
 		"study.procedure_step": "Procedure Step",
+		"study.process_executed_all_failed_detail": "{$@@action} process executed - all failed:<br>\nErrors: {$@@error}",
 		"study.process_executed_successfully_detailed": "Processo {$@@action} eseguito con successo:<br>\nErrori: {$@@error}<br>\nRiuscito: {$@@Successl}",
 		"study.query_patient_demographics_service": "Interrogazione del servizio demografico esterno del paziente",
 		"study.r._physicians_name": "R. Nome del medico",
