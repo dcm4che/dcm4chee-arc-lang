@@ -197,6 +197,12 @@
       "description": "PIX PDQ Coercion Processor Configuration",
       "order":39,
       "$ref": "pixPdqCoercionProcessor.schema.json" 
-    }
+    },
+    "j4careWorkflowManager": {
+      "title": "Workflow Manager",
+      "description": "Workflow Manager",
+      "order":40,
+      "$ref": "j4careWorkflowManagerConfig.schema.json" 
+    } 
   }
 }

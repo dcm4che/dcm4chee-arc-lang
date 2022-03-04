@@ -1,0 +1,132 @@
+{
+  "title": "Workflow Configuration",
+  "description": "Workflow Configuration",
+  "type": "object",
+  "required": [
+    "j4careWorkflowManagerWorkflowConfiguration",
+    "j4careWorkflowManagerWorkflowConfigurationDisplayName",
+    "j4careWorkflowManagerWorkflowConfigurationSourceFindAET",
+    "j4careWorkflowManagerWorkflowConfigurationSourceRetrieveAET",
+    "j4careWorkflowManagerWorkflowConfigurationSourceURL",
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowInputSourceType",
+    "j4careWorkflowManagerWorkflowConfigurationWorkerThreads"
+  ],
+  "properties": {
+    "j4careWorkflowManagerWorkflowConfiguration": {
+      "title": "Workflow Configuration Name (internal)",
+      "description": "Workflow Configuration Name (internal)",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationDisplayName": {
+      "title": "Workflow Configuration Name (UI)",
+      "description": "Workflow Configuration Name (UI)",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationSourceFindAET": {
+      "title": "Source Find AET",
+      "description": "AET to Query when retrieving Input Data (HL7,IAN,...) to search for studies",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationSourceRetrieveAET": {
+      "title": "Source Retrieve AET",
+      "description": "AET to Retrieve Study from Input Data",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationSourceURL": {
+      "title": "Source URL",
+      "description": "Listening Source URL",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowInputSourceType": {
+      "title": "Input Source Type",
+      "description": "Input Source Type",
+      "default": "ORU",
+      "type": "string",
+      "enum": [
+          "ORU",
+          "ORM",
+          "REST"
+      ]
+    },
+    "j4careWorkflowManagerWorkflowConfigurationWorkerThreads": {
+      "title": "Worker Threads",
+      "description": "Worker Threads",
+      "type": "integer",
+      "default": 2,
+      "minimum": 1
+    },
+    "j4careWorkflowManagerWorkflowConfigurationNextVerificationDelay": {
+      "title": "Next Verification Delay",
+      "description": "Number of Minutes that should be added to Next Verificaton Date to synchronize the Workflow Step Status",
+      "type": "integer",
+      "default": 1,
+      "minimum": 1
+    },
+    "j4careWorkflowManagerWorkflowConfigurationBodyPartMap": {
+      "title": "Body Part Mapping",
+      "description": "Map Body Parts to make them compareable (f.e. HEAD=HEAD,SKULL,HEADNECK)",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "j4careWorkflowManagerWorkflowConfigurationPurgingDelayCanceledTasks": {
+      "title": "Purging Delay Canceled Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which canceled tasks are purged. If absent, there is no deletion for that particular workflow.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationPurgingDelayCompletedTasks": {
+      "title": "Purging Delay Completed Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which completed tasks are purged. If absent, there is no deletion for that particular workflow.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationPurgingDelayFailedTasks": {
+      "title": "Purging Delay Failed Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which failed tasks are purged. If absent, there is no deletion for that particular workflow.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationPurgingDelayWarningTasks": {
+      "title": "Purging Delay Warning Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which warning tasks are purged. If absent, there is no deletion for that particular workflow.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationHL7ConfigurationReceivingApplication": {
+      "title": "HL7 Configuration Receiving Application",
+      "description": "HL7 Configuration Receiving Application",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationHL7ConfigurationReceivingFacility": {
+      "title": "HL7 Configuration Receiving Facility",
+      "description": "HL7 Configuration Receiving Facility",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationHL7ConfigurationSendingApplication": {
+      "title": "HL7 Configuration Sending Application",
+      "description": "HL7 Configuration Sending Application",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationHL7ConfigurationSendingFacility": {
+      "title": "HL7 Configuration Sending Facility",
+      "description": "HL7 Configuration Sending Facility",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationHL7ConfigurationURIPrefix": {
+      "title": "HL7 Configuration URI Prefix",
+      "description": "URI Prefix to setup the HL7 Listener",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfiguration":{
+      "title": "Workflow Step Configurations",
+      "description": "Workflow Step Configurations",
+      "titleKey":"{j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfiguration}",
+      "type": "array",
+      "items" : {
+        "$ref": "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfiguration.schema.json"
+      }
+    }
+  }
+}

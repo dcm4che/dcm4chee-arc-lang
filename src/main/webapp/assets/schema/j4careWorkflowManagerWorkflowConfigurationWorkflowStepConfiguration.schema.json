@@ -1,0 +1,68 @@
+{
+  "title": "Workflow Step Configuration",
+  "description": "Workflow Step Configuration",
+  "type": "object",
+  "required": [
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfiguration",
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationDisplayName",
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationInputDataType",
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationOutputDataType",
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationProcessor"
+  ],
+  "properties": {
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfiguration": {
+      "title": "Workflow Step Configuration Name (internal)",
+      "description": "Workflow Step Configuration Name (internal)",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationDisplayName": {
+      "title": "Workflow Step Configuration Name (UI)",
+      "description": "Workflow Step Configuration Name (UI)",
+      "type": "string"
+    },
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationProcessor": {
+      "title": "Processor",
+      "description": "Processor that will be executed for this Workflow Step",
+      "default": "GroovyScriptStepProcessor",
+      "type": "string",
+      "enum": [
+          "GroovyScriptStepProcessor",
+          "RoutingWorkflowStepProcessor"
+      ]
+    },
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationInputDataType": {
+      "title": "Input Data Type",
+      "description": "Data Type that will be input into the Workflow step",
+      "default": "HL7_V2",
+      "type": "string",
+      "enum": [
+          "DICOM",
+          "DICOM_JSON",
+          "HL7_V2",
+          "FHIR",
+          "JSON"
+      ]
+    },
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationOutputDataType": {
+      "title": "Output Data Type",
+      "description": "Data Type that will be output from the Workflow step",
+       "default": "HL7_V2",
+      "type": "string",
+      "enum": [
+          "DICOM",
+          "DICOM_JSON",
+          "HL7_V2",
+          "FHIR",
+          "JSON"
+      ]
+    },
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationConfiguration": {
+      "title": "Configuration",
+      "description": "Key=Value Configuration for this workflow step",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
