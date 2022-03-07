@@ -29,17 +29,17 @@
     },
     "dcmCustomAttribute1": {
       "title": "सानुकूल विशेषता १",
-      "description": "डेटाबेसमध्ये सानुकूल विशेषता १ म्हणून घालण्यासाठी DICOM दृष्टांतांमधील कोणतेही विशेषता कॉन्फिगर करा. उदहारण DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] किंवा एका खाजगी विशेषतासाठी DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"].",
+      "description": "डेटाबेसमध्ये सानुकूल विशेषता १ म्हणून घालण्यासाठी DICOM दृष्टांतांमधील कोणतेही विशेषता कॉन्फिगर करा. Only applicable for Patient / Study / Series / Instance entities. उदहारण DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] किंवा एका खाजगी विशेषतासाठी DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"].",
       "type": "string"
     },
     "dcmCustomAttribute2": {
       "title": "सानुकूल विशेषता २",
-      "description": "डेटाबेसमध्ये सानुकूल विशेषता २ म्हणून घालण्यासाठी DICOM दृष्टांतांमधील कोणतेही विशेषता कॉन्फिगर करा. उदहारण DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] किंवा एका खाजगी विशेषतासाठी DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"].",
+      "description": "डेटाबेसमध्ये सानुकूल विशेषता २ म्हणून घालण्यासाठी DICOM दृष्टांतांमधील कोणतेही विशेषता कॉन्फिगर करा. Only applicable for Patient / Study / Series / Instance entities. उदहारण DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] किंवा एका खाजगी विशेषतासाठी DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"].",
       "type": "string"
     },
     "dcmCustomAttribute3": {
       "title": "सानुकूल विशेषता ३",
-      "description": "डेटाबेसमध्ये सानुकूल विशेषता ३ म्हणून घालण्यासाठी DICOM दृष्टांतांमधील कोणतेही विशेषता कॉन्फिगर करा. उदहारण DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] किंवा एका खाजगी विशेषतासाठी DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"].",
+      "description": "डेटाबेसमध्ये सानुकूल विशेषता ३ म्हणून घालण्यासाठी DICOM दृष्टांतांमधील कोणतेही विशेषता कॉन्फिगर करा. Only applicable for Patient / Study / Series / Instance entities. उदहारण DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] किंवा एका खाजगी विशेषतासाठी DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"].",
       "type": "string"
     },
     "dcmAttributeUpdatePolicy": {

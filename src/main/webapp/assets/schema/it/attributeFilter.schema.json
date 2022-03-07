@@ -29,17 +29,17 @@
     },
     "dcmCustomAttribute1": {
       "title": "Attributo personalizzato 1",
-      "description": "Configurare qualsiasi attributo dall'oggetto DICOM che deve essere inserito nel database come Attributo personalizzato 1. Ad es. DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] o per un attributo privato DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "description": "Configurare qualsiasi attributo dall'oggetto DICOM che deve essere inserito nel database come Attributo personalizzato 1. Only applicable for Patient / Study / Series / Instance entities. Ad es. DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] o per un attributo privato DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
       "type": "string"
     },
     "dcmCustomAttribute2": {
       "title": "Attributo personalizzato 2",
-      "description": "Configurare qualsiasi attributo dall'oggetto DICOM che deve essere inserito nel database come Attributo personalizzato 2. Ad es. DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] o per un attributo privato DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "description": "Configurare qualsiasi attributo dall'oggetto DICOM che deve essere inserito nel database come Attributo personalizzato 2. Only applicable for Patient / Study / Series / Instance entities. Ad es. DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] o per un attributo privato DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
       "type": "string"
     },
     "dcmCustomAttribute3": {
       "title": "Attributo personalizzato 3",
-      "description": "Configurare qualsiasi attributo dall'oggetto DICOM che deve essere inserito nel database come Attributo personalizzato 3. Ad es. DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] o per un attributo privato DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "description": "Configurare qualsiasi attributo dall'oggetto DICOM che deve essere inserito nel database come Attributo personalizzato 3. Only applicable for Patient / Study / Series / Instance entities. Ad es. DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] o per un attributo privato DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
       "type": "string"
     },
     "dcmAttributeUpdatePolicy": {

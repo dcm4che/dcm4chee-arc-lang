@@ -29,17 +29,17 @@
     },
     "dcmCustomAttribute1": {
       "title": "カスタム 属性 1",
-      "description": "データベースに カスタム 属性 1 として そうにゅうされる DICOM オブジェクトからの 属性を 構成します。 例 : DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] または プライベート 属性の 場合 DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "description": "データベースに カスタム 属性 1 として そうにゅうされる DICOM オブジェクトからの 属性を 構成します。 Only applicable for Patient / Study / Series / Instance entities. 例 : DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] または プライベート 属性の 場合 DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
       "type": "string"
     },
     "dcmCustomAttribute2": {
       "title": "カスタム 属性 2",
-      "description": "データベースに カスタム 属性 2 として そうにゅうされる DICOM オブジェクトからの 属性を 構成します。 例 : DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] または プライベート 属性の 場合 DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "description": "データベースに カスタム 属性 2 として そうにゅうされる DICOM オブジェクトからの 属性を 構成します。 Only applicable for Patient / Study / Series / Instance entities. 例 : DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] または プライベート 属性の 場合 DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
       "type": "string"
     },
     "dcmCustomAttribute3": {
       "title": "カスタム 属性 3",
-      "description": "データベースに カスタム 属性 3 として そうにゅうされる DICOM オブジェクトからの 属性を 構成します。 例 : DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] または プライベート 属性の 場合 DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "description": "データベースに カスタム 属性 3 として そうにゅうされる DICOM オブジェクトからの 属性を 構成します。 Only applicable for Patient / Study / Series / Instance entities. 例 : DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] または プライベート 属性の 場合 DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
       "type": "string"
     },
     "dcmAttributeUpdatePolicy": {

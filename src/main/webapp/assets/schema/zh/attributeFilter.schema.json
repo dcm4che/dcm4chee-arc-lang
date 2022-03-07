@@ -29,17 +29,17 @@
     },
     "dcmCustomAttribute1": {
       "title": "自定义属性1",
-      "description": "配置DICOM对象中的属性,这些对象将作为自定义属性1插入数据库中。 示例:DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"],或在私有属性的情况下DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "description": "配置DICOM对象中的属性,这些对象将作为自定义属性1插入数据库中。 Only applicable for Patient / Study / Series / Instance entities. 示例:DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"],或在私有属性的情况下DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
       "type": "string"
     },
     "dcmCustomAttribute2": {
       "title": "自定义属性2",
-      "description": "从DICOM对象中配置任何要插入数据库的属性作为自定义属性2。示例:DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"],或在私有属性的情况下DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "description": "从DICOM对象中配置任何要插入数据库的属性作为自定义属性2。Only applicable for Patient / Study / Series / Instance entities. 示例:DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"],或在私有属性的情况下DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
       "type": "string"
     },
     "dcmCustomAttribute3": {
       "title": "自定义属性3",
-      "description": "从作为自定义属性3插入数据库中的DICOM对象配置属性。 示例:DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"],或在私有属性的情况下DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "description": "从作为自定义属性3插入数据库中的DICOM对象配置属性。 Only applicable for Patient / Study / Series / Instance entities. 示例:DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"],或在私有属性的情况下DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
       "type": "string"
     },
     "dcmAttributeUpdatePolicy": {

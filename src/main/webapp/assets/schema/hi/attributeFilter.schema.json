@@ -29,17 +29,17 @@
     },
     "dcmCustomAttribute1": {
       "title": "कस्टम गुण १",
-      "description": "डेटाबेस में कस्टम गुण १ के तौर पे निवेशन करने के लिए DICOM दृष्टांत के किसी भी गुण को कॉन्फ़िगर करें । उदहारण के तौर पे DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] or for a Private गुण DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"] ।",
+      "description": "डेटाबेस में कस्टम गुण १ के तौर पे निवेशन करने के लिए DICOM दृष्टांत के किसी भी गुण को कॉन्फ़िगर करें । Only applicable for Patient / Study / Series / Instance entities. उदहारण के तौर पे DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] or for a Private गुण DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"] ।",
       "type": "string"
     },
     "dcmCustomAttribute2": {
       "title": "कस्टम गुण २",
-      "description": "डेटाबेस में कस्टम गुण २ के तौर पे निवेशन करने के लिए DICOM दृष्टांत के किसी भी गुण को कॉन्फ़िगर करें । उदहारण के तौर पे DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] or for a Private गुण DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"] ।",
+      "description": "डेटाबेस में कस्टम गुण २ के तौर पे निवेशन करने के लिए DICOM दृष्टांत के किसी भी गुण को कॉन्फ़िगर करें । Only applicable for Patient / Study / Series / Instance entities. उदहारण के तौर पे DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] or for a Private गुण DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"] ।",
       "type": "string"
     },
     "dcmCustomAttribute3": {
       "title": "कस्टम गुण ३",
-      "description": "डेटाबेस में कस्टम गुण ३ के तौर पे निवेशन करने के लिए DICOM दृष्टांत के किसी भी गुण को कॉन्फ़िगर करें । उदहारण के तौर पे DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] or for a Private गुण DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"] ।",
+      "description": "डेटाबेस में कस्टम गुण ३ के तौर पे निवेशन करने के लिए DICOM दृष्टांत के किसी भी गुण को कॉन्फ़िगर करें । Only applicable for Patient / Study / Series / Instance entities. उदहारण के तौर पे DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] or for a Private गुण DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"] ।",
       "type": "string"
     },
     "dcmAttributeUpdatePolicy": {
