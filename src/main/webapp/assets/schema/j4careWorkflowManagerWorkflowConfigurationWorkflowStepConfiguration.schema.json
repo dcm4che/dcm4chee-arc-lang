@@ -7,7 +7,8 @@
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationDisplayName",
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationInputDataType",
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationOutputDataType",
-    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationProcessor"
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationProcessor",
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationCompletionVerificationDelay"
   ],
   "properties": {
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfiguration": {
@@ -63,6 +64,14 @@
       "items": {
         "type": "string"
       }
+    },
+    "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationCompletionVerificationDelay": {
+      "title": "Completion Verification Delay",
+      "description": "Wait Time in seconds between checking the Completion of a Workflow Step",
+      "type": "integer",
+      "default": 10,
+      "minimum": 0
     }
+    
   }
 }
