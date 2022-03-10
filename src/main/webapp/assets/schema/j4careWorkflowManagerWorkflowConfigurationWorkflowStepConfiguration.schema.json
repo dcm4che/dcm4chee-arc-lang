@@ -29,7 +29,8 @@
       "enum": [
           "GroovyScriptStepProcessor",
           "RoutingWorkflowStepProcessor",
-          "UPSCreationStepProcessor"
+          "UPSCreationStepProcessor",
+          "UPSStatusStepProcessor"
       ]
     },
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationInputDataType": {
