@@ -42,7 +42,9 @@
           "DICOM_JSON",
           "HL7_V2",
           "FHIR",
-          "JSON"
+          "JSON",
+          "RAW",
+          "STRING"
       ]
     },
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationOutputDataType": {
@@ -55,7 +57,9 @@
           "DICOM_JSON",
           "HL7_V2",
           "FHIR",
-          "JSON"
+          "JSON",
+          "RAW",
+          "STRING"
       ]
     },
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationConfiguration": {
