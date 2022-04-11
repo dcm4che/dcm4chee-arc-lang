@@ -44,7 +44,7 @@
     },
     "dcmProperty": {
       "title": "PDQ सेवा गुणधर्म",
-      "description": "गुणधर्म या स्वरूपात <नाव> = <मूल्य>, उदाहरण 'LocalAET=DCM4CHEE' किंवा 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl'",
+      "description": "गुणधर्म या स्वरूपात <नाव> = <मूल्य>, उदाहरण 'LocalAET=DCM4CHEE' किंवा 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl' or 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/fhir-pat2dcm.xsl' for URI with schema pdq-fhir. Additional properties for URI with schema pdq-fhir may be set eg. 'search._format=xml', 'search.identifier.system={issuer}'. For complete list of properties, refer https://github.com/dcm4che/dcm4chee-arc-light/issues/3307",
       "type": "array",
       "items": {
         "type": "string"
