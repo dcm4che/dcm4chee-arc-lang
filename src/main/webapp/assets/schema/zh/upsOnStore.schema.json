@@ -129,22 +129,34 @@
     "dcmUPSScheduledStationNameCode": {
       "title": "调度的站名代码",
       "description": "创建的UPS中调度的站名代码序列的（CV,CSD,\"CM\"）形式的项目（0040,4025）。 ",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationClassCode": {
       "title": "调度的站类代码",
       "description": "创建的UPS中调度的站类代码序列的（CV,CSD,\"CM\"）形式的项目（0040,4026）。 ",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationLocationCode": {
       "title": "调度的站点地理位置代码",
       "description": "创建的UPS中调度的站点地理位置代码序列的（CV,CSD,\"CM\"）形式的项目（0040,4027）。 ",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerCode": {
       "title": "预定的人类执行者代码",
       "description": "在创建的UPS中预定的人类执行者序列的（0040,4034）项中的人类执行者代码的（CV,CSD,\"CM\"）形式的值（0040,4009）。",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerName": {
       "title": "预定的人类执行者名称",

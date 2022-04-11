@@ -98,22 +98,34 @@
     "dcmUPSScheduledStationNameCode": {
       "title": "予定された ステーション名 コード",
       "description": "作成された UPSの 中で 予定された ステーション名 コード シーケンスの (CV, CSD, \"CM\") 形式で アイテム (0040,4025)。",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationClassCode": {
       "title": "予定された ステーション クラス コード",
       "description": "作成された UPSの 中で 予定された ステーション クラス コード シーケンスの (CV, CSD, \"CM\") 形式で アイテム (0040,4026)。",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationLocationCode": {
       "title": "予定された ステーション 地理的 ロケーション コード",
       "description": "作成された UPSの 中で 予定された ステーション 地理的 ロケーション コード シーケンスの (CV, CSD, \"CM\") 形式で アイテム (0040,4027)。",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerCode": {
       "title": "予定された 人間の 実行者 コード",
       "description": "作成された UPSの 中で 予定された 人間の 実行者の シーケンスの（0040,4034）アイテムに おける 人間の 実行者 コードの (CV, CSD, \"CM\") 形式で 値（0040,4009）。",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerName": {
       "title": "予定された 人間の 実行者名",

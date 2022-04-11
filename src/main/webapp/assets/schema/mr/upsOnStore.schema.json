@@ -129,22 +129,34 @@
     "dcmUPSScheduledStationNameCode": {
       "title": "अनुसूचित स्टेशन नाव कोड",
       "description": "तयार केलेल्या UPS मधील अनुसूचित स्टेशन नाव कोड क्रमचे (००४०,४०२५) आयटम या प्रारूपात (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationClassCode": {
       "title": "अनुसूचित स्टेशन वर्ग कोड",
       "description": "तयार केलेल्या UPS मधील अनुसूचित स्टेशन वर्ग कोड क्रमचे (००४०,४०२६) आयटम या प्रारूपात (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationLocationCode": {
       "title": "अनुसूचित स्टेशन भौगोलिक स्थान कोड",
       "description": "तयार केलेल्या UPS स्वरूपात अनुसूचित स्टेशन भौगोलिक स्थान कोड क्रम (००४०,४०२७) चे आयटम या प्रारूपात (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerCode": {
       "title": "अनुसूचित मानव परफॉर्मर कोड",
       "description": "तयार केलेल्या UPS मधील अनुसूचित मानवी परफॉर्मर्स क्रममधील (००४०,४०३४) मानवी परफॉर्मर कोड क्रमचे (००४०,४००९) आयटम या प्रारूपात (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerName": {
       "title": "अनुसूचित मानवी परफॉर्मर नाव",

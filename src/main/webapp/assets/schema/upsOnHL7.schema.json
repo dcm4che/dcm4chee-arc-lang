@@ -98,22 +98,34 @@
     "dcmUPSScheduledStationNameCode": {
       "title": "Scheduled Station Name Code",
       "description": "Item of Scheduled Station Name Code Sequence (0040,4025) in created UPS in format (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationClassCode": {
       "title": "Scheduled Station Class Code",
       "description": "Item of Scheduled Station Class Code Sequence (0040,4026) in created UPS in format (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationLocationCode": {
       "title": "Scheduled Station Geographic Location Code",
       "description": "Item of Scheduled Station Geographic Location Code Sequence (0040,4027) in created UPS in format (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerCode": {
       "title": "Scheduled Human Performer Code",
       "description": "Item of Human Performer Code Sequence (0040,4009) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS in format (CV, CSD, \"CM\").",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerName": {
       "title": "Scheduled Human Performer Name",

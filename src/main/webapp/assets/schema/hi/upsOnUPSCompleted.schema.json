@@ -102,22 +102,34 @@
     "dcmUPSScheduledStationNameCode": {
       "title": "अनुसूचित स्टेशन नाम कोड",
       "description": "निर्माण किए गए UPS में अनुसूचित स्टेशन नाम कोड क्रम (००४०,४०२५) का आइटम, इस प्रारूप में (CV, CSD, \"CM\") ।",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationClassCode": {
       "title": "अनुसूचित स्टेशन वर्ग कोड",
       "description": "निर्माण किए गए UPS में अनुसूचित स्टेशन वर्ग कोड क्रम (००४०,४०२६) का आइटम, इस प्रारूप में (CV, CSD, \"CM\") ।",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledStationLocationCode": {
       "title": "अनुसूचित स्टेशन भौगोलिक स्थान कोड",
       "description": "निर्माण किए गए UPS में अनुसूचित स्टेशन भौगोलिक स्थान कोड क्रम (००४०,४०२७) का आइटम, इस प्रारूप में (CV, CSD, \"CM\") ।",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerCode": {
       "title": "अनुसूचित मनुष्य कर्ता कोड",
       "description": "निर्माण किए गए UPS में अनुसूचित मनुष्य कर्ता कोड क्रम (००४०,४०३४) में मनुष्य कर्ता कोड क्रम (००४०,४००९) का आइटम, इस प्रारूप में (CV, CSD, \"CM\") ।",
-      "type": "string"
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSScheduledHumanPerformerName": {
       "title": "अनुसूचित मनुष्य कर्ता का नाम",
