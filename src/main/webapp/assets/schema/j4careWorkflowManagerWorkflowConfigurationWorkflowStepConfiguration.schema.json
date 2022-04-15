@@ -31,7 +31,9 @@
           "GroovyScriptStepProcessor",
           "RoutingWorkflowStepProcessor",
           "UPSCreationStepProcessor",
-          "UPSStatusStepProcessor"
+          "UPSStatusStepProcessor",
+          "SplitterWorkflowStepProcessor",
+          "DCM4CHEETaskWorkflowStepProcessor"
       ]
     },
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationInputDataType": {
