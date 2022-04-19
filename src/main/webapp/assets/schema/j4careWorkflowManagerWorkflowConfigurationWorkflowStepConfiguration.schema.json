@@ -33,7 +33,7 @@
           "UPSCreationStepProcessor",
           "UPSStatusStepProcessor",
           "SplitterWorkflowStepProcessor",
-          "DCM4CHEETaskWorkflowStepProcessor"
+          "ExportTaskWorkflowStepProcessor"
       ]
     },
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationInputDataType": {
