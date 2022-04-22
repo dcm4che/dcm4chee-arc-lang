@@ -5,8 +5,6 @@
   "required": [
     "j4careWorkflowManagerWorkflowConfiguration",
     "j4careWorkflowManagerWorkflowConfigurationDisplayName",
-    "j4careWorkflowManagerWorkflowConfigurationSourceFindAET",
-    "j4careWorkflowManagerWorkflowConfigurationSourceRetrieveAET",
     "j4careWorkflowManagerWorkflowConfigurationSourceURL",
     "j4careWorkflowManagerWorkflowConfigurationWorkflowInputSourceType",
     "j4careWorkflowManagerWorkflowConfigurationWorkerThreads"
@@ -20,16 +18,6 @@
     "j4careWorkflowManagerWorkflowConfigurationDisplayName": {
       "title": "Workflow Configuration Name (UI)",
       "description": "Workflow Configuration Name (UI)",
-      "type": "string"
-    },
-    "j4careWorkflowManagerWorkflowConfigurationSourceFindAET": {
-      "title": "Source Find AET",
-      "description": "AET to Query when retrieving Input Data (HL7,IAN,...) to search for studies",
-      "type": "string"
-    },
-    "j4careWorkflowManagerWorkflowConfigurationSourceRetrieveAET": {
-      "title": "Source Retrieve AET",
-      "description": "AET to Retrieve Study from Input Data",
       "type": "string"
     },
     "j4careWorkflowManagerWorkflowConfigurationSourceURL": {
@@ -61,14 +49,6 @@
       "type": "integer",
       "default": 1,
       "minimum": 1
-    },
-    "j4careWorkflowManagerWorkflowConfigurationBodyPartMap": {
-      "title": "Body Part Mapping",
-      "description": "Map Body Parts to make them compareable (f.e. HEAD=HEAD,SKULL,HEADNECK)",
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
     },
     "j4careWorkflowManagerWorkflowConfigurationPurgingDelayCanceledTasks": {
       "title": "Purging Delay Canceled Tasks",
