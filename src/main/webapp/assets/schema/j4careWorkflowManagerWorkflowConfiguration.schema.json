@@ -33,7 +33,8 @@
       "enum": [
           "ORU",
           "ORM",
-          "REST"
+          "REST",
+          "IAN"
       ]
     },
     "j4careWorkflowManagerWorkflowConfigurationWorkerThreads": {
