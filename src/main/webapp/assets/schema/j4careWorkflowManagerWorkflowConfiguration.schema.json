@@ -51,6 +51,14 @@
       "default": 1,
       "minimum": 1
     },
+      "j4careWorkflowManagerWorkflowConfigurationQueryProperties": {
+      "title": "Query Properties",
+      "description": "Query Properties that are allowed to search through the Admin UI and are accepted by the REST API",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "j4careWorkflowManagerWorkflowConfigurationPurgingDelayCanceledTasks": {
       "title": "Purging Delay Canceled Tasks",
       "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which canceled tasks are purged. If absent, there is no deletion for that particular workflow.",
