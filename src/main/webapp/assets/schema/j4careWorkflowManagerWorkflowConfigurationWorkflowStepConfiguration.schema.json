@@ -36,7 +36,8 @@
           "ExportTaskWorkflowStepProcessor",
           "QIDOWorkflowStepProcessor",
           "CFindWorkflowStepProcessor",
-          "WADOWorkflowStepProcessor"
+          "WADOWorkflowStepProcessor",
+          "SwitchWorkflowStepProcessor"
       ]
     },
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfigurationInputDataType": {
