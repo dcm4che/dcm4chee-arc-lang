@@ -617,22 +617,22 @@
       "type": "string"
     },
     "hl7PSUAccessionNumber": {
-      "title": "HL7 手順 ステータス アクセッション 番号",
+      "title": "HL7 手順 ステータス 更新 アクセッション 番号",
       "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに アクセッション 番号の 値。 {<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 例 : {StudyInstanceUID,hash} 。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "string"
     },
     "hl7PSUFillerOrderNumber": {
-      "title": "HL7 手順 ステータス フィラー オーダー 番号",
+      "title": "HL7 手順 ステータス 更新 フィラー オーダー 番号",
       "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに フィラー オーダー 番号の 値。{<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 例 : {StudyInstanceUID,hash} 。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "string"
     },
     "hl7PSUPlacerOrderNumber": {
-      "title": "HL7 手順 ステータス プレーサー オーダー 番号",
+      "title": "HL7 手順 ステータス 更新 プレーサー オーダー 番号",
       "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに プレーサー オーダー 番号の 値。{<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 例 : {StudyInstanceUID,hash} 。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "string"
     },
     "hl7PSUMessageType": {
-      "title": "HL7 手順 ステータス メッセージ タイプ",
+      "title": "HL7 手順 ステータス 更新 メッセージ タイプ",
       "description": "HL7 手順 ステータス 更新 メッセージの メッセージ タイプ。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "string",
       "enum": [
