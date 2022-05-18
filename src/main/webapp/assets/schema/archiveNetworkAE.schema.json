@@ -617,22 +617,22 @@
       "type": "string"
     },
     "hl7PSUAccessionNumber": {
-      "title": "HL7 Procedure Status Accession Number",
+      "title": "HL7 Procedure Status Update Accession Number",
       "description": "Value for Accession Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7PSUFillerOrderNumber": {
-      "title": "HL7 Procedure Status Filler Order Number",
+      "title": "HL7 Procedure Status Update Filler Order Number",
       "description": "Value for Filler Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7PSUPlacerOrderNumber": {
-      "title": "HL7 Procedure Status Placer Order Number",
+      "title": "HL7 Procedure Status Update Placer Order Number",
       "description": "Value for Placer Order Number in notification message, if there are no Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. {<attributeID>} will be replaced by the value of attribute in the received study. Example: {StudyInstanceUID,hash}. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7PSUMessageType": {
-      "title": "HL7 Procedure Status Message Type",
+      "title": "HL7 Procedure Status Update Message Type",
       "description": "Message Type of HL7 Procedure Status Update message. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
