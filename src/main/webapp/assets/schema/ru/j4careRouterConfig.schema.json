@@ -1,0 +1,113 @@
+{
+  "title": "J4care Router Configuration",
+  "description": "J4care Router Configuration",
+  "type": "object",
+  "required": [
+    "j4careRouterRoutingScriptsDirectory",
+    "j4careRouterDcm4cheeAET",
+    "j4careRouterDcm4cheeURL",
+    "j4careRouterKeycloakURL",
+    "j4careRouterKeycloakClient",
+    "j4careRouterKeycloakSecret"
+  ],
+  "properties": {
+    "j4careRouterRoutingScriptsDirectory": {
+      "title": "Routing Scripts Directory",
+      "description": "Base Directory for Routing Scripts",
+      "type": "string"
+    },
+    "j4careRouterDcm4cheeAET": {
+      "title": "DCM4CHEE AET",
+      "description": "DCM4CHEE AET for Router Transactions",
+      "type": "string"
+    },
+    "j4careRouterDcm4cheeURL": {
+      "title": "DCM4CHEE URL",
+      "description": "DCM4CHEE URL for Router Transactions",
+      "type": "string"
+    },
+    "j4careRouterKeycloakURL": {
+      "title": "Keycloak URL",
+      "description": "Keycloak URL for Authentication",
+      "type": "string"
+    },
+    "j4careRouterKeycloakClient": {
+      "title": "Keycloak Client",
+      "description": "Keyclock Client for Authentication",
+      "type": "string"
+    },
+    "j4careRouterKeycloakSecret": {
+      "title": "Keycloak Secret",
+      "description": "Keycloak Secret for Authentication",
+      "type": "string"
+    },
+    "j4careRouterModalityImageSizeMap": {
+      "title": "Modality Image Size Map",
+      "description": "Standard Mapping for estimating Study Sizes in kb (f.e. MR=250 will map MR with 250kb for each image) ",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "j4careRouterPIXDicomCFindFacadeConfigurationDcm4cheeAET": {
+      "title": "PIX DICOM C-FIND Facade DCM4CHEE AET",
+      "description": "PIX DICOM C-FIND Facade DCM4CHEE AET",
+      "type": "string"
+    },
+    "j4careRouterPIXDicomCFindFacadeConfigurationDcm4cheeURL": {
+      "title": "PIX DICOM C-FIND Facade DCM4CHEE URL",
+      "description": "PIX DICOM C-FIND Facade DCM4CHEE URL",
+      "type": "string"
+    },
+    "j4careRouterPIXDicomCFindFacadeConfigurationKeycloakURL": {
+      "title": "PIX DICOM C-FIND Facade Keycloak URL",
+      "description": "PIX DICOM C-FIND Facade Keycloak URL",
+      "type": "string"
+    },
+    "j4careRouterPIXDicomCFindFacadeConfigurationKeycloakClient": {
+      "title": "PIX DICOM C-FIND Facade Keycloak Client",
+      "description": "PIX DICOM C-FIND Facade Keycloak Client",
+      "type": "string"
+     },
+     "j4careRouterPIXDicomCFindFacadeConfigurationKeycloakSecret": {
+      "title": "PIX DICOM C-FIND Facade Keycloak Secret",
+      "description": "PIX DICOM C-FIND Facade Keycloak Secret",
+      "type": "string"
+     },     
+     "j4careRouterPIXDicomCFindFacadeConfigurationCFindScp": {
+      "title": "PIX DICOM C-FIND Facade C-FIND SCP",
+      "description": "PIX DICOM C-FIND Facade C-FIND SCP",
+      "type": "string"
+     },
+    "j4careRouterPIXDicomCFindFacadeConfigurationSendingApplication": {
+      "title": "PIX DICOM C-FIND Facade Sending Application",
+      "description": "PIX DICOM C-FIND Facade Sending Application",
+      "type": "string"
+    },
+    "j4careRouterPIXDicomCFindFacadeConfigurationSendingFacility": {
+      "title": "PIX DICOM C-FIND Facade Sending Facility",
+      "description": "PIX DICOM C-FIND Facade Sending Facility",
+      "type": "string"
+    },
+     "j4careRouterPIXDicomCFindFacadeConfigurationReceivingApplication": {
+      "title": "PIX DICOM C-FIND Facade Receiving Application",
+      "description": "PIX DICOM C-FIND Facade Receiving Application",
+      "type": "string"
+    },
+     "j4careRouterPIXDicomCFindFacadeConfigurationReceivingFacility": {
+      "title": "PIX DICOM C-FIND Facade Receiving Facility",
+      "description": "PIX DICOM C-FIND Facade Receiving Facility",
+      "type": "string"
+    },
+    "j4careRouterRouteConfiguration":{
+      "title": "Route Configurations",
+      "description": "Route Configurations",
+      "titleKey":"{j4careRouterRouteConfiguration}",
+      "type": "array",
+      "items" : {
+        "$ref": "j4careRouterRouteConfiguration.schema.json"
+      }
+    }
+  }
+}
+  
