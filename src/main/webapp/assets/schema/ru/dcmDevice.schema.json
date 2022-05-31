@@ -163,46 +163,6 @@
       "items" : {
         "$ref": "uiConfig.schema.json"
       }
-    },
-    "xdsAdConfig": {
-      "title": "XDS Administrator Configuration",
-      "description": "XDS Administrator Configuration",
-      "titleKey":"{xdsAdConfigName}",
-      "type": "array",
-      "order":35,
-      "items" : {
-      "$ref": "xdsAdministratorConfig.schema.json"
-      }
-    },
-    "j4careAMConfig": {
-      "title": "AGFA Migration Configuration",
-      "description": "AGFA Migration Configuration",
-      "order":36,
-      "$ref": "agfaMigrationConfig.schema.json" 
-    },
-    "j4careSUConfig": {
-      "title": "Study Updater Configuration",
-      "description": "Study Updater Configuration",
-      "order":37,
-      "$ref": "studyUpdaterConfig.schema.json" 
-    },
-    "j4careRouter": {
-      "title": "DICOM Router Configuration",
-      "description": "DICOM Router Configuration",
-      "order":38,
-      "$ref": "j4careRouterConfig.schema.json" 
-    },
-    "j4carePIXPDQCoercionProcessor": {
-      "title": "PIX PDQ Coercion Processor Configuration",
-      "description": "PIX PDQ Coercion Processor Configuration",
-      "order":39,
-      "$ref": "pixPdqCoercionProcessor.schema.json" 
-    },
-    "j4careWorkflowManager": {
-      "title": "Workflow Manager",
-      "description": "Workflow Manager",
-      "order":40,
-      "$ref": "j4careWorkflowManagerConfig.schema.json" 
-    } 
+    }
   }
 }
