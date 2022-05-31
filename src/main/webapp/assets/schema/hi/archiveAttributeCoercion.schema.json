@@ -98,10 +98,12 @@
     },
     "dcmMergeMWLMatchingKey": {
       "title": "MWL मिलान कुंजी को विलीन करें",
-      "description": "अनुरोधित गुणों का नियंत्रण करने के लिए इस्तमाल किए गए MWL आइटम जो प्राप्त हुए ऑब्जेक्ट के गुण से ढूंढा गया है उसे निर्दिष्ट करता है । अगर कॉन्फ़िगर ना किया हो तो, प्राप्त हुए ऑब्जेक्ट के अनुरोधित गुणों का नियंत्रण नहीं होगा । यदि मरीज़ I.D. को मिलान कुंजी के रूप में चुना जाता है, तो मरीज़ I.D. और परिग्रहण संख्या या स्टडी दृष्टांत UID को MWL की पूछताछ में माना जाएगा । यदि अनुसूचित प्रक्रिया चरण I.D. को मिलान कुंजी के रूप में चुना जाता है, तो अनुसूचित प्रक्रिया चरण I.D. और स्टडी दृष्टांत UID को MWL की पूछताछ में माना जाएगा ।",
+      "description": "अनुरोधित गुणों का नियंत्रण करने के लिए इस्तमाल किए गए MWL आइटम जो प्राप्त हुए ऑब्जेक्ट के गुण से ढूंढा गया है उसे निर्दिष्ट करता है । अगर कॉन्फ़िगर ना किया हो तो, प्राप्त हुए ऑब्जेक्ट के अनुरोधित गुणों का नियंत्रण नहीं होगा । PatientID - Patient ID and Accession Number considered for querying MWLs. If Accession Number not available in object attributes, only Patient ID considered for querying MWLs. PatientIDOnly - Only Patient ID considered for querying MWLs. PatientIDAccessionNumber - Patient ID and Accession Number considered for querying MWLs. If Accession Number not available in object attributes, fall back to Study Instance UID. AccessionNumber - Only Accession Number considered for querying MWLs. StudyInstanceUID - Only Study Instance UID considered for querying MWLs. ScheduledProcedureStepID - Scheduled Procedure Step ID and Study Instance UID considered for querying MWLs.",
       "type": "string",
       "enum": [
         "PatientID",
+        "PatientIDOnly",
+        "PatientIDAccessionNumber",
         "AccessionNumber",
         "StudyInstanceUID",
         "ScheduledProcedureStepID"

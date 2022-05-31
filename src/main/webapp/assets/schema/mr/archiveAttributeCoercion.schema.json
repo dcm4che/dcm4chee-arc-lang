@@ -98,10 +98,12 @@
     },
     "dcmMergeMWLMatchingKey": {
       "title": "MWL जुळणारे की विलीन करा",
-      "description": "विनंती विशेषतांचे बळजबरी करण्यासाठी प्राप्त झालेल्या दृष्टांताचे निर्दिष्ट केलेले विशेषता ज्याला डेटाबेसमध्ये MWL आयटम शोधण्यासाठी वापर केले जातील. अनुपस्थित असल्यास, प्राप्त झालेल्या दृष्टांताचे विनंती विशेषतांचे बळजबरी केली जाणार नाही. जर रुग्ण I.D. मॅचिंग की म्हणून निवडला असेल, तर रुग्ण I.D. आणि एक्सेशन क्रमांक किंवा अभ्यास दृष्टांत UID चा विचार MWLs च्या चौकशीमध्ये केला जाईल. अनुसूचित प्रक्रिया स्टेप I.D. मॅचिंग की म्हणून निवडल्यास, अनुसूचीत प्रक्रिया स्टेप I.D. आणि अभ्यास दृष्टांत UID चा विचार MWLs च्या चौकशीमध्ये केला जाईल.",
+      "description": "विनंती विशेषतांचे बळजबरी करण्यासाठी प्राप्त झालेल्या दृष्टांताचे निर्दिष्ट केलेले विशेषता ज्याला डेटाबेसमध्ये MWL आयटम शोधण्यासाठी वापर केले जातील. अनुपस्थित असल्यास, प्राप्त झालेल्या दृष्टांताचे विनंती विशेषतांचे बळजबरी केली जाणार नाही. PatientID - Patient ID and Accession Number considered for querying MWLs. If Accession Number not available in object attributes, only Patient ID considered for querying MWLs. PatientIDOnly - Only Patient ID considered for querying MWLs. PatientIDAccessionNumber - Patient ID and Accession Number considered for querying MWLs. If Accession Number not available in object attributes, fall back to Study Instance UID. AccessionNumber - Only Accession Number considered for querying MWLs. StudyInstanceUID - Only Study Instance UID considered for querying MWLs. ScheduledProcedureStepID - Scheduled Procedure Step ID and Study Instance UID considered for querying MWLs.",
       "type": "string",
       "enum": [
         "PatientID",
+        "PatientIDOnly",
+        "PatientIDAccessionNumber",
         "AccessionNumber",
         "StudyInstanceUID",
         "ScheduledProcedureStepID"

@@ -98,10 +98,12 @@
     },
     "dcmMergeMWLMatchingKey": {
       "title": "Unisci chiave di corrispondenza MWL",
-      "description": "Specifica l'attributo dell'oggetto ricevuto per la ricerca dell'elemento MWL utilizzato per forzare gli attributi della richiesta. Se assenti, gli attributi di richiesta degli oggetti ricevuti non verranno forzati. If PatientID is selected as matching key, Patient ID and Accession Number or Study Instance UID shall be considered in querying MWLs. If ScheduledProcedureStepID is selected as matching key, Scheduled Procedure Step ID and Study Instance UID  shall be considered in querying MWLs.",
+      "description": "Specifica l'attributo dell'oggetto ricevuto per la ricerca dell'elemento MWL utilizzato per forzare gli attributi della richiesta. Se assenti, gli attributi di richiesta degli oggetti ricevuti non verranno forzati. PatientID - Patient ID and Accession Number considered for querying MWLs. If Accession Number not available in object attributes, only Patient ID considered for querying MWLs. PatientIDOnly - Only Patient ID considered for querying MWLs. PatientIDAccessionNumber - Patient ID and Accession Number considered for querying MWLs. If Accession Number not available in object attributes, fall back to Study Instance UID. AccessionNumber - Only Accession Number considered for querying MWLs. StudyInstanceUID - Only Study Instance UID considered for querying MWLs. ScheduledProcedureStepID - Scheduled Procedure Step ID and Study Instance UID considered for querying MWLs.",
       "type": "string",
       "enum": [
         "PatientID",
+        "PatientIDOnly",
+        "PatientIDAccessionNumber",
         "AccessionNumber",
         "StudyInstanceUID",
         "ScheduledProcedureStepID"
