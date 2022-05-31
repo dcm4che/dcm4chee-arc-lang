@@ -1,0 +1,188 @@
+{
+  "title": "Route Configuration",
+  "description": "Route Configuration",
+  "type": "object",
+  "required": [
+    "j4careRouterRouteConfiguration",
+    "j4careRouterRouteConfigurationDisplayName",
+    "j4careRouterRouteConfigurationQueueName",
+    "j4careRouterRouteConfigurationSourceFindAET",
+    "j4careRouterRouteConfigurationSourceRetrieveAET",
+    "j4careRouterRouteConfigurationSourceURL",
+    "j4careRouterRouteConfigurationRouteType",
+    "j4careRouterRouteConfigurationWorkerThreads",
+    "j4careRouterRouteConfigurationDestinationAETs",
+    "j4careRouterRouteConfigurationAET2AssigningAuthority"
+  ],
+  "properties": {
+    "j4careRouterRouteConfiguration": {
+      "title": "Route Configuration Name (internal)",
+      "description": "Route Configuration Name (internal)",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationDisplayName": {
+      "title": "Route Configuration Name (UI)",
+      "description": "Route Configuration Name (UI)",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationQueueName": {
+      "title": "Queue Name",
+      "description": "DCM4CHEE Queue Name used for Jobs",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationSourceFindAET": {
+      "title": "Source Find AET",
+      "description": "AET to Query when retrieving Input Data (HL7,IAN,...) to search for studies",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationSourceRetrieveAET": {
+      "title": "Source Retrieve AET",
+      "description": "AET to Retrieve Study from Input Data",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationSourceURL": {
+      "title": "Source URL",
+      "description": "Listening Source URL",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationRouteType": {
+      "title": "Route Type",
+      "description": "Route Type",
+      "default": "ORU",
+      "type": "string",
+      "enum": [
+          "IAN",
+          "ORU",
+          "ORM",
+          "REST"
+      ]
+    },
+    "j4careRouterRouteConfigurationWorkerThreads": {
+      "title": "Worker Threads",
+      "description": "Worker Threads",
+      "type": "integer",
+      "default": 5,
+      "minimum": 1
+    },
+    "j4careRouterRouteConfigurationNextVerificationDelay": {
+      "title": "Next Verification Delay",
+      "description": "Number of Minutes that should be added to Next Verificaton Date to synchronize the Routing Tasks",
+      "type": "integer",
+      "default": 1,
+      "minimum": 1
+    },
+    "j4careRouterRouteConfigurationDestinationAETs": {
+      "title": "Destination AETs",
+      "description": "List of Destination AETs",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "j4careRouterRouteConfigurationAET2AssigningAuthority": {
+      "title": "AET - Assigning Authority Mapping",
+      "description": "AET - Assigning Authority Mapping",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "j4careRouterRouteConfigurationAET2ForwardCronExpression": {
+      "title": "AET - Forward Cron Expression",
+      "description": "AET - Forward Cron Expression",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },    
+    "j4careRouterRouteConfigurationBodyPartMap": {
+      "title": "Body Part Mapping",
+      "description": "Map Body Parts to make them compareable (f.e. HEAD=HEAD,SKULL,HEADNECK)",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "j4careRouterRouteConfigurationBodyPartScore": {
+      "title": "Body Part Score",
+      "description": "Score that should be used if a body part was matched translated via the configured Body Part Map - 0 will deactivate the body part matching",
+      "type": "integer",
+      "default": 0
+    },
+    "j4careRouterRouteConfigurationMaxRetrieveTasks": {
+      "title": "Maximum Retrieve Tasks",
+      "description": "The maximum number of Retrieve Tasks that should be created based on the found datasets ordered by score - 0 will deactivate the feature",
+      "type": "integer",
+      "default": 0
+    },
+    "j4careRouterRouteConfigurationMinScore": {
+      "title": "Minimum Score",
+      "description": "The minimum score a study needs to reach to be considered for Routing - 0 will deactivate the feature",
+      "type": "integer",
+      "default": 0
+    },    
+    "j4careRouterRouteConfigurationCronExpression": {
+      "title": "Cron Expression",
+      "description": "Cron Expression to determine the next available Schedule Time for the Routing Order to be processed",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationPurgingDelayCanceledTasks": {
+      "title": "Purging Delay Canceled Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which canceled tasks are purged. If absent, there is no deletion for that particular route.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "j4careRouterRouteConfigurationPurgingDelayCompletedTasks": {
+      "title": "Purging Delay Completed Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which completed tasks are purged. If absent, there is no deletion for that particular route.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "j4careRouterRouteConfigurationPurgingDelayFailedTasks": {
+      "title": "Purging Delay Failed Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which failed tasks are purged. If absent, there is no deletion for that particular route.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "j4careRouterRouteConfigurationPurgingDelayWarningTasks": {
+      "title": "Purging Delay Warning Tasks",
+      "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which warning tasks are purged. If absent, there is no deletion for that particular route.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "j4careRouterRouteConfigurationHL7ConfigurationReceivingApplication": {
+      "title": "HL7 Configuration Receiving Application",
+      "description": "HL7 Configuration Receiving Application",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationHL7ConfigurationReceivingFacility": {
+      "title": "HL7 Configuration Receiving Facility",
+      "description": "HL7 Configuration Receiving Facility",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationHL7ConfigurationSendingApplication": {
+      "title": "HL7 Configuration Sending Application",
+      "description": "HL7 Configuration Sending Application",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationHL7ConfigurationSendingFacility": {
+      "title": "HL7 Configuration Sending Facility",
+      "description": "HL7 Configuration Sending Facility",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationHL7ConfigurationURIPrefix": {
+      "title": "HL7 Configuration URI Prefix",
+      "description": "URI Prefix to setup the HL7 Listener",
+      "type": "string"
+    },
+    "j4careRouterRouteConfigurationPixConfiguration":{
+      "title": "PIX Configurations",
+      "description": "PIX Configurations",
+      "titleKey":"{j4careRouterRouteConfigurationPixConfiguration}",
+      "type": "array",
+      "items" : {
+        "$ref": "j4careRouterRouteConfigurationPixConfiguration.schema.json"
+      }
+    }
+  }
+}
