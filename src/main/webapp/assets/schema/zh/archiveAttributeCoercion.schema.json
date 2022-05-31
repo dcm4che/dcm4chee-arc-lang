@@ -98,7 +98,7 @@
     },
     "dcmMergeMWLMatchingKey": {
       "title": "合并MWL匹配键",
-      "description": "查找用于强制请求属性的MWL项目,指定接收对象的属性。 如果不存在,则不会强制接收对象的请求属性",
+      "description": "查找用于强制请求属性的MWL项目,指定接收对象的属性。 如果不存在,则不会强制接收对象的请求属性 If PatientID is selected as matching key, Patient ID and Accession Number or Study Instance UID shall be considered in querying MWLs. If ScheduledProcedureStepID is selected as matching key, Scheduled Procedure Step ID and Study Instance UID  shall be considered in querying MWLs.",
       "type": "string",
       "enum": [
         "PatientID",

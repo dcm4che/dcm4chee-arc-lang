@@ -98,7 +98,7 @@
     },
     "dcmMergeMWLMatchingKey": {
       "title": "Unisci chiave di corrispondenza MWL",
-      "description": "Specifica l'attributo dell'oggetto ricevuto per la ricerca dell'elemento MWL utilizzato per forzare gli attributi della richiesta. Se assenti, gli attributi di richiesta degli oggetti ricevuti non verranno forzati. If absent, the Archive DB is queried for a matching MWL items provided by any Archive MWL AE.",
+      "description": "Specifica l'attributo dell'oggetto ricevuto per la ricerca dell'elemento MWL utilizzato per forzare gli attributi della richiesta. Se assenti, gli attributi di richiesta degli oggetti ricevuti non verranno forzati. If PatientID is selected as matching key, Patient ID and Accession Number or Study Instance UID shall be considered in querying MWLs. If ScheduledProcedureStepID is selected as matching key, Scheduled Procedure Step ID and Study Instance UID  shall be considered in querying MWLs.",
       "type": "string",
       "enum": [
         "PatientID",
