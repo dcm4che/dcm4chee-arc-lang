@@ -59,6 +59,12 @@
         "type": "string"
       }
     },
+    "j4careWorkflowManagerWorkflowConfigurationSubWorkflow": {
+      "title": "Sub Workflow",
+      "description": "Indicates a Sub Workflow of another Workflow",
+      "type": "boolean",
+      "default": false
+    },
     "j4careWorkflowManagerWorkflowConfigurationPurgingDelayCanceledTasks": {
       "title": "Purging Delay Canceled Tasks",
       "description": "Delay in ISO-8601 duration format PnDTnHnMnS after which canceled tasks are purged. If absent, there is no deletion for that particular workflow.",
