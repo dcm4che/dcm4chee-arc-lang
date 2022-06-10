@@ -28,7 +28,7 @@
     },
     "dcmTag": {
       "title": "患者 属性",
-      "description": "クエリされた 患者 属性 - 指定されて いない 場合、 使用 可能な すべての 患者 属性が クエリされます",
+      "description": "クエリされた 患者 属性 - 指定されて いない 場合、 使用 可能な すべての 患者 属性が クエリされます. Only applicable for 'pdq-dicom' PDQ Service",
       "type": "array",
       "items": {
         "type": "string"

@@ -18,7 +18,7 @@
       ]
     },
     "dicomNetworkConnectionReference": {
-      "title": "Web Application Network Connection(s)",
+      "title": "Web Application Network Connection",
       "description": "Network Connection(s) on which the services of the Web application are available",
       "type": "array",
       "items": {

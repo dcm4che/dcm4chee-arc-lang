@@ -28,7 +28,7 @@
     },
     "dcmTag": {
       "title": "Attributi del paziente",
-      "description": "Attributi paziente interrogati: se non specificato, verranno interrogati tutti gli attributi del paziente disponibili",
+      "description": "Attributi paziente interrogati: se non specificato, verranno interrogati tutti gli attributi del paziente disponibili. Only applicable for 'pdq-dicom' PDQ Service",
       "type": "array",
       "items": {
         "type": "string"
