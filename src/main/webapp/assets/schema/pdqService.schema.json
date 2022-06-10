@@ -28,7 +28,7 @@
     },
     "dcmTag": {
       "title": "Patient Attributes",
-      "description": "Queried Patient Attributes - if not specified all available Patient attributes will be queried",
+      "description": "Queried Patient Attributes - if not specified all available Patient attributes will be queried. Only applicable for 'pdq-dicom' PDQ Service",
       "type": "array",
       "items": {
         "type": "string"

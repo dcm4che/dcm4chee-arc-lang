@@ -28,7 +28,7 @@
     },
     "dcmTag": {
       "title": "Patient Attributes",
-      "description": "查询的患者属性 - 如果未指定，将查询所有可用的患者属性",
+      "description": "查询的患者属性 - 如果未指定，将查询所有可用的患者属性. Only applicable for 'pdq-dicom' PDQ Service",
       "type": "array",
       "items": {
         "type": "string"
