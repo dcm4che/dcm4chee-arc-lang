@@ -81,7 +81,8 @@
           "RetainLongitudinalTemporalInformationFullDatesOption",
           "RetainDeviceIdentityOption",
           "RetainInstitutionIdentityOption",
-          "RetainUIDsOption"
+          "RetainUIDsOption",
+          "RetainPatientIDHashOption"
         ]
       }
     },
