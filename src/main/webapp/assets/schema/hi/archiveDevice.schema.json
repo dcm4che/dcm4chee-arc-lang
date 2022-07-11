@@ -103,6 +103,7 @@
     "hl7PSUFillerOrderNumber",
     "hl7PSUPlacerOrderNumber",
     "hl7PSUMWL",
+    "hl7PSUMWLMatchingKey",
     "hl7PSUOnTimeout",
     "hl7PSUMessageType",
     "hl7PSUPIDPV1",
@@ -1590,6 +1591,16 @@
       "description": "प्राप्त हुए स्टडी के लिए कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट विलम्ब' या प्राप्त हुए MPPS के लिए कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट समयपाल' का मूल्य पहुँचने पर डेटाबेस में MWL आइटम्स की स्थिति को COMPLETED (संपूर्ण) के रूप में अपडेट करने को निर्दिष्ट करता है । अन्तर्निहित रूप से 'हाँ' के तौर पे सेट होगा, यदि HL7 संदेश प्राप्त करनेवाले सिस्टम्स को अधिसूचित करना कॉन्फ़िगर्ड है । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
+    },
+    "hl7PSUMWLMatchingKey": {
+      "title": "HL7 Procedure Status Update MWL Matching Key",
+      "description": "Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string",
+      "default": "StudyInstanceUID",
+      "enum": [
+        "AccessionNumber",
+        "StudyInstanceUID"
+      ]
     },
     "hl7PSUTimeout": {
       "title": "HL7 प्रक्रिया स्थिति अपडेट समयपाल",
