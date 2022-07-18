@@ -1436,7 +1436,7 @@
     },
     "dcmPatientVerificationPDQServiceID": {
       "title": "रुग्णाच्या रेकॉर्डचे सत्यापनासाठी PDQ सेवा ID",
-      "description": "रुग्ण जनसांख्यिकीचे सत्यापनासाठी वापरलेले PDQ सेवाचे ID. अनुपस्थित असल्यास, रुग्णाच्या रेकॉर्डचे सत्यापन होणार नाही.",
+      "description": "रुग्ण जनसांख्यिकीचे सत्यापनासाठी वापरलेले Patient Demographics Query सेवाचे ID. अनुपस्थित असल्यास, रुग्णाच्या रेकॉर्डचे सत्यापन होणार नाही.",
       "type": "string",
       "format": "dcmPDQServiceID"
     },
@@ -1843,7 +1843,7 @@
     },
     "dcmPDQService": {
       "title": "PDQ सेवा वर्णनकर्ता",
-      "description": "PDQ सेवा वर्णनकर्ता.",
+      "description": "Patient Demographics Query सेवा वर्णनकर्ता.",
       "type": "array",
       "titleKey":"{dcmPDQServiceID}",
       "items" : {

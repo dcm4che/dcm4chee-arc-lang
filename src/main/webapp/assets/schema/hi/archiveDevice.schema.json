@@ -1437,7 +1437,7 @@
     },
     "dcmPatientVerificationPDQServiceID": {
       "title": "मरीज़ के रेकॉर्ड का सिद्धकरण के लिए PDQ सेवा ID",
-      "description": "मरीज़ जनसांख्यिकी का सिद्धकरण करने के लिए इस्तमाल हुए PDQ सेवा का ID । यदि कॉन्फ़िगर न किया हो तो, मरीज़ के रेकॉर्ड का सिद्धकरण नहीं होगा ।",
+      "description": "मरीज़ जनसांख्यिकी का सिद्धकरण करने के लिए इस्तमाल हुए Patient Demographics Query सेवा का ID । यदि कॉन्फ़िगर न किया हो तो, मरीज़ के रेकॉर्ड का सिद्धकरण नहीं होगा ।",
       "type": "string",
       "format": "dcmPDQServiceID"
     },
@@ -1844,7 +1844,7 @@
     },
     "dcmPDQService": {
       "title": "PDQ सेवा वर्णनकर्ता",
-      "description": "PDQ सेवा वर्णनकर्ता ।",
+      "description": "Patient Demographics Query सेवा वर्णनकर्ता ।",
       "type": "array",
       "titleKey":"{dcmPDQServiceID}",
       "items" : {

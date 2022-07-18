@@ -1433,7 +1433,7 @@
     },
     "dcmPatientVerificationPDQServiceID": {
       "title": "Patient Verification PDQ Service ID",
-      "description": "ID of PDQ Service used for Verification of Patient Demographic. If absent, no Patient Verification will be performed.",
+      "description": "ID of Patient Demographics Query Service used for Verification of Patient Demographic. If absent, no Patient Verification will be performed.",
       "type": "string",
       "format": "dcmPDQServiceID"
     },
@@ -1846,7 +1846,7 @@
     },
     "dcmPDQService": {
       "title": "PDQ服务描述符",
-      "description": "PDQ服务描述符",
+      "description": "Patient Demographics Query服务描述符",
       "type": "array",
       "titleKey":"{dcmPDQServiceID}",
       "items" : {

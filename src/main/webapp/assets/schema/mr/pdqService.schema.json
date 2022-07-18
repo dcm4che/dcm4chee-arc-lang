@@ -1,6 +1,6 @@
 {
   "title": "PDQ सेवा",
-  "description": "PDQ सेवा वर्णनकर्ता.",
+  "description": "Patient Demographics Query सेवा वर्णनकर्ता.",
   "type": "object",
   "required": [
     "dcmPDQServiceID",
@@ -10,7 +10,7 @@
   "properties": {
     "dcmPDQServiceID": {
       "title": "PDQ सेवा ID",
-      "description": "PDQ सेवा ID.",
+      "description": "Patient Demographics Query सेवा ID.",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
@@ -18,12 +18,12 @@
     },
     "dcmURI": {
       "title": "PDQ सर्व्हिस URI",
-      "description": "PDQ सर्व्हिस URI, उदाहरण 'pdq-dicom:FINDSCP' किंवा 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility'",
+      "description": "Patient Demographics Query सर्व्हिस URI, उदाहरण 'pdq-dicom:FINDSCP' किंवा 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility' किंवा pdq-fhir:HL7-FHIR-R4-WebApplication",
       "type": "string"
     },
     "dicomDescription": {
       "title": "PDQ सेवेचे वर्णन",
-      "description": "PDQ सेवेचे अनियंत्रित मजकूर वर्णन.",
+      "description": "Patient Demographics Query सेवेचे अनियंत्रित मजकूर वर्णन.",
       "type": "string"
     },
     "dcmTag": {

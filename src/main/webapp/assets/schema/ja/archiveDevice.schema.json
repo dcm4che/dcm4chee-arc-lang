@@ -1436,7 +1436,7 @@
     },
     "dcmPatientVerificationPDQServiceID": {
       "title": "患者 検証 PDQ サービス ID",
-      "description": "患者の 人口統計の 検証に 使用される PDQ サービスの ID。 存在しない 場合、 患者の 検証は 行われません。",
+      "description": "患者の 人口統計の 検証に 使用される Patient Demographics Query サービスの ID。 存在しない 場合、 患者の 検証は 行われません。",
       "type": "string",
       "format": "dcmPDQServiceID"
     },
@@ -1843,7 +1843,7 @@
     },
     "dcmPDQService": {
       "title": "PDQ サービス 記述子",
-      "description": "PDQ サービス 記述子",
+      "description": "Patient Demographics Query サービス 記述子",
       "type": "array",
       "titleKey":"{dcmPDQServiceID}",
       "items" : {

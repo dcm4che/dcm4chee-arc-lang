@@ -1,6 +1,6 @@
 {
   "title": "PDQ サービス",
-  "description": "PDQ サービス 記述子",
+  "description": "Patient Demographics Query サービス 記述子",
   "type": "object",
   "required": [
     "dcmPDQServiceID",
@@ -10,7 +10,7 @@
   "properties": {
     "dcmPDQServiceID": {
       "title": "PDQ サービス ID",
-      "description": "PDQ サービス ID",
+      "description": "Patient Demographics Query サービス ID",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
@@ -18,12 +18,12 @@
     },
     "dcmURI": {
       "title": "PDQ サービス URI",
-      "description": "PDQ サービス URI, 例 : 'pdq-dicom:FINDSCP' または 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility'",
+      "description": "Patient Demographics Query サービス URI, 例 : 'pdq-dicom:FINDSCP' または 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility' または pdq-fhir:HL7-FHIR-R4-WebApplication",
       "type": "string"
     },
     "dicomDescription": {
       "title": "PDQ サービスの 説明",
-      "description": "PDQ サービスの 制約のない テキスト 説明",
+      "description": "Patient Demographics Query サービスの 制約のない テキスト 説明",
       "type": "string"
     },
     "dcmTag": {

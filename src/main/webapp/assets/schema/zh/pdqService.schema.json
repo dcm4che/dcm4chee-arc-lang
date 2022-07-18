@@ -1,6 +1,6 @@
 {
   "title": "PDQ Service",
-  "description": "PDQ服务描述符",
+  "description": "Patient Demographics Query服务描述符",
   "type": "object",
   "required": [
     "dcmPDQServiceID",
@@ -10,7 +10,7 @@
   "properties": {
     "dcmPDQServiceID": {
       "title": "PDQ Service ID",
-      "description": "PDQ服务ID",
+      "description": "Patient Demographics Query服务ID",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
@@ -18,12 +18,12 @@
     },
     "dcmURI": {
       "title": "PDQ Service URI",
-      "description": "PDQ服务URI, 例如'pdq-dicom:FINDSCP'或者'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility'.",
+      "description": "Patient Demographics Query服务URI, 例如'pdq-dicom:FINDSCP'或者'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility' or pdq-fhir:HL7-FHIR-R4-WebApplication.",
       "type": "string"
     },
     "dicomDescription": {
       "title": "PDQ Service Description",
-      "description": "PDQ服务的不受约束的文本描述",
+      "description": "Patient Demographics Query服务的不受约束的文本描述",
       "type": "string"
     },
     "dcmTag": {

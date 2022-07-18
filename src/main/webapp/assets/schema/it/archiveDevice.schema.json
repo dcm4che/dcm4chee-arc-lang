@@ -1405,7 +1405,7 @@
     },
     "dcmPatientVerificationPDQServiceID": {
       "title": "ID servizio PDQ verifica paziente",
-      "description": "ID del servizio PDQ utilizzato per la verifica dei dati anagrafici del paziente. In caso di assenza, non verrà eseguita alcuna verifica del paziente.",
+      "description": "ID del servizio Patient Demographics Query utilizzato per la verifica dei dati anagrafici del paziente. In caso di assenza, non verrà eseguita alcuna verifica del paziente.",
       "type": "string",
       "format": "dcmPDQServiceID"
     },
@@ -1805,7 +1805,7 @@
     },
     "dcmPDQService": {
       "title": "Descrittore del servizio PDQ",
-      "description": "Descrittore del servizio PDQ",
+      "description": "Descrittore del servizio Patient Demographics Query",
       "type": "array",
       "titleKey":"{dcmPDQServiceID}",
       "items" : {
