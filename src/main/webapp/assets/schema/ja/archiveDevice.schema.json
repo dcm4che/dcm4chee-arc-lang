@@ -102,6 +102,7 @@
     "hl7PSUFillerOrderNumber",
     "hl7PSUPlacerOrderNumber",
     "hl7PSUMWL",
+    "hl7PSUMWLMatchingKey",
     "hl7PSUOnTimeout",
     "hl7PSUMessageType",
     "hl7PSUPIDPV1",
@@ -1435,7 +1436,7 @@
     },
     "dcmPatientVerificationPDQServiceID": {
       "title": "患者 検証 PDQ サービス ID",
-      "description": "患者の 人口統計の 検証に 使用される PDQ サービスの ID。 存在しない 場合、 患者の 検証は 行われません。",
+      "description": "患者の 人口統計の 検証に 使用される Patient Demographics Query サービスの ID。 存在しない 場合、 患者の 検証は 行われません。",
       "type": "string",
       "format": "dcmPDQServiceID"
     },
@@ -1589,6 +1590,16 @@
       "description": "DB内の MWL アイテムの ステータスが 、構成された 「HL7 手順 ステータス 更新 遅延」後に 受信した 検査には または 構成された 「HL7 手順 ステータス 更新 タイムアウト」後に 受信した MPPSには 、COMPLETEDに 更新されるか どうかを 指定します。「HL7 手順 ステータス 更新 受け取り アプリケーション」が 構成されて いる 場合は、 暗黙的 に 「真」に 設定されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
       "type": "boolean",
       "default": false
+    },
+    "hl7PSUMWLMatchingKey": {
+      "title": "HL7 Procedure Status Update MWL Matching Key",
+      "description": "Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string",
+      "default": "StudyInstanceUID",
+      "enum": [
+        "AccessionNumber",
+        "StudyInstanceUID"
+      ]
     },
     "hl7PSUTimeout": {
       "title": "HL7 手順 ステータス 更新 タイムアウト",
@@ -1832,7 +1843,7 @@
     },
     "dcmPDQService": {
       "title": "PDQ サービス 記述子",
-      "description": "PDQ サービス 記述子",
+      "description": "Patient Demographics Query サービス 記述子",
       "type": "array",
       "titleKey":"{dcmPDQServiceID}",
       "items" : {

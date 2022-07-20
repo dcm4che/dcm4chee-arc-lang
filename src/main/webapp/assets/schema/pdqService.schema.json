@@ -1,6 +1,6 @@
 {
   "title": "PDQ Service",
-  "description": "PDQ Service Descriptor",
+  "description": "Patient Demographics Query Service Descriptor",
   "type": "object",
   "required": [
     "dcmPDQServiceID",
@@ -10,20 +10,20 @@
   "properties": {
     "dcmPDQServiceID": {
       "title": "PDQ Service ID",
-      "description": "PDQ Service ID",
+      "description": "Patient Demographics Query Service ID",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
       ]
     },
     "dcmURI": {
-      "title": "PDQ Service URI",
+      "title": "Patient Demographics Query Service URI",
       "description": "PDQ Service URI, e.g. 'pdq-dicom:FINDSCP' or 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility' or pdq-fhir:HL7-FHIR-R4-WebApplication.",
       "type": "string"
     },
     "dicomDescription": {
       "title": "PDQ Service Description",
-      "description": "Unconstrained text description of the PDQ Service",
+      "description": "Unconstrained text description of the Patient Demographics Query Service",
       "type": "string"
     },
     "dcmTag": {
