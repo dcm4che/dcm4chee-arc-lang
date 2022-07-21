@@ -650,6 +650,15 @@
       "description": "प्राप्त झालेल्या अभ्यासासाठी कॉन्फीगर्ड 'HL7 प्रक्रिया स्थिती अद्यतन विलंब' किंवा प्राप्त झालेल्या MPPS साठी कॉन्फीगर्ड 'HL7 प्रक्रिया स्थिती अद्यतन कालबाह्य' वेळेंची मूल्ये पोहोचल्यावर डेटाबेसमधील MWL आयटम्सच्या स्थितीला COMPLETED (संपूर्ण) म्हणून अद्यतन करण्याचे निर्दिष्ट करते. आपोआप 'हो' म्हणून संच केले जाईल, जर HL7 संदेश प्राप्त करणाऱ्या सिस्टम्सना कळवण्याचे कॉन्फिगरेशन उपलब्ध आहे. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
       "type": "boolean"
     },
+    "hl7PSUMWLMatchingKey": {
+      "title": "HL7 Procedure Status Update MWL Matching Key",
+      "description": "Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "AccessionNumber",
+        "StudyInstanceUID"
+      ]
+    },
     "hl7PSUTimeout": {
       "title": "HL7 प्रक्रिया स्थिती अद्यतन कालबाह्य",
       "description": "MPPS मध्ये संदर्भित दृष्टांतांच्या प्राप्तीचे वाट पाहण्यासाठी ISO-8601 कालावधि PnDTnHnMnS प्रारूपात कालबाह्य. अनुपस्थित असल्यास, कायमचे वाट पहा. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",

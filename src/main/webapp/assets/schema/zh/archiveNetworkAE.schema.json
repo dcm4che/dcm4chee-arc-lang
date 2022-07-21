@@ -650,6 +650,15 @@
       "description": "指定DB中MWL项目的状态是否更新为COMPLETED,以便在配置“HL7过程状态更新延迟”后接收到的检查,或在配置“HL7过程状态更新超时”后接收到的MPPS。如果配置了HL7步骤接收状态更新应用程序,则隐式设置为“真”。覆盖在设备级别指定的值。",
       "type": "boolean"
     },
+    "hl7PSUMWLMatchingKey": {
+      "title": "HL7 Procedure Status Update MWL Matching Key",
+      "description": "Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "AccessionNumber",
+        "StudyInstanceUID"
+      ]
+    },
     "hl7PSUTimeout": {
       "title": "HL7过程状态更新超时",
       "description": "等待MPPS引用的实例的ISO-8601周期PnDTnHnMnS形式的超时。如果不存在,请永久检查完整性。覆盖在设备级别指定的值。",
