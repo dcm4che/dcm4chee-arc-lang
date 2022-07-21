@@ -558,6 +558,8 @@
     "get_queued_batches": "Get queued batches",
     "get_storage_commitments": "Get Хранилище commitments",
     "given_value_bigger_than_max": "The given value {$PH} is bigger than the allowed max value {$PH_1}!",
+    "given_value_equal_to_exclusive_max": "The given value {$PH} should be lesser than the allowed exclusive maximum value {$PH_1}!",
+    "given_value_equal_to_exclusive_min": "The given value {$PH} should be greater than the allowed exclusive minimum value {$PH_1}!",
     "given_value_smaller_than_min": "The given value {$PH} is smaller than the allowed min value {$PH_1}!",
     "globalvar.make_diff_between_two_archives": "Оценить разницу между архивами",
     "hardware-dashboard.max_cpu_total_usage": "Max CPU total usage",

@@ -550,6 +550,8 @@
     "get_queued_batches": "获取排队批次",
     "get_storage_commitments": "获取存储承诺",
     "given_value_bigger_than_max": "指定的值{$PH}大于最大允许值{$PH_1}！",
+    "given_value_equal_to_exclusive_max": "The given value {$PH} should be lesser than the allowed exclusive maximum value {$PH_1}!",
+    "given_value_equal_to_exclusive_min": "The given value {$PH} should be greater than the allowed exclusive minimum value {$PH_1}!",
     "given_value_smaller_than_min": "指定的值{$PH}小于最小允许值{$PH_1}！",
     "globalvar.make_diff_between_two_archives": "比较两个归档文件",
     "hardware-dashboard.max_cpu_total_usage": "最大CPU总使用率",

@@ -556,6 +556,8 @@
     "get_queued_batches": "Get queued batches",
     "get_storage_commitments": "साठवण वचनबद्धता मिळवा",
     "given_value_bigger_than_max": "दिलेले मूल्य {$PH} अनुमत कमाल मूल्यापेक्षा {$PH_1} मोठे आहे!",
+    "given_value_equal_to_exclusive_max": "The given value {$PH} should be lesser than the allowed exclusive maximum value {$PH_1}!",
+    "given_value_equal_to_exclusive_min": "The given value {$PH} should be greater than the allowed exclusive minimum value {$PH_1}!",
     "given_value_smaller_than_min": "दिलेले मूल्य {$PH} अनुमत किमान मूल्यापेक्षा {$PH_1} कमी आहे!",
     "globalvar.make_diff_between_two_archives": "दोन संग्रहणांत फरक करा",
     "hardware-dashboard.max_cpu_total_usage": "कमाल CPU एकूण वापर",
