@@ -556,6 +556,8 @@
     "get_queued_batches": "Get queued batches",
     "get_storage_commitments": "格納 コミットメントを 取得 する",
     "given_value_bigger_than_max": "指定された 値は、{$PH} 許容される 最大値 {$PH_1} よりも 大きいです!",
+    "given_value_equal_to_exclusive_max": "The given value {$PH} should be lesser than the allowed exclusive maximum value {$PH_1}!",
+    "given_value_equal_to_exclusive_min": "The given value {$PH} should be greater than the allowed exclusive minimum value {$PH_1}!",
     "given_value_smaller_than_min": "指定された 値は、{$PH} 許容される 最小値 {$PH_1} よりも 小さいです!",
     "globalvar.make_diff_between_two_archives": "2つ アーカイブを 比較 する",
     "hardware-dashboard.max_cpu_total_usage": "最大 CPU 使用 合計",

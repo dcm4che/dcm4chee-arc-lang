@@ -556,6 +556,8 @@
 		"get_queued_batches": "Get queued batches",
 		"get_storage_commitments": "Ottieni Storage commitments",
 		"given_value_bigger_than_max": "Il valore specificato {$PH} è maggiore del valore massimo consentito {$PH_1}!",
+		"given_value_equal_to_exclusive_max": "The given value {$PH} should be lesser than the allowed exclusive maximum value {$PH_1}!",
+		"given_value_equal_to_exclusive_min": "The given value {$PH} should be greater than the allowed exclusive minimum value {$PH_1}!",
 		"given_value_smaller_than_min": "Il valore specificato {$PH} è inferiore al valore minimo consentito {$PH_1}!",
 		"globalvar.make_diff_between_two_archives": "Crea differenze tra due archivi",
 		"hardware-dashboard.max_cpu_total_usage": "Utilizzo totale massimo della CPU",
