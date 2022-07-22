@@ -1751,7 +1751,7 @@
     "upload-dicom.chose_dicom_files_to_upload": "アップロード するために DICOM ファイルを 選択 する:",
     "upload-dicom.select_the_ae_title": "AE タイトルを 選択 する:",
     "upload-dicom.title": "DICOM データを アップロード する",
-    "upload-file.title": "画像, ビデオ または PDFを 検査に アップロード する",
+    "upload-file.title": "画像, ビデオ, PDF, CDA, MTL, STL, OBJ または Genozipを 検査に アップロード する",
     "upload-files.gif_with_multi_frames_in_it": "マルチ フレームを 含む GIF",
     "upload-files.imported_": "インポート済み ",
     "upload-files.no_web_application_with_the_web_service_class_stow_rs_found_in_this_device": "この デバイスに ウェブ サービス クラス \"STOW_RS\" もって ウェブ アプリケーション サービスが 見つかりません",
