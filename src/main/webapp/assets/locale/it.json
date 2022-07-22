@@ -1751,7 +1751,7 @@
 		"upload-dicom.chose_dicom_files_to_upload": "Scegli i file DICOM da caricare:",
 		"upload-dicom.select_the_ae_title": "Seleziona il titolo ae:",
 		"upload-dicom.title": "Carica i dati DICOM",
-		"upload-file.title": "Carica immagine, video o pdf nello studio",
+		"upload-file.title": "Carica immagine, video, PDF, CDA, MTL, STL, OBJ o Genozip nello studio",
 		"upload-files.gif_with_multi_frames_in_it": "Gif con dentro più fotogrammi ",
 		"upload-files.imported_": "Importato ",
 		"upload-files.no_web_application_with_the_web_service_class_stow_rs_found_in_this_device": "Nessuna applicazione Web con la classe di servizio Web \"STOW_RS\" trovata in questo dispositivo",
