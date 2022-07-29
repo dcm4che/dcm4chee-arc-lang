@@ -1160,6 +1160,7 @@
     "scheduled_station_class_code_sequence_00404026": "予定された ステーション クラス コード シーケンス (0040,4026)",
     "scheduled_station_geographic_location_code_sequence_00404027": "予定された ステーション 地理的 位置 コード シーケンス (0040,4027)",
     "scheduled_station_name_code_sequence_00404025": "予定された ステーション名 コード シーケンス (0040,4025)",
+    "scheduled_storage_verification_of_matching_series": "Schedule Storage Verification of matching Series",
     "scheduled_storage_verification_of_matching_studies": "一致 する 検査の 格納 検証を 予定 する",
     "scheduled_time": "予定された 時間",
     "scheduled_time_range": "予定された 時間 範囲",

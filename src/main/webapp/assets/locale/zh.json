@@ -1122,6 +1122,7 @@
     "scheduled_station_class_code_sequence_00404026": "调度的工作站类代码序列 (0040,4026)",
     "scheduled_station_geographic_location_code_sequence_00404027": "定的站点地理位置代码序列 (0040,4027)",
     "scheduled_station_name_code_sequence_00404025": "调度的站名代码序列 (0040,4025)",
+    "scheduled_storage_verification_of_matching_series": "Schedule Storage Verification of matching Series",
     "scheduled_storage_verification_of_matching_studies": "计划匹配检查的存储验证",
     "scheduled_time": "预定时间",
     "scheduled_time_range": "预定的时间范围",

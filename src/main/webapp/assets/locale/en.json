@@ -1162,6 +1162,7 @@
     "scheduled_station_class_code_sequence_00404026": "Scheduled Station Class Code Sequence (0040,4026)",
     "scheduled_station_geographic_location_code_sequence_00404027": "Scheduled Station Geographic Location Code Sequence (0040,4027)",
     "scheduled_station_name_code_sequence_00404025": "Scheduled Station Name Code Sequence (0040,4025)",
+    "scheduled_storage_verification_of_matching_series": "Schedule Storage Verification of matching Series",
     "scheduled_storage_verification_of_matching_studies": "Schedule Storage Verification of matching Studies",
     "scheduled_time": "Scheduled Time",
     "scheduled_time_range": "Scheduled time range",
