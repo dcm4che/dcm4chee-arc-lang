@@ -25,7 +25,7 @@
     },
     "dcmRetentionPeriod": {
       "title": "Minimal Study Retention Period",
-      "description": "Minimal Study Retention Period in ISO-8601 period format PnYnMnD or PnW",
+      "description": "Minimal Study Retention Period in ISO-8601 period format PnYnMnD or PnW. Ineffective if 'Maximal Study Retention Period' is also set.",
       "type": "string",
       "format": "dcmPeriod"
     },
