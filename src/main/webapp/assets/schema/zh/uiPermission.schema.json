@@ -61,6 +61,7 @@
         "action-devicelist-device_configuration",
         "action-studies-patient",
         "action-studies-mwl",
+        "action-studies-uwl",
         "action-studies-study",
         "action-studies-serie",
         "action-studies-instance",
