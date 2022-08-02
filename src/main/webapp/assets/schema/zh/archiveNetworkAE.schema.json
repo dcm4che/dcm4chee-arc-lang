@@ -733,6 +733,11 @@
       "description": "Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. Overwrites value specified on Device level.",
       "type": "boolean"
     },
+    "dcmUPSUpdateWithoutTransactionUID": {
+      "title": "UPS Update Without Transaction UID",
+      "description": "Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmExportRule": {
       "title": "导出规则",
       "description": "应用于由此AE接收的DICOM对象的导出规则。 补充在设备级别指定的导出规则。 ",
