@@ -521,6 +521,7 @@
     "extended_search": "Extended search",
     "extension_is_not_present": "Extension is not present",
     "extensions": "Extensions",
+    "external_archive_proxy_relational_query_req_warning": "Query requests (without Study Instance UID) proxied to external archives may not support relational queries!",
     "external_hl7_application": "External Hl7 Application",
     "external_retrieve_aet": "External retrieve AET",
     "f": "F",
