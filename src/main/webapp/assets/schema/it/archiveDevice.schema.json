@@ -95,6 +95,7 @@
     "dcmAuditHL7MsgLimit",
     "dcmMatchSOPClassOnInstanceLevel",
     "dcmUPSUpdateWithoutTransactionUID",
+    "dcmKeyValueRetentionFetchSize",
     "hl7PSUForRequestedProcedure",
     "hl7PSURequestedProcedureID",
     "hl7PSUAccessionNumber",
