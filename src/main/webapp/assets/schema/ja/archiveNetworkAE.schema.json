@@ -435,6 +435,14 @@
         "ONLY_EXPIRED"
       ]
     },
+    "dcmAcceptedUserRole": {
+      "title": "Accepted User Role",
+      "description": "Roles of users from which web requests are accepted; any if absent.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "dcmAllowDeleteStudyPermanently": {
       "title": "検査の 完全 削除の 許可",
       "description": "検査の 完全 削除の 許可。 REJECTED = すでに 拒否された 検査のみ。 デバイス レベルで 指定された 値を 上書きします。",

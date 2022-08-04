@@ -435,6 +435,14 @@
         "ONLY_EXPIRED"
       ]
     },
+    "dcmAcceptedUserRole": {
+      "title": "Accepted User Role",
+      "description": "Roles of users from which web requests are accepted; any if absent.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "dcmAllowDeleteStudyPermanently": {
       "title": "अभ्यास कायमस्वरुपी हटवण्याची परवानगी द्या",
       "description": "अभ्यास कायमचा हटविण्यासाठी परवानगी द्या. REJECTED = केवळ आधीच अस्वीकारलेले अभ्यास. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",

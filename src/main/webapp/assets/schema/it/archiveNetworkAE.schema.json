@@ -444,6 +444,14 @@
         "REJECTED"
       ]
     },
+    "dcmAcceptedUserRole": {
+      "title": "Accepted User Role",
+      "description": "Roles of users from which web requests are accepted; any if absent.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "dcmAllowDeletePatient": {
       "title": "Consenti eliminazione paziente",
       "description": "Consenti l'eliminazione permanente dei pazienti. Valori enumerati: NEVER, ALWAYS, WITHOUT_STUDIES. Sovrascrive i valori specificati a livello del dispositivo.",

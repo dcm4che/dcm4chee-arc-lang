@@ -435,6 +435,14 @@
         "ONLY_EXPIRED"
       ]
     },
+    "dcmAcceptedUserRole": {
+      "title": "Accepted User Role",
+      "description": "Roles of users from which web requests are accepted; any if absent.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "dcmAllowDeleteStudyPermanently": {
       "title": "स्टडी को पूरी तरह मिटाने की अनुमति दे",
       "description": "स्टडी को पूरी तरह मिटाने की अनुमति दे । REJECTED = सिर्फ पहले से अस्वीकृत किए हुए स्टडीज । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
