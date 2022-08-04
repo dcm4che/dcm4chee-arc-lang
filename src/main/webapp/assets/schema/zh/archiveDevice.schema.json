@@ -1781,6 +1781,26 @@
       "type": "boolean",
       "default" : false
     },
+    "dcmKeyValueRetentionPollingInterval": {
+      "title": "Key Value Retention Polling Interval",
+      "description": "Polling Interval for Key Value pairs which retention period expired in ISO-8601 duration format PnDTnHnMnS. If absent, Key Value pairs will not get deleted automatically.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmKeyValueRetentionFetchSize": {
+      "title": "Key Value Retention Fetch Size",
+      "description": "Limit result set of DB query for Key Value pairs which retention period expired; 100 if absent",
+      "type": "integer",
+      "default" : 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
+    "dcmKeyValueRetentionPeriod": {
+      "title": "Key Value Retention Period",
+      "description": "Retention period in ISO-8601 duration format PnDTnHnMn.nS of stored Key Value pairs. If absent, Key Value pairs will not get deleted automatically.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
     "dcmAttributeFilter": {
       "title": "属性过滤器",
       "description": "指定存储在数据库中的属性。",

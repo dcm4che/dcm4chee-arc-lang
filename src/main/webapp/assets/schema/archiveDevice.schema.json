@@ -96,6 +96,7 @@
     "dcmMWLScheduledProcedureStepIDGenerator",
     "dcmAuditHL7MsgLimit",
     "dcmMatchSOPClassOnInstanceLevel",
+    "dcmKeyValueRetentionFetchSize",
     "hl7PSUForRequestedProcedure",
     "hl7PSURequestedProcedureID",
     "hl7PSUAccessionNumber",
@@ -1788,6 +1789,26 @@
       "description": "Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
       "default" : false
+    },
+    "dcmKeyValueRetentionPollingInterval": {
+      "title": "Key Value Retention Polling Interval",
+      "description": "Polling Interval for Key Value pairs which retention period expired in ISO-8601 duration format PnDTnHnMnS. If absent, Key Value pairs will not get deleted automatically.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmKeyValueRetentionFetchSize": {
+      "title": "Key Value Retention Fetch Size",
+      "description": "Limit result set of DB query for Key Value pairs which retention period expired; 100 if absent",
+      "type": "integer",
+      "default" : 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
+    "dcmKeyValueRetentionPeriod": {
+      "title": "Key Value Retention Period",
+      "description": "Retention period in ISO-8601 duration format PnDTnHnMn.nS of stored Key Value pairs. If absent, Key Value pairs will not get deleted automatically.",
+      "type": "string",
+      "format": "dcmDuration"
     },
     "dcmAttributeFilter": {
       "title": "Attribute Filter",
