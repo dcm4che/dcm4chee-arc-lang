@@ -444,6 +444,14 @@
         "REJECTED"
       ]
     },
+    "dcmAcceptedUserRole": {
+      "title": "Accepted User Role",
+      "description": "Roles of users from which web requests are accepted; any if absent.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "dcmAllowDeletePatient": {
       "title": "Consenti eliminazione paziente",
       "description": "Consenti l'eliminazione permanente dei pazienti. Valori enumerati: NEVER, ALWAYS, WITHOUT_STUDIES. Sovrascrive i valori specificati a livello del dispositivo.",
@@ -731,6 +739,11 @@
     "dcmMatchSOPClassOnInstanceLevel": {
       "title": "Match SOP Class on Instance level",
       "description": "Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
+    "dcmUPSUpdateWithoutTransactionUID": {
+      "title": "UPS Update Without Transaction UID",
+      "description": "Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. Overwrites value specified on Device level.",
       "type": "boolean"
     },
     "dcmExportRule": {

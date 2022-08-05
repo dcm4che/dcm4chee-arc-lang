@@ -25,7 +25,7 @@
     },
     "dcmRetentionPeriod": {
       "title": "न्यूतनम स्टडी धारण कालावधि",
-      "description": "ISO-8601 कालावधि प्रारूप PnYnMnD या PnW में न्यूतनम स्टडी धारण कालावधि ।",
+      "description": "ISO-8601 कालावधि प्रारूप PnYnMnD या PnW में न्यूतनम स्टडी धारण कालावधि । Ineffective if 'Maximal Study Retention Period' is also set.",
       "type": "string",
       "format": "dcmPeriod"
     },
