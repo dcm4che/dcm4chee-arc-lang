@@ -49,6 +49,11 @@
         "type": "string"
       }
     },
+    "j4careRouterPIXDicomCFindFacadeConfigurationPixITI9URL": {
+      "title": "PIX DICOM C-FIND Facade PIX-ITI9 URL",
+      "description": "Listening URL (f.e pix-iti9://localhost:23456)",
+      "type": "string"
+    },
     "j4careRouterPIXDicomCFindFacadeConfigurationDcm4cheeAET": {
       "title": "PIX DICOM C-FIND Facade DCM4CHEE AET",
       "description": "PIX DICOM C-FIND Facade DCM4CHEE AET",
@@ -97,6 +102,36 @@
      "j4careRouterPIXDicomCFindFacadeConfigurationReceivingFacility": {
       "title": "PIX DICOM C-FIND Facade Receiving Facility",
       "description": "PIX DICOM C-FIND Facade Receiving Facility",
+      "type": "string"
+    },
+    "j4careRouterPIXGroovyFacadeConfigurationPixITI9URL": {
+      "title": "PIX Groovy Facade PIX-ITI9 URL",
+      "description": "Listening URL (f.e pix-iti9://localhost:23456)",
+      "type": "string"
+    },
+    "j4careRouterPIXGroovyFacadeConfigurationScriptFile": {
+      "title": "PIX Groovy Facade Script File",
+      "description": "Script File to create RSP_K23 Message",
+      "type": "string"
+    },
+    "j4careRouterPIXGroovyFacadeConfigurationSendingApplication": {
+      "title": "PIX Groovy Facade Sending Application",
+      "description": "PIX Groovy Facade Sending Application",
+      "type": "string"
+    },
+    "j4careRouterPIXGroovyFacadeConfigurationSendingFacility": {
+      "title": "PIX Groovy Facade Sending Facility",
+      "description": "PIX Groovy Facade Sending Facility",
+      "type": "string"
+    },
+     "j4careRouterPIXGroovyFacadeConfigurationReceivingApplication": {
+      "title": "PIX Groovy Facade Receiving Application",
+      "description": "PIX Groovy Facade Receiving Application",
+      "type": "string"
+    },
+     "j4careRouterPIXGroovyFacadeConfigurationReceivingFacility": {
+      "title": "PIX Groovy Facade Receiving Facility",
+      "description": "PIX Groovy Facade Receiving Facility",
       "type": "string"
     },
     "j4careRouterRouteConfiguration":{

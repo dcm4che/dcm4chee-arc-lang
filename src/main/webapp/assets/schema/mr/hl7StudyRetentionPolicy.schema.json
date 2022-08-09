@@ -25,7 +25,7 @@
     },
     "dcmRetentionPeriod": {
       "title": "किमान अभ्यास धारणा कालावधी",
-      "description": "ISO-8601 कालावधी स्वरूपात PnYnMnD किंवा PnW किमान अभ्यास धारणा कालावधी.",
+      "description": "ISO-8601 कालावधी स्वरूपात PnYnMnD किंवा PnW किमान अभ्यास धारणा कालावधी. Ineffective if 'Maximal Study Retention Period' is also set.",
       "type": "string",
       "format": "dcmPeriod"
     },

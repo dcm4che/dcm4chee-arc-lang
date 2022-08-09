@@ -25,7 +25,7 @@
     },
     "dcmRetentionPeriod": {
       "title": "最小 検査 保持 期間",
-      "description": "ISO-8601 期間 PnYnMnD または PnW 形式で 最小 検査 保持 期間",
+      "description": "ISO-8601 期間 PnYnMnD または PnW 形式で 最小 検査 保持 期間. Ineffective if 'Maximal Study Retention Period' is also set.",
       "type": "string",
       "format": "dcmPeriod"
     },

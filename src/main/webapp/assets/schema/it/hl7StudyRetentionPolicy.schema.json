@@ -25,7 +25,7 @@
     },
     "dcmRetentionPeriod": {
       "title": "Periodo di conservazione minimo dello studio",
-      "description": "Periodo minimo di conservazione dello studio in formato periodo ISO-8601 PnYnMnD o PnW",
+      "description": "Periodo minimo di conservazione dello studio in formato periodo ISO-8601 PnYnMnD o PnW. Ineffective if 'Maximal Study Retention Period' is also set.",
       "type": "string",
       "format": "dcmPeriod"
     },

@@ -25,7 +25,7 @@
     },
     "dcmRetentionPeriod": {
       "title": "最小检查保留期",
-      "description": "ISO-8601周期格式PnYnMnD或PnW的最小学习保留期",
+      "description": "ISO-8601周期格式PnYnMnD或PnW的最小学习保留期. Ineffective if 'Maximal Study Retention Period' is also set.",
       "type": "string",
       "format": "dcmPeriod"
     },
