@@ -1721,6 +1721,7 @@
     "upload_failed_please_try_again_later": "上传失败,请稍后再试！",
     "upload_file": "上传文件",
     "ups_procedure_step_state": "UPS Procedure Step State",
+    "ups_state_warning_msg": "Procedure Step State should be set",
     "ups_template_cloning_failed": "UPS模板克隆失败， 克隆的状态为",
     "ups_template_created_successfully": "UPS模板创建成功，创建在 ",
     "ups_template_creation_failed": "UPS模板创建失败，使用的状态是",

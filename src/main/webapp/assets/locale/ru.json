@@ -1781,6 +1781,7 @@
     "upload_failed_please_try_again_later": "Upload failed, please try again later!",
     "upload_file": "Upload file",
     "ups_procedure_step_state": "UPS Procedure Step State",
+    "ups_state_warning_msg": "Procedure Step State should be set",
     "ups_template_cloning_failed": "UPS template cloning failed with status ",
     "ups_template_created_successfully": "UPS template created successfully at ",
     "ups_template_creation_failed": "UPS template creation failed with status ",
