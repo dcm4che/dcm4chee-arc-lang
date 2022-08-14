@@ -31,6 +31,8 @@
           "GroovyScriptWorkflowStepProcessor",
           "RoutingWorkflowStepProcessor",
           "UPSCreationWorkflowStepProcessor",
+          "UPSFindWorkflowStepProcessor",
+          "UPSSetWorkflowStepProcessor",
           "UPSStatusWorkflowStepProcessor",
           "SplitterWorkflowStepProcessor",
           "ExportTaskWorkflowStepProcessor",
