@@ -22,7 +22,7 @@
     },
     "j4careWorkflowManagerWorkflowConfigurationSourceURL": {
       "title": "Source URL",
-      "description": "Listening Source URL",
+      "description": "Listening Source URL (e.g. ORM: orm-route1://0.0.0.0:4713?audit=false, ORU: oru-route1://0.0.0.0:4711?audit=false, IAN: dicomDevice:dicom?sopClasses=1.2.840.10008.5.1.4.33,REST: rest:dummy)",
       "type": "string"
     },
     "j4careWorkflowManagerWorkflowConfigurationWorkflowInputSourceType": {
@@ -39,7 +39,7 @@
     },
     "j4careWorkflowManagerWorkflowConfigurationWorkerThreads": {
       "title": "Worker Threads",
-      "description": "Worker Threads",
+      "description": "Number of Worker Threads that will work on queued Workflow Orders",
       "type": "integer",
       "default": 2,
       "minimum": 1
@@ -53,7 +53,7 @@
     },
       "j4careWorkflowManagerWorkflowConfigurationQueryProperties": {
       "title": "Query Properties",
-      "description": "Query Properties that are allowed to search through the Admin UI and are accepted by the REST API",
+      "description": "Query Properties that are allowed to search through the Admin UI and are accepted by the REST API in the form Parameter=UI Display Name (f.e. PatientID=Patient ID)",
       "type": "array",
       "items" : {
         "type": "string"
@@ -111,7 +111,7 @@
     },
     "j4careWorkflowManagerWorkflowConfigurationHL7ConfigurationURIPrefix": {
       "title": "HL7 Configuration URI Prefix",
-      "description": "URI Prefix to setup the HL7 Listener",
+      "description": "URI Prefix to setup the HL7 Listener (e.g orm-route1)",
       "type": "string"
     },
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfiguration":{
