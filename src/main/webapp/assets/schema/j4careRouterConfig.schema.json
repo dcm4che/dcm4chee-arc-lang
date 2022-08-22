@@ -13,22 +13,22 @@
   "properties": {
     "j4careRouterRoutingScriptsDirectory": {
       "title": "Routing Scripts Directory",
-      "description": "Base Directory for Routing Scripts",
+      "description": "Base Directory for Routing Scripts as seen from the container",
       "type": "string"
     },
     "j4careRouterDcm4cheeAET": {
       "title": "DCM4CHEE AET",
-      "description": "DCM4CHEE AET for Router Transactions",
+      "description": "DCM4CHEE AET for Router Transactions - this AET is used to instruct DCM4CHEE to perform the necessary Tasks (c-find,c-move,...)",
       "type": "string"
     },
     "j4careRouterDcm4cheeURL": {
       "title": "DCM4CHEE URL",
-      "description": "DCM4CHEE URL for Router Transactions",
+      "description": "DCM4CHEE URL for Router Transactions (e.g. https://dcm4chee.server:8443/dcm4chee-arc)",
       "type": "string"
     },
     "j4careRouterKeycloakURL": {
       "title": "Keycloak URL",
-      "description": "Keycloak URL for Authentication",
+      "description": "Keycloak URL for Authentication (e.g. https://keycloak.server:8843/realms/dcm4che/protocol/openid-connect/token)",
       "type": "string"
     },
     "j4careRouterKeycloakClient": {
@@ -56,17 +56,17 @@
     },
     "j4careRouterPIXDicomCFindFacadeConfigurationDcm4cheeAET": {
       "title": "PIX DICOM C-FIND Facade DCM4CHEE AET",
-      "description": "PIX DICOM C-FIND Facade DCM4CHEE AET",
+      "description": "PIX DICOM C-FIND Facade DCM4CHEE AET - this AET is used to instruct DCM4CHEE",
       "type": "string"
     },
     "j4careRouterPIXDicomCFindFacadeConfigurationDcm4cheeURL": {
       "title": "PIX DICOM C-FIND Facade DCM4CHEE URL",
-      "description": "PIX DICOM C-FIND Facade DCM4CHEE URL",
+      "description": "PIX DICOM C-FIND Facade DCM4CHEE URL (e.g. https://dcm4chee.server:8443/dcm4chee-arc)",
       "type": "string"
     },
     "j4careRouterPIXDicomCFindFacadeConfigurationKeycloakURL": {
       "title": "PIX DICOM C-FIND Facade Keycloak URL",
-      "description": "PIX DICOM C-FIND Facade Keycloak URL",
+      "description": "PIX DICOM C-FIND Facade Keycloak URL (e.g. https://keycloak.server:8843/realms/dcm4che/protocol/openid-connect/token)",
       "type": "string"
     },
     "j4careRouterPIXDicomCFindFacadeConfigurationKeycloakClient": {
@@ -81,7 +81,7 @@
      },     
      "j4careRouterPIXDicomCFindFacadeConfigurationCFindScp": {
       "title": "PIX DICOM C-FIND Facade C-FIND SCP",
-      "description": "PIX DICOM C-FIND Facade C-FIND SCP",
+      "description": "PIX DICOM C-FIND Facade C-FIND SCP - this AET is used to instruct DCM4CHEE where  the c-find should be performed at" ,
       "type": "string"
      },
     "j4careRouterPIXDicomCFindFacadeConfigurationSendingApplication": {
@@ -111,7 +111,7 @@
     },
     "j4careRouterPIXGroovyFacadeConfigurationScriptFile": {
       "title": "PIX Groovy Facade Script File",
-      "description": "Script File to create RSP_K23 Message",
+      "description": "Script File to create RSP_K23 Message (e.g. /app/config/pix-facade.groovy)",
       "type": "string"
     },
     "j4careRouterPIXGroovyFacadeConfigurationSendingApplication": {
