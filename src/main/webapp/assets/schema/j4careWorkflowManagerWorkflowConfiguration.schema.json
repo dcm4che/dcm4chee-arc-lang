@@ -114,6 +114,11 @@
       "description": "URI Prefix to setup the HL7 Listener (e.g orm-route1)",
       "type": "string"
     },
+    "j4careWorkflowManagerWorkflowConfigurationCoercionAttributesScript": {
+      "title": "REST Coercion Attributes Script",
+      "description": "Script for Workflow Data Coercion REST Service",
+      "type": "string"
+    },
     "j4careWorkflowManagerWorkflowConfigurationWorkflowStepConfiguration":{
       "title": "Workflow Step Configurations",
       "description": "Workflow Step Configurations",
