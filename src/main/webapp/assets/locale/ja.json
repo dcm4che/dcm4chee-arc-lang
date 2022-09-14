@@ -1838,6 +1838,7 @@
     "want_to_delete_task_from_group": "この グループから すべての タスクを 削除しても よろしいですか?",
     "want_to_reschedule_this_task": "この タスクを 再予定しても よろしいですか？",
     "warning": "警告",
+    "warning_if_configured_vna_will_reject_ates": "Warning: If configured, the VNA will reject associations from all other AETs apart from the configured ones!",
     "warnings": "警告",
     "web-apps-list.application_entity_title": "アプリケーション エンティティ タイトル",
     "web-apps-list.get_web_apps": "ウェブ アプリケーションを 取得 する",

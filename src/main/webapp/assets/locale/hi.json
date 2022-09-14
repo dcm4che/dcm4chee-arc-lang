@@ -1837,6 +1837,7 @@
     "want_to_delete_task_from_group": "क्या आप निस्चय ही इस बैच के सारे कार्यों को मिटाना चाहते हैं?",
     "want_to_reschedule_this_task": "क्या आप निस्चय ही ये कार्य पुनर्निर्धारित करना चाहते हैं?",
     "warning": "चेतावनी",
+    "warning_if_configured_vna_will_reject_ates": "Warning: If configured, the VNA will reject associations from all other AETs apart from the configured ones!",
     "warnings": "चेतावनियाँ",
     "web-apps-list.application_entity_title": "अनुप्रयोग तत्त्व का नाम",
     "web-apps-list.get_web_apps": "वेब अनुप्रयोग प्राप्त करें",

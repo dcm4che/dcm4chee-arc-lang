@@ -1838,6 +1838,7 @@
     "want_to_delete_task_from_group": "आपली खात्री आहे की आपण या गटातून सर्व कार्ये हटवू इच्छिता?",
     "want_to_reschedule_this_task": "आपणास खात्री आहे की आपण हे कार्य पुन्हा अनुसूचित करू इच्छिता?",
     "warning": "चेतावणी",
+    "warning_if_configured_vna_will_reject_ates": "Warning: If configured, the VNA will reject associations from all other AETs apart from the configured ones!",
     "warnings": "चेतावण्या",
     "web-apps-list.application_entity_title": "अनुप्रयोग घटक चे शीर्षक",
     "web-apps-list.get_web_apps": "वेब अनुप्रयोग मिळवा",

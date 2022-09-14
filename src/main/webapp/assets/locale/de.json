@@ -1839,6 +1839,7 @@
     "want_to_delete_task_from_group": "Are you sure you want to delete all tasks from this group?",
     "want_to_reschedule_this_task": "Are you sure you want to reschedule this task?",
     "warning": "Warnung",
+    "warning_if_configured_vna_will_reject_ates": "Warning: If configured, the VNA will reject associations from all other AETs apart from the configured ones!",
     "warnings": "Warnungen",
     "web-apps-list.application_entity_title": "Application Entity Title",
     "web-apps-list.get_web_apps": "Get Web Apps",

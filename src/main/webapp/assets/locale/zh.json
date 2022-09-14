@@ -1780,6 +1780,7 @@
     "want_to_delete_task_from_group": "是否确实要从此组中删除所有任务？",
     "want_to_reschedule_this_task": "是否确实要重新计划此任务？",
     "warning": "警告",
+    "warning_if_configured_vna_will_reject_ates": "Warning: If configured, the VNA will reject associations from all other AETs apart from the configured ones!",
     "warnings": "警告",
     "web-apps-list.application_entity_title": "应用实体标题",
     "web-apps-list.get_web_apps": "获取web应用程序",

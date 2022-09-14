@@ -1838,6 +1838,7 @@
 		"want_to_delete_task_from_group": "Sei sicuro di voler eliminare tutte le attività da questo gruppo?",
 		"want_to_reschedule_this_task": "Sei sicuro di voler riprogrammare questa attività?",
 		"warning": "Avvertimento",
+		"warning_if_configured_vna_will_reject_ates": "Warning: If configured, the VNA will reject associations from all other AETs apart from the configured ones!",
 		"warnings": "Avvertimenti",
 		"web-apps-list.application_entity_title": "Titolo dell'entità dell'applicazione (AE)",
 		"web-apps-list.get_web_apps": "Ottieni app Web",
