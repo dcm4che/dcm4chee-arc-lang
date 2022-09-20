@@ -209,6 +209,12 @@
       "description": "Workflow Manager",
       "order":41,
       "$ref": "j4careWorkflowManagerConfig.schema.json" 
-    } 
+    },
+    "j4careMPIEmulator": {
+      "title": "MPI Emulator",
+      "description": "MPI Emulator",
+      "order":42,
+      "$ref": "j4careMPIEmulatorConfig.schema.json"
+    }
   }
 }
