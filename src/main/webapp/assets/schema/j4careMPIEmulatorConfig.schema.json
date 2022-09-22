@@ -1,0 +1,106 @@
+{
+  "title": "J4care MPI Emulator Configuration",
+  "description": "J4care MPI Emulator Configuration",
+  "type": "object",
+  "required": [
+    "j4careMPIEmulatorScriptsDirectory",
+    "j4careMPIEmulatorDcm4cheeAET",
+    "j4careMPIEmulatorDcm4cheeURL",
+    "j4careMPIEmulatorKeycloakURL",
+    "j4careMPIEmulatorKeycloakClient",
+    "j4careMPIEmulatorKeycloakSecret"
+  ],
+  "properties": {
+    "j4careMPIEmulatorScriptsDirectory": {
+      "title": "Scripts Directory",
+      "description": "Base Directory for Scripts as seen from the container",
+      "type": "string"
+    },
+    "j4careMPIEmulatorDcm4cheeAET": {
+      "title": "DCM4CHEE AET",
+      "description": "DCM4CHEE AET - this AET is used to instruct DCM4CHEE to perform the necessary Tasks (c-find,c-move,...)",
+      "type": "string"
+    },
+    "j4careMPIEmulatorDcm4cheeURL": {
+      "title": "DCM4CHEE URL",
+      "description": "DCM4CHEE URL (e.g. https://dcm4chee.server:8443/dcm4chee-arc)",
+      "type": "string"
+    },
+    "j4careMPIEmulatorKeycloakURL": {
+      "title": "Keycloak URL",
+      "description": "Keycloak URL for Authentication (e.g. https://keycloak.server:8843/realms/dcm4che/protocol/openid-connect/token)",
+      "type": "string"
+    },
+    "j4careMPIEmulatorKeycloakClient": {
+      "title": "Keycloak Client",
+      "description": "Keyclock Client for Authentication",
+      "type": "string"
+    },
+    "j4careMPIEmulatorKeycloakSecret": {
+      "title": "Keycloak Secret",
+      "description": "Keycloak Secret for Authentication",
+      "type": "string"
+    },
+    "j4careMPIEmulatorPIXDicomCFindFacadeConfigurationPixITI9URL": {
+      "title": "PIX DICOM C-FIND Facade PIX-ITI9 URL",
+      "description": "Listening URL (f.e pix-iti9://localhost:23456)",
+      "type": "string"
+    },
+     "j4careMPIEmulatorPIXDicomCFindFacadeConfigurationCFindScp": {
+      "title": "PIX DICOM C-FIND Facade C-FIND SCP",
+      "description": "PIX DICOM C-FIND Facade C-FIND SCP - this AET is used to instruct DCM4CHEE where  the c-find should be performed at" ,
+      "type": "string"
+     },
+    "j4careMPIEmulatorPIXDicomCFindFacadeConfigurationSendingApplication": {
+      "title": "PIX DICOM C-FIND Facade Sending Application",
+      "description": "PIX DICOM C-FIND Facade Sending Application",
+      "type": "string"
+    },
+    "j4careMPIEmulatorPIXDicomCFindFacadeConfigurationSendingFacility": {
+      "title": "PIX DICOM C-FIND Facade Sending Facility",
+      "description": "PIX DICOM C-FIND Facade Sending Facility",
+      "type": "string"
+    },
+     "j4careMPIEmulatorPIXDicomCFindFacadeConfigurationReceivingApplication": {
+      "title": "PIX DICOM C-FIND Facade Receiving Application",
+      "description": "PIX DICOM C-FIND Facade Receiving Application",
+      "type": "string"
+    },
+     "j4careMPIEmulatorPIXDicomCFindFacadeConfigurationReceivingFacility": {
+      "title": "PIX DICOM C-FIND Facade Receiving Facility",
+      "description": "PIX DICOM C-FIND Facade Receiving Facility",
+      "type": "string"
+    },
+    "j4careMPIEmulatorPIXGroovyFacadeConfigurationPixITI9URL": {
+      "title": "PIX Groovy Facade PIX-ITI9 URL",
+      "description": "Listening URL (f.e pix-iti9://localhost:23456)",
+      "type": "string"
+    },
+    "j4careMPIEmulatorPIXGroovyFacadeConfigurationScriptFile": {
+      "title": "PIX Groovy Facade Script File",
+      "description": "Script File to create RSP_K23 Message (e.g. /app/config/pix-facade.groovy)",
+      "type": "string"
+    },
+    "j4careMPIEmulatorPIXGroovyFacadeConfigurationSendingApplication": {
+      "title": "PIX Groovy Facade Sending Application",
+      "description": "PIX Groovy Facade Sending Application",
+      "type": "string"
+    },
+    "j4careMPIEmulatorPIXGroovyFacadeConfigurationSendingFacility": {
+      "title": "PIX Groovy Facade Sending Facility",
+      "description": "PIX Groovy Facade Sending Facility",
+      "type": "string"
+    },
+     "j4careMPIEmulatorPIXGroovyFacadeConfigurationReceivingApplication": {
+      "title": "PIX Groovy Facade Receiving Application",
+      "description": "PIX Groovy Facade Receiving Application",
+      "type": "string"
+    },
+     "j4careMPIEmulatorPIXGroovyFacadeConfigurationReceivingFacility": {
+      "title": "PIX Groovy Facade Receiving Facility",
+      "description": "PIX Groovy Facade Receiving Facility",
+      "type": "string"
+    }
+  }
+}
+  

@@ -18,17 +18,17 @@
     },
       "j4careWorkflowManagerDcm4cheeConfigurationDcm4cheeAET": {
       "title": "DCM4CHEE AET",
-      "description": "DCM4CHEE AET for Router Transactions",
+      "description": "DCM4CHEE AET for Workflow Transactions - this AET is used to instruct DCM4CHEE to perform the necessary Tasks (c-find,c-move,...)",
       "type": "string"
     },
     "j4careWorkflowManagerDcm4cheeConfigurationDcm4cheeURL": {
       "title": "DCM4CHEE URL",
-      "description": "DCM4CHEE URL for Router Transactions",
+      "description": "DCM4CHEE URL for Workflow Transactions (e.g. https://dcm4chee.server:8443/dcm4chee-arc)",
       "type": "string"
     },
     "j4careWorkflowManagerDcm4cheeConfigurationKeycloakURL": {
       "title": "Keycloak URL",
-      "description": "Keycloak URL for Authentication",
+      "description": "Keycloak URL for Authentication (e.g. https://keycloak.server:8843/realms/dcm4che/protocol/openid-connect/token)",
       "type": "string"
     },
     "j4careWorkflowManagerDcm4cheeConfigurationKeycloakClient": {

@@ -26,7 +26,6 @@
       "items": {
         "type": "string"
       }
-      
     },
     "j4carePIXPDQCoercionProcessorAETDomainsReturnedMapping": {
       "title": "AET Domains Returned Mapping",
@@ -35,6 +34,16 @@
       "items": {
         "type": "string"
       }
+    },
+    "j4carePIXPDQCoercionProcessorCacheMaxSize": {
+      "title": "Cache Max Size",
+      "description": "Maximum Number of PIX Responses to cache",
+      "type": "integer"
+    },
+    "j4carePIXPDQCoercionProcessorCacheStaleTimeout": {
+      "title": "Cache Stale Timeout",
+      "description": "Timeout in seconds before a Cache Entry is invalid and a new response will be requested from the PIX/PDQ Manager",
+      "type": "integer"
     }
   }
 }

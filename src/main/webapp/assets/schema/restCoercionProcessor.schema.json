@@ -1,0 +1,43 @@
+{
+  "title": "REST Coercion Processor Configuration",
+  "description": "REST Coercion Processor Configuration",
+  "type": "object",
+  "required": [
+    "j4careRESTCoercionProcessorWebApplicationName",
+    "j4careRESTCoercionProcessorWorkflowName",
+    "j4careRESTCoercionProcessorCacheMaxSize",
+    "j4careRESTCoercionProcessorCacheStaleTimeout",
+    "j4careRESTCoercionProcessorQueryParameters"
+  ],
+  "properties": {
+    "j4careRESTCoercionProcessorWebApplicationName": {
+      "title": "Web Application Name",
+      "description": "Web Application Name of the Workflow Manager Web Application to get the URL and Keycloak Configuration",
+      "type": "string"
+    },
+    "j4careRESTCoercionProcessorWorkflowName": {
+      "title": "Workflow Name",
+      "description": "Workflow Name to search in for Coercion Attributes",
+      "type": "string"
+    },
+    "j4careRESTCoercionProcessorQueryParameters": {
+      "title": "Query Parameters",
+      "description": "List of DICOM Tags to pass to Workflow Manager to find the Workflow entry in the respective Workflow",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "j4careRESTCoercionProcessorCacheMaxSize": {
+      "title": "Cache Max Size",
+      "description": "Maximum Number of REST Responses to cache",
+      "type": "integer"
+    },
+    "j4careRESTCoercionProcessorCacheStaleTimeout": {
+      "title": "Cache Stale Timeout",
+      "description": "Timeout in seconds before a Cache Entry is invalid and a new response will be requested from the Workflow Manager",
+      "type": "integer"
+    }
+  }
+}
+  

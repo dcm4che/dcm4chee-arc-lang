@@ -198,11 +198,23 @@
       "order":39,
       "$ref": "pixPdqCoercionProcessor.schema.json" 
     },
+    "j4careRESTCoercionProcessor": {
+      "title": "REST Coercion Processor Configuration",
+      "description": "REST Coercion Processor Configuration",
+      "order":40,
+      "$ref": "restCoercionProcessor.schema.json"
+    },
     "j4careWorkflowManager": {
       "title": "Workflow Manager",
       "description": "Workflow Manager",
-      "order":40,
+      "order":41,
       "$ref": "j4careWorkflowManagerConfig.schema.json" 
-    } 
+    },
+    "j4careMPIEmulator": {
+      "title": "MPI Emulator",
+      "description": "MPI Emulator",
+      "order":42,
+      "$ref": "j4careMPIEmulatorConfig.schema.json"
+    }
   }
 }

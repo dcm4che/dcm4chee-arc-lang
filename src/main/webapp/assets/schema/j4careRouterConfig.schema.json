@@ -13,22 +13,22 @@
   "properties": {
     "j4careRouterRoutingScriptsDirectory": {
       "title": "Routing Scripts Directory",
-      "description": "Base Directory for Routing Scripts",
+      "description": "Base Directory for Routing Scripts as seen from the container",
       "type": "string"
     },
     "j4careRouterDcm4cheeAET": {
       "title": "DCM4CHEE AET",
-      "description": "DCM4CHEE AET for Router Transactions",
+      "description": "DCM4CHEE AET for Router Transactions - this AET is used to instruct DCM4CHEE to perform the necessary Tasks (c-find,c-move,...)",
       "type": "string"
     },
     "j4careRouterDcm4cheeURL": {
       "title": "DCM4CHEE URL",
-      "description": "DCM4CHEE URL for Router Transactions",
+      "description": "DCM4CHEE URL for Router Transactions (e.g. https://dcm4chee.server:8443/dcm4chee-arc)",
       "type": "string"
     },
     "j4careRouterKeycloakURL": {
       "title": "Keycloak URL",
-      "description": "Keycloak URL for Authentication",
+      "description": "Keycloak URL for Authentication (e.g. https://keycloak.server:8843/realms/dcm4che/protocol/openid-connect/token)",
       "type": "string"
     },
     "j4careRouterKeycloakClient": {
@@ -48,91 +48,6 @@
       "items": {
         "type": "string"
       }
-    },
-    "j4careRouterPIXDicomCFindFacadeConfigurationPixITI9URL": {
-      "title": "PIX DICOM C-FIND Facade PIX-ITI9 URL",
-      "description": "Listening URL (f.e pix-iti9://localhost:23456)",
-      "type": "string"
-    },
-    "j4careRouterPIXDicomCFindFacadeConfigurationDcm4cheeAET": {
-      "title": "PIX DICOM C-FIND Facade DCM4CHEE AET",
-      "description": "PIX DICOM C-FIND Facade DCM4CHEE AET",
-      "type": "string"
-    },
-    "j4careRouterPIXDicomCFindFacadeConfigurationDcm4cheeURL": {
-      "title": "PIX DICOM C-FIND Facade DCM4CHEE URL",
-      "description": "PIX DICOM C-FIND Facade DCM4CHEE URL",
-      "type": "string"
-    },
-    "j4careRouterPIXDicomCFindFacadeConfigurationKeycloakURL": {
-      "title": "PIX DICOM C-FIND Facade Keycloak URL",
-      "description": "PIX DICOM C-FIND Facade Keycloak URL",
-      "type": "string"
-    },
-    "j4careRouterPIXDicomCFindFacadeConfigurationKeycloakClient": {
-      "title": "PIX DICOM C-FIND Facade Keycloak Client",
-      "description": "PIX DICOM C-FIND Facade Keycloak Client",
-      "type": "string"
-     },
-     "j4careRouterPIXDicomCFindFacadeConfigurationKeycloakSecret": {
-      "title": "PIX DICOM C-FIND Facade Keycloak Secret",
-      "description": "PIX DICOM C-FIND Facade Keycloak Secret",
-      "type": "string"
-     },     
-     "j4careRouterPIXDicomCFindFacadeConfigurationCFindScp": {
-      "title": "PIX DICOM C-FIND Facade C-FIND SCP",
-      "description": "PIX DICOM C-FIND Facade C-FIND SCP",
-      "type": "string"
-     },
-    "j4careRouterPIXDicomCFindFacadeConfigurationSendingApplication": {
-      "title": "PIX DICOM C-FIND Facade Sending Application",
-      "description": "PIX DICOM C-FIND Facade Sending Application",
-      "type": "string"
-    },
-    "j4careRouterPIXDicomCFindFacadeConfigurationSendingFacility": {
-      "title": "PIX DICOM C-FIND Facade Sending Facility",
-      "description": "PIX DICOM C-FIND Facade Sending Facility",
-      "type": "string"
-    },
-     "j4careRouterPIXDicomCFindFacadeConfigurationReceivingApplication": {
-      "title": "PIX DICOM C-FIND Facade Receiving Application",
-      "description": "PIX DICOM C-FIND Facade Receiving Application",
-      "type": "string"
-    },
-     "j4careRouterPIXDicomCFindFacadeConfigurationReceivingFacility": {
-      "title": "PIX DICOM C-FIND Facade Receiving Facility",
-      "description": "PIX DICOM C-FIND Facade Receiving Facility",
-      "type": "string"
-    },
-    "j4careRouterPIXGroovyFacadeConfigurationPixITI9URL": {
-      "title": "PIX Groovy Facade PIX-ITI9 URL",
-      "description": "Listening URL (f.e pix-iti9://localhost:23456)",
-      "type": "string"
-    },
-    "j4careRouterPIXGroovyFacadeConfigurationScriptFile": {
-      "title": "PIX Groovy Facade Script File",
-      "description": "Script File to create RSP_K23 Message",
-      "type": "string"
-    },
-    "j4careRouterPIXGroovyFacadeConfigurationSendingApplication": {
-      "title": "PIX Groovy Facade Sending Application",
-      "description": "PIX Groovy Facade Sending Application",
-      "type": "string"
-    },
-    "j4careRouterPIXGroovyFacadeConfigurationSendingFacility": {
-      "title": "PIX Groovy Facade Sending Facility",
-      "description": "PIX Groovy Facade Sending Facility",
-      "type": "string"
-    },
-     "j4careRouterPIXGroovyFacadeConfigurationReceivingApplication": {
-      "title": "PIX Groovy Facade Receiving Application",
-      "description": "PIX Groovy Facade Receiving Application",
-      "type": "string"
-    },
-     "j4careRouterPIXGroovyFacadeConfigurationReceivingFacility": {
-      "title": "PIX Groovy Facade Receiving Facility",
-      "description": "PIX Groovy Facade Receiving Facility",
-      "type": "string"
     },
     "j4careRouterRouteConfiguration":{
       "title": "Route Configurations",

@@ -26,7 +26,7 @@
     },
     "j4careRouterRouteConfigurationPixConfigurationDomainsReturned": {
       "title": "Domains Return",
-      "description": "Domains to return in the PIX Query",
+      "description": "List of Domains to return in the PIX Query in the form NamespaceID&UniversalID&UniversalIDType (e.g FOREIGN&5.6.7.8&ISO)",
       "type": "array",
       "items": {
         "type": "string"
@@ -59,7 +59,7 @@
     },
     "j4careRouterRouteConfigurationPixConfigurationIssuer2AssigningAuthority": {
       "title": "Issuer - Assigning Authority Mapping",
-      "description": "Issuer - Assigning Authority Mapping",
+      "description": "Issuer - Assigning Authority Mapping in the form AET=NamespaceID&UniversalID&UniversalIDType (e.g FOREIGN=FOREIGN&5.6.7.8&ISO)",
       "type": "array",
       "items": {
         "type": "string"
