@@ -164,7 +164,7 @@
     },
     "dicomInstitutionCode": {
       "title": "机构代码",
-      "description": "（CV,CSD,\"CM\"）形式的机构代码",
+      "description": "Should be the same as the value of Institution Code(s) in format （CV,CSD,\"CM\"）形式的机构代码 in SOP Instances created by this device",
       "type": "array",
       "order":11,
       "items": {
