@@ -164,7 +164,7 @@
     },
     "dicomInstitutionCode": {
       "title": "Institution Code",
-      "description": "Institution Code(s) in format (CV, CSD, \"CM\")",
+      "description": "Should be the same as the value of Institution Code(s) in format (CV, CSD, \"CM\") in SOP Instances created by this device",
       "type": "array",
       "order":11,
       "items": {

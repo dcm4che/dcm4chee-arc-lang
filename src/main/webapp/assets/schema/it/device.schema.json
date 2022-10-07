@@ -164,7 +164,7 @@
     },
     "dicomInstitutionCode": {
       "title": "Codice istituto",
-      "description": "Codice/i istituto in formato (CV, CSD, \"CM\")",
+      "description": "Deve essere uguale al valore del Codice/i istituto in formato (CV, CSD, \"CM\") nelle istanze SOP create da questo dispositivo",
       "type": "array",
       "order":11,
       "items": {

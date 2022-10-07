@@ -41,7 +41,7 @@
 
   <artifactId>dcm4chee-arc-lang</artifactId>
   <groupId>org.dcm4che.dcm4chee-arc</groupId>
-  <version>5.28.0</version>
+  <version>5.29.0</version>
   <packaging>war</packaging>
 
   <distributionManagement>

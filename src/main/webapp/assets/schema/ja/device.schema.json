@@ -164,7 +164,7 @@
     },
     "dicomInstitutionCode": {
       "title": "機関 コード",
-      "description": "(CV, CSD, \"CM\") 形式で 機関 コード",
+      "description": "この デバイスに よって 作成された SOP インスタンスの (CV, CSD, \"CM\") 形式で 機関 コード 属性の 値と 同じで ある 必要が あります",
       "type": "array",
       "order":11,
       "items": {

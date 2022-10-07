@@ -164,7 +164,7 @@
     },
     "dicomInstitutionCode": {
       "title": "संस्था कोड",
-      "description": "संस्था कोड या प्रारूपात (CV, CSD, \"CM\").",
+      "description": "या डिव्हाइसद्वारे तयार केलेल्या SOP दृष्टांतांमध्ये संस्था कोड या प्रारूपात (CV, CSD, \"CM\") मूल्यासारखेच असावे.",
       "type": "array",
       "order":11,
       "items": {
