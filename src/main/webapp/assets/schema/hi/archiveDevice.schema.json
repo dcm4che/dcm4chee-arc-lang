@@ -1667,7 +1667,7 @@
       "enum": [
         "ACCEPT",
         "REJECT",
-        "ACCESSION_BASED"
+        "ACCESSION_AS_ADMISSION"
       ]
     },
     "hl7ImportReportMissingStudyIUIDPolicy": {
