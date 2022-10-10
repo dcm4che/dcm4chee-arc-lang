@@ -158,6 +158,16 @@
         "ACCESSION_BASED"
       ]
     },
+    "hl7ImportReportMissingAdmissionIDPolicy": {
+      "title": "HL7 Import Report Missing Admission ID Policy",
+      "description": "Specifies policy on incoming HL7 ImportReport (ORU) messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "ACCEPT",
+        "REJECT",
+        "ACCESSION_AS_ADMISSION"
+      ]
+    },
     "hl7ReferredMergedPatientPolicy": {
       "title": "HL7 संदर्भित विलीन संविलीन रुग्ण धोरण",
       "description": "येणार्‍या HL7 संदेशांवर धोरण निर्दिष्ट करते जे आधीपासूनच विलीन झालेल्या रुग्णाला संदर्भित करते. REJECT: अशा कोणत्याही HL7 संदेश अस्वीकार करा, IGNORE: अशा कोणत्याही HL7 संदेश दुर्लक्ष करा, IGNORE_DUPLICATE_MERGE: फक्त पुन्हा प्राप्त झालेल्या HL7 विलीन संविलीन संदेश दुर्लक्ष करा, इतर अशा कोणत्याही संदेश अस्वीकार करा. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य अधिलिखित होतील.",
