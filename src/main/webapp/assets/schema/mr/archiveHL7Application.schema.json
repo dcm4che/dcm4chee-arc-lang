@@ -138,6 +138,16 @@
         "ACCESSION_BASED"
       ]
     },
+    "hl7OrderMissingAdmissionIDPolicy": {
+      "title": "HL7 Order Missing Admission ID Policy",
+      "description": "Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "ACCEPT",
+        "REJECT",
+        "ACCESSION_BASED"
+      ]
+    },
     "hl7ImportReportMissingStudyIUIDPolicy": {
       "title": "HL7 आयात अहवाल गहाळ अभ्यास दृष्टांत UID धोरण",
       "description": "येणार्‍या HL7 आयात अहवाल (ORU) संदेशांमध्ये गहाळ अभ्यास दृष्टांत UID धोरण निर्दिष्ट करते. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य अधिलिखित होतील.",

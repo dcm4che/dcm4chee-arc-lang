@@ -138,6 +138,16 @@
         "ACCESSION_BASED"
       ]
     },
+    "hl7OrderMissingAdmissionIDPolicy": {
+      "title": "HL7 Order Missing Admission ID Policy",
+      "description": "Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "ACCEPT",
+        "REJECT",
+        "ACCESSION_BASED"
+      ]
+    },
     "hl7ImportReportMissingStudyIUIDPolicy": {
       "title": "Politica usata per l'UID dell'importazione di un report HL7 in un istanza con studio mancante",
       "description": "Specifica la politica per l'UID dell'istanza di studio mancante nei messaggi ORU (Report di importazione HL7) in arrivo. Sovrascrive i valori specificati a livello del dispositivo.",

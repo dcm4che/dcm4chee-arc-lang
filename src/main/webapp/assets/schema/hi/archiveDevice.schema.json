@@ -75,7 +75,6 @@
     "dcmPatientVerificationAdjustIssuerOfPatientID",
     "dcmPatientVerificationMaxRetries",
     "dcmQueueTasksFetchSize",
-    "dcmQueueTasksFetchSize",
     "dcmSupplementIssuerFetchSize",
     "dcmCopyMoveUpdatePolicy",
     "dcmLinkMWLEntryUpdatePolicy",
@@ -114,6 +113,7 @@
     "hl7UseNullValue",
     "hl7VeterinaryUsePatientName",
     "hl7OrderMissingStudyIUIDPolicy",
+    "hl7OrderMissingAdmissionIDPolicy",
     "hl7ImportReportMissingStudyIUIDPolicy",
     "hl7ReferredMergedPatientPolicy"
   ],
@@ -1656,6 +1656,17 @@
       "enum": [
         "REJECT",
         "GENERATE",
+        "ACCESSION_BASED"
+      ]
+    },
+    "hl7OrderMissingAdmissionIDPolicy": {
+      "title": "HL7 Order Missing Admission ID Policy",
+      "description": "Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string",
+      "default": "ACCEPT",
+      "enum": [
+        "ACCEPT",
+        "REJECT",
         "ACCESSION_BASED"
       ]
     },
