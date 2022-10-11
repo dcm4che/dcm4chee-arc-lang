@@ -138,6 +138,16 @@
         "ACCESSION_BASED"
       ]
     },
+    "hl7OrderMissingAdmissionIDPolicy": {
+      "title": "HL7 Order Missing Admission ID Policy",
+      "description": "Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "ACCEPT",
+        "REJECT",
+        "ACCESSION_AS_ADMISSION"
+      ]
+    },
     "hl7ImportReportMissingStudyIUIDPolicy": {
       "title": "HL7 インポート レポート ために 欠落 スタディ インスタンス UID ポリシー",
       "description": "受信した HL7 インポート レポート (ORU) メッセージに スタディ インスタンス UIDがない 場合の ポリシーを 指定します。 デバイス レベルで 指定された 値を 上書きします。",
@@ -146,6 +156,16 @@
         "REJECT",
         "GENERATE",
         "ACCESSION_BASED"
+      ]
+    },
+    "hl7ImportReportMissingAdmissionIDPolicy": {
+      "title": "HL7 Import Report Missing Admission ID Policy",
+      "description": "Specifies policy on incoming HL7 ImportReport (ORU) messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "ACCEPT",
+        "REJECT",
+        "ACCESSION_AS_ADMISSION"
       ]
     },
     "hl7ReferredMergedPatientPolicy": {
