@@ -21,7 +21,7 @@
     },
     "dcmRulePriority": {
       "title": "नियम प्राधान्य",
-      "description": "नियम प्राधान्य.",
+      "description": "नियम प्राधान्य. Higher priority rule applied.",
       "type": "integer",
       "default" : 0,
       "minimum": 0
