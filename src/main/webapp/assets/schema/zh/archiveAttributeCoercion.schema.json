@@ -21,7 +21,7 @@
     },
     "dcmRulePriority": {
       "title": "规则优先级",
-      "description": "规则优先级",
+      "description": "规则优先级 Higher priority rule applied.",
       "type": "integer",
       "default" : 0,
       "minimum": 0

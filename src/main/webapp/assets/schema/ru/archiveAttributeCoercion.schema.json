@@ -21,7 +21,7 @@
     },
     "dcmRulePriority": {
       "title": "Rule Priority",
-      "description": "Rule Priority.",
+      "description": "Rule Priority. Higher priority rule applied.",
       "type": "integer",
       "default" : 0,
       "minimum": 0

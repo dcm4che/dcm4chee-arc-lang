@@ -47,7 +47,7 @@
     },
     "dcmRulePriority": {
       "title": "Attribute Coercion Priority",
-      "description": "Rule Priority.",
+      "description": "Rule Priority. Higher priority rule takes precedence.",
       "type": "integer",
       "default" : 0,
       "minimum": 0
