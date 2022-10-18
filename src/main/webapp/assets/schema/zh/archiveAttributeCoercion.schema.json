@@ -130,6 +130,24 @@
       },
       "format": "dcmArchiveAETitle"
     },
+    "dcmMergeLocalMWLWithStatus" : {
+      "title": "Merge Local MWL With Status",
+      "description": "Only consider MWL items with one of the specified Scheduled Procedure Step Status codes. Enumerated values: SCHEDULED, ARRIVED, READY, STARTED, DEPARTED, CANCELED, DISCONTINUED, COMPLETED. If absent, MWL items with any Scheduled Procedure Step Status are considered.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "SCHEDULED",
+          "ARRIVED",
+          "READY",
+          "STARTED",
+          "DEPARTED",
+          "CANCELED",
+          "DISCONTINUED",
+          "COMPLETED"
+        ]
+      }
+    },
     "dcmMWLImportFilterBySCU": {
       "title": "合并MWL Filter by SCU",
       "description": "将指定的筛选器从matches返回到外部MWL SCP.",
