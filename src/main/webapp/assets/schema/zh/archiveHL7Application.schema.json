@@ -12,6 +12,12 @@
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
+    "dcmDestinationAE": {
+      "title": "Destination AE",
+      "description": "AE Title of local MWL SCP fed/updated by HL7v2 Order message received by this HL7 Receiver. If no AE Title is specified, the created MWL item will be provided by all configured MWL SCPs of the archive.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
     "dcmRecordAttributeModification": {
       "title": "记录属性更改",
       "description": "是否将此HL7应用程序存储的对象的属性更改记录到原始属性序列项中。 覆盖在设备级别指定的值。",

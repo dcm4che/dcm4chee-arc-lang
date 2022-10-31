@@ -12,6 +12,12 @@
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
+    "dcmDestinationAE": {
+      "title": "Destination AE",
+      "description": "AE Title of local MWL SCP fed/updated by HL7v2 Order message received by this HL7 Receiver. If no AE Title is specified, the created MWL item will be provided by all configured MWL SCPs of the archive.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
     "dcmRecordAttributeModification": {
       "title": "属性 変更の 記録",
       "description": "この HL7 アプリケーションに よって 格納された オブジェクトの 属性の 変更が 元の 属性 シーケンスの アイテムに 記録されるか どうかを 示します。 デバイス レベルで 指定された 値を 上書きします。",
