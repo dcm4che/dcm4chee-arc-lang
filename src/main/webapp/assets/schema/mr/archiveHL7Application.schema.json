@@ -12,6 +12,12 @@
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
+    "dcmDestinationAE": {
+      "title": "Destination MWL SCP",
+      "description": "AE Title of local MWL SCP fed/updated by HL7v2 Order message received by this HL7 Receiver. If no AE Title is specified, the created MWL item will be provided by all configured MWL SCPs of the archive.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
     "dcmRecordAttributeModification": {
       "title": "विशेषतांचे बदलाव रेकॉर्ड करा",
       "description": "या HL7 अनुप्रयोगाद्वारे साठवलेल्या ऑब्जेक्ट्सच्या विशेषतांच्या बदलावांमध्ये मूळ विशेषता क्रमच्या आयटममध्ये रेकॉर्ड करण्याचे सूचित करते. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य अधिलिखित होतील.",
