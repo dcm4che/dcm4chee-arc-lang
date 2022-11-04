@@ -98,10 +98,7 @@
     "dcmUPSUpdateWithoutTransactionUID",
     "dcmKeyValueRetentionFetchSize",
     "hl7PSUForRequestedProcedure",
-    "hl7PSURequestedProcedureID",
-    "hl7PSUAccessionNumber",
-    "hl7PSUFillerOrderNumber",
-    "hl7PSUPlacerOrderNumber",
+    "hl7PSUParam",
     "hl7PSUMWL",
     "hl7PSUMWLMatchingKey",
     "hl7PSUOnTimeout",
@@ -1525,11 +1522,47 @@
       "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
+    "hl7PSUTaskPollingInterval": {
+      "title": "HL7过程状态更新任务的轮询间隔",
+      "description": "ISO-8601周期PnDTnHnMnS格式的HL7过程状态更新任务的轮询间隔, 如果不存在,则禁用。 ",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUTaskFetchSize": {
+      "title": "HL7过程状态更新任务的提取大小",
+      "description": "在单个查询中提取的HL7过程状态更新任务的最大数量。 ",
+      "type": "integer",
+      "default": 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
     "hl7PSUDelay": {
       "title": "HL7过程状态更新延迟",
       "description": "ISO-8601期间PnDTnHnMnS延迟后,接收到的检查的HL7过程状态更新被发送到配置的HL7接收应用程序。如果不存在,则HL7步骤状态更新由接收的MPPS触发。某些存档网络AE的配置值可能会覆盖这些值。",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "hl7PSUStudyTemplateURI": {
+      "title": "HL7 Procedure Status Update Study Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string"
+    },
+    "hl7PSUTimeout": {
+      "title": "HL7过程状态更新超时",
+      "description": "ISO-8601周期以PnDTnHnMnS格式超时,以等待接收MPPS引用的实例。 如果不存在,请永久验证完整性。 为特定存档网络AE配置的值可能会覆盖它。 ",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUOnTimeout": {
+      "title": "超时时更新HL7过程状态",
+      "description": "指定是否在超时后发送HL7过程状态更新以等待接收引用实例。 为特定存档网络AE配置的值可能会覆盖它。 ",
+      "type": "boolean",
+      "default": false
+    },
+    "hl7PSUMppsTemplateURI": {
+      "title": "HL7 Procedure Status Update MPPS Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by MPPS. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string"
     },
     "hl7PSUCondition": {
       "title": "HL7 Procedure Status Update Attribute Conditions",
@@ -1546,29 +1579,13 @@
       "type": "boolean",
       "default": false
     },
-    "hl7PSURequestedProcedureID": {
-      "title": "HL7过程状态更新请求的过程ID",
-      "description": "如果检查实例UID与请求过程的预定过程步骤（DB中的MWL项）不匹配,则通知消息中请求的过程ID的值。{<attributeID>}将替换为传入检查的属性值。某些存档网络AE的配置值可能会覆盖这些值。",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
-    },
-    "hl7PSUAccessionNumber": {
-      "title": "HL7过程状态AccessionNumber",
-      "description": "如果检查实例UID与请求过程的预定过程步骤（DB中的MWL项）不匹配,则通知消息中的AccessionNumber值。{<attributeID>}将替换为传入检查的属性值。某些存档网络AE的配置值可能会覆盖这些值。",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
-    },
-    "hl7PSUFillerOrderNumber": {
-      "title": "HL7过程状态填充订单号",
-      "description": "如果检查实例UID与请求过程的计划过程步骤（DB中的MWL项）不匹配,则通知消息中填充订单号的值。 {<attributeID>}将替换为接收到的检查的属性值。为特定存档网络AE配置的值可能会覆盖它。 ",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
-    },
-    "hl7PSUPlacerOrderNumber": {
-      "title": "HL7过程状态播放器订单号",
-      "description": "通知消息中播放器订单号的值,如果检查实例UID与所请求过程的预定过程步骤（DB中的MWL项）不匹配。 {<attributeID>}将替换为接收到的检查的属性值。为特定存档网络AE配置的值可能会覆盖它。 ",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
+    "hl7PSUParam": {
+      "title": "HL7 Procedure Status Update Parameters",
+      "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "hl7PSUMessageType": {
       "title": "HL7过程状态消息类型",
@@ -1601,32 +1618,6 @@
         "AccessionNumber",
         "StudyInstanceUID"
       ]
-    },
-    "hl7PSUTimeout": {
-      "title": "HL7过程状态更新超时",
-      "description": "ISO-8601周期以PnDTnHnMnS格式超时,以等待接收MPPS引用的实例。 如果不存在,请永久验证完整性。 为特定存档网络AE配置的值可能会覆盖它。 ",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "hl7PSUOnTimeout": {
-      "title": "超时时更新HL7过程状态",
-      "description": "指定是否在超时后发送HL7过程状态更新以等待接收引用实例。 为特定存档网络AE配置的值可能会覆盖它。 ",
-      "type": "boolean",
-      "default": false
-    },
-    "hl7PSUTaskPollingInterval": {
-      "title": "HL7过程状态更新任务的轮询间隔",
-      "description": "ISO-8601周期PnDTnHnMnS格式的HL7过程状态更新任务的轮询间隔, 如果不存在,则禁用。 ",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "hl7PSUTaskFetchSize": {
-      "title": "HL7过程状态更新任务的提取大小",
-      "description": "在单个查询中提取的HL7过程状态更新任务的最大数量。 ",
-      "type": "integer",
-      "default": 100,
-      "minimum": 0,
-      "exclusiveMinimum": true
     },
     "hl7TrackChangedPatientID": {
       "title": "HL7跟踪更改的患者ID",

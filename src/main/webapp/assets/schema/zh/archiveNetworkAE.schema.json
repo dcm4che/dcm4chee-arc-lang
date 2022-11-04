@@ -605,6 +605,27 @@
       "type": "string",
       "format": "dcmDuration"
     },
+    "hl7PSUStudyTemplateURI": {
+      "title": "HL7 Procedure Status Update Study Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. Overwrites value specified on Device level.",
+      "type": "string"
+    },
+    "hl7PSUTimeout": {
+      "title": "HL7过程状态更新超时",
+      "description": "等待MPPS引用的实例的ISO-8601周期PnDTnHnMnS形式的超时。如果不存在,请永久检查完整性。覆盖在设备级别指定的值。",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUOnTimeout": {
+      "title": "超时时HL7过程状态更新",
+      "description": "等待被引用实例的接收超时后是否发送HL7过程状态更新。覆盖在设备级别指定的值。",
+      "type": "boolean"
+    },
+    "hl7PSUMppsTemplateURI": {
+      "title": "HL7 Procedure Status Update MPPS Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by MPPS. Overwrites value specified on Device level.",
+      "type": "string"
+    },
     "hl7PSUCondition": {
       "title": "HL7 Procedure Status Update Attribute Conditions",
       "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER. Overwrites value specified on Device level.",
@@ -619,25 +640,13 @@
       "description": "仅限于\"接收HL7过程状态更新的应用程序\",该应用程序配置了与所请求过程的预定过程步骤（DB中的MWL项）匹配的检查实例UID的过程状态更新通知。覆盖在设备级别指定的值。",
       "type": "boolean"
     },
-    "hl7PSURequestedProcedureID": {
-      "title": "HL7过程状态更新请求的过程ID",
-      "description": "如果检查实例UID与请求过程的预定过程步骤（DB中的MWL项）不匹配,则通知消息中请求的过程ID的值。{<attributeID>}将替换为传入检查的属性值。例如：{StudyInstanceUID,hash}。覆盖在设备级别指定的值。",
-      "type": "string"
-    },
-    "hl7PSUAccessionNumber": {
-      "title": "HL7过程状态AccessionNumber",
-      "description": "如果检查实例UID与请求过程的预定过程步骤（DB中的MWL项）不匹配,则通知消息中的AccessionNumber值。{<attributeID>}将替换为传入检查的属性值。例如：{StudyInstanceUID,hash}。覆盖在设备级别指定的值。",
-      "type": "string"
-    },
-    "hl7PSUFillerOrderNumber": {
-      "title": "HL7步骤状态填充订单编号",
-      "description": "如果检查实例UID与请求步骤的预定步骤步骤（DB中的MWL项）不匹配,则通知消息中填充订单编号的值。{<attributeID>}将替换为传入检查的属性值。例如：{StudyInstanceUID,hash}。覆盖在设备级别指定的值。",
-      "type": "string"
-    },
-    "hl7PSUPlacerOrderNumber": {
-      "title": "HL7过程状态播放器订单号",
-      "description": "如果检查实例UID与请求过程的预定过程步骤（DB中的MWL项）不匹配,则通知消息中播放器订单号的值。{<attributeID>}将替换为传入检查的属性值。例如：{StudyInstanceUID,hash}。覆盖在设备级别指定的值。",
-      "type": "string"
+    "hl7PSUParam": {
+      "title": "HL7 Procedure Status Update Parameters",
+      "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. Overwrites value specified on Device level.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "hl7PSUMessageType": {
       "title": "HL7过程状态消息类型",
@@ -666,17 +675,6 @@
         "AccessionNumber",
         "StudyInstanceUID"
       ]
-    },
-    "hl7PSUTimeout": {
-      "title": "HL7过程状态更新超时",
-      "description": "等待MPPS引用的实例的ISO-8601周期PnDTnHnMnS形式的超时。如果不存在,请永久检查完整性。覆盖在设备级别指定的值。",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "hl7PSUOnTimeout": {
-      "title": "超时时HL7过程状态更新",
-      "description": "等待被引用实例的接收超时后是否发送HL7过程状态更新。覆盖在设备级别指定的值。",
-      "type": "boolean"
     },
     "dcmRelationalQueryNegotiationLenient": {
       "title": "Relational Query Negotiation Lenient",

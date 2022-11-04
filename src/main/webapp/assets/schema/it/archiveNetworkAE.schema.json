@@ -605,6 +605,27 @@
       "type": "string",
       "format": "dcmDuration"
     },
+    "hl7PSUStudyTemplateURI": {
+      "title": "HL7 Procedure Status Update Study Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. Overwrites value specified on Device level.",
+      "type": "string"
+    },
+    "hl7PSUTimeout": {
+      "title": "Timeout aggiornamento stato procedura HL7",
+      "description": "Timeout nel formato di durata ISO-8601 PnDTnHnMn.nS per l'attesa alla ricezione delle istanze a cui si fa riferimento in MPPS. Sovrascrive i valori specificati a livello del dispositivo.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUOnTimeout": {
+      "title": "Aggiornamento dello stato della procedura HL7 al timeout",
+      "description": "Specifica se l'aggiornamento dello stato della procedura HL7 viene inviato se viene superato il timeout per l'attesa alla ricezione delle istanze a cui si fa riferimento. Sovrascrive i valori specificati a livello del dispositivo.",
+      "type": "boolean"
+    },
+    "hl7PSUMppsTemplateURI": {
+      "title": "HL7 Procedure Status Update MPPS Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by MPPS. Overwrites value specified on Device level.",
+      "type": "string"
+    },
     "hl7PSUCondition": {
       "title": "Condizioni degli attributi di aggiornamento dello stato della procedura HL7",
       "description": "Limita la notifica dell'aggiornamento dello stato della procedura configurata HL7 di Ricezione delle applicazioni sull'aggiornamento dello stato della procedura in base alle condizioni sugli attributi dell'oggetto composito ricevuto nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Esempio: SendingApplicationEntityTitle=FORWARD o Modality=MR|CT o ProcedureCodeSequence.CodeValue=MRProcedure o 00180015=KNEE o 00321034.00080100=RequestingServiceCode o ImageType[3]=LOCALIZER. Sovrascrive i valori specificati a livello del dispositivo.",
@@ -619,25 +640,13 @@
       "description": "Limita la notifica dell'aggiornamento dello stato delle applicazioni configurate delle procedure HL7 sull'aggiornamento dello stato della procedura all'esistenza di fasi della procedura pianificata di una procedura richiesta (elementi MWL nel database) con UID dell'istanza di studio corrispondente. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "boolean"
     },
-    "hl7PSURequestedProcedureID": {
-      "title": "ID procedura Richiesta per l'Aggiornamento dello stato della procedura HL7",
-      "description": "Valore per l'ID procedura richiesta nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Esempio: {StudyInstanceUID,hash}. Sovrascrive i valori specificati a livello del dispositivo.",
-      "type": "string"
-    },
-    "hl7PSUAccessionNumber": {
-      "title": "Numero di Accesso dello stato della procedura HL7",
-      "description": "Valore per il numero di Accesso nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Esempio: {StudyInstanceUID,hash}. Sovrascrive i valori specificati a livello del dispositivo.",
-      "type": "string"
-    },
-    "hl7PSUFillerOrderNumber": {
-      "title": "Numero di Order Filler per lo stato di procedura HL7",
-      "description": "Valore per il numero di Order Filler nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Esempio: {StudyInstanceUID,hash}. Sovrascrive i valori specificati a livello del dispositivo.",
-      "type": "string"
-    },
-    "hl7PSUPlacerOrderNumber": {
-      "title": "Numero di Order Placer dello stato della procedura HL7",
-      "description": "Valore per il Numero di Order Placer nel messaggio di notifica, se non sono presenti passaggi di procedura pianificati di una procedura richiesta (elementi MWL nel database) con UID istanza di studio corrispondente. {<attributeID>} sarà sostituito dal valore dell'attributo nello studio ricevuto. Esempio: {StudyInstanceUID,hash}. Sovrascrive i valori specificati a livello del dispositivo.",
-      "type": "string"
+    "hl7PSUParam": {
+      "title": "HL7 Procedure Status Update Parameters",
+      "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. Overwrites value specified on Device level.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "hl7PSUMessageType": {
       "title": "Tipo messaggio di stato della procedura HL7",
@@ -666,17 +675,6 @@
         "AccessionNumber",
         "StudyInstanceUID"
       ]
-    },
-    "hl7PSUTimeout": {
-      "title": "Timeout aggiornamento stato procedura HL7",
-      "description": "Timeout nel formato di durata ISO-8601 PnDTnHnMn.nS per l'attesa alla ricezione delle istanze a cui si fa riferimento in MPPS. Sovrascrive i valori specificati a livello del dispositivo.",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "hl7PSUOnTimeout": {
-      "title": "Aggiornamento dello stato della procedura HL7 al timeout",
-      "description": "Specifica se l'aggiornamento dello stato della procedura HL7 viene inviato se viene superato il timeout per l'attesa alla ricezione delle istanze a cui si fa riferimento. Sovrascrive i valori specificati a livello del dispositivo.",
-      "type": "boolean"
     },
     "dcmRelationalQueryNegotiationLenient": {
       "title": "Negoziazione di query relazionali indulgente",
