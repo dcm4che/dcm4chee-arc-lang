@@ -605,6 +605,27 @@
       "type": "string",
       "format": "dcmDuration"
     },
+    "hl7PSUStudyTemplateURI": {
+      "title": "HL7 Procedure Status Update Study Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. Overwrites value specified on Device level.",
+      "type": "string"
+    },
+    "hl7PSUTimeout": {
+      "title": "HL7 手順 ステータス 更新 タイムアウト",
+      "description": "MPPSで 参照された インスタンスの 受信を 待機 する ための ISO-8601 期間 PnDTnHnMnS 形式で タイムアウト。 存在しない 場合は、 完全性を 永久に 確認して ください。 デバイス レベルで 指定された 値を 上書きします。",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUOnTimeout": {
+      "title": "タイムアウト時の HL7 手順 ステータス 更新",
+      "description": "参照された インスタンスの 受信を 待機 する タイムアウトを 超えた 場合に HL7 手順 ステータス 更新を 送信 するか どうかを 指定します。 デバイス レベルで 指定された 値を 上書きします。",
+      "type": "boolean"
+    },
+    "hl7PSUMppsTemplateURI": {
+      "title": "HL7 Procedure Status Update MPPS Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by MPPS. Overwrites value specified on Device level.",
+      "type": "string"
+    },
     "hl7PSUCondition": {
       "title": "HL7 手順 ステータス 更新 属性の 条件",
       "description": "受信した 複合 オブジェクトの 属性の (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} 形式で 指定した 条件に よって、 手順 ステータス 更新の 通知を 構成された 「HL7 手順 ステータス 更新 受け取り アプリケーション」に 限る。 「|」 シンボルで 区切る ことに より、 特定の 属性に 複数の 値を 指定できます。 例 : SendingApplicationEntityTitle=FORWARD または Modality=MR|CT または ProcedureCodeSequence.CodeValue=MRProcedure または 00180015=KNEE または 00321034.00080100=RequestingServiceCode または ImageType[3]=LOCALIZER。 デバイス レベルで 指定された 値を 上書きします。",
@@ -619,25 +640,13 @@
       "description": "存在して 要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDの 手順 ステータス 更新の 通知を 構成された 「HL7 手順 ステータス 更新 受け取り アプリケーション」に 限る。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "boolean"
     },
-    "hl7PSURequestedProcedureID": {
-      "title": "HL7 手順 ステータス 更新 要求された 手順 ID",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに 要求された 手順 IDの 値。 {<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 例 : {StudyInstanceUID,hash} 。 デバイス レベルで 指定された 値を 上書きします。",
-      "type": "string"
-    },
-    "hl7PSUAccessionNumber": {
-      "title": "HL7 手順 ステータス 更新 アクセッション 番号",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに アクセッション 番号の 値。 {<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 例 : {StudyInstanceUID,hash} 。 デバイス レベルで 指定された 値を 上書きします。",
-      "type": "string"
-    },
-    "hl7PSUFillerOrderNumber": {
-      "title": "HL7 手順 ステータス 更新 フィラー オーダー 番号",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに フィラー オーダー 番号の 値。{<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 例 : {StudyInstanceUID,hash} 。 デバイス レベルで 指定された 値を 上書きします。",
-      "type": "string"
-    },
-    "hl7PSUPlacerOrderNumber": {
-      "title": "HL7 手順 ステータス 更新 プレーサー オーダー 番号",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに プレーサー オーダー 番号の 値。{<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 例 : {StudyInstanceUID,hash} 。 デバイス レベルで 指定された 値を 上書きします。",
-      "type": "string"
+    "hl7PSUParam": {
+      "title": "HL7 Procedure Status Update Parameters",
+      "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. Overwrites value specified on Device level.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "hl7PSUMessageType": {
       "title": "HL7 手順 ステータス 更新 メッセージ タイプ",
@@ -655,7 +664,7 @@
     },
     "hl7PSUMWL": {
       "title": "HL7 手順 ステータス 更新 MWL",
-      "description": "DB内の MWL アイテムの ステータスが 、構成された 「HL7 手順 ステータス 更新 遅延」後に 受信した 検査には または 構成された 「HL7 手順 ステータス 更新 タイムアウト」後に 受信した MPPSには 、COMPLETEDに 更新されるか どうかを 指定します。「HL7 手順 ステータス 更新 受け取り アプリケーション」が 構成されて いる 場合は、 暗黙的 に 「真」に 設定されます。 デバイス レベルで 指定された 値を 上書きします。",
+      "description": "DB内の MWL アイテムの ステータスが 、構成された 「HL7 手順 ステータス 更新 遅延」後に 受信した 検査には または 構成された 「HL7 手順 ステータス 更新 タイムアウト」後に 受信した MPPSには 、COMPLETED / DISCONTINUEDに 更新されるか どうかを 指定します。「HL7 手順 ステータス 更新 受け取り アプリケーション」が 構成されて いる 場合は、 暗黙的 に 「真」に 設定されます。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "boolean"
     },
     "hl7PSUMWLMatchingKey": {
@@ -666,17 +675,6 @@
         "AccessionNumber",
         "StudyInstanceUID"
       ]
-    },
-    "hl7PSUTimeout": {
-      "title": "HL7 手順 ステータス 更新 タイムアウト",
-      "description": "MPPSで 参照された インスタンスの 受信を 待機 する ための ISO-8601 期間 PnDTnHnMnS 形式で タイムアウト。 存在しない 場合は、 完全性を 永久に 確認して ください。 デバイス レベルで 指定された 値を 上書きします。",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "hl7PSUOnTimeout": {
-      "title": "タイムアウト時の HL7 手順 ステータス 更新",
-      "description": "参照された インスタンスの 受信を 待機 する タイムアウトを 超えた 場合に HL7 手順 ステータス 更新を 送信 するか どうかを 指定します。 デバイス レベルで 指定された 値を 上書きします。",
-      "type": "boolean"
     },
     "dcmRelationalQueryNegotiationLenient": {
       "title": "リレーショナル クエリ ネゴシエーション 寛容",

@@ -98,10 +98,7 @@
     "dcmUPSUpdateWithoutTransactionUID",
     "dcmKeyValueRetentionFetchSize",
     "hl7PSUForRequestedProcedure",
-    "hl7PSURequestedProcedureID",
-    "hl7PSUAccessionNumber",
-    "hl7PSUFillerOrderNumber",
-    "hl7PSUPlacerOrderNumber",
+    "hl7PSUParam",
     "hl7PSUMWL",
     "hl7PSUMWLMatchingKey",
     "hl7PSUOnTimeout",
@@ -1527,11 +1524,47 @@
       "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
+    "hl7PSUTaskPollingInterval": {
+      "title": "HL7 手順 ステータス 更新 タスクの ポーリング 間隔",
+      "description": "ISO-8601 期間 PnDTnHnMnS 形式で HL7 手順 ステータス 更新 タスクの ポーリング 間隔。 存在しない 場合は 無効に する。",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUTaskFetchSize": {
+      "title": "HL7 手順 ステータス 更新 タスクの フェッチ サイズ",
+      "description": "1つの クエリで フェッチされた HL7 手順 ステータス 更新 タスクの 最大数。",
+      "type": "integer",
+      "default": 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
     "hl7PSUDelay": {
       "title": "HL7 手順 ステータス 更新 遅延",
       "description": "ISO-8601 期間 PnDTnHnMnS 形式で遅延の 後、受信した 検査の HL7 手順 ステータス 更新が 構成済みの HL7 受け取り アプリケーションに 送信されます。 存在しない 場合、 HL7 手順 ステータス 更新は 受信した MPPSに よって トリガーされます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "hl7PSUStudyTemplateURI": {
+      "title": "HL7 Procedure Status Update Study Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string"
+    },
+    "hl7PSUTimeout": {
+      "title": "HL7 手順 ステータス 更新 タイムアウト",
+      "description": "MPPSで 参照された インスタンスの 受信を 待機 する ための ISO-8601 期間 PnDTnHnMnS 形式で タイムアウト。 存在しない 場合は、 完全性を 永久に 確認して ください。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUOnTimeout": {
+      "title": "タイムアウト時の HL7 手順 ステータス 更新",
+      "description": "参照された インスタンスの 受信を 待機 する タイムアウトを 超えた 場合に HL7 手順 ステータス 更新を 送信 するか どうかを 指定します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "type": "boolean",
+      "default": false
+    },
+    "hl7PSUMppsTemplateURI": {
+      "title": "HL7 Procedure Status Update MPPS Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by MPPS. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string"
     },
     "hl7PSUCondition": {
       "title": "HL7 手順 ステータス 更新 属性の 条件",
@@ -1548,29 +1581,13 @@
       "type": "boolean",
       "default": false
     },
-    "hl7PSURequestedProcedureID": {
-      "title": "HL7 手順 ステータス 更新 要求された 手順 ID",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに 要求された 手順 IDの 値。 {<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
-    },
-    "hl7PSUAccessionNumber": {
-      "title": "HL7 手順 ステータス 更新 アクセッション 番号",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに アクセッション 番号の 値。 {<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
-    },
-    "hl7PSUFillerOrderNumber": {
-      "title": "HL7 手順 ステータス 更新 フィラー オーダー 番号",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに フィラー オーダー 番号の 値。{<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
-    },
-    "hl7PSUPlacerOrderNumber": {
-      "title": "HL7 手順 ステータス 更新 プレーサー オーダー 番号",
-      "description": "要求された 手順の 予定された 手順 ステップ (DB内の MWL アイテム)と 一致する 検査 インスタンス UIDがない 場合の 通知 メッセージに プレーサー オーダー 番号の 値。{<attributeID>}は 受信した 検査の 属性の 値に 置き換えられます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
+    "hl7PSUParam": {
+      "title": "HL7 Procedure Status Update Parameters",
+      "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "hl7PSUMessageType": {
       "title": "HL7 手順 ステータス 更新 メッセージ タイプ",
@@ -1590,7 +1607,7 @@
     },
     "hl7PSUMWL": {
       "title": "HL7 手順 ステータス 更新 MWL",
-      "description": "DB内の MWL アイテムの ステータスが 、構成された 「HL7 手順 ステータス 更新 遅延」後に 受信した 検査には または 構成された 「HL7 手順 ステータス 更新 タイムアウト」後に 受信した MPPSには 、COMPLETEDに 更新されるか どうかを 指定します。「HL7 手順 ステータス 更新 受け取り アプリケーション」が 構成されて いる 場合は、 暗黙的 に 「真」に 設定されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "description": "DB内の MWL アイテムの ステータスが 、構成された 「HL7 手順 ステータス 更新 遅延」後に 受信した 検査には または 構成された 「HL7 手順 ステータス 更新 タイムアウト」後に 受信した MPPSには 、COMPLETED / DISCONTINUEDに 更新されるか どうかを 指定します。「HL7 手順 ステータス 更新 受け取り アプリケーション」が 構成されて いる 場合は、 暗黙的 に 「真」に 設定されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
       "type": "boolean",
       "default": false
     },
@@ -1603,32 +1620,6 @@
         "AccessionNumber",
         "StudyInstanceUID"
       ]
-    },
-    "hl7PSUTimeout": {
-      "title": "HL7 手順 ステータス 更新 タイムアウト",
-      "description": "MPPSで 参照された インスタンスの 受信を 待機 する ための ISO-8601 期間 PnDTnHnMnS 形式で タイムアウト。 存在しない 場合は、 完全性を 永久に 確認して ください。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "hl7PSUOnTimeout": {
-      "title": "タイムアウト時の HL7 手順 ステータス 更新",
-      "description": "参照された インスタンスの 受信を 待機 する タイムアウトを 超えた 場合に HL7 手順 ステータス 更新を 送信 するか どうかを 指定します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
-      "type": "boolean",
-      "default": false
-    },
-    "hl7PSUTaskPollingInterval": {
-      "title": "HL7 手順 ステータス 更新 タスクの ポーリング 間隔",
-      "description": "ISO-8601 期間 PnDTnHnMnS 形式で HL7 手順 ステータス 更新 タスクの ポーリング 間隔。 存在しない 場合は 無効に する。",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "hl7PSUTaskFetchSize": {
-      "title": "HL7 手順 ステータス 更新 タスクの フェッチ サイズ",
-      "description": "1つの クエリで フェッチされた HL7 手順 ステータス 更新 タスクの 最大数。",
-      "type": "integer",
-      "default": 100,
-      "minimum": 0,
-      "exclusiveMinimum": true
     },
     "hl7TrackChangedPatientID": {
       "title": "HL7 変更された 患者 IDを 追跡 する",

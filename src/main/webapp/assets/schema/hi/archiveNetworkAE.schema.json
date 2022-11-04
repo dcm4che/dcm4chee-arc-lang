@@ -605,6 +605,27 @@
       "type": "string",
       "format": "dcmDuration"
     },
+    "hl7PSUStudyTemplateURI": {
+      "title": "HL7 Procedure Status Update Study Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. Overwrites value specified on Device level.",
+      "type": "string"
+    },
+    "hl7PSUTimeout": {
+      "title": "HL7 प्रक्रिया स्थिति अपडेट समयपाल",
+      "description": "MPPS में संदर्भित दृष्टांतों के प्राप्ति के इंतज़ार का ISO-8601 कालावधि प्रारूप PnDTnHnMnS में समयपाल; यदि कॉन्फ़िगर न किया हो तो, हमेशा के लिए इंतज़ार करें । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUOnTimeout": {
+      "title": "समयपाल पे HL7 प्रक्रिया स्थिति अपडेट",
+      "description": "MPPS में संदर्भित दृष्टांतों के प्राप्ति के इंतज़ार के समयपाल की सीमा पार होने पे HL7 प्रक्रिया स्थिति अपडेट संदेश भेजने का निर्दिष्ट करता है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "type": "boolean"
+    },
+    "hl7PSUMppsTemplateURI": {
+      "title": "HL7 Procedure Status Update MPPS Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by MPPS. Overwrites value specified on Device level.",
+      "type": "string"
+    },
     "hl7PSUCondition": {
       "title": "HL7 प्रक्रिया स्थिति अपडेट गुण नियम",
       "description": "प्राप्त हुए मिश्र दृष्टांत के गुणों पे नियमों के द्वारा कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट प्राप्ति अनुप्रयोगों' पे भेजे गए प्रक्रिया स्थिति अपडेट संदेश के अधिसूचना को सीमित करें, इस प्रारूप में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} । किसी दिए गए विशेषता के लिए एक से अधिक मूल्य निर्दिष्ट करने के लिए उन्हें | प्रतीक के सहारे अलग किया जा सकता है । उदाहरण के तौर पे : SendingApplicationEntityTitle=FORWARD या Modality=MR|CT या ProcedureCodeSequence.CodeValue=MRProcedure या 00180015=KNEE या 00321034.00080100=RequestingServiceCode या ImageType[3]=LOCALIZER । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
@@ -619,25 +640,13 @@
       "description": "मिलान स्टडी दृष्टांत UID के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में MWL आइटम्स) की मौजूदगी पे कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट प्राप्ति अनुप्रयोगों' पे भेजे गए प्रक्रिया स्थिति अपडेट संदेश के अधिसूचना को सीमित करें । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "boolean"
     },
-    "hl7PSURequestedProcedureID": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट अनुरोधित प्रक्रिया का ID",
-      "description": "अधिसूचना संदेश में अनुरोधित प्रक्रिया के ID का मूल्य, यदि मिलान स्टडी दृष्टांत UID के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में MWL आइटम्स) नहीं है । प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा । उदाहरण के तौर पे : {StudyInstanceUID,hash} । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
-      "type": "string"
-    },
-    "hl7PSUAccessionNumber": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट परिग्रहण संख्या",
-      "description": "अधिसूचना संदेश में परिग्रहण संख्या का मूल्य, यदि मिलान स्टडी दृष्टांत UID के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में MWL आइटम्स) नहीं है । प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा । उदाहरण के तौर पे : {StudyInstanceUID,hash} । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
-      "type": "string"
-    },
-    "hl7PSUFillerOrderNumber": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट फिलर आर्डर संख्या",
-      "description": "अधिसूचना संदेश में फिलर आर्डर संख्या का मूल्य, यदि मिलान स्टडी दृष्टांत UID के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में MWL आइटम्स) नहीं है । प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा । उदाहरण के तौर पे : {StudyInstanceUID,hash} । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
-      "type": "string"
-    },
-    "hl7PSUPlacerOrderNumber": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट प्लेसर आर्डर संख्या",
-      "description": "अधिसूचना संदेश में प्लेसर आर्डर संख्या का मूल्य, यदि मिलान स्टडी दृष्टांत UID के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में MWL आइटम्स) नहीं है । प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा । उदाहरण के तौर पे : {StudyInstanceUID,hash} । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
-      "type": "string"
+    "hl7PSUParam": {
+      "title": "HL7 Procedure Status Update Parameters",
+      "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. Overwrites value specified on Device level.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "hl7PSUMessageType": {
       "title": "HL7 प्रक्रिया स्थिति अपडेट संदेश का प्रकार",
@@ -655,7 +664,7 @@
     },
     "hl7PSUMWL": {
       "title": "HL7 प्रक्रिया स्थिति अपडेट MWL",
-      "description": "प्राप्त हुए स्टडी के लिए कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट विलम्ब' या प्राप्त हुए MPPS के लिए कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट समयपाल' का मूल्य पहुँचने पर डेटाबेस में MWL आइटम्स की स्थिति को COMPLETED (संपूर्ण) के रूप में अपडेट करने को निर्दिष्ट करता है । अन्तर्निहित रूप से 'हाँ' के तौर पे सेट होगा, यदि HL7 संदेश प्राप्त करनेवाले सिस्टम्स को अधिसूचित करना कॉन्फ़िगर्ड है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "description": "प्राप्त हुए स्टडी के लिए कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट विलम्ब' या प्राप्त हुए MPPS के लिए कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट समयपाल' का मूल्य पहुँचने पर डेटाबेस में MWL आइटम्स की स्थिति को COMPLETED / DISCONTINUED (संपूर्ण) के रूप में अपडेट करने को निर्दिष्ट करता है । अन्तर्निहित रूप से 'हाँ' के तौर पे सेट होगा, यदि HL7 संदेश प्राप्त करनेवाले सिस्टम्स को अधिसूचित करना कॉन्फ़िगर्ड है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "boolean"
     },
     "hl7PSUMWLMatchingKey": {
@@ -666,17 +675,6 @@
         "AccessionNumber",
         "StudyInstanceUID"
       ]
-    },
-    "hl7PSUTimeout": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट समयपाल",
-      "description": "MPPS में संदर्भित दृष्टांतों के प्राप्ति के इंतज़ार का ISO-8601 कालावधि प्रारूप PnDTnHnMnS में समयपाल; यदि कॉन्फ़िगर न किया हो तो, हमेशा के लिए इंतज़ार करें । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "hl7PSUOnTimeout": {
-      "title": "समयपाल पे HL7 प्रक्रिया स्थिति अपडेट",
-      "description": "MPPS में संदर्भित दृष्टांतों के प्राप्ति के इंतज़ार के समयपाल की सीमा पार होने पे HL7 प्रक्रिया स्थिति अपडेट संदेश भेजने का निर्दिष्ट करता है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
-      "type": "boolean"
     },
     "dcmRelationalQueryNegotiationLenient": {
       "title": "संबंधक प्राप्ति का उदार व्यवहार",

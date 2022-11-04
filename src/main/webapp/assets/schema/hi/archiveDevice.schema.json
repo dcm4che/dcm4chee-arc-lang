@@ -99,10 +99,7 @@
     "dcmUPSUpdateWithoutTransactionUID",
     "dcmKeyValueRetentionFetchSize",
     "hl7PSUForRequestedProcedure",
-    "hl7PSURequestedProcedureID",
-    "hl7PSUAccessionNumber",
-    "hl7PSUFillerOrderNumber",
-    "hl7PSUPlacerOrderNumber",
+    "hl7PSUParam",
     "hl7PSUMWL",
     "hl7PSUMWLMatchingKey",
     "hl7PSUOnTimeout",
@@ -1528,11 +1525,47 @@
       "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
+    "hl7PSUTaskPollingInterval": {
+      "title": "HL7 प्रक्रिया स्थिति अपडेट कार्य पोलिंग अंतराल",
+      "description": "ISO-8601 कालावधि प्रारूप PnDTnHnMnS में HL7 प्रक्रिया स्थिति अपडेट कार्यों का पोलिंग अंतराल । यदि कॉन्फ़िगर न किया हो तो, HL7 प्रक्रिया स्थिति अपडेट नहीं होगी ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUTaskFetchSize": {
+      "title": "HL7 प्रक्रिया स्थिति अपडेट कार्यों के प्राप्ति का माप",
+      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए HL7 प्रक्रिया स्थिति अपडेट कार्यों की अधिकतम संख्या ।",
+      "type": "integer",
+      "default": 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
     "hl7PSUDelay": {
       "title": "HL7 प्रक्रिया स्थिति अपडेट विलम्ब",
       "description": "ISO-8601 कालावधि प्रारूप PnDTnHnMnS में विलम्ब जिसके बाद प्राप्त हुए स्टडी के लिए HL7 प्रक्रिया स्थिति अपडेट संदेश को कॉन्फ़िगर्ड HL7 संदेश प्राप्त करनेवाले सिस्टम्स पे भेजा जाएगा । यदि कॉन्फ़िगर न किया हो तो, HL7 प्रक्रिया स्थिति अपडेट प्राप्त हुए MPPS द्वारा सक्रीय होगी । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "hl7PSUStudyTemplateURI": {
+      "title": "HL7 Procedure Status Update Study Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string"
+    },
+    "hl7PSUTimeout": {
+      "title": "HL7 प्रक्रिया स्थिति अपडेट समयपाल",
+      "description": "MPPS में संदर्भित दृष्टांतों के प्राप्ति के इंतज़ार का ISO-8601 कालावधि प्रारूप PnDTnHnMnS में समयपाल; यदि कॉन्फ़िगर न किया हो तो, हमेशा के लिए इंतज़ार करें । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUOnTimeout": {
+      "title": "समयपाल पे HL7 प्रक्रिया स्थिति अपडेट",
+      "description": "MPPS में संदर्भित दृष्टांतों के प्राप्ति के इंतज़ार के समयपाल की सीमा पार होने पे HL7 प्रक्रिया स्थिति अपडेट संदेश भेजने का निर्दिष्ट करता है । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "type": "boolean",
+      "default": false
+    },
+    "hl7PSUMppsTemplateURI": {
+      "title": "HL7 Procedure Status Update MPPS Template URI",
+      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by MPPS. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string"
     },
     "hl7PSUCondition": {
       "title": "HL7 प्रक्रिया स्थिति अपडेट गुण नियम",
@@ -1549,29 +1582,13 @@
       "type": "boolean",
       "default": false
     },
-    "hl7PSURequestedProcedureID": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट अनुरोधित प्रक्रिया का ID",
-      "description": "अधिसूचना संदेश में अनुरोधित प्रक्रिया के ID का मूल्य, यदि मिलान स्टडी दृष्टांत UID के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में MWL आइटम्स) नहीं है । प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
-    },
-    "hl7PSUAccessionNumber": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट परिग्रहण संख्या",
-      "description": "अधिसूचना संदेश में परिग्रहण संख्या का मूल्य, यदि मिलान स्टडी दृष्टांत UID के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में MWL आइटम्स) नहीं है । प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
-    },
-    "hl7PSUFillerOrderNumber": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट फिलर आर्डर संख्या",
-      "description": "अधिसूचना संदेश में फिलर आर्डर संख्या का मूल्य, यदि मिलान स्टडी दृष्टांत UID के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में MWL आइटम्स) नहीं है । प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
-    },
-    "hl7PSUPlacerOrderNumber": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट प्लेसर आर्डर संख्या",
-      "description": "अधिसूचना संदेश में प्लेसर आर्डर संख्या का मूल्य, यदि मिलान स्टडी दृष्टांत UID के अनुरोधित प्रक्रिया के अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस में MWL आइटम्स) नहीं है । प्राप्त हुए स्टडी में {<attributeID>} गुण के मूल्य से बदला जाएगा । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
-      "type": "string",
-      "default": "{StudyInstanceUID,hash}"
+    "hl7PSUParam": {
+      "title": "HL7 Procedure Status Update Parameters",
+      "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "hl7PSUMessageType": {
       "title": "HL7 प्रक्रिया स्थिति अपडेट संदेश का प्रकार",
@@ -1591,7 +1608,7 @@
     },
     "hl7PSUMWL": {
       "title": "HL7 प्रक्रिया स्थिति अपडेट MWL",
-      "description": "प्राप्त हुए स्टडी के लिए कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट विलम्ब' या प्राप्त हुए MPPS के लिए कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट समयपाल' का मूल्य पहुँचने पर डेटाबेस में MWL आइटम्स की स्थिति को COMPLETED (संपूर्ण) के रूप में अपडेट करने को निर्दिष्ट करता है । अन्तर्निहित रूप से 'हाँ' के तौर पे सेट होगा, यदि HL7 संदेश प्राप्त करनेवाले सिस्टम्स को अधिसूचित करना कॉन्फ़िगर्ड है । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
+      "description": "प्राप्त हुए स्टडी के लिए कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट विलम्ब' या प्राप्त हुए MPPS के लिए कॉन्फ़िगर्ड 'HL7 प्रक्रिया स्थिति अपडेट समयपाल' का मूल्य पहुँचने पर डेटाबेस में MWL आइटम्स की स्थिति को COMPLETED / DISCONTINUED (संपूर्ण) के रूप में अपडेट करने को निर्दिष्ट करता है । अन्तर्निहित रूप से 'हाँ' के तौर पे सेट होगा, यदि HL7 संदेश प्राप्त करनेवाले सिस्टम्स को अधिसूचित करना कॉन्फ़िगर्ड है । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
     },
@@ -1604,32 +1621,6 @@
         "AccessionNumber",
         "StudyInstanceUID"
       ]
-    },
-    "hl7PSUTimeout": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट समयपाल",
-      "description": "MPPS में संदर्भित दृष्टांतों के प्राप्ति के इंतज़ार का ISO-8601 कालावधि प्रारूप PnDTnHnMnS में समयपाल; यदि कॉन्फ़िगर न किया हो तो, हमेशा के लिए इंतज़ार करें । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "hl7PSUOnTimeout": {
-      "title": "समयपाल पे HL7 प्रक्रिया स्थिति अपडेट",
-      "description": "MPPS में संदर्भित दृष्टांतों के प्राप्ति के इंतज़ार के समयपाल की सीमा पार होने पे HL7 प्रक्रिया स्थिति अपडेट संदेश भेजने का निर्दिष्ट करता है । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
-      "type": "boolean",
-      "default": false
-    },
-    "hl7PSUTaskPollingInterval": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट कार्य पोलिंग अंतराल",
-      "description": "ISO-8601 कालावधि प्रारूप PnDTnHnMnS में HL7 प्रक्रिया स्थिति अपडेट कार्यों का पोलिंग अंतराल । यदि कॉन्फ़िगर न किया हो तो, HL7 प्रक्रिया स्थिति अपडेट नहीं होगी ।",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "hl7PSUTaskFetchSize": {
-      "title": "HL7 प्रक्रिया स्थिति अपडेट कार्यों के प्राप्ति का माप",
-      "description": "एक डेटाबेस क्वेरी में प्राप्त हुए HL7 प्रक्रिया स्थिति अपडेट कार्यों की अधिकतम संख्या ।",
-      "type": "integer",
-      "default": 100,
-      "minimum": 0,
-      "exclusiveMinimum": true
     },
     "hl7TrackChangedPatientID": {
       "title": "HL7 बदले हुए मरीज़ के ID को ट्रैक करें",
