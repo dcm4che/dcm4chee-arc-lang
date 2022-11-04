@@ -1605,7 +1605,7 @@
     },
     "hl7PSUMWL": {
       "title": "HL7过程状态更新MWL",
-      "description": "指定DB中的MWL项的状态是否更新为COMPLETED,用于在配置的HL7过程状态更新延迟之后接收的检查,或用于在配置的HL7过程状态更新超时之后接收的MPPS。 如果已配置HL7步骤状态更新接收应用产品,则将其隐式设置为真。 为特定存档网络AE配置的值可能会覆盖它。 ",
+      "description": "指定DB中的MWL项的状态是否更新为COMPLETED / DISCONTINUED,用于在配置的HL7过程状态更新延迟之后接收的检查,或用于在配置的HL7过程状态更新超时之后接收的MPPS。 如果已配置HL7步骤状态更新接收应用产品,则将其隐式设置为真。 为特定存档网络AE配置的值可能会覆盖它。 ",
       "type": "boolean",
       "default": false
     },

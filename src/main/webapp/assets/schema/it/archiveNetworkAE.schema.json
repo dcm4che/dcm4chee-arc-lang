@@ -664,7 +664,7 @@
     },
     "hl7PSUMWL": {
       "title": "Aggiornamento dello stato della procedura HL7 MWL",
-      "description": "Specifica se lo stato degli elementi MWL nel database viene aggiornato a COMPLETED per uno studio ricevuto dopo il ritardo di aggiornamento dello stato della procedura HL7 configurato o per l'MPPS ricevuto dopo il timeout di aggiornamento dello stato della procedura HL7 configurato. Implicitamente impostato su true, se è configurata la notifica dei ricevitori HL7. Sovrascrive i valori specificati a livello del dispositivo.",
+      "description": "Specifica se lo stato degli elementi MWL nel database viene aggiornato a COMPLETED / DISCONTINUED per uno studio ricevuto dopo il ritardo di aggiornamento dello stato della procedura HL7 configurato o per l'MPPS ricevuto dopo il timeout di aggiornamento dello stato della procedura HL7 configurato. Implicitamente impostato su true, se è configurata la notifica dei ricevitori HL7. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "boolean"
     },
     "hl7PSUMWLMatchingKey": {
