@@ -640,8 +640,8 @@
       "description": "जुळणाऱ्या अभ्यास दृष्टांत UID चे विनंती केलेल्या प्रक्रियाचे अनुसूचित प्रक्रिया स्टेप्स (डेटाबेस मध्ये MWL आयटम्स) असण्यावर कॉन्फीगर्ड 'HL7 प्रक्रिया स्थिती अद्यतन प्राप्त करणारा अनुप्रयोग' वर पाठवलेले प्रक्रिया स्थिती अद्यतन संदेशाचे सूचनाला सीमित करा. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
       "type": "boolean"
     },
-    "hl7PSUParam": {
-      "title": "HL7 Procedure Status Update Parameters",
+    "hl7PSUTemplateParam": {
+      "title": "HL7 Procedure Status Update Template Parameters",
       "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. Overwrites value specified on Device level.",
       "type": "array",
       "items": {

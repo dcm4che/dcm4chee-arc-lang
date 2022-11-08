@@ -640,8 +640,8 @@
       "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update to existence of Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. Overwrites value specified on Device level.",
       "type": "boolean"
     },
-    "hl7PSUParam": {
-      "title": "HL7 Procedure Status Update Parameters",
+    "hl7PSUTemplateParam": {
+      "title": "HL7 Procedure Status Update Template Parameters",
       "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. Overwrites value specified on Device level.",
       "type": "array",
       "items": {

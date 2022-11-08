@@ -98,7 +98,7 @@
     "dcmUPSUpdateWithoutTransactionUID",
     "dcmKeyValueRetentionFetchSize",
     "hl7PSUForRequestedProcedure",
-    "hl7PSUParam",
+    "hl7PSUTemplateParam",
     "hl7PSUMWL",
     "hl7PSUMWLMatchingKey",
     "hl7PSUOnTimeout",
@@ -1579,8 +1579,8 @@
       "type": "boolean",
       "default": false
     },
-    "hl7PSUParam": {
-      "title": "HL7 Procedure Status Update Parameters",
+    "hl7PSUTemplateParam": {
+      "title": "HL7 Procedure Status Update Template Parameters",
       "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items": {
