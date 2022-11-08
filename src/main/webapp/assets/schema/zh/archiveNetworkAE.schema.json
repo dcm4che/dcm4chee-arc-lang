@@ -640,8 +640,8 @@
       "description": "仅限于\"接收HL7过程状态更新的应用程序\",该应用程序配置了与所请求过程的预定过程步骤（DB中的MWL项）匹配的检查实例UID的过程状态更新通知。覆盖在设备级别指定的值。",
       "type": "boolean"
     },
-    "hl7PSUParam": {
-      "title": "HL7 Procedure Status Update Parameters",
+    "hl7PSUTemplateParam": {
+      "title": "HL7 Procedure Status Update Template Parameters",
       "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. Overwrites value specified on Device level.",
       "type": "array",
       "items": {
