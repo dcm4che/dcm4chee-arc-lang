@@ -1026,7 +1026,7 @@
     "query_mwls_sps_newest_first": "Newest ScheduledProcedureStepStartDateTime first",
     "query_mwls_sps_oldest_first": "Oldest ScheduledProcedureStepStartDateTime first",
     "query_only_the_count": "カウントのみを クエリ する",
-    "query_only_the_size": "サイズのみを クエリ する",
+    "query_only_studies_size": "サイズのみを クエリ する",
     "query_patients": "患者を クエリ する",
     "query_patients_pname_asc": "Patient Name ascending",
     "query_patients_pname_desc": "Patient Name descending",

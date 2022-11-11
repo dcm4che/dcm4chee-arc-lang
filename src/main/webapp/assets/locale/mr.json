@@ -1026,7 +1026,7 @@
     "query_mwls_sps_newest_first": "Newest ScheduledProcedureStepStartDateTime first",
     "query_mwls_sps_oldest_first": "Oldest ScheduledProcedureStepStartDateTime first",
     "query_only_the_count": "केवळ गणना प्राप्त करा",
-    "query_only_the_size": "केवळ आकार प्राप्त करा",
+    "query_only_studies_size": "केवळ आकार प्राप्त करा",
     "query_patients": "रुग्णांचे रेकॉर्डस् प्राप्त करा",
     "query_patients_pname_asc": "Patient Name ascending",
     "query_patients_pname_desc": "Patient Name descending",

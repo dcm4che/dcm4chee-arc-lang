@@ -1026,7 +1026,7 @@
     "query_mwls_sps_newest_first": "Newest ScheduledProcedureStepStartDateTime first",
     "query_mwls_sps_oldest_first": "Oldest ScheduledProcedureStepStartDateTime first",
     "query_only_the_count": "सिर्फ गिनती प्राप्त करें",
-    "query_only_the_size": "सिर्फ माप प्राप्त करें",
+    "query_only_studies_size": "सिर्फ माप प्राप्त करें",
     "query_patients": "मरीज़ के रेकॉर्ड्स प्राप्त करें",
     "query_patients_pname_asc": "Patient Name ascending",
     "query_patients_pname_desc": "Patient Name descending",

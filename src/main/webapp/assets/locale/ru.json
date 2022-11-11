@@ -1028,7 +1028,7 @@
     "query_mwls_sps_newest_first" : "Самая новая ДатаВремяНачалаШагаЗапланированнойПроцедуры сначала",
     "query_mwls_sps_oldest_first" : "Самая старая ДатаВремяНачалаШагаЗапланированнойПроцедуры сначала",
     "query_only_the_count" : "ЗАПРОСИТЬ ТОЛЬКО КОЛИЧЕСТВО",
-    "query_only_the_size" : "ЗАПРОСИТЬ ТОЛЬКО РАЗМЕР",
+    "query_only_studies_size": "ЗАПРОСИТЬ ТОЛЬКО РАЗМЕР",
     "query_patients" : "Запрос Пациентов",
     "query_patients_pname_asc" : "Имя Пациента по возрастанию",
     "query_patients_pname_desc" : "Имя Пациента по убыванию",
