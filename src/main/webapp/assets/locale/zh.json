@@ -1013,7 +1013,7 @@
     "query_mpps": "查询MPPS",
     "query_mwl": "查询MWL",
     "query_only_the_count": "仅查询计数",
-    "query_only_the_size": "仅查询大小",
+    "query_only_studies_size": "仅查询大小",
     "query_patients": "查询患者",
     "query_pdw": "查询外部患者人口统计服务",
     "query_studies": "查询检查",

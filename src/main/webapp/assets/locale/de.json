@@ -1028,7 +1028,7 @@
     "query_mwls_sps_newest_first": "Newest ScheduledProcedureStepStartDateTime first",
     "query_mwls_sps_oldest_first": "Oldest ScheduledProcedureStepStartDateTime first",
     "query_only_the_count": "QUERY ONLY THE COUNT",
-    "query_only_the_size": "QUERY ONLY THE SIZE",
+    "query_only_studies_size": "Query only size of studies",
     "query_patients": "Patientensuche",
     "query_patients_pname_asc": "Patient Name ascending",
     "query_patients_pname_desc": "Patient Name descending",
