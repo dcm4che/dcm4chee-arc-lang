@@ -3,21 +3,12 @@
   "description": "REST Coercion Processor Configuration",
   "type": "object",
   "required": [
-    "j4careRESTCoercionProcessorWebApplicationName",
-    "j4careRESTCoercionProcessorWorkflowName",
-    "j4careRESTCoercionProcessorCacheMaxSize",
-    "j4careRESTCoercionProcessorCacheStaleTimeout",
-    "j4careRESTCoercionProcessorQueryParameters"
+    "j4careRESTCoercionProcessorWebApplicationName"
   ],
   "properties": {
     "j4careRESTCoercionProcessorWebApplicationName": {
       "title": "Web Application Name",
       "description": "Web Application Name of the Workflow Manager Web Application to get the URL and Keycloak Configuration",
-      "type": "string"
-    },
-    "j4careRESTCoercionProcessorWorkflowName": {
-      "title": "Workflow Name",
-      "description": "Workflow Name to search in for Coercion Attributes",
       "type": "string"
     },
     "j4careRESTCoercionProcessorQueryParameters": {
