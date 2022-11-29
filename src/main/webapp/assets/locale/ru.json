@@ -957,6 +957,7 @@
     "patient_name" : "Имя Пациента",
     "patient_participant_object_name" : "ИмяОбъектаУчастника Пациента",
     "patient_saved_successfully" : "Пациент успешно сохранен!",
+    "patient_verification_status": "Patient Verification Status",
     "patients" : "Пациенты",
     "patients_birth_date" : "Дата рождения Пациента",
     "patients_name" : "Имя Пациента",
