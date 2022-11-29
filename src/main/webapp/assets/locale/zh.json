@@ -523,7 +523,6 @@
     "extended_search": "扩展搜索",
     "extension_is_not_present": "无扩展",
     "extensions": "扩展",
-    "external_archive_proxy_relational_query_req_warning": "Query requests (without Study Instance UID) proxied to external archives may not support relational queries!",
     "external_hl7_application": "外部Hl7应用程序",
     "external_retrieve_aet": "外部读取aet",
     "f": "F",
