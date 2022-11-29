@@ -531,7 +531,6 @@
     "extended_search" : "Расширенный поиск",
     "extension_is_not_present" : "Расширение отсутствует",
     "extensions" : "Расширения",
-    "external_archive_proxy_relational_query_req_warning" : "Запросы (без UID Объекта Исследования), переданные во внешние архивы, могут не поддерживать реляционные запросы!",
     "external_hl7_application" : "Внешнее HL7 Приложение",
     "external_retrieve_aet" : "Внешний AET извлечения",
     "f" : "F",
