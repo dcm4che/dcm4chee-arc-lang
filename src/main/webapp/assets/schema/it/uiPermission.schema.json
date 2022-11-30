@@ -28,7 +28,6 @@
         "menu-monitoring",
         "menu-study",
         "menu-xds",
-        "tab-study-study",
         "tab-monitoring->queues",
         "tab-monitoring->export",
         "tab-monitoring->external_retrieve",
@@ -100,7 +99,8 @@
           "merge",
           "upload",
           "reject",
-          "restore"
+          "restore",
+          "recreate"
         ]
       }
     },
