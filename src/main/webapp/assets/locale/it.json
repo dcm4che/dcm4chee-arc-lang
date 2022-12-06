@@ -714,6 +714,8 @@
 		"limit_of_patients": "Limite di pazienti",
 		"limit_of_studies": "Limite degli studi",
 		"limit_of_uwl": "Limite di UWL",
+		"link_study_with_mwl": "Link study with MWL",
+		"link_selected_study_with_this_mwl": "Link selected study with this MWL",
 		"list_compare_studies_tasks_which_were_created_between": "list Attività di Confronto studi che sono state create in mezzo",
 		"list_compare_studies_tasks_which_were_updated_between": "list Attività di Confronto studi che sono state aggiornate in mezzo",
 		"loading": "caricamento in corso... \n",

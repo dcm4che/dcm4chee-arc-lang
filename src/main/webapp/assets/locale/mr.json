@@ -714,6 +714,8 @@
     "limit_of_patients": "रुग्णांच्या यादीची हद्द",
     "limit_of_studies": "अभ्यासाची हद्द",
     "limit_of_uwl": "UWL ची हद्द",
+    "link_study_with_mwl": "Link study with MWL",
+    "link_selected_study_with_this_mwl": "Link selected study with this MWL",
     "list_compare_studies_tasks_which_were_created_between": "यांच्या दरम्यान निर्माण केलेले तुलना अभ्यासांच्या कार्यांची यादी",
     "list_compare_studies_tasks_which_were_updated_between": "यांच्या दरम्यान अद्यतनित केलेले तुलना अभ्यासांच्या कार्यांची यादी",
     "loading": "लोड करीत आहे ...",

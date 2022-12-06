@@ -714,6 +714,8 @@
     "limit_of_patients": "患者の 制限",
     "limit_of_studies": "検査の 制限",
     "limit_of_uwl": "UWLの 制限",
+    "link_study_with_mwl": "Link study with MWL",
+    "link_selected_study_with_this_mwl": "Link selected study with this MWL",
     "list_compare_studies_tasks_which_were_created_between": "間に 作成された 検査 比較 タスクの リスト",
     "list_compare_studies_tasks_which_were_updated_between": "間で 更新された 検査 比較 タスクの リスト",
     "loading": " 読み込み中...\n",

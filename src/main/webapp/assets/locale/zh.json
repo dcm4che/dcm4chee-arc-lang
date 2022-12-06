@@ -702,6 +702,8 @@
     "limit_of_patients": "患者限制",
     "limit_of_studies": "检查限制",
     "limit_of_uwl": "UWL限制",
+    "link_study_with_mwl": "Link study with MWL",
+    "link_selected_study_with_this_mwl": "Link selected study with this MWL",
     "list_compare_studies_tasks_which_were_created_between": "列出在以下区间创建的比较检查",
     "list_compare_studies_tasks_which_were_updated_between": "列出在以下区间更新的比较检查",
     "loading": " 正在加载...\n",
