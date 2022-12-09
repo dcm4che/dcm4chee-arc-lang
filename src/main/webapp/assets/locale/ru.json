@@ -716,6 +716,8 @@
     "limit_of_patients" : "Лимит пациентов",
     "limit_of_studies" : "Лимит исследований",
     "limit_of_uwl" : "Лимит UWL",
+    "link_study_with_mwl": "Link study with MWL",
+    "link_selected_study_with_this_mwl": "Link selected study with this MWL",
     "list_compare_studies_tasks_which_were_created_between" : "Список Заданий Сравниваемых Исследований, созданных между",
     "list_compare_studies_tasks_which_were_updated_between" : "Список Заданий Сравниваемых Исследований, обновленных между",
     "loading" : " загрузка...",

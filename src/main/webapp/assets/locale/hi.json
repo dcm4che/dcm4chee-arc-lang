@@ -714,6 +714,8 @@
     "limit_of_patients": "मरीज़ों के रेकॉर्ड्स की सीमा",
     "limit_of_studies": "स्टडीज की सीमा",
     "limit_of_uwl": "UWL की सीमा",
+    "link_study_with_mwl": "Link study with MWL",
+    "link_selected_study_with_this_mwl": "Link selected study with this MWL",
     "list_compare_studies_tasks_which_were_created_between": "इनके बीच निर्माण हुए तुलना स्टडीज कार्यों की सूची",
     "list_compare_studies_tasks_which_were_updated_between": "इनके बीच अपडेट हुए तुलना स्टडीज कार्यों की सूची",
     "loading": " लोड हो रहा है...\n",
