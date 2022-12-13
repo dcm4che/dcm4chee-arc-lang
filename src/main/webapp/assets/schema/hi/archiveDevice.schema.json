@@ -90,6 +90,7 @@
     "dcmWadoMetadataExcludePrivate",
     "dcmStowExcludeAPPMarkers",
     "dcmStowQuicktime2MP4",
+    "dcmStowMaxFragmentLength",
     "dcmFilterByIssuerOfPatientID",
     "dcmMWLAccessionNumberGenerator",
     "dcmMWLRequestedProcedureIDGenerator",
@@ -1776,6 +1777,12 @@
       "description": "STOW-RS मेटाडेटा और अधिकांश डेटा अनुरोधों द्वारा प्राप्त हुए क्विकटाइम कंटेनरों को निर्माण किए DICOM दृष्टांतों में MP4 कंटेनरों में परिवर्तित करके एनकेप्सुलेट करने का संकेत करता है । यह परिवर्तन सफल होने के लिए जरूरी है की ffmpeg यूटिलिटी सिस्टम पे स्थापित है और ffmpeg CLI यूटिलिटी सिस्टम के PATH वेरिएबल में उपलब्ध होना चाहिए । अन्यथा सहेजे गए DICOM दृष्टांत वेरबाटिम में क्विकटाइम कंटेनरों को घोषित MPEG-4 हस्तांतरण वाक्यविन्यास, जो कंटेनर में वीडियो स्ट्रीम के एन्कोडिंग को दर्शाता है, लेकिन वास्तविक कंटेनर प्रारूप का खंडन करता है, से एनकेप्सुलेट किया जाएगा । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default" : false
+    },
+    "dcmStowMaxFragmentLength": {
+      "title": "STOW Maximum Fragment Length",
+      "description": "Maximum length of data fragments of encapsulated JPEG/MPEG stream in stored DICOM object. If the received JPEG/MPEG stream exceeds that value, it will be split into several fragments, using a Fragmentable Encapsulated Transfer Syntax. Valid range: 1024..4294967294. May be overwritten by configured value for particular Archive Network AEs.",
+      "type": "integer",
+      "default": 2147483646
     },
     "dcmChangeRequesterAET": {
       "title": "परिवर्तन अनुरोधकर्ता AET",

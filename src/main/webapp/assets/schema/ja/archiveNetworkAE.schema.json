@@ -713,6 +713,12 @@
       "description": "STOW-RS メタデータと バルク データ 要求で 受信された QuickTime コンテナーが、 作成された DICOM インスタンスに カプセル化された MP4 コンテナーに 変換されるか どうかを 示します。 変換には、 ffmpegが インストールされており、 ffmpeg CLI ユーティリティーが PATHで 使用 可能で ある 必要が あります。 そうでない 場合、 Quicktime コンテナは、 コンテナ内の ビデオ ストリームの エンコーディングを 反映 する 宣言された DICOM MPEG-4 転送 構文を 使用して、 保存されて いる DICOM オブジェクトに その まま カプセル化されますが、 実際の コンテナ フォーマットとは 矛盾します。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "boolean"
     },
+    "dcmStowMaxFragmentLength": {
+      "title": "STOW Maximum Fragment Length",
+      "description": "Maximum length of data fragments of encapsulated JPEG/MPEG stream in stored DICOM object. If the received JPEG/MPEG stream exceeds that value, it will be split into several fragments, using a Fragmentable Encapsulated Transfer Syntax. Valid range: 1024..4294967294. Overwrites value specified on Device level.",
+      "type": "integer",
+      "default": 2147483646
+    },
     "dcmRetrieveTaskWarningOnNoMatch": {
       "title": "一致 しない 場合の 読み出し タスク 警告",
       "description": "C-MOVE SCPで 要求された オブジェクトが 見つからなかった 場合に、 読み出し タスクの 結果 ステータスを WARNINGに 設定する 必要が あるか どうかを 示します。 デバイス レベルで 指定された 値を 上書きします。",

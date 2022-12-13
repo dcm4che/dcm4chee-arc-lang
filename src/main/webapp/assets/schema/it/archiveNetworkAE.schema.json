@@ -713,6 +713,12 @@
       "description": "Indica se i contenitori QuickTime ricevuti nelle richieste STOW-RS Metadata e Bulkdata devono essere convertiti in contenitori MP4 incapsulati in istanze DICOM create. La conversione richiede che ffmpeg sia installato e che l'utility ffmpeg CLI sia disponibile nel PATH. In caso contrario, i contenitori Quicktime verranno incapsulati nell'oggetto DICOM archiviato non cambiati, con una sintassi di trasferimento DICOM MPEG-4 dichiarata che riflette la codifica del flusso video nel contenitore, ma contraddice il formato effettivo del contenitore. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "boolean"
     },
+    "dcmStowMaxFragmentLength": {
+      "title": "STOW Maximum Fragment Length",
+      "description": "Maximum length of data fragments of encapsulated JPEG/MPEG stream in stored DICOM object. If the received JPEG/MPEG stream exceeds that value, it will be split into several fragments, using a Fragmentable Encapsulated Transfer Syntax. Valid range: 1024..4294967294. Overwrites value specified on Device level.",
+      "type": "integer",
+      "default": 2147483646
+    },
     "dcmRetrieveTaskWarningOnNoMatch": {
       "title": "Recupera avviso attività in caso di mancata corrispondenza",
       "description": "Indica se lo stato del risultato di Retrieve Tasks deve essere impostato su WARNING se nessuno degli oggetti richiesti è stato trovato su C-MOVE SCP. Sovrascrive i valori specificati a livello del dispositivo.",
