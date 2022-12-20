@@ -713,6 +713,12 @@
       "description": "STOW-RS指示元数据和批量数据请求中接收的Quicktime容器是否被转换为封装在创建的DICOM实例中的MP4容器。要进行转换,必须安装ffmpeg,并且必须在PATH中启用ffmpeg CLI实用程序。否则,Quicktime容器将按原样封装在存储的DICOM对象中,使用声明的DICOM MPEG-4传输语法反映容器中视频流的编码,但与实际的容器格式不一致。 覆盖在设备级别指定的值。",
       "type": "boolean"
     },
+    "dcmStowMaxFragmentLength": {
+      "title": "STOW Maximum Fragment Length",
+      "description": "Maximum length of data fragments of encapsulated JPEG/MPEG stream in stored DICOM object. If the received JPEG/MPEG stream exceeds that value, it will be split into several fragments, using a Fragmentable Encapsulated Transfer Syntax. Valid range: 1024..4294967294. Overwrites value specified on Device level.",
+      "type": "integer",
+      "default": 2147483646
+    },
     "dcmRetrieveTaskWarningOnNoMatch": {
       "title": "不匹配时读取任务警告",
       "description": "如果没有找到C-MOVE SCP请求的对象,则是否需要将读取任务的结果状态设置为WARNING。 覆盖在设备级别指定的值。 ",
