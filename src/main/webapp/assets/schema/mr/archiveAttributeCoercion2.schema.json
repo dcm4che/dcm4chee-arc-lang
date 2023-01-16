@@ -102,7 +102,7 @@
         "OVERWRITE"
       ]
     },
-    "dicomDeviceName": {
+    "dcmSupplementFromDeviceReference": {
       "title": "Device Name Coercion Parameter",
       "description": "Device Name Coercion Parameter. Only effective for particular Attribute Coercions.",
       "type": "string",

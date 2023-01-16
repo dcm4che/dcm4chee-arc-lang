@@ -226,7 +226,7 @@
       "description": "从其他属性导出的患者ID发布者格式。 例如“{00100010,hash}-{00100030}”：使用以“-”分隔的患者姓名和出生日期散列值。要强制接收对象的患者ID发布者的现有值,还必须相应地设置\"null患者ID发布者。",
       "type": "string"
     },
-    "dcmSupplementFromDeviceName": {
+    "dcmSupplementFromDeviceReference": {
       "title": "从设备补充",
       "description": "接收的复合对象和分配给MPPS的权限或其他信息用于补充的设备的名称。",
       "type": "string",

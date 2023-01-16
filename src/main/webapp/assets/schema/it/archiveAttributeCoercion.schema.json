@@ -226,7 +226,7 @@
       "description": "Formato dell'emittente dell'ID paziente (0010,0021) derivato da altri attributi. Ad esempio \"{00100010, hash} - {00100030}\": utilizza il valore hash del nome del paziente e della data di nascita separati da \"-\". Per la coercizione dei valori esistenti di Issuer of Patient ID negli oggetti ricevuti anche dcmNullifyIssuerOfPatientID deve essere impostato di conseguenza.",
       "type": "string"
     },
-    "dcmSupplementFromDeviceName": {
+    "dcmSupplementFromDeviceReference": {
       "title": "Supplement from Device",
       "description": "Nome del dispositivo da cui vengono prese le autorità assegnatrici (Assigning Authorities) e altre informazioni per integrare gli oggetti compositi e MPPS ricevuti.",
       "type": "string",

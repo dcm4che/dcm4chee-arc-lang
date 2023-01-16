@@ -226,7 +226,7 @@
       "description": "他の 属性から 派生した 患者 ID 発行者の 形式。 例 : \"{00100010,hash}-{00100030}\": 「-」で 区切られた 患者名と 生年月日の ハッシュ値を 使用します。 受信した オブジェクトの 患者 IDの 発行者の 既存の 値を 強制するには、 それに 応じて 「患者 IDの 発行者を ヌル する」 も 設定 する 必要が あります。",
       "type": "string"
     },
-    "dcmSupplementFromDeviceName": {
+    "dcmSupplementFromDeviceReference": {
       "title": "デバイスから 補足 する",
       "description": "受信した 複合 オブジェクトと MPPSを 割り当てられた 権限や その 他の 情報が 補足 する ために 使用された デバイスの名前。",
       "type": "string",
