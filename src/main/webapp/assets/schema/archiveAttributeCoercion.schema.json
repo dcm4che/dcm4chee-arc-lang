@@ -1,5 +1,5 @@
 {
-  "title": "Archive Attribute Coercion",
+  "title": "Archive Attribute Coercion - Legacy",
   "description": "Archive Attribute Coercion of received/sent DIMSE",
   "type": "object",
   "required": [
