@@ -162,7 +162,7 @@
     },
     "dcmAttributeUpdatePolicy": {
       "title": "गुण अपडेट नीति",
-      "description": "प्रमुख C-FIND SCP प्राप्त किए गए गुणों के साथ किस तरह गुणों को अपडेट किया जाएगा यह निर्दिष्ट करता है । PRESERVE (= मूल डेटासेट में अनुपलभ्य गुणों को नए डेटासेट में अमान्य करें), SUPPLEMENT (= मूल डेटासेट में अनुपलभ्य गुणों को पूरक किया जाएगा), MERGE (= गुण के मूल्यों को नए डेटासेट से लिखा जाएगा), OVERWRITE (= अगर नए डेटासेट में गुण के मूल्य अनुपलभ्य हो तो मूल डेटासेट में अमान्य किया जाएगा) ।",
+      "description": "प्रमुख C-FIND SCP प्राप्त किए गए गुणों के साथ किस तरह गुणों को अपडेट किया जाएगा यह निर्दिष्ट करता है । Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy\" target=\"_blank\">Attribute Update Policies meanings</a>",
       "type": "string",
       "default": "MERGE",
       "enum": [

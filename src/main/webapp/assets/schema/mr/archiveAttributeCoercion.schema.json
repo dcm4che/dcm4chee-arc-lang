@@ -162,7 +162,7 @@
     },
     "dcmAttributeUpdatePolicy": {
       "title": "विशेषता अद्यतन धोरण",
-      "description": "अग्रगण्य C-FIND SCP मधून प्राप्त केलेल्या विशेषतांसह विशेषता कसे अद्ययावत केले जातील ते निर्दिष्ट करते. PRESERVE (= मूळ डेटासेटमध्ये नसलेल्या विशेषता नवीन डेटासेटमध्ये विशेषता रद्द करा), SUPPLEMENT (= मूळ डेटासेटमध्ये नसलेल्या विशेषता को पूरक होतील), MERGE (= विशेषता मूल्ये नवीन डेटासेटमधून लिहिले जातील), OVERWRITE (= नवीन डेटासेटमध्ये विशेषता मूल्य नसल्यास मूळ डेटासेटमध्ये ते विशेषता अमान्य होतील).",
+      "description": "अग्रगण्य C-FIND SCP मधून प्राप्त केलेल्या विशेषतांसह विशेषता कसे अद्ययावत केले जातील ते निर्दिष्ट करते. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy\" target=\"_blank\">Attribute Update Policies meanings</a>",
       "type": "string",
       "default": "MERGE",
       "enum": [
