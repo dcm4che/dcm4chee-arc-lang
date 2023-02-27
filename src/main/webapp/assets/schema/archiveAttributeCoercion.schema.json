@@ -28,7 +28,7 @@
     },
     "dcmDIMSE": {
       "title": "DIMSE",
-      "description": "DICOM Message Element on which this Attribute Coercion shall be applied. Also <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#dimse\" target=\"_blank\">applicable if the requests are received over web</a>",
+      "description": "DICOM Message Element on which this Attribute Coercion shall be applied. Also <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#dimse\" target=\"_blank\">applicable if the requests are received over web.</a>",
       "type": "string",
       "enum": [
         "N_CREATE_RQ",
@@ -57,7 +57,7 @@
     },
     "dcmProperty": {
       "title": "Conditions",
-      "description": "Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER",
+      "description": "Conditions in format {key}[!]={value}. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">applicability, format and some examples.</a>",
       "type": "array",
       "items": {
         "type": "string"

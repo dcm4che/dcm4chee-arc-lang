@@ -21,7 +21,7 @@
     },
     "dcmProperty": {
       "title": "Condition",
-      "description": "Conditions in format {attributeID[number]})[!]={regEx} or {sequenceAttributeID}[!]=(CV, CSD, \"CM\"). E.g.: PerformedWorkitemCodeSequence=(110005,DCM,\"Interpretation\"). More than one value can be specified for a given attribute by separating them with a | symbol.",
+      "description": "Conditions in format {key}[!]={value}. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">applicability, format and some examples.</a>",
       "type": "array",
       "items": {
         "type": "string"
