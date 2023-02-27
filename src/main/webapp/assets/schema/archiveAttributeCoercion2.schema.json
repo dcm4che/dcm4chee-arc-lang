@@ -25,7 +25,7 @@
     },
     "dcmURI": {
       "title": "Attribute Coercion URI",
-      "description": "Identifies Attribute Coercion by Uniform Resource Identifier. Refer values you can set for <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-uri\" target=\"_blank\">Attribute Coercion URI</a> field depending on the coercion type.",
+      "description": "Identifies Attribute Coercion by Uniform Resource Identifier (e.g. 'merge-mwl:${jboss.server.temp.url}/dcm4chee-arc/mwl2series.xsl')",
       "type": "string"
     },
     "dcmCoercionSufficient": {
@@ -36,7 +36,7 @@
     },
     "dcmCoercionOnFailure": {
       "title": "Attribute Coercion on Failure",
-      "description": "Behavior on failure applying this Attribute Coercion. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-on-failure\" target=\"_blank\">Attribute Coercion on Failure meanings</a>",
+      "description": "Behavior on failure applying this Attribute Coercion. RETHROW (= propagate failure to operation applying this Attribute Coercion), CONTINUE (= continue to apply other matching Attribute Coercions of lesser priority) or SUFFICIENT (= do not apply other matching Attribute Coercions of lesser priority).",
       "type": "string",
       "default": "RETHROW",
       "enum": [
@@ -54,7 +54,7 @@
     },
     "dcmDIMSE": {
       "title": "DIMSE",
-      "description": "DICOM Message Element on which this Attribute Coercion shall be applied. Also <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dimse\" target=\"_blank\">applicable if the requests are received over web</a>",
+      "description": "DICOM Message Element on which this Attribute Coercion shall be applied",
       "type": "string",
       "enum": [
         "N_CREATE_RQ",
@@ -83,7 +83,7 @@
     },
     "dcmProperty": {
       "title": "Condition",
-      "description": "Conditions in format {key}[!]={value}(SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER",
+      "description": "Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER",
       "type": "array",
       "items": {
         "type": "string"
@@ -104,13 +104,13 @@
     },
     "dcmSupplementFromDeviceReference": {
       "title": "Device Name Coercion Parameter",
-      "description": "Device Name Coercion Parameter. Only effective for supplementing from device coercion type.",
+      "description": "Device Name Coercion Parameter. Only effective for particular Attribute Coercions.",
       "type": "string",
       "format": "dicomDeviceName"
     },
     "dcmMergeAttribute": {
       "title": "DICOM Attribute Coercion Parameter",
-      "description": "DICOM Attribute Coercion Parameters in format {attributeID}={value}. {attributeID} inside of {value} may be replaced by the value of that attribute in the original dataset. Only effective for merging attributes coercion type. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dicom-attribute-coercion-parameters\" target=\"_blank\">formatting options and examples.</a>",
+      "description": "DICOM Attribute Coercion Parameters in format {attributeID}={value}. {attributeID} inside of {value} may be replaced by the value of that attribute in the original dataset. Only effective for particular Attribute Coercions.",
       "type": "array",
       "items": {
         "type": "string"
@@ -119,7 +119,7 @@
     },
     "dcmCoercionParam": {
       "title": "Other Coercion Parameter",
-      "description": "Refer applicability to coercion types and examples in <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#other-coercion-parameters\" target=\"_blank\">Other Attribute Coercion specific Parameters</a>",
+      "description": "Other Attribute Coercion specific Parameters.",
       "type": "array",
       "items": {
         "type": "string"
