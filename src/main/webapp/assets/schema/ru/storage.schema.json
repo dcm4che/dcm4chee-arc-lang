@@ -198,7 +198,7 @@
     },
     "dcmProperty": {
       "title": "Storage Property",
-      "description": "Property in format <name>=<value>",
+      "description": "Property in format {name}={value}. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Storage-Properties\" target=\"_blank\">Storage Properties</a> that can be configured based on the storage type.",
       "type": "array",
       "items": {
         "type": "string"
