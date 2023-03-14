@@ -21,6 +21,11 @@
       "description": "Username role that can use this Set ( If you set the username, the role will be ignored )",
       "type": "string"
     },
+    "dcmuiTableID": {
+      "title": "Table ID",
+      "description": "The ID of the Table in the UI for which the config should be effective",
+      "type": "string"
+    },
     "dcmuiStudyTableConfigIsDefault": {
       "title": "Is Default",
       "description": "Set this Column-Set to the default one. (Make sure that only one of the Set - siblings child is set to default).",
