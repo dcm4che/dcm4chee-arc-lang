@@ -32,8 +32,8 @@
       ]
     },
     "dcmURI": {
-      "title": "URI",
-      "description": "RFC2079: ユニフォーム リソース 識別子",
+      "title": "エクスポーター URI",
+      "description": "RFC2079: ユニフォーム リソース 識別子. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">Exporter URI</a> that can be configured based on the exporter type.",
       "type": "string"
     },
     "dcmQueueName": {
@@ -116,8 +116,8 @@
       "format": "dcmSchedule"
     },
     "dcmProperty": {
-      "title": "属性",
-      "description": "<name>=<value> 形式で 属性",
+      "title": "エクスポーター 属性",
+      "description": "Specify エクスポーター 属性 形式 {name}={value}. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">エクスポーター 属性</a> that can be configured based on the exporter type.",
       "type": "array",
       "items": { "type": "string" }
     }

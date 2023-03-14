@@ -32,8 +32,8 @@
       ]
     },
     "dcmURI": {
-      "title": "URI",
-      "description": "RFC2071 : एकसमान संसाधन अभिज्ञापक.",
+      "title": "निर्यातक URI",
+      "description": "RFC2071 : एकसमान संसाधन अभिज्ञापक. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">Exporter URI</a> that can be configured based on the exporter type.",
       "type": "string"
     },
     "dcmQueueName": {
@@ -116,8 +116,8 @@
       "format": "dcmSchedule"
     },
     "dcmProperty": {
-      "title": "विशेषता",
-      "description": "विशेषता या प्रारूपात <नाम>=<मूल्य>.",
+      "title": "निर्यातक विशेषता",
+      "description": "Specify निर्यातक विशेषता या प्रारूपात {name}={value}. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">निर्यातक विशेषता</a> that can be configured based on the exporter type.",
       "type": "array",
       "items": { "type": "string" }
     }

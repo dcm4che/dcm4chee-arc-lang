@@ -32,8 +32,8 @@
       ]
     },
     "dcmURI": {
-      "title": "URI",
-      "description": "RFC2071 : समान संसाधन पहचानकर्ता ।",
+      "title": "निर्यातक URI",
+      "description": "RFC2071 : समान संसाधन पहचानकर्ता । Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">Exporter URI</a> that can be configured based on the exporter type.",
       "type": "string"
     },
     "dcmQueueName": {
@@ -116,8 +116,8 @@
       "format": "dcmSchedule"
     },
     "dcmProperty": {
-      "title": "गुण",
-      "description": "गुण इस प्रारूप में <नाम>=<मूल्य> ।",
+      "title": "निर्यातक गुण",
+      "description": "Specify निर्यातक गुण इस प्रारूप में {नाम}={मूल्य}. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">निर्यातक गुण</a> that can be configured based on the exporter type.",
       "type": "array",
       "items": { "type": "string" }
     }

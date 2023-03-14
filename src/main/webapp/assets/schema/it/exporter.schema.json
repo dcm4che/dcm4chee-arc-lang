@@ -32,8 +32,8 @@
       ]
     },
     "dcmURI": {
-      "title": "URI",
-      "description": "RFC2079: Uniform Resource Identifier",
+      "title": "Exporter URI",
+      "description": "RFC2079: Uniform Resource Identifier. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">Exporter URI</a> that can be configured based on the exporter type.",
       "type": "string"
     },
     "dcmQueueName": {
@@ -116,8 +116,8 @@
       "format": "dcmSchedule"
     },
     "dcmProperty": {
-      "title": "Proprietà",
-      "description": "Proprietà nel formato <name>=<value> ",
+      "title": "Exporter Proprietà",
+      "description": "Specify exporter Proprietà nel formato {name}={value}. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">Exporter Properties</a> that can be configured based on the exporter type.",
       "type": "array",
       "items": { "type": "string" }
     }
