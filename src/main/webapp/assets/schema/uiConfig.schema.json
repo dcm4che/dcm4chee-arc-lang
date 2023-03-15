@@ -121,10 +121,10 @@
         "$ref": "uiDiffConfig.schema.json"
       }
     },
-    "dcmuiStudyTableConfig": {
-      "title": "UI Study Table Configuration",
+    "dcmuiTableConfig": {
+      "title": "UI Table Configuration",
       "description": "Configuration of table",
-      "titleKey":"{dcmuiStudyTableConfigName}",
+      "titleKey":"{dcmuiTableConfigName}",
       "type": "array",
       "items" : {
         "$ref": "uiTable.schema.json"
