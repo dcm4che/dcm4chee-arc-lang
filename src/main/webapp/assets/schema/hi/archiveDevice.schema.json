@@ -254,7 +254,7 @@
     },
     "dcmDeleteMWLDelay": {
       "title": "MWL को मिटाने का विलम्ब",
-      "description": "MWL आइटम्स को मिटाने के लिए ISO-8601 कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब । स्थिति विशिष्ट विलम्ब उपसर्ग द्वारा निर्दिष्ट की जा सकती है 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:' । उदाहरण के तौर पे : PT5M या CANCELED: PT10M । यदि कॉन्फ़िगर न किया हो तो, MWL आइटम्स नहीं मिटेंगे ।",
+      "description": "MWL आइटम्स को मिटाने के लिए ISO-8601 कालावधि प्रारूप PnDTnHnMn.nS में विलम्ब, whose updated_time is older than the specified delay । स्थिति विशिष्ट विलम्ब उपसर्ग द्वारा निर्दिष्ट की जा सकती है 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:' । उदाहरण के तौर पे : PT5M या CANCELED: PT10M । यदि कॉन्फ़िगर न किया हो तो, MWL आइटम्स नहीं मिटेंगे ।",
       "type": "array",
       "items" : { "type": "string" }
     },

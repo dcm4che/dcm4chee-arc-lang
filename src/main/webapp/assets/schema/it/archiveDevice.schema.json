@@ -251,7 +251,7 @@
     },
     "dcmDeleteMWLDelay": {
       "title": "Elimina ritardo MWL",
-      "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMn.nS per l'eliminazione di elementi MWL. I ritardi specifici dello stato possono essere specificati dal prefisso 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. Esempio: PT5M o CANCELED:PT10M. Se assenti, gli elementi MWL non verranno eliminati.",
+      "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMn.nS per l'eliminazione di elementi MWL, whose updated_time is older than the specified delay. I ritardi specifici dello stato possono essere specificati dal prefisso 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. Esempio: PT5M o CANCELED:PT10M. Se assenti, gli elementi MWL non verranno eliminati.",
       "type": "array",
       "items" : { "type": "string" }
     },

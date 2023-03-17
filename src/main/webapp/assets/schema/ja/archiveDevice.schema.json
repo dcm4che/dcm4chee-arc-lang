@@ -253,7 +253,7 @@
     },
     "dcmDeleteMWLDelay": {
       "title": "削除 する MWL 遅延",
-      "description": "MWL アイテムを 削除 する ために ISO-8601 期間 PnDTnHnMnS 形式で 遅延。 ステータス 固有の 遅延は 接頭辞で 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:' 指定できます。 例 : PT5M または CANCELED: PT10M 。 存在しない 場合、 MWL アイテムは 削除されません。",
+      "description": "MWL アイテムを 削除 する ために ISO-8601 期間 PnDTnHnMnS 形式で 遅延, whose updated_time is older than the specified delay。 ステータス 固有の 遅延は 接頭辞で 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:' 指定できます。 例 : PT5M または CANCELED: PT10M 。 存在しない 場合、 MWL アイテムは 削除されません。",
       "type": "array",
       "items" : { "type": "string" }
     },

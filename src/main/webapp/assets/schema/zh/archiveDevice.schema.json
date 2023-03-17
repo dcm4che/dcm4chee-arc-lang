@@ -265,7 +265,7 @@
     },
     "dcmDeleteMWLDelay": {
       "title": "要删除的MWL延迟",
-      "description": "要删除MWL项的ISO-8601周期PnDTnHnMnS延迟。状态特定延迟可以是前缀SCHEDULED:,ARRIVED:,READY:,STARTED:,DEPARTED:,CANCELED:,DISCONTINUED:,COMPLETED:。例如:PT5M或CANCELED:PT10M。如果不存在,则不会删除MWL项目。",
+      "description": "要删除MWL项的ISO-8601周期PnDTnHnMnS延迟, whose updated_time is older than the specified delay。状态特定延迟可以是前缀SCHEDULED:,ARRIVED:,READY:,STARTED:,DEPARTED:,CANCELED:,DISCONTINUED:,COMPLETED:。例如:PT5M或CANCELED:PT10M。如果不存在,则不会删除MWL项目。",
       "type": "array",
       "items" : { "type": "string" }
     },
