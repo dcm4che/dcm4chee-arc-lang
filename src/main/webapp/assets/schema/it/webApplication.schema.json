@@ -89,7 +89,7 @@
     },
     "dcmProperty": {
       "title": "Proprietà",
-      "description": "Proprietà nel formato <name>=<value> Ad esempio: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} o IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType = STUDY &{{studyUID}}studyUID =, (Altri parametri validi sono: 'PatientBirthDate' e 'accessionNumber'), puoi definire il target dell'Url impostandolo sul parametro 'IID_URL_TARGET = _blank|_self'",
+      "description": "Proprietà nel formato {name}={value} Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties\" target=\"_blank\">Web Application Properties</a> configuration examples based on use cases.",
       "type": "array",
       "items": {
         "type": "string"

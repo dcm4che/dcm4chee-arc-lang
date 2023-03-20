@@ -89,7 +89,7 @@
     },
     "dcmProperty": {
       "title": "属性",
-      "description": "<name>=<value>格式的属性。 例如: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}}或者IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}},（其他有效参数为:'patientBirthDate'和'accessionNumber'）。可以通过设置参数‘ 'IID_URL_TARGET=_blank|_self'来定义URL的目标。",
+      "description": "{name}={value}格式的属性。 Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties\" target=\"_blank\">Web Application Properties</a> configuration examples based on use cases.",
       "type": "array",
       "items": {
         "type": "string"

@@ -89,7 +89,7 @@
     },
     "dcmProperty": {
       "title": "属性",
-      "description": "<name>=<value> 形式で 属性。 例: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} または IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}}, (他の 有効な パラメーターは: 'patientBirthDate' と 'accessionNumber') です。 パラメーター 'IID_URL_TARGET=_blank|_self' に 設定 する ことに より、 URLの ターゲットを 定義できます。",
+      "description": "{name}={value} 形式で 属性。 Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties\" target=\"_blank\">Web Application Properties</a> configuration examples based on use cases.",
       "type": "array",
       "items": {
         "type": "string"

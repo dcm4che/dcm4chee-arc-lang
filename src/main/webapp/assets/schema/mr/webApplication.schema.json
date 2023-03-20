@@ -89,7 +89,7 @@
     },
     "dcmProperty": {
       "title": "गुणधर्म",
-      "description": "गुणधर्म या प्रारूपात <नाव>=<मूल्य>. उदाहरण: roles=<accepted-user-role>[,...], IID_PATIENT_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=PATIENT&patientID={{patientID}} किंवा IID_STUDY_URL=http(s)://<viewer-host>:<viewer-port>/IHEInvokeImageDisplay?requestType=STUDY&studyUID={{studyUID}}, (इतर वैध मापदंड : 'patientBirthDate' आणि 'accessionNumber' आहेत), 'IID_URL_TARGET=_blank|_self' मापदंड लागू करून तुम्ही URL च्या लक्ष्यला परिभाषित करू शकता.",
+      "description": "गुणधर्म या प्रारूपात {नाव}={मूल्य}. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties\" target=\"_blank\">Web Application Properties</a> configuration examples based on use cases.",
       "type": "array",
       "items": {
         "type": "string"
