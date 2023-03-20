@@ -4,7 +4,7 @@
   "type": "object",
   "required": ["dicomDeviceName", "dicomInstalled"],
   "groups": {
-    "Manufactorer Information": [
+    "Manufacturer Information": [
       "dicomManufacturer",
       "dicomManufacturerModelName",
       "dicomSoftwareVersion",
@@ -191,49 +191,49 @@
     },
     "dicomIssuerOfPatientID": {
       "title": "患者ID发布者",
-      "description": "患者ID(0010,0021)发布者的默认值， 以及该设备创建或查询的SOP实例中的患者ID发布者序列（0010,0024）项中的通用实体ID（0040,0032）和通用实体ID类型（0040,0033）的默认值。格式为<Issuer of Patient ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "患者ID(0010,0021)发布者的默认值， 以及该设备创建或查询的SOP实例中的患者ID发布者序列（0010,0024）项中的通用实体ID（0040,0032）和通用实体ID类型（0040,0033）的默认值。格式为{Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
       "order":14
     },
     "dicomIssuerOfAccessionNumber": {
       "title": "AccessionNumber发布者",
-      "description": "本地名称空间实体ID（0040,0031）,通用实体ID（0040,0032）以及通用实体ID类型（0040,0033）在由此设备创建或查询的SOP实例中的AccessionNumber发布者序列（0008,0051）项中的默认值。格式:<Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "本地名称空间实体ID（0040,0031）,通用实体ID（0040,0032）以及通用实体ID类型（0040,0033）在由此设备创建或查询的SOP实例中的AccessionNumber发布者序列（0008,0051）项中的默认值。格式:{LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
       "order":15
     },
     "dicomOrderPlacerIdentifier": {
       "title": "订购播放器标识符",
-      "description": "订购播放器标识符序列（0040,0026）项目中本地命名空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）的缺省值。 格式:<Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "订购播放器标识符序列（0040,0026）项目中本地命名空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）的缺省值。 格式:{LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
       "order":16
     },
     "dicomOrderFillerIdentifier": {
       "title": "订单填充标识符",
-      "description": "在此设备创建或查询的SOP实例中,订单填充标识符序列（0040,0027）项中本地命名空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）的默认值。 格式:<Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "在此设备创建或查询的SOP实例中,订单填充标识符序列（0040,0027）项中本地命名空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）的默认值。 格式:{LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
       "order":17
     },
     "dicomIssuerOfAdmissionID": {
       "title": "许可ID的发布者",
-      "description": "本地命名空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）在此设备创建或查询的SOP实例中的许可编号的发布者序列（0038,0014）项中的默认值。 格式:<Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "本地命名空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）在此设备创建或查询的SOP实例中的许可编号的发布者序列（0038,0014）项中的默认值。 格式:{LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
       "order":18
     },
     "dicomIssuerOfServiceEpisodeID": {
       "title": "服务剧集ID发布者",
-      "description": "本地名称空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）在此设备创建或查询的SOP实例中的服务剧集ID发布者序列（0038,0064）项中的默认值。 格式:<Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "本地名称空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）在此设备创建或查询的SOP实例中的服务剧集ID发布者序列（0038,0064）项中的默认值。 格式:{LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
       "order":19
     },
     "dicomIssuerOfContainerIdentifier": {
       "title": "容器标识符发布者",
-      "description": "在此设备创建或查询的SOP实例中,容器标识符发布者序列（0040,0513）项中本地命名空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）的默认值。 格式:<Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "在此设备创建或查询的SOP实例中,容器标识符发布者序列（0040,0513）项中本地命名空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）的默认值。 格式:{LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
       "order":20
     },
     "dicomIssuerOfSpecimenIdentifier": {
       "title": "样本标识符发布者",
-      "description": "在此设备创建或查询的SOP实例中,样本标识符发布者序列（0040,0562）项中的本地命名空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）的默认值。 格式: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "在此设备创建或查询的SOP实例中,样本标识符发布者序列（0040,0562）项中的本地命名空间实体ID（0040,0031）、通用实体ID（0040,0032）和通用实体ID类型（0040,0033）的默认值。 格式: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
       "order":21
     },
