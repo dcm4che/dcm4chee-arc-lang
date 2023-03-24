@@ -645,6 +645,7 @@
     "including_dicomdir": "DICOMDIRを 含める",
     "index": "インデックス",
     "info": "情報",
+    "info_link": "More Info",
     "inherit": "継承 する",
     "inner_text.of_matching_studies": "一致する 検査の",
     "inner_text.of_the_study": "検査の",

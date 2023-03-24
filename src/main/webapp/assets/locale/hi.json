@@ -645,6 +645,7 @@
     "including_dicomdir": "डाइकोम डायरेक्टरी (DICOMDIR) समावेश करें",
     "index": "विषय सूची",
     "info": "जानकारी",
+    "info_link": "More Info",
     "inherit": "प्राप्त करें",
     "inner_text.of_matching_studies": "मिलान स्टडीज के",
     "inner_text.of_the_study": " स्टडी का",

@@ -636,6 +636,7 @@
     "including_dicomdir": "包含DICOMDIR",
     "index": "索引",
     "info": "信息",
+    "info_link": "More Info",
     "inherit": "继承",
     "inner_text.of_matching_studies": "匹配检查",
     "inner_text.of_the_study": " 检查的",

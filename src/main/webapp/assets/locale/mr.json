@@ -645,6 +645,7 @@
     "including_dicomdir": "डाइकोम मार्गदर्शिका (DICOMDIR) समाविष्ट करा",
     "index": "अनुक्रम",
     "info": "माहिती",
+    "info_link": "More Info",
     "inherit": "वारसा",
     "inner_text.of_matching_studies": "जुळणार्‍या अभ्यासाचे",
     "inner_text.of_the_study": "अभ्यासाचा",

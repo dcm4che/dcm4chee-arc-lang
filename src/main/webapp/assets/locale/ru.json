@@ -647,6 +647,7 @@
     "including_dicomdir" : "Добавить DICOMDIR",
     "index" : "Индекс",
     "info" : "информация",
+    "info_link" : "More Info",
     "inherit" : "наследовать",
     "inner_text.of_matching_studies" : "соответствующих исследований",
     "inner_text.of_the_study" : " исследования",

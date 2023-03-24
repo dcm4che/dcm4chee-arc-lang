@@ -645,6 +645,7 @@
     "including_dicomdir": "Include DICOMDIR",
     "index": "Index",
     "info": "Info",
+    "info_link": "More Info",
     "inherit": "inherit",
     "inner_text.of_matching_studies": "of matching studies",
     "inner_text.of_the_study": " of the study",
