@@ -1589,6 +1589,7 @@
     "study_access": "Study Access",
     "study_created_date": "Study Created Date",
     "study_date": "Study date",
+    "study_desc": "Study Desc",
     "study_description": "Study Description",
     "study_error_on_opening_viewer": "Something went wrong while opening the Viewer open the inspect to see more details",
     "study_exported_successfully": "Study exported successfully!",

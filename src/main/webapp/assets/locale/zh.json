@@ -1532,6 +1532,7 @@
     "study_access": "检查访问",
     "study_created_date": "检查创建日期",
     "study_date": "检验日期",
+    "study_desc": "Study Desc",
     "study_description": "检查描述",
     "study_error_on_opening_viewer": "打开查看器时出现问题，打开监视查看详细信息",
     "study_exported_successfully": "检查已成功导出！",

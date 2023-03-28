@@ -1585,6 +1585,7 @@
     "study_access": "検査 アクセス",
     "study_created_date": "日付に 作成した 検査",
     "study_date": "検査 日付",
+    "study_desc": "Study Desc",
     "study_description": "検査 説明",
     "study_error_on_opening_viewer": "ビューアを 開いて いるときに 問題が 発生しました。 インスペクトを 開いて 詳細を 見る",
     "study_exported_successfully": "検査は 正常に 書き出しました!",

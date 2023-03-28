@@ -1585,6 +1585,7 @@
     "study_access": "Studienzugriff",
     "study_created_date": "Studienerstellungsdatum",
     "study_date": "Studiendatum",
+    "study_desc": "Study Desc",
     "study_description": "Studienbeschreibung",
     "study_error_on_opening_viewer": "Something went wrong while opening the Viewer open the inspect to see more details",
     "study_exported_successfully": "Studie erfogreich exportiert!",

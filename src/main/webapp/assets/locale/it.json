@@ -1585,6 +1585,7 @@
 		"study_access": "Accesso allo studio",
 		"study_created_date": "Data di creazione dello studio",
 		"study_date": "Data dello studio",
+		"study_desc": "Study Desc",
 		"study_description": "Descrizione dello studio",
 		"study_error_on_opening_viewer": "Qualcosa è andato storto durante l'apertura del visualizzatore, apri l'ispezione per vedere maggiori dettagli",
 		"study_exported_successfully": "Studio esportato con successo!",
