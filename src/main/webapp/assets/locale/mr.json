@@ -1528,6 +1528,8 @@
     "study.reject_object": "निवडलेला अभ्यास, मालिका किंवा दृष्टांते नाकारा",
     "study.reject_series": "मालिका नाकारा",
     "study.reject_study": "अभ्यास नाकारा",
+    "study.requested_procedure_desc": "Requested Procedure Desc",
+    "study.requested_procedure_description": "Requested Procedure Description",
     "study.requested_procedure_id": "विनंती केलेला प्रक्रियाची ID",
     "study.restore_instance": "दृष्टांत पुनर्संचयित करा",
     "study.restore_object": "निवडलेले अभ्यास, मालिका किंवा दृष्टांते पुनर्संचयित करा",

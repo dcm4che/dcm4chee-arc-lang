@@ -1528,6 +1528,8 @@
 		"study.reject_object": "Rifiuta studi, serie o istanze selezionati",
 		"study.reject_series": "Rifiuta serie",
 		"study.reject_study": "Rifiuta studio",
+		"study.requested_procedure_desc": "Requested Procedure Desc",
+		"study.requested_procedure_description": "Requested Procedure Description",
 		"study.requested_procedure_id": "ID procedura richiesta",
 		"study.restore_instance": "Ripristina istanza",
 		"study.restore_object": "Ripristina studi, serie o istanze selezionati",

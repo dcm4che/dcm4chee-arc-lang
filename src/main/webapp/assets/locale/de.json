@@ -1528,6 +1528,8 @@
     "study.reject_object": "Ausgewählte Studien, Serien oder Instanzen ablehnen",
     "study.reject_series": "Serie ablehnen",
     "study.reject_study": "Studie ablehnen",
+    "study.requested_procedure_desc": "Requested Procedure Desc",
+    "study.requested_procedure_description": "Requested Procedure Description",
     "study.requested_procedure_id": "Requested Procedure ID",
     "study.restore_instance": "Instanz wiederherstellen",
     "study.restore_object": "Ausgewählte Studien, Serien oder Instanzen wiederherstellen",

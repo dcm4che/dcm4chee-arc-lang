@@ -1528,6 +1528,8 @@
     "study.reject_object": "選択した 検査、 シリーズ または インスタンスを 拒否 する",
     "study.reject_series": "シリーズを 拒否する",
     "study.reject_study": "検査を 拒否する",
+    "study.requested_procedure_desc": "Requested Procedure Desc",
+    "study.requested_procedure_description": "Requested Procedure Description",
     "study.requested_procedure_id": "要求された 手順 ID",
     "study.restore_instance": "インスタンスを 復元する",
     "study.restore_object": "選択した 検査、 シリーズ または インスタンスを 復元 する",

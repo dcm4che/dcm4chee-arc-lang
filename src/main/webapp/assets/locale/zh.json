@@ -1475,6 +1475,8 @@
     "study.reject_object": "拒绝选定的验证、系列或实例",
     "study.reject_series": "拒绝系列",
     "study.reject_study": "拒绝检查",
+    "study.requested_procedure_desc": "Requested Procedure Desc",
+    "study.requested_procedure_description": "Requested Procedure Description",
     "study.requested_procedure_id": "请求的程序ID",
     "study.restore_instance": "恢复实例",
     "study.restore_object": "恢复选定的检查、系列或实例",

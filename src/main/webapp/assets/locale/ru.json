@@ -1529,6 +1529,8 @@
     "study.reject_object" : "Отклонить соответствующие исследования, серии или объекты",
     "study.reject_series" : "Отклонить серию",
     "study.reject_study" : "Отклонить исследование",
+    "study.requested_procedure_desc": "Requested Procedure Desc",
+    "study.requested_procedure_description": "Requested Procedure Description",
     "study.requested_procedure_id" : "ID Запрошенной Процедуры",
     "study.restore_instance" : "Восстановить Объект",
     "study.restore_object" : "Восстановить выбранные исследования, серии или объекты",

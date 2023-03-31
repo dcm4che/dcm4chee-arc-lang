@@ -1532,6 +1532,8 @@
     "study.reject_object": "Reject selected studies, series or instances",
     "study.reject_series": "Reject series",
     "study.reject_study": "Reject study",
+    "study.requested_procedure_desc": "Requested Procedure Desc",
+    "study.requested_procedure_description": "Requested Procedure Description",
     "study.requested_procedure_id": "Requested Procedure ID",
     "study.restore_instance": "Restore instance",
     "study.restore_object": "Restore selected studies, series or instances",

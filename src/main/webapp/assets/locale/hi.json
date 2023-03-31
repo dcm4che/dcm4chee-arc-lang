@@ -1527,6 +1527,8 @@
     "study.reject_object": "चुने गए स्टडीज, सीरीज या दृष्टांतों को मिटाये",
     "study.reject_series": "सीरीज को मिटाये",
     "study.reject_study": "स्टडी को मिटाये",
+    "study.requested_procedure_desc": "Requested Procedure Desc",
+    "study.requested_procedure_description": "Requested Procedure Description",
     "study.requested_procedure_id": "अनुरोध की गई प्रक्रिया की ID",
     "study.restore_instance": "दृष्टांत पुनःस्थापित करें ।",
     "study.restore_object": "चुने गए स्टडीज, सीरीज या दृष्टांत पुनःस्थापित करें ।",
