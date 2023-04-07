@@ -12,12 +12,6 @@
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
-    "dcmDestinationAE": {
-      "title": "Destination MWL SCP",
-      "description": "AE Title of local MWL SCP fed/updated by HL7v2 Order message received by this HL7 Receiver. If no AE Title is specified, the created MWL item will be provided by all configured MWL SCPs of the archive.",
-      "type": "string",
-      "format": "dcmArchiveAETitle"
-    },
     "dcmRecordAttributeModification": {
       "title": "记录属性更改",
       "description": "是否将此HL7应用程序存储的对象的属性更改记录到原始属性序列项中。 覆盖在设备级别指定的值。",
@@ -179,6 +173,15 @@
       "description": "AE Title of external C-FIND SCP to query for missing Study Instance UID in incoming HL7 Import Report (ORU) messages by given Accession Number. Overwrites value specified on Device level.",
       "type": "string",
       "format": "dcmAETitle"
+    },
+    "hl7ImportReportAdjustIUID": {
+      "title": "HL7 Import Report Adjust Instance UID",
+      "description": "Specifies adjustment of Series and SOP Instances UIDs returned by XSLT on incoming HL7 Import Report (ORU) messages. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "NONE",
+        "APPEND_HASH_OF_STUDY_INSTANCE_UID"
+      ]
     },
     "hl7ReferredMergedPatientPolicy": {
       "title": "HL7引用的合并患者策略",

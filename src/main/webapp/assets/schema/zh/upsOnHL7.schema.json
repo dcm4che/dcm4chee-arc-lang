@@ -170,7 +170,7 @@
       "type": "string"
     },
     "dicomIssuerOfAccessionNumber": {
-      "title":  "注册号的发布者",
+      "title": "注册号的发布者",
       "description": "在创建的UPS中的引用请求序列（0040,A370）的项目中本地命名空间实体ID(0040,0031)，通用实体的ID (0040,0032)以及通用实体ID类型(0040,0033)的值。格式: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
       "type": "string"
     },

@@ -97,8 +97,8 @@
     "dcmMWLScheduledProcedureStepIDGenerator",
     "dcmAuditHL7MsgLimit",
     "dcmMatchSOPClassOnInstanceLevel",
-    "dcmUPSUpdateWithoutTransactionUID",
     "dcmKeyValueRetentionFetchSize",
+    "dcmUPSUpdateWithoutTransactionUID",
     "hl7PSUForRequestedProcedure",
     "hl7PSUTemplateParam",
     "hl7PSUMWL",
@@ -114,6 +114,7 @@
     "hl7OrderMissingAdmissionIDPolicy",
     "hl7ImportReportMissingStudyIUIDPolicy",
     "hl7ImportReportMissingAdmissionIDPolicy",
+    "hl7ImportReportAdjustIUID",
     "hl7ReferredMergedPatientPolicy"
   ],
   "properties": {
@@ -1695,6 +1696,16 @@
       "description": "AE Title of external C-FIND SCP to query for missing Study Instance UID in incoming HL7 Import Report (ORU) messages by given Accession Number. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string",
       "format": "dcmAETitle"
+    },
+    "hl7ImportReportAdjustIUID": {
+      "title": "HL7 Import Report Adjust Instance UID",
+      "description": "Specifies adjustment of Series and SOP Instances UIDs returned by XSLT on incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string",
+      "default": "NONE",
+      "enum": [
+        "NONE",
+        "APPEND_HASH_OF_STUDY_INSTANCE_UID"
+      ]
     },
     "hl7ReferredMergedPatientPolicy": {
       "title": "HL7 Referred Merged Patient Policy",

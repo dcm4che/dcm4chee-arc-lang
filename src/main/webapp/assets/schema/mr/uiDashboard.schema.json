@@ -13,8 +13,8 @@
       "type": "string"
     },
     "dcmuiShowStarBlock":{
-      "title": "स्टार ब्लॉक दर्शवा",
-      "description": "स्टार ब्लॉक दर्शवा - परिभाषित डिव्हाइसनावाशिवाय कार्यांसाठी.",
+      "title": "Show Star Block",
+      "description": "Show Star Block - tasks without defined deviceName",
       "type": "boolean",
       "default" : true
     },

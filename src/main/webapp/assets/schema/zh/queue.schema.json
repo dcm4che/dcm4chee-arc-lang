@@ -21,11 +21,6 @@
         "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiCompareSideObjects[*].dcmuiCompareSideQueueName"
       ]
     },
-    "dicomDescription": {
-      "title": "DICOM描述",
-      "description": "DICOM实体的文本描述",
-      "type": "string"
-    },
     "dicomInstalled": {
       "title": "installed",
       "description": "If false, processing of tasks in this queue is paused.",
@@ -38,6 +33,11 @@
       "type": "integer",
       "minimum": 1,
       "default": 1
+    },
+    "dicomDescription": {
+      "title": "DICOM描述",
+      "description": "DICOM实体的文本描述",
+      "type": "string"
     },
     "dcmMaxRetries": {
       "title": "最大重试次数",

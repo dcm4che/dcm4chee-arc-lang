@@ -1,6 +1,6 @@
 {
   "title": "通过存储创建的UPS",
-  "description":  "在接收复合对象时,集成工作列表中创建或更新工作项。",
+  "description": "在接收复合对象时,集成工作列表中创建或更新工作项。",
   "type": "object",
   "required": [
     "dcmUPSOnStoreID",

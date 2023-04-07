@@ -8,6 +8,8 @@
     "dcmUPSPriority",
     "dcmUPSInputReadinessState",
     "dcmUPSIncludeStudyInstanceUID",
+    "dcmUPSIncludeInputInformation",
+    "dcmUPSIncludePatient",
     "dcmUPSIncludeReferencedRequest",
     "dcmNoKeywords"
   ],
@@ -77,6 +79,28 @@
       "description": "प्राप्त समय से निर्माण किए गए UPS में अपेक्षित समाप्ति तारीख समय (००४०,४०११) का विलम्ब, इस प्रारूप में PnDTnHnMn.nS । यदि निर्दिष्ट नहीं किया गया है, तो कोई अपेक्षित समाप्ति तारीख समय लागू नहीं होगा ।",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmUPSInstanceUIDBasedOnName": {
+      "title": "UPS Instance UID based on name",
+      "description": "Value to generate name based SOP Instance UID (0008,0018) in created UPS. If absent, a random generated SOP Instance UID (0008,0018) will be used.",
+      "type": "string"
+    },
+    "dcmUPSIncludeInputInformation": {
+      "title": "Include Input Information",
+      "description": "Indicates if the Input Information Sequence (0040,4021) or/and the Output Information Sequence (0040,4033) in the Unified Procedure Step Performed Procedure Sequence (0074,1216) of the previous UPS is included in Input Information Sequence (0040,4021) of the in created UPS.",
+      "type": "string",
+      "default": "COPY_OUTPUT",
+      "enum": [
+        "NO",
+        "COPY_INPUT",
+        "COPY_OUTPUT"
+      ]
+    },
+    "dcmUPSIncludePatient": {
+      "title": "UPS Include Patient",
+      "description": "Indicates if patient attributes are copied from the previous UPS.",
+      "type": "boolean",
+      "default": true
     },
     "dcmDestinationAE": {
       "title": "गंतव्य AE",
@@ -162,36 +186,6 @@
       "description": "निर्माण किए गए UPS के संदर्भित अनुरोध क्रम (००४०,ए३७०) के आइटम में पिछले UPS रेकॉर्ड के स्टडी दृष्टांत UID (००२०,०००डी) और निर्दिष्ट परिग्रहण संख्या (०००८,००५०), अनुरोध की गई प्रक्रिया की ID (००४०,१००१) और अनुरोध करनेवाला सेवा (००३२,१०३३) को समावेश करने का संकेत करता है । यदि निर्दिष्ट नहीं किया गया है, तो खाली संदर्भित अनुरोध क्रम (००४०,ए३७०) को समावेश किया जाएगा ।",
       "type": "boolean",
       "default": false
-    },
-    "dcmAccessionNumber": {
-      "title": "परिग्रहण संख्या",
-      "description": "निर्माण किए गए UPS के संदर्भित अनुरोध क्रम (००४०,ए३७०) के आइटम में परिग्रहण संख्या (०००८,००५०) का मूल्य । पिछले UPS रेकॉर्ड के डेटासेट में {attributeID} गुण के मूल्य के साथ बदला जाएगा । उदाहरण के तौर पे : {AccessionNumber} ।",
-      "type": "string"
-    },
-    "dicomIssuerOfAccessionNumber": {
-      "title": "परिग्रहण संख्या का जारीकर्ता",
-      "description": "निर्माण किए गए UPS के संदर्भित अनुरोध क्रम (००४०,ए३७०) के आइटम में परिग्रहण संख्या क्रम का जारीकर्ता (०००८,००५१) के आइटम में स्थानीय नेमस्पेस एंटिटी ID (००४०,००३१), यूनिवर्सल एंटिटी ID (००४०,००३२) और यूनिवर्सल एंटिटी ID प्रकार (००४०,००३३) के मूल्य, इस प्रारूप में : <मरीज़़ की ID का जारीकर्ता> [& <यूनिवर्सल एंटिटी ID> & <यूनिवर्सल एंटिटी ID प्रकार>] ।",
-      "type": "string"
-    },
-    "dcmRequestedProcedureID": {
-      "title": "अनुरोध की गई प्रक्रिया की ID",
-      "description": "निर्माण किए गए UPS के संदर्भित अनुरोध क्रम (००४०,ए३७०) के आइटम में अनुरोध की गई प्रक्रिया की ID (००४०,१००१) का मूल्य । पिछले UPS रेकॉर्ड के डेटासेट में {attributeID} गुण के मूल्य के साथ बदला जाएगा । उदाहरण के तौर पे : {StudyID} ।",
-      "type": "string"
-    },
-    "dcmRequestedProcedureDescription": {
-      "title": "अनुरोध की गई प्रक्रिया का वर्णन",
-      "description": "निर्माण किए गए UPS के संदर्भित अनुरोध क्रम (००४०,ए३७०) के आइटम में अनुरोध की गई प्रक्रिया के वर्णन (००३२,१०६०) का मूल्य । पिछले UPS रेकॉर्ड के डेटासेट में {attributeID} गुण के मूल्य के साथ बदला जाएगा । उदाहरण के तौर पे : {StudyDescription} ।",
-      "type": "string"
-    },
-    "dcmRequestingPhysician": {
-      "title": "अनुरोध करनेवाला चिकित्सक",
-      "description": "निर्माण किए गए UPS के संदर्भित अनुरोध क्रम (००४०,ए३७०) के आइटम में अनुरोध करनेवाला चिकित्सक (००३२,१०३२) का मूल्य । पिछले UPS रेकॉर्ड के डेटासेट में {attributeID} गुण के मूल्य के साथ बदला जाएगा । उदाहरण के तौर पे : {PerformingPhysicianName} ।",
-      "type": "string"
-    },
-    "dcmRequestingService": {
-      "title": "अनुरोध करनेवाला सेवा",
-      "description": "निर्माण किए गए UPS के संदर्भित अनुरोध क्रम (००४०,ए३७०) के आइटम में अनुरोध करनेवाला सेवा (००३२,१०३३) का मूल्य । पिछले UPS रेकॉर्ड के डेटासेट में {attributeID} गुण के मूल्य के साथ बदला जाएगा । उदाहरण के तौर पे : {StudyDescription} ।",
-      "type": "string"
     },
     "dcmURI": {
       "title": "XSL स्टाइलशीट URI",

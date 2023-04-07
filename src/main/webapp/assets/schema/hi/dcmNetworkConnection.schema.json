@@ -14,7 +14,8 @@
     "dcmMaxOpsPerformed",
     "dcmMaxOpsInvoked",
     "dcmPackPDV",
-    "dcmRetrieveTimeoutTotal"
+    "dcmRetrieveTimeoutTotal",
+    "dcmAATimeout"
   ],
   "properties": {
     "dcmProtocol": {
@@ -58,40 +59,46 @@
         ]
       }
     },
+    "dcmTLSEndpointIdentificationAlgorithm": {
+      "title": "TLS Endpoint Identification Algorithm",
+      "description": "Indicates the endpoint identification or verification procedures during TLS handshaking.",
+      "type": "string",
+      "enum": [ "HTTPS", "LDAPS"]
+    },
     "dcmTCPBacklog": {
-      "title": " TCP बैकलॉग",
+      "title": "TCP बैकलॉग",
       "description": "आनेवाले  TCP संपर्कों के लिए अधिकतम कतार की लम्बाई ।",
       "type": "integer",
       "default": 50,
       "minimum": 1
     },
     "dcmTCPConnectTimeout": {
-      "title": " TCP संपर्क समय",
+      "title": "TCP संपर्क समय",
       "description": "मिलीसेकण्डों में  TCP संपर्क समय; निर्दिष्ट नहीं किया है, तो कोई समय लागू नहीं होगा ।",
       "type": "integer",
       "minimum": 100
     },
     "dcmTCPCloseDelay": {
-      "title": " TCP बंद करने का विलम्ब",
+      "title": "TCP बंद करने का विलम्ब",
       "description": "A-ASSOCIATE-RJ, A-RELEASE-RP या A-ABORT PDU को भेजने के बाद  TCP सॉकेट को बंद करने के लिए मिलीसेकण्डों में विलम्ब ।",
       "type": "integer",
       "default": 50,
       "minimum": 0
     },
     "dcmTCPSendBufferSize": {
-      "title": " TCP भेजे गए बफर का माप",
+      "title": "TCP भेजे गए बफर का माप",
       "description": " TCP भेजे गए बफर का माप; यदि निर्दिष्ट नहीं किया है, तो सिस्टम डिफॉल्ट्स का उपयोग करें ।",
       "type": "integer",
       "minimum": 1024
     },
     "dcmTCPReceiveBufferSize": {
-      "title": " TCP बफर प्राप्ति का माप",
+      "title": "TCP बफर प्राप्ति का माप",
       "description": " TCP बफर प्राप्ति का माप; यदि निर्दिष्ट नहीं किया है, तो सिस्टम डिफॉल्ट्स का उपयोग करें ।",
       "type": "integer",
       "minimum": 1024
     },
     "dcmTCPNoDelay": {
-      "title": " TCP विलम्ब नहीं",
+      "title": "TCP विलम्ब नहीं",
       "description": " TCP विलम्ब नहीं को सक्षम या असक्षम करें (Nagle अल्गोरिथम को सक्षम या असक्षम करें ) ।",
       "type": "boolean",
       "default": true
@@ -201,6 +208,13 @@
       "description": "निर्दिष्ट समय (मिलीसेकण्डों में) के बाद निष्क्रिय संपर्कों को बंद करने संकेत करता है; निर्दिष्ट नहीं किया है, तो कोई समय लागू नहीं होगा ।",
       "type": "integer",
       "minimum": 100
+    },
+    "dcmAATimeout": {
+      "title": "A-ABORT Timeout",
+      "description": "Timeout in ms for waiting for finishing sending any DIMSE before sending an A-ABORT PDU, triggered by the application or by expiration of a configured other timeout of this Connection. If the timeout expires, the TCP connection will be closed without sending the A-ABORT.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 1000
     }
   }
 }

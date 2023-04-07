@@ -6,7 +6,6 @@
     "dcmMWLImportID",
     "dicomAETitle",
     "dcmMergeMWLSCP",
-    "dcmDestinationAE",
     "dcmMWLImportFilterBySCU",
     "dcmMWLImportDeleteNotFound"
   ],
@@ -28,11 +27,10 @@
       "type": "string",
       "format": "dcmAETitle"
     },
-    "dcmDestinationAE": {
-      "title": "宛先 MWL SCP",
-      "description": "外部 MWL SCPに よって 返される 予定された 手順 ステップに よって 供給 / 更新された ローカル MWL SCPの AE タイトル。",
-      "type": "string",
-      "format": "dcmArchiveAETitle"
+    "dcmMWLWorklistLabel": {
+      "title": "MWL Worklist Label",
+      "description": "Value of Worklist Label (0074,1202) of imported MWL items fetched from Source MWL SCP. If absent, imported MWL items are provided by all MWL SCP Archive Network AEs.",
+      "type": "string"
     },
     "dcmDuration": {
       "title": "以前に インポート しない",

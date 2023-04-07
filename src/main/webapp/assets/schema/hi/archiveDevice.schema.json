@@ -4,6 +4,7 @@
   "type": "object",
   "required": [
     "dcmFuzzyAlgorithmClass",
+    "dcmStoreImplementationVersionName",
     "dcmCalculateStudySizeFetchSize",
     "dcmCalculateQueryAttributes",
     "dcmSeriesMetadataFetchSize",
@@ -35,8 +36,6 @@
     "dcmFallbackWadoURIHttpStatusCode",
     "dcmTaskFetchSize",
     "dcmUPSProcessingFetchSize",
-    "dcmExportTaskFetchSize",
-    "dcmRetrieveTaskFetchSize",
     "dcmRetrieveTaskWarningOnNoMatch",
     "dcmRetrieveTaskWarningOnWarnings",
     "dcmPurgeStorageFetchSize",
@@ -76,6 +75,7 @@
     "dcmPatientVerificationMaxRetries",
     "dcmQueueTasksFetchSize",
     "dcmSupplementIssuerFetchSize",
+    "dcmUpdateCharsetFetchSize",
     "dcmCopyMoveUpdatePolicy",
     "dcmLinkMWLEntryUpdatePolicy",
     "dcmCSVUploadChunkSize",
@@ -97,8 +97,8 @@
     "dcmMWLScheduledProcedureStepIDGenerator",
     "dcmAuditHL7MsgLimit",
     "dcmMatchSOPClassOnInstanceLevel",
-    "dcmUPSUpdateWithoutTransactionUID",
     "dcmKeyValueRetentionFetchSize",
+    "dcmUPSUpdateWithoutTransactionUID",
     "hl7PSUForRequestedProcedure",
     "hl7PSUTemplateParam",
     "hl7PSUMWL",
@@ -114,6 +114,7 @@
     "hl7OrderMissingAdmissionIDPolicy",
     "hl7ImportReportMissingStudyIUIDPolicy",
     "hl7ImportReportMissingAdmissionIDPolicy",
+    "hl7ImportReportAdjustIUID",
     "hl7ReferredMergedPatientPolicy"
   ],
   "properties": {
@@ -129,6 +130,12 @@
       "org.dcm4che3.soundex.KPhonetik",
       "org.dcm4che3.soundex.Phonem"
       ]
+    },
+    "dcmStoreImplementationVersionName": {
+      "title": "Store Implementation Version Name",
+      "description": "Indicates to include Implementation Version Name (0002,0012) in the File Meta Information of stored DICOM objects.",
+      "type": "boolean",
+      "default" : true
     },
     "dcmBulkDataDescriptorID": {
       "title": "अधिकांश डेटा वर्णनकर्ता की ID",
@@ -251,6 +258,12 @@
       "default" : 100,
       "minimum": 0,
       "exclusiveMinimum": true
+    },
+    "dcmMWLImportInterval": {
+      "title": "MWL Import Interval",
+      "description": "Interval for import of Scheduled Procedure Steps from external MWL SCPs in ISO-8601 duration format PnDTnHnMn.nS; disabled if absent.",
+      "type": "string",
+      "format": "dcmDuration"
     },
     "dcmDeleteMWLDelay": {
       "title": "MWL को मिटाने का विलम्ब",
@@ -655,6 +668,20 @@
       },
       "format": "dcmProperty"
     },
+    "dcmTaskPollingInterval": {
+      "title": "Task Polling Interval",
+      "description": "Polling Interval for scheduled Tasks in ISO-8601 duration format PnDTnHnMnS. If absent, Tasks will not get processed.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmTaskFetchSize": {
+      "title": "Task Fetch Size",
+      "description": "Limit result set of DB query for scheduled Tasks.",
+      "type": "integer",
+      "default": 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
     "dcmUPSProcessingPollingInterval": {
       "title": "UPS प्रसंस्करण पोलिंग अंतराल",
       "description": "प्रसंस्करण के लिए तैयार वर्क आइटम्स का ISO-8601 कालावधि प्रारूप PnDTnHnMnS में पोलिंग अंतराल ।",
@@ -664,34 +691,6 @@
     "dcmUPSProcessingFetchSize": {
       "title": "UPS प्रसंस्करण प्राप्ति का माप",
       "description": "प्रसंस्करण के लिए तैयार वर्क आइटम्स का डेटाबेस से प्राप्ति के नतीजों के सेट की सीमा ।",
-      "type": "integer",
-      "default": 100,
-      "minimum": 0,
-      "exclusiveMinimum": true
-    },
-    "dcmExportTaskPollingInterval": {
-      "title": "निर्यात कार्य पोलिंग अंतराल",
-      "description": "ISO-8601 कालावधि प्रारूप PnDTnHnMnS में निर्यात कार्य पोलिंग अंतराल ।",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "dcmExportTaskFetchSize": {
-      "title": "निर्यात कार्य प्राप्ति का माप",
-      "description": "प्रसंस्करण के लिए तैयार निर्यात कार्यों का डेटाबेस से प्राप्ति के नतीजों के सेट की सीमा ।",
-      "type": "integer",
-      "default": 100,
-      "minimum": 0,
-      "exclusiveMinimum": true
-    },
-    "dcmRetrieveTaskPollingInterval": {
-      "title": "पुनःप्राप्ति कार्य पोलिंग अंतराल",
-      "description": "ISO-8601 कालावधि प्रारूप PnDTnHnMnS में पुनःप्राप्ति कार्य पोलिंग अंतराल ।",
-      "type": "string",
-      "format": "dcmDuration"
-    },
-    "dcmRetrieveTaskFetchSize": {
-      "title": "पुनःप्राप्ति कार्य प्राप्ति का माप",
-      "description": "प्रसंस्करण के लिए तैयार पुनःप्राप्ति कार्यों का डेटाबेस से प्राप्ति के नतीजों के सेट की सीमा ।",
       "type": "integer",
       "default": 100,
       "minimum": 0,
@@ -1500,6 +1499,13 @@
       "default": 100,
       "minimum": 1
     },
+    "dcmUpdateCharsetFetchSize": {
+      "title": "Update Charset Fetch Size",
+      "description": "Limit result set of DB query for matching Patients by RESTful service to update the character set of Patient Attributes in DB BLOB fields.",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1
+    },
     "hl7ADTSendingApplication": {
       "title": "HL7 ADT भेजनेवाला अनुप्रयोग",
       "description": "पूरे की गए मरीज़ के जानकारी के अपडेट को HL7 ADT संदेशों से बाहरी सिस्टम्स को सूचित करनेवाले भेजनेवाला अनुप्रयोग के अनुप्रयोग और सुविधा का नाम । यदि कॉन्फ़िगर न किया हो तो, बाहरी सिस्टम्स को HL7 ADT संदेशों से सूचित नहीं किया जाएगा ।",
@@ -1683,6 +1689,22 @@
         "ACCEPT",
         "REJECT",
         "ACCESSION_AS_ADMISSION"
+      ]
+    },
+    "hl7ImportReportMissingStudyIUIDCFindSCP": {
+      "title": "HL7 Import Report Missing Study Instance UID C-FIND SCP",
+      "description": "AE Title of external C-FIND SCP to query for missing Study Instance UID in incoming HL7 Import Report (ORU) messages by given Accession Number. May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "hl7ImportReportAdjustIUID": {
+      "title": "HL7 Import Report Adjust Instance UID",
+      "description": "Specifies adjustment of Series and SOP Instances UIDs returned by XSLT on incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string",
+      "default": "NONE",
+      "enum": [
+        "NONE",
+        "APPEND_HASH_OF_STUDY_INSTANCE_UID"
       ]
     },
     "hl7ReferredMergedPatientPolicy": {
@@ -1967,6 +1989,15 @@
         "$ref": "archiveAttributeCoercion.schema.json"
       }
     },
+    "dcmArchiveAttributeCoercion2": {
+      "title": "Attribute Coercion (New)",
+      "description": "Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "archiveAttributeCoercion2.schema.json"
+      }
+    },
     "dcmRejectionNote": {
       "title": "अस्वीकृति नोट",
       "description": "अस्वीकृति नोट के सहेजने पे बर्ताव निर्दिष्ट करता है ।",
@@ -2037,6 +2068,15 @@
       "titleKey":"{dcmIDGeneratorName}",
       "items" : {
         "$ref": "idGenerator.schema.json"
+      }
+    },
+    "dcmMWLImport": {
+      "title": "MWL Import",
+      "description": "MWL Import",
+      "type": "array",
+      "titleKey":"{dcmMWLImportID}",
+      "items" : {
+        "$ref": "mwlImport.schema.json"
       }
     },
     "dcmMWLIdleTimeout": {

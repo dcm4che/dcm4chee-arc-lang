@@ -435,6 +435,14 @@
         "ONLY_EXPIRED"
       ]
     },
+    "dcmAcceptedUserRole": {
+      "title": "Accepted User Role",
+      "description": "Roles of users from which web requests are accepted; any if absent.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "dcmAllowDeleteStudyPermanently": {
       "title": "Consenti eliminazione studio in modo permanente",
       "description": "Consenti di eliminare lo studio in modo permanente. REJECTED = solo studi già rifiutati. Sovrascrive i valori specificati a livello del dispositivo.",
@@ -443,14 +451,6 @@
         "ALWAYS",
         "REJECTED"
       ]
-    },
-    "dcmAcceptedUserRole": {
-      "title": "Accepted User Role",
-      "description": "Roles of users from which web requests are accepted; any if absent.",
-      "type": "array",
-      "items" : {
-        "type": "string"
-      }
     },
     "dcmAllowDeletePatient": {
       "title": "Consenti eliminazione paziente",
@@ -467,6 +467,11 @@
       "description": "Valore del set di caratteri specifico (0008,0005) aggiunto ai set di dati di C-STORE RQ e RSP C-FIND in attesa, senza Set di attributi di caratteri specifici (0008,0005) ricevuti da qualsiasi AE. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "string",
       "format": "dcmCharset"
+    },
+    "dcmMWLWorklistLabel": {
+      "title": "MWL Worklist Label",
+      "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages by the HL7 Receiver associated with this Archive AE. If absent, created MWL items are not bound to a particular MWL SCP.",
+      "type": "string"
     },
     "dcmUPSWorklistLabel": {
       "title": "Etichetta UPS Worklist",
@@ -805,6 +810,15 @@
       "titleKey":"{cn}",
       "items" : {
         "$ref": "archiveAttributeCoercion.schema.json"
+      }
+    },
+    "dcmArchiveAttributeCoercion2": {
+      "title": "Attribute Coercion (New)",
+      "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
     "dcmStudyRetentionPolicy": {

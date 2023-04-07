@@ -4,7 +4,8 @@
   "type": "object",
   "required": [
     "dcmuiDashboardConfigName",
-    "dcmuiCountWebApp"  ],
+    "dcmuiCountWebApp"
+  ],
   "properties": {
     "dcmuiDashboardConfigName": {
       "title": "UI ダッシュボード 構成名",

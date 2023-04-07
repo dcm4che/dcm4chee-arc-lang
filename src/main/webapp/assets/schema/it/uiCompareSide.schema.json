@@ -26,8 +26,8 @@
       "type": "integer",
       "default":0,
       "enum":[
-        0,
-        1
+         0,
+         1
       ]
     },
     "dcmuiCompareSideCluster": {

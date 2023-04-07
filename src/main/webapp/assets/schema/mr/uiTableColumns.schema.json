@@ -13,6 +13,11 @@
       "description": "अभ्यास टेबल में कॉलमचे नाव.",
       "type": "string"
     },
+    "dcmuiColumnId": {
+      "title": "Column ID",
+      "description": "Every possible column that is used in the UI, has and ID, by using the ID you can change some of the properties of that Column, like Name, Description, Order or width",
+      "type": "string"
+    },
     "dcmuiColumnTitle": {
       "title": "कॉलमचे वर्णन",
       "description": "होव्हर वर दर्शविलेले कॉलमचे वर्णन.",
@@ -40,7 +45,7 @@
     "dcmuiColumnOrder": {
       "title": "कॉलमची क्रमानुरूप",
       "description": "कॉलमची क्रमानुरूप",
-      "type":  "string"
+      "type":  "number"
     }
   }
 }

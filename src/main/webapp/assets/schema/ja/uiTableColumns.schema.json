@@ -13,6 +13,11 @@
       "description": "検査 テーブルの 列の 名前",
       "type": "string"
     },
+    "dcmuiColumnId": {
+      "title": "Column ID",
+      "description": "Every possible column that is used in the UI, has and ID, by using the ID you can change some of the properties of that Column, like Name, Description, Order or width",
+      "type": "string"
+    },
     "dcmuiColumnTitle": {
       "title": "列の 説明",
       "description": "列の 説明、ホバーに 表示",
@@ -40,7 +45,7 @@
     "dcmuiColumnOrder": {
       "title": "列の 順序",
       "description": "列の 順序",
-      "type":  "string"
+      "type":  "number"
     }
   }
 }

@@ -14,7 +14,8 @@
     "dcmMaxOpsPerformed",
     "dcmMaxOpsInvoked",
     "dcmPackPDV",
-    "dcmRetrieveTimeoutTotal"
+    "dcmRetrieveTimeoutTotal",
+    "dcmAATimeout"
   ],
   "properties": {
     "dcmProtocol": {
@@ -57,6 +58,12 @@
           "SSLv3"
         ]
       }
+    },
+    "dcmTLSEndpointIdentificationAlgorithm": {
+      "title": "TLS Endpoint Identification Algorithm",
+      "description": "Indicates the endpoint identification or verification procedures during TLS handshaking.",
+      "type": "string",
+      "enum": [ "HTTPS", "LDAPS"]
     },
     "dcmTCPBacklog": {
       "title": "TCP बॅकलॉग",
@@ -201,6 +208,13 @@
       "description": "निर्दिष्ट वेळेनंतर (मिलिसेकंदांमध्ये) निष्क्रिय संपर्कांना बंद करण्यासाठी दर्शविते; अनुपस्थित असल्यास कालबाह्य होणार नाही.",
       "type": "integer",
       "minimum": 100
+    },
+    "dcmAATimeout": {
+      "title": "A-ABORT Timeout",
+      "description": "Timeout in ms for waiting for finishing sending any DIMSE before sending an A-ABORT PDU, triggered by the application or by expiration of a configured other timeout of this Connection. If the timeout expires, the TCP connection will be closed without sending the A-ABORT.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 1000
     }
   }
 }

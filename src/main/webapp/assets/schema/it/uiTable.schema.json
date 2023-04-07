@@ -3,33 +3,44 @@
   "description": "Configurazione Study Table per la versione pro",
   "type": "object",
   "required": [
-    "dcmuiStudyTableConfigName"
+    "dcmuiTableConfigName"
   ],
   "properties": {
-    "dcmuiStudyTableConfigName": {
-      "title": "Nome di configurazione",
-      "description": "Nome configurazione tabella studio interfaccia utente",
+    "dcmuiTableConfigName": {
+      "title": "Configuration Name",
+      "description": "UI  Table Configuration Name",
       "type": "string"
     },
-    "dcmuiStudyTableConfigUsername": {
-      "title": "Nome utente",
-      "description": "Nome utente a cui dovrebbe essere disponibile questo set",
+    "dcmuiTableConfigUsername": {
+      "title": "Username",
+      "description": "Username to which this set should be available",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiTableConfigRoles": {
+      "title": "Role",
+      "description": "Username role that can use this Set ( If you set the username, the role will be ignored )",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiTableID": {
+      "title": "Table ID",
+      "description": "The ID of the Table in the UI for which the config should be effective",
       "type": "string"
     },
-    "dcmuiStudyTableConfigRoles": {
-      "title": "Ruolo",
-      "description": "Ruolo del nome utente che può utilizzare questo set (se imposti il nome utente, il ruolo verrà ignorato)",
-      "type": "string"
-    },
-    "dcmuiStudyTableConfigIsDefault": {
-      "title": "È predefinito",
-      "description": "Imposta questo set di colonne su quello predefinito. (Assicurati che solo uno dei Set - fratelli sia impostato come predefinito).",
+    "dcmuiTableConfigIsDefault": {
+      "title": "Is Default",
+      "description": "Set this Column-Set to the default one. (Make sure that only one of the Set - siblings child is set to default).",
       "type": "boolean",
       "default": false
     },
-    "dcmuiStudyTableColumnConfigObjects": {
-      "title": "Colonne della tabella dello studio",
-      "description": "Definire le colonne della tabella di studio",
+    "dcmuiTableColumnConfigObjects": {
+      "title": "Table Columns",
+      "description": "Define Table Columns",
       "titleKey":"{dcmuiColumnName}",
       "type": "array",
       "items" : {

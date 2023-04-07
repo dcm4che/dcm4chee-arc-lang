@@ -52,6 +52,17 @@
       "description": "Here you can format the date time in the UI by using 'yyyy' for the year, 'MM' for the Month, 'dd' for the date, 'HH' for the hour 'mm' for the minutes, 'ss' for the seconds and 'SSS' for milliseconds. To format Date, Time and Date-Time you should use `DATE`, `TIME` and `DATE-TIME` for example like this: `DATE=yyyy-MM-dd, TIME=HH:mm, DATE-TIME=yyyy-MM-dd HH:mm`",
       "type": "string"
     },
+    "dcmuiHideClock": {
+      "title": "Hide Clock",
+      "description": "Set to true if you want to hide the clock in the UI",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiPageTitle": {
+      "title": "Page Title",
+      "description": "If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser ) ",
+      "type": "string"
+    },
     "dcmuiPersonNameFormat": {
       "title": "Format Person Name",
       "description": "Here you can format the person Name in the UI by using:{FAMILY-NAME}, {GIVEN-NAME}, {MIDDLE-NAME}, {NAME-PREFIX}, {NAME-SUFFIX} for Alphabetic, or by appending 'I_' for the Ideographic and 'P_' for the Phonetic version like {P_FAMILY-NAME}, {I_NAME-SUFFIX}",
@@ -110,10 +121,10 @@
         "$ref": "uiDiffConfig.schema.json"
       }
     },
-    "dcmuiStudyTableConfig": {
-      "title": "UI检查表配置",
-      "description": "表配置",
-      "titleKey":"{dcmuiStudyTableConfigName}",
+    "dcmuiTableConfig": {
+      "title": "UI Table Configuration",
+      "description": "Configuration of table",
+      "titleKey":"{dcmuiTableConfigName}",
       "type": "array",
       "items" : {
         "$ref": "uiTable.schema.json"
@@ -152,7 +163,7 @@
       "titleKey":"{dcmuiTemplateName}",
       "type": "array",
       "items" : {
-        "$ref": "uiCreateDialogTemplate.schema.json"
+        "$ref": "uiDialogTemplate.schema.json"
       }
     }
   }

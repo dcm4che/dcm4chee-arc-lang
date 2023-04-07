@@ -6,6 +6,7 @@
     "dcmExporterID",
     "dcmURI",
     "dcmQueueName",
+    "dcmExportPriority",
     "dcmInstanceAvailability",
     "dicomAETitle",
     "dcmExportAsSourceAE",

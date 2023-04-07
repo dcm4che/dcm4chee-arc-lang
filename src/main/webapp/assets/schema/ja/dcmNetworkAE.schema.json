@@ -24,6 +24,15 @@
         "type": "string"
       }
     },
+    "dcmNoAsyncModeCalledAETitle": {
+      "title": "No Async Mode Called AE Title",
+      "description": "Blacklist AE Title of peer Network AE as not capable to handle Asynchronous Operations Window Negotiation correctly. Suppress including corresponding User-data sub-Item in A-ASSOCIATE RQs to that Network AEs.",
+      "type": "array",
+      "format": "dcmAETitle",
+      "items": {
+        "type": "string"
+      }
+    },
     "dcmMasqueradeCallingAETitle": {
       "title": "マスカレード 呼びかけている AE タイトル",
       "description": "この ネットワーク AEの 実際の AE タイトルを マスカレードし、ネットワーク 関連付けの 開始に 使用される AE タイトル - 随意 接頭辞 [<Called AE Title>]は アソシエーションへの マスカレードを 特定の AE タイトルに 制限します",

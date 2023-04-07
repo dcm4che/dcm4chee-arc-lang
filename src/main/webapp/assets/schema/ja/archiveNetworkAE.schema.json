@@ -468,6 +468,11 @@
       "type": "string",
       "format": "dcmCharset"
     },
+    "dcmMWLWorklistLabel": {
+      "title": "MWL Worklist Label",
+      "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages by the HL7 Receiver associated with this Archive AE. If absent, created MWL items are not bound to a particular MWL SCP.",
+      "type": "string"
+    },
     "dcmUPSWorklistLabel": {
       "title": "UPS ワークリスト ラベル",
       "description": "UPS Push SCU または UPS-RS User Agentが この 属性の 値を 提供しない 場合, この AEに よって 作成された UPSの 中で ワークリスト ラベルの 値 (0074,1202)。 存在しない 場合は、 受信 AEの AE タイトルが 使用されます。 デバイス レベルで 指定された 値を 上書きします。",
@@ -805,6 +810,15 @@
       "titleKey":"{cn}",
       "items" : {
         "$ref": "archiveAttributeCoercion.schema.json"
+      }
+    },
+    "dcmArchiveAttributeCoercion2": {
+      "title": "Attribute Coercion (New)",
+      "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
     "dcmStudyRetentionPolicy": {

@@ -52,6 +52,7 @@
         "tab-audit-record-repository->authentication",
         "tab-audit-record-repository->software_configuration",
         "tab-audit-record-repository->patients",
+        "tab-audit-record-repository->rejections",
         "tab-audit-record-repository->hl7",
         "tab-study-study",
         "tab-study-patient",

@@ -75,6 +75,7 @@
     "dcmPatientVerificationMaxRetries",
     "dcmQueueTasksFetchSize",
     "dcmSupplementIssuerFetchSize",
+    "dcmUpdateCharsetFetchSize",
     "dcmCopyMoveUpdatePolicy",
     "dcmLinkMWLEntryUpdatePolicy",
     "dcmCSVUploadChunkSize",
@@ -96,8 +97,8 @@
     "dcmMWLScheduledProcedureStepIDGenerator",
     "dcmAuditHL7MsgLimit",
     "dcmMatchSOPClassOnInstanceLevel",
-    "dcmUPSUpdateWithoutTransactionUID",
     "dcmKeyValueRetentionFetchSize",
+    "dcmUPSUpdateWithoutTransactionUID",
     "hl7PSUForRequestedProcedure",
     "hl7PSUTemplateParam",
     "hl7PSUMWL",
@@ -113,6 +114,7 @@
     "hl7OrderMissingAdmissionIDPolicy",
     "hl7ImportReportMissingStudyIUIDPolicy",
     "hl7ImportReportMissingAdmissionIDPolicy",
+    "hl7ImportReportAdjustIUID",
     "hl7ReferredMergedPatientPolicy"
   ],
   "properties": {
@@ -1497,6 +1499,13 @@
       "default": 100,
       "minimum": 1
     },
+    "dcmUpdateCharsetFetchSize": {
+      "title": "Update Charset Fetch Size",
+      "description": "Limit result set of DB query for matching Patients by RESTful service to update the character set of Patient Attributes in DB BLOB fields.",
+      "type": "integer",
+      "default": 100,
+      "minimum": 1
+    },
     "hl7ADTSendingApplication": {
       "title": "HL7 ADT Sending Application",
       "description": "Application|Facility name of Sending Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.",
@@ -1687,6 +1696,16 @@
       "description": "AE Title of external C-FIND SCP to query for missing Study Instance UID in incoming HL7 Import Report (ORU) messages by given Accession Number. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "string",
       "format": "dcmAETitle"
+    },
+    "hl7ImportReportAdjustIUID": {
+      "title": "HL7 Import Report Adjust Instance UID",
+      "description": "Specifies adjustment of Series and SOP Instances UIDs returned by XSLT on incoming HL7 Import Report (ORU) messages. May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string",
+      "default": "NONE",
+      "enum": [
+        "NONE",
+        "APPEND_HASH_OF_STUDY_INSTANCE_UID"
+      ]
     },
     "hl7ReferredMergedPatientPolicy": {
       "title": "HL7引用的合并患者策略",
@@ -1968,6 +1987,15 @@
       "titleKey":"{cn}",
       "items" : {
         "$ref": "archiveAttributeCoercion.schema.json"
+      }
+    },
+    "dcmArchiveAttributeCoercion2": {
+      "title": "Attribute Coercion (New)",
+      "description": "Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
     "dcmRejectionNote": {

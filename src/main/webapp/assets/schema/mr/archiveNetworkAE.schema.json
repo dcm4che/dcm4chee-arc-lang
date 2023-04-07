@@ -468,6 +468,11 @@
       "type": "string",
       "format": "dcmCharset"
     },
+    "dcmMWLWorklistLabel": {
+      "title": "MWL Worklist Label",
+      "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages by the HL7 Receiver associated with this Archive AE. If absent, created MWL items are not bound to a particular MWL SCP.",
+      "type": "string"
+    },
     "dcmUPSWorklistLabel": {
       "title": "UPS वर्कलिस्ट लेबल",
       "description": "कुठल्याही AE द्वारे निर्माण केलेल्या UPS मध्ये वर्कलिस्ट लेबल (००७४,१२०२) चे मूल्य, जर UPS Push SCU किंवा UPS-RS सेवाचा वापरकर्ता या विशेषताचे मूल्य पाठवत नाही. अनुपस्थित असल्यास, बोलावलेल्या AE चे नाव वापरले जातील. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
@@ -805,6 +810,15 @@
       "titleKey":"{cn}",
       "items" : {
         "$ref": "archiveAttributeCoercion.schema.json"
+      }
+    },
+    "dcmArchiveAttributeCoercion2": {
+      "title": "Attribute Coercion (New)",
+      "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
     "dcmStudyRetentionPolicy": {

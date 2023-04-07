@@ -6,7 +6,6 @@
     "dcmMWLImportID",
     "dicomAETitle",
     "dcmMergeMWLSCP",
-    "dcmDestinationAE",
     "dcmMWLImportFilterBySCU",
     "dcmMWLImportDeleteNotFound"
   ],
@@ -28,11 +27,10 @@
       "type": "string",
       "format": "dcmAETitle"
     },
-    "dcmDestinationAE": {
-      "title": "गंतव्य MWL SCP",
-      "description": "बाह्य MWL SCP द्वारे परत पाठवलेल्या अनुसूचित प्रक्रिया स्टेप्स जे स्थानीय MWL SCP मध्ये निर्माण करते त्या AE चे शीर्षक.",
-      "type": "string",
-      "format": "dcmArchiveAETitle"
+    "dcmMWLWorklistLabel": {
+      "title": "MWL Worklist Label",
+      "description": "Value of Worklist Label (0074,1202) of imported MWL items fetched from Source MWL SCP. If absent, imported MWL items are provided by all MWL SCP Archive Network AEs.",
+      "type": "string"
     },
     "dcmDuration": {
       "title": "ह्याच्या आधी आयात न करणे",

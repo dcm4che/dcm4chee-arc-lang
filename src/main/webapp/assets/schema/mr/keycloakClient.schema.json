@@ -59,13 +59,13 @@
       "default": false
     },
     "uid":  {
-      "title": "वापरकर्ता ID",
-      "description": "वापरकर्ता ID. कीक्लोक अनुदान प्रकार को 'password' संच केलेले असल्यास, आवश्यक आहे.",
+      "title": "User ID",
+      "description": "User ID. Required if grant type = password.",
       "type": "string"
     },
     "userPassword":  {
-      "title": "वापरकर्ता पासवर्ड",
-      "description": "वापरकर्ता पासवर्ड. कीक्लोक अनुदान प्रकार 'password' संच केलेले असल्यास, आवश्यक आहे..",
+      "title": "User Password",
+      "description": "User Password. Required if grant type = password.",
       "type": "string"
     }
   }
