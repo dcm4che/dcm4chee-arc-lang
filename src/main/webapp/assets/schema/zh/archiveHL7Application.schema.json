@@ -17,6 +17,11 @@
       "description": "是否将此HL7应用程序存储的对象的属性更改记录到原始属性序列项中。 覆盖在设备级别指定的值。",
       "type": "boolean"
     },
+    "dcmMWLWorklistLabel": {
+      "title": "MWL Worklist Label",
+      "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages. If absent, created MWL items are not bound to a particular MWL Worklist and are provided by all Archive AEs with MWL SCP Transfer Capability.",
+      "type": "string"
+    },
     "dcmMWLAccessionNumberGenerator": {
       "title": "MWL Accession Number Generator",
       "description": "Identifies ID Generator to supplement missing Accession Numbers of Scheduled Procedures Steps created on receive of HL7 Order messages. Overwrites value specified on Device level.",

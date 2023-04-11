@@ -1,0 +1,7 @@
+#!/bin/sh
+json2props src/main/webapp/assets/schema/hi src/props/hi
+json2props src/main/webapp/assets/schema/it src/props/it
+json2props src/main/webapp/assets/schema/ja src/props/ja
+json2props src/main/webapp/assets/schema/mr src/props/mr
+json2props src/main/webapp/assets/schema/ru src/props/ru
+json2props src/main/webapp/assets/schema/zh src/props/zh

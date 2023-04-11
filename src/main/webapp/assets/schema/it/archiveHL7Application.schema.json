@@ -17,6 +17,11 @@
       "description": "Indica se le modifiche degli attributi degli oggetti memorizzati da questa applicazione HL7 sono registrate negli elementi della sequenza degli attributi originali. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "boolean"
     },
+    "dcmMWLWorklistLabel": {
+      "title": "MWL Worklist Label",
+      "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages. If absent, created MWL items are not bound to a particular MWL Worklist and are provided by all Archive AEs with MWL SCP Transfer Capability.",
+      "type": "string"
+    },
     "dcmMWLAccessionNumberGenerator": {
       "title": "MWL Accession Number Generator",
       "description": "Identifies ID Generator to supplement missing Accession Numbers of Scheduled Procedures Steps created on receive of HL7 Order messages. Overwrites value specified on Device level.",

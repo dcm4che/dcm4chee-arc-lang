@@ -17,6 +17,11 @@
       "description": "この HL7 アプリケーションに よって 格納された オブジェクトの 属性の 変更が 元の 属性 シーケンスの アイテムに 記録されるか どうかを 示します。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "boolean"
     },
+    "dcmMWLWorklistLabel": {
+      "title": "MWL Worklist Label",
+      "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages. If absent, created MWL items are not bound to a particular MWL Worklist and are provided by all Archive AEs with MWL SCP Transfer Capability.",
+      "type": "string"
+    },
     "dcmMWLAccessionNumberGenerator": {
       "title": "MWL アクセッション 番号 発生器",
       "description": "HL7 オーダー メッセージの 受信時 作成された 予定された 手順 ステップに 欠落して いる アクセッション 番号を 補足 する ID 発生器を 識別します。 デバイス レベルで 指定された 値を 上書きします。",

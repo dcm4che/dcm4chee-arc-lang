@@ -470,7 +470,7 @@
     },
     "dcmMWLWorklistLabel": {
       "title": "MWL Worklist Label",
-      "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages by the HL7 Receiver associated with this Archive AE. If absent, created MWL items are not bound to a particular MWL SCP.",
+      "description": "Only consider MWL items with this or no Worklist Label (0074,1202) for matching by this Archive AE acting as MWP SCP. If absent, MWL items with any Value of Worklist Label (0074,1202) are considered for matching by this Archive AE acting as MWL SCP.",
       "type": "string"
     },
     "dcmUPSWorklistLabel": {
