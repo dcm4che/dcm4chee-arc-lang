@@ -471,7 +471,8 @@
     "dcmMWLWorklistLabel": {
       "title": "MWL Worklist Label",
       "description": "Only consider MWL items with this or no Worklist Label (0074,1202) for matching by this Archive AE acting as MWP SCP. If absent, MWL items with any Value of Worklist Label (0074,1202) are considered for matching by this Archive AE acting as MWL SCP.",
-      "type": "string"
+      "type": "string",
+      "format": "dcmMWLWorklistLabel"
     },
     "dcmUPSWorklistLabel": {
       "title": "UPS Worklist Label",

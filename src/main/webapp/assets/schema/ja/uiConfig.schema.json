@@ -77,6 +77,14 @@
       },
       "format": "dcmAETitle"
     },
+    "dcmuiMWLWorklistLabel": {
+      "title": "MWL Worklist Label",
+      "description": "Selectable values for MWL Worklist Label",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "dcmuiAetConfig": {
       "title": "AET ドロップダウン リスト",
       "description": "UIの ドロップダウン リストに 表示する AETを 定義 します。",
@@ -103,7 +111,8 @@
       "items" : {
         "$ref": "uiPermission.schema.json"
       }
-    },"dcmuiFilterTemplateObject": {
+    },
+    "dcmuiFilterTemplateObject": {
       "title": "UI Filter Template",
       "description": "Defined filter template",
       "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",

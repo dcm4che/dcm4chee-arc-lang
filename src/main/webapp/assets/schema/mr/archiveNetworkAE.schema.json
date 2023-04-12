@@ -471,7 +471,8 @@
     "dcmMWLWorklistLabel": {
       "title": "MWL Worklist Label",
       "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages by the HL7 Receiver associated with this Archive AE. If absent, created MWL items are not bound to a particular MWL SCP.",
-      "type": "string"
+      "type": "string",
+      "format": "dcmMWLWorklistLabel"
     },
     "dcmUPSWorklistLabel": {
       "title": "UPS वर्कलिस्ट लेबल",

@@ -77,6 +77,14 @@
       },
       "format": "dcmAETitle"
     },
+    "dcmuiMWLWorklistLabel": {
+      "title": "MWL Worklist Label",
+      "description": "Selectable values for MWL Worklist Label",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "dcmuiAetConfig": {
       "title": "Elenco a discesa AET",
       "description": "Definisci quali AET devono essere visibili negli elenchi a discesa dell'interfaccia utente",
@@ -103,7 +111,8 @@
       "items" : {
         "$ref": "uiPermission.schema.json"
       }
-    },"dcmuiFilterTemplateObject": {
+    },
+    "dcmuiFilterTemplateObject": {
       "title": "UI Filter Template",
       "description": "Defined filter template",
       "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",

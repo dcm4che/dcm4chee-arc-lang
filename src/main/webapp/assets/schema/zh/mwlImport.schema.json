@@ -30,7 +30,8 @@
     "dcmMWLWorklistLabel": {
       "title": "MWL Worklist Label",
       "description": "Value of Worklist Label (0074,1202) of imported MWL items fetched from Source MWL SCP. If absent, imported MWL items are provided by all MWL SCP Archive Network AEs.",
-      "type": "string"
+      "type": "string",
+      "format": "dcmMWLWorklistLabel"
     },
     "dcmDuration": {
       "title": "Import not before",

@@ -77,6 +77,14 @@
       },
       "format": "dcmAETitle"
     },
+    "dcmuiMWLWorklistLabel": {
+      "title": "MWL Worklist Label",
+      "description": "Selectable values for MWL Worklist Label",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "dcmuiAetConfig": {
       "title": "AET ची यादी",
       "description": "UI मध्ये AET ची यादी, ज्यामध्ये शीर्षस्थानी कोणते AET दृश्यमान असावेत, ते परिभाषित करा.",
@@ -103,7 +111,8 @@
       "items" : {
         "$ref": "uiPermission.schema.json"
       }
-    },"dcmuiFilterTemplateObject": {
+    },
+    "dcmuiFilterTemplateObject": {
       "title": "UI Filter Template",
       "description": "Defined filter template",
       "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",

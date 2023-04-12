@@ -127,7 +127,8 @@
       "type": "array",
       "items" : {
         "type": "string"
-      }
+      },
+      "format": "dcmMWLWorklistLabel"
     },
     "dcmMergeLocalMWLWithStatus" : {
       "title": "Merge Local MWL With Status",

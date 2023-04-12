@@ -20,7 +20,8 @@
     "dcmMWLWorklistLabel": {
       "title": "MWL Worklist Label",
       "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages. If absent, created MWL items are not bound to a particular MWL Worklist and are provided by all Archive AEs with MWL SCP Transfer Capability.",
-      "type": "string"
+      "type": "string",
+      "format": "dcmMWLWorklistLabel"
     },
     "dcmMWLAccessionNumberGenerator": {
       "title": "MWL एक्सेशन क्रमांक जनरेटर",
