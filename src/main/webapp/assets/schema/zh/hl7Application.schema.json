@@ -77,9 +77,7 @@
       "type": "array",
       "items": {
         "type": "integer"
-      },
-      "minimum": 3,
-      "maximum": 12
+      }
     },
     "dicomDescription": {
       "title": "HL7描述",
