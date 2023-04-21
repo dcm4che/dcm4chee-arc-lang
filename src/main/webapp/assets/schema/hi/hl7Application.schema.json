@@ -71,6 +71,16 @@
       "default": "ASCII",
       "format": "hl7Charset"
     },
+    "hl7RequiredMSHField": {
+      "title": "HL7 Required MSH Fields",
+      "description": "MSH fields to be validated if missing or not, according to <a href=\"https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43\" target=\"_blank\">IHE RAD TF Vol 2 Message Control requirements</a>. If absent, <a href=\"https://dcm4chee-arc-hl7cs.readthedocs.io/en/latest/hl7-impl-notes.html#error-codes-mapping\" target=\"_blank\">previous default checks in dcm4che library</a> are applied.",
+      "type": "array",
+      "items": {
+        "type": "integer"
+      },
+      "minimum": 3,
+      "maximum": 12
+    },
     "dicomDescription": {
       "title": "HL7 का वर्णन",
       "description": "HL7 अनुप्रयोग का स्वैछिक विषय वर्णन ।",
