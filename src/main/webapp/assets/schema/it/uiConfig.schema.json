@@ -83,7 +83,13 @@
       "type": "array",
       "items" : {
         "type": "string"
-      }
+      },
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmMWLImport.dcmMWLWorklistLabel",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmMWLWorklistLabel",
+        "$.dcmDevice.hl7Application[*].dcmArchiveHL7Application.dcmMWLWorklistLabel",
+        "$.dcmDevice.dcmArchiveDevice.dcmArchiveAttributeCoercion[*].dcmMergeLocalMWLWorklistLabel[*]"
+      ]
     },
     "dcmuiAetConfig": {
       "title": "Elenco a discesa AET",
