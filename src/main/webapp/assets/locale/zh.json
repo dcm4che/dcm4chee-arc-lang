@@ -1095,6 +1095,7 @@
     "reschedule_this_task": "重新计划此任务",
     "reset_to_as_received": "Reset to as received",
     "responsible_person": "负责人",
+    "responsible_person_desc": "Name of person with medical or welfare decision making authority for the Patient, typically if the Patient is a non-human organism.",
     "rest_param": "剩余( {$@@groupingFilter} )",
     "result": "结果",
     "retainObj": "在文件系统中保留实例",

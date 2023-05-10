@@ -1126,6 +1126,7 @@
     "reschedule_this_task" : "Переназначить это задание",
     "reset_to_as_received": "Reset to as received",
     "responsible_person" : "Ответственное Лицо",
+    "responsible_person_desc": "Name of person with medical or welfare decision making authority for the Patient, typically if the Patient is a non-human organism.",
     "rest_param" : "Rest ( {$@@groupingFilter} )",
     "result" : "Результат",
     "retrievable_from_external_retrieve_aet" : "Извлекается из внешнего AET извлечения",

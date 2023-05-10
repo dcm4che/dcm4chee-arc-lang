@@ -1123,6 +1123,7 @@
     "reschedule_this_task": "ये कार्य पुनःनिर्धारित करें",
     "reset_to_as_received": "Reset to as received",
     "responsible_person": "जिम्मेदार व्यक्ति",
+    "responsible_person_desc": "Name of person with medical or welfare decision making authority for the Patient, typically if the Patient is a non-human organism.",
     "rest_param": "बाकि ( {$@@groupingFilter} )",
     "result": "Result",
     "retainObj": "फाइलसिस्टम पर दृष्टांतों को न हटाए",

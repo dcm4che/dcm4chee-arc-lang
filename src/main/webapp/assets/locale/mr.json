@@ -1124,6 +1124,7 @@
     "reschedule_this_task": "हे कार्य पुन्हा अनुसूचित करा.",
     "reset_to_as_received": "Reset to as received",
     "responsible_person": "जबाबदार व्यक्ती",
+    "responsible_person_desc": "Name of person with medical or welfare decision making authority for the Patient, typically if the Patient is a non-human organism.",
     "rest_param": "बाकी ( {$@@groupingFilter} )",
     "result": "Result",
     "retainObj": "फाईलसिस्टीमवर दृष्टांतांना हटवू नका",
