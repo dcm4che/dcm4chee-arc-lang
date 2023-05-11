@@ -672,6 +672,8 @@
 		"issuer_of_admission_id_sequence": "Emittente della sequenza dell'ID di ammissione",
 		"issuer_of_patient": "Emittente del paziente",
 		"issuer_of_patient_id": "Emittente dell'ID paziente",
+		"issuer_of_patient_id_seq_universal_entity_id": "Issuer of Patient ID Qualifiers Sequence - Universal Entity ID",
+		"issuer_of_patient_id_seq_universal_entity_id_type": "Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type",
 		"issuer_of_pid": "Emittente del PID",
 		"items": "Elemento/i",
 		"japanese": "Japanese",

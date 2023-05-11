@@ -672,6 +672,8 @@
     "issuer_of_admission_id_sequence": "प्रवेश ID क्रम जारीकर्ता",
     "issuer_of_patient": "रुग्णाचा जारीकर्ता",
     "issuer_of_patient_id": "रुग्ण ID चा जारीकर्ता",
+    "issuer_of_patient_id_seq_universal_entity_id": "Issuer of Patient ID Qualifiers Sequence - Universal Entity ID",
+    "issuer_of_patient_id_seq_universal_entity_id_type": "Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type",
     "issuer_of_pid": "PID जारीकर्ता",
     "items": "वस्तू",
     "japanese": "जपानी",

@@ -672,6 +672,8 @@
     "issuer_of_admission_id_sequence": "入場ID シーケンスの 発行者",
     "issuer_of_patient": "患者の 発行者",
     "issuer_of_patient_id": "患者IDの 発行者",
+    "issuer_of_patient_id_seq_universal_entity_id": "Issuer of Patient ID Qualifiers Sequence - Universal Entity ID",
+    "issuer_of_patient_id_seq_universal_entity_id_type": "Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type",
     "issuer_of_pid": "患者IDの 発行者",
     "items": "アイテム",
     "japanese": "日本語",

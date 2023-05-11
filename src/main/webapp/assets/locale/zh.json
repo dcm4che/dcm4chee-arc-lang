@@ -660,6 +660,8 @@
     "issuer_of_admission_id_sequence": "入口ID序列的发布者",
     "issuer_of_patient": "患者签发者",
     "issuer_of_patient_id": "患者ID发布者",
+    "issuer_of_patient_id_seq_universal_entity_id": "Issuer of Patient ID Qualifiers Sequence - Universal Entity ID",
+    "issuer_of_patient_id_seq_universal_entity_id_type": "Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type",
     "issuer_of_pid": "PID签发者",
     "items": " 项目",
     "japanese": "日语",

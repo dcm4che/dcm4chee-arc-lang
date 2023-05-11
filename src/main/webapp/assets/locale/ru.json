@@ -674,6 +674,8 @@
     "issuer_of_admission_id_sequence" : "Выпускающая система Последовательности ID Приема",
     "issuer_of_patient" : "Выпускающая система Пациента",
     "issuer_of_patient_id" : "Выпускающая система ID Пациента",
+    "issuer_of_patient_id_seq_universal_entity_id": "Issuer of Patient ID Qualifiers Sequence - Universal Entity ID",
+    "issuer_of_patient_id_seq_universal_entity_id_type": "Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type",
     "issuer_of_pid" : "Выпускающая система PID",
     "items" : " Элемент(ы)",
     "japanese" : "Японский",
