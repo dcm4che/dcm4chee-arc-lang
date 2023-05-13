@@ -1324,6 +1324,7 @@
     "sort_by_scheduled_time_desc": "Sort by scheduled time (DESC)",
     "source_of_previous_values": "Source of Previous Values",
     "source_of_previous_values_desc": "Source of Previous Values (0400,0561) stored with original Attributes in Original Attributes Sequence (0400,0561)",
+    "source_of_previous_values_label": "Source of previous values: ",
     "source_host": "Source Host",
     "source_user_id": "Source UserID",
     "sp_physicians_family_name": "SP Physician's family name",
