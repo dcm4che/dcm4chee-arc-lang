@@ -1060,7 +1060,7 @@
     "query_series_mpps_pname_asc_pps_old_new": "Patient Name ascending, Old to New - PerformedProcedureStepStartDateTime",
     "query_series_mpps_pname_desc_pps_new_old": "Patient Name descending, New to Old - PerformedProcedureStepStartDateTime",
     "query_series_mpps_pname_desc_pps_old_new": "Patient Name descending, Old to New - PerformedProcedureStepStartDateTime",
-    "query_series_mpps_mpps_pps_newest_first": "Newest PerformedProcedureStepStartDateTime first",
+    "query_series_mpps_pps_newest_first": "Newest PerformedProcedureStepStartDateTime first",
     "query_series_pps_oldest_first": "Oldest PerformedProcedureStepStartDateTime first",
     "query_studies": "अभ्यास प्राप्त करा",
     "query_studies_pname_asc_study_datetime_new_old": "Patient Name ascending, New to Old - StudyDateTime",
