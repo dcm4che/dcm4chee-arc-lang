@@ -62,6 +62,8 @@
           "MergePatient",
           "MergePatient2",
           "UnmergePatient",
+          "SupplementIssuer",
+          "UpdateCharset",
           "UpdateStudy",
           "UpdateStudyRequest",
           "UpdateSeries",
@@ -70,17 +72,16 @@
           "RejectStudy",
           "RejectSeries",
           "RejectInstance",
+          "ApplyRetentionPolicy",
           "ReimportStudy",
           "UpdateStudyExpirationDate",
           "UpdateSeriesExpirationDate",
-          "ApplyRetentionPolicy",
-          "CreateMWL",
-          "UpdateMWL",
-          "DeleteMWL",
           "UpdateStudyAccessControlID",
           "MoveStudyToPatient",
-          "SupplementIssuer",
-          "UpdateCharset"
+          "LinkStudyToMWLMerge",
+          "CreateMWL",
+          "UpdateMWL",
+          "DeleteMWL"
         ]
       }
     }
