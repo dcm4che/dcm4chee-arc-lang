@@ -307,7 +307,8 @@
         "ALWAYS",
         "SAME_SOURCE",
         "SAME_SERIES",
-        "SAME_SOURCE_AND_SERIES"
+        "SAME_SOURCE_AND_SERIES",
+        "EVEN_WITH_EQUAL_DIGEST"
       ]
     },
     "dcmRecordAttributeModification": {
