@@ -110,6 +110,7 @@
     "hl7TrackChangedPatientID",
     "hl7UseNullValue",
     "hl7VeterinaryUsePatientName",
+    "hl7OtherPatientIDs",
     "hl7OrderMissingStudyIUIDPolicy",
     "hl7OrderMissingAdmissionIDPolicy",
     "hl7ImportReportMissingStudyIUIDPolicy",
@@ -1646,6 +1647,22 @@
       "description": "Indica di forzare l'uso veterinario dei nomi dei pazienti nella mappatura dei campi PID HL7 agli attributi DICOM: utilizzare solo i primi due componenti del PID.5 come nome paziente DICOM; se PID.5 contiene solo un componente, usa quel valore come nome e il primo componente di PID.9 come cognome del nome paziente DICOM. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di Archivio.",
       "type": "boolean",
       "default": false
+    },
+    "hl7PrimaryAssigningAuthorityOfPatientID": {
+      "title": "HL7 Primary Assigning Authority of Patient ID",
+      "description": "Assigning Authority of Patient ID in received HL7 message used to search primary qualified patient identifier in the list of identifiers in PID-3. This qualified patient identifier shall be used on the root dataset. If absent, by default the first patient identifier pair in PID-3 shall be used as primary patient identifier on root dataset. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]. May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string"
+    },
+    "hl7OtherPatientIDs": {
+      "title": "HL7 Other Patient IDs",
+      "description": "Specifies inclusion policy for patient identifiers in PID-3 of HL7 message in Other Patient IDs Sequence (0010,1002). May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string",
+      "default": "OTHER",
+      "enum": [
+        "ALL",
+        "NONE",
+        "OTHER"
+      ]
     },
     "hl7OrderMissingStudyIUIDPolicy": {
       "title": "Politica usata per l'UID di un ordiine di un'istanza con studio mancante",

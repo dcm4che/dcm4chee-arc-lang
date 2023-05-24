@@ -134,6 +134,22 @@
       "description": "HL7 PID फिल्ड्समधून DICOM विशेषतांच्या मॅपिंगमध्ये रुग्णांच्या नावांना पशुवैद्यकीय वापर म्हणून सक्ती करण्याचे संकेत करते : DICOM रुग्णाच्या नावासाठी PID सेगमेंटचे पाचवे फील्ड (PID.5) चे फक्त पहिले २ कॉम्पोनन्टचा वापर करा; जर PID सेगमेंटच्या पाचव्या फील्ड (PID.5) मध्ये फक्त १ कॉम्पोनन्ट असलयास त्या मूल्याचा वापर दिलेल्या नावासाठी करा, और PID सेगमेंटच्या नौव्या फील्ड (PID.9) च्या पहिले कॉम्पोनन्टला आडनाव म्हणून वापरा. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य अधिलिखित होतील.",
       "type": "boolean"
     },
+    "hl7PrimaryAssigningAuthorityOfPatientID": {
+      "title": "HL7 Primary Assigning Authority of Patient ID",
+      "description": "Assigning Authority of Patient ID in received HL7 message used to search primary qualified patient identifier in the list of identifiers in PID-3. This qualified patient identifier shall be used on the root dataset. If absent, by default the first patient identifier pair in PID-3 shall be used as primary patient identifier on root dataset. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]. Overwrites value specified on Device level.",
+      "type": "string"
+    },
+    "hl7OtherPatientIDs": {
+      "title": "HL7 Other Patient IDs",
+      "description": "Specifies inclusion policy for patient identifiers in PID-3 of HL7 message in Other Patient IDs Sequence (0010,1002). Overwrites value specified on Device level.",
+      "type": "string",
+      "default": "OTHER",
+      "enum": [
+        "ALL",
+        "NONE",
+        "OTHER"
+      ]
+    },
     "hl7OrderMissingStudyIUIDPolicy": {
       "title": "HL7 ऑर्डर - गहाळ अभ्यास दृष्टांत UID धोरण",
       "description": "येणार्‍या HL7 ऑर्डर संदेशांमध्ये गहाळ अभ्यास दृष्टांत UID धोरण निर्दिष्ट करते. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य अधिलिखित होतील.",

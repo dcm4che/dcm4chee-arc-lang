@@ -110,6 +110,7 @@
     "hl7TrackChangedPatientID",
     "hl7UseNullValue",
     "hl7VeterinaryUsePatientName",
+    "hl7OtherPatientIDs",
     "hl7OrderMissingStudyIUIDPolicy",
     "hl7OrderMissingAdmissionIDPolicy",
     "hl7ImportReportMissingStudyIUIDPolicy",
@@ -1646,6 +1647,22 @@
       "description": "HL7 PID फ़ील्ड्स से DICOM गुणों के मैपिंग में मरीज़ों के नामों के पशुचिकित्सक उपयोग को मजबूर करने का संकेत करता है: DICOM मरीज़ के नाम के लिए PID.5 के सिर्फ पहले २ कम्पोनेंट का उपयोग करें; यदि PID.5 में सिर्फ १ कम्पोनेंट हो तो उसे दिए गए नाम में इस्तमाल करें, और PID.9 के पहले कम्पोनेंट को उपनाम में इस्तमाल करें । किसी आर्काइव HL7 अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
+    },
+    "hl7PrimaryAssigningAuthorityOfPatientID": {
+      "title": "HL7 Primary Assigning Authority of Patient ID",
+      "description": "Assigning Authority of Patient ID in received HL7 message used to search primary qualified patient identifier in the list of identifiers in PID-3. This qualified patient identifier shall be used on the root dataset. If absent, by default the first patient identifier pair in PID-3 shall be used as primary patient identifier on root dataset. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]. May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string"
+    },
+    "hl7OtherPatientIDs": {
+      "title": "HL7 Other Patient IDs",
+      "description": "Specifies inclusion policy for patient identifiers in PID-3 of HL7 message in Other Patient IDs Sequence (0010,1002). May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string",
+      "default": "OTHER",
+      "enum": [
+        "ALL",
+        "NONE",
+        "OTHER"
+      ]
     },
     "hl7OrderMissingStudyIUIDPolicy": {
       "title": "HL7 ऑर्डर - अनुपस्थित स्टडी दृष्टांत UID नीति",

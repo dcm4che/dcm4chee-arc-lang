@@ -110,6 +110,7 @@
     "hl7TrackChangedPatientID",
     "hl7UseNullValue",
     "hl7VeterinaryUsePatientName",
+    "hl7OtherPatientIDs",
     "hl7OrderMissingStudyIUIDPolicy",
     "hl7OrderMissingAdmissionIDPolicy",
     "hl7ImportReportMissingStudyIUIDPolicy",
@@ -1646,6 +1647,22 @@
       "description": "HL7 PID フィールドを DICOM 属性に マッピングするときに 患者名の 獣医 使用を 強制する ことを 示します。 PID.5の 最初の 2つの コンポーネントのみを DICOM 患者名として 使用します。 PID.5に 1つの コンポーネントのみ 場合には その 値を 名前として 使用し、PID.9の 最初の コンポーネントを DICOM 患者名の 姓として 使用します。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
       "type": "boolean",
       "default": false
+    },
+    "hl7PrimaryAssigningAuthorityOfPatientID": {
+      "title": "HL7 Primary Assigning Authority of Patient ID",
+      "description": "Assigning Authority of Patient ID in received HL7 message used to search primary qualified patient identifier in the list of identifiers in PID-3. This qualified patient identifier shall be used on the root dataset. If absent, by default the first patient identifier pair in PID-3 shall be used as primary patient identifier on root dataset. If none of the qualified patient identifiers in the list match with the configured issuer, archive server log shall contain a log INFO message and by default the first qualified patient identifier in PID-3 shall be used. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]. May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string"
+    },
+    "hl7OtherPatientIDs": {
+      "title": "HL7 Other Patient IDs",
+      "description": "Specifies inclusion policy for patient identifiers in PID-3 of HL7 message in Other Patient IDs Sequence (0010,1002). May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string",
+      "default": "OTHER",
+      "enum": [
+        "ALL",
+        "NONE",
+        "OTHER"
+      ]
     },
     "hl7OrderMissingStudyIUIDPolicy": {
       "title": "HL7 オーダー ために 欠落 スタディ インスタンス UID ポリシー",
