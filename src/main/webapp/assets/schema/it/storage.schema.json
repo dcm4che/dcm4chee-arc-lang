@@ -86,7 +86,7 @@
     },
     "dcmStorageClusterID": {
       "title": "ID cluster di archiviazione",
-      "description": "Identifica uno spazio di archiviazione che appartiene a un cluster di archiviazione. Gli oggetti di uno studio possono essere distribuiti sui sistemi di archiviazione di un cluster di archiviazione. Utilizzato dalla cancellazione attivata dalla soglia.",
+      "description": "Identifica uno CACHE spazio di archiviazione che appartiene a un cluster di archiviazione. Gli oggetti di uno studio possono essere distribuiti sui sistemi di archiviazione di un cluster di archiviazione. Utilizzato dalla cancellazione attivata dalla soglia.",
       "type": "string"
     },
     "dcmStorageThreshold": {
