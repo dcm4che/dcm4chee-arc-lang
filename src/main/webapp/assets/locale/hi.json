@@ -984,6 +984,7 @@
     "patient_family_name": "मरीज़ का उपनाम",
     "patient_id": "मरीज़़ की ID",
     "patient_id_is_required": "मरीज़़ की ID जरूरी है!",
+    "patient_identifiers": "मरीज़़ पहचानकर्ता",
     "patient_name": "मरीज़़ का नाम",
     "patient_participant_object_name": "मरीज़ सहभागी ऑब्जेक्ट का नाम",
     "patient_saved_successfully": "मरीज़ का रेकॉर्ड सफलतापूर्वक सहेजा गया!",

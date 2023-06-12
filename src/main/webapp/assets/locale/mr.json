@@ -984,6 +984,7 @@
     "patient_family_name": "रुग्ण आडनाव",
     "patient_id": "रुग्ण ID",
     "patient_id_is_required": "रुग्ण ID आवश्यक आहे!",
+    "patient_identifiers": "रुग्ण आयडेंटिफायर",
     "patient_name": "रुग्णांचे नाव",
     "patient_participant_object_name": "रुग्ण सहभागी ऑब्जेक्ट चे नाव",
     "patient_saved_successfully": "रुग्ण यशस्वीरित्या जतन केले!",

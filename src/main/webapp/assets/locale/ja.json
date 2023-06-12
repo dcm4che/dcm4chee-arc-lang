@@ -984,6 +984,7 @@
     "patient_family_name": "患者の 苗字",
     "patient_id": "患者 ID",
     "patient_id_is_required": "患者 ID 必要です!",
+    "patient_identifiers": "患者 識別子",
     "patient_name": "患者名",
     "patient_participant_object_name": "患者 参加者 オブジェクト名",
     "patient_saved_successfully": "患者は 正常に 保存されました!",

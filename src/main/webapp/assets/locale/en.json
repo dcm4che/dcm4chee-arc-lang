@@ -985,6 +985,7 @@
     "patient_family_name": "Patient family name",
     "patient_id": "Patient ID",
     "patient_id_is_required": "Patient ID is required!",
+    "patient_identifiers": "Patient Identifiers",
     "patient_name": "Patient name",
     "patient_participant_object_name": "Patient ParticipantObjectName",
     "patient_saved_successfully": "Patient saved successfully!",
