@@ -86,7 +86,7 @@
     },
     "dcmStorageClusterID": {
       "title": "存储群集ID",
-      "description": "标识属于存储群集的存储。一个检查对象可以分布在一个存储集群的存储系统中。用于门槛值触发的删除。",
+      "description": "标识属于存储群集的CACHE存储。一个检查对象可以分布在一个存储集群的存储系统中。用于门槛值触发的删除。",
       "type": "string"
     },
     "dcmStorageThreshold": {
