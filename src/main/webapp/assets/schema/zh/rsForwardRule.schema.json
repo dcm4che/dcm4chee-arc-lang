@@ -20,18 +20,6 @@
       "type": "string",
       "format": "webApp"
     },
-    "dcmTLSAllowAnyHostname": {
-      "title": "TLS允许任何主机名",
-      "description": "如果其他服务器需要HTTPS,并且此配置选项设置为True,则通过信任存储区验证其他服务器的证书,但不验证主机名。 ",
-      "type": "boolean",
-      "default": false
-    },
-    "dcmTLSDisableTrustManager": {
-      "title": "禁用TLS信任管理器",
-      "description": "如果其他服务器需要HTTPS,并且此配置选项设置为True,则不需要指定信任存储区。 ",
-      "type": "boolean",
-      "default": false
-    },
     "dcmURIPattern": {
       "title": "Request URL模式",
       "description": "仅转发与指定正则表达式匹配的请求。如果前缀为!，仅转发与指定正则表达式不匹配的请求。 ",

@@ -20,18 +20,6 @@
       "type": "string",
       "format": "webApp"
     },
-    "dcmTLSAllowAnyHostname": {
-      "title": "TLS 任意の ホスト名を 許可 する",
-      "description": "他の サーバーが HTTPSを 必要とし、 この 構成 オプションが 「真」に 設定されて いる 場合、 他の サーバーの 証明書は トラストストアを 介して 検証されますが、 ホスト名の 検証は 行われません。",
-      "type": "boolean",
-      "default": false
-    },
-    "dcmTLSDisableTrustManager": {
-      "title": "TLS トラスト マネージャーを 無効に する",
-      "description": "他の サーバーが HTTPSを 必要とし、 この 構成 オプションが 「真」に 設定されて いる 場合、 トラストストアを 指定する 必要は ありません。",
-      "type": "boolean",
-      "default": false
-    },
     "dcmURIPattern": {
       "title": "要求 URL パターン",
       "description": "指定された 正規表現に 一致 する 要求のみを 転送します。 接頭辞が ！の 場合、 指定された 正規表現に 一致しない 要求のみを 転送します。",

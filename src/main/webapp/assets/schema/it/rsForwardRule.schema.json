@@ -20,18 +20,6 @@
       "type": "string",
       "format": "webApp"
     },
-    "dcmTLSAllowAnyHostname": {
-      "title": "TLS Consente qualsiasi nome host",
-      "description": "Se l'altro server richiede HTTPS e questa opzione di configurazione è impostata su true, il certificato dell'altro server viene convalidato tramite il truststore, ma la convalida del nome host non viene eseguita.",
-      "type": "boolean",
-      "default": false
-    },
-    "dcmTLSDisableTrustManager": {
-      "title": "TLS Disabilita Trust Manager",
-      "description": "Se l'altro server richiede HTTPS e questa opzione di configurazione è impostata su true, non è necessario specificare un truststore",
-      "type": "boolean",
-      "default": false
-    },
     "dcmURIPattern": {
       "title": "Richiedi pattern URL",
       "description": "Inoltra solo le richieste che corrispondono alla data espressione regolare. Se preceduto da ! , Inoltra solo le richieste che non corrispondono all'espressione regolare data.",
