@@ -187,7 +187,7 @@
     },
     "dcmResponseTimeout": {
       "title": "応答 タイムアウト",
-      "description": "C-MOVE または C-GET RSPs 以外の 未解決の DIMSE RSPの 受信の タイムアウト (ミリ秒); 存在しない 場合、 タイムアウトが ありません。",
+      "description": "C-MOVE または C-GET RSPs 以外の 未解決の DIMSE RSPの <br>- 送信 HL7 メッセージ 応答の <br>- HTTP(S) 応答の <br>受信の タイムアウト (ミリ秒); 存在しない 場合、 タイムアウトが ありません。",
       "type": "integer",
       "minimum": 100
     },
