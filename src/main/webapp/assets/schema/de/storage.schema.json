@@ -11,6 +11,7 @@
     "dcmReadOnly",
     "dcmStorageThresholdExceedsPermanently",
     "dcmNoDeletionConstraint",
+    "dcmNoRetrieveCacheOnPurgedInstanceRecords",
     "dcmDeleterThreads",
     "dcmStorageDuration"
   ],
@@ -187,6 +188,21 @@
       "description": "Specifies another Storage to which objects are copied in parallel on retrieve to increase the performance on accessing storage systems which provides more bandwidth using multiple connections in parallel.",
       "type": "string",
       "format": "dcmStorageID"
+    },
+    "dcmNoRetrieveCacheOnDestinationAETitle": {
+      "title": "No Retrieve Cache on Destination AE Title",
+      "description": "Specifies AE Titles of C-STORE SCPs to which objects are retrieved without copying them to a configured Retrieve Cache Storage.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmNoRetrieveCacheOnPurgedInstanceRecords": {
+      "title": "No Retrieve Cache on Purged Instance Records",
+      "description": "Indicates to NOT copy retrieved objects to a configured Retrieve Cache Storage, wherein corresponding Instance Records were already purged from the DB.",
+      "type": "boolean",
+      "default": false
     },
     "dcmRetrieveCacheMaxParallel": {
       "title": "Retrieve Cache Max Parallel",
