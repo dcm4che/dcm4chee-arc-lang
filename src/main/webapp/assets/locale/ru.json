@@ -530,7 +530,7 @@
     "body_parts.vulva": "Vulva",
     "body_parts.wrist": "Wrist joint",
     "body_parts.zygoma": "Zygoma",
-    "c_move_scp_aet_filter" : "Фильтровать AE Заголовок C-MOVE SCP по",
+    "c_move_scp_aet_filter" : "Фильтровать AET C-MOVE SCP по",
     "calling_aet" : "Вызывающий AET",
     "calling_hl7_application" : "Вызывающее HL7 Приложение",
     "cancel" : "отмена",
