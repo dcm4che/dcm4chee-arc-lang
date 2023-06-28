@@ -141,7 +141,7 @@
     },
     "hl7OtherPatientIDs": {
       "title": "HL7 Other Patient IDs",
-      "description": "Specifies inclusion policy for patient identifiers in PID-3 of HL7 message in Other Patient IDs Sequence (0010,1002). Overwrites value specified on Device level.",
+      "description": "Specifies inclusion policy for patient identifiers in PID-3 / MRG-1 of HL7 message in Other Patient IDs Sequence (0010,1002). Overwrites value specified on Device level.",
       "type": "string",
       "default": "OTHER",
       "enum": [
