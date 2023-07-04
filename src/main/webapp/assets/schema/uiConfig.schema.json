@@ -3,7 +3,8 @@
   "description": "UI Configuration",
   "type": "object",
   "required": [
-    "dcmuiConfigName"
+    "dcmuiConfigName",
+    "dcmuiPatientIdVisibility"
   ],
   "properties": {
     "dcmuiConfigName": {

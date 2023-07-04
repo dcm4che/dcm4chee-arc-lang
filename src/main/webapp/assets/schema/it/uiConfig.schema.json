@@ -42,6 +42,12 @@
       "description": "URL di sfondo per modificare lo sfondo dell'interfaccia utente, può essere un URL relativo o assoluto, l'immagine deve avere una larghezza di almeno 1024px ",
       "type": "string"
     },
+    "dcmuiPatientIdVisibility": {
+      "title": "Hide additional Patient ID-s",
+      "description": "If you set it to true, in the navigation table only the main ID-s of the Patient will be visible",
+      "type": "boolean",
+      "default": false
+    },
     "dcmuiLogoURL": {
       "title": "URL logo",
       "description": "URL del logo per cambiare il logo dell'interfaccia utente, può essere un URL relativo o assoluto, l'immagine dovrebbe avere la larghezza di 140px e dovrebbe essere in formato png con sfondo trasparente",

@@ -3,7 +3,8 @@
   "description": "UI Configuration",
   "type": "object",
   "required": [
-    "dcmuiConfigName"
+    "dcmuiConfigName",
+    "dcmuiPatientIdVisibility"
   ],
   "properties": {
     "dcmuiConfigName": {
@@ -41,6 +42,12 @@
       "title": "Background URL",
       "description": "Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px ",
       "type": "string"
+    },
+    "dcmuiPatientIdVisibility": {
+      "title": "Zusätzliche Patienten-IDs ausblenden",
+      "description": "Wenn es auf „true“ gesetzt wird, werden in der Navigation Tabelle nur die Haupt-IDs des Patienten sichtbar",
+      "type": "boolean",
+      "default": false
     },
     "dcmuiLogoURL": {
       "title": "Logo URL",

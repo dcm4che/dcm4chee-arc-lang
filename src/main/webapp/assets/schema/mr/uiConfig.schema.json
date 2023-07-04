@@ -42,6 +42,12 @@
       "description": "UI ची पार्श्वभूमी बदलण्यासाठी पार्श्वभूमी URL, ते संबंधित किंवा निरपेक्ष URL असू शकते, प्रतिमेची रूंदी कमीत कमी १०२४px असावी.",
       "type": "string"
     },
+    "dcmuiPatientIdVisibility": {
+      "title": "Hide additional Patient ID-s",
+      "description": "If you set it to true, in the navigation table only the main ID-s of the Patient will be visible",
+      "type": "boolean",
+      "default": false
+    },
     "dcmuiLogoURL": {
       "title": "लोगो URL",
       "description": "UI चा लोगो बदलण्यासाठी लोगो URL, यह संबंधित किंवा निरपेक्ष URL असू शकते, प्रतिमेची रूंदी १४० पिक्सेल (140px) असावी आणि पारदर्शक पार्श्वभूमीसह png स्वरूपात असावी.",

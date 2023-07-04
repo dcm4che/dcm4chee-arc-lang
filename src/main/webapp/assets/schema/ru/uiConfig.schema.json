@@ -42,6 +42,12 @@
       "description": "Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px ",
       "type": "string"
     },
+    "dcmuiPatientIdVisibility": {
+      "title": "Hide additional Patient ID-s",
+      "description": "If you set it to true, in the navigation table only the main ID-s of the Patient will be visible",
+      "type": "boolean",
+      "default": false
+    },
     "dcmuiLogoURL": {
       "title": "Logo URL",
       "description": "Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background",
