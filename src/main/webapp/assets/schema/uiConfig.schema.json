@@ -43,8 +43,8 @@
       "type": "string"
     },
     "dcmuiPatientIdVisibility": {
-      "title": "Show all Patient ID-s",
-      "description": "If you set it to true, all patient id-s will be shown in the table of Navigation tabs",
+      "title": "Hide additional Patient ID-s",
+      "description": "If you set it to true, in the navigation table only the main ID-s of the Patient will be visible",
       "type": "boolean",
       "default": false
     },
