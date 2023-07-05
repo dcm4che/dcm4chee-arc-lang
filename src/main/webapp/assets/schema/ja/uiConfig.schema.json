@@ -3,7 +3,8 @@
   "description": "UI 構成",
   "type": "object",
   "required": [
-    "dcmuiConfigName"
+    "dcmuiConfigName",
+    "dcmuiHideOtherPatientIDs"
   ],
   "properties": {
     "dcmuiConfigName": {
@@ -42,9 +43,9 @@
       "description": "UIの 背景を 変更するための 背景 URL。相対 URL または 絶対 URLに する ことが できます、画像の 幅は 少なくとも 1024pxで ある 必要が あります。",
       "type": "string"
     },
-    "dcmuiPatientIdVisibility": {
-      "title": "Hide additional Patient ID-s",
-      "description": "If you set it to true, in the navigation table only the main ID-s of the Patient will be visible",
+    "dcmuiHideOtherPatientIDs": {
+      "title": "Hide Other Patient IDs",
+      "description": "Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.",
       "type": "boolean",
       "default": false
     },

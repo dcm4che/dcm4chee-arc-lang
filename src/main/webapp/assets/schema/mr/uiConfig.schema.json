@@ -3,7 +3,8 @@
   "description": "UI कॉन्फिगरेशन",
   "type": "object",
   "required": [
-    "dcmuiConfigName"
+    "dcmuiConfigName",
+    "dcmuiHideOtherPatientIDs"
   ],
   "properties": {
     "dcmuiConfigName": {
@@ -42,9 +43,9 @@
       "description": "UI ची पार्श्वभूमी बदलण्यासाठी पार्श्वभूमी URL, ते संबंधित किंवा निरपेक्ष URL असू शकते, प्रतिमेची रूंदी कमीत कमी १०२४px असावी.",
       "type": "string"
     },
-    "dcmuiPatientIdVisibility": {
-      "title": "Hide additional Patient ID-s",
-      "description": "If you set it to true, in the navigation table only the main ID-s of the Patient will be visible",
+    "dcmuiHideOtherPatientIDs": {
+      "title": "Hide Other Patient IDs",
+      "description": "Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.",
       "type": "boolean",
       "default": false
     },

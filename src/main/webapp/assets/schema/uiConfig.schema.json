@@ -4,7 +4,7 @@
   "type": "object",
   "required": [
     "dcmuiConfigName",
-    "dcmuiPatientIdVisibility"
+    "dcmuiHideOtherPatientIDs"
   ],
   "properties": {
     "dcmuiConfigName": {
@@ -43,9 +43,9 @@
       "description": "Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px ",
       "type": "string"
     },
-    "dcmuiPatientIdVisibility": {
-      "title": "Hide additional Patient ID-s",
-      "description": "If you set it to true, in the navigation table only the main ID-s of the Patient will be visible",
+    "dcmuiHideOtherPatientIDs": {
+      "title": "Hide Other Patient IDs",
+      "description": "Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.",
       "type": "boolean",
       "default": false
     },
