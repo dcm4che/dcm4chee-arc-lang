@@ -1470,7 +1470,7 @@
     "responsible_person_desc": "Name of person with medical or welfare decision making authority for the Patient, typically if the Patient is a non-human organism.",
     "rest_param": "Rest ( {$@@groupingFilter} )",
     "result": "Result",
-    "retainObj": "Retain objects on the filesystem",
+    "retainObj": "Retain objects on filesystem",
     "retrievable_from_external_retrieve_aet": "Retrievable from external retrieve AET",
     "retrieve": "Retrieve",
     "retrieve-export.aetitle_is_missing": "AETitle is missing",
