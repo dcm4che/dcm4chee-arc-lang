@@ -35,6 +35,16 @@
       "description": "RFC2079：统一资源标识符",
       "type": "string"
     },
+    "dcmLocationStatus": {
+      "title": "Location Status",
+      "description": "Initial Location Status of DICOM files written to this Storage System: 'OK' or 'VERIFY_QSTAR_ACCESS_STATE'; 'OK' if absent.",
+      "type": "string",
+      "enum": [
+        "OK",
+        "VERIFY_QSTAR_ACCESS_STATE"
+      ],
+      "default": "OK"
+    },
     "dcmDigestAlgorithm": {
       "title": "摘要算法",
       "description": "用于生成校验和的算法。",
