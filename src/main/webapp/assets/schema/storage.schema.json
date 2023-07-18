@@ -5,6 +5,13 @@
   "required": [
     "dcmStorageID",
     "dcmURI",
+    "dcmArchiveSeriesAsTAR",
+    "dcmStoragePathFormat",
+    "dcmOnStoragePathAlreadyExists",
+    "dcmRetryCreateDirectories",
+    "dcmAltCreateDirectories",
+    "dcmCheckMountFilePath",
+    "dcmFileOpenOption",
     "dcmMaxRetries",
     "dcmInstanceAvailability",
     "dcmRetrieveCacheMaxParallel",
@@ -34,6 +41,61 @@
       "title": "Storage URI",
       "description": "RFC2079: Uniform Resource Identifier",
       "type": "string"
+    },
+    "dcmArchiveSeriesAsTAR": {
+      "title": "Archive Series as TAR",
+      "description": "Indicates that binary DICOM objects of one Series are packed in one TAR archive on this Storage System; false if absent.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmStoragePathFormat": {
+      "title": "Storage Path Format",
+      "description": "Format of file path of DICOM binary objects or metadata in JSON format or of ZIP archives containing metadata in JSON format for each DICOM object of one Series, written to this Storage System. '{now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}', if absent.",
+      "type": "string",
+      "default": "{now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}"
+    },
+    "dcmOnStoragePathAlreadyExists": {
+      "title": "Already Exists on Storage Path",
+      "description": "Specifies behavior if an object already exists on the storage path on the storage system, assembled according to the configured 'Storage Path Format'. Default behaviour 'RANDOM_PATH'. (hover on options to see their descriptions)",
+      "type": "string",
+      "enum": [
+        "FAILURE|Signals failure writing the new object",
+        "NOOP|Proceed without writing the new object",
+        "RANDOM_PATH|Replace last path element be random 8 hex digit number and try again"
+      ],
+      "default": "RANDOM_PATH"
+    },
+    "dcmRetryCreateDirectories": {
+      "title": "Retry Create Directories",
+      "description": "Specifies number of retries to create parent directories of the storage file path - may workaround issues concerning NFS; 0 if absent.",
+      "type": "integer",
+      "default": 0
+    },
+    "dcmAltCreateDirectories": {
+      "title": "Alt Create Directories",
+      "description": "Indicate to not rely on 'createDirectories' function in 'java.nio.file.Files' Java class, to create all nonexistent parent directories first, but instead explicitly create parent directories if NoSuchFileException is thrown. May workaround issues concerning NFS.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmCheckMountFilePath": {
+      "title": "Check Mount File Path",
+      "description": "Indicates to check if a mounted file system did not get detached from its mount point, by specifying the path of a shadow file in the directory used as mount point. If the shadow file becomes inaccessible, write to storage operation fails. Checked for each DICOM object storage (write operation). Typically applicable to NFS / external file systems.",
+      "type": "string",
+      "default": "NO_MOUNT"
+    },
+    "dcmFileOpenOption": {
+      "title": "File Open Option(s)",
+      "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "CREATE_NEW|Create a new file, failing if the file already exists",
+          "DSYNC|Requires that every update to the file's content be written synchronously to the underlying storage device",
+          "SYNC|Requires that every update to the file's content or metadata be written synchronously to the underlying storage device"
+        ]
+      },
+      "default": "CREATE_NEW"
     },
     "dcmLocationStatus": {
       "title": "Location Status",
