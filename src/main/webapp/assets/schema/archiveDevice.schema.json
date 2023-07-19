@@ -755,13 +755,13 @@
     },
     "dcmPreserveStudyInterval": {
       "title": "Preserve Study Interval",
-      "description": "Protect studies which were accessed later than the specified time interval, in ISO-8601 duration format PnDTnHnMnS, from deletion from the storage system, if the usable space falls below configured Deleter Thresholds. If absent, most recently accessed studies shall also get deleted from the storage system, if least recently accessed studies were not found or if Delete Least Recently Accessed Study First is set to false.",
+      "description": "Protect studies which were accessed later than the specified time interval, in ISO-8601 duration format PnDTnHnMnS, from deletion from the storage system, if the usable space falls below configured Deleter Thresholds. If absent, most recently accessed studies shall also get deleted from the storage system, if least recently accessed studies were not found or if Delete Least Recently Accessed Study First is set to FALSE.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmDeleteStudyLeastRecentlyAccessedFirst": {
       "title": "Delete Least Recently Accessed Study First",
-      "description": "Indicates to delete studies beginning with the least recently accessed study first, if the usable space falls below configured Deleter Thresholds.",
+      "description": "Indicates to delete studies beginning with the least recently accessed study first, if the usable space falls below configured Deleter Thresholds. By default, TRUE.",
       "type": "boolean",
       "default": true
     },
