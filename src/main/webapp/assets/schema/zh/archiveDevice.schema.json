@@ -100,6 +100,7 @@
     "dcmMatchSOPClassOnInstanceLevel",
     "dcmKeyValueRetentionFetchSize",
     "dcmUPSUpdateWithoutTransactionUID",
+    "dcmQStarVerificationFetchSize",
     "hl7PSUForRequestedProcedure",
     "hl7PSUTemplateParam",
     "hl7PSUMWL",
@@ -1889,6 +1890,45 @@
       "description": "Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
       "default" : false
+    },
+    "dcmQStarVerificationPollingInterval": {
+      "title": "QStar Verification Polling Interval",
+      "description": "Polling Interval for Verification of Access State of objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmQStarVerificationFetchSize": {
+      "title": "QStar Verification Fetch Size",
+      "description": "Limit result set of DB query for Verification of Access State of objects stored on QStar Tape File System; 100 if absent.",
+      "type": "integer",
+      "default" : 100,
+      "minimum": 0,
+      "exclusiveMinimum": 0
+    },
+    "dcmQStarVerificationDelay": {
+      "title": "QStar Verification Delay",
+      "description": "Delay for Verification of Access State after objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmQStarVerificationURL": {
+      "title": "QStar Verification URL",
+      "description": "URL of QStar Archive Storage Manager WEB Services - including username and password (http://username:password@qstar.host:port/) - invoked for Verification of Access State after objects stored on QStar Tape File System. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.",
+      "type": "string"
+    },
+    "dcmQStarVerificationMockAccessState": {
+      "title": "QStar Verification Mock Access State",
+      "description": "Indicates to mock invoke of QStar Archive Storage Manager (ASM) WEB Services by return of specified Access State (0 - ACCESS_STATE_NONE, 1 - ACCESS_STATE_EMPTY, 2 - ACCESS_STATE_UNSTABLE, 3 - ACCESS_STATE_STABLE, 4 - ACCESS_STATE_OUT_OF_CACHE, 5 - ACCESS_STATE_OFFLINE, -1 - simulate error response) for testing.",
+      "type": "integer",
+      "enum": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        -1
+      ]
     },
     "dcmAttributeFilter": {
       "title": "属性过滤器",
