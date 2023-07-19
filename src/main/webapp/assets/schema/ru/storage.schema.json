@@ -12,6 +12,7 @@
     "dcmAltCreateDirectories",
     "dcmCheckMountFilePath",
     "dcmFileOpenOption",
+    "dcmLocationStatus",
     "dcmMaxRetries",
     "dcmInstanceAvailability",
     "dcmRetrieveCacheMaxParallel",
@@ -99,11 +100,11 @@
     },
     "dcmLocationStatus": {
       "title": "Location Status",
-      "description": "Initial Location Status of DICOM files written to this Storage System: 'OK' or 'VERIFY_QSTAR_ACCESS_STATE'; 'OK' if absent.",
+      "description": "Initial Location Status of DICOM files written to this Storage System. Default behaviour 'OK'. (hover on options to see their descriptions)",
       "type": "string",
       "enum": [
-        "OK",
-        "VERIFY_QSTAR_ACCESS_STATE"
+        "OK|Indicates access state of stored objects is stable",
+        "VERIFY_QSTAR_ACCESS_STATE|Indicates to verify access state of stored objects from QStar Tape File System"
       ],
       "default": "OK"
     },
