@@ -12,6 +12,7 @@
     "dcmAltCreateDirectories",
     "dcmFileOpenOption",
     "dcmLocationStatus",
+    "dcmCountLocationsByStatus",
     "dcmMaxRetries",
     "dcmInstanceAvailability",
     "dcmRetrieveCacheMaxParallel",
@@ -105,6 +106,12 @@
         "VERIFY_QSTAR_ACCESS_STATE|Indicates to verify access state of stored objects from QStar Tape File System"
       ],
       "default": "OK"
+    },
+    "dcmCountLocationsByStatus": {
+      "title": "Count Locations by Status",
+      "description": "Indicate to include counts of locations with status != 0 (=OK) for this Storage System by RESTful service to list Storage Systems; false if absent.",
+      "type": "boolean",
+      "default": false
     },
     "dcmDigestAlgorithm": {
       "title": "Algoritmo per il Digest",
