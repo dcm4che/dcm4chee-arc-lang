@@ -101,6 +101,7 @@
     "dcmKeyValueRetentionFetchSize",
     "dcmUPSUpdateWithoutTransactionUID",
     "dcmQStarVerificationFetchSize",
+    "dcmIdentifyPatientByOtherPatientIDs",
     "hl7PSUForRequestedProcedure",
     "hl7PSUTemplateParam",
     "hl7PSUMWL",
@@ -1929,6 +1930,12 @@
         5,
         -1
       ]
+    },
+    "dcmIdentifyPatientByOtherPatientIDs": {
+      "title": "Identify Patient by Other PatientIDs",
+      "description": "Indicates to use multiple Patient IDs - provided in the Other Patient ID Sequence of DICOM objects or in repeating PID-3 Patient Identifier List field in HL7 v2 messages - for Patient Identification. If false, only the primary patient identifier of DICOM objects or for HL7 messages (with repeating patient identifiers in PID-3) only the patient identifier picked by Assigning Authority specified in 'HL7 Primary Assigning Authority of Patient ID', will be used.",
+      "type": "boolean",
+      "default": false
     },
     "dcmAttributeFilter": {
       "title": "Attribute Filter",
