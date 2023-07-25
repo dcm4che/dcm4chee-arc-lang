@@ -1937,7 +1937,7 @@
       "type": "string"
     },
     "dcmTrustedIssuerOfPatientID": {
-      "title": "Trusted Issuer of Patient IDs",
+      "title": "Trusted Issuer of Patient ID",
       "description": "Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. If both, this field and 'Trusted Issuer of Patient ID Pattern' are configured, Patient IDs not qualified by trusted Assigning Authority matching the pattern specified in 'Trusted Issuer of Patient ID Pattern', will be checked against one of the specified Assigning Authorities in this field. If Patient IDs are not qualified by either of these fields, they won't be used for identifying the Patient. If neither this field nor 'Trusted Issuer of Patient ID Pattern' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
       "items" : {
