@@ -1931,9 +1931,14 @@
         -1
       ]
     },
+    "dcmTrustedIssuerOfPatientIDPattern": {
+      "title": "Trusted Issuer of Patient ID Pattern",
+      "description": "Regular Expression identifying trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. If both, this field and 'Trusted Issuer of Patient ID' are configured, Patient IDs not qualified by trusted Assigning Authority matching the specified pattern, will be checked against one of the specified Assigning Authorities in 'Trusted Issuer of Patient ID' field. If Patient IDs are not qualified by either of these fields, they won't be used for identifying the Patient. If neither this field nor 'Trusted Issuer of Patient ID' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient.",
+      "type": "string"
+    },
     "dcmTrustedIssuerOfPatientID": {
       "title": "Trusted Issuer of Patient IDs",
-      "description": "Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. Patient IDs not qualified by one of the specified Assigning Authorities, will not be used for identifying the Patient. If not present, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
+      "description": "Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. If both, this field and 'Trusted Issuer of Patient ID Pattern' are configured, Patient IDs not qualified by trusted Assigning Authority matching the pattern specified in 'Trusted Issuer of Patient ID Pattern', will be checked against one of the specified Assigning Authorities in this field. If Patient IDs are not qualified by either of these fields, they won't be used for identifying the Patient. If neither this field nor 'Trusted Issuer of Patient ID Pattern' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
       "items" : {
         "type": "string"
