@@ -63,6 +63,7 @@
     "SAVE" : "СОХРАНИТЬ",
     "SAVE_CHANGES" : "СОХРАНИТЬ ИЗМЕНЕНИЯ",
     "SCHEDULED" : "ЗАПЛАНИРОВАНО",
+    "SCHEDULED_FOR_RETRY": "SCHEDULED FOR RETRY",
     "SEARCH" : "ПОИСК",
     "SEND" : "ОТПРАВИТЬ",
     "SEND_ALL_STUDIES" : "ОТПРАВИТЬ ВСЕ ИССЛЕДОВАНИЯ",

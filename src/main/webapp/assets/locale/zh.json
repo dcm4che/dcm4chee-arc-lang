@@ -58,6 +58,7 @@
     "SAVE": "保存",
     "SAVE_CHANGES": "保存更改",
     "SCHEDULED": "预定",
+    "SCHEDULED_FOR_RETRY": "SCHEDULED FOR RETRY",
     "SEARCH": "搜索",
     "SEND": "发送",
     "SEND_ALL_STUDIES": "发送所有检查",

@@ -63,6 +63,7 @@
     "SAVE": "Speichern",
     "SAVE_CHANGES": "Änderungen speichern",
     "SCHEDULED": "Geplant",
+    "SCHEDULED_FOR_RETRY": "SCHEDULED FOR RETRY",
     "SEARCH": "Suchen",
     "SEND": "Senden",
     "SEND_ALL_STUDIES": "Alle Studien senden",
