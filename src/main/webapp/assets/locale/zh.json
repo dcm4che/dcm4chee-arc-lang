@@ -2355,6 +2355,8 @@
     "upload-dicom.select_the_ae_title": "选择AE标题",
     "upload-dicom.title": "上传DICOM数据",
     "upload-file.title": "上传图像、视频或, PDF, CDA, MTL, STL, OBJ or Genozip进行检查",
+    "upload-file.title_upload_study": "Upload image, video, PDF, CDA, MTL, STL, OBJ or Genozip files to study",
+    "upload-file.title_upload_series": "Upload image, video, PDF, CDA, MTL, STL, OBJ or Genozip files to series",
     "upload-files.gif_with_multi_frames_in_it": "包含多帧的GIF",
     "upload-files.imported_": "已导入 ",
     "upload-files.no_web_application_with_the_web_service_class_stow_rs_found_in_this_device": "No Web Application with the Web Service Class \"STOW_RS\" found in this device",

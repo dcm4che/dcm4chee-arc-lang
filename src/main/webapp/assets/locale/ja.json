@@ -2393,6 +2393,8 @@
     "upload-dicom.select_the_ae_title": "AE タイトルを 選択 する:",
     "upload-dicom.title": "DICOM データを アップロード する",
     "upload-file.title": "画像, ビデオ, PDF, CDA, MTL, STL, OBJ または Genozipを 検査に アップロード する",
+    "upload-file.title_upload_study": "Upload image, video, PDF, CDA, MTL, STL, OBJ or Genozip files to study",
+    "upload-file.title_upload_series": "Upload image, video, PDF, CDA, MTL, STL, OBJ or Genozip files to series",
     "upload-files.gif_with_multi_frames_in_it": "マルチ フレームを 含む GIF",
     "upload-files.imported_": "インポート済み ",
     "upload-files.no_web_application_with_the_web_service_class_stow_rs_found_in_this_device": "この デバイスに ウェブ サービス クラス \"STOW_RS\" もって ウェブ アプリケーション サービスが 見つかりません",

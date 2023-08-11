@@ -2392,6 +2392,8 @@
     "upload-dicom.select_the_ae_title": "AE का नाम चुने:",
     "upload-dicom.title": "DICOM डेटा अपलोड करें ।",
     "upload-file.title": "स्टडी पर फोटो, वीडियो, PDF, CDA, MTL, STL, OBJ या Genozip अपलोड करें ।",
+    "upload-file.title_upload_study": "Upload image, video, PDF, CDA, MTL, STL, OBJ or Genozip files to study",
+    "upload-file.title_upload_series": "Upload image, video, PDF, CDA, MTL, STL, OBJ or Genozip files to series",
     "upload-files.gif_with_multi_frames_in_it": "मल्टी फ्रेम GIF",
     "upload-files.imported_": "आयातित ",
     "upload-files.no_web_application_with_the_web_service_class_stow_rs_found_in_this_device": "इस डिवाइस में 'STOW-RS' वेब सेवा वर्ग के वेब अनुप्रयोग नहीं मिले ।",

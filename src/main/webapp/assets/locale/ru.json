@@ -2396,6 +2396,8 @@
     "upload-dicom.select_the_ae_title" : "Выбрать ae заголовок:",
     "upload-dicom.title" : "Загрузка ДАЙКОМ данных",
     "upload-file.title" : "Загрузить файлы изображения, видео, PDF, CDA, MTL, STL, OBJ или Genozip в исследование",
+    "upload-file.title_upload_study": "Upload image, video, PDF, CDA, MTL, STL, OBJ or Genozip files to study",
+    "upload-file.title_upload_series": "Upload image, video, PDF, CDA, MTL, STL, OBJ or Genozip files to series",
     "upload-files.gif_with_multi_frames_in_it" : "Gif с несколькими кадрами внутри",
     "upload-files.imported_" : "Импортированный ",
     "upload-files.no_web_application_with_the_web_service_class_stow_rs_found_in_this_device" : "На этом устройстве не найдено Веб-приложение с Классом Веб-службы STOW_RS",
