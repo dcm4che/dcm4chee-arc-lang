@@ -389,7 +389,7 @@
       "format": "webApp"
     },
     "dcmExternalWadoRSHttpStatusCode": {
-      "title": "External WADO-RSHTTP Status Code",
+      "title": "External WADO-RS HTTP Status Code",
       "description": "HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level.",
       "type": "integer",
       "enum": [
