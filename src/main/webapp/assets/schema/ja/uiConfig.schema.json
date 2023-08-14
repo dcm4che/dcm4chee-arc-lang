@@ -98,6 +98,24 @@
         "$.dcmDevice.dcmArchiveDevice.dcmArchiveAttributeCoercion[*].dcmMergeLocalMWLWorklistLabel[*]"
       ]
     },
+    "dcmuiInstitutionNameFilterType": {
+      "title": "Institution Name Filter Type",
+      "description": "This will define how the Institution Name filter used in the Navigation Page should be displayed and if there should be a prefilled dropdown and where to get those data from",
+      "type": "string",
+      "enum": [
+        "simple_filed|Simple input field|Simple input field",
+        "ui_config|Dropdown by using this config ( See next field 'Institution Names' )|Dropdown by using this config",
+        "db|Dropdown will be prefilled with the strings coming by calling the service '../institutions'|Dropdown by querying the Database"
+      ]
+    },
+    "dcmuiInstitutionName": {
+      "title": "Institution Names",
+      "description": "This will be used in combination with the previous field 'Institution Name Filter Type' to prefill the Dropdown of the Filter Institution Names in the Navigation Page",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "dcmuiAetConfig": {
       "title": "AET ドロップダウン リスト",
       "description": "UIの ドロップダウン リストに 表示する AETを 定義 します。",

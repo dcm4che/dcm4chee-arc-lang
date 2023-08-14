@@ -78,7 +78,8 @@
         "ALWAYS",
         "SAME_SOURCE",
         "SAME_SERIES",
-        "SAME_SOURCE_AND_SERIES"
+        "SAME_SOURCE_AND_SERIES",
+        "EVEN_WITH_EQUAL_DIGEST"
       ]
     },
     "dcmRecordAttributeModification": {
@@ -374,7 +375,23 @@
       "title": "Fallback WADO-URI HTTP Status Code",
       "description": "HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level.",
       "type": "integer",
-      "default": 303,
+      "enum": [
+        301,
+        302,
+        303,
+        307
+      ]
+    },
+    "dcmExternalWadoRSWebAppName": {
+      "title": "External WADO-RS Web Application Name",
+      "description": "Name of external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. Overwrites value specified on Device level.",
+      "type": "string",
+      "format": "webApp"
+    },
+    "dcmExternalWadoRSHttpStatusCode": {
+      "title": "External WADO-RSHTTP Status Code",
+      "description": "HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level.",
+      "type": "integer",
       "enum": [
         301,
         302,

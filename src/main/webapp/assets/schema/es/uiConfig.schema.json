@@ -4,7 +4,7 @@
   "type": "object",
   "required": [
     "dcmuiConfigName",
-    "dcmuiPatientIdVisibility"
+    "dcmuiHideOtherPatientIDs"
   ],
   "properties": {
     "dcmuiConfigName": {
@@ -43,20 +43,15 @@
       "description": "Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px ",
       "type": "string"
     },
-    "dcmuiPatientIdVisibility": {
-      "title": "Hide additional Patient ID-s",
-      "description": "If you set it to true, in the navigation table only the main ID-s of the Patient will be visible",
+    "dcmuiHideOtherPatientIDs": {
+      "title": "Hide Other Patient IDs",
+      "description": "Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.",
       "type": "boolean",
       "default": false
     },
     "dcmuiLogoURL": {
       "title": "Logo URL",
       "description": "Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background",
-      "type": "string"
-    },
-    "dcmuiAboutInfo": {
-      "title": "About Info",
-      "description": "Here you can add the information about the About page if you want to change the default info by using following keywords, for example like this:<code>title=\"J4Care\", subtitle=\"SMooTH Archive\", company_name=\"J4Care GmbH\", street=\"Enzersdorfer Strasse 7\", postal_code=\"A-2340\", town=\"Mödling\"</code>",
       "type": "string"
     },
     "dcmuiDateTimeFormat": {
@@ -102,6 +97,24 @@
         "$.dcmDevice.hl7Application[*].dcmArchiveHL7Application.dcmMWLWorklistLabel",
         "$.dcmDevice.dcmArchiveDevice.dcmArchiveAttributeCoercion[*].dcmMergeLocalMWLWorklistLabel[*]"
       ]
+    },
+    "dcmuiInstitutionNameFilterType": {
+      "title": "Institution Name Filter Type",
+      "description": "This will define how the Institution Name filter used in the Navigation Page should be displayed and if there should be a prefilled dropdown and where to get those data from",
+      "type": "string",
+      "enum": [
+        "simple_filed|Simple input field|Simple input field",
+        "ui_config|Dropdown by using this config ( See next field 'Institution Names' )|Dropdown by using this config",
+        "db|Dropdown will be prefilled with the strings coming by calling the service '../institutions'|Dropdown by querying the Database"
+      ]
+    },
+    "dcmuiInstitutionName": {
+      "title": "Institution Names",
+      "description": "This will be used in combination with the previous field 'Institution Name Filter Type' to prefill the Dropdown of the Filter Institution Names in the Navigation Page",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
     },
     "dcmuiAetConfig": {
       "title": "AET drop-down list",
