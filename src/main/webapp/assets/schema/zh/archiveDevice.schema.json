@@ -34,7 +34,9 @@
     "dcmSpanningCFindSCPPolicy",
     "dcmFallbackCMoveSCPRetries",
     "dcmFallbackWadoURIHttpStatusCode",
+    "dcmFallbackWadoURIRedirectOnNotFound",
     "dcmExternalWadoRSHttpStatusCode",
+    "dcmExternalWadoRSRedirectOnNotFound",
     "dcmTaskFetchSize",
     "dcmUPSProcessingFetchSize",
     "dcmRetrieveTaskWarningOnNoMatch",
@@ -652,6 +654,12 @@
         307
        ]
     },
+    "dcmFallbackWadoURIRedirectOnNotFound": {
+      "title": "Fallback WADO-URI Redirect On Not Found",
+      "description": "Indicates if WADO-URI requests are forwarded to configured Fallback WADO-URI Web Application Name even if the object was not found or - if set to false - only if the object is no longer accessible on this archive. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "boolean",
+      "default": false
+    },
     "dcmExternalWadoRSWebAppName": {
       "title": "External WADO-RS Web Application Name",
       "description": "Name of external Web Application to redirect WADO RS requests if some of the requested objects are no longer accessible on this archive. May be overwritten by configured values for particular Archive Network AEs.",
@@ -669,6 +677,12 @@
         303,
         307
        ]
+    },
+    "dcmExternalWadoRSRedirectOnNotFound": {
+      "title": "External WADO-RS Redirect On Not Found",
+      "description": "Indicates if WADO-RS requests are forwarded to configured External WADO-RS Web Application Name even if the requested objects were not found or - if set to false - only if some of the requested objects are no longer accessible on this archive. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "boolean",
+      "default": false
     },
     "dcmFallbackCMoveSCPCallingAET": {
       "title": "回退C-Move SCP呼叫AE标题",

@@ -367,7 +367,7 @@
     },
     "dcmFallbackWadoURIWebAppName": {
       "title": "Fallback WADO-URI Web Application Name",
-      "description": "Name of external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. Overwrites value specified on Device level.",
+      "description": "Name of external Web Application to redirect WADO-URI requests if the requested Object is not available by this archive. Overwrites value specified on Device level.",
       "type": "string",
       "format": "webApp"
     },
@@ -382,15 +382,20 @@
         307
       ]
     },
+    "dcmFallbackWadoURIRedirectOnNotFound": {
+      "title": "Fallback WADO-URI Redirect On Not Found",
+      "description": "Indicates if WADO-URI requests are forwarded to configured Fallback WADO-URI Web Application Name even if the object was not found or - if set to false - only if the object is no longer accessible on this archive. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmExternalWadoRSWebAppName": {
       "title": "External WADO-RS Web Application Name",
-      "description": "Name of external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. Overwrites value specified on Device level.",
+      "description": "Name of external Web Application to redirect WADO-RS requests if the requested Object is not available by this archive. Overwrites value specified on Device level.",
       "type": "string",
       "format": "webApp"
     },
     "dcmExternalWadoRSHttpStatusCode": {
       "title": "External WADO-RS HTTP Status Code",
-      "description": "HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level.",
+      "description": "HTTP Status code of Redirect Response configured by External WADO-RS Web Application Name. Overwrites value specified on Device level.",
       "type": "integer",
       "enum": [
         301,
@@ -398,6 +403,11 @@
         303,
         307
       ]
+    },
+    "dcmExternalWadoRSRedirectOnNotFound": {
+      "title": "External WADO-RS Redirect On Not Found",
+      "description": "Indicates if WADO-RS requests are forwarded to configured External WADO-RS Web Application Name even if the requested objects were not found or - if set to false - only if some of the requested objects are no longer accessible on this archive. Overwrites value specified on Device level.",
+      "type": "boolean"
     },
     "dcmFallbackCMoveSCPCallingAET": {
       "title": "Fallback C-Move SCP Calling AE title",
