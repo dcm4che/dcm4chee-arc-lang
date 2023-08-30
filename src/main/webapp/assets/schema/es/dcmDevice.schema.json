@@ -163,58 +163,6 @@
       "items" : {
         "$ref": "uiConfig.schema.json"
       }
-    },
-    "xdsAdConfig": {
-      "title": "XDS Administrator Configuration",
-      "description": "XDS Administrator Configuration",
-      "titleKey":"{xdsAdConfigName}",
-      "type": "array",
-      "order":35,
-      "items" : {
-      "$ref": "xdsAdministratorConfig.schema.json"
-      }
-    },
-    "agfaMigrationConfig": {
-      "title": "AGFA Migration Configuration",
-      "description": "AGFA Migration Configuration",
-      "order":36,
-      "$ref": "agfaMigrationConfig.schema.json" 
-    },
-    "studyUpdaterConfig": {
-      "title": "Study Updater Configuration",
-      "description": "Study Updater Configuration",
-      "order":37,
-      "$ref": "studyUpdaterConfig.schema.json" 
-    },
-    "dicomRouter": {
-      "title": "DICOM Router Configuration",
-      "description": "DICOM Router Configuration",
-      "order":38,
-      "$ref": "dicomRouterConfig.schema.json"
-    },
-    "pixpdqCoercionProcessor": {
-      "title": "PIX PDQ Coercion Processor Configuration",
-      "description": "PIX PDQ Coercion Processor Configuration",
-      "order":39,
-      "$ref": "pixPdqCoercionProcessor.schema.json" 
-    },
-    "restCoercionProcessor": {
-      "title": "REST Coercion Processor Configuration",
-      "description": "REST Coercion Processor Configuration",
-      "order":40,
-      "$ref": "restCoercionProcessor.schema.json"
-    },
-    "workflowManager": {
-      "title": "Workflow Manager",
-      "description": "Workflow Manager",
-      "order":41,
-      "$ref": "workflowManagerConfig.schema.json" 
-    },
-    "mpiEmulator": {
-      "title": "MPI Emulator",
-      "description": "MPI Emulator",
-      "order":42,
-      "$ref": "mpiEmulatorConfig.schema.json"
     }
   }
 }
