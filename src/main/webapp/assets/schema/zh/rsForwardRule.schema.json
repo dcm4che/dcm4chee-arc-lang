@@ -69,6 +69,7 @@
           "LinkStudyToMWLMerge",
           "CreateMWL",
           "UpdateMWL",
+          "UpdateMWLStatus",
           "DeleteMWL"
         ]
       }
