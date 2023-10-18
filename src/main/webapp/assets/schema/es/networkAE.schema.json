@@ -1,6 +1,6 @@
 {
-  "title": "Network AE",
-  "description": "Application entity that provides services on a network",
+  "title": "Red AE",
+  "description": "Entidad de aplicación que proporciona servicios en una red.",
   "type": "object",
   "required": [
     "dicomAETitle",
@@ -10,8 +10,8 @@
   ],
   "properties": {
     "dicomAETitle": {
-      "title": "AE Title",
-      "description": "Unique AE title for this Network AE",
+      "title": "Título de AE",
+      "description": "Título único de AE para este AE de red.",
       "type": "string",
       "order":1,
       "use": [
@@ -49,8 +49,8 @@
       ]
     },
     "dicomNetworkConnectionReference": {
-      "title": "Network Connection Reference",
-      "description": "JSON Pointers to the Network Connection objects for this AE",
+      "title": "Referencia de conexión de red",
+      "description": "Punteros JSON a los objetos de conexión de red para este AE.",
       "type": "array",
       "order":2,
       "items": {
@@ -58,22 +58,22 @@
       }
     },
     "dicomAssociationInitiator": {
-      "title": "Association Initiator",
-      "description": "True if the Network AE can initiate associations.",
+      "title": "Iniciador de asociación",
+      "description": "Verdadero si el AE de red puede iniciar asociaciones.",
       "type": "boolean",
       "default": true,
       "order":3
     },
     "dicomAssociationAcceptor": {
-      "title": "Association Acceptor",
-      "description": "True if the Network AE can accept associations.",
+      "title": "Aceptador de asociaciones",
+      "description": "Verdadero si el AE de red puede aceptar asociaciones.",
       "type": "boolean",
       "default": true,
       "order":4
     },
     "dicomDescription": {
-      "title": "AE Description",
-      "description": "Unconstrained text description of the application entity",
+      "title": "Descripción AE",
+      "description": "Descripción de texto sin restricciones de la entidad de aplicación.",
       "type": "string",
       "order":5
     },
@@ -87,8 +87,8 @@
       }
     },
     "dicomPreferredCalledAETitle": {
-      "title": "Preferred Called AE Title",
-      "description": "AE Title(s) that are preferred for initiating associations",
+      "title": "Título preferido de la AE que llama",
+      "description": "Título(s) preferido(s) de la AE que inicia la asociación.",
       "type": "array",
       "order":7,
       "items": {
@@ -96,8 +96,8 @@
       }
     },
     "dicomPreferredCallingAETitle": {
-      "title": "Preferred Calling AE Title",
-      "description": "AE Title(s) that are preferred for accepting associations",
+      "title": "Título preferido del AE llamante",
+      "description": "Título(s) del AE preferido(s) para aceptar asociaciones.",
       "type": "array",
       "order":8,
       "items": {
@@ -105,8 +105,8 @@
       }
     },
     "dicomSupportedCharacterSet": {
-      "title": "Supported Character Set",
-      "description": "Character Set(s) supported by the Network AE for data sets it receives",
+      "title": "Juego de caracteres admitido",
+      "description": "Juego(s) de caracteres admitido(s) por el AE de red para los conjuntos de datos que recibe.",
       "type": "array",
       "order":9,
       "items": {
@@ -115,14 +115,14 @@
       "format": "dcmCharset"
     },
     "dicomInstalled": {
-      "title": "installed",
-      "description": "True if the AE is installed on network. If not present, information about the installed status of the AE is inherited from the device",
+      "title": "instalado",
+      "description": "Verdadero si el AE está instalado en la red. Si no está presente, la información sobre el estado instalado del AE se hereda del dispositivo.",
       "order":10,
       "type": "boolean"
     },
     "dicomTransferCapability": {
-      "title": "Transfer Capabilities",
-      "description": "Transfer capabilities provided by the application entity",
+      "title": "Capacidades de transferencia",
+      "description": "Capacidades de transferencia proporcionadas por la entidad de aplicación.",
       "type": "array",
       "order":11,
       "titleKey":"{cn}",
@@ -131,8 +131,8 @@
       }
     },
     "dcmNetworkAE": {
-      "title": "Network AE Extension",
-      "description": "dcm4che proprietary Attributes of Network AE",
+      "title": "Extensión AE de red",
+      "description": "dcm4che atributos propietarios de AE de red.",
       "$ref": "dcmNetworkAE.schema.json",
       "order":12
     }

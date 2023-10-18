@@ -1,6 +1,6 @@
 {
-  "title": "RESTful Forward Rule",
-  "description": "RESTful Forward Rule",
+  "title": "Regla de reenvío RESTful",
+  "description": "Regla de reenvío RESTful.",
   "type": "object",
   "required": [
     "cn",
@@ -10,34 +10,34 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the RESTful Forward Rule",
+      "title": "Nombre",
+      "description": "Nombre arbitrario/significativo de la regla de reenvío RESTful.",
       "type": "string"
     },
     "dcmWebAppName": {
-      "title": "Web Application name",
-      "description": "Name of the Web Application",
+      "title": "Nombre de aplicación de la red",
+      "description": "Nombre de la aplicación de la red.",
       "type": "string",
       "format": "webApp"
     },
     "dcmURIPattern": {
-      "title": "Request URL Pattern",
-      "description": "Only forward requests which match the given Regular Expression. If prefixed with !, only forward requests which does not match the given Regular Expression.",
+      "title": "Patrón de URL de solicitud",
+      "description": "Reenviar sólo las solicitudes que coincidan con la expresión regular indicada. Si el prefijo es !, solamente se reenviará las peticiones que no coincidan con la Expresión Regular dada.",
       "type": "string"
     },
     "dcmHostnamePattern": {
-      "title": "Hostname Pattern",
-      "description": "Only forward requests received from clients which hostname match the given Regular Expression. If prefixed with !, only forward requests from clients which hostname does not match the given Regular Expression.",
+      "title": "Patrón de nombre del anfitrión",
+      "description": "Reenviar sólo las peticiones recibidas de clientes cuyo nombre de anfitrión coincida con la Expresión regular dada. Si el prefijo es !, solamente se reenviará las peticiones de clientes cuyo nombre de anfitrión no coincida con la Expresión Regular dada.",
       "type": "string"
     },
     "dcmIPAddressPattern": {
-      "title": "IP Address Pattern",
-      "description": "Only forward requests received from clients which match the given Regular Expression. If prefixed with !, only forward requests from clients which IP address does not match the given Regular Expression.",
+      "title": "Patrón de Dirección IP",
+      "description": "Reenviar sólo las peticiones recibidas de clientes que coincidan con la Expresión Regular dada. Si el prefijo es !, solamente se reenviará las peticiones de clientes cuya dirección IP no coincida con la Expresión Regular dada.",
       "type": "string"
     },
     "dcmRSOperation": {
-      "title": "RESTful Operation",
-      "description": "Name of RESTful Operation which shall be forwarded to another archive instance.",
+      "title": "Operación RESTful",
+      "description": "Nombre de la operación RESTful que se reenviará a otra instancia de archivo.",
       "type": "array",
       "items" : {
         "type": "string",

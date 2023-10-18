@@ -1,6 +1,6 @@
 {
-  "title": "Archive Attribute Coercion - New",
-  "description": "Archive Attribute Coercion of received/sent DIMSE",
+  "title": "Coerción de atributos de archivo - Nuevo",
+  "description": "Coerción de atributos de archivo de DIMSE recibidos/enviados",
   "type": "object",
   "required": [
     "cn",
@@ -14,29 +14,29 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the Archive Attribute Coercion",
+      "title": "Nombre",
+      "description": "Nombre arbitrario/significativo del atributo de archivo Coerción",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "Attribute Coercion Description",
-      "description": "Unconstrained text description of the Attribute Coercion",
+      "title": "Descripción de la coerción de atributos",
+      "description": "Descripción de texto sin restricciones de la coacción de atributos",
       "type": "string"
     },
     "dcmURI": {
-      "title": "Attribute Coercion URI",
-      "description": "Identifies Attribute Coercion by Uniform Resource Identifier. Refer values you can set for <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-uri\" target=\"_blank\">Attribute Coercion URI</a> field depending on the coercion type.",
+      "title": "URI de coerción de atributos",
+      "description": "Identifica la coerción de atributos mediante un identificador uniforme de recursos. Valores de referencia que puede establecer para <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-uri\" target=\"_blank\"> URI de coerción de atributos </a> en función del tipo de coerción.",
       "type": "string"
     },
     "dcmCoercionSufficient": {
-      "title": "Attribute Coercion Sufficient",
-      "description": "Do not apply other matching Attribute Coercions of lesser priority, if this Attribute Coercion was applied effectively.",
+      "title": "Atributo Coerción Suficiente",
+      "description": "No aplicar otras Coerciones de Atributo coincidentes de menor prioridad, si esta Coerción de Atributo fue aplicada efectivamente.",
       "type": "boolean",
       "default": false
     },
     "dcmCoercionOnFailure": {
-      "title": "Attribute Coercion on Failure",
-      "description": "Behavior on failure applying this Attribute Coercion. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-on-failure\" target=\"_blank\">Attribute Coercion on Failure meanings.</a>",
+      "title": ": Coerción de atributos en caso de fallo",
+      "description": "Comportamiento en caso de fallo al aplicar esta coacción de atributo. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-on-failure\" target=\"_blank\"> Atributo Coacción sobre significados de fallo.</a>",
       "type": "string",
       "default": "RETHROW",
       "enum": [
@@ -46,15 +46,15 @@
       ]
     },
     "dcmRulePriority": {
-      "title": "Attribute Coercion Priority",
-      "description": "Rule Priority. Higher priority rule takes precedence.",
+      "title": "Atributo Prioridad de Coerción",
+      "description": "Prioridad de la regla. La regla de mayor prioridad tiene prioridad.",
       "type": "integer",
       "default" : 0,
       "minimum": 0
     },
     "dcmDIMSE": {
       "title": "DIMSE",
-      "description": "DICOM Message Element on which this Attribute Coercion shall be applied. Also <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dimse\" target=\"_blank\">applicable if the requests are received over web.</a>",
+      "description": "Elemento de mensaje DICOM al que se aplicará esta coerción de atributo. También <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dimse\" target=\"_blank\">aplicable si las solicitudes se reciben a través de la web.</a>",
       "type": "string",
       "enum": [
         "N_CREATE_RQ",
@@ -64,8 +64,8 @@
       ]
     },
     "dicomTransferRole": {
-      "title": "DICOM Transfer Role",
-      "description": "DICOM Transfer Role of peer DICOM AE.",
+      "title": "Función de transferencia DICOM",
+      "description": "Función de transferencia DICOM del par DICOM AE.",
       "type": "string",
       "enum": [
         "SCU",
@@ -74,7 +74,7 @@
     },
     "dcmSOPClass": {
       "title": "SOP Class UID",
-      "description": "UID of SOP Class for which this Attribute Coercion shall be applied. Apply on any if absent.",
+      "description": "UID de la clase SOP a la que se aplicará esta coerción de atributos. Aplicar sobre cualquiera si está ausente.",
       "type": "array",
       "items": {
         "type": "string"
@@ -82,8 +82,8 @@
       "format": "dcmSOPClass"
     },
     "dcmProperty": {
-      "title": "Condition",
-      "description": "Conditions in format {key}[!]={value}. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">applicability, format and some examples.</a>",
+      "title": "Condición",
+      "description": "Condiciones en formato {key}[!]={value}.  <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\"> aplicabilidad, formato y algunos ejemplos.</a>",
       "type": "array",
       "items": {
         "type": "string"
@@ -91,8 +91,8 @@
       "format": "dcmProperty"
     },
     "dcmAttributeUpdatePolicy": {
-      "title": "Attribute Update Policy",
-      "description": "Applied Attribute Update Policy. Only effective for coerce from Leading C-FIND SCP coercion type. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy\" target=\"_blank\">Attribute Update Policies' meanings.</a>",
+      "title": "Política de actualización de atributos",
+      "description": "Política de actualización de atributos aplicada. Sólo efectivo para coerce desde Leading C-FIND SCP tipo de coerción. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy\" target=\"_blank\"> Significado de las políticas de actualización de atributos.</a>",
       "type": "string",
       "default": "MERGE",
       "enum": [
@@ -103,14 +103,14 @@
       ]
     },
     "dcmSupplementFromDeviceReference": {
-      "title": "Device Name Coercion Parameter",
-      "description": "Device Name Coercion Parameter. Only effective for supplementing from device coercion type.",
+      "title": "Parámetro de coerción del nombre del dispositivo",
+      "description": "Parámetro de coerción de nombre de dispositivo. Sólo es efectivo para complementar desde el tipo de coerción de dispositivo.",
       "type": "string",
       "format": "dicomDeviceName"
     },
     "dcmMergeAttribute": {
-      "title": "DICOM Attribute Coercion Parameters",
-      "description": "DICOM Attribute Coercion Parameters in format {attributeID}={value}. {attributeID} inside of {value} may be replaced by the value of that attribute in the original dataset. Only effective for merging attributes coercion type. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dicom-attribute-coercion-parameters\" target=\"_blank\">formatting options and examples.</a>",
+      "title": "Parámetros de coerción de atributos DICOM",
+      "description": "Parámetros de coerción de atributos DICOM en formato {attributeID}={value}. {attributeID} dentro de {value} puede sustituirse por el valor de ese atributo en el conjunto de datos original. Sólo es efectivo para fusionar atributos de tipo coerción. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dicom-attribute-coercion-parameters\" target=\"_blank\"> opciones de formato y ejemplos.</a>",
       "type": "array",
       "items": {
         "type": "string"
@@ -118,8 +118,8 @@
       "format": "dcmProperty"
     },
     "dcmCoercionParam": {
-      "title": "Other Coercion Parameters",
-      "description": "Refer applicability to coercion types and examples in <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#other-coercion-parameters\" target=\"_blank\">Other Attribute Coercion specific Parameters</a>",
+      "title": "Otros parámetros de coerción",
+      "description": "Consulte la aplicabilidad a los tipos de coerción y los ejemplos en <a href=https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#other-coercion-parameters target=\"_blank\"> Otros parámetros específicos de la coerción de atributos</a>",
       "type": "array",
       "items": {
         "type": "string"

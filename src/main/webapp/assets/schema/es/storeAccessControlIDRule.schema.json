@@ -1,6 +1,6 @@
 {
-  "title": "Store Access Control ID Rule",
-  "description": "Store Access Control ID Rule",
+  "title": "Regla de ID de control de acceso a la tienda",
+  "description": "Regla de ID de control de acceso a la tienda.",
   "type": "object",
   "required": [
     "cn",
@@ -9,25 +9,25 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the Store Access Control ID Rule",
+      "title": "Nombre",
+      "description": "Nombre arbitrario/significativo de la regla de ID de control de acceso al almacén.",
       "type": "string"
     },
     "dcmStoreAccessControlID": {
-      "title": "Store Access Control ID",
-      "description": "Access Control ID assigned to Studies which attributes match all conditions",
+      "title": "ID de control de acceso de la tienda",
+      "description": "ID de control de acceso asignado a los estudios cuyos atributos coinciden con todas las condiciones.",
       "type": "string"
     },
     "dcmRulePriority": {
-      "title": "Rule Priority",
-      "description": "Rule Priority.",
+      "title": "Prioridad de la regla",
+      "description": "Prioridad de la regla.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmProperty": {
-      "title": "Conditions",
-      "description": "Conditions in format {key}[!]={value}. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">applicability, format and some examples.</a>",
+      "title": "Condiciones",
+      "description": "Condiciones en formato {key}[!]={value}. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">aplicabilidad, formato y algunos ejemplos.</a>",
       "type": "array",
       "items": {
         "type": "string"

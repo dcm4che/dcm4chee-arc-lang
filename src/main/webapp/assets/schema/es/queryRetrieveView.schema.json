@@ -1,6 +1,6 @@
 {
-  "title": "Query Retrieve View",
-  "description": "Specifies behavior on Rejection Note Stored",
+  "title": "Vista de consulta/recuperación",
+  "description": "Especifica el comportamiento de la nota de rechazo almacenada.",
   "type": "object",
   "required": [
     "dcmQueryRetrieveViewID",
@@ -8,16 +8,16 @@
   ],
   "properties": {
     "dcmQueryRetrieveViewID": {
-      "title": "Query/Retrieve View ID",
-      "description": "Query/Retrieve View Identifier",
+      "title": "ID de vista de consulta/recuperación",
+      "description": "Identificador de vista de consulta/recuperación.",
       "type": "string",
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmQueryRetrieveViewID"
       ]
     },
     "dcmShowInstancesRejectedByCode": {
-      "title": "Show Instances Rejected By Code",
-      "description": "Indicates if the Q/R Services shall show instances rejected by the specified code in format (CV, CSD, 'CM')",
+      "title": "Mostrar instancias rechazadas por código",
+      "description": "Indica si los servicios Q/R deben mostrar las instancias rechazadas por el código especificado en formato (CV, CSD, 'CM').",
       "type": "array",
       "items": {
         "type": "string"
@@ -25,8 +25,8 @@
       "format": "dcmRejectionNoteCode"
     },
     "dcmHideRejectionNoteWithCode": {
-      "title": "Hide Rejection Note With Code",
-      "description": "Indicates if the Q/R Services shall hide Rejection Notes with the specified code in format (CV, CSD, 'CM')",
+      "title": "Ocultar Nota de Rechazo con Código",
+      "description": "Indica si los Servicios Q/R deben ocultar las Notas de Rechazo con el código especificado en formato (CV, CSD, 'CM').",
       "type": "array",
       "items": {
         "type": "string"
@@ -34,8 +34,8 @@
       "format": "dcmRejectionNoteCode"
     },
     "dcmHideNotRejectedInstances": {
-      "title": "Hide Not Rejected Instances",
-      "description": "Indicates if the Q/R Services shall hide instances not rejected by any reason.",
+      "title": "Ocultar instancias no rechazadas",
+      "description": "Indica si los servicios de Q/R deben ocultar las instancias no rechazadas por cualquier motivo.",
       "type": "boolean",
       "default": false
     }

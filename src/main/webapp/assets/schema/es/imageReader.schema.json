@@ -1,6 +1,6 @@
 {
-  "title": "Image Reader",
-  "description": "Specifies Java Image IO Image Readers used for decompressing compressed DICOM images",
+  "title": "Lector de imágenes",
+  "description": "Especifica los lectores de imágenes Java Image IO utilizados para descomprimir imágenes DICOM comprimidas.",
   "type": "object",
   "required": [
     "dicomTransferSyntax",
@@ -8,24 +8,24 @@
   ],
   "properties": {
     "dicomTransferSyntax": {
-      "title": "Transfer Syntax",
-      "description": "Transfer Syntax of compressed DICOM image",
+      "title": "Sintaxis de transferencia",
+      "description": "Sintaxis de transferencia de imagen DICOM comprimida.",
       "type": "string",
       "format": "dcmTransferSyntax"
     },
     "dcmIIOFormatName": {
-      "title": "Image IO Reader Format Name",
-      "description": "Image IO Reader Format Name",
+      "title": "Nombre del formato del lector de imágenes IO",
+      "description": "Nombre del formato del lector de imágenes IO.",
       "type": "string"
     },
     "dcmJavaClassName": {
-      "title": "Java Class Name",
-      "description": "Fully qualified Java class of Image IO Reader. If absent, use any Image Reader found for specified Format Name",
+      "title": "Nombre de clase Java",
+      "description": "Clase Java totalmente calificada del lector de imágenes IO. Si no existe, utilice cualquier lector de imágenes encontrado para el nombre de formato especificado.",
       "type": "string"
     },
     "dcmPatchJPEGLS": {
-      "title": "Patch JPEG-LS",
-      "description": "Patch JPEG-LS before decompressing",
+      "title": "Parche JPEG-LS",
+      "description": "Parche JPEG-LS antes de descomprimir.",
       "type": "string",
       "enum": [
           "JAI2ISO",
@@ -34,8 +34,8 @@
       ]
     },
     "dcmImageReadParam": {
-      "title": "Image Read Param",
-      "description": "Image Read Parameter(s) (name=value)",
+      "title": "Parametros de lectura de imagen",
+      "description": "Parámetros de lectura de imagen (nombre=valor).",
       "type": "array",
       "items": {
         "type": "string"

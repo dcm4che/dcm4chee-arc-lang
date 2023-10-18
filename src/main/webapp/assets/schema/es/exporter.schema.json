@@ -1,6 +1,6 @@
 {
-  "title": "Exporter Descriptor",
-  "description": "Exporter Descriptor",
+  "title": "Descriptor del exportador",
+  "description": "Descriptor del exportador.",
   "type": "object",
   "required": [
     "dcmExporterID",
@@ -14,8 +14,8 @@
   ],
   "properties": {
     "dcmExporterID": {
-      "title": "Exporter ID",
-      "description": "Exporter ID",
+      "title": "ID del exportador",
+      "description": "ID del exportador.",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmExportPriorsRule[*].dcmExporterID[*]",
@@ -33,73 +33,73 @@
     },
     "dcmURI": {
       "title": "Exporter URI",
-      "description": "RFC2079: Uniform Resource Identifier. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">Exporter URI</a> that can be configured based on the exporter type.",
+      "description": "RFC2079:Identificador uniforme de recursos. Se refiere a varios <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">URI de exportador</a> que pueden configurarse en función del tipo de exportador.",
       "type": "string"
     },
     "dcmQueueName": {
-      "title": "Queue Name",
-      "description": "Task Queue Name",
+      "title": "Nombre de la cola",
+      "description": "Nombre de la cola de tareas.",
       "type": "string",
       "format":"dcmQueueName"
     },
     "dicomDescription": {
-      "title": "Exporter Description",
-      "description": "Unconstrained text description of the exporter",
+      "title": "Descripción del exportador",
+      "description": "Descripción en texto sin restricciones del exportador.",
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "Archive Application Entity (AE) title",
-      "description": "Archive Application Entity (AE) title",
+      "title": "Título de la Entidad de Aplicación (AE) de Archivo",
+      "description": "Título de la Entidad de Aplicación (AE) de Archivo.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmExportAsSourceAE": {
-      "title": "Export as Source Application Entity (AE)",
-      "description": "Mask the Archive Application Entity (AE) title by the title of the Application Entity (AE) from which a Series was received on establishing the Association to the Destination Application Entity (AE).",
+      "title": "Exportar como Entidad de Aplicación (AE) de Origen",
+      "description": "Enmascarar el título de la Entidad de Aplicación (AE) de Archivo por el título de la Entidad de Aplicación (AE) de la que se recibió una Serie al establecer la Asociación a la Entidad de Aplicación (AE) de Destino.",
       "type": "boolean",
       "default": false
     },
     "dcmDeleteStudyFromStorageID": {
-      "title": "Delete Study From Storage ID",
-      "description": "ID of Storage System from which the objects of the exported Study shall be deleted. Only effective for Export Tasks on Study level.",
+      "title": "Borrar estudio del ID de almacenamiento",
+      "description": "ID del sistema de almacenamiento del que se borrarán los objetos del estudio exportado. Sólo es efectivo para tareas de exportación a nivel de estudio.",
       "type": "string",
       "format": "dcmStorageID"
     },
     "dcmRejectForDataRetentionExpiry": {
-      "title": "Reject Entity for Data Retention Expiry",
-      "description": "Reject entity for Data Retention Expiry after export on completion of Export Task.",
+      "title": "Rechazar Entidad por Vencimiento de Retención de Datos",
+      "description": "Rechazar entidad por Vencimiento de Retención de Datos tras la exportación al finalizar la Tarea de Exportación.",
       "type": "boolean",
       "default": false
     },
     "dcmStgCmtSCP": {
-      "title": "Storage Commitment SCP AE Title",
-      "description": "AE Title of external Storage Commitment SCP used to verify export to another archive.",
+      "title": "Título AE del SCP de compromiso de almacenamiento",
+      "description": "Título AE del SCP de compromiso de almacenamiento externo utilizado para verificar la exportación a otro archivo.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
-      "title": "Ian Destination",
-      "description": "Destination to send IAN N-CREATE RQ",
+      "title": "Destino Ian",
+      "description": "Destino para enviar IAN N-CREATE RQ",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmRetrieveAET": {
-      "title": "Retrieve AE Title",
-      "description": "AE Title associated with Network AE",
+      "title": "Recuperar Título AE",
+      "description": "Título AE asociado con AE de red.",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmArchiveAETitle"
     },
     "dcmRetrieveLocationUID": {
-      "title": "Retrieve Location UID",
-      "description": "Retrieve Location UID.",
+      "title": "Recuperar UID de ubicación",
+      "description": "Recuperar UID de ubicación.",
       "type": "string",
       "pattern": "^[0-2]((\\.0)|(\\.[1-9][0-9]*))*$"
     },
     "dcmInstanceAvailability": {
-      "title": "Instance Availability",
-      "description": "Instance Availability.",
+      "title": "Disponibilidad de instancia",
+      "description": "Disponibilidad de instancia.",
       "type": "string",
       "default": "ONLINE",
       "enum": [
@@ -109,15 +109,15 @@
       ]
     },
     "dcmSchedule": {
-      "title": "Export Schedule",
-      "description": "Delay export to specified time periods. If no Export Schedule is specified, queue the export task for processing immediately. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
+      "title": "Horario de exportación",
+      "description": "Retrasa la exportación a los periodos de tiempo especificados. Si no especifica ningún calendario de exportación, la tarea de exportación se pondrá en cola para ser procesada inmediatamente. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"
     },
     "dcmProperty": {
-      "title": "Exporter Property",
-      "description": "Specify exporter properties in format {name}={value}. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">Exporter Properties</a> that can be configured based on the exporter type.",
+      "title": "Propiedad del exportador",
+      "description": "Especifique las propiedades del exportador en formato {name}={value}. Consulte varios <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">Propiedades del exportador</a> que pueden configurarse en función del tipo de exportador.",
       "type": "array",
       "items": { "type": "string" }
     }
