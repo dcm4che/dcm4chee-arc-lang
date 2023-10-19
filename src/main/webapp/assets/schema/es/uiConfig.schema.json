@@ -51,7 +51,7 @@
     },
     "dcmuiLogoURL": {
       "title": "URL del logotipo",
-      "description": " URL del logotipo para cambiar el logotipo de la interfaz de usuario, puede ser una URL relativa o absoluta, la imagen debe tener una anchura de 140px y debe estar en formato png con fondo transparente.",
+      "description": "URL del logotipo para cambiar el logotipo de la interfaz de usuario, puede ser una URL relativa o absoluta, la imagen debe tener una anchura de 140px y debe estar en formato png con fondo transparente.",
       "type": "string"
     },
     "dcmuiDateTimeFormat": {

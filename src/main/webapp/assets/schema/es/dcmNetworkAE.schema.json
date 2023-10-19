@@ -1,6 +1,6 @@
 {
   "title": "Extensión AE de red",
-  "description": "dcm4che atributos propietarios de la red AE           ",
+  "description": "dcm4che atributos propietarios de la red AE",
   "type": "object",
   "properties": {
     "dcmRoleSelectionNegotiationLenient": {

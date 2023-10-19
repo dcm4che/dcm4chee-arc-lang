@@ -1357,7 +1357,7 @@
     },
     "dcmStorageVerificationPolicy": {
       "title": "Política de verificación de almacenamiento",
-      "description": "EXISTE_REGISTRO_BD: sólo comprueba la existencia de registros de base de datos, OBJECTO_EXISTE: comprueba si el objeto existe en el sistema de almacenamiento, TAMAÑO_OBJETO: comprueba el tamaño del objeto en el sistema de almacenamiento, RECUPERAR_OBJETO: obtiene el objeto del sistema de almacenamiento), SUMADECOMPROBACIÓPN_OBJETO: recalcula la suma de comprobación del objeto en el sistema de almacenamiento, S3_MD5SUM: comprueba la suma de comprobación MD5 del objeto en el sistema de almacenamiento S3. Pueden sobrescribirse con los valores configurados para determinados EA de red de archivos. ",
+      "description": "EXISTE_REGISTRO_BD: sólo comprueba la existencia de registros de base de datos, OBJECTO_EXISTE: comprueba si el objeto existe en el sistema de almacenamiento, TAMAÑO_OBJETO: comprueba el tamaño del objeto en el sistema de almacenamiento, RECUPERAR_OBJETO: obtiene el objeto del sistema de almacenamiento), SUMADECOMPROBACIÓPN_OBJETO: recalcula la suma de comprobación del objeto en el sistema de almacenamiento, S3_MD5SUM: comprueba la suma de comprobación MD5 del objeto en el sistema de almacenamiento S3. Pueden sobrescribirse con los valores configurados para determinados EA de red de archivos.",
       "type": "string",
       "default": "OBJECT_CHECKSUM",
       "enum": [
@@ -1828,7 +1828,7 @@
     },
     "dcmRelationalRetrieveNegotiationLenient": {
       "title": "Negociación de Recuperación Relacional Leniente",
-      "description": "Indica aceptar C-MOVE y C-GET RQs sin claves únicas para niveles por encima del nivel de consulta también si el soporte para consultas relacionales no fue negociado. Puede sobrescribirse mediante el valor configurado para determinados EA de red de archivos. ",
+      "description": "Indica aceptar C-MOVE y C-GET RQs sin claves únicas para niveles por encima del nivel de consulta también si el soporte para consultas relacionales no fue negociado. Puede sobrescribirse mediante el valor configurado para determinados EA de red de archivos.",
       "type": "boolean",
       "default": false
     },
@@ -2105,7 +2105,7 @@
     },
     "dcmArchiveAttributeCoercion": {
       "title": "Coerción de atributos (heredada)",
-      "description": " Coerción de atributos aplicada a DIMSE recibidos/enviados por cualquier AE. Puede complementarse con coerciones de atributos configuradas para determinados AE de red de archivos.",
+      "description": "Coerción de atributos aplicada a DIMSE recibidos/enviados por cualquier AE. Puede complementarse con coerciones de atributos configuradas para determinados AE de red de archivos.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {

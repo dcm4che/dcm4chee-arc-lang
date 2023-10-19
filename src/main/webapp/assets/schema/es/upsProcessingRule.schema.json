@@ -39,7 +39,7 @@
     },
     "dcmSchedule": {
       "title": "Horario de procesamiento",
-      "description": "Retrasa el procesamiento a los periodos de tiempo especificados. Si no se especifica un Horario de Procesamiento, procesa ",
+      "description": "Retrasa el procesamiento a los periodos de tiempo especificados. Si no se especifica un Horario de Procesamiento, procesa",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"
