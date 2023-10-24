@@ -197,8 +197,8 @@
       "format": "dcmDuration"
     },
     "dcmSeriesMetadataFetchSize": {
-      "title": "Update Series Metadata Fetch Size",
-      "description": "Maximal number of Series scheduled for Metadata update fetched by one query.",
+      "title": "Tamaño de búsqueda de metadatos de la serie de actualización",
+      "description": "Número máximo de series programadas para la actualización de metadatos buscadas por una consulta.",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
@@ -244,8 +244,8 @@
       "format": "dcmDuration"
     },
     "dcmPurgeInstanceRecordsFetchSize": {
-      "title": "Purge Instance Records Fetch Size",
-      "description": "Maximal number of Series scheduled for purging Instance Records from the DB fetched by one query. Only effective, if Purge Instance Records = true.",
+      "title": "Purgar registros de instancia por tamaño de búsqueda",
+      "description": "Número máximo de series programadas para la purga de registros de instancia de la base de datos obtenidos por una consulta. Sólo es efectivo si Purgar Registros de Instancia = verdadero.",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
@@ -587,8 +587,8 @@
       "format": "dcmAETitle"
     },
     "dcmSpanningCFindSCPPolicy": {
-      "title": "Spanning C-Find SCP Policy",
-      "description": "Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). May be overwritten by configured values for particular Archive Network AEs.",
+      "title": "Política de Spanning de C-Find SCP",
+      "description": "Especifica la política para combinar las coincidencias devueltas por la función Spanning C-Find SCP configurada con las entradas coincidentes de la base de datos de archivos. SUPLEMENTAR (= devuelve las coincidencias locales antes que las coincidencias adicionales de Spanning C-Find SCP ), FUSIONAR (= devuelve las coincidencias de Spanning C-Find SCP antes que las coincidencias locales adicionales), SUSTITUIR (= devuelve sólo las coincidencias de Spanning C-Find SCP). Puede sobrescribirse mediante valores configurados para determinados EA de red de archivos.",
       "type": "string",
       "default": "REPLACE",
       "enum": [
@@ -619,31 +619,31 @@
       "format": "dcmArchiveAETitle"
     },
     "dcmFallbackCMoveSCPStudyOlderThan": {
-      "title": "Fallback C-Move SCP Estudio más antiguo que",
+      "title": "Redirección C-Move SCP Estudio más antiguo que",
       "description": "Especifica el umbral para la fecha del estudio en formato AAAAMMDD para marcar los estudios recibidos como (potencialmente) incompletos para aplicar la recuperación desde dcmFallbackCMoveSCP configurado.",
       "type": "string"
     },
     "dcmFallbackCMoveSCPLeadingCFindSCP": {
-      "title": "Fallback de C-Move SCP Guía de C-Find SCP",
+      "title": "Redirección C-Move SCP Guía de C-Find SCP",
       "description": "AE Título de C-FIND SCP externo para la verificación del número de instancias recuperadas de C-MOVE SCP externo especificado por dcmFallbackCMoveSCP.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmFallbackCMoveSCPRetries": {
-      "title": "Fallback C-Move SCP Reintentos",
+      "title": "Redirección C-Move SCP Reintentos",
       "description": "Número máximo de reintentos para recuperar objetos no disponibles desde C-MOVE SCP configurado por dcmFallbackCMoveSCP. -1 = para siempre.",
       "type": "integer",
       "default": 0,
       "minimum": -1
     },
     "dcmFallbackWadoURIWebAppName": {
-      "title": "Fallback WADO-URI Nombre de la Aplicación Web",
+      "title": "Redirección WADO-URI Nombre de la Aplicación Web",
       "description": "Nombre de la Aplicación Web externa para redirigir las peticiones WADO URI si el Objeto solicitado no está disponible en este archivo. Puede ser sobrescrito por los valores configurados para determinados archivos de red de EAs.",
       "type": "string",
       "format": "webApp"
     },
     "dcmFallbackWadoURIHttpStatusCode": {
-      "title": "Fallback Wado URI Código de Estado Http",
+      "title": "Redirección Wado URI Código de Estado Http",
       "description": "Código de Estado HTTP de la Respuesta de Redirección configurada por Fallback WADO-URI Nombre de la Aplicación Web. Puede ser sobreescrito por valores configurados para determinados EAs de Red de Archivo.",
       "type": "integer",
       "default": 303,
@@ -655,8 +655,8 @@
        ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
-      "title": "Fallback WADO-URI Redirect On Not Found",
-      "description": "Indicates if WADO-URI requests are redirected to configured Fallback WADO-URI Web Application Name even if the object was not found or - if set to false - only if the object is no longer accessible on this archive. May be overwritten by configured values for particular Archive Network AEs.",
+      "title": "Redirección WADO-URI en caso de fallo",
+      "description": "Indica si las solicitudes WADO-URI se redirigen al Nombre de Aplicación Web WADO-URI de Reserva configurado aunque no se encuentre el objeto o, si se establece en falso, sólo si ya no se puede acceder al objeto en este archivo. Puede ser sobrescrito por valores configurados para determinados EAs de Red de Archivo.",
       "type": "boolean",
       "default": false
     },
@@ -679,13 +679,13 @@
        ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {
-      "title": "External WADO-RS Redirect On Not Found",
-      "description": "Indicates if WADO-RS requests are redirected to configured External WADO-RS Web Application Name even if the requested objects were not found or - if set to false - only if some of the requested objects are no longer accessible on this archive. May be overwritten by configured values for particular Archive Network AEs.",
+      "title": "Redirección externa WADO-RS en no encontrado",
+      "description": "Indica si las peticiones WADO-RS son redirigidas al Nombre de la Aplicación Web WADO-RS Externa configurada incluso si los objetos solicitados no fueron encontrados o - si se establece en false - sólo si algunos de los objetos solicitados ya no son accesibles en este archivo. Puede ser sobrescrito por los valores configurados para determinados Archivos de Red AEs.",
       "type": "boolean",
       "default": false
     },
     "dcmFallbackCMoveSCPCallingAET": {
-      "title": "Fallback C-Move SCP Llamada Título AE",
+      "title": "Redirección C-Move SCP Llamada Título AE",
       "description": "Llamada Título AE utilizado en A-ASSOCIATE-RQ para configurar Fallback C-MOVE SCP. Si está ausente, se utiliza el título AE de la SCU C-MOVE externa. Puede ser sobrescrito por el valor configurado para determinados Archivos de Red AEs.",
       "type": "string",
       "format": "dcmArchiveAETitle"
@@ -814,8 +814,8 @@
       "default": false
     },
     "dcmDeleteRejectedPollingInterval": {
-      "title": "Delete Rejected Polling Interval",
-      "description": "Polling Interval for deleting rejected instances from the DB in ISO-8601 duration format PnDTnHnMnS.",
+      "title": "Borrar intervalo de sondeo rechazado",
+      "description": "Intervalo de sondeo para eliminar instancias rechazadas de la base de datos en formato de duración ISO-8601 PnDTnHnMnS.",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -840,8 +840,8 @@
       "format": "dcmDuration"
     },
     "dcmLeadingCFindSCPQueryCacheStaleTimeout": {
-      "title": "Leading C-Find SCP Query Cache Stale Timeout",
-      "description": "Maximal staleness of cached Patient and Study attributes fetched from leading C-Find SCP in ISO-8601 duration format PnDTnHnMnS. If absent, cache Study attributes are only removed on reaching the maximal cache size.",
+      "title": "Tiempo de espera obsoleto de la caché de consultas de C-Find SCP principal",
+      "description": "Tiempo máximo de caducidad de los atributos de paciente y estudio en caché obtenidos del SCP líder de C-Find en formato de duración ISO-8601 PnDTnHnMnS. Si está ausente, los atributos de estudio en caché sólo se eliminan cuando se alcanza el tamaño máximo de caché.",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -1127,8 +1127,8 @@
       "type": "string"
     },
     "dcmStorePermissionCacheStaleTimeout": {
-      "title": "Store Permission Cache Stale Timeout",
-      "description": "Maximal staleness of cached responses from Storage Permission Service in ISO-8601 duration format PnDTnHnMnS. If absent, cached responses are only removed on reaching the maximal cache size.",
+      "title": "Tiempo de espera de la caché de permisos",
+      "description": "Tiempo máximo de caducidad de las respuestas almacenadas en caché del Servicio de permisos de almacenamiento en formato de duración ISO-8601 PnDTnHnMnS. Si está ausente, las respuestas almacenadas en caché sólo se eliminan cuando se alcanza el tamaño máximo de caché.",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -1215,8 +1215,8 @@
       "format": "dcmDuration"
     },
     "dcmPurgeStgCmtPollingInterval": {
-      "title": "Purge Storage Commitment Polling Interval",
-      "description": "Polling Interval for purging Storage Commitment Results in ISO-8601 duration format PnDTnHnMnS. If absent, there is no deletion",
+      "title": "Intervalo de sondeo de la confirmación de almacenamiento de purga",
+      "description": "Intervalo de sondeo para purgar resultados de compromiso de almacenamiento en formato de duración ISO-8601 PnDTnHnMnS. Si está ausente, no hay purga.",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -1357,7 +1357,7 @@
     },
     "dcmStorageVerificationPolicy": {
       "title": "Política de verificación de almacenamiento",
-      "description": "EXISTE_REGISTRO_BD: sólo comprueba la existencia de registros de base de datos, OBJECTO_EXISTE: comprueba si el objeto existe en el sistema de almacenamiento, TAMAÑO_OBJETO: comprueba el tamaño del objeto en el sistema de almacenamiento, RECUPERAR_OBJETO: obtiene el objeto del sistema de almacenamiento), SUMADECOMPROBACIÓPN_OBJETO: recalcula la suma de comprobación del objeto en el sistema de almacenamiento, S3_MD5SUM: comprueba la suma de comprobación MD5 del objeto en el sistema de almacenamiento S3. Pueden sobrescribirse con los valores configurados para determinados EA de red de archivos.",
+      "description": "EXISTE_REGISTRO_BD: sólo comprueba la existencia de registros de base de datos, OBJECTO_EXISTE: comprueba si el objeto existe en el sistema de almacenamiento, TAMAÑO_OBJETO: comprueba el tamaño del objeto en el sistema de almacenamiento, RECUPERAR_OBJETO: obtiene el objeto del sistema de almacenamiento), SUMADECOMPROBACIÓPN_OBJETO: recalcula la suma de comprobación del objeto en el sistema de almacenamiento, S3_MD5SUM: comprueba la suma de comprobación MD5 del objeto en el sistema de almacenamiento S3. Pueden sobrescribirse con los valores configurados para determinados EA de red de archivos. ",
       "type": "string",
       "default": "OBJECT_CHECKSUM",
       "enum": [
@@ -1828,7 +1828,7 @@
     },
     "dcmRelationalRetrieveNegotiationLenient": {
       "title": "Negociación de Recuperación Relacional Leniente",
-      "description": "Indica aceptar C-MOVE y C-GET RQs sin claves únicas para niveles por encima del nivel de consulta también si el soporte para consultas relacionales no fue negociado. Puede sobrescribirse mediante el valor configurado para determinados EA de red de archivos.",
+      "description": "Indica aceptar C-MOVE y C-GET RQs sin claves únicas para niveles por encima del nivel de consulta también si el soporte para consultas relacionales no fue negociado. Puede sobrescribirse mediante el valor configurado para determinados EA de red de archivos. ",
       "type": "boolean",
       "default": false
     },
@@ -2023,8 +2023,8 @@
       }
     },
     "dcmQueue": {
-      "title": "Queue",
-      "description": "Managed Task Queue",
+      "title": "Cola",
+      "description": "Cola de tareas",
       "type": "array",
       "titleKey":"{dcmQueueName}",
       "items" : {
@@ -2105,7 +2105,7 @@
     },
     "dcmArchiveAttributeCoercion": {
       "title": "Coerción de atributos (heredada)",
-      "description": "Coerción de atributos aplicada a DIMSE recibidos/enviados por cualquier AE. Puede complementarse con coerciones de atributos configuradas para determinados AE de red de archivos.",
+      "description": " Coerción de atributos aplicada a DIMSE recibidos/enviados por cualquier AE. Puede complementarse con coerciones de atributos configuradas para determinados AE de red de archivos.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {

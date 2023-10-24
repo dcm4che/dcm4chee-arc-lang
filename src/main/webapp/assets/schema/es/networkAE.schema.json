@@ -78,8 +78,8 @@
       "order":5
     },
     "dicomApplicationCluster": {
-      "title": "Application Cluster",
-      "description": "Locally defined names for a subset of related applications",
+      "title": "Grupo de aplicaciones",
+      "description": "nombres definidos localmente para un subconjunto de aplicaciones relacionadas.",
       "type": "array",
       "order":6,
       "items": {

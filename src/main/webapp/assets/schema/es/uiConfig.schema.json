@@ -39,8 +39,8 @@
       "format": "dcmAETitle"
     },
     "dcmuiBackgroundURL": {
-      "title": "Background URL",
-      "description": "Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px ",
+      "title": "URL del fondo",
+      "description": "URL del fondo para cambiar el fondo de la interfaz de usuario; puede ser una URL relativa o absoluta; la imagen debe tener una anchura mínima de 1024px. ",
       "type": "string"
     },
     "dcmuiHideOtherPatientIDs": {
@@ -51,7 +51,7 @@
     },
     "dcmuiLogoURL": {
       "title": "URL del logotipo",
-      "description": "URL del logotipo para cambiar el logotipo de la interfaz de usuario, puede ser una URL relativa o absoluta, la imagen debe tener una anchura de 140px y debe estar en formato png con fondo transparente.",
+      "description": " URL del logotipo para cambiar el logotipo de la interfaz de usuario, puede ser una URL relativa o absoluta, la imagen debe tener una anchura de 140px y debe estar en formato png con fondo transparente.",
       "type": "string"
     },
     "dcmuiDateTimeFormat": {
@@ -126,8 +126,8 @@
       }
     },
     "dcmuiWebAppConfig": {
-      "title": "Web App drop-down list",
-      "description": "Define which WebApps should be visible on the top of the drop-down list in the UI",
+      "title": "Lista desplegable de Aplicaciones de Red",
+      "description": "Defina qué Aplicaciones de Red deben estar visibles en la parte superior de la lista desplegable de la interfaz de usuario.",
       "titleKey":"{dcmuiWebAppListName}",
       "type": "array",
       "items" : {

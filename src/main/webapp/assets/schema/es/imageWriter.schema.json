@@ -34,8 +34,8 @@
       ]
     },
     "dcmImageWriteParam": {
-      "title": "Image Write Param",
-      "description": "Image Write Parameter(s) (name=value) set at on Image Writer before compression",
+      "title": "Parámetro de escritura de imagen",
+      "description": "Parámetros de escritura de imagen (nombre=valor) establecidos en la grabadora de imágenes antes de la compresión.",
       "type": "array",
       "items": {
         "type": "string"

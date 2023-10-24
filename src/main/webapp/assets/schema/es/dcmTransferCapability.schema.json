@@ -43,8 +43,8 @@
       "default": false
     },
     "dcmStorageConformance": {
-      "title": "Storage Conformance",
-      "description": "Indicates level of Conformance of a Storage SCP",
+      "title": "Conformidad de almacenamiento",
+      "description": "Indica el nivel de conformidad de un SCP de almacenamiento.",
       "type": "integer",
       "enum": [
         0,

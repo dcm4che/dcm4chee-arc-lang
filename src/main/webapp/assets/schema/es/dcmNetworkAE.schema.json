@@ -1,6 +1,6 @@
 {
   "title": "Extensión AE de red",
-  "description": "dcm4che atributos propietarios de la red AE",
+  "description": "dcm4che atributos propietarios de la red AE           ",
   "type": "object",
   "properties": {
     "dcmRoleSelectionNegotiationLenient": {
@@ -25,8 +25,8 @@
       }
     },
     "dcmNoAsyncModeCalledAETitle": {
-      "title": "No Async Mode Called AE Title",
-      "description": "Blacklist AE Title of peer Network AE as not capable to handle Asynchronous Operations Window Negotiation correctly. Suppress including corresponding User-data sub-Item in A-ASSOCIATE RQs to that Network AEs.",
+      "title": "Ningún modo asíncrono llamado AE Título",
+      "description": "Título del AE de la red par no capaz de gestionar correctamente la negociación de la ventana de operaciones asíncronas. Suprimir la inclusión del correspondiente sub-ítem de datos de usuario en los RQs A-ASSOCIATE a ese AE de red.",
       "type": "array",
       "format": "dcmAETitle",
       "items": {

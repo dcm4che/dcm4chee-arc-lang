@@ -203,12 +203,12 @@
     },
     "dcmUserIdentityNegotiationRole": {
       "title": "Rol de Negociación de Identidad de Usuario",
-      "description": "Restringe las solicitudes de Negociación de Identidad de Usuario aceptadas a los usuarios con el rol especificado. Sobrescribe el valor especificado en el nivel de dispositivo.",
+      "description": " Restringe las solicitudes de Negociación de Identidad de Usuario aceptadas a los usuarios con el rol especificado. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string"
     },
     "dcmUserIdentityNegotiationKeycloakClientID": {
-      "title": "User Identity Negotiation Keycloak Client ID",
-      "description": "Keycloak Client ID referring Keycloak connection configuration for verifying passed username and password or JSON Web Token. Overwrites value specified on Device level.",
+      "title": "ID de cliente de negociación de identidad de usuario Keycloak",
+      "description": "ID de cliente Keycloak que hace referencia a la configuración de la conexión Keycloak para verificar el nombre de usuario y la contraseña transmitidos o el token web JSON. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmKeycloakClient"
     },
@@ -410,8 +410,8 @@
       "type": "boolean"
     },
     "dcmFallbackCMoveSCPCallingAET": {
-      "title": "Fallback C-Move SCP Calling AE title",
-      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. Overwrites value specified on Device level.",
+      "title": "Fallback C-Move SCP Título AE de llamada",
+      "description": "Título AE de llamada utilizado en A-ASSOCIATE-RQ para configurar el SCP de C-MOVE de Fallback. Si no existe, se utiliza el título AE de la SCU C-MOVE externa. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
@@ -531,8 +531,8 @@
       "format": "dcmArchiveAETitle"
     },
     "dcmReturnRetrieveAET": {
-      "title": "Return Retrieve AE Title",
-      "description": "Retrieve AE Title returned in C-FIND and QIDO responses. If absent, the Retrieve AET associated with the archived entity will be returned. Overwrites value specified on Device level.",
+      "title": "Devuelve título AE recuperado",
+      "description": "Recuperar título AE devuelto en las respuestas C-FIND y QIDO. Si no existe, se devolverá el Retrieve AET asociado a la entidad archivada. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "array",
       "items": {
         "type": "string"
@@ -592,8 +592,8 @@
       ]
     },
     "dcmStorageVerificationUpdateLocationStatus": {
-      "title": "Storage Verification Update Location Status",
-      "description": "Indicates if the Status of the Location DB record shall be updated on Storage Verification accordingly. Not effective with Storage Verification Policy: DB_RECORD_EXISTS. Overwrites value specified on Device level.",
+      "title": "Actualización del estado de la ubicación en la verificación de almacenamiento",
+      "description": "Indica si el estado del registro de la base de datos de ubicaciones debe actualizarse en la verificación de almacenamiento. No es efectivo con la política de verificación de almacenamiento: EXISTE_REGISTRO_BD. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "boolean"
     },
     "dcmStorageVerificationStorageID": {
@@ -833,7 +833,7 @@
     },
     "dcmArchiveAttributeCoercion": {
       "title": "Coerción de atributos (Legado)",
-      "description": "Coerción de atributos de DIMSE recibidos/enviados. Complementa las coerciones de atributos especificadas en el nivel de dispositivo.",
+      "description": " Coerción de atributos de DIMSE recibidos/enviados. Complementa las coerciones de atributos especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {

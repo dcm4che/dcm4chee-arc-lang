@@ -39,7 +39,7 @@
     },
     "dcmSchedule": {
       "title": "Horario de procesamiento",
-      "description": "Retrasa el procesamiento a los periodos de tiempo especificados. Si no se especifica un Horario de Procesamiento, procesa",
+      "description": "Retrasa el procesamiento a los periodos de tiempo especificados. Si no se especifica un Horario de Procesamiento, procesa los elementos de trabajo se procesan a la hora de inicio de la etapa de procedimiento programada (0040,4005). Formato: 'hour=[0-23] díaDeLaSemana=[0-6]' (0=domingo).",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"
@@ -150,8 +150,8 @@
       "format": "dcmDuration"
     },
     "dcmMaxRetryDelay": {
-      "title": "Maximum Reschedule Delay",
-      "description": "Maximal Delay to reschedule a Workitem which processing failed in ISO-8601 duration format PnDTnHnMn.nS. Infinite if absent.",
+      "title": "Retraso máximo de reprogramación",
+      "description": "Retraso máximo para reprogramar un elemento de trabajo cuyo procesamiento falló en formato de duración ISO-8601 PnDTnHnMn.nS. Infinito si no existe.",
       "type": "string",
       "format": "dcmDuration"
     },

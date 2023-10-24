@@ -149,20 +149,20 @@
       }
     },
     "dcmMWLImportFilterBySCU": {
-      "title": "Fusionar filtro MWL por SCU",
-      "description": "Indica que se aplique el filtro especificado a las coincidencias devueltas por el SCP MWL externo.",
+      "title": "Fusionar filtro MWL por SCU ",
+      "description": " Indica que se aplique el filtro especificado a las coincidencias devueltas por el SCP MWL externo.",
       "type": "boolean",
       "default": false
     },
     "dcmLeadingCFindSCP": {
       "title": "Leading C-FIND SCP",
-      "description": "AE Título del SCP C-FIND externo para la coerción de atributos con atributos de pacientes y estudios obtenidos de este AE. Si no se especifica ningún conjunto de atributos concreto para el SCP C-FIND, se obtendrán todos los atributos del filtro de atributos de pacientes y estudios configurado.",
+      "description": " AE Título del SCP C-FIND externo para la coerción de atributos con atributos de pacientes y estudios obtenidos de este AE. Si no se especifica ningún conjunto de atributos concreto para el SCP C-FIND, se obtendrán todos los atributos del filtro de atributos de pacientes y estudios configurado.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmAttributeUpdatePolicy": {
-      "title": "Política de actualización de atributos",
-      "description": "Especifica cómo se actualizarán los atributos con los atributos obtenidos de Leading C-FIND SCP. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy\" target=\"_blank\"> Significado de las políticas de actualización de atributos.</a>",
+      "title": "Política de actualización de atributos ",
+      "description": " Especifica cómo se actualizarán los atributos con los atributos obtenidos de Leading C-FIND SCP. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy\" target=\"_blank\"> Significado de las políticas de actualización de atributos.</a>",
       "type": "string",
       "default": "MERGE",
       "enum": [
@@ -173,14 +173,14 @@
       ]
     },
     "dcmTrimISO2022CharacterSet": {
-      "title": "Recortar el juego de caracteres ISO 2022",
-      "description": "Sustituir el código único de los juegos de caracteres de un solo byte con extensiones de código por el código de los juegos de caracteres de un solo byte sin extensiones de código. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-trim-iso-2022-character-set-coercion-type\" target=\"_blank\"> conjuntos de caracteres a los que se aplica esta coerción.</a>",
+      "title": "Recortar el juego de caracteres ISO 2022 ",
+      "description": " Sustituir el código único de los juegos de caracteres de un solo byte con extensiones de código por el código de los juegos de caracteres de un solo byte sin extensiones de código. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-trim-iso-2022-character-set-coercion-type\" target=\"_blank\"> conjuntos de caracteres a los que se aplica esta coerción.</a>",
       "type": "boolean",
       "default": false
     },
     "dcmUseCallingAETitleAs": {
       "title": "Utilizar el título AE de llamada como",
-      "description": "Identifica el atributo que se establece con el valor de la AET de llamada si está ausente o vacía. ScheduledStationAETitle (= Título AE de la estación programada (0040,0001) en el elemento de la secuencia de pasos del procedimiento programado (0040,0100)), SendingApplicationEntityTitleOfSeries (= Título de la entidad de aplicación de envío de la serie (7777,xx37)).",
+      "description": " Identifica el atributo que se establece con el valor de la AET de llamada si está ausente o vacía. ScheduledStationAETitle (= Título AE de la estación programada (0040,0001) en el elemento de la secuencia de pasos del procedimiento programado (0040,0100)), SendingApplicationEntityTitleOfSeries (= Título de la entidad de aplicación de envío de la serie (7777,xx37)).",
       "type": "string",
       "enum": [
         "ScheduledStationAETitle",
@@ -188,15 +188,15 @@
       ]
     },
     "dcmNullifyTag": {
-      "title": "Anular etiqueta de atributo",
-      "description": "Etiqueta DICOM del atributo que debe anularse como cadena hexadecimal",
+      "title": "Anular etiqueta de atributo ",
+      "description": " Etiqueta DICOM del atributo que debe anularse como cadena hexadecimal",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmTag"
     },
     "dcmMergeAttribute": {
-      "title": "Atributo de fusión",
-      "description": "Combinar atributo DICOM en formato {attributeID}={value}. {attributeID} dentro de {value} será sustituido por el valor de ese atributo en el conjunto de datos original. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-merge-attributes-coercion-type\" target=\"_blank\"> aplicabilidad, formatos y algunos ejemplos.</a>",
+      "title": "Atributo de fusión ",
+      "description": " Combinar atributo DICOM en formato {attributeID}={value}. {attributeID} dentro de {value} será sustituido por el valor de ese atributo en el conjunto de datos original. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-merge-attributes-coercion-type\" target=\"_blank\"> aplicabilidad, formatos y algunos ejemplos.</a>",
       "type": "array",
       "items": {
         "type": "string"
@@ -205,7 +205,7 @@
     },
     "dcmNullifyIssuerOfPatientID": {
       "title": "Anular el emisor del paciente ID",
-      "description": "Anular condicionalmente el Emisor de ID de paciente (0010,0021) y la Secuencia de calificadores del Emisor de ID de paciente (0010,0024) de los objetos recibidos.",
+      "description": " Anular condicionalmente el Emisor de ID de paciente (0010,0021) y la Secuencia de calificadores del Emisor de ID de paciente (0010,0024) de los objetos recibidos.",
       "type": "string",
       "enum": [
         "ALWAYS",
@@ -215,7 +215,7 @@
     },
     "dcmIssuerOfPatientID": {
       "title": "Emisor del paciente ID",
-      "description": "Se cotejan el ID del emisor del paciente (0010,0021) y, opcionalmente, los valores del ID de entidad universal (0040,0032) y el tipo de ID de entidad universal (0040,0033) del elemento de la secuencia de calificadores del ID del emisor del paciente (0010,0024) con los valores de los objetos recibidos, si Nullify Issuer of Patient ID tiene el valor MATCHING o NOT_MATCHING. Especifique los valores en el formato: {IssuerOfPatientID}[&{UniversalEntityID&UniversalEntityIDType}].",
+      "description": " Se cotejan el ID del emisor del paciente (0010,0021) y, opcionalmente, los valores del ID de entidad universal (0040,0032) y el tipo de ID de entidad universal (0040,0033) del elemento de la secuencia de calificadores del ID del emisor del paciente (0010,0024) con los valores de los objetos recibidos, si Nullify Issuer of Patient ID tiene el valor MATCHING o NOT_MATCHING. Especifique los valores en el formato: {IssuerOfPatientID}[&{UniversalEntityID&UniversalEntityIDType}].",
       "type": "array",
       "items": {
         "type": "string"
@@ -223,12 +223,12 @@
     },
     "dcmIssuerOfPatientIDFormat": {
       "title": "Emisor del formato paciente ID",
-      "description": "Formato del emisor del ID del paciente (0010,0021) derivado de otros atributos. Por ejemplo, \"{00100010,hash}-{00100030}\": utilice el valor hash del nombre del paciente y la fecha de nacimiento separados por \"-\". Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-supplement-issuer-of-patient-id-format-coercion-type\" target=\"_blank\"> aplicabilidad, formatos y algunos ejemplos.</a>",
+      "description": " Formato del emisor del ID del paciente (0010,0021) derivado de otros atributos. Por ejemplo, \"{00100010,hash}-{00100030}\": utilice el valor hash del nombre del paciente y la fecha de nacimiento separados por \"-\". Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-supplement-issuer-of-patient-id-format-coercion-type\" target=\"_blank\"> aplicabilidad, formatos y algunos ejemplos.</a>",
       "type": "string"
     },
     "dcmSupplementFromDeviceReference": {
-      "title": "Suplemento del dispositivo",
-      "description": "Nombre del Dispositivo desde el que se complementan las Autoridades de Asignación y otra información. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-supplementing-from-device-coercion-type\" target=\"_blank\"> aplicabilidad, formatos y algunos ejemplos.</a>",
+      "title": "Suplemento del dispositivo ",
+      "description": " Nombre del Dispositivo desde el que se complementan las Autoridades de Asignación y otra información. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-supplementing-from-device-coercion-type\" target=\"_blank\"> aplicabilidad, formatos y algunos ejemplos.</a>",
       "type": "string",
       "format": "dicomDeviceName"
     }

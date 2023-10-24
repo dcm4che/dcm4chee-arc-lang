@@ -104,8 +104,8 @@
       "default": true
     },
     "dcmBindAddress": {
-      "title": "Bind Address",
-      "description": "Bind address of listening socket; use hostname of the connection if absent",
+      "title": "Dirección de enlace",
+      "description": "Dirección de enlace del conector de escucha; utilice el nombre de anfitrión de la conexión si no existe.",
       "type": "string"
     },
     "dcmClientBindAddress": {
@@ -136,8 +136,8 @@
       "minimum": 1024
     },
     "dcmMaxOpsPerformed": {
-      "title": "Max Ops Performed",
-      "description": "Maximal number of operations to perform asynchronously; 0 = infinite.",
+      "title": "Operaciones Máximas Invocadas",
+      "description": "Operaciones máximas realizadas|Número máximo de operaciones a realizar de forma asíncrona; 0 = infinito.",
       "type": "integer",
       "default": 1,
       "minimum": 0

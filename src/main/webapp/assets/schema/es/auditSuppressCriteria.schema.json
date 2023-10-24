@@ -121,8 +121,8 @@
       }
     },
     "dcmAuditUserID": {
-      "title": "User ID",
-      "description": "DICOM PS 3.15 A.5 Audit Active Participant User ID.",
+      "title": "Identificación de usuario",
+      "description": "ID de usuario del participante activo de la auditoría PS 3.15 A.5.",
       "type": "array",
       "items": {
         "type": "string"
