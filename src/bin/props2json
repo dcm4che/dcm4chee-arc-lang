@@ -1,6 +1,5 @@
 #!/bin/sh
 json2props src/main/resources/assets/locale/schema src/props/de src/main/resources/assets/locale/schema/de
-json2props src/main/resources/assets/locale/schema src/props/en src/main/resources/assets/locale/schema/en
 json2props src/main/resources/assets/locale/schema src/props/es src/main/resources/assets/locale/schema/es
 json2props src/main/resources/assets/locale/schema src/props/hi src/main/resources/assets/locale/schema/hi
 json2props src/main/resources/assets/locale/schema src/props/it src/main/resources/assets/locale/schema/it
