@@ -1,7 +1,10 @@
 #!/bin/sh
-json2props src/main/webapp/assets/schema/hi src/props/hi
-json2props src/main/webapp/assets/schema/it src/props/it
-json2props src/main/webapp/assets/schema/ja src/props/ja
-json2props src/main/webapp/assets/schema/mr src/props/mr
-json2props src/main/webapp/assets/schema/ru src/props/ru
-json2props src/main/webapp/assets/schema/zh src/props/zh
+json2props src/main/resources/assets/locale/schema/de src/props/de
+json2props src/main/resources/assets/locale/schema/en src/props/en
+json2props src/main/resources/assets/locale/schema/es src/props/es
+json2props src/main/resources/assets/locale/schema/hi src/props/hi
+json2props src/main/resources/assets/locale/schema/it src/props/it
+json2props src/main/resources/assets/locale/schema/ja src/props/ja
+json2props src/main/resources/assets/locale/schema/mr src/props/mr
+json2props src/main/resources/assets/locale/schema/ru src/props/ru
+json2props src/main/resources/assets/locale/schema/zh src/props/zh
