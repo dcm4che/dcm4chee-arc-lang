@@ -1,9 +1,9 @@
 #!/bin/sh
-json2props src/main/resources/assets/locale/schema src/props/de src/main/resources/assets/locale/schema/de
-json2props src/main/resources/assets/locale/schema src/props/es src/main/resources/assets/locale/schema/es
-json2props src/main/resources/assets/locale/schema src/props/hi src/main/resources/assets/locale/schema/hi
-json2props src/main/resources/assets/locale/schema src/props/it src/main/resources/assets/locale/schema/it
-json2props src/main/resources/assets/locale/schema src/props/ja src/main/resources/assets/locale/schema/ja
-json2props src/main/resources/assets/locale/schema src/props/mr src/main/resources/assets/locale/schema/mr
-json2props src/main/resources/assets/locale/schema src/props/ru src/main/resources/assets/locale/schema/ru
-json2props src/main/resources/assets/locale/schema src/props/zh src/main/resources/assets/locale/schema/zh
+json2props src/main/webapp/en/assets/schema src/props/de src/main/webapp/de/assets/schema
+json2props src/main/webapp/en/assets/schema src/props/es src/main/webapp/es/assets/schema
+json2props src/main/webapp/en/assets/schema src/props/hi src/main/webapp/hi/assets/schema
+json2props src/main/webapp/en/assets/schema src/props/it src/main/webapp/it/assets/schema
+json2props src/main/webapp/en/assets/schema src/props/ja src/main/webapp/ja/assets/schema
+json2props src/main/webapp/en/assets/schema src/props/mr src/main/webapp/mr/assets/schema
+json2props src/main/webapp/en/assets/schema src/props/ru src/main/webapp/ru/assets/schema
+json2props src/main/webapp/en/assets/schema src/props/zh src/main/webapp/zh/assets/schema

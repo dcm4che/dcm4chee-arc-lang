@@ -42,6 +42,7 @@
   <artifactId>dcm4chee-arc-lang</artifactId>
   <groupId>org.dcm4che.dcm4chee-arc</groupId>
   <version>5.31.1</version>
+  <packaging>war</packaging>
 
   <distributionManagement>
     <repository>
@@ -63,5 +64,14 @@
         <version>3.4.3</version>
       </extension>
     </extensions>
+    <plugins>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <failOnMissingWebXml>false</failOnMissingWebXml>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
