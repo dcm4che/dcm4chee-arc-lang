@@ -9,7 +9,7 @@
   "properties": {
     "dcmEntity": {
       "title": "विशेषता घटक",
-      "description": "विशेषता फिल्टर ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL') चे घटक.",
+      "description": "विशेषता फिल्टर ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL', 'UPS') चे घटक.",
       "type": "string",
       "enum": [
         "Patient",
@@ -17,7 +17,8 @@
         "Series",
         "Instance",
         "MPPS",
-        "MWL"
+        "MWL",
+        "UPS"
       ]
     },
     "dcmTag": {

@@ -9,7 +9,7 @@
   "properties": {
     "dcmEntity": {
       "title": "Attribute Entity",
-      "description": "Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL').",
+      "description": "Entity of the Attribute Filter or Export Rule ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL', 'UPS').",
       "type": "string",
       "enum": [
         "Patient",
@@ -17,7 +17,8 @@
         "Series",
         "Instance",
         "MPPS",
-        "MWL"
+        "MWL",
+        "UPS"
       ]
     },
     "dcmTag": {

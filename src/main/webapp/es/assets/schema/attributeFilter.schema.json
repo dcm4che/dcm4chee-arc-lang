@@ -9,7 +9,7 @@
   "properties": {
     "dcmEntity": {
       "title": "Entidad de Atributo",
-      "description": "Entidad del Filtro de Atributo o Regla de Exportación ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL').",
+      "description": "Entidad del Filtro de Atributo o Regla de Exportación ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL', 'UPS').",
       "type": "string",
       "enum": [
         "Patient",
@@ -17,7 +17,8 @@
         "Series",
         "Instance",
         "MPPS",
-        "MWL"
+        "MWL",
+        "UPS"
       ]
     },
     "dcmTag": {

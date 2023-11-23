@@ -9,7 +9,7 @@
   "properties": {
     "dcmEntity": {
       "title": "गुण तत्त्व",
-      "description": "गुण फ़िल्टर ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL') का तत्त्व ।",
+      "description": "गुण फ़िल्टर ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL', 'UPS') का तत्त्व ।",
       "type": "string",
       "enum": [
         "Patient",
@@ -17,7 +17,8 @@
         "Series",
         "Instance",
         "MPPS",
-        "MWL"
+        "MWL",
+        "UPS"
       ]
     },
     "dcmTag": {

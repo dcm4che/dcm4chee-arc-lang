@@ -17,7 +17,8 @@
         "Series",
         "Instance",
         "MPPS",
-        "MWL"
+        "MWL",
+        "UPS"
       ]
     },
     "dcmTag": {
