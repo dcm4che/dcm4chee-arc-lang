@@ -44,12 +44,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <remoteResources>
     <remoteResource>de.json</remoteResource>
-    <remoteResource>en.json</remoteResource>
     <remoteResource>es.json</remoteResource>
     <remoteResource>hi.json</remoteResource>
     <remoteResource>it.json</remoteResource>
     <remoteResource>ja.json</remoteResource>
     <remoteResource>mr.json</remoteResource>
+    <remoteResource>pt.json</remoteResource>
     <remoteResource>ru.json</remoteResource>
     <remoteResource>zh.json</remoteResource>
   </remoteResources>
