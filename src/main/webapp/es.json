@@ -2259,7 +2259,7 @@
     "studies_stored_count": " Conteo de estudios almacenados",
     "studies_total_count": " Conteo total de estudios",
     "study": "study",
-    "study-transferring-overview.studuid_from_patient_report": "UID de instancia de estudio: {$START_BOLD_TEXT}{$INTERPOLATION}{$CLOSE_BOLD_TEXT} del paciente {$START_BOLD_TEXT}{$INTERPOLATION_}{$CLOSE_BOLD_TEXT} con el ID de paciente {$START_BOLD_TEXT}{$INTERPOLATION_}{$CLOSE_BOLD_TEXT}",
+    "study-transferring-overview.studuid_from_patient_report": "UID de instancia de estudio: {$START_BOLD_TEXT}{$INTERPOLATION}{$CLOSE_BOLD_TEXT} del paciente {$START_BOLD_TEXT}{$INTERPOLATION_1}{$CLOSE_BOLD_TEXT} con el ID de paciente {$START_BOLD_TEXT}{$INTERPOLATION_2}{$CLOSE_BOLD_TEXT}",
     "study-transferring_overview.an_empty_study_will_be_automatically_created": "¡Se creará automáticamente un estudio vacío para poder utilizarlo como estudio de destino!",
     "study.add_new_mwl": "Añadir nuevo MWL",
     "study.all_failed": "¡todo ({$PH}) falló!",
