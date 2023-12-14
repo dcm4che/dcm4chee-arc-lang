@@ -13,6 +13,7 @@
       "title": "AE标题",
       "description": "此网络AE的唯一AE标题",
       "type": "string",
+      "maxLength": 16,
       "order":1,
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmSpanningCFindSCPRetrieveAET[*]",

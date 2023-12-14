@@ -13,6 +13,7 @@
       "title": "AE चे शीर्षक",
       "description": "या नेटवर्क AE चे अद्वितीय शीर्षक.",
       "type": "string",
+      "maxLength": 16,
       "order":1,
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmSpanningCFindSCPRetrieveAET[*]",

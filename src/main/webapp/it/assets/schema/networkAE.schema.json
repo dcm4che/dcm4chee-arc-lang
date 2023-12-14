@@ -13,6 +13,7 @@
       "title": "Titolo AE",
       "description": "Titolo AE univoco per questo Network AE",
       "type": "string",
+      "maxLength": 16,
       "order":1,
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmSpanningCFindSCPRetrieveAET[*]",

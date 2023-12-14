@@ -12,6 +12,7 @@
     "dicomAETitle": {
       "title": "Título de AE",
       "description": "Título único de AE para este AE de red.",
+      "maxLength": 16,
       "type": "string",
       "order":1,
       "use": [

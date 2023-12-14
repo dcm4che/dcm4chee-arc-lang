@@ -13,6 +13,7 @@
       "title": "AE タイトル",
       "description": "この ネットワーク AEの 一意の AE タイトル",
       "type": "string",
+      "maxLength": 16,
       "order":1,
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmSpanningCFindSCPRetrieveAET[*]",
