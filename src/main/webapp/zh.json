@@ -2265,6 +2265,8 @@
     "study.all_failed": "所有({$PH})都失败了!",
     "study.apply_retention_multiple_series": "Apply retention policy to matching series",
     "study.apply_retention_policy_all_matching_series": "Apply retention policy to all matching series",
+    "study.apply_retention_policy_all_matching_series_msg": "Configured Retention policies applied successfully to matching series of ${count} ${studyInMsg}",
+    "study.apply_retention_policy_all_matching_series_msg_none": "Configured Retention policies do not match with matching series <br>Or <br>Expiration State of studies of matching series is set to FROZEN",
     "study.cant_delete_with_empty_id": "无法删除具有空患者ID的患者！",
     "study.check_size_in_storage_system": "检查存储系统中的对象大小",
     "study.check_storage_system": "检查存储系统中是否存在对象",

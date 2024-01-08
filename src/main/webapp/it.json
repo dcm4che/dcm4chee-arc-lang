@@ -2265,6 +2265,8 @@
     "study.all_failed": "tutti gli ({$PH}) falliti!",
     "study.apply_retention_multiple_series": "Apply retention policy to matching series",
     "study.apply_retention_policy_all_matching_series": "Apply retention policy to all matching series",
+    "study.apply_retention_policy_all_matching_series_msg": "Configured Retention policies applied successfully to matching series of ${count} ${studyInMsg}",
+    "study.apply_retention_policy_all_matching_series_msg_none": "Configured Retention policies do not match with matching series <br>Or <br>Expiration State of studies of matching series is set to FROZEN",
     "study.cant_delete_with_empty_id": "Impossibile eliminare il paziente con l'ID paziente vuoto!",
     "study.check_size_in_storage_system": "controllare la dimensione dell'oggetto sul sistema di archiviazione",
     "study.check_storage_system": "Controllare se l'oggetto esiste sul sistema di archiviazione",

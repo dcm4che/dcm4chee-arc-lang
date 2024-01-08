@@ -2265,6 +2265,8 @@
     "study.all_failed": "すべてが ({$PH}) 失敗しました!",
     "study.apply_retention_multiple_series": "Apply retention policy to matching series",
     "study.apply_retention_policy_all_matching_series": "Apply retention policy to all matching series",
+    "study.apply_retention_policy_all_matching_series_msg": "Configured Retention policies applied successfully to matching series of ${count} ${studyInMsg}",
+    "study.apply_retention_policy_all_matching_series_msg_none": "Configured Retention policies do not match with matching series <br>Or <br>Expiration State of studies of matching series is set to FROZEN",
     "study.cant_delete_with_empty_id": "患者 IDが 空の 患者は 削除できません!",
     "study.check_size_in_storage_system": "格納 システムに オブジェクトの サイズを 確認して ください",
     "study.check_storage_system": "オブジェクトが 格納 システムに 存在するか どうかを 確認して ください",
