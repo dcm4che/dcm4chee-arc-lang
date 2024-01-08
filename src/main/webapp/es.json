@@ -2265,6 +2265,8 @@
     "study.all_failed": "¡todo ({$PH}) falló!",
     "study.apply_retention_multiple_series": "Aplicar política de retención a series que coincidan",
     "study.apply_retention_policy_all_matching_series": "Aplicar política de retención a todas las series que coincidan",
+    "study.apply_retention_policy_all_matching_series_msg": "Configured Retention policies applied successfully to matching series of ${count} ${studyInMsg}",
+    "study.apply_retention_policy_all_matching_series_msg_none": "Configured Retention policies do not match with matching series <br>Or <br>Expiration State of studies of matching series is set to FROZEN",
     "study.cant_delete_with_empty_id": "¡No se puede borrar paciente con DNI vacío!",
     "study.check_size_in_storage_system": "Comprobar tamaño de objeto en Sistema de Almacenamiento",
     "study.check_storage_system": "Comprobar si el objeto existe en el Sistema de Almacenamiento",

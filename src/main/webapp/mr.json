@@ -2265,6 +2265,8 @@
     "study.all_failed": "सर्व ({$PH}) अयशस्वी झाले!",
     "study.apply_retention_multiple_series": "Apply retention policy to matching series",
     "study.apply_retention_policy_all_matching_series": "Apply retention policy to all matching series",
+    "study.apply_retention_policy_all_matching_series_msg": "Configured Retention policies applied successfully to matching series of ${count} ${studyInMsg}",
+    "study.apply_retention_policy_all_matching_series_msg_none": "Configured Retention policies do not match with matching series <br>Or <br>Expiration State of studies of matching series is set to FROZEN",
     "study.cant_delete_with_empty_id": "रुग्णाचा ID रिक्त असलेले रुग्णाचे रेकॉर्ड हटवू शकत नाही!",
     "study.check_size_in_storage_system": "साठवण सिस्टमवरील दृष्टांताचा आकार तपासा.",
     "study.check_storage_system": "साठवण सिस्टमवर दृष्टांत अस्तित्त्वात आहे का ते तपासा.",
