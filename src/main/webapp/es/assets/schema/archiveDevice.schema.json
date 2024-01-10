@@ -1891,7 +1891,7 @@
       "title": "Filtrar por emisor de ID de paciente",
       "description": "Filtrar por emisor de ID de paciente aunque no se especifique ninguna clave coincidente para ID de paciente. Puede sobrescribirse con el valor configurado para determinados EA de la red de archivos.",
       "type": "boolean",
-      "default" : false
+      "default" : true
     },
     "dcmMatchSOPClassOnInstanceLevel": {
       "title": "Emparejar Clase SOP a nivel de Instancia",

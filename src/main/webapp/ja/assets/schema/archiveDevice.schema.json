@@ -1891,7 +1891,7 @@
       "title": "患者 ID の 発行者に よる フィルタリング する",
       "description": "患者 IDに 一致 する キーが 指定されていない 場合 でも、患者 IDの 発行者で フィルタリング します。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
       "type": "boolean",
-      "default" : false
+      "default" : true
     },
     "dcmMatchSOPClassOnInstanceLevel": {
       "title": "Match SOP Class on Instance level",

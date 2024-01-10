@@ -1891,7 +1891,7 @@
       "title": "Filter by Issuer of Patient ID",
       "description": "Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default" : true
     },
     "dcmMatchSOPClassOnInstanceLevel": {
       "title": "Match SOP Class on Instance level",
