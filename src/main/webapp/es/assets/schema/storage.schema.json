@@ -84,7 +84,7 @@
       "type": "string"
     },
     "dcmFileOpenOption": {
-      "title": "Opción(es) de apertura del archivo ",
+      "title": "Opción(es) de apertura del archivo",
       "description": "Opciones que especifican cómo se abre el archivo para la escritura. Comportamiento por defecto 'CREAR_NUEVO'. (pase el ratón sobre las opciones para ver sus descripciones)",
       "type": "array",
       "items" : {

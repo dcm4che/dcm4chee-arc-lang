@@ -44,20 +44,20 @@
     },
     "dcmPrefetchCStoreSCP": {
       "title": "预取C-Store SCP",
-      "description": "存储所选读取检查的C-Store SCP的AE标题。 ",
+      "description": "存储所选读取检查的C-Store SCP的AE标题。",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmDestinationCFindSCP": {
       "title": "目标C-Find SCP",
-      "description": "禁止检索来自于如下预期C-Move SCP的选中的检查： 改预期C-Move SCP在指定的目标C-FIND SCP上有效，并且该C-FIND SCP从预期C-FIND SCP返回的检查具有相同或更多的\"检查实例数\"。如果未指定,则读取所有检查。 ",
+      "description": "禁止检索来自于如下预期C-Move SCP的选中的检查： 改预期C-Move SCP在指定的目标C-FIND SCP上有效，并且该C-FIND SCP从预期C-FIND SCP返回的检查具有相同或更多的\"检查实例数\"。如果未指定,则读取所有检查。",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dicomDeviceName": {
       "title": "预取设备名称",
-      "description": "指定要执行读取任务的设备。 否则,将在接收HL7消息的设备上安排导出任务。 ",
+      "description": "指定要执行读取任务的设备。 否则,将在接收HL7消息的设备上安排导出任务。",
       "type": "string",
       "format": "dicomDeviceName"
     },
@@ -76,7 +76,7 @@
     },
     "dcmNullifyIssuerOfPatientID": {
       "title": "忽略患者ID分配权限",
-      "description": "有条件地忽略患者ID分配权限（PID-3.4）。这可以在接收到的HL7消息中找到,该消息触发了预取以选择患者检查 ",
+      "description": "有条件地忽略患者ID分配权限（PID-3.4）。这可以在接收到的HL7消息中找到,该消息触发了预取以选择患者检查",
       "type": "string",
       "enum": [
         "ALWAYS",
@@ -111,12 +111,12 @@
     },
     "dcmPrefetchDateTimeField": {
       "title": "预取日期时间字段",
-      "description": "将所选检查的检索延迟到以{SEG}-{Seq#}[。{Comp#}]格式引用的HL7 TS字段的时间。 示例:TQ1-7或SCH-11.4。 如果不存在,则立即计划获取选定的检查。 ",
+      "description": "将所选检查的检索延迟到以{SEG}-{Seq#}[。{Comp#}]格式引用的HL7 TS字段的时间。 示例:TQ1-7或SCH-11.4。 如果不存在,则立即计划获取选定的检查。",
       "type": "string"
     },
     "dcmPrefetchInAdvance": {
       "title": "预取",
-      "description": "按照给定的时间跨度(ISO-8601 duration format PnDTnHnMn.nS)，提前从配置的dcmPrefetchDateTimeField中检索选定的研究。如果dcmPrefetchDateTimeField为空,则无效。 ",
+      "description": "按照给定的时间跨度(ISO-8601 duration format PnDTnHnMn.nS)，提前从配置的dcmPrefetchDateTimeField中检索选定的研究。如果dcmPrefetchDateTimeField为空,则无效。",
       "type": "string",
       "format": "dcmDuration"
     },

@@ -47,7 +47,7 @@
       "default": true
     },
     "dcmTag": {
-      "title": "Attributo Tag ",
+      "title": "Attributo Tag",
       "description": "Tag DICOM come stringa esadecimale",
       "type": "array",
       "items": {
@@ -57,7 +57,7 @@
     },
     "dcmProperty": {
       "title": "Proprietà",
-      "description": "Proprietà nel formato <name>=<value> ",
+      "description": "Proprietà nel formato <name>=<value>",
       "type": "array",
       "items": {
         "type": "string"

@@ -55,13 +55,13 @@
     },
     "dcmExportAsSourceAE": {
       "title": "导出为源应用实体(AE)",
-      "description": "当建立与目的地应用实体(AE)的关联时,存档应用实体(AE)的标题被掩蔽为发送系列的应用实体(AE)的标题。 ",
+      "description": "当建立与目的地应用实体(AE)的关联时,存档应用实体(AE)的标题被掩蔽为发送系列的应用实体(AE)的标题。",
       "type": "boolean",
       "default": false
     },
     "dcmDeleteStudyFromStorageID": {
       "title": "从存储ID中删除检查",
-      "description": "删除从存储系统ID导出的检查对象。 仅适用于验证级导出任务。 ",
+      "description": "删除从存储系统ID导出的检查对象。 仅适用于验证级导出任务。",
       "type": "string",
       "format": "dcmStorageID"
     },

@@ -67,7 +67,7 @@
     },
     "dcmuiPageTitle": {
       "title": "Page Title",
-      "description": "If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser ) ",
+      "description": "If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser )",
       "type": "string"
     },
     "dcmuiPersonNameFormat": {
@@ -77,7 +77,7 @@
     },
     "dcmuiDefaultWidgetAets": {
       "title": "默认小部件AETs",
-      "description": "选择小部件AET需要预选的AET。 ",
+      "description": "选择小部件AET需要预选的AET。",
       "type": "array",
       "items" : {
         "type": "string"
@@ -118,7 +118,7 @@
     },
     "dcmuiAetConfig": {
       "title": "AET下拉列表",
-      "description": "定义要在UI下拉列表中显示的AET。 ",
+      "description": "定义要在UI下拉列表中显示的AET。",
       "titleKey":"{dcmuiAetListName}",
       "type": "array",
       "items" : {
@@ -181,7 +181,7 @@
     },
     "dcmuiDeviceClusterObject": {
       "title": "UI集群配置",
-      "description": "集群中的设备分组。 ",
+      "description": "集群中的设备分组。",
       "titleKey":"{dcmuiDeviceClusterName}",
       "type": "array",
       "items" : {

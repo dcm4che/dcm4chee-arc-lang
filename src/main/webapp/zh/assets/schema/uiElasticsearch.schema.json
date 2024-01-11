@@ -1,5 +1,5 @@
 {
-  "title": "UI Elasticsearch Configuration ",
+  "title": "UI Elasticsearch Configuration",
   "description": "搜索引擎配置的专业版本",
   "type": "object",
   "required": [

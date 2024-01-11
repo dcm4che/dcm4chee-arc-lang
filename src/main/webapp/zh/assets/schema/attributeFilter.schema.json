@@ -45,7 +45,7 @@
     },
     "dcmAttributeUpdatePolicy": {
       "title": "属性更新策略",
-      "description": "当接收到实体的后续实例时,为在系列,检查和患者级别提取的属性指定更新策略。PRESERVE（=将不存在于原始数据集中的新数据集的属性设置为空）,SUPPLEMENT（=补充不存在于原始数据集中的属性）,REPLACE（=完全替换原始数据集）,MERGE（=从新数据集写入属性值）,OVERWRITE（=如果新数据集的属性值为空,则将原始数据集的属性值设置为空）。如果不存在,则应用PRESERVE。 ",
+      "description": "当接收到实体的后续实例时,为在系列,检查和患者级别提取的属性指定更新策略。PRESERVE（=将不存在于原始数据集中的新数据集的属性设置为空）,SUPPLEMENT（=补充不存在于原始数据集中的属性）,REPLACE（=完全替换原始数据集）,MERGE（=从新数据集写入属性值）,OVERWRITE（=如果新数据集的属性值为空,则将原始数据集的属性值设置为空）。如果不存在,则应用PRESERVE。",
       "type": "string",
       "enum": [
         "PRESERVE",

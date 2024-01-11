@@ -93,7 +93,7 @@
     },
     "dcmAuditEventActionCode": {
       "title": "事件操作代码",
-      "description": "RFC 3881审计事件操作类型代码。 ",
+      "description": "RFC 3881审计事件操作类型代码。",
       "type": "array",
       "items": {
         "type": "string",
@@ -108,7 +108,7 @@
     },
     "dcmAuditEventOutcomeIndicator": {
       "title": "事件结果说明",
-      "description": "RFC 3881审计事件结果说明。 ",
+      "description": "RFC 3881审计事件结果说明。",
       "type": "array",
       "items": {
         "type": "string",

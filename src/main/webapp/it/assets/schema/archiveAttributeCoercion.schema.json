@@ -47,7 +47,7 @@
       ]
     },
     "dcmSOPClass": {
-      "title": "UID SOP Class ",
+      "title": "UID SOP Class",
       "description": "UID della classe SOP per la quale deve essere applicata questa coercizione degli attributi. Applicare su qualsiasi se assente.",
       "type": "array",
       "items": {

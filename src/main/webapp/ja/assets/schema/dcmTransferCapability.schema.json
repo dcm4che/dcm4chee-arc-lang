@@ -54,7 +54,7 @@
       ]
     },
     "dcmDigitalSignatureSupport": {
-      "title": "デジタル 署名 支持 ",
+      "title": "デジタル 署名 支持",
       "description": "格納 SCPの デジタル 署名 支持の レベルを 示します",
       "type": "integer",
       "enum": [

@@ -44,7 +44,7 @@
     },
     "dcmProperty": {
       "title": "条件",
-      "description": " {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}格式的条件。例如:MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "description": "{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}格式的条件。例如:MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
       "items": {
         "type": "string"

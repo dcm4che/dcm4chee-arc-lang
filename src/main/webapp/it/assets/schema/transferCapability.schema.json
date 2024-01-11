@@ -15,7 +15,7 @@
     },
     "dicomSOPClass": {
       "title": "SOP Class",
-      "description": "UID SOP Class ",
+      "description": "UID SOP Class",
       "type": "string",
       "format": "dcmSOPClass"
     },

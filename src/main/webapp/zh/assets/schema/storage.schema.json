@@ -85,7 +85,7 @@
     },
     "dcmFileOpenOption": {
       "title": "File Open Option(s)",
-      "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions) ",
+      "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)",
       "type": "array",
       "items" : {
         "type": "string",
@@ -284,7 +284,7 @@
     },
     "dcmRetrieveCacheMaxParallel": {
       "title": "读高速缓存最大并行数",
-      "description": "读时高速缓存存储中并行副本的最大数量。仅当设置了\"读缓存存储ID\"时才有效。 ",
+      "description": "读时高速缓存存储中并行副本的最大数量。仅当设置了\"读缓存存储ID\"时才有效。",
       "type": "integer",
       "default" : 10,
       "minimum": 0,

@@ -20,21 +20,21 @@
     },
     "dcmuiQueueName": {
       "title": "队列",
-      "description": "队列块用于UI仪表板配置的队列名称。 ",
+      "description": "队列块用于UI仪表板配置的队列名称。",
       "type": "array",
       "items" : { "type": "string" },
       "format" : "dcmQueueName"
     },
     "dcmuiExportName": {
       "title": "Exporter IDs",
-      "description": "用于UI仪表板配置的队列和比较块。 ",
+      "description": "用于UI仪表板配置的队列和比较块。",
       "type": "array",
       "items" : { "type": "string" },
       "format" : "dcmExporterID"
     },
     "dicomuiDeviceName": {
       "title": "设备名称",
-      "description": "用于生成检索和导出块的UI仪表板配置的设备名称  ",
+      "description": "用于生成检索和导出块的UI仪表板配置的设备名称",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dicomDeviceName"
@@ -62,7 +62,7 @@
     },
     "dicomuiDockerContainer": {
       "title": "存档的汽车容器",
-      "description": "硬件页中使用的归档docker容器的名称  ",
+      "description": "硬件页中使用的归档docker容器的名称",
       "type": "array",
       "items" : { "type": "string" }
     }

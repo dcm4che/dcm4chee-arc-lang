@@ -1357,7 +1357,7 @@
     },
     "dcmStorageVerificationPolicy": {
       "title": "Política de verificación de almacenamiento",
-      "description": "EXISTE_REGISTRO_BD: sólo comprueba la existencia de registros de base de datos, OBJECTO_EXISTE: comprueba si el objeto existe en el sistema de almacenamiento, TAMAÑO_OBJETO: comprueba el tamaño del objeto en el sistema de almacenamiento, RECUPERAR_OBJETO: obtiene el objeto del sistema de almacenamiento), SUMADECOMPROBACIÓPN_OBJETO: recalcula la suma de comprobación del objeto en el sistema de almacenamiento, S3_MD5SUM: comprueba la suma de comprobación MD5 del objeto en el sistema de almacenamiento S3. Pueden sobrescribirse con los valores configurados para determinados EA de red de archivos. ",
+      "description": "EXISTE_REGISTRO_BD: sólo comprueba la existencia de registros de base de datos, OBJECTO_EXISTE: comprueba si el objeto existe en el sistema de almacenamiento, TAMAÑO_OBJETO: comprueba el tamaño del objeto en el sistema de almacenamiento, RECUPERAR_OBJETO: obtiene el objeto del sistema de almacenamiento), SUMADECOMPROBACIÓPN_OBJETO: recalcula la suma de comprobación del objeto en el sistema de almacenamiento, S3_MD5SUM: comprueba la suma de comprobación MD5 del objeto en el sistema de almacenamiento S3. Pueden sobrescribirse con los valores configurados para determinados EA de red de archivos.",
       "type": "string",
       "default": "OBJECT_CHECKSUM",
       "enum": [
@@ -1828,7 +1828,7 @@
     },
     "dcmRelationalRetrieveNegotiationLenient": {
       "title": "Negociación de Recuperación Relacional Leniente",
-      "description": "Indica aceptar C-MOVE y C-GET RQs sin claves únicas para niveles por encima del nivel de consulta también si el soporte para consultas relacionales no fue negociado. Puede sobrescribirse mediante el valor configurado para determinados EA de red de archivos. ",
+      "description": "Indica aceptar C-MOVE y C-GET RQs sin claves únicas para niveles por encima del nivel de consulta también si el soporte para consultas relacionales no fue negociado. Puede sobrescribirse mediante el valor configurado para determinados EA de red de archivos.",
       "type": "boolean",
       "default": false
     },
@@ -1964,14 +1964,17 @@
         -1
       ]
     },
-    "dcmTrustedIssuerOfPatientIDPattern": {
-      "title": "Patrón de emisor de confianza de ID de paciente",
-      "description": "Expresión regular que identifica la autoridad asignadora de confianza de ID de paciente en los objetos DICOM y mensajes HL7 recibidos. Si tanto este campo como \"Emisor de confianza del ID del paciente\" están configurados, los ID de pacientes no calificados por una autoridad de asignación de confianza que coincida con el patrón especificado se comprobarán con una de las autoridades de asignación especificadas en el campo \"Emisor de confianza del ID del paciente\". Si los ID de pacientes no están calificados por ninguno de estos campos, no se utilizarán para identificar al paciente. Si no se configuran ni este campo ni \"Emisor de confianza del ID del paciente\", se utilizarán todos los ID de paciente de los objetos DICOM y mensajes HL7 recibidos para identificar al paciente.",
-      "type": "string"
+    "dcmTrustedPatientIDPattern": {
+      "title": "Trusted Patient ID Pattern",
+      "description": "Regular Expression identifying trusted Patient IDs in HL7 v2 CX format: {Patient ID}^^^{Issuer of Patient ID}&{Universal Entity ID}&{Universal Entity ID Type} in received DICOM objects and HL7 messages. Only Patient IDs matching one of the specified patterns or Patient IDs qualified by an Assigning Authority matching one of the configured 'Trusted Issuers of Patient IDs' will be used for identifying the Patient. If neither this attribute nor any 'Trusted Issuers of Patient ID' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
     },
     "dcmTrustedIssuerOfPatientID": {
-      "title": "Emisor de confianza de ID de paciente",
-      "description": "Autoridad asignadora de confianza de ID de paciente en objetos DICOM y mensajes HL7 recibidos. Si tanto este campo como \"Emisor de confianza del patrón de ID del paciente\" están configurados, los ID de pacientes no calificados por una autoridad asignadora de confianza que coincida con el patrón especificado en \"Emisor de confianza del patrón de ID del paciente\" se comprobarán con una de las autoridades asignadoras especificadas en este campo. Si los ID de paciente no están cualificados por ninguno de estos campos, no se utilizarán para identificar al paciente. Si no se configuran ni este campo ni \"Emisor de confianza del patrón de ID del paciente\", se utilizarán todas las ID de pacientes en los objetos DICOM y mensajes HL7 recibidos para identificar al paciente. Formato: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
+      "title": "Trusted Issuer of Patient ID",
+      "description": "Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. Only Patient IDs qualified by an Assigning Authority matching one of the specified values or Patient IDs matching one of the configured 'Trusted Patient ID Patterns' will be used for identifying the Patient. If neither this attribute nor dcmTrustedPatientIDPattern is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
       "items" : {
         "type": "string"
@@ -2105,7 +2108,7 @@
     },
     "dcmArchiveAttributeCoercion": {
       "title": "Coerción de atributos (heredada)",
-      "description": " Coerción de atributos aplicada a DIMSE recibidos/enviados por cualquier AE. Puede complementarse con coerciones de atributos configuradas para determinados AE de red de archivos.",
+      "description": "Coerción de atributos aplicada a DIMSE recibidos/enviados por cualquier AE. Puede complementarse con coerciones de atributos configuradas para determinados AE de red de archivos.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {

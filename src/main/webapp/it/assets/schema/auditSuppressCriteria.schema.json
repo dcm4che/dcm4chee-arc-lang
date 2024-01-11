@@ -122,7 +122,7 @@
     },
     "dcmAuditUserID": {
       "title": "ID Utente",
-      "description": "ID utente di controllo del partecipante attivo RFC 3881 ",
+      "description": "ID utente di controllo del partecipante attivo RFC 3881",
       "type": "array",
       "items": {
         "type": "string"

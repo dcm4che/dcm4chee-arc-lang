@@ -39,7 +39,7 @@
     },
     "dcmAcceptedUserRole": {
       "title": "已授权的用户角色",
-      "description": "定义可以使用此配置的角色,并使用\"用户\",使其可用于所有角色。 ",
+      "description": "定义可以使用此配置的角色,并使用\"用户\",使其可用于所有角色。",
       "type": "array",
       "items" : {
         "type": "string"

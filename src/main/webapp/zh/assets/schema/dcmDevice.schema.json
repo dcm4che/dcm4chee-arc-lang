@@ -22,7 +22,7 @@
     },
     "dcmLimitAssociationsInitiatedBy": {
       "title": "AE关联限制",
-      "description": "由特定应用实体(AE)以<ae-title>=<number>的形式启动的打开DICOM连接的最大数目； 如果超出限制,则拒绝来自AE的关联请求。 ",
+      "description": "由特定应用实体(AE)以<ae-title>=<number>的形式启动的打开DICOM连接的最大数目； 如果超出限制,则拒绝来自AE的关联请求。",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmLimitAssociationsInitiatedBy"

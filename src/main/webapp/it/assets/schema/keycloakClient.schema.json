@@ -42,7 +42,7 @@
       "default": "client_credentials"
     },
     "dcmKeycloakClientSecret": {
-      "title": "Segreto del client Keycloak ",
+      "title": "Segreto del client Keycloak",
       "description": "Segreto del client Keycloak. Obbligatorio se tipo di concessione = client_credentials.",
       "type": "string"
     },

@@ -30,7 +30,7 @@
     },
     "dcmSchedule": {
       "title": "时间条件",
-      "description": "仅在指定的时间范围内应用此规则。 ",
+      "description": "仅在指定的时间范围内应用此规则。",
       "type": "array",
       "items": {
         "type": "string"
@@ -44,7 +44,7 @@
     },
     "dcmUPSWorklistLabel": {
       "title": "工作列表标签",
-      "description": "创建的UPS中工作列表标签的值（0074,1202）。{attributeID}将被接收数据集中该属性的值替换。 示例:{StudyDescription}。 ",
+      "description": "创建的UPS中工作列表标签的值（0074,1202）。{attributeID}将被接收数据集中该属性的值替换。 示例:{StudyDescription}。",
       "type": "string"
     },
     "dcmUPSPriority": {
@@ -77,13 +77,13 @@
     },
     "dcmUPSCompletionDateTimeDelay": {
       "title": "预期完成时间延迟",
-      "description": "从PnDTnHnMn.nS格式创建的UPS中的预期完成时间接收时间起的延迟（0040,4011）。 如果不存在,则不会设置完成预期日期和时间。 ",
+      "description": "从PnDTnHnMn.nS格式创建的UPS中的预期完成时间接收时间起的延迟（0040,4011）。 如果不存在,则不会设置完成预期日期和时间。",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmUPSInstanceUIDBasedOnName": {
       "title": "基于名称的UPS实例UID",
-      "description": "用于在创建的UPS中（0008,0018）生成基于名称的SOP实例UID的值。 该值通常包含{StudyInstanceUID},{SeriesInstanceUID}或{SOPInstanceUID},以便为接收的每个检验,系列或实例创建不同的UPS。 如果不存在,则使用（0008,0018）随机生成的SOP实例UID。 ",
+      "description": "用于在创建的UPS中（0008,0018）生成基于名称的SOP实例UID的值。 该值通常包含{StudyInstanceUID},{SeriesInstanceUID}或{SOPInstanceUID},以便为接收的每个检验,系列或实例创建不同的UPS。 如果不存在,则使用（0008,0018）随机生成的SOP实例UID。",
       "type": "string"
     },
     "dcmUPSIncludeInputInformation": {
@@ -123,12 +123,12 @@
     },
     "dcmUPSScheduledWorkitemCode": {
       "title": "调度的工作项目代码",
-      "description": "创建的UPS中调度的工作项目代码序列的（CV,CSD,\"CM\"）形式的项目（0040,4018）。 ",
+      "description": "创建的UPS中调度的工作项目代码序列的（CV,CSD,\"CM\"）形式的项目（0040,4018）。",
       "type": "string"
     },
     "dcmUPSScheduledStationNameCode": {
       "title": "调度的站名代码",
-      "description": "创建的UPS中调度的站名代码序列的（CV,CSD,\"CM\"）形式的项目（0040,4025）。 ",
+      "description": "创建的UPS中调度的站名代码序列的（CV,CSD,\"CM\"）形式的项目（0040,4025）。",
       "type": "array",
       "items": {
         "type": "string"
@@ -136,7 +136,7 @@
     },
     "dcmUPSScheduledStationClassCode": {
       "title": "调度的站类代码",
-      "description": "创建的UPS中调度的站类代码序列的（CV,CSD,\"CM\"）形式的项目（0040,4026）。 ",
+      "description": "创建的UPS中调度的站类代码序列的（CV,CSD,\"CM\"）形式的项目（0040,4026）。",
       "type": "array",
       "items": {
         "type": "string"
@@ -144,7 +144,7 @@
     },
     "dcmUPSScheduledStationLocationCode": {
       "title": "调度的站点地理位置代码",
-      "description": "创建的UPS中调度的站点地理位置代码序列的（CV,CSD,\"CM\"）形式的项目（0040,4027）。 ",
+      "description": "创建的UPS中调度的站点地理位置代码序列的（CV,CSD,\"CM\"）形式的项目（0040,4027）。",
       "type": "array",
       "items": {
         "type": "string"
@@ -160,17 +160,17 @@
     },
     "dcmUPSScheduledHumanPerformerName": {
       "title": "预定的人类执行者名称",
-      "description": "创建的UPS中预定的人类执行者序列的（0040,4034）项中的人类执行者名称的值（0040,4037）。 {attributeID}将被接收数据集中该属性的值替换。 示例:{PerformingPhysicianName}。 ",
+      "description": "创建的UPS中预定的人类执行者序列的（0040,4034）项中的人类执行者名称的值（0040,4037）。 {attributeID}将被接收数据集中该属性的值替换。 示例:{PerformingPhysicianName}。",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerOrganization": {
       "title": "预定的人类执行者组织",
-      "description": "创建的UPS中预定的人类执行者序列的（0040,4034）项中的人类执行者组织的值（0040,4036）。 {attributeID}将被接收数据集中该属性的值替换。 例如:{ResponsibleOrganization}。 ",
+      "description": "创建的UPS中预定的人类执行者序列的（0040,4034）项中的人类执行者组织的值（0040,4036）。 {attributeID}将被接收数据集中该属性的值替换。 例如:{ResponsibleOrganization}。",
       "type": "string"
     },
     "dcmAdmissionID": {
       "title": "许可号",
-      "description": "创建的UPS中许可号（0038,0010）的值。 {attributeID}将被接收数据集中该属性的值替换。 例如:{AdmissionID}。 ",
+      "description": "创建的UPS中许可号（0038,0010）的值。 {attributeID}将被接收数据集中该属性的值替换。 例如:{AdmissionID}。",
       "type": "string"
     },
     "dicomIssuerOfAdmissionID": {
@@ -217,17 +217,17 @@
     },
     "dcmRequestingService": {
       "title": "请求的服务",
-      "description": "创建的UPS中引用的请求序列的（0040,A370）项的请求服务的（0032,1033）值。 {attributeID}将被接收数据集中该属性的值替换。 示例:{StudyDescription}。 ",
+      "description": "创建的UPS中引用的请求序列的（0040,A370）项的请求服务的（0032,1033）值。 {attributeID}将被接收数据集中该属性的值替换。 示例:{StudyDescription}。",
       "type": "string"
     },
     "dcmURI": {
       "title": "XSL样式表URI",
-      "description": "指定XSL样式表的URI,该URI将对接收到的HL7消息进行代码转换,以便在创建的UPS中包括附加属性。 ",
+      "description": "指定XSL样式表的URI,该URI将对接收到的HL7消息进行代码转换,以便在创建的UPS中包括附加属性。",
       "type": "string"
     },
     "dcmNoKeywords": {
       "title": "无属性关键字",
-      "description": "指示传递到XSLT的DICOM XML是否省略属性关键字。 ",
+      "description": "指示传递到XSLT的DICOM XML是否省略属性关键字。",
       "type": "boolean",
       "default": false
     }

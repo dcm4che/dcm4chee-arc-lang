@@ -155,7 +155,7 @@
     },
     "dcmAuditApplicationName": {
       "title": "系统日志应用程序名称",
-      "description": "审核消息的RFC 5424系统日志应用程序名称。如果不存在，则为审计源ID。 ",
+      "description": "审核消息的RFC 5424系统日志应用程序名称。如果不存在，则为审计源ID。",
       "type": "string"
     },
     "dcmAuditMessageID": {
@@ -166,7 +166,7 @@
     },
     "dcmAuditMessageEncoding": {
       "title": "消息编码",
-      "description": "审核消息的RFC 5424系统日志消息部分的字符编码。 ",
+      "description": "审核消息的RFC 5424系统日志消息部分的字符编码。",
       "type": "string",
       "default": "UTF-8"
     },
@@ -178,13 +178,13 @@
     },
     "dcmAuditTimestampInUTC": {
       "title": "UTC格式时间戳",
-      "description": "指示RFC 5424系统日志时间戳和审计消息事件日期/时间是否指定使用协调的世界通用时间。 默认为本地时区。 ",
+      "description": "指示RFC 5424系统日志时间戳和审计消息事件日期/时间是否指定使用协调的世界通用时间。 默认为本地时区。",
       "type": "boolean",
       "default": false
     },
     "dcmAuditMessageFormatXML": {
       "title": "消息格式XML",
-      "description": "指定XML审计消息是否以换行和缩进格式格式化。 ",
+      "description": "指定XML审计消息是否以换行和缩进格式格式化。",
       "type": "boolean",
       "default": false
     },

@@ -13,7 +13,7 @@
       "type": "string"
     },
     "dcmTag": {
-      "title": "Attributo Tag ",
+      "title": "Attributo Tag",
       "description": "Tag DICOM come stringa esadecimale",
       "type": "array",
       "items": {

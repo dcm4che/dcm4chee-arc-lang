@@ -85,7 +85,7 @@
     },
     "dcmFileOpenOption": {
       "title": "File Open Option(s)",
-      "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions) ",
+      "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)",
       "type": "array",
       "items" : {
         "type": "string",

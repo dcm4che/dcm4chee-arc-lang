@@ -65,7 +65,7 @@
       "format": "dcmDuration"
     },
     "dcmDeleteRejectionNoteDelay": {
-      "title": "अस्वीकृति नोट हटवण्याचे विलंब ",
+      "title": "अस्वीकृति नोट हटवण्याचे विलंब",
       "description": "ISO-8601 कालावधी स्वरूपात विलंब PnDTnHnMn.nS ज्यानंतर विशिष्ट अस्वीकृति नोट हटविली जातात. अनुपस्थित असल्यास अनंत.",
       "type": "string",
       "format": "dcmDuration"

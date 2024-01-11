@@ -128,7 +128,7 @@
     },
     "dcmUPSScheduledStationNameCode": {
       "title": "Código de nombre de estación programada",
-      "description": " Elemento de la secuencia de códigos de nombre de estación programada (0040,4025) en el UPS creado en formato (CV, CSD, \"CM\").",
+      "description": "Elemento de la secuencia de códigos de nombre de estación programada (0040,4025) en el UPS creado en formato (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string"
@@ -136,7 +136,7 @@
     },
     "dcmUPSScheduledStationClassCode": {
       "title": "Código de clase de la estación programada",
-      "description": " Elemento de la secuencia de códigos de clase de la estación programada (0040,4026) en el UPS creado en formato (CV, CSD, \"CM\").",
+      "description": "Elemento de la secuencia de códigos de clase de la estación programada (0040,4026) en el UPS creado en formato (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string"
@@ -144,7 +144,7 @@
     },
     "dcmUPSScheduledStationLocationCode": {
       "title": "Código de ubicación geográfica de la estación programada",
-      "description": " Elemento de la secuencia de códigos de ubicación geográfica de la estación programada (0040,4027) en el UPS creado en formato (CV, CSD, \"CM\").",
+      "description": "Elemento de la secuencia de códigos de ubicación geográfica de la estación programada (0040,4027) en el UPS creado en formato (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string"

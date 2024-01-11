@@ -1,6 +1,6 @@
 {
   "title": "ウェブ アプリケーション",
-  "description": "ウェブ アプリケーション 情報 ",
+  "description": "ウェブ アプリケーション 情報",
   "type": "object",
   "required": [
     "dcmWebAppName",

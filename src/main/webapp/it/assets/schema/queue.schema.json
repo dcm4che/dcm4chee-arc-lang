@@ -91,7 +91,7 @@
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageCanceledDelay": {
-      "title": "Ritardo per l'eliminazione dei messaggi annullati in coda ",
+      "title": "Ritardo per l'eliminazione dei messaggi annullati in coda",
       "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMn.nS dopo il quale i messaggi di annullamento vengono eliminati dalla coda. Se assente, non c'è cancellazione per quella coda particolare",
       "type": "string",
       "format": "dcmDuration"

@@ -33,7 +33,7 @@
     },
     "dcmProperty": {
       "title": "Processing Property",
-      "description": "Proprietà dipendente dal processore UPS nel formato <name>=<value> ",
+      "description": "Proprietà dipendente dal processore UPS nel formato <name>=<value>",
       "type": "array",
       "items": { "type": "string" }
     },

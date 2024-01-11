@@ -40,7 +40,7 @@
     },
     "dcmuiBackgroundURL": {
       "title": "Background URL",
-      "description": "Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px ",
+      "description": "Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px",
       "type": "string"
     },
     "dcmuiHideOtherPatientIDs": {
@@ -67,7 +67,7 @@
     },
     "dcmuiPageTitle": {
       "title": "Page Title",
-      "description": "If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser ) ",
+      "description": "If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser )",
       "type": "string"
     },
     "dcmuiPersonNameFormat": {

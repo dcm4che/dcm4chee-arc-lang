@@ -48,7 +48,7 @@
     },
     "hl7ORUAction": {
       "title": "HL7 ORU动作",
-      "description": "HL7 ORU^R01指定接收消息时的动作:IMPORT_REPORT（=将接收到的HL7 ORU^R01转码为DICOM SR）,MWL_COMPLETED（=将匹配的MWL项的状态设置为COMPLETED）。 覆盖在设备级别指定的值。 ",
+      "description": "HL7 ORU^R01指定接收消息时的动作:IMPORT_REPORT（=将接收到的HL7 ORU^R01转码为DICOM SR）,MWL_COMPLETED（=将匹配的MWL项的状态设置为COMPLETED）。 覆盖在设备级别指定的值。",
       "type": "array",
       "items": {
         "type": "string",
@@ -65,7 +65,7 @@
     },
     "hl7ImportReportTemplateURI": {
       "title": "HL7导入报告模板URI",
-      "description": "指定样式表的URI,将收到的HL7 ORU^R01代码转换为DICOM SR。 覆盖在设备级别指定的值。 ",
+      "description": "指定样式表的URI,将收到的HL7 ORU^R01代码转换为DICOM SR。 覆盖在设备级别指定的值。",
       "type": "string"
     },
     "hl7ImportReportTemplateParam": {
@@ -78,12 +78,12 @@
     },
     "hl7ScheduleProcedureTemplateURI": {
       "title": "HL7调度过程模板URI",
-      "description": "指定样式表的URI,用于将接收到的HL7 ORM^O01,OMI^O23和OMG^O19转码为DICOM MWL项。 覆盖在设备级别指定的值。 ",
+      "description": "指定样式表的URI,用于将接收到的HL7 ORM^O01,OMI^O23和OMG^O19转码为DICOM MWL项。 覆盖在设备级别指定的值。",
       "type": "string"
     },
     "hl7ScheduledProtocolCodeInOrder": {
       "title": "HL7订单的预定协议代码",
-      "description": "指定收到的HL7订单消息的预定协议代码的位置。 覆盖在设备级别指定的值。 ",
+      "description": "指定收到的HL7订单消息的预定协议代码的位置。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
         "OBR_4_1",
@@ -92,7 +92,7 @@
     },
     "hl7ScheduledStationAETInOrder": {
       "title": "HL7订单中的预定站点AET",
-      "description": "指定接收到的HL7订单消息中的预定站点AE标题的位置。 请勿配置具有IPC段的HL7 v2.5.1 OMI^O23。 覆盖在设备级别指定的值。 ",
+      "description": "指定接收到的HL7订单消息中的预定站点AE标题的位置。 请勿配置具有IPC段的HL7 v2.5.1 OMI^O23。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
         "ORC_18"
@@ -118,7 +118,7 @@
     },
     "hl7PatientArrivalMessageType": {
       "title": "HL7患者到达消息类型",
-      "description": "触发将与患者相关联的预定程序步骤的状态从SCHEDULED更改为ARRIVED的HL7消息的消息类型。 覆盖在设备级别指定的值。 ",
+      "description": "触发将与患者相关联的预定程序步骤的状态从SCHEDULED更改为ARRIVED的HL7消息的消息类型。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
         "ADT^A10"
@@ -126,12 +126,12 @@
     },
     "hl7UseNullValue": {
       "title": "使用HL7空值",
-      "description": "指定发送的HL7消息是否将HL7 v2空值（在段字段中指定为\"）用于不存在或空的实体属性。 在远程HL7应用程序中取消设置实体属性时需要。 覆盖在设备级别指定的值。 ",
+      "description": "指定发送的HL7消息是否将HL7 v2空值（在段字段中指定为\"）用于不存在或空的实体属性。 在远程HL7应用程序中取消设置实体属性时需要。 覆盖在设备级别指定的值。",
       "type": "boolean"
     },
     "hl7VeterinaryUsePatientName": {
       "title": "HL7兽医患者名称",
-      "description": "指示在将HL7 PID字段映射到DICOM属性时强制使用兽医患者名称。 仅使用PID.5的前两个组件作为DICOM患者名称。 如果PID.5只有一个组件,则将其值用作名称,而将PID.9的第一个组件用作DICOM患者姓名的姓氏。 覆盖在设备级别指定的值。 ",
+      "description": "指示在将HL7 PID字段映射到DICOM属性时强制使用兽医患者名称。 仅使用PID.5的前两个组件作为DICOM患者名称。 如果PID.5只有一个组件,则将其值用作名称,而将PID.9的第一个组件用作DICOM患者姓名的姓氏。 覆盖在设备级别指定的值。",
       "type": "boolean"
     },
     "hl7PrimaryAssigningAuthorityOfPatientID": {
@@ -152,7 +152,7 @@
     },
     "hl7OrderMissingStudyIUIDPolicy": {
       "title": "HL7订单缺少研究实例UID策略",
-      "description": "如果收到的HL7订单消息没有研究实例UID,则指定策略。 覆盖在设备级别指定的值。 ",
+      "description": "如果收到的HL7订单消息没有研究实例UID,则指定策略。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
         "REJECT",
@@ -172,7 +172,7 @@
     },
     "hl7ImportReportMissingStudyIUIDPolicy": {
       "title": "HL7导入报告缺少研究实例UID策略",
-      "description": "如果收到的HL7导入报告(ORU)消息没有研究实例UID,则指定策略。 覆盖在设备级别指定的值。 ",
+      "description": "如果收到的HL7导入报告(ORU)消息没有研究实例UID,则指定策略。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
         "REJECT",
@@ -207,7 +207,7 @@
     },
     "hl7ReferredMergedPatientPolicy": {
       "title": "HL7引用的合并患者策略",
-      "description": "指定引用已合并患者的传入HL7消息的策略。 REJECT:拒绝此类HL7消息,IGNORE:忽略此类HL7消息,IGNORE_DUPLICATE_MERGE:仅忽略重复的HL7合并消息,并拒绝其它此类消息。 覆盖在设备级别指定的值。 ",
+      "description": "指定引用已合并患者的传入HL7消息的策略。 REJECT:拒绝此类HL7消息,IGNORE:忽略此类HL7消息,IGNORE_DUPLICATE_MERGE:仅忽略重复的HL7合并消息,并拒绝其它此类消息。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
         "REJECT",
@@ -217,13 +217,13 @@
     },
     "hl7DicomCharacterSet": {
       "title": "HL7 Dicom字符集",
-      "description": "指示从接收的HL7消息转码的数据集使用特定字符集的指定值（0008,0005）。 如果不存在,则使用与MSH-18中指定的HL7消息字符集相对应的值。 ",
+      "description": "指示从接收的HL7消息转码的数据集使用特定字符集的指定值（0008,0005）。 如果不存在,则使用与MSH-18中指定的HL7消息字符集相对应的值。",
       "type": "string",
       "format": "dcmCharset"
     },
     "hl7ForwardRule": {
       "title": "HL7传输规则",
-      "description": "HL7传输规则。 补充在设备级别指定的HL7上的UPS规则。 ",
+      "description": "HL7传输规则。 补充在设备级别指定的HL7上的UPS规则。",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {

@@ -1,6 +1,6 @@
 {
   "title": "HL7订单中的预定工作站",
-  "description": "HL7订单源中选择的预定工作站。 ",
+  "description": "HL7订单源中选择的预定工作站。",
   "type": "object",
   "required": [
     "cn",
@@ -15,7 +15,7 @@
     },
     "hl7OrderScheduledStationDeviceName": {
       "title": "调度站设备名称",
-      "description": "用于HL7 Order Messages的调度站设备名称。 ",
+      "description": "用于HL7 Order Messages的调度站设备名称。",
       "type": "string",
       "format": "dicomDeviceName"
     },

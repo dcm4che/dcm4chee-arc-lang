@@ -22,7 +22,7 @@
     },
     "dcmURIPattern": {
       "title": "Request URL模式",
-      "description": "仅转发与指定正则表达式匹配的请求。如果前缀为!，仅转发与指定正则表达式不匹配的请求。 ",
+      "description": "仅转发与指定正则表达式匹配的请求。如果前缀为!，仅转发与指定正则表达式不匹配的请求。",
       "type": "string"
     },
     "dcmHostnamePattern": {

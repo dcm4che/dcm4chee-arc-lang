@@ -11,7 +11,7 @@
   "properties": {
     "dcmPreferredTransferSyntax": {
       "title": "PreferredTransferSyntax",
-      "description": "用于在按优先级订购的呈现上下文中选择传输语法的优选的传输语法。覆盖在AE层指定的值。 ",
+      "description": "用于在按优先级订购的呈现上下文中选择传输语法的优选的传输语法。覆盖在AE层指定的值。",
       "type": "array",
       "format": "dcmTransferSyntax",
       "items": {
@@ -20,7 +20,7 @@
     },
     "dcmRelationalQueries": {
       "title": "关系查询",
-      "description": "启用/禁用关系查询。 ",
+      "description": "启用/禁用关系查询。",
       "type": "boolean",
       "default": false
     },

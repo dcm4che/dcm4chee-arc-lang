@@ -7,13 +7,13 @@
   ],
   "properties": {
     "dcmuiElasticsearchConfigName": {
-      "title": "Nome della Configurazione dell'interfaccia utente di Elasticsearch ",
-      "description": "Nome della Configurazione dell'interfaccia utente di Elasticsearch ",
+      "title": "Nome della Configurazione dell'interfaccia utente di Elasticsearch",
+      "description": "Nome della Configurazione dell'interfaccia utente di Elasticsearch",
       "type": "string"
     },
     "dcmuiElasticsearchURLObjects": {
-      "title": "URL dell'interfaccia utente di Elasticsearch ",
-      "description": "URL dell'interfaccia utente di Elasticsearch ",
+      "title": "URL dell'interfaccia utente di Elasticsearch",
+      "description": "URL dell'interfaccia utente di Elasticsearch",
       "titleKey":"{dcmuiElasticsearchURLName}",
       "type": "array",
       "items" : {

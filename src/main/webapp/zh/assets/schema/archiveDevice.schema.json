@@ -126,7 +126,7 @@
   "properties": {
     "dcmFuzzyAlgorithmClass": {
       "title": "模糊算法类",
-      "description": "指定模糊算法实现类。 ",
+      "description": "指定模糊算法实现类。",
       "type": "string",
       "enum":[
       "org.dcm4che3.soundex.Soundex",
@@ -145,25 +145,25 @@
     },
     "dcmBulkDataDescriptorID": {
       "title": "批量数据描述符ID",
-      "description": "由提供存档实例元数据的所有服务应用的批量数据描述符的ID。 如果不存在,则只有由不具有批量数据服务类的复合实例读取指定的属性被视为批量数据。 为特定存档网络AE配置的值可能会覆盖它。 ",
+      "description": "由提供存档实例元数据的所有服务应用的批量数据描述符的ID。 如果不存在,则只有由不具有批量数据服务类的复合实例读取指定的属性被视为批量数据。 为特定存档网络AE配置的值可能会覆盖它。",
       "type": "string",
       "format": "dcmBulkDataDescriptorID"
     },
     "dcmCalculateStudySizeDelay": {
       "title": "检查大小计算延迟",
-      "description": "检查大小计算和查询属性计算的ISO-8601周期格式PnDTnHnMnS延迟。 如果不存在,则在计算检查大小和查询属性时都不会应用（最小）延迟。 ",
+      "description": "检查大小计算和查询属性计算的ISO-8601周期格式PnDTnHnMnS延迟。 如果不存在,则在计算检查大小和查询属性时都不会应用（最小）延迟。",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmCalculateStudySizePollingInterval": {
       "title": "检查大小计算轮询间隔",
-      "description": "ISO-8601周期格式PnDTnHnMnS中未知大小的检查轮询间隔。 如果不存在,则不会计算检查大小或查询属性。 ",
+      "description": "ISO-8601周期格式PnDTnHnMnS中未知大小的检查轮询间隔。 如果不存在,则不会计算检查大小或查询属性。",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmCalculateStudySizeFetchSize": {
       "title": "检查大小计算提取大小",
-      "description": "限制单个DB查询中未知大小的检查结果集。 ",
+      "description": "限制单个DB查询中未知大小的检查结果集。",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
@@ -171,7 +171,7 @@
     },
     "dcmCalculateQueryAttributes": {
       "title": "查询属性计算",
-      "description": "指示查询属性的计算是通过配置\"检查大小计算延迟\"和\"检查大小计算轮询间隔\"来执行的。 ",
+      "description": "指示查询属性的计算是通过配置\"检查大小计算延迟\"和\"检查大小计算轮询间隔\"来执行的。",
       "type": "boolean",
       "default" : false
     },
@@ -305,7 +305,7 @@
     },
     "dcmOverwritePolicy": {
       "title": "重写策略",
-      "description": "由此存档网络AE接收的对象的重写策略。 覆盖在设备级别指定的值。 ",
+      "description": "由此存档网络AE接收的对象的重写策略。 覆盖在设备级别指定的值。",
       "type": "string",
       "default": "NEVER",
       "enum": [
@@ -353,7 +353,7 @@
     },
     "dcmBulkDataSpoolDirectory": {
       "title": "批量数据假脱机目录",
-      "description": "批量数据假脱机目录的路径。 覆盖在设备级别指定的值。 ",
+      "description": "批量数据假脱机目录的路径。 覆盖在设备级别指定的值。",
       "type": "string",
       "default": "${jboss.server.temp.dir}"
     },
@@ -1395,32 +1395,32 @@
     },
     "dcmStorageVerificationInitialDelay": {
       "title": "存储验证初始延迟",
-      "description": "在ISO-8601期间以PnYnMnD或PnW格式接收系列之后的第一个存储验证延迟。 为特定存档网络AE配置的值可能会覆盖它。 ",
+      "description": "在ISO-8601期间以PnYnMnD或PnW格式接收系列之后的第一个存储验证延迟。 为特定存档网络AE配置的值可能会覆盖它。",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmStorageVerificationPeriod": {
       "title": "存储验证周期",
-      "description": "验证单个系列存储的周期。如果不存在,则在配置存储验证初始延迟之后,系统将仅验证单个系列的存储一次。 ",
+      "description": "验证单个系列存储的周期。如果不存在,则在配置存储验证初始延迟之后,系统将仅验证单个系列的存储一次。",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmStorageVerificationMaxScheduled": {
       "title": "计划的最大存储验证",
-      "description": "此设备上计划的最大存储验证任务数。要将任务分布到群集归档中的节点,必须将其设置为大于0。 ",
+      "description": "此设备上计划的最大存储验证任务数。要将任务分布到群集归档中的节点,必须将其设置为大于0。",
       "type": "integer",
       "default": 0,
       "minimum": 0
     },
     "dcmStorageVerificationPollingInterval": {
       "title": "存储验证轮询间隔",
-      "description": "预定系列存储验证的ISO-8601周期格式PnDTnHnMnS中的轮询间隔。 ",
+      "description": "预定系列存储验证的ISO-8601周期格式PnDTnHnMnS中的轮询间隔。",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmStorageVerificationSchedule": {
       "title": "存储验证计划",
-      "description": "将存储验证限制在格式为‘hour=[0-23]dayOfWeek=[0-6]’（0=星期日）指定的时间内。 ",
+      "description": "将存储验证限制在格式为‘hour=[0-23]dayOfWeek=[0-6]’（0=星期日）指定的时间内。",
       "type": "array",
       "items": {
         "type": "string"
@@ -1429,7 +1429,7 @@
     },
     "dcmStorageVerificationFetchSize": {
       "title": "存储验证提取大小",
-      "description": "在单个查询中提取的存储验证预定系列的最大数量。 ",
+      "description": "在单个查询中提取的存储验证预定系列的最大数量。",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
@@ -1443,25 +1443,25 @@
     },
     "dcmStorageVerificationOnRetrieve": {
       "title": "读取时存储验证",
-      "description": "如果在读取时无法从存储中提取对象,则是否触发整个系列的存储验证。 为特定存档网络AE配置的值可能会覆盖它。 ",
+      "description": "如果在读取时无法从存储中提取对象,则是否触发整个系列的存储验证。 为特定存档网络AE配置的值可能会覆盖它。",
       "type": "boolean",
       "default": false
     },
     "dcmCompressionAETitle": {
       "title": "压缩AE标题",
-      "description": "用于延迟压缩的存档AE标题。 ",
+      "description": "用于延迟压缩的存档AE标题。",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmCompressionPollingInterval": {
       "title": "压缩轮询间隔",
-      "description": "ISO-8601周期PnDTnHnMnS格式的轮询间隔,用于压缩系列。 ",
+      "description": "ISO-8601周期PnDTnHnMnS格式的轮询间隔,用于压缩系列。",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmCompressionThreads": {
       "title": "压缩线程",
-      "description": "用于压缩的线程数。 ",
+      "description": "用于压缩的线程数。",
       "type": "integer",
       "default" : 1,
       "minimum": 0,
@@ -1478,7 +1478,7 @@
     },
     "dcmCompressionFetchSize": {
       "title": "压缩提取大小",
-      "description": "为单个查询压缩而提取的最大系列数。 ",
+      "description": "为单个查询压缩而提取的最大系列数。",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
@@ -1486,7 +1486,7 @@
     },
     "dcmDiffTaskProgressUpdateInterval": {
       "title": "比较任务的进度更新间隔",
-      "description": "正在处理以监视进度的比较任务的更新间隔。如果不存在,则将其禁用。 ",
+      "description": "正在处理以监视进度的比较任务的更新间隔。如果不存在,则将其禁用。",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -1504,7 +1504,7 @@
     },
     "dcmPatientVerificationFetchSize": {
       "title": "患者验证提取大小",
-      "description": "在单个查询中提取用于患者验证的最大患者数。 ",
+      "description": "在单个查询中提取用于患者验证的最大患者数。",
       "type": "integer",
       "default" : 100,
       "minimum": 0,
@@ -1512,7 +1512,7 @@
     },
     "dcmPatientVerificationAdjustIssuerOfPatientID": {
       "title": "患者验证调整患者ID发布者",
-      "description": "指示是否将患者ID发布者调整为PDQ服务返回的值。 ",
+      "description": "指示是否将患者ID发布者调整为PDQ服务返回的值。",
       "type": "boolean",
       "default" : false
     },
@@ -1589,13 +1589,13 @@
     },
     "hl7PSUTaskPollingInterval": {
       "title": "HL7过程状态更新任务的轮询间隔",
-      "description": "ISO-8601周期PnDTnHnMnS格式的HL7过程状态更新任务的轮询间隔, 如果不存在,则禁用。 ",
+      "description": "ISO-8601周期PnDTnHnMnS格式的HL7过程状态更新任务的轮询间隔, 如果不存在,则禁用。",
       "type": "string",
       "format": "dcmDuration"
     },
     "hl7PSUTaskFetchSize": {
       "title": "HL7过程状态更新任务的提取大小",
-      "description": "在单个查询中提取的HL7过程状态更新任务的最大数量。 ",
+      "description": "在单个查询中提取的HL7过程状态更新任务的最大数量。",
       "type": "integer",
       "default": 100,
       "minimum": 0,
@@ -1614,13 +1614,13 @@
     },
     "hl7PSUTimeout": {
       "title": "HL7过程状态更新超时",
-      "description": "ISO-8601周期以PnDTnHnMnS格式超时,以等待接收MPPS引用的实例。 如果不存在,请永久验证完整性。 为特定存档网络AE配置的值可能会覆盖它。 ",
+      "description": "ISO-8601周期以PnDTnHnMnS格式超时,以等待接收MPPS引用的实例。 如果不存在,请永久验证完整性。 为特定存档网络AE配置的值可能会覆盖它。",
       "type": "string",
       "format": "dcmDuration"
     },
     "hl7PSUOnTimeout": {
       "title": "超时时更新HL7过程状态",
-      "description": "指定是否在超时后发送HL7过程状态更新以等待接收引用实例。 为特定存档网络AE配置的值可能会覆盖它。 ",
+      "description": "指定是否在超时后发送HL7过程状态更新以等待接收引用实例。 为特定存档网络AE配置的值可能会覆盖它。",
       "type": "boolean",
       "default": false
     },
@@ -1654,7 +1654,7 @@
     },
     "hl7PSUMessageType": {
       "title": "HL7过程状态消息类型",
-      "description": "HL7过程状态更新消息的消息类型。为特定存档网络AE配置的值可能会覆盖它。 ",
+      "description": "HL7过程状态更新消息的消息类型。为特定存档网络AE配置的值可能会覆盖它。",
       "type": "string",
       "default": "OMG_O19",
       "enum": [
@@ -1664,13 +1664,13 @@
     },
     "hl7PSUPIDPV1": {
       "title": "HL7程序状态更新PID PV1",
-      "description": "HL7程序状态更新消息包括患者标识(PID)和患者就诊（PV1）段。如果HL7步骤状态消息类型=ORU^R01,则隐式设置。 为特定存档网络AE配置的值可能会覆盖它。 ",
+      "description": "HL7程序状态更新消息包括患者标识(PID)和患者就诊（PV1）段。如果HL7步骤状态消息类型=ORU^R01,则隐式设置。 为特定存档网络AE配置的值可能会覆盖它。",
       "type": "boolean",
       "default": false
     },
     "hl7PSUMWL": {
       "title": "HL7过程状态更新MWL",
-      "description": "指定DB中的MWL项的状态是否更新为COMPLETED / DISCONTINUED,用于在配置的HL7过程状态更新延迟之后接收的检查,或用于在配置的HL7过程状态更新超时之后接收的MPPS。 如果已配置HL7步骤状态更新接收应用产品,则将其隐式设置为真。 为特定存档网络AE配置的值可能会覆盖它。 ",
+      "description": "指定DB中的MWL项的状态是否更新为COMPLETED / DISCONTINUED,用于在配置的HL7过程状态更新延迟之后接收的检查,或用于在配置的HL7过程状态更新超时之后接收的MPPS。 如果已配置HL7步骤状态更新接收应用产品,则将其隐式设置为真。 为特定存档网络AE配置的值可能会覆盖它。",
       "type": "boolean",
       "default": false
     },
@@ -1686,19 +1686,19 @@
     },
     "hl7TrackChangedPatientID": {
       "title": "HL7跟踪更改的患者ID",
-      "description": "通过HL7 ADT_A47或REST风格的患者更新服务跟踪患者ID更改的先前患者ID。 ",
+      "description": "通过HL7 ADT_A47或REST风格的患者更新服务跟踪患者ID更改的先前患者ID。",
       "type": "boolean",
       "default": true
     },
     "hl7UseNullValue": {
       "title": "使用HL7空值",
-      "description": "指定发送的HL7消息是否将HL7 v2空值（在段字段中指定为）用于不存在或空的实体属性。 在远程HL7应用程序中取消设置实体属性时需要。 某些存档HL7应用程序的配置值可能会覆盖它。 ",
+      "description": "指定发送的HL7消息是否将HL7 v2空值（在段字段中指定为）用于不存在或空的实体属性。 在远程HL7应用程序中取消设置实体属性时需要。 某些存档HL7应用程序的配置值可能会覆盖它。",
       "type": "boolean",
       "default": false
     },
     "hl7VeterinaryUsePatientName": {
       "title": "HL7兽医患者名称",
-      "description": "指示在将HL7 PID字段映射到DICOM属性时强制使用兽医患者名称。 仅使用PID.5的前两个组件作为DICOM患者名称。 如果PID.5只有一个组件,则将其值用作名称,而将PID.9的第一个组件用作DICOM患者姓名的姓氏。 某些存档HL7应用程序的配置值可能会覆盖它。 ",
+      "description": "指示在将HL7 PID字段映射到DICOM属性时强制使用兽医患者名称。 仅使用PID.5的前两个组件作为DICOM患者名称。 如果PID.5只有一个组件,则将其值用作名称,而将PID.9的第一个组件用作DICOM患者姓名的姓氏。 某些存档HL7应用程序的配置值可能会覆盖它。",
       "type": "boolean",
       "default": false
     },
@@ -1720,7 +1720,7 @@
     },
     "hl7OrderMissingStudyIUIDPolicy": {
       "title": "HL7订单缺少研究实例UID策略",
-      "description": "如果收到的HL7订单消息没有研究实例UID,则指定策略。 某些存档HL7应用程序的配置值可能会覆盖它。 ",
+      "description": "如果收到的HL7订单消息没有研究实例UID,则指定策略。 某些存档HL7应用程序的配置值可能会覆盖它。",
       "type": "string",
       "default": "GENERATE",
       "enum": [
@@ -1742,7 +1742,7 @@
     },
     "hl7ImportReportMissingStudyIUIDPolicy": {
       "title": "HL7导入报告缺少研究实例UID策略",
-      "description": "如果收到的HL7导入报告(ORU)消息没有研究实例UID,则指定策略。 某些存档HL7应用程序的配置值可能会覆盖它。 ",
+      "description": "如果收到的HL7导入报告(ORU)消息没有研究实例UID,则指定策略。 某些存档HL7应用程序的配置值可能会覆盖它。",
       "type": "string",
       "default": "GENERATE",
       "enum": [
@@ -1780,7 +1780,7 @@
     },
     "hl7ReferredMergedPatientPolicy": {
       "title": "HL7引用的合并患者策略",
-      "description": "指定引用已合并患者的传入HL7消息的策略。 REJECT:拒绝此类HL7消息,IGNORE:忽略此类HL7消息,IGNORE_DUPLICATE_MERGE:仅忽略重复的HL7合并消息,并拒绝其它此类消息。 某些存档HL7应用程序的配置值可能会补充这些值。 ",
+      "description": "指定引用已合并患者的传入HL7消息的策略。 REJECT:拒绝此类HL7消息,IGNORE:忽略此类HL7消息,IGNORE_DUPLICATE_MERGE:仅忽略重复的HL7合并消息,并拒绝其它此类消息。 某些存档HL7应用程序的配置值可能会补充这些值。",
       "type": "string",
       "default": "REJECT",
       "enum": [
@@ -1791,32 +1791,32 @@
     },
     "hl7DicomCharacterSet": {
       "title": "HL7 Dicom字符集",
-      "description": "指示从接收的HL7消息转码的数据集使用特定字符集的指定值（0008,0005）。 如果不存在,则使用与MSH-18中指定的HL7消息字符集相对应的值。 ",
+      "description": "指示从接收的HL7消息转码的数据集使用特定字符集的指定值（0008,0005）。 如果不存在,则使用与MSH-18中指定的HL7消息字符集相对应的值。",
       "type": "string",
       "format": "dcmCharset"
     },
     "dcmRejectionNoteStorageAET": {
       "title": "拒绝注释存储AE标题",
-      "description": "为归档应用程序实体的AE标题配置的第一个对象存储用于存储由IOCM-RS服务或过期检查删除调度程序创建的拒绝注释。 如果不存在,IOCM服务将使用为IOCM-RS请求中引用的归档AE配置的对象存储,或者过期检查删除调度程序将使用为\"拒绝过期检查AE标题\"配置的对象存储。 ",
+      "description": "为归档应用程序实体的AE标题配置的第一个对象存储用于存储由IOCM-RS服务或过期检查删除调度程序创建的拒绝注释。 如果不存在,IOCM服务将使用为IOCM-RS请求中引用的归档AE配置的对象存储,或者过期检查删除调度程序将使用为\"拒绝过期检查AE标题\"配置的对象存储。",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmUIConfigurationDeviceName": {
       "title": "UI配置设备名称",
-      "description": "指定包含存档UI配置的设备名称。 ",
+      "description": "指定包含存档UI配置的设备名称。",
       "type": "string",
       "format": "dicomDeviceName"
     },
     "dcmCSVUploadChunkSize": {
       "title": "CSV上载区块大小",
-      "description": "在单个区块中处理的CSV文件上载任务的数量。 ",
+      "description": "在单个区块中处理的CSV文件上载任务的数量。",
       "type": "integer",
       "default": 100,
       "minimum": 1
     },
     "dcmValidateUID": {
       "title": "验证UID",
-      "description": "指示是否验证UID。 ",
+      "description": "指示是否验证UID。",
       "type": "boolean",
       "default": true
     },
@@ -1964,14 +1964,17 @@
         -1
       ]
     },
-    "dcmTrustedIssuerOfPatientIDPattern": {
-      "title": "Trusted Issuer of Patient ID Pattern",
-      "description": "Regular Expression identifying trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. If both, this field and 'Trusted Issuer of Patient ID' are configured, Patient IDs not qualified by trusted Assigning Authority matching the specified pattern, will be checked against one of the specified Assigning Authorities in 'Trusted Issuer of Patient ID' field. If Patient IDs are not qualified by either of these fields, they won't be used for identifying the Patient. If neither this field nor 'Trusted Issuer of Patient ID' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient.archiveDevice.dcmTrustedIssuerOfPatientID:Trusted Issuer of Patient ID|Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. If both, this field and 'Trusted Issuer of Patient ID Pattern' are configured, Patient IDs not qualified by trusted Assigning Authority matching the pattern specified in 'Trusted Issuer of Patient ID Pattern', will be checked against one of the specified Assigning Authorities in this field. If Patient IDs are not qualified by either of these fields, they won't be used for identifying the Patient. If neither this field nor 'Trusted Issuer of Patient ID Pattern' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
-      "type": "string"
+    "dcmTrustedPatientIDPattern": {
+      "title": "Trusted Patient ID Pattern",
+      "description": "Regular Expression identifying trusted Patient IDs in HL7 v2 CX format: {Patient ID}^^^{Issuer of Patient ID}&{Universal Entity ID}&{Universal Entity ID Type} in received DICOM objects and HL7 messages. Only Patient IDs matching one of the specified patterns or Patient IDs qualified by an Assigning Authority matching one of the configured 'Trusted Issuers of Patient IDs' will be used for identifying the Patient. If neither this attribute nor any 'Trusted Issuers of Patient ID' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
     },
     "dcmTrustedIssuerOfPatientID": {
       "title": "Trusted Issuer of Patient ID",
-      "description": "Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. If both, this field and 'Trusted Issuer of Patient ID Pattern' are configured, Patient IDs not qualified by trusted Assigning Authority matching the pattern specified in 'Trusted Issuer of Patient ID Pattern', will be checked against one of the specified Assigning Authorities in this field. If Patient IDs are not qualified by either of these fields, they won't be used for identifying the Patient. If neither this field nor 'Trusted Issuer of Patient ID Pattern' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
+      "description": "Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. Only Patient IDs qualified by an Assigning Authority matching one of the specified values or Patient IDs matching one of the configured 'Trusted Patient ID Patterns' will be used for identifying the Patient. If neither this attribute nor dcmTrustedPatientIDPattern is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
       "items" : {
         "type": "string"
@@ -2213,7 +2216,7 @@
     },
     "hl7ForwardRule": {
       "title": "HL7转发规则",
-      "description": "应用于由任何HL7应用程序接收的HL7消息的转发规则。 某些归档HL7应用程序配置的HL7传输规则可能会对其进行补充。 ",
+      "description": "应用于由任何HL7应用程序接收的HL7消息的转发规则。 某些归档HL7应用程序配置的HL7传输规则可能会对其进行补充。",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -2222,7 +2225,7 @@
     },
     "hl7ExportRule": {
       "title": "HL7导出规则",
-      "description": "应用于由任何HL7应用程序接收的HL7消息的导出规则。 某些归档HL7应用程序配置的HL7导出规则可能会对其进行补充。 ",
+      "description": "应用于由任何HL7应用程序接收的HL7消息的导出规则。 某些归档HL7应用程序配置的HL7导出规则可能会对其进行补充。",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {

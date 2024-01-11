@@ -31,7 +31,7 @@
     },
     "dcmSchedule": {
       "title": "时间条件",
-      "description": "仅在指定的时间范围内应用此规则。 ",
+      "description": "仅在指定的时间范围内应用此规则。",
       "type": "array",
       "items": {
         "type": "string"
@@ -53,7 +53,7 @@
     },
     "dcmExportReoccurredInstances": {
       "title": "导出重复实例",
-      "description": "指示是否在实例随后出现时将该实体导出  ",
+      "description": "指示是否在实例随后出现时将该实体导出",
       "type": "string",
       "default": "REPLACE",
       "enum": [

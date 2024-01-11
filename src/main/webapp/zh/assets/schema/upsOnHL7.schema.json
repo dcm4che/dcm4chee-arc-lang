@@ -37,17 +37,17 @@
     },
     "dcmUPSLabel": {
       "title": "过程步骤标签",
-      "description": "创建的UPS中的过程步骤标签的值（0074,1204）。 {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。 例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。 ",
+      "description": "创建的UPS中的过程步骤标签的值（0074,1204）。 {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。 例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。",
       "type": "string"
     },
     "dcmUPSWorklistLabel": {
       "title": "工作列表标签",
-      "description": "创建的UPS中工作列表标签的值（0074,1202）。 {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。 如果不存在,或者在HL7消息中找不到值,则使用接收HL7应用程序的HL7应用程序名称。 例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。 ",
+      "description": "创建的UPS中工作列表标签的值（0074,1202）。 {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。 如果不存在,或者在HL7消息中找不到值,则使用接收HL7应用程序的HL7应用程序名称。 例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。",
       "type": "string"
     },
     "dcmUPSPriority": {
       "title": "优先级",
-      "description": "创建的UPS中计划的过程步骤的优先级值（0074,1200）。枚举值:HIGH,MEDIUM,LOW。 如果不存在,则应用MEDIUM。 ",
+      "description": "创建的UPS中计划的过程步骤的优先级值（0074,1200）。枚举值:HIGH,MEDIUM,LOW。 如果不存在,则应用MEDIUM。",
       "type": "string",
       "default": "MEDIUM",
       "enum": [
@@ -75,18 +75,18 @@
     },
     "dcmUPSCompletionDateTimeDelay": {
       "title": "预期完成时间延迟",
-      "description": "从PnDTnHnMn.nS格式创建的UPS中的预期完成时间接收时间起的延迟（0040,4011）。如果不存在,则不会设置完成预期日期和时间。 ",
+      "description": "从PnDTnHnMn.nS格式创建的UPS中的预期完成时间接收时间起的延迟（0040,4011）。如果不存在,则不会设置完成预期日期和时间。",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmUPSInstanceUIDBasedOnName": {
       "title": "基于名称的UPS实例UID",
-      "description": "用于在创建的UPS中（0008,0018）生成基于名称的SOP实例UID的值。 {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。 如果不存在,则使用（0008,0018）随机生成的SOP实例UID。 例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。 ",
+      "description": "用于在创建的UPS中（0008,0018）生成基于名称的SOP实例UID的值。 {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。 如果不存在,则使用（0008,0018）随机生成的SOP实例UID。 例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。",
       "type": "string"
     },
     "dcmDestinationAE": {
       "title": "目的地AE",
-      "description": "实例的DICOM应用实体的标题。 ",
+      "description": "实例的DICOM应用实体的标题。",
       "type": "string",
       "format": "dcmAETitle"
     },
@@ -156,7 +156,7 @@
     },
     "dcmAdmissionID": {
       "title": "许可号",
-      "description": "创建的UPS中许可号（0038,0010）的值。{<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。 ",
+      "description": "创建的UPS中许可号（0038,0010）的值。{<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。",
       "type": "string"
     },
     "dicomIssuerOfAdmissionID": {

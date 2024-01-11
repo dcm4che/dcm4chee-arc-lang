@@ -18,7 +18,7 @@
     },
     "dcmRejectionNoteType": {
       "title": "拒绝注释类型",
-      "description": "拒绝注释类型。 ",
+      "description": "拒绝注释类型。",
       "type": "string",
       "enum": [
         "REJECTED_FOR_QUALITY_REASONS",

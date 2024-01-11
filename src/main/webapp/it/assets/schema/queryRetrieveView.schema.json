@@ -1,5 +1,5 @@
 {
-  "title": "Vista di Query/Retrieve ",
+  "title": "Vista di Query/Retrieve",
   "description": "Specifica il comportamento della nota di rifiuto memorizzata",
   "type": "object",
   "required": [
@@ -9,7 +9,7 @@
   "properties": {
     "dcmQueryRetrieveViewID": {
       "title": "ID Vista di Query/Retrieve",
-      "description": "Identificatore vista di Query/Retrieve ",
+      "description": "Identificatore vista di Query/Retrieve",
       "type": "string",
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmQueryRetrieveViewID"

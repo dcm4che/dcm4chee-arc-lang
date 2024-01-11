@@ -15,7 +15,7 @@
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "Titolo AE MWL ",
+      "title": "Titolo AE MWL",
       "description": "Titolo AE di Archivio di MWL SCP su cui deve essere applicato il timeout di inattività MWL.",
       "type": "string",
       "format": "dcmArchiveAETitle"

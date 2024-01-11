@@ -203,7 +203,7 @@
     },
     "dcmUserIdentityNegotiationRole": {
       "title": "Rol de Negociación de Identidad de Usuario",
-      "description": " Restringe las solicitudes de Negociación de Identidad de Usuario aceptadas a los usuarios con el rol especificado. Sobrescribe el valor especificado en el nivel de dispositivo.",
+      "description": "Restringe las solicitudes de Negociación de Identidad de Usuario aceptadas a los usuarios con el rol especificado. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string"
     },
     "dcmUserIdentityNegotiationKeycloakClientID": {
@@ -833,7 +833,7 @@
     },
     "dcmArchiveAttributeCoercion": {
       "title": "Coerción de atributos (Legado)",
-      "description": " Coerción de atributos de DIMSE recibidos/enviados. Complementa las coerciones de atributos especificadas en el nivel de dispositivo.",
+      "description": "Coerción de atributos de DIMSE recibidos/enviados. Complementa las coerciones de atributos especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {

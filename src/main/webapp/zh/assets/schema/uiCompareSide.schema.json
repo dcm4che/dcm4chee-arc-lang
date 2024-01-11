@@ -17,7 +17,7 @@
     },
     "dcmuiCompareSideDescription": {
       "title": "描述",
-      "description": "关于该组的简短描述。 ",
+      "description": "关于该组的简短描述。",
       "type": "string"
     },
     "dcmuiCompareSideOrder": {

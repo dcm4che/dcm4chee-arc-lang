@@ -12,8 +12,8 @@
     "dicomAETitle": {
       "title": "Título de AE",
       "description": "Título único de AE para este AE de red.",
-      "maxLength": 16,
       "type": "string",
+      "maxLength": 16,
       "order":1,
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmSpanningCFindSCPRetrieveAET[*]",

@@ -258,7 +258,7 @@
       "format": "dcmDuration"
     },
     "dcmMWLFetchSize": {
-      "title": "Dimensione di recupero MWL ",
+      "title": "Dimensione di recupero MWL",
       "description": "Numero massimo di articoli MWL da aggiornare o eliminare in una transazione.",
       "type": "integer",
       "default" : 100,
@@ -555,7 +555,7 @@
       "format": "dcmDuration"
     },
     "dcmIanTimeout": {
-      "title": "Timeout IAN ",
+      "title": "Timeout IAN",
       "description": "Timeout nel formato di durata ISO-8601 PnDTnHnMnS per l'attesa nella ricezione di istanze referenziate in MPPS; controllare per sempre la completezza se assente. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
       "format": "dcmDuration"
@@ -685,7 +685,7 @@
       "default": false
     },
     "dcmFallbackCMoveSCPCallingAET": {
-      "title": "Titolo AE chiamante di Fallback C-Move SCP ",
+      "title": "Titolo AE chiamante di Fallback C-Move SCP",
       "description": "Titolo AE chiamante utilizzato in A-ASSOCIATE-RQ per il Fallback del C-MOVE SCP configurato. Se assente, viene utilizzato il titolo AE della SCU C-MOVE esterna. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
       "format": "dcmArchiveAETitle"
@@ -840,7 +840,7 @@
       "format": "dcmDuration"
     },
     "dcmLeadingCFindSCPQueryCacheStaleTimeout": {
-      "title": "Timeout Obsolescenza Cache di C-Find SCP Query ",
+      "title": "Timeout Obsolescenza Cache di C-Find SCP Query",
       "description": "Massimo stato di obsolescenza degli attributi del paziente e dello studio memorizzati nella cache recuperati dal principale C-Find SCP nel formato di durata ISO-8601 PnDTnHnMnS. Se assenti, gli attributi dello studio della cache vengono rimossi solo al raggiungimento della dimensione massima della cache.",
       "type": "string",
       "format": "dcmDuration"
@@ -885,12 +885,12 @@
       "default": "<none>"
     },
     "dcmAudit2JsonFhirTemplateURI": {
-      "title": "Modello URI per Audit su json + fhir ",
+      "title": "Modello URI per Audit su json + fhir",
       "description": "Specifica l'URI per il foglio di stile per transcodificare il messaggio di controllo in un evento di controllo della risorsa JSON FHIR",
       "type": "string"
     },
     "dcmAudit2XmlFhirTemplateURI": {
-      "title": "Modello URI per Audit su xml + fhir ",
+      "title": "Modello URI per Audit su xml + fhir",
       "description": "Specifica l'URI per il foglio di stile per transcodificare il messaggio di controllo in un evento di controllo della risorsa XML FHIR",
       "type": "string"
     },
@@ -1077,7 +1077,7 @@
       "format": "dcmSchedule"
     },
     "dcmRejectExpiredStudiesFetchSize": {
-      "title": "Dimensioni di recupero per Rifiuto studi scaduti ",
+      "title": "Dimensioni di recupero per Rifiuto studi scaduti",
       "description": "Numero massimo di studi scaduti recuperati in una query; In caso di assenza, gli studi scaduti non verranno automaticamente rifiutati",
       "type": "integer",
       "minimum": 0,
@@ -1370,7 +1370,7 @@
       ]
     },
     "dcmStorageVerificationUpdateLocationStatus": {
-      "title": "Stato di verifica di aggiornamento della posizione dello Storage ",
+      "title": "Stato di verifica di aggiornamento della posizione dello Storage",
       "description": "Indica se lo stato di ubicazione dei record DB deve essere aggiornato di conseguenza alla verifica dello storage. Non efficace con il criterio di verifica dello storage: DB_RECORD_EXISTS. Falso se assente. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "boolean",
       "default": false
@@ -1964,14 +1964,17 @@
         -1
       ]
     },
-    "dcmTrustedIssuerOfPatientIDPattern": {
-      "title": "Trusted Issuer of Patient ID Pattern",
-      "description": "Regular Expression identifying trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. If both, this field and 'Trusted Issuer of Patient ID' are configured, Patient IDs not qualified by trusted Assigning Authority matching the specified pattern, will be checked against one of the specified Assigning Authorities in 'Trusted Issuer of Patient ID' field. If Patient IDs are not qualified by either of these fields, they won't be used for identifying the Patient. If neither this field nor 'Trusted Issuer of Patient ID' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient.archiveDevice.dcmTrustedIssuerOfPatientID:Trusted Issuer of Patient IDs|Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. If both, this field and 'Trusted Issuer of Patient ID Pattern' are configured, Patient IDs not qualified by trusted Assigning Authority matching the pattern specified in 'Trusted Issuer of Patient ID Pattern', will be checked against one of the specified Assigning Authorities in this field. If Patient IDs are not qualified by either of these fields, they won't be used for identifying the Patient. If neither this field nor 'Trusted Issuer of Patient ID Pattern' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
-      "type": "string"
+    "dcmTrustedPatientIDPattern": {
+      "title": "Trusted Patient ID Pattern",
+      "description": "Regular Expression identifying trusted Patient IDs in HL7 v2 CX format: {Patient ID}^^^{Issuer of Patient ID}&{Universal Entity ID}&{Universal Entity ID Type} in received DICOM objects and HL7 messages. Only Patient IDs matching one of the specified patterns or Patient IDs qualified by an Assigning Authority matching one of the configured 'Trusted Issuers of Patient IDs' will be used for identifying the Patient. If neither this attribute nor any 'Trusted Issuers of Patient ID' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
     },
     "dcmTrustedIssuerOfPatientID": {
       "title": "Trusted Issuer of Patient ID",
-      "description": "Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. If both, this field and 'Trusted Issuer of Patient ID Pattern' are configured, Patient IDs not qualified by trusted Assigning Authority matching the pattern specified in 'Trusted Issuer of Patient ID Pattern', will be checked against one of the specified Assigning Authorities in this field. If Patient IDs are not qualified by either of these fields, they won't be used for identifying the Patient. If neither this field nor 'Trusted Issuer of Patient ID Pattern' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
+      "description": "Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. Only Patient IDs qualified by an Assigning Authority matching one of the specified values or Patient IDs matching one of the configured 'Trusted Patient ID Patterns' will be used for identifying the Patient. If neither this attribute nor dcmTrustedPatientIDPattern is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
       "items" : {
         "type": "string"
@@ -2014,7 +2017,7 @@
       }
     },
     "dcmQueryRetrieveView": {
-      "title": "Vista di Query/Retrieve ",
+      "title": "Vista di Query/Retrieve",
       "description": "Specifica il comportamento della nota di rifiuto memorizzata",
       "type": "array",
       "titleKey":"{dcmQueryRetrieveViewID}",
@@ -2267,7 +2270,7 @@
     },
     "dcmXRoadProperty": {
       "title": "Proprietà X-Road",
-      "description": "Proprietà per l'accesso al registro nazionale dei pazienti estoni in formato <name>=<value> ",
+      "description": "Proprietà per l'accesso al registro nazionale dei pazienti estoni in formato <name>=<value>",
       "type": "array",
       "items": {
         "type": "string"
@@ -2275,7 +2278,7 @@
     },
     "dcmImpaxReportProperty": {
       "title": "Proprietà rapporto Impax",
-      "description": "Proprietà per l'accesso al servizio report Agfa Impax in formato <name>=<value> ",
+      "description": "Proprietà per l'accesso al servizio report Agfa Impax in formato <name>=<value>",
       "type": "array",
       "items": {
         "type": "string"

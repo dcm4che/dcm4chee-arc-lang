@@ -106,7 +106,7 @@
       "default": true
     },
     "dcmDestinationAE": {
-      "title": "AE di Destinazione ",
+      "title": "AE di Destinazione",
       "description": "Titolo di un'entità dell'applicazione DICOM in cui verranno archiviate le istanze.",
       "type": "string",
       "format": "dcmAETitle"
@@ -151,7 +151,7 @@
       }
     },
     "dcmUPSScheduledHumanPerformerCode": {
-      "title": "Codice pianificato di esecuzione umana ",
+      "title": "Codice pianificato di esecuzione umana",
       "description": "Elemento della sequenza del codice degli esecutori umani (0040,4009) nell'elemento della sequenza degli esecutori umani pianificati (0040,4034) nell'UPS creato in formato (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
