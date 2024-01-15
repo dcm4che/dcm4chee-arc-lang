@@ -1603,6 +1603,7 @@
     "range-picker.range_picker": "範囲 ピッカー",
     "read_only": "読み取り 専用",
     "read_pixel_data": "Read pixel data",
+    "read_pixel_data_storage": "Read pixel data from Storage",
     "read_r": "読み取る (R)",
     "reason_for_modification": "Reason for Modification",
     "reason_for_modification_desc": "Store original values of modified Attributes in Original Attributes Sequence (0400,0561) with given Reason for the Attribute Modification (0400,0565)",

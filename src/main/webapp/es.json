@@ -1603,6 +1603,7 @@
     "range-picker.range_picker": " Seleccionador de rangos",
     "read_only": "Sólo lectura",
     "read_pixel_data": "Read pixel data",
+    "read_pixel_data_storage": "Read pixel data from Storage",
     "read_r": "Lectura (R)",
     "reason_for_modification": "Motivo de Modificación",
     "reason_for_modification_desc": "Almacenar valores originales de Atributos modificados en Secuencia de Atributos Originales (,) con Razón dada para la Modificación del Atributo (,)",
