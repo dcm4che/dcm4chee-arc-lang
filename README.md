@@ -25,20 +25,20 @@ of the language:
 dcm4che's utility [json2props](https://github.com/dcm4che/dcm4che/tree/master/dcm4che-tool/dcm4che-tool-json2props):
    ```
    $ json2props src/main/webapp/en/assets/schema src/props/en
-   src/main/webapp/en/assets/schema/hl7ExportRule.schema.json=>src/props/en/hl7ExportRule.properties
-   src/main/webapp/en/aassets/schema/hl7OrderScheduledStation.schema.json=>src/props/en/hl7OrderScheduledStation.properties
+   src/main/webapp/en/assets/schema/hl7ExportRule.schema.json=>src/props/en/hl7ExportRule.props
+   src/main/webapp/en/aassets/schema/hl7OrderScheduledStation.schema.json=>src/props/en/hl7OrderScheduledStation.props
    ...
-   src/main/webapp/assets/en/schema/metrics.schema.json=>src/props/en/metrics.properties
+   src/main/webapp/assets/en/schema/metrics.schema.json=>src/props/en/metrics.props
    ```
 
 2. Translated versions of the key/value properties files for one language can be converted back to JSON Schema files by
 invoking (e.g.)
    ```
    $ json2props src/main/webapp/en/assets/schema src/props/hi src/main/webapp/hi/assets/schema
-   src/props/hi/hl7ExportRule.properties=>src/main/webapp/hi/assets/schema/hl7ExportRule.schema.json
-   src/props/hi/hl7OrderScheduledStation.properties=>src/main/webapp/hi/assets/schema/hl7OrderScheduledStation.schema.json
+   src/props/hi/hl7ExportRule.props=>src/main/webapp/hi/assets/schema/hl7ExportRule.schema.json
+   src/props/hi/hl7OrderScheduledStation.props=>src/main/webapp/hi/assets/schema/hl7OrderScheduledStation.schema.json
    ...
-   src/props/hi/metrics.properties=>src/main/webapp/hi/assets/schema/metrics.schema.json
+   src/props/hi/metrics.props=>src/main/webapp/hi/assets/schema/metrics.schema.json
    ```
    
    If the translated key/value properties files miss some (new) entries already defined in the English version of the
@@ -48,10 +48,10 @@ invoking (e.g.)
 3. Converting the so created JSON Schema files back to the language specific key/value properties files by invoking (e.g.) 
    ```
    $ json2props src/main/webapp/hi/assets/schema src/props/hi
-   src/main/webapp/hi/assets/schema/hl7ExportRule.schema.json=>src/props/hi/hl7ExportRule.properties
-   src/main/webapp/hi/assets/schema/hl7OrderScheduledStation.schema.json=>src/props/hi/hl7OrderScheduledStation.properties
+   src/main/webapp/hi/assets/schema/hl7ExportRule.schema.json=>src/props/hi/hl7ExportRule.props
+   src/main/webapp/hi/assets/schema/hl7OrderScheduledStation.schema.json=>src/props/hi/hl7OrderScheduledStation.props
    :
-   src/main/webapp/hi/assets/schema/metrics.schema.json=>src/props/hi/metrics.properties
+   src/main/webapp/hi/assets/schema/metrics.schema.json=>src/props/hi/metrics.props
    ```
    will add the previous missing entries in the key/value properties files, where title and description in English
    separated by `|` can be replaced by translated terms.
