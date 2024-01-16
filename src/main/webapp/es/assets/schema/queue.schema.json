@@ -98,7 +98,7 @@
     },
     "dcmSchedule": {
       "title": "Restringir programación",
-      "description": "Restringir programación a intervalos de tiempo especificados. Utilice Tamaño Máximo de Cola para controlar el número máximo de Tareas procesadas entre rangos de tiempo especificados.",
+      "description": "Restringir programación a intervalos de tiempo especificados.",
       "type": "array",
       "items": {
         "type": "string"
