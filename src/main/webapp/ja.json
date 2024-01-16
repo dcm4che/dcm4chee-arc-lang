@@ -2293,6 +2293,7 @@
     "study.download_patients": "Download patients as CSV",
     "study.download_series": "Download series as CSV",
     "study.download_studies": "CSV ファイルとして 検査を ダウンロード する",
+    "study.download_uwl": "Download UPS Workitems as CSV",
     "study.download_uncompressed_dicom_object": "DICOM オブジェクトを ダウンロード する",
     "study.e._completion_time": "予期される 完了 時間",
     "study.edit_mwl": "患者の MWLを 編集 する",

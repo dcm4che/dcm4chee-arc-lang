@@ -2293,6 +2293,7 @@
     "study.download_patients": "Download patients as CSV",
     "study.download_series": "Download series as CSV",
     "study.download_studies": "स्टडीज को CSV फाइल में डाउनलोड करें",
+    "study.download_uwl": "Download UPS Workitems as CSV",
     "study.download_uncompressed_dicom_object": "असम्पीडित DICOM दृष्टांत डाउनलोड करें",
     "study.e._completion_time": "अपेक्षित समाप्ति समय",
     "study.edit_mwl": "मरीज़ के MWL को संपादित करें",

@@ -2293,6 +2293,7 @@
     "study.download_patients": "Загрузить пациентов как CSV",
     "study.download_series": "Загрузить серии как CSV",
     "study.download_studies": "Загрузить исследования как CSV",
+    "study.download_uwl": "Download UPS Workitems as CSV",
     "study.download_uncompressed_dicom_object": "Загрузить ДАЙКОМ Объект без компрессии",
     "study.e._completion_time": "E. Время Завершения",
     "study.edit_mwl": "Редактировать MWL пациента ",

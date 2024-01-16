@@ -2293,6 +2293,7 @@
     "study.download_patients": "Download patients as CSV",
     "study.download_series": "Download series as CSV",
     "study.download_studies": "将检查下载为CSV文件",
+    "study.download_uwl": "Download UPS Workitems as CSV",
     "study.download_uncompressed_dicom_object": "下载DICOM对象",
     "study.e._completion_time": "预期完成时间",
     "study.edit_mwl": "编辑患者的MWL",

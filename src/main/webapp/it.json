@@ -2293,6 +2293,7 @@
     "study.download_patients": "Download patients as CSV",
     "study.download_series": "Download series as CSV",
     "study.download_studies": "Scarica gli studi come CSV",
+    "study.download_uwl": "Download UPS Workitems as CSV",
     "study.download_uncompressed_dicom_object": "Scarica oggetto DICOM",
     "study.e._completion_time": "E. Tempo di completamento",
     "study.edit_mwl": "Modifica MWL del paziente ",
