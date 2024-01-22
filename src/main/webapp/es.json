@@ -599,6 +599,7 @@
     "cancel_all_matching_tasks": "Cancelar todas las tareas que coincidan",
     "cancel_in_text": "cancel",
     "cancel_this_task": "Cancelar esta tarea",
+    "cancel_uwl": "Cancel UWL",
     "cancellation_of_the_ups_workitem_was_requested_successfully": "¡Se ha solicitado exitosamente la cancelación del elemento de trabajo UPS!",
     "captured_image_type": "Tipo de imagen capturada:",
     "cd_import": "CD Import",

@@ -599,6 +599,7 @@
     "cancel_all_matching_tasks": "Отменить все совпадающие задания",
     "cancel_in_text": "cancel",
     "cancel_this_task": "Отменить это задание",
+    "cancel_uwl": "Cancel UWL",
     "cancellation_of_the_ups_workitem_was_requested_successfully": "Отмена UPS Рабочего элемента была запрошена успешно!",
     "captured_image_type": "Тип Изображения для Захвата:",
     "cd_import": "CD Import",

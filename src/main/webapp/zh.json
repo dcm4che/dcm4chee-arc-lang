@@ -599,6 +599,7 @@
     "cancel_all_matching_tasks": "取消所有匹配任务",
     "cancel_in_text": "cancel",
     "cancel_this_task": "取消此任务",
+    "cancel_uwl": "Cancel UWL",
     "cancellation_of_the_ups_workitem_was_requested_successfully": "取消UPS工作项请求成功!",
     "captured_image_type": "捕获的图像类型:",
     "cd_import": "CD Import",

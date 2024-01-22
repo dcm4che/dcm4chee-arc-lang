@@ -599,6 +599,7 @@
     "cancel_all_matching_tasks": "一致 する すべての タスクを キャンセル する",
     "cancel_in_text": "cancel",
     "cancel_this_task": "この タスクを キャンセル する",
+    "cancel_uwl": "Cancel UWL",
     "cancellation_of_the_ups_workitem_was_requested_successfully": "UPS 作業項の キャンセルが 正常に 要求されました!",
     "captured_image_type": "キャプチャされた 画像 タイプ:",
     "cd_import": "CD Import",
