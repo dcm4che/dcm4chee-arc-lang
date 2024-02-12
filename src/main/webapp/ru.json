@@ -641,6 +641,7 @@
     "compare_group_title": "Сравнить {$PH}",
     "complete_date": "Дата Завершения",
     "completed_failed": "Completed / Failed",
+    "completed_remaining_warning_failed": "Completed /Remaining / Warning / Failed",
     "completed_warning_failed": "Completed / Warning / Failed",
     "compress": "Сжать",
     "compression_failed": "Сжатие не удалась",

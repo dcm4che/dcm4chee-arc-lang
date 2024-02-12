@@ -641,6 +641,7 @@
     "compare_group_title": "比較 する {$PH}",
     "complete_date": "Complete Date",
     "completed_failed": "Completed / Failed",
+    "completed_remaining_warning_failed": "Completed /Remaining / Warning / Failed",
     "completed_warning_failed": "Completed / Warning / Failed",
     "compress": "圧縮 する",
     "compression_failed": "圧縮が 失敗した",

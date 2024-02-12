@@ -641,6 +641,7 @@
     "compare_group_title": "Comparar {$PH}",
     "complete_date": "Fecha completa",
     "completed_failed": "Completed / Failed",
+    "completed_remaining_warning_failed": "Completed /Remaining / Warning / Failed",
     "completed_warning_failed": "Completed / Warning / Failed",
     "compress": "Comprimir",
     "compression_failed": " Fallo de compresión",

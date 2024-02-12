@@ -641,6 +641,7 @@
     "compare_group_title": "तुलना करा {$PH}",
     "complete_date": "Complete Date",
     "completed_failed": "Completed / Failed",
+    "completed_remaining_warning_failed": "Completed /Remaining / Warning / Failed",
     "completed_warning_failed": "Completed / Warning / Failed",
     "compress": "संकुचित करा",
     "compression_failed": "संक्षेप अयशस्वी",
