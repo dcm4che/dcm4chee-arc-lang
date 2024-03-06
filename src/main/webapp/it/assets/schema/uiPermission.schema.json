@@ -80,7 +80,9 @@
         "action-monitoring->queues-single_action",
         "action-monitoring->export-single_action",
         "action-monitoring->diff_monitor-all_action",
-        "action-monitoring->external_retrieve-single_action"
+        "action-monitoring->external_retrieve-single_action",
+        "action-monitoring->storage_verification-all_action",
+        "action-monitoring->storage_verification-single_action"
       ]
     },
     "dcmuiActionParam": {
