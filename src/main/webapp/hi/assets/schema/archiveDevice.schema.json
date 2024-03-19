@@ -1659,7 +1659,8 @@
       "default": "OMG_O19",
       "enum": [
         "OMG_O19",
-        "ORU_R01"
+        "ORU_R01",
+        "OMI_O23"
       ]
     },
     "hl7PSUPIDPV1": {
