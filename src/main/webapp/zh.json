@@ -624,7 +624,7 @@
     "clone": "Clone",
     "clone_ups_workitem": "Clone UPS Workitem",
     "clone_uwl": "Clone UWL",
-    "close_more_block": "关闭更多Block{$START_ITALIC_TEXT}{$CLOSE_ITALIC_TEXT}",
+    "close_more_block": "关闭更多Block",
     "close_more_filters": "关闭更多过滤器",
     "code_meaning": "Code Meaning",
     "code_value": "Code Value",

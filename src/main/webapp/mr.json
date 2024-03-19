@@ -624,7 +624,7 @@
     "clone": "Clone",
     "clone_ups_workitem": "Clone UPS Workitem",
     "clone_uwl": "Clone UWL",
-    "close_more_block": "अधिक ब्लॉक बंद करा {$START_ITALIC_TEXT}{$CLOSE_ITALIC_TEXT}",
+    "close_more_block": "अधिक ब्लॉक बंद करा",
     "close_more_filters": "अधिक फिल्टर्स बंद करा",
     "code_meaning": "Code Meaning",
     "code_value": "Code Value",
