@@ -1028,6 +1028,16 @@
       "description": "HL7 संदेशांचे पथ जे प्राप्त झाल्याप्रमाणे साठवले जातील, जर HL7 संदेशांची प्रक्रिया अपयशी झाले असतील. अनुपस्थित असल्यास, लॉगिंग होणार नाही. विशिष्ट आर्काइव्ह HL7 अनुप्रयोगासाठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते. उदाहरण : ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7.",
       "type": "string"
     },
+    "hl7OutgoingLogFilePattern": {
+      "title": "HL7 Outgoing Log File Pattern",
+      "description": "Path to HL7 messages which will be captured exactly as sent. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "type": "string"
+    },
+    "hl7OutgoingErrorLogFilePattern": {
+      "title": "HL7 Outgoing Error Log File Pattern",
+      "description": "Path to HL7 messages which will be captured exactly as sent, when processing of sent HL7 messages fails. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "type": "string"
+    },
     "hl7NoPatientCreateMessageType": {
       "title": "HL7 संदेश प्रकार - रुग्णाचा रेकॉर्ड निर्माण करू नका",
       "description": "HL7 संदेशांचा प्रकार (MessageType^TriggerEvent) ज्यांच्यावर केवळ तेव्हा प्रक्रिया केले जातील, जेव्हा डेटाबेसमध्ये आधीच रुग्णाचा रेकॉर्ड आहे, ज्या रुग्णांचे ID HL7 संदेशाचा PID किंवा MRG सेगमध्येटच्या रुग्णाच्या ID शी जुळतात. अशा प्रकारे निर्दिष्ट केलेल्या HL7 संदेशांचे प्रकारांसाठी कोणतेही नवीन रुग्णाचा रेकॉर्ड निर्माण होणार नाही. विशिष्ट आर्काइव्ह HL7 अनुप्रयोगासाठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",

@@ -1028,6 +1028,16 @@
       "description": "Ruta a los mensajes HL7 que se capturarán exactamente como se recibieron, cuando falle el procesamiento de los mensajes HL7. Si está ausente, no hay registro. Puede sobrescribirse con los valores configurados para una aplicación HL7 de archivo concreta. p. ej. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7.",
       "type": "string"
     },
+    "hl7OutgoingLogFilePattern": {
+      "title": "HL7 Outgoing Log File Pattern",
+      "description": "Path to HL7 messages which will be captured exactly as sent. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "type": "string"
+    },
+    "hl7OutgoingErrorLogFilePattern": {
+      "title": "HL7 Outgoing Error Log File Pattern",
+      "description": "Path to HL7 messages which will be captured exactly as sent, when processing of sent HL7 messages fails. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "type": "string"
+    },
     "hl7NoPatientCreateMessageType": {
       "title": "Creación de ningún paciente HL7 Tipo de mensaje",
       "description": "Tipo(s) de mensaje(s) (MessageType^TriggerEvent) de mensajes HL7 que sólo se procesan si ya existe un registro de paciente en la base de datos cuyo ID de paciente coincide con el ID de paciente del segmento PID o MRG del mensaje. Por lo tanto, los mensajes de los tipos especificados no crearán ningún nuevo registro de paciente. Puede sobrescribirse mediante valores configurados para una aplicación HL7 de archivo concreta.",

@@ -1028,6 +1028,16 @@
       "description": "HL7 メッセージの 処理が 失敗した 場合に、 受信したとおりに キャプチャされる HL7 メッセージへの パス。 存在しない 場合、 ログは 記録されません。 特定の アーカイブ HL7 アプリケーションの 設定値に よって 上書きされる 場合が あります。 eg. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
       "type": "string"
     },
+    "hl7OutgoingLogFilePattern": {
+      "title": "HL7 Outgoing Log File Pattern",
+      "description": "Path to HL7 messages which will be captured exactly as sent. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "type": "string"
+    },
+    "hl7OutgoingErrorLogFilePattern": {
+      "title": "HL7 Outgoing Error Log File Pattern",
+      "description": "Path to HL7 messages which will be captured exactly as sent, when processing of sent HL7 messages fails. If absent, there is no logging. May be overwritten by configured values for particular Archive HL7 Application. eg. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "type": "string"
+    },
     "hl7NoPatientCreateMessageType": {
       "title": "HL7 患者を 作成しない メッセージ タイプ",
       "description": "データベースに 既に 患者 レコードが あり、 その 患者 IDが PID または MRG セグメントの 患者 IDと 一致 する 場合 のみ 処理される HL7 メッセージのメッセージ タイプ (MessageType^TriggerEvent)。 したがって、 指定された タイプの メッセージに よって 新しい 患者 レコードが 作成される ことは ありません。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
