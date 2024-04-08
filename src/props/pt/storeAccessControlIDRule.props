@@ -1,0 +1,5 @@
+storeAccessControlIDRule:Store Access Control ID Rule|Store Access Control ID Rule
+storeAccessControlIDRule.cn:Name|Arbitrary/Meaningful name of the Store Access Control ID Rule
+storeAccessControlIDRule.dcmStoreAccessControlID:Store Access Control ID|Access Control ID assigned to Studies which attributes match all conditions
+storeAccessControlIDRule.dcmRulePriority:Rule Priority|Rule Priority.
+storeAccessControlIDRule.dcmProperty:Conditions|Conditions in format {key}[!]={value}. Refer <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">applicability, format and some examples.</a>

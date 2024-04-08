@@ -1,0 +1,30 @@
+dcmNetworkConnection:Network Connection Extension|dcm4che proprietary Network Connection Attributes
+dcmNetworkConnection.dcmProtocol:Protocol|Protocol of Network Connection.
+dcmNetworkConnection.dcmHTTPProxy:HTTP Proxy|HTTP Proxy: [user:password@]host:port
+dcmNetworkConnection.dcmTLSNeedClientAuth:TLS Need Client Auth|Indicates if TLS client authentication is required.
+dcmNetworkConnection.dcmTLSProtocol:TLS Protocol|The Supported TLS Protocols.
+dcmNetworkConnection.dcmTLSEndpointIdentificationAlgorithm:TLS Endpoint Identification Algorithm|Indicates the endpoint identification or verification procedures during TLS handshaking.
+dcmNetworkConnection.dcmTCPBacklog:TCP Backlog|Maximum queue length for incoming TCP connections.
+dcmNetworkConnection.dcmTCPConnectTimeout:TCP Connect Timeout|TCP connect timeout in ms; no timeout if absent.
+dcmNetworkConnection.dcmTCPCloseDelay:TCP Close Delay|TCP socket close delay in ms after send of A-ASSOCIATE-RJ, A-RELEASE-RP or A-ABORT PDU.
+dcmNetworkConnection.dcmTCPSendBufferSize:TCP Send Buffer Size|TCP send buffer size; use system defaults if absent
+dcmNetworkConnection.dcmTCPReceiveBufferSize:TCP Receive Buffer Size|TCP receive buffer size; use system defaults if absent
+dcmNetworkConnection.dcmTCPNoDelay:TCP No Delay|Enable/disable TCP_NODELAY (disable/enable Nagle algorithm).
+dcmNetworkConnection.dcmBindAddress:Bind Address|Bind address of listening socket; use hostname of the connection if absent
+dcmNetworkConnection.dcmClientBindAddress:Client Bind Address|Bind address of outgoing connections; use hostname of the connection if absent
+dcmNetworkConnection.dcmBlacklistedHostname:Blacklisted Hostname|blacklisted DNS hostnames
+dcmNetworkConnection.dcmSendPDULength:Send PDU Length|Maximal length of emitted PDUs.
+dcmNetworkConnection.dcmReceivePDULength:Receive PDU Length|Maximal length of received PDUs.
+dcmNetworkConnection.dcmMaxOpsPerformed:Max Ops Performed|Maximal number of operations to perform asynchronously; 0 = infinite.
+dcmNetworkConnection.dcmMaxOpsInvoked:Max Ops Invoked|Maximal number of operations to invoke asynchronously; 0 = infinite.
+dcmNetworkConnection.dcmPackPDV:Pack PDV|Enable/disable packing of command and data PDVs into one P-DATA-TF PDU.
+dcmNetworkConnection.dcmAARQTimeout:AA-RQ Timeout|Timeout in ms for receive of A-ASSOCIATE-RQ PDU after TCP connect; no timeout if absent
+dcmNetworkConnection.dcmAAACTimeout:AA-AC Timeout|Timeout in ms for receive of A-ASSOCIATE-AC PDU after send of A-ASSOCIATE-RQ PDU; no timeout if absent
+dcmNetworkConnection.dcmARRPTimeout:AR-RP Timeout|Timeout in ms for receive of A-RELEASE-RP PDU after send of A-RELEASE-RQ PDU; no timeout if absent
+dcmNetworkConnection.dcmSendTimeout:Send Timeout|Timeout in ms for sending other DIMSE RQs than C-STORE RQs; no timeout if absent
+dcmNetworkConnection.dcmStoreTimeout:Store Timeout|Timeout in ms for sending C-STORE RQs; no timeout if absent
+dcmNetworkConnection.dcmResponseTimeout:Response Timeout|Timeout in ms for receive of outstanding <br>- DIMSE RSPs other than C-MOVE / C-GET RSPs <br>- responses of outgoing HL7 messages <br>- HTTP(S) responses <br>No timeout if absent
+dcmNetworkConnection.dcmRetrieveTimeout:Retrieve Timeout|Timeout in ms for receive of outstanding C-GET or C-MOVE RSPs; no timeout if absent
+dcmNetworkConnection.dcmRetrieveTimeoutTotal:Retrieve Timeout Total|Indicates if the timer with the specified timeout for outstanding C-GET and C-MOVE RSPs shall be restarted on receive of pending RSPs (=false) or not (=true).
+dcmNetworkConnection.dcmIdleTimeout:Idle Timeout|Indicates aborting of idle Associations after specified timeout in ms; no timeout if absent
+dcmNetworkConnection.dcmAATimeout:A-ABORT Timeout|Timeout in ms for waiting for finishing sending any DIMSE before sending an A-ABORT PDU, triggered by the application or by expiration of a configured other timeout of this Connection. If the timeout expires, the TCP connection will be closed without sending the A-ABORT.

@@ -1,0 +1,15 @@
+queue:Queue|Managed Task Queue
+queue.dcmQueueName:Queue Name|Task Queue Name
+queue.dicomInstalled:installed|If false, processing of tasks in this queue is paused.
+queue.dcmMaxTasksParallel:Maximum parallel Tasks|Maximal number of tasks processed in parallel.
+queue.dicomDescription:DICOM Description|Textual description of the DICOM entity
+queue.dcmMaxRetries:Maximum Number of Retries|Maximal number of retries to process tasks scheduled in a specific queue.
+queue.dcmRetryDelay:Retry Delay|Delay to retry to process tasks scheduled in a specific queue in ISO-8601 duration format PnDTnHnMn.nS.
+queue.dcmMaxRetryDelay:Maximum Retry Delay|Maximal Delay to retry to process tasks scheduled in a specific queue in ISO-8601 duration format PnDTnHnMn.nS. Infinite if absent.
+queue.dcmRetryDelayMultiplier:Retry Delay Multiplier|Multiplier in % that will take effect on top of dcmRetryDelay with dcmMaxRetryDelay to be taken into account.
+queue.dcmRetryOnWarning:Retry on Warning|Enables retries to process tasks not only on failure but also on a warning outcome status in a specific queue.
+queue.dcmPurgeQueueMessageCompletedDelay:Delay for purging completed tasks|Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed tasks are purged. If absent, there is no deletion for that particular queue
+queue.dcmPurgeQueueMessageFailedDelay:Delay for purging failed tasks|Delay in ISO-8601 duration format PnDTnHnMn.nS after which failed tasks are purged. If absent, there is no deletion for that particular queue
+queue.dcmPurgeQueueMessageWarningDelay:Delay for purging warning tasks|Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning tasks are purged. If absent, there is no deletion for that particular queue
+queue.dcmPurgeQueueMessageCanceledDelay:Delay for purging canceled tasks|Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled tasks are purged. If absent, there is no deletion for that particular queue
+queue.dcmSchedule:Restrict Scheduling|Restrict Scheduling to specified time ranges.

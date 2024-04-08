@@ -1,0 +1,9 @@
+dcmNetworkAE:Network AE Extension|dcm4che proprietary Attributes of Network AE
+dcmNetworkAE.dcmRoleSelectionNegotiationLenient:Role Selection Negotiation Lenient|Indicates to disable check for required SCP/SCU role selection negotiation on sending of DIMSE-RQs. Overwrites value specified on Device level.
+dcmNetworkAE.dcmAcceptedCallingAETitle:Accepted Calling AE Title|Prohibit accepting associations from unlisted AE. If not present, any AE will be accepted
+dcmNetworkAE.dcmOtherAETitle:Other AE Title|Additional AE Title of Network AE - will also accept Association RQs with such Called AE Title
+dcmNetworkAE.dcmNoAsyncModeCalledAETitle:No Async Mode Called AE Title|Blacklist AE Title of peer Network AE as not capable to handle Asynchronous Operations Window Negotiation correctly. Suppress including corresponding User-data sub-Item in A-ASSOCIATE RQs to that Network AEs.
+dcmNetworkAE.dcmMasqueradeCallingAETitle:Masquerade Calling AE Title|AE Title used for initiating network associations, masquerading the actual AE Title for this Network AE - optional prefix [<Called AE Title>] limits the masquerading to association to a particular AE Title
+dcmNetworkAE.dcmPreferredTransferSyntax:Preferred Transfer Syntax|Preferred Transfer Syntax for selection of Transfer Syntax within a Presentation Context, ordered by priority. If absent, the first acceptable Transfer Syntax in the offered Presentation Context will be selected. May be overwritten by configured values for particular Transfer Capabilities of this AE.
+dcmNetworkAE.hl7ApplicationName:HL7 Application name|HL7 Application and Facility name (Application|Facility) associated with this AE
+dcmNetworkAE.dcmArchiveNetworkAE:Archive Network AE|DICOM Archive Network AE related information

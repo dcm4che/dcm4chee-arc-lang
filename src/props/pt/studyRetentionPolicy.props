@@ -1,0 +1,10 @@
+studyRetentionPolicy:Study Retention Policy|Study Retention Policy
+studyRetentionPolicy.cn:Name|Arbitrary/Meaningful name of the Study Retention Policy
+studyRetentionPolicy.dcmRetentionPeriod:Study Retention Period|Study Retention Period in ISO-8601 period format PnYnMnD or PnW
+studyRetentionPolicy.dcmRulePriority:Rule Priority|Rule Priority.
+studyRetentionPolicy.dcmProperty:Conditions|Conditions in format {key}[!]={value}. Refer <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">applicability, format and some examples.</a>
+studyRetentionPolicy.dcmExpireSeriesIndividually:Expire Series Individually|Indicates if series should be expired individually or not.
+studyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:Start Retention Period on Study Date|Indicates if retention period should be started on Study Date instead on receive of an object of the Study
+studyRetentionPolicy.dcmExporterID:Export expired Study|Export expired Study/Series using the specified Exporter
+studyRetentionPolicy.dcmFreezeExpirationDate:Freeze Expiration Date|Indicate to disable changes of the Expiration Date by following events.
+studyRetentionPolicy.dcmRevokeExpiration:Revoke Expiration Date|Indicate to revoke a previous set Expiration Date.
