@@ -5,5 +5,6 @@ dcmNetworkAE.dcmOtherAETitle:その 他の AE タイトル|ネットワーク AE
 dcmNetworkAE.dcmNoAsyncModeCalledAETitle:No Async Mode Called AE Title|Blacklist AE Title of peer Network AE as not capable to handle Asynchronous Operations Window Negotiation correctly. Suppress including corresponding User-data sub-Item in A-ASSOCIATE RQs to that Network AEs.
 dcmNetworkAE.dcmMasqueradeCallingAETitle:マスカレード 呼びかけている AE タイトル|この ネットワーク AEの 実際の AE タイトルを マスカレードし、ネットワーク 関連付けの 開始に 使用される AE タイトル - 随意 接頭辞 [<Called AE Title>]は アソシエーションへの マスカレードを 特定の AE タイトルに 制限します
 dcmNetworkAE.dcmPreferredTransferSyntax:好ましい 転送 構文|優先度で 注文した プレゼンテーション コンテキスト内の 転送 構文を 選択するための 好ましい 転送 構文。 存在しない 場合、 提供された プレゼンテーション コンテキストの 最初の 受け入れ 可能な 転送 構文が 選択されます。 この AEの 特定の 転送 機能の 構成された 値に よって上書きされる 場合が あります。
+dcmNetworkAE.dcmShareTransferCapabilitiesFromAETitle:Share Transfer Capabilities from AE Title|Indicates that this Network AE supports the Transfer Capabilities specified for another Network AE of the same Device.
 dcmNetworkAE.hl7ApplicationName:HL7 アプリケーション名|この AEに 関連付けられて いる HL7 アプリケーションと 施設名 (アプリケーション|施設)
 dcmNetworkAE.dcmArchiveNetworkAE:アーカイブ ネットワーク AE|DICOM アーカイブ ネットワーク AE 関連 情報

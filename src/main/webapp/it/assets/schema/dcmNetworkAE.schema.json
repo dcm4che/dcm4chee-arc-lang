@@ -50,6 +50,12 @@
         "type": "string"
       }
     },
+    "dcmShareTransferCapabilitiesFromAETitle": {
+      "title": "Share Transfer Capabilities from AE Title",
+      "description": "Indicates that this Network AE supports the Transfer Capabilities specified for another Network AE of the same Device.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
     "hl7ApplicationName": {
       "title": "Nome dell'applicazione HL7",
       "description": "Applicazione HL7 e nome della struttura (Applicazione | Struttura) associati a questo AE",

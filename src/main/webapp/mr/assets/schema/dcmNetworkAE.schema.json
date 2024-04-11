@@ -50,6 +50,12 @@
         "type": "string"
       }
     },
+    "dcmShareTransferCapabilitiesFromAETitle": {
+      "title": "Share Transfer Capabilities from AE Title",
+      "description": "Indicates that this Network AE supports the Transfer Capabilities specified for another Network AE of the same Device.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
     "hl7ApplicationName": {
       "title": "HL7 अनुप्रयोगाचे नाव",
       "description": "या AE शी संबंधित HL7 अनुप्रयोग आणि सुविधेचे नाव (अनुप्रयोग|सुविधा).",

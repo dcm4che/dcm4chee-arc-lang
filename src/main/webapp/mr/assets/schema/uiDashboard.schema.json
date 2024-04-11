@@ -61,8 +61,8 @@
       }
     },
     "dicomuiDockerContainer": {
-      "title": "Network Docker Devices",
-      "description": "Names of the network devices in docker containers used in the hardware page.",
+      "title": "संग्रहण डॉकर कंटेनर",
+      "description": "हार्डवेयर पेजमध्ये वापरल्या जाणाऱ्या संग्रहण डॉकर कंटेनर्सचे नाव.",
       "type": "array",
       "items" : { "type": "string" }
     }

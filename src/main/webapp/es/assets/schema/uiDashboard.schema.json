@@ -61,8 +61,8 @@
       }
     },
     "dicomuiDockerContainer": {
-      "title": "Network Docker Devices",
-      "description": "Names of the network devices in docker containers used in the hardware page.",
+      "title": "Archivar Contenedores Docker",
+      "description": "Nombres de los contenedores docker de archivo utilizados en la página de herramientas.",
       "type": "array",
       "items" : { "type": "string" }
     }
