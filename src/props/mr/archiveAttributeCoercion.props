@@ -1,6 +1,6 @@
 archiveAttributeCoercion:संग्रहण विशेषता बळजबरी|प्राप्त झालेल्या / पाठवलेल्या DIMSE चा संग्रहण विशेषता बळजबरी.
 archiveAttributeCoercion.cn:नाव|संग्रहण विशेषता बळजबरीचे अनियंत्रित / अर्थपूर्ण नाव.
-archiveAttributeCoercion.dcmRulePriority:नियम प्राधान्य|नियम प्राधान्य. Higher priority rule applied.
+archiveAttributeCoercion.dcmRulePriority:नियम प्राधान्य|If the condition of several archive attribute coercion (legacy) matches for a received image, higher priority coercion is applied. If there are several matching coercions with equal priority, it is undefined which coercion gets applied.
 archiveAttributeCoercion.dcmDIMSE:DIMSE|DICOM संदेश घटक ज्यावर हे विशेषता लागू केले जाईल.
 archiveAttributeCoercion.dicomTransferRole:DICOM ट्रान्सफर रोल|समान स्थितीत DICOM AE चे DICOM हस्तांतरण भूमिका.
 archiveAttributeCoercion.dcmSOPClass:SOP वर्ग UID|SOP क्लासचे UID ज्यासाठी हे संग्रहण विशेषता बळजबरी लागू केली जाईल. अनुपस्थित असल्यास कोणत्याही SOP वर्गावर लागू होईल.

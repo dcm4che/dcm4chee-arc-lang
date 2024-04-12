@@ -1,7 +1,7 @@
 studyRetentionPolicy:Politica di conservazione dello studio|Politica di conservazione dello studio
 studyRetentionPolicy.cn:Nome|Nome arbitrario/significativo della Politica di conservazione dello studio
 studyRetentionPolicy.dcmRetentionPeriod:Periodo di conservazione dello studio|Periodo di conservazione dello studio in formato periodo ISO-8601 PnYnMnD o PnW
-studyRetentionPolicy.dcmRulePriority:Priorità delle regole|Priorità della regola.
+studyRetentionPolicy.dcmRulePriority:Priorità delle regole|Se le condizioni di più politiche di conservazione dello studio corrispondono per un'immagine ricevuta, viene applicata la politica di priorità più alta. Se ci sono più criteri corrispondenti con la stessa priorità, non è definito quale criterio venga applicato.
 studyRetentionPolicy.dcmProperty:Condizioni|Condizioni nel formato (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Esempio: SendingApplicationEntityTitle=FORWARD o Modality=MR|CT o ProcedureCodeSequence.CodeValue=MRProcedure o 00180015=KNEE o 00321034.00080100=RequestingServiceCode o ImageType[3]=LOCALIZER
 studyRetentionPolicy.dcmExpireSeriesIndividually:Fa scadere le serie individualmente|Indica se le serie debbano scadere individualmente o no.
 studyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:Inizia il Periodo di conservazione sulla data dello Studio|Indica se il periodo di conservazione deve essere avviato alla Data dello studio anziché al ricevimento di un oggetto dello studio

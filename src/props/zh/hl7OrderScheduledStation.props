@@ -1,5 +1,5 @@
 hl7OrderScheduledStation:HL7订单中的预定工作站|HL7订单源中选择的预定工作站。
 hl7OrderScheduledStation.cn:名称|计划的工作站order映射的可选/有意义的名称
 hl7OrderScheduledStation.hl7OrderScheduledStationDeviceName:调度站设备名称|用于HL7 Order Messages的调度站设备名称。
-hl7OrderScheduledStation.dcmRulePriority:映射优先级|映射优先级
+hl7OrderScheduledStation.dcmRulePriority:映射优先级|If the condition of several Scheduled Station for HL7 Order rules match for a received HL7 message and each have different priority, Scheduled Station Device Name of highest priority is applied. If the condition of several Scheduled Station for HL7 Order rules match for a received HL7 message and each have equal priority, Scheduled Station Device Name of each is applied.
 hl7OrderScheduledStation.dcmProperty:条件|{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}格式的条件。 例如:MSH-4=FORWARD或 MSH-9=ADT\\^A28\\^ADT_A05 或 PID-3[.3]=PIDIssuer 或 PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType

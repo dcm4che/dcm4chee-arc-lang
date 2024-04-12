@@ -1,5 +1,5 @@
 hl7OrderScheduledStation:HL7 ऑर्डरसाठी अनुसूचित स्टेशन|HL7 ऑर्डर फीडवर निवडलेला अनुसूचित स्टेशन.
 hl7OrderScheduledStation.cn:नाव|अनुसूचित स्टेशन ऑर्डर मॅपिंगचे अनियंत्रित / अर्थपूर्ण नाव.
 hl7OrderScheduledStation.hl7OrderScheduledStationDeviceName:अनुसूचित स्टेशन डिव्हाइसचे नाव|HL7 ऑर्डर संदेशांसाठी वापरलेल्या अनुसूचित स्टेशन डिव्हाइसचे नाव.
-hl7OrderScheduledStation.dcmRulePriority:प्राधान्य मॅपिंग|प्राधान्य मॅपिंग.
+hl7OrderScheduledStation.dcmRulePriority:प्राधान्य मॅपिंग|If the condition of several Scheduled Station for HL7 Order rules match for a received HL7 message and each have different priority, Scheduled Station Device Name of highest priority is applied. If the condition of several Scheduled Station for HL7 Order rules match for a received HL7 message and each have equal priority, Scheduled Station Device Name of each is applied.
 hl7OrderScheduledStation.dcmProperty:अटी|अटी या स्वरूपात {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. उदाहरणे: MSH-4=FORWARD किंवा MSH-9=ADT\\^A28\\^ADT_A05 किंवा PID-3[.3]=PIDIssuer किंवा PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType

@@ -1,6 +1,6 @@
 archiveAttributeCoercion:Coerción de atributos de archivo - Legacy|Coerción de atributos de archivo de DIMSE recibidos/enviados
 archiveAttributeCoercion.cn:Nombre|Nombre arbitrario/significativo del atributo de archivo Coerción
-archiveAttributeCoercion.dcmRulePriority:Prioridad de regla|Prioridad de regla. Se aplica la regla de mayor prioridad.
+archiveAttributeCoercion.dcmRulePriority:Prioridad de regla|Si la condición de varias coerciones de atributos de archivo (legado) coincide para una imagen recibida, se aplica la coerción de mayor prioridad. Si hay varias coerciones coincidentes con la misma prioridad, no se define qué coerción se aplica.
 archiveAttributeCoercion.dcmDIMSE:DIMSE|Elemento de mensaje DICOM sobre el que se aplicará esta coerción de atributo. También <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#dimse" target="_blank">aplicable si las peticiones se reciben a través de web.</a>
 archiveAttributeCoercion.dicomTransferRole:Rol de transferencia DICOM|Rol de transferencia DICOM del peer DICOM AE.
 archiveAttributeCoercion.dcmSOPClass:Clase SOP UID|UID de la clase SOP a la que se aplicará esta coerción de atributos. Aplicar sobre cualquiera si está ausente.

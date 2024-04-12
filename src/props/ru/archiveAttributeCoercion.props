@@ -1,6 +1,6 @@
 archiveAttributeCoercion:Archive Attribute Coercion|Archive Attribute Coercion of received/sent DIMSE
 archiveAttributeCoercion.cn:Name|Arbitrary/Meaningful name of the Archive Attribute Coercion
-archiveAttributeCoercion.dcmRulePriority:Rule Priority|Rule Priority. Higher priority rule applied.
+archiveAttributeCoercion.dcmRulePriority:Rule Priority|If the condition of several archive attribute coercion (legacy) matches for a received image, higher priority coercion is applied. If there are several matching coercions with equal priority, it is undefined which coercion gets applied.
 archiveAttributeCoercion.dcmDIMSE:DIMSE|DICOM Message Element on which this Attribute Coercion shall be applied
 archiveAttributeCoercion.dicomTransferRole:DICOM Transfer Role|DICOM Transfer Role of peer DICOM AE.
 archiveAttributeCoercion.dcmSOPClass:SOP Class UID|UID of SOP Class for which this Attribute Coercion shall be applied. Apply on any if absent.

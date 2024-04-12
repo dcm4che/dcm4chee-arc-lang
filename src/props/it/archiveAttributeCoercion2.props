@@ -4,7 +4,7 @@ archiveAttributeCoercion2.dicomDescription:Attribute Coercion Description|Uncons
 archiveAttributeCoercion2.dcmURI:Attribute Coercion URI|Identifies Attribute Coercion by Uniform Resource Identifier (e.g. 'merge-mwl:${jboss.server.temp.url}/dcm4chee-arc/mwl2series.xsl')
 archiveAttributeCoercion2.dcmCoercionSufficient:Attribute Coercion Sufficient|Do not apply other matching Attribute Coercions of lesser priority, if this Attribute Coercion was applied effectively.
 archiveAttributeCoercion2.dcmCoercionOnFailure:Attribute Coercion on Failure|Behavior on failure applying this Attribute Coercion. RETHROW (= propagate failure to operation applying this Attribute Coercion), CONTINUE (= continue to apply other matching Attribute Coercions of lesser priority) or SUFFICIENT (= do not apply other matching Attribute Coercions of lesser priority).
-archiveAttributeCoercion2.dcmRulePriority:Attribute Coercion Priority|Rule Priority. Higher priority rule takes precedence.
+archiveAttributeCoercion2.dcmRulePriority:Attribute Coercion Priority|Se la condizione di più coercizioni di attributi di archivio (nuovi) corrisponde per un'immagine ricevuta, la coercizione a priorità più alta ha la precedenza. Se ci sono più coercizioni corrispondenti con la stessa priorità, non è definito quale coercizione abbia la precedenza.
 archiveAttributeCoercion2.dcmDIMSE:DIMSE|DICOM Message Element on which this Attribute Coercion shall be applied
 archiveAttributeCoercion2.dicomTransferRole:DICOM Transfer Role|DICOM Transfer Role of peer DICOM AE.
 archiveAttributeCoercion2.dcmSOPClass:SOP Class UID|UID of SOP Class for which this Attribute Coercion shall be applied. Apply on any if absent.

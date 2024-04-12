@@ -1,5 +1,5 @@
 hl7OrderScheduledStation:Stazione Pianificata per un Ordine HL7|Stazione pianificata selezionata su MWL HL7 Order Feed
 hl7OrderScheduledStation.cn:Nome|Nome arbitrario/significativo per la mappatura dell'ordine delle stazioni programmate
 hl7OrderScheduledStation.hl7OrderScheduledStationDeviceName:Nome dispositivo stazione pianificata|Nome dispositivo della stazione pianificata utilizzato per i messaggi di ordine HL7.
-hl7OrderScheduledStation.dcmRulePriority:Priorità di mappatura|Priorità di mappatura.
+hl7OrderScheduledStation.dcmRulePriority:Priorità di mappatura|Se la condizione di più regole di Scheduled Station for HL7 Order corrisponde a un messaggio HL7 ricevuto e ciascuna ha una priorità diversa, viene applicato il nome del dispositivo della stazione programmata con la priorità più alta. Se la condizione di più regole di Scheduled Station for HL7 Order corrisponde a un messaggio HL7 ricevuto e ciascuna ha la stessa priorità, viene applicato il nome del dispositivo di stazione pianificata di ciascuna.
 hl7OrderScheduledStation.dcmProperty:Condizioni|Condizioni nel formato {SEG}-{Seq #}[.{Comp#}[.{SubComp#}]][!]={regEx}. Esempi: MSH-4=FORWARD o MSH-9=ADT\\^A28\\^ADT_A05 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType

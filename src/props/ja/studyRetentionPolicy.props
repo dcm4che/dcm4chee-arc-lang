@@ -1,7 +1,7 @@
 studyRetentionPolicy:検査 保持 ポリシー|検査 保持 ポリシー
 studyRetentionPolicy.cn:名前|検査 保持 ポリシーの 任意 / 意味の ある 名前
 studyRetentionPolicy.dcmRetentionPeriod:検査 保持 期間|ISO-8601 期間 PnYnMnD または PnW 形式で 検査 保持 期間
-studyRetentionPolicy.dcmRulePriority:規則の 優先度|規則の 優先度。
+studyRetentionPolicy.dcmRulePriority:規則の 優先度|If the condition of several Study Retention policies match for a received image, higher priority policy is applied. If there are several matching policies with equal priority, it is undefined which policy gets applied.
 studyRetentionPolicy.dcmProperty:条件|(SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} 形式で 条件。 「|」 シンボルで 区切る ことに より、 特定の 属性に 複数の 値を 指定できます。 例 : SendingApplicationEntityTitle=FORWARD または Modality=MR|CT または ProcedureCodeSequence.CodeValue=MRProcedure または 00180015=KNEE または 00321034.00080100=RequestingServiceCode または ImageType[3]=LOCALIZER
 studyRetentionPolicy.dcmExpireSeriesIndividually:シリーズを 個別に 期限切れに する|シリーズを 個別に 期限切れに するか どうかを 示します。
 studyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:検査日に 保存 期間を 開始します|検査の オブジェクトを 受信したときではなく、 検査日に 保存 期間を 開始するか どうかを 示します

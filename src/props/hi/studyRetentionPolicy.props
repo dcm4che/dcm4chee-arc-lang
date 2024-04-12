@@ -1,7 +1,7 @@
 studyRetentionPolicy:स्टडी धारण नीति|स्टडी धारण नीति ।
 studyRetentionPolicy.cn:नाम|स्टडी धारण नीति का मनमाना/सार्थक नाम ।
 studyRetentionPolicy.dcmRetentionPeriod:स्टडी धारण कालावधि|ISO-8601 कालावधि प्रारूप PnYnMnD या PnW में स्टडी धारण कालावधि ।
-studyRetentionPolicy.dcmRulePriority:नियम प्राथमिकता|नियम प्राथमिकता ।
+studyRetentionPolicy.dcmRulePriority:नियम प्राथमिकता|If the condition of several Study Retention policies match for a received image, higher priority policy is applied. If there are several matching policies with equal priority, it is undefined which policy gets applied.
 studyRetentionPolicy.dcmProperty:नियम|नियम इस प्रारूप में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} । किसी दिए गए विशेषता के लिए एक से अधिक मूल्य निर्दिष्ट करने के लिए उन्हें | प्रतीक के सहारे अलग किया जा सकता है । उदाहरण के तौर पे : SendingApplicationEntityTitle=FORWARD या Modality=MR|CT या ProcedureCodeSequence.CodeValue=MRProcedure या 00180015=KNEE या 00321034.00080100=RequestingServiceCode या ImageType[3]=LOCALIZER
 studyRetentionPolicy.dcmExpireSeriesIndividually:प्रत्येक सीरीज समाप्त करें|प्रत्येक सीरीज समाप्त करें या नहीं यह संकेत करता है ।
 studyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:धारण कालावधि को स्टडी के तारीख से आरंभ करें|धारण कालावधि को स्टडी के दृष्टांतों के आर्काइव में पाए जाने के तारीख के बजाय स्टडी के तारीख से आरंभ करने का संकेत करता है ।

@@ -3,7 +3,7 @@ hl7StudyRetentionPolicy.cn:名称|HL7检查保留策略的可选/有意义名称
 hl7StudyRetentionPolicy.dicomAETitle:应用实体(AE)标题|应用实体(AE)标题
 hl7StudyRetentionPolicy.dcmRetentionPeriod:最小检查保留期|ISO-8601周期格式PnYnMnD或PnW的最小学习保留期. Ineffective if 'Maximal Study Retention Period' is also set.
 hl7StudyRetentionPolicy.dcmMaxRetentionPeriod:最大检查保留期|ISO-8601周期格式PnYnMnD或PnW的最大学习保持期
-hl7StudyRetentionPolicy.dcmRulePriority:规则优先级|规则优先级
+hl7StudyRetentionPolicy.dcmRulePriority:规则优先级|If the condition of several HL7 Study Retention policies match for a received HL7 message, higher priority policy is applied. If there are several matching policies with equal priority, it is undefined which policy gets applied.
 hl7StudyRetentionPolicy.dcmProperty:条件|{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}格式的条件。例如:MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType
 hl7StudyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:在检查日期启动保留期|指示是否应该在单个检查日期启动保留期,而不是在接收到触发此规则的HL7消息时启动保留期。
 hl7StudyRetentionPolicy.dcmExporterID:导出过期检查|使用指定的暴露符导出过期检查/系列
