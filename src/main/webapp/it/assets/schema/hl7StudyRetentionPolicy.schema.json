@@ -37,7 +37,7 @@
     },
     "dcmRulePriority": {
       "title": "Priorità delle regole",
-      "description": "Priorità della regola.",
+      "description": "Se la condizione di più politiche di conservazione degli studi HL7 corrisponde per un messaggio HL7 ricevuto, viene applicata la politica di priorità più alta. Se ci sono più politiche corrispondenti con uguale priorità, non è definito quale politica venga applicata.",
       "type": "integer",
       "minimum": 0,
       "default": 0

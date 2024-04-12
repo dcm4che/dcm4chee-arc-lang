@@ -21,7 +21,7 @@
     },
     "dcmRulePriority": {
       "title": "Priorità di mappatura",
-      "description": "Priorità di mappatura.",
+      "description": "Se la condizione di più regole di Scheduled Station for HL7 Order corrisponde a un messaggio HL7 ricevuto e ciascuna ha una priorità diversa, viene applicato il nome del dispositivo della stazione programmata con la priorità più alta. Se la condizione di più regole di Scheduled Station for HL7 Order corrisponde a un messaggio HL7 ricevuto e ciascuna ha la stessa priorità, viene applicato il nome del dispositivo di stazione pianificata di ciascuna.",
       "type": "integer",
       "minimum": 0,
       "default": 0

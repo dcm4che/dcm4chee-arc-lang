@@ -25,7 +25,7 @@
     },
     "dcmRulePriority": {
       "title": "नियम प्राधान्य",
-      "description": "नियम प्राधान्य.",
+      "description": "If the condition of several Study Retention policies match for a received image, higher priority policy is applied. If there are several matching policies with equal priority, it is undefined which policy gets applied.",
       "type": "integer",
       "minimum": 0,
       "default": 0

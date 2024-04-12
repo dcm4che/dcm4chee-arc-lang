@@ -47,7 +47,7 @@
     },
     "dcmRulePriority": {
       "title": "Attribute Coercion Priority",
-      "description": "Rule Priority. Higher priority rule takes precedence.",
+      "description": "If the condition of several archive attribute coercion (new) matches for a received image, higher priority coercion takes precedence. If there are several matching coercions with equal priority, it is undefined which coercion takes precedence.",
       "type": "integer",
       "default" : 0,
       "minimum": 0

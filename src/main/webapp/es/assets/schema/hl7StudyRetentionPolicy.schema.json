@@ -37,7 +37,7 @@
     },
     "dcmRulePriority": {
       "title": "Prioridad de regla",
-      "description": "Prioridad de regla.",
+      "description": "Si la condición de varias políticas de Retención de Estudios HL7 coinciden para un mensaje HL7 recibido, se aplica la política de mayor prioridad. Si hay varias políticas coincidentes con la misma prioridad, no se define qué política se aplica",
       "type": "integer",
       "minimum": 0,
       "default": 0

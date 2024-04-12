@@ -25,7 +25,7 @@
     },
     "dcmRulePriority": {
       "title": "Priorità delle regole",
-      "description": "Priorità della regola.",
+      "description": "Se le condizioni di più politiche di conservazione dello studio corrispondono per un'immagine ricevuta, viene applicata la politica di priorità più alta. Se ci sono più criteri corrispondenti con la stessa priorità, non è definito quale criterio venga applicato.",
       "type": "integer",
       "minimum": 0,
       "default": 0

@@ -47,7 +47,7 @@
     },
     "dcmRulePriority": {
       "title": "Attribute Coercion Priority",
-      "description": "Rule Priority. Higher priority rule takes precedence.",
+      "description": "Se la condizione di più coercizioni di attributi di archivio (nuovi) corrisponde per un'immagine ricevuta, la coercizione a priorità più alta ha la precedenza. Se ci sono più coercizioni corrispondenti con la stessa priorità, non è definito quale coercizione abbia la precedenza.",
       "type": "integer",
       "default" : 0,
       "minimum": 0

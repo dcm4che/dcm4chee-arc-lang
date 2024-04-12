@@ -25,7 +25,7 @@
     },
     "dcmRulePriority": {
       "title": "Prioridad de la regla",
-      "description": "Prioridad de la regla.",
+      "description": "Si la condición de varias políticas de Retención de Estudio coinciden para una imagen recibida, se aplica la política de mayor prioridad. Si hay varias políticas coincidentes con la misma prioridad, no se define qué política se aplica",
       "type": "integer",
       "minimum": 0,
       "default": 0

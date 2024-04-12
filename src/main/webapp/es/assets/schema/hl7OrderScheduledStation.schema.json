@@ -21,7 +21,7 @@
     },
     "dcmRulePriority": {
       "title": "Prioridad de mapeo",
-      "description": "Prioridad de mapeo.",
+      "description": "Si la condición de varias reglas Scheduled Station for HL7 Order coinciden para un mensaje HL7 recibido y cada una tiene diferente prioridad, se aplica Scheduled Station Device Name de mayor prioridad. Si la condición de varias reglas de estación programada para pedido HL7 coincide para un mensaje HL7 recibido y cada una tiene la misma prioridad, se aplica el nombre de dispositivo de estación programada de cada una",
       "type": "integer",
       "minimum": 0,
       "default": 0

@@ -20,7 +20,7 @@
     },
     "dcmRulePriority": {
       "title": "規則の 優先度",
-      "description": "規則の 優先度。",
+      "description": "If the condition of several Store Access Control ID rules match for a received image, higher priority rule is applied. If there are several matching rules with equal priority, it is undefined which rule gets applied.",
       "type": "integer",
       "minimum": 0,
       "default": 0

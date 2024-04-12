@@ -21,7 +21,7 @@
     },
     "dcmRulePriority": {
       "title": "Prioridad de regla",
-      "description": "Prioridad de regla. Se aplica la regla de mayor prioridad.",
+      "description": "Si la condición de varias coerciones de atributos de archivo (legado) coincide para una imagen recibida, se aplica la coerción de mayor prioridad. Si hay varias coerciones coincidentes con la misma prioridad, no se define qué coerción se aplica.",
       "type": "integer",
       "default" : 0,
       "minimum": 0

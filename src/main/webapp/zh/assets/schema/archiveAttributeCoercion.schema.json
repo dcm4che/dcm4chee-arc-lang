@@ -21,7 +21,7 @@
     },
     "dcmRulePriority": {
       "title": "规则优先级",
-      "description": "规则优先级 Higher priority rule applied.",
+      "description": "If the condition of several archive attribute coercion (legacy) matches for a received image, higher priority coercion is applied. If there are several matching coercions with equal priority, it is undefined which coercion gets applied.",
       "type": "integer",
       "default" : 0,
       "minimum": 0

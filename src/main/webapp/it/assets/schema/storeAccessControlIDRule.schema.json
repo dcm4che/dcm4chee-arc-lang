@@ -20,7 +20,7 @@
     },
     "dcmRulePriority": {
       "title": "Priorità delle regole",
-      "description": "Priorità della regola.",
+      "description": "Se la condizione di più regole Store Access Control ID corrisponde per un'immagine ricevuta, viene applicata la regola con priorità più alta. Se ci sono più regole corrispondenti con la stessa priorità, non è definito quale regola venga applicata.",
       "type": "integer",
       "minimum": 0,
       "default": 0
