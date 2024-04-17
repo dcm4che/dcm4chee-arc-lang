@@ -227,7 +227,7 @@
     },
     "dcmPurgeInstanceRecords": {
       "title": "Registros de Instancia Purgados",
-      "description": "Indica que los Registros de Instancia pueden haber sido purgados de la BD.",
+      "description": "Indica que los Registros de Instancia pueden haber sido purgados de la BD. Set to 'True' if 'Purge Instance Records Delay' is configured.",
       "type": "boolean",
       "default" : false
     },

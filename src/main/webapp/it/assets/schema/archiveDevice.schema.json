@@ -227,7 +227,7 @@
     },
     "dcmPurgeInstanceRecords": {
       "title": "Elimina record istanza",
-      "description": "Indica che i record dell'istanza possono essere eliminati dal database.",
+      "description": "Indica che i record dell'istanza possono essere eliminati dal database. Set to 'True' if 'Purge Instance Records Delay' is configured.",
       "type": "boolean",
       "default" : false
     },

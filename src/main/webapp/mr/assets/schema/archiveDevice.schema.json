@@ -227,7 +227,7 @@
     },
     "dcmPurgeInstanceRecords": {
       "title": "हटवलेले दृष्टांतांचे रेकॉर्डस्",
-      "description": "संकेत करते कि, डेटाबेसमधून दृष्टांतांचे रेकॉर्ड्स हटवले असतील.",
+      "description": "संकेत करते कि, डेटाबेसमधून दृष्टांतांचे रेकॉर्ड्स हटवले असतील. Set to 'True' if 'Purge Instance Records Delay' is configured.",
       "type": "boolean",
       "default" : false
     },

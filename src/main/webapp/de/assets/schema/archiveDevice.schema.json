@@ -227,7 +227,7 @@
     },
     "dcmPurgeInstanceRecords": {
       "title": "Purged Instance Records",
-      "description": "Indicates that Instance Records may have been purged from the DB.",
+      "description": "Indicates that Instance Records may have been purged from the DB. Set to 'True' if 'Purge Instance Records Delay' is configured.",
       "type": "boolean",
       "default" : false
     },

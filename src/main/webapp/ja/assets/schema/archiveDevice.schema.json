@@ -227,7 +227,7 @@
     },
     "dcmPurgeInstanceRecords": {
       "title": "パージされた インスタン スレコー",
-      "description": "インスタンス レコードが DBから パージされた 可能性が ある ことを 示します。",
+      "description": "インスタンス レコードが DBから パージされた 可能性が ある ことを 示します。 Set to 'True' if 'Purge Instance Records Delay' is configured.",
       "type": "boolean",
       "default" : false
     },

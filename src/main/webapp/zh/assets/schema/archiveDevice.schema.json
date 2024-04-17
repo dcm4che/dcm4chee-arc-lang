@@ -227,7 +227,7 @@
     },
     "dcmPurgeInstanceRecords": {
       "title": "清除的实例记录",
-      "description": "实例记录可能已从数据库中清除。",
+      "description": "实例记录可能已从数据库中清除。 Set to 'True' if 'Purge Instance Records Delay' is configured.",
       "type": "boolean",
       "default" : false
     },
