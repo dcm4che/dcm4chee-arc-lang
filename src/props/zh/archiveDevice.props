@@ -13,7 +13,7 @@ archiveDevice.dcmSeriesMetadataFetchSize:更新系列元数据提取大小|查�
 archiveDevice.dcmSeriesMetadataThreads:更新系列元数据线程|用于创建和更新系列元数据的线程数。
 archiveDevice.dcmSeriesMetadataMaxRetries:更新系列元数据的最大重试次数|创建/更新聚合系列元数据的最大重试次数。仅在指定"系列元数据更新重试间隔"时有效。-1=拖延。
 archiveDevice.dcmSeriesMetadataRetryInterval:系列元数据更新重试间隔|创建/更新聚合系列元数据失败时重试的ISO-8601周期PnDTnHnMnS格式的间隔。仅当最大系列元数据更新重试次数不等于0时才有效。如果不存在,则不会重试失败的尝试。
-archiveDevice.dcmPurgeInstanceRecords:清除的实例记录|实例记录可能已从数据库中清除。 Set to 'True' if 'Purge Instance Records Delay' is configured.
+archiveDevice.dcmPurgeInstanceRecords:Purge(d) Instance Records|Indicates to purge instance records from DB. Also indicates to explicitly query series metadata zip files to check for purged instances for subsequent processing of archive functions. Set to 'True' if 'Purge Instance Records Delay' is configured.
 archiveDevice.dcmPurgeInstanceRecordsDelay:清除实例记录的延迟|从DB清除实例记录的ISO-8601期间以PnDTnHnMnS格式延迟。某些存档网络AE的配置值可能会覆盖这些值。仅当"清除例程记录"="真"时有效。
 archiveDevice.dcmPurgeInstanceRecordsPollingInterval:清除实例记录的轮询间隔|计划从DB中清除实例记录的ISO-8601周期PnDTnHnMnS格式的轮询间隔。仅当清除例程记录=真时有效。
 archiveDevice.dcmPurgeInstanceRecordsFetchSize:清除实例记录提取大小|计划从查询提取的DB中清除实例记录的最大系列数。仅当"清除例程记录"="真"时有效。

@@ -226,8 +226,8 @@
       "format": "dcmDuration"
     },
     "dcmPurgeInstanceRecords": {
-      "title": "मिटाए गए दृष्टांतों के रेकॉर्ड्स",
-      "description": "संकेत करता है की, डेटाबेस से दृष्टांतों के रेकॉर्ड्स शायद मिटाए गए होंगे । Set to 'True' if 'Purge Instance Records Delay' is configured.",
+      "title": "Purge(d) Instance Records",
+      "description": "Indicates to purge instance records from DB. Also indicates to explicitly query series metadata zip files to check for purged instances for subsequent processing of archive functions. Set to 'True' if 'Purge Instance Records Delay' is configured.",
       "type": "boolean",
       "default" : false
     },
