@@ -17,6 +17,7 @@
       "description": "UI操作",
       "type": "string",
       "enum": [
+        "page-chat-ai-docs",
         "menu-studies",
         "menu-dashboard",
         "menu-correct_data",

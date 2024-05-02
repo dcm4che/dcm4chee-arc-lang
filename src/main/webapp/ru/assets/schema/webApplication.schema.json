@@ -45,6 +45,8 @@
         "type": "string",
         "enum": [
           "QIDO_RS",
+          "AI_CHAT",
+          "DOCUMENTATION",
           "STOW_RS",
           "WADO_RS",
           "WADO_URI",
