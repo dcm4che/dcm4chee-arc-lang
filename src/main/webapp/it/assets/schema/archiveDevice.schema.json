@@ -47,6 +47,7 @@
     "dcmDeleteStudyChunkSize",
     "dcmDeleteStudyLeastRecentlyAccessedFirst",
     "dcmDeletePatientOnDeleteLastStudy",
+    "dcmDBReadOnly",
     "dcmDeleteRejectedFetchSize",
     "dcmLeadingCFindSCPQueryCacheSize",
     "dcmAuditUnknownStudyInstanceUID",
@@ -826,6 +827,12 @@
       "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
+    },
+    "dcmDBReadOnly": {
+      "title": "DB Read Only",
+      "description": "Indicates read-only access to the database, preventing DB updates on query/retrieve.",
+      "type": "boolean",
+      "default" : false
     },
     "dcmMaxAccessTimeStaleness": {
       "title": "Tempo di accesso massimo di obsolescenza",

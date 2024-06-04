@@ -96,6 +96,7 @@ archiveDevice.dcmDeleteStudyChunkSize:Delete Study Chunk Size|Number of Instance
 archiveDevice.dcmDeletePatientOnDeleteLastStudy:Delete Patient On Delete Last Study|Specifies if a Patient shall be deleted on deletion of its last study.
 archiveDevice.dcmDeleteRejectedPollingInterval:Delete Rejected Polling Interval|Polling Interval for deleting rejected instances from the DB in ISO-8601 duration format PnDTnHnMnS.
 archiveDevice.dcmDeleteRejectedFetchSize:Delete Rejected Fetch Size|Maximal number of rejected instances to delete from the DB in one task.
+archiveDevice.dcmDBReadOnly:DB Read Only|Indicates read-only access to the database, preventing DB updates on query/retrieve.
 archiveDevice.dcmMaxAccessTimeStaleness:Maximum Access Time Staleness|Maximal staleness of recorded study accession time in ISO-8601 duration format PnDTnHnMnS. Update of the access time disabled, if absent.
 archiveDevice.dcmAECacheStaleTimeout:AE Cache Stale Timeout|Maximal staleness of cached AE in ISO-8601 duration format PnDTnHnMnS. If absent, cached AE entries will not be refetched from LDAP.
 archiveDevice.dcmLeadingCFindSCPQueryCacheStaleTimeout:Leading C-Find SCP Query Cache Stale Timeout|Maximal staleness of cached Patient and Study attributes fetched from leading C-Find SCP in ISO-8601 duration format PnDTnHnMnS. If absent, cache Study attributes are only removed on reaching the maximal cache size.

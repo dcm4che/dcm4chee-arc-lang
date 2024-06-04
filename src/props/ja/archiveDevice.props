@@ -96,6 +96,7 @@ archiveDevice.dcmDeleteStudyChunkSize:削除 検査 チャンク サイズ|検�
 archiveDevice.dcmDeletePatientOnDeleteLastStudy:最後の 検査の 削除時に 患者を 削除|最後の 検査の 削除時に 患者を 削除 するか どうかを 指定します。
 archiveDevice.dcmDeleteRejectedPollingInterval:削除 拒否された ポーリング 間隔|拒否された インスタンスを ISO-8601 期間 形式 PnDTnHnMnSで DBから 削除するための ポーリング 間隔。
 archiveDevice.dcmDeleteRejectedFetchSize:削除 拒否された フェッチ サイズ|1つの タスクで DBから 削除する 拒否された インスタンスの 最大数。
+archiveDevice.dcmDBReadOnly:DB Read Only|Indicates read-only access to the database, preventing DB updates on query/retrieve.
 archiveDevice.dcmMaxAccessTimeStaleness:最大 アクセス 時間の 失効|ISO-8601 期間 PnDTnHnMnS 形式で 記録された 検査 受入 時間の 最大 失効。 存在しない 場合、アクセス 時間の 更新が 無効に なります。
 archiveDevice.dcmAECacheStaleTimeout:AE キャッシュ 失効 タイムアウト|ISO-8601 期間 形式PnDTnHnMnS でキャッシュされた AEの 最大 失効。 存在しない 場合、 キャッシュされた AE エントリは LDAPから 再フェッチされません。
 archiveDevice.dcmLeadingCFindSCPQueryCacheStaleTimeout:先頭の C-Find SCP クエリ キャッシュ 古くなった タイムアウト|キャッシュされた 患者 属性 と 検査 属性の 最大の 古さは、 ISO-8601 期間 PnDTnHnMnS 形式で 先頭の C-Find SCPから フェッチされます。存在しない 場合、 キャッシュ 検査 属性は、 最大 キャッシュ サイズに 達した ときに のみ 削除されます。

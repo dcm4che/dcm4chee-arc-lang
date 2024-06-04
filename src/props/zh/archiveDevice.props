@@ -96,6 +96,7 @@ archiveDevice.dcmDeleteStudyChunkSize:删除检查块大小|在完全删除检�
 archiveDevice.dcmDeletePatientOnDeleteLastStudy:删除上次检查时删除患者|删除上次检查时是否删除患者。
 archiveDevice.dcmDeleteRejectedPollingInterval:删除拒绝的轮询间隔|以ISO-8601周期格式PnDTnHnMnS从DB中删除拒绝实例的轮询间隔。
 archiveDevice.dcmDeleteRejectedFetchSize:删除拒绝的提取大小|任务从DB中删除的最大拒绝实例数。
+archiveDevice.dcmDBReadOnly:DB Read Only|Indicates read-only access to the database, preventing DB updates on query/retrieve.
 archiveDevice.dcmMaxAccessTimeStaleness:最大访问时间过期|ISO-8601期间以PnDTnHnMnS格式记录的检查接收时间最大过期。如果不存在,则禁用访问时间更新。
 archiveDevice.dcmAECacheStaleTimeout:AE缓存过期超时|ISO-8601周期格式PnDTnHnMnS缓存的AE最大过期。如果不存在,则不会从LDAP中重新提取缓存的AE条目。
 archiveDevice.dcmLeadingCFindSCPQueryCacheStaleTimeout:第一个C-Find SCP查询缓存过期超时|缓存的患者属性和检查属性的最大过期时间是在ISO-8601期间以PnDTnHnMnS格式从第一个C-Find SCP中提取的。如果不存在,则仅当达到最大高速缓存大小时才删除高速缓存检查属性。

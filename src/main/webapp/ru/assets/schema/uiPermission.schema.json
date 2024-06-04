@@ -17,7 +17,7 @@
       "description": "UI Action",
       "type": "string",
       "enum": [
-        "page-chat-ai-docs",
+        "page-ai-chat-docs",
         "menu-studies",
         "menu-dashboard",
         "menu-correct_data",
