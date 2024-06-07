@@ -1943,9 +1943,15 @@
       "type": "boolean",
       "default" : false
     },
+    "dcmQStarVerificationStorageID": {
+      "title": "QStar Verification Storage ID",
+      "description": "ID of QStar Tape File System to which objects were stored which Access State shall be verified. If absent, Access State of objects stored on QStar Tape File System will not be verified.",
+      "type": "string",
+      "format": "dcmStorageID"
+    },
     "dcmQStarVerificationPollingInterval": {
       "title": "QStar Verification Polling Interval",
-      "description": "Polling Interval for Verification of Access State of objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.",
+      "description": "Polling Interval for Verification of Access State of objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored on QStar Tape File System will not be verified.",
       "type": "string",
       "format": "dcmDuration"
     },
@@ -1959,13 +1965,13 @@
     },
     "dcmQStarVerificationDelay": {
       "title": "QStar Verification Delay",
-      "description": "Delay for Verification of Access State after objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.",
+      "description": "Delay for Verification of Access State after objects stored on QStar Tape File System in ISO-8601 duration format PnDTnHnMnS. If absent, Access State of objects stored on QStar Tape File System will not be verified.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmQStarVerificationURL": {
       "title": "QStar Verification URL",
-      "description": "URL of QStar Archive Storage Manager WEB Services - including username and password (http://username:password@qstar.host:port/) - invoked for Verification of Access State after objects stored on QStar Tape File System. If absent, Access State of objects stored objects stored on QStar Tape File System will not be verified.",
+      "description": "URL of QStar Archive Storage Manager WEB Services - including username and password (http://username:password@qstar.host:port/) - invoked for Verification of Access State after objects stored on QStar Tape File System. If absent, Access State of objects stored on QStar Tape File System will not be verified.",
       "type": "string"
     },
     "dcmQStarVerificationMockAccessState": {

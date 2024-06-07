@@ -1943,6 +1943,12 @@
       "type": "boolean",
       "default" : false
     },
+    "dcmQStarVerificationStorageID": {
+      "title": "QStar Verification Storage ID",
+      "description": "ID of QStar Tape File System to which objects were stored which Access State shall be verified. If absent, Access State of objects stored on QStar Tape File System will not be verified.",
+      "type": "string",
+      "format": "dcmStorageID"
+    },
     "dcmQStarVerificationPollingInterval": {
       "title": "Intervalo de sondeo de verificación QStar",
       "description": "Intervalo de sondeo para la verificación del estado de acceso de los objetos almacenados en el sistema de archivos en cinta QStar en formato de duración ISO-8601 PnDTnHnMnS. Si no existe, no se verificará el estado de acceso de los objetos almacenados en el sistema de cintas QStar.",
