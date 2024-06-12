@@ -26,6 +26,7 @@ archiveDevice.dcmDeleteUPSFetchSize:要删除UPS的读取大小|事务中要删�
 archiveDevice.dcmDeleteUPSCompletedDelay:延迟删除已完成的UPS|以PnDTnHnMnS格式延迟ISO-8601周期,以删除已完成的统一过程步骤,而没有删除锁定。如果不存在,则在没有删除锁定的情况下完成的统一步骤步骤将立即删除。
 archiveDevice.dcmDeleteUPSCanceledDelay:延迟删除已取消的UPS|以PnDTnHnMnS格式延迟ISO-8601周期,以删除取消的统一过程步骤,而没有删除锁定。如果不存在,则没有删除锁定而取消的统一步骤步骤将立即删除。
 archiveDevice.dcmOverwritePolicy:重写策略|由此存档网络AE接收的对象的重写策略。 覆盖在设备级别指定的值。
+archiveDevice.dcmRelationalMismatchPolicy:Relational Mismatch Policy|Specifies behavior on receive of objects, which SOP Instance UID matches a previous received object belonging to a different Series. May be overwritten by configured values for particular Archive Network AEs.
 archiveDevice.dcmRecordAttributeModification:记录属性更改|指示存储对象的属性更改是否记录在原始属性序列的项中。某些归档网络AE或归档HL7应用程序的设置可能会覆盖这些设置。
 archiveDevice.dcmAcceptMissingPatientID:接受缺少的患者ID|是否接受没有患者ID的实例以及是否创建患者ID。某些存档网络AE设置可能会覆盖这些设置。
 archiveDevice.dcmAcceptConflictingPatientID:接受不一致的患者ID|是否接受患者ID与以前接收的检查对象不同的对象。某些存档网络AE设置可能会覆盖这些设置。

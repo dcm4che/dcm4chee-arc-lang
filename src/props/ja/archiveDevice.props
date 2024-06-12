@@ -26,6 +26,7 @@ archiveDevice.dcmDeleteUPSFetchSize:UPSを 削除 する フェッチ サイズ|
 archiveDevice.dcmDeleteUPSCompletedDelay:完了した UPSを 削除 する 遅延|削除 ロックなしで 完了した 統一 手順 ステップを 削除 する ために ISO-8601 期間 PnDTnHnMnS 形式で 遅延。 存在しない 場合、 削除 ロックなしで 完了した 統一 手順 ステップは すぐに 削除されます。
 archiveDevice.dcmDeleteUPSCanceledDelay:キャンセルされた UPSを 削除 する 遅延|削除 ロックなしで キャンセルされた 統一 手順 ステップを 削除 する ために ISO-8601 期間 PnDTnHnMnS 形式で 遅延。 存在しない 場合、 削除 ロックなしで キャンセルされた 統一 手順 ステップは すぐに 削除されます。
 archiveDevice.dcmOverwritePolicy:上書き ポリシー|上書き ポリシー。特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。
+archiveDevice.dcmRelationalMismatchPolicy:Relational Mismatch Policy|Specifies behavior on receive of objects, which SOP Instance UID matches a previous received object belonging to a different Series. May be overwritten by configured values for particular Archive Network AEs.
 archiveDevice.dcmRecordAttributeModification:属性 変更の 記録|格納された オブジェクトの 属性の 変更が 元の 属性 シーケンスの アイテムに 記録されるか どうかを 示します。 特定の アーカイブ ネットワーク AE または アーカイブ HL7 アプリケーションの 設定値に よって 上書きされる 場合が あります。
 archiveDevice.dcmAcceptMissingPatientID:見つからない 患者 IDを 受け入れる|患者 IDの ない インスタンスを 受け入れるか どうか、 および 患者 IDを 作成するか どうかを 示します。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。
 archiveDevice.dcmAcceptConflictingPatientID:矛盾 する 患者 IDを 受け入れる|以前に 受信した 検査の オブジェクトの 患者 IDと 異なる 患者 IDを 持つ オブジェクトを 受け入れるか どうかを 示します。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。

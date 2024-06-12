@@ -15,6 +15,7 @@
     "dcmDeleteUPSFetchSize",
     "dcmMWLFetchSize",
     "dcmOverwritePolicy",
+    "dcmRelationalMismatchPolicy",
     "dcmRecordAttributeModification",
     "dcmIdentifyPatientByAllAttributes",
     "dcmAcceptMissingPatientID",
@@ -313,9 +314,18 @@
         "NEVER",
         "ALWAYS",
         "SAME_SOURCE",
-        "SAME_SERIES",
-        "SAME_SOURCE_AND_SERIES",
         "EVEN_WITH_EQUAL_DIGEST"
+      ]
+    },
+    "dcmRelationalMismatchPolicy": {
+      "title": "Relational Mismatch Policy",
+      "description": "Specifies behavior on receive of objects, which SOP Instance UID matches a previous received object belonging to a different Series. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string",
+      "default": "IGNORE",
+      "enum": [
+        "IGNORE",
+        "OVERWRITE",
+        "STORE_ADDITIONALLY"
       ]
     },
     "dcmRecordAttributeModification": {

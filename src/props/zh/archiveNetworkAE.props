@@ -9,6 +9,7 @@ archiveNetworkAE.dcmStoreAccessControlID:存储的访问控制ID|分配给此AE�
 archiveNetworkAE.dcmAccessControlID:访问控制ID|分配给此AE接收的查询/读取请求的访问控制ID。
 archiveNetworkAE.dcmAcceptedMoveDestination:批准的目标|C-MOVE请求接受的目标； 如果不存在,则任意目标。
 archiveNetworkAE.dcmOverwritePolicy:重写策略|由此存档网络AE接收的对象的重写策略。 覆盖在设备级别指定的值。
+archiveNetworkAE.dcmRelationalMismatchPolicy:Relational Mismatch Policy|Specifies behavior on receive of objects by this AE, which SOP Instance UID matches a previous received object belonging to a different Series. Overwrites value specified on Device level.
 archiveNetworkAE.dcmRecordAttributeModification:记录属性更改|是否将此AE存储的对象的属性更改记录到原始属性序列的项中。 覆盖在设备级别指定的值。
 archiveNetworkAE.dcmAcceptMissingPatientID:接受缺少的患者ID|是否接受没有患者ID的实例,以及是否创建患者ID。 覆盖在设备级别指定的值。
 archiveNetworkAE.dcmAcceptConflictingPatientID:接受不一致的患者ID|是否接受患者ID与先前接受检查的对象的患者ID不同的对象。 覆盖在设备级别指定的值。

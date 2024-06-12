@@ -9,6 +9,7 @@ archiveNetworkAE.dcmStoreAccessControlID:保存 アクセス 制御 ID|この AE
 archiveNetworkAE.dcmAccessControlID:アクセス 制御 ID|この AEが 受信した クエリ / 読み出し 要求に 割り当てられた アクセス 制御 ID。
 archiveNetworkAE.dcmAcceptedMoveDestination:承認された 移動先|C-MOVE 要求で 受け入れられた 移動先; 存在しない 場合、任意の 移動先。
 archiveNetworkAE.dcmOverwritePolicy:上書き ポリシー|この アーカイブ ネットワーク AEに よって 受信した オブジェクトの 上書き ポリシー。 デバイス レベルで 指定された 値を 上書きします。
+archiveNetworkAE.dcmRelationalMismatchPolicy:Relational Mismatch Policy|Specifies behavior on receive of objects by this AE, which SOP Instance UID matches a previous received object belonging to a different Series. Overwrites value specified on Device level.
 archiveNetworkAE.dcmRecordAttributeModification:属性 変更の 記録|この AEに よって 格納された オブジェクトの 属性の 変更が 元の 属性 シーケンスの アイテムに 記録されるか どうかを 示します。 デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmAcceptMissingPatientID:見つからない 患者 IDを 受け入れる|患者 IDの ない インスタンスを 受け入れるか どうか、 および 患者 IDを 作成するか どうかを 示します。 デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmAcceptConflictingPatientID:矛盾 する 患者 IDを 受け入れる|以前に 受信した 検査の オブジェクトの 患者 IDと 異なる 患者 IDを 持つ オブジェクトを 受け入れるか どうかを 示します。 デバイス レベルで 指定された 値を 上書きします。

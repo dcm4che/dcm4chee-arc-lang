@@ -8,7 +8,8 @@ archiveNetworkAE.dcmPurgeInstanceRecordsDelay:Purge Instance Records Delay|Delay
 archiveNetworkAE.dcmStoreAccessControlID:Store Access Control ID|Access Control ID assigned to Studies received by this AE
 archiveNetworkAE.dcmAccessControlID:Access Control ID|Access Control IDs assigned to Query/Retrieve requests received by this AE.
 archiveNetworkAE.dcmAcceptedMoveDestination:Accepted Move Destination|Accepted Move Destination in C-MOVE requests; any if absent.
-archiveNetworkAE.dcmOverwritePolicy:Overwrite Policy|Overwrite Policy for Objects received by this AE. Overwrites value specified on Device level.
+archiveNetworkAE.dcmOverwritePolicy:Overwrite Policy|Specifies behavior on receive of objects by this AE, which SOP Instance UID matches a previous received object. Overwrites value specified on Device level.
+archiveNetworkAE.dcmRelationalMismatchPolicy:Relational Mismatch Policy|Specifies behavior on receive of objects by this AE, which SOP Instance UID matches a previous received object belonging to a different Series. Overwrites value specified on Device level.
 archiveNetworkAE.dcmRecordAttributeModification:Record Attribute Modification|Indicates if modifications of attributes of stored objects by this AE are recorded in Items of the Original Attributes Sequence. Overwrites value specified on Device level.
 archiveNetworkAE.dcmAcceptMissingPatientID:Accept Missing Patient ID|Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. Overwrites value specified on Device level.
 archiveNetworkAE.dcmAcceptConflictingPatientID:Accept Conflicting Patient ID|Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. Overwrites value specified on Device level.
