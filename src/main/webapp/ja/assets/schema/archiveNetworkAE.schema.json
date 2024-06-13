@@ -86,6 +86,7 @@
       "type": "string",
       "enum": [
         "IGNORE",
+        "REJECT",
         "OVERWRITE",
         "STORE_ADDITIONALLY"
       ]

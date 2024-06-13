@@ -324,6 +324,7 @@
       "default": "IGNORE",
       "enum": [
         "IGNORE",
+        "REJECT",
         "OVERWRITE",
         "STORE_ADDITIONALLY"
       ]
