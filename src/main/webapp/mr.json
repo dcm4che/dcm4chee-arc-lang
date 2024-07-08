@@ -1489,6 +1489,7 @@
     "patient-data.secondary_web_app_service_is_missing": "दुय्यम वेब अनुप्रयोग सेवा गहाळ आहे!",
     "patient-data.you_want_to_send_the_selected_version": "आपली खात्री आहे की आपण निवडलेली आवृत्ती {$PH} वर पाठवू इच्छिता?",
     "patient_compare": "रुग्णांची तुलना करा",
+    "patient_created_datetime": "Patient Created DateTime",
     "patient_created_successfully": "यशस्वीरित्या रुग्ण निर्माण केला!",
     "patient_data": "रुग्ण डेटा",
     "patient_demographics_updated_successfully": "Patient demographics updated successfully!",

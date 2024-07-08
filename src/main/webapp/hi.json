@@ -1489,6 +1489,7 @@
     "patient-data.secondary_web_app_service_is_missing": "द्वितीयक वेब अनुप्रयोग सेवा अनुपस्थित है!",
     "patient-data.you_want_to_send_the_selected_version": "क्या आप निस्चय ही चुने गए संस्करण को {$PH} पे भेजना चाहते हैं?",
     "patient_compare": "मरीज़ों के रेकॉर्ड्स की तुलना करें ।",
+    "patient_created_datetime": "Patient Created DateTime",
     "patient_created_successfully": "मरीज़ का रेकॉर्ड सफलतापूर्वक निर्माण किया गया!",
     "patient_data": "मरीज़ का डेटा",
     "patient_demographics_updated_successfully": "Patient demographics updated successfully!",

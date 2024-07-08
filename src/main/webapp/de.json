@@ -1489,6 +1489,7 @@
     "patient-data.secondary_web_app_service_is_missing": "Secondary Web App Service is missing!",
     "patient-data.you_want_to_send_the_selected_version": "Are you sure you want to send the selected version to {$PH}?",
     "patient_compare": "Patient Compare",
+    "patient_created_datetime": "Patient Created DateTime",
     "patient_created_successfully": "Patient angelegt!",
     "patient_data": "Patient Data",
     "patient_demographics_updated_successfully": "Patient demographics updated successfully!",
