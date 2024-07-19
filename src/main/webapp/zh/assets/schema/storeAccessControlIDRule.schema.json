@@ -5,6 +5,7 @@
   "required": [
     "cn",
     "dcmStoreAccessControlID",
+    "dcmAccessControlSeriesIndividually",
     "dcmRulePriority"
   ],
   "properties": {
@@ -17,6 +18,12 @@
       "title": "存储访问控制ID",
       "description": "存储分配给符合所有条件的属性的访问控制ID",
       "type": "string"
+    },
+    "dcmAccessControlSeriesIndividually": {
+      "title": "Access Control Series Individually",
+      "description": "Indicates if access of series should be controlled individually or not.",
+      "type": "boolean",
+      "default": false
     },
     "dcmRulePriority": {
       "title": "规则优先级",

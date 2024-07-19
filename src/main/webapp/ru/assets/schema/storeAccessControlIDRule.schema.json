@@ -5,6 +5,7 @@
   "required": [
     "cn",
     "dcmStoreAccessControlID",
+    "dcmAccessControlSeriesIndividually",
     "dcmRulePriority"
   ],
   "properties": {
@@ -17,6 +18,12 @@
       "title": "Store Access Control ID",
       "description": "Access Control ID assigned to Studies which attributes match all conditions",
       "type": "string"
+    },
+    "dcmAccessControlSeriesIndividually": {
+      "title": "Access Control Series Individually",
+      "description": "Indicates if access of series should be controlled individually or not.",
+      "type": "boolean",
+      "default": false
     },
     "dcmRulePriority": {
       "title": "Rule Priority",

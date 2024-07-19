@@ -5,6 +5,7 @@
   "required": [
     "cn",
     "dcmStoreAccessControlID",
+    "dcmAccessControlSeriesIndividually",
     "dcmRulePriority"
   ],
   "properties": {
@@ -17,6 +18,12 @@
       "title": "साठवण प्रवेश नियंत्रण ID",
       "description": "सर्व अति जुळण्यावर अभ्यासांवर नियुक्त केलेला प्रवेश नियंत्रण ID.",
       "type": "string"
+    },
+    "dcmAccessControlSeriesIndividually": {
+      "title": "Access Control Series Individually",
+      "description": "Indicates if access of series should be controlled individually or not.",
+      "type": "boolean",
+      "default": false
     },
     "dcmRulePriority": {
       "title": "नियम प्राधान्य",

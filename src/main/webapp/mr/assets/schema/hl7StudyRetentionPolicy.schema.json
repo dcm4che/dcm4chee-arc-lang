@@ -6,7 +6,6 @@
     "cn",
     "dcmRulePriority",
     "dicomAETitle",
-    "dcmExpireSeriesIndividually",
     "dcmStartRetentionPeriodOnStudyDate",
     "dcmFreezeExpirationDate",
     "dcmRevokeExpiration"
