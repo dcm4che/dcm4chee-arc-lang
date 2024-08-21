@@ -215,7 +215,7 @@
     },
     "dcmIssuerOfPatientID": {
       "title": "Emittente dell'ID paziente",
-      "description": "Emittente dell'ID paziente (0010,0021) e, facoltativamente, anche i valori per l'ID entità universale (0040,0032) e il tipo ID entità universale (0040,0033) dell'elemento della sequenza dei qualificatori dell'ID emittente dell'ID paziente (0010,0024) rispetto ai valori che combaciano negli oggetti ricevuti, se il nullify dell'emittente dell'ID paziente è impostato su MATCHING o NOT_MATCHING. Formato: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "description": "Emittente dell'ID paziente (0010,0021) e, facoltativamente, anche i valori per l'ID entità universale (0040,0032) e il tipo ID entità universale (0040,0033) dell'elemento della sequenza dei qualificatori dell'ID emittente dell'ID paziente (0010,0024) rispetto ai valori che combaciano negli oggetti ricevuti, se il nullify dell'emittente dell'ID paziente è impostato su MATCHING o NOT_MATCHING. Formato: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
       "items": {
         "type": "string"

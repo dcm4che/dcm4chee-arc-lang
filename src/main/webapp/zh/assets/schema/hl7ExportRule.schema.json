@@ -46,13 +46,13 @@
     },
     "dcmIssuerOfPatientID": {
       "title": "分配患者ID的权限",
-      "description": "如果患者ID分配的权限被设置为MATCHING 或者 NOT_MATCHING，患者ID分配的权限与接受的HL7消息中的值要匹配。格式：<Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>]。",
+      "description": "如果患者ID分配的权限被设置为MATCHING 或者 NOT_MATCHING，患者ID分配的权限与接受的HL7消息中的值要匹配。格式：{Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]。",
       "type": "array",
       "items": { "type": "string" }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "用于分配患者ID权限的导出",
-      "description": "Assigning Authority of PatientID in received HL7 message used to search qualified patient identifier in list of identifier in PID-3.Studies matching the this qualified patient identifier shall be queried.absent,by default the first qualified patient identifier in PID-3 shall be used.Format:<PatientID的Issuer of PatientID>",
+      "description": "Assigning Authority of PatientID in received HL7 message used to search qualified patient identifier in list of identifier in PID-3.Studies matching the this qualified patient identifier shall be queried.absent,by default the first qualified patient identifier in PID-3 shall be used.Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string"
     },
     "dcmDuration": {

@@ -86,13 +86,13 @@
     },
     "dcmIssuerOfPatientID": {
       "title": "患者ID分配权限",
-      "description": "如果患者ID分配的权限被设置为MATCHING或NOT_MATCHING，则将其与接收到的HL7消息的值进行匹配。格式:<Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>]。",
+      "description": "如果患者ID分配的权限被设置为MATCHING或NOT_MATCHING，则将其与接收到的HL7消息的值进行匹配。格式:{Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]。",
       "type": "array",
       "items": { "type": "string" }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "预取患者ID分配权限",
-      "description": "在接收到的HL7消息中分配患者ID权限，用于在PID-3标识符列表中搜索合格的患者标识符。 必须查询与该合格患者标识符的指定实体选择器匹配的检查。如果不存在,默认情况下使用PID-3中的第一个合格患者标识符。 格式: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>]。",
+      "description": "在接收到的HL7消息中分配患者ID权限，用于在PID-3标识符列表中搜索合格的患者标识符。 必须查询与该合格患者标识符的指定实体选择器匹配的检查。如果不存在,默认情况下使用PID-3中的第一个合格患者标识符。 格式: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]。",
       "type": "string"
     },
     "dcmDuration": {

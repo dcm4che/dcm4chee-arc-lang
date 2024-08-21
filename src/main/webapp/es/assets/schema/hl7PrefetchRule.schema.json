@@ -86,13 +86,13 @@
     },
     "dcmIssuerOfPatientID": {
       "title": "Autoridad Asignadora del ID del Paciente",
-      "description": "Se comparan los valores de la Autoridad Asignadora del ID del Paciente con los del mensaje HL7 recibido, si la Autoridad Asignadora del ID del Paciente está configurada como COINCIDENTE o NO COINCIDENTE. Formato: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "description": "Se comparan los valores de la Autoridad Asignadora del ID del Paciente con los del mensaje HL7 recibido, si la Autoridad Asignadora del ID del Paciente está configurada como COINCIDENTE o NO COINCIDENTE. Formato: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
       "items": { "type": "string" }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "Prebúsqueda para Asignar Autoridad de ID de Paciente",
-      "description": "Asignar Autoridad de ID de Paciente en mensaje HL7 recibido utilizado para buscar identificador de paciente cualificado en lista de identificadores en PID-3. Se consultarán los estudios que coincidan con el Selector de Entidad especificado de este identificador cualificado de paciente. Si no existe, se utilizará por defecto el primer identificador cualificado de paciente en PID-3. Formato: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "description": "Asignar Autoridad de ID de Paciente en mensaje HL7 recibido utilizado para buscar identificador de paciente cualificado en lista de identificadores en PID-3. Se consultarán los estudios que coincidan con el Selector de Entidad especificado de este identificador cualificado de paciente. Si no existe, se utilizará por defecto el primer identificador cualificado de paciente en PID-3. Formato: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "string"
     },
     "dcmDuration": {

@@ -110,7 +110,7 @@ archiveDevice.dcmAuditUnknownPatientID:監査 不明な 患者 ID|不明な 場�
 archiveDevice.dcmAudit2JsonFhirTemplateURI:監査から json+fhir テンプレート URI|監査 メッセージを FHIR JSON リソース 監査 イベントに トランスコードするための スタイルシートの URIを 指定します。
 archiveDevice.dcmAudit2XmlFhirTemplateURI:監査から xml+fhir テンプレート URI|監査 メッセージを FHIR XML リソース 監査 イベントに トランスコードするための スタイルシートの URIを 指定します。
 archiveDevice.dcmAuditSoftwareConfigurationVerbose:監査 ソフトウェア 構成 詳細|作成された オブジェクトの 子オブジェクトと 属性を ソフトウェア 構成 監査 メッセージに 含めるか どうかを 指定します。
-archiveDevice.dcmAuditAssigningAuthorityOfPatientID:患者 IDの 割り当て 権限の ために 監査|PID-3の 識別子の リストで 適格な 患者 識別子を 検索 する ために 使用される 受信 HL7 メッセージでの 患者 IDの 権限の 割り当て。 この 適格な 患者 識別子が 監査 メッセージに 使用 されます。 存在しない 場合、 デフォルトでは、 PID-3の 最初の 適格な 患者 識別子が 使用されます。 存在し 場合、けれでも PID-3の 識別子の リストで 適格な 患者 識別子にも 一致しない 場合、デフォルトでは、 PID-3の 最初の 適格な 患者 識別子が 使用されます。 形式: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>]。
+archiveDevice.dcmAuditAssigningAuthorityOfPatientID:患者 IDの 割り当て 権限の ために 監査|PID-3の 識別子の リストで 適格な 患者 識別子を 検索 する ために 使用される 受信 HL7 メッセージでの 患者 IDの 権限の 割り当て。 この 適格な 患者 識別子が 監査 メッセージに 使用 されます。 存在しない 場合、 デフォルトでは、 PID-3の 最初の 適格な 患者 識別子が 使用されます。 存在し 場合、けれでも PID-3の 識別子の リストで 適格な 患者 識別子にも 一致しない 場合、デフォルトでは、 PID-3の 最初の 適格な 患者 識別子が 使用されます。 形式: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]。
 archiveDevice.dcmShowPatientInfoInSystemLog:システム ログに 患者 情報の 表示|システム ログに 患者 情報を プレーン テキストとして 表示 するか、ハッシュ化して 表示 するかを 指定します。
 archiveDevice.dcmShowPatientInfoInAuditLog:監査 ログに 患者 情報の 表示|発行された 監査 メッセージで 患者 情報を プレーン テキストとして 表示 するか、ハッシュ化して 表示 するかを 指定します。
 archiveDevice.dcmStowSpoolDirectory:STOW-RS スプール ディレクトリ|「XML / JSON メタデータ 要求 メッセージ」 と 「バルクデータ 要求 メッセージ」の バルクデータを スプール する ために STOW-RS サービスが 使用 する ディレクトリへの パス。

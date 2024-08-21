@@ -10,8 +10,8 @@ hl7PrefetchRule.dicomDeviceName:预取设备名称|指定要执行读取任务�
 hl7PrefetchRule.dcmProperty:条件|{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}格式的条件。示例:MSH-4=FORWARD或MSH-9=ORM\\^O01或PID-3[.3]=PIDIssuer或PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType
 hl7PrefetchRule.dcmEntitySelector:实体选择器|指定用于选择预取检查的匹配密钥。 格式:{key}={value}[&{key}={value)]..., with {key} = 'priors' | 'StudyAge' | {attributeID},'$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]]格式的{value} 被来自触发了预期的被接收的HL7消息的指定HL7字段的值取代。如果未指定实体选择器,则将预取患者的所有检查。例如:'priors=2&StudyAge=-5Y&ModalitiesInStudy=$OBR-24' =>选择最多2个不超过5年的既往研究，包含至少一个OBR-24模式系列。
 hl7PrefetchRule.dcmNullifyIssuerOfPatientID:忽略患者ID分配权限|有条件地忽略患者ID分配权限（PID-3.4）。这可以在接收到的HL7消息中找到,该消息触发了预取以选择患者检查
-hl7PrefetchRule.dcmIssuerOfPatientID:患者ID分配权限|如果患者ID分配的权限被设置为MATCHING或NOT_MATCHING，则将其与接收到的HL7消息的值进行匹配。格式:<Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>]。
-hl7PrefetchRule.dcmPrefetchForIssuerOfPatientID:预取患者ID分配权限|在接收到的HL7消息中分配患者ID权限，用于在PID-3标识符列表中搜索合格的患者标识符。 必须查询与该合格患者标识符的指定实体选择器匹配的检查。如果不存在,默认情况下使用PID-3中的第一个合格患者标识符。 格式: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>]。
+hl7PrefetchRule.dcmIssuerOfPatientID:患者ID分配权限|如果患者ID分配的权限被设置为MATCHING或NOT_MATCHING，则将其与接收到的HL7消息的值进行匹配。格式:{Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]。
+hl7PrefetchRule.dcmPrefetchForIssuerOfPatientID:预取患者ID分配权限|在接收到的HL7消息中分配患者ID权限，用于在PID-3标识符列表中搜索合格的患者标识符。 必须查询与该合格患者标识符的指定实体选择器匹配的检查。如果不存在,默认情况下使用PID-3中的第一个合格患者标识符。 格式: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]。
 hl7PrefetchRule.dcmDuration:抑制重复读取的间隔|抑制在指定间隔之前已经读取的检查的读取,以避免重复读取。
 hl7PrefetchRule.dcmHistorySize:Suppress Duplicate History Size|Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.
 hl7PrefetchRule.dcmPrefetchDateTimeField:预取日期时间字段|将所选检查的检索延迟到以{SEG}-{Seq#}[。{Comp#}]格式引用的HL7 TS字段的时间。 示例:TQ1-7或SCH-11.4。 如果不存在,则立即计划获取选定的检查。

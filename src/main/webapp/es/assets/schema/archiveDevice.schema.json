@@ -920,7 +920,7 @@
     },
     "dcmAuditAssigningAuthorityOfPatientID": {
       "title": "Autoridad de asignación de identificador de paciente para auditoría",
-      "description": "Autoridad de asignación de identificador de paciente en mensaje HL7 recibido utilizado para buscar identificador de paciente cualificado en lista de identificadores en PID-3. Este identificador de paciente cualificado se utilizará en el objeto participante de detalles del paciente. En caso de ausencia, se utilizará por defecto el primer identificador cualificado de paciente de PID-3. Si ninguno de los identificadores de paciente calificados de la lista coincide con el emisor configurado, el registro del servidor de archivo contendrá un mensaje de registro INFO y se utilizará por defecto el primer identificador de paciente calificado de PID-3. Formato: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>]",
+      "description": "Autoridad de asignación de identificador de paciente en mensaje HL7 recibido utilizado para buscar identificador de paciente cualificado en lista de identificadores en PID-3. Este identificador de paciente cualificado se utilizará en el objeto participante de detalles del paciente. En caso de ausencia, se utilizará por defecto el primer identificador cualificado de paciente de PID-3. Si ninguno de los identificadores de paciente calificados de la lista coincide con el emisor configurado, el registro del servidor de archivo contendrá un mensaje de registro INFO y se utilizará por defecto el primer identificador de paciente calificado de PID-3. Formato: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string"
     },
     "dcmShowPatientInfoInSystemLog": {

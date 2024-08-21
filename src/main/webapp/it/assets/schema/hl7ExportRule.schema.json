@@ -46,13 +46,13 @@
     },
     "dcmIssuerOfPatientID": {
       "title": "Assegnazione dell'autorità dell'ID paziente",
-      "description": "Sono confrontati l'assegnazione dell'autorità dell'ID paziente con i valori nel messaggio HL7 ricevuto, se l'assegnazione dell'autorità dell'ID paziente è impostata su MATCHING o NOT_MATCHING. Formato: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "description": "Sono confrontati l'assegnazione dell'autorità dell'ID paziente con i valori nel messaggio HL7 ricevuto, se l'assegnazione dell'autorità dell'ID paziente è impostata su MATCHING o NOT_MATCHING. Formato: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
       "items": { "type": "string" }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "Export for Assigning Authority of Patient ID",
-      "description": "Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. Studies matching the specified Entity Selector of this qualified patient identifier shall be queried. If absent, by default the first qualified patient identifier in PID-3 shall be used. Format: <Issuer of Patient ID> [& <Universal Entity ID> & <Universal Entity ID Type>].",
+      "description": "Assigning Authority of Patient ID in received HL7 message used to search qualified patient identifier in list of identifiers in PID-3. Studies matching the specified Entity Selector of this qualified patient identifier shall be queried. If absent, by default the first qualified patient identifier in PID-3 shall be used. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "string"
     },
     "dcmDuration": {
