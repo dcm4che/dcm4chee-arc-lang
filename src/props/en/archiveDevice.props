@@ -296,5 +296,5 @@ archiveDevice.hl7PrefetchRule:HL7 Prefetch Rule|HL7 Prefetch Rules applied to HL
 archiveDevice.hl7StudyRetentionPolicy:HL7 Study Retention Policy|HL7 Study Retention Policies triggered by HL7 messages received by any HL7 Application. May be supplemented by configured Study Retention Policies for particular HL7 Applications.
 archiveDevice.hl7OrderScheduledStation:Scheduled Station for HL7 Order|Scheduled Station selected on MWL HL7 Order Feed received by any HL7 Application. May be supplemented by configured values for particular HL7 Applications.
 archiveDevice.hl7OrderSPSStatus:SPS Status for HL7 Order|Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. May be overwritten by configured values for particular Archive HL7 Application.
-archiveDevice.dcmXRoadProperty:X-Road Property|Properties for accessing Estonian National Patient Registry in format <name>=<value>
-archiveDevice.dcmImpaxReportProperty:Impax Report Property|Properties for accessing Agfa Impax Report Service in format <name>=<value>
+archiveDevice.dcmXRoadProperty:X-Road Property|Properties for accessing Estonian National Patient Registry in format {name}={value}
+archiveDevice.dcmImpaxReportProperty:Impax Report Property|Properties for accessing Agfa Impax Report Service in format {name}={value}

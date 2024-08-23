@@ -2305,7 +2305,7 @@
     },
     "dcmXRoadProperty": {
       "title": "X-Road 属性",
-      "description": "<name>=<value> 形式で エストニア 国立 患者 レジストリに アクセス する ための プロパティ",
+      "description": "{name}={value} 形式で エストニア 国立 患者 レジストリに アクセス する ための プロパティ",
       "type": "array",
       "items": {
         "type": "string"
@@ -2313,7 +2313,7 @@
     },
     "dcmImpaxReportProperty": {
       "title": "Impax レポート 属性",
-      "description": "<name>=<value> 形式で Agfa Impax レポート サービスに アクセス する ための 属性",
+      "description": "{name}={value} 形式で Agfa Impax レポート サービスに アクセス する ための 属性",
       "type": "array",
       "items": {
         "type": "string"

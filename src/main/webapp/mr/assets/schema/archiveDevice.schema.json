@@ -2305,7 +2305,7 @@
     },
     "dcmXRoadProperty": {
       "title": "X-Road विशेषता",
-      "description": "ऐस्तोनियन् राष्ट्रीय रुग्णांची रजिस्ट्रीचे सेवांचे उपयोग करण्यासाठी विशेषता या प्रारूपात <नाव>=<मूल्य>.",
+      "description": "ऐस्तोनियन् राष्ट्रीय रुग्णांची रजिस्ट्रीचे सेवांचे उपयोग करण्यासाठी विशेषता या प्रारूपात {name}={value}.",
       "type": "array",
       "items": {
         "type": "string"
@@ -2313,7 +2313,7 @@
     },
     "dcmImpaxReportProperty": {
       "title": "Impax रिपोर्ट विशेषता",
-      "description": "AGFA Impax रिपोर्ट सेवा उपयोग करण्यासाठी विशेषता या प्रारूपात <नाव>=<मूल्य>.",
+      "description": "AGFA Impax रिपोर्ट सेवा उपयोग करण्यासाठी विशेषता या प्रारूपात {name}={value}.",
       "type": "array",
       "items": {
         "type": "string"

@@ -296,5 +296,5 @@ archiveDevice.hl7PrefetchRule:Regole di Prefetch HL7|Regole di Prefetch applicat
 archiveDevice.hl7StudyRetentionPolicy:Criteri di Conservazione Studio HL7|Politiche di conservazione dello studio HL7 attivate dai messaggi HL7 ricevuti da qualsiasi applicazione HL7. Può essere integrato da criteri di conservazione dello studio configurati per particolari AE della rete di archiviazione.
 archiveDevice.hl7OrderScheduledStation:Stazione Pianificata per un Ordine HL7|Stazione pianificata selezionata su MWL HL7 Order Feed ricevuto da qualsiasi applicazione HL7. Può essere integrato da valori configurati per particolari applicazioni HL7.
 archiveDevice.hl7OrderSPSStatus:Stato SPS per un Ordine HL7|Specifica lo stato SPS degli elementi DICOM MWL creati/aggiornati sui messaggi HL7 ORM ^ O01, OMI ^ O23, OMG ^ O19 ricevuti. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di Archivio.
-archiveDevice.dcmXRoadProperty:Proprietà X-Road|Proprietà per l'accesso al registro nazionale dei pazienti estoni in formato <name>=<value>
-archiveDevice.dcmImpaxReportProperty:Proprietà rapporto Impax|Proprietà per l'accesso al servizio report Agfa Impax in formato <name>=<value>
+archiveDevice.dcmXRoadProperty:Proprietà X-Road|Proprietà per l'accesso al registro nazionale dei pazienti estoni in formato {name}={value}
+archiveDevice.dcmImpaxReportProperty:Proprietà rapporto Impax|Proprietà per l'accesso al servizio report Agfa Impax in formato {name}={value}

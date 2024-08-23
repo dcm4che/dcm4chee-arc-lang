@@ -296,5 +296,5 @@ archiveDevice.hl7PrefetchRule:HL7 Prefetch Rule|HL7 Prefetch Rules applied to HL
 archiveDevice.hl7StudyRetentionPolicy:HL7验证保留策略|由任何HL7应用程序接收的HL7消息触发的HL7验证保留策略。可以使用针对特定HL7应用程序配置的验证保留策略进行补充。
 archiveDevice.hl7OrderScheduledStation:Scheduled Station for HL7 Order|Scheduled Station selected on MWL HL7 Order Feed received by any HL7 Application. May be supplemented by configured values for particular HL7 Applications.
 archiveDevice.hl7OrderSPSStatus:HL7订单的SPS状态|指定在收到的HL7 ORM^O01,OMI^O23,OMG^O19消息中创建/更新的DICOM MWL项目的SPS状态。某些归档HL7应用程序的配置值可能会覆盖这些值。
-archiveDevice.dcmXRoadProperty:X-Road属性|用于以<name>=<value>格式访问爱沙尼亚国家患者注册表的属性
-archiveDevice.dcmImpaxReportProperty:Impax报告属性|用于以<name>=<value>格式访问Agfa Impax报告服务的属性
+archiveDevice.dcmXRoadProperty:X-Road属性|用于以{name}={value}格式访问爱沙尼亚国家患者注册表的属性
+archiveDevice.dcmImpaxReportProperty:Impax报告属性|用于以{name}={value}格式访问Agfa Impax报告服务的属性

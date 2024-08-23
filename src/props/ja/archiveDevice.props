@@ -296,5 +296,5 @@ archiveDevice.hl7PrefetchRule:HL7 プリフェッチ 規則|任意の HL7 アプ
 archiveDevice.hl7StudyRetentionPolicy:HL7 検査 保存 ポリシー|任意の HL7 アプリケーションが 受信した HL7 メッセージに よって トリガーされる HL7 検査 保存 ポリシー。 特定の HL7 アプリケーション用に 構成された 検査 保存 ポリシーで 補足できます。
 archiveDevice.hl7OrderScheduledStation:HL7 オーダーの 予定された ステーション|HL7 アプリケーションが 受信した MWL HL7 オーダー フィードで 選択された 予定された ステーション。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 補足される 場合が あります。
 archiveDevice.hl7OrderSPSStatus:HL7 オーダーの SPS ステータス|受信した HL7 ORM^O01, OMI^O23, OMG^O19 メッセージで 作成 / 更新された DICOM MWL アイテムの SPS ステータスを 指定します。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。
-archiveDevice.dcmXRoadProperty:X-Road 属性|<name>=<value> 形式で エストニア 国立 患者 レジストリに アクセス する ための プロパティ
-archiveDevice.dcmImpaxReportProperty:Impax レポート 属性|<name>=<value> 形式で Agfa Impax レポート サービスに アクセス する ための 属性
+archiveDevice.dcmXRoadProperty:X-Road 属性|{name}={value} 形式で エストニア 国立 患者 レジストリに アクセス する ための プロパティ
+archiveDevice.dcmImpaxReportProperty:Impax レポート 属性|{name}={value} 形式で Agfa Impax レポート サービスに アクセス する ための 属性

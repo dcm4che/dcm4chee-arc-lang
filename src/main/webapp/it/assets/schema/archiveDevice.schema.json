@@ -2305,7 +2305,7 @@
     },
     "dcmXRoadProperty": {
       "title": "Proprietà X-Road",
-      "description": "Proprietà per l'accesso al registro nazionale dei pazienti estoni in formato <name>=<value>",
+      "description": "Proprietà per l'accesso al registro nazionale dei pazienti estoni in formato {name}={value}",
       "type": "array",
       "items": {
         "type": "string"
@@ -2313,7 +2313,7 @@
     },
     "dcmImpaxReportProperty": {
       "title": "Proprietà rapporto Impax",
-      "description": "Proprietà per l'accesso al servizio report Agfa Impax in formato <name>=<value>",
+      "description": "Proprietà per l'accesso al servizio report Agfa Impax in formato {name}={value}",
       "type": "array",
       "items": {
         "type": "string"

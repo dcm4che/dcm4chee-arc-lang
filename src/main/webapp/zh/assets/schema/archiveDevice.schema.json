@@ -2305,7 +2305,7 @@
     },
     "dcmXRoadProperty": {
       "title": "X-Road属性",
-      "description": "用于以<name>=<value>格式访问爱沙尼亚国家患者注册表的属性",
+      "description": "用于以{name}={value}格式访问爱沙尼亚国家患者注册表的属性",
       "type": "array",
       "items": {
         "type": "string"
@@ -2313,7 +2313,7 @@
     },
     "dcmImpaxReportProperty": {
       "title": "Impax报告属性",
-      "description": "用于以<name>=<value>格式访问Agfa Impax报告服务的属性",
+      "description": "用于以{name}={value}格式访问Agfa Impax报告服务的属性",
       "type": "array",
       "items": {
         "type": "string"
