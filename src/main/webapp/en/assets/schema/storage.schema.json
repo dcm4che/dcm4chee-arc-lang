@@ -19,6 +19,7 @@
     "dcmReadOnly",
     "dcmStorageThresholdExceedsPermanently",
     "dcmNoDeletionConstraint",
+    "dcmSingleExportStorageByStudy",
     "dcmNoRetrieveCacheOnPurgedInstanceRecords",
     "dcmDeleterThreads",
     "dcmStorageDuration"
@@ -260,6 +261,11 @@
         "type": "string"
       },
       "format": "dcmStorageID"
+    },
+    "dcmSingleExportStorageByStudy": {
+      "title": "Single Export Storage by Study",
+      "description": "Indicates that objects of one Study are NOT distributed over several Export Storages.",
+      "default": false
     },
     "dcmRetrieveCacheStorageID": {
       "title": "Retrieve Cache Storage ID",
