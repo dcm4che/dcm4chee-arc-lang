@@ -199,6 +199,19 @@
         "type": "string"
       }
     },
+    "dcmDeleterThresholdMaxUseableSpace": {
+      "title": "Deleter Threshold Max Usable Space",
+      "description": "Maximal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the used disk space exceeds that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmDeleterThresholdBlocksFilePath": {
+      "title": "Deleter Threshold Blocks File Path",
+      "description": "Path of file containing the current used disk space in blocks (1024 bytes), periodically updated by an external application.",
+      "type": "string"
+    },
     "dcmDeleteStudiesOlderThan": {
       "title": "删除旧的检查",
       "description": "从配置为缓存(dcmStorageDuration= cache)或临时(dcmStorageDuration= temporary)存储的存储系统中删除Studies，如果它们的Study Date比ISO-8601 period格式的指定值长。格式[nn\"[\"<schedule>\"]\"](PnYnMnD|PnW)。",

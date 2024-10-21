@@ -199,6 +199,19 @@
         "type": "string"
       }
     },
+    "dcmDeleterThresholdMaxUseableSpace": {
+      "title": "Deleter Threshold Max Usable Space",
+      "description": "Maximal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the used disk space exceeds that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmDeleterThresholdBlocksFilePath": {
+      "title": "Deleter Threshold Blocks File Path",
+      "description": "Path of file containing the current used disk space in blocks (1024 bytes), periodically updated by an external application.",
+      "type": "string"
+    },
     "dcmDeleteStudiesOlderThan": {
       "title": "Elimina gli Studi più vecchi di",
       "description": "Eliminare gli studi dal sistema di archiviazione configurato per l'archiviazione cache (dcmStorageDuration = CACHE) o temporanea (dcmStorageDuration = TEMPORARY), se la data dello studio è più grande del valore specificato nel formato periodo ISO-8601. Formato [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",

@@ -199,6 +199,19 @@
         "type": "string"
       }
     },
+    "dcmDeleterThresholdMaxUseableSpace": {
+      "title": "Deleter Threshold Max Usable Space",
+      "description": "Maximal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the used disk space exceeds that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmDeleterThresholdBlocksFilePath": {
+      "title": "Deleter Threshold Blocks File Path",
+      "description": "Path of file containing the current used disk space in blocks (1024 bytes), periodically updated by an external application.",
+      "type": "string"
+    },
     "dcmDeleteStudiesOlderThan": {
       "title": "より 古い 検査を 削除 する",
       "description": "キャッシュ (「格納 期間」=CACHE) または 一時的 (「格納 期間」=TEMPORARY) 格納に 構成された 格納 システムから 検査を 削除 する, 検査日が ISO-8601 期間 PnDTnHnMnS 形式で 指定された 値よりも 前の 場合。 形式 [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
