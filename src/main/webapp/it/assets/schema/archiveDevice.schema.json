@@ -1809,13 +1809,14 @@
     },
     "hl7ReferredMergedPatientPolicy": {
       "title": "Politica per il paziente unito referenziato HL7",
-      "description": "Specifica la politica sui messaggi HL7 in arrivo che fanno riferimento a un paziente già unito. REJECT: rifiuta qualsiasi messaggio HL7 di questo tipo, IGNORE: ignora qualsiasi messaggio HL7 di questo tipo, IGNORE_DUPLICATE_MERGE: ignora solo i messaggi di unione HL7 duplicati, rifiuta qualsiasi altro messaggio simile. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di Archivio.",
+      "description": "Specifica la politica sui messaggi HL7 in arrivo che fanno riferimento a un paziente già unito. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/HL7-Referred-Merged-Patient-Policy\" target=\"_blank\">HL7 Referred Merged Patient Policy</a> meanings. Può essere sovrascritto dai valori configurati per una particolare applicazione HL7 di Archivio.",
       "type": "string",
       "default": "REJECT",
       "enum": [
         "REJECT",
         "IGNORE",
-        "IGNORE_DUPLICATE_MERGE"
+        "IGNORE_DUPLICATE_MERGE",
+        "ACCEPT_INVERSE_MERGE"
       ]
     },
     "hl7DicomCharacterSet": {

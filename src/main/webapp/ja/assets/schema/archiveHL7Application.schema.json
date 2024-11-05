@@ -217,12 +217,13 @@
     },
     "hl7ReferredMergedPatientPolicy": {
       "title": "HL7 参照された マージ済み 患者 ポリシー",
-      "description": "すでに マージ済みの 患者を 参照する 着信 HL7 メッセージに 関する ポリシーを 指定します。 REJECT: その ような HL7 メッセージを 拒否します, IGNORE: その ような HL7メッセージを 無視します, IGNORE_DUPLICATE_MERGE：重複する HL7 マージ メッセージのみを 無視し、その 他の その ような メッセージを 拒否します。 デバイス レベルで 指定された 値を 上書きします。",
+      "description": "すでに マージ済みの 患者を 参照する 着信 HL7 メッセージに 関する ポリシーを 指定します。 Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/HL7-Referred-Merged-Patient-Policy\" target=\"_blank\">HL7 Referred Merged Patient Policy</a> meanings. デバイス レベルで 指定された 値を 上書きします。",
       "type": "string",
       "enum": [
         "REJECT",
         "IGNORE",
-        "IGNORE_DUPLICATE_MERGE"
+        "IGNORE_DUPLICATE_MERGE",
+        "ACCEPT_INVERSE_MERGE"
       ]
     },
     "hl7DicomCharacterSet": {

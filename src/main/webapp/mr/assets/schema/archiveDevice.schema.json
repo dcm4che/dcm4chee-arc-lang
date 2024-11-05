@@ -1809,13 +1809,14 @@
     },
     "hl7ReferredMergedPatientPolicy": {
       "title": "HL7 संदर्भित विलीन रुग्ण धोरण",
-      "description": "येणार्‍या HL7 संदेशांवर धोरण निर्दिष्ट करते जे आधीपासूनच विलीन झालेल्या रुग्णाला संदर्भित करते. REJECT: अशा कोणत्याही HL7 संदेश अस्वीकार करा, IGNORE: अशा कोणत्याही HL7 संदेश दुर्लक्ष करा, IGNORE_DUPLICATE_MERGE: फक्त पुन्हा प्राप्त झालेल्या HL7 विलीन संदेश दुर्लक्ष करा, इतर अशा कोणत्याही संदेश अस्वीकार करा. विशिष्ट आर्काइव्ह HL7 अनुप्रयोगासाठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
+      "description": "येणार्‍या HL7 संदेशांवर धोरण निर्दिष्ट करते जे आधीपासूनच विलीन झालेल्या रुग्णाला संदर्भित करते. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/HL7-Referred-Merged-Patient-Policy\" target=\"_blank\">HL7 Referred Merged Patient Policy</a> meanings. विशिष्ट आर्काइव्ह HL7 अनुप्रयोगासाठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "string",
       "default": "REJECT",
       "enum": [
         "REJECT",
         "IGNORE",
-        "IGNORE_DUPLICATE_MERGE"
+        "IGNORE_DUPLICATE_MERGE",
+        "ACCEPT_INVERSE_MERGE"
       ]
     },
     "hl7DicomCharacterSet": {

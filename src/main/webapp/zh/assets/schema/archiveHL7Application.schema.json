@@ -217,12 +217,13 @@
     },
     "hl7ReferredMergedPatientPolicy": {
       "title": "HL7引用的合并患者策略",
-      "description": "指定引用已合并患者的传入HL7消息的策略。 REJECT:拒绝此类HL7消息,IGNORE:忽略此类HL7消息,IGNORE_DUPLICATE_MERGE:仅忽略重复的HL7合并消息,并拒绝其它此类消息。 覆盖在设备级别指定的值。",
+      "description": "指定引用已合并患者的传入HL7消息的策略。 Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/HL7-Referred-Merged-Patient-Policy\" target=\"_blank\">HL7 Referred Merged Patient Policy</a> meanings. 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
         "REJECT",
         "IGNORE",
-        "IGNORE_DUPLICATE_MERGE"
+        "IGNORE_DUPLICATE_MERGE",
+        "ACCEPT_INVERSE_MERGE"
       ]
     },
     "hl7DicomCharacterSet": {
