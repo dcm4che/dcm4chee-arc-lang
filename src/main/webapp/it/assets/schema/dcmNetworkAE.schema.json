@@ -33,6 +33,14 @@
         "type": "string"
       }
     },
+    "dcmMasqueradeCalledAETitle": {
+      "title": "Masquerade Called AE Title",
+      "description": "Called AE Title used for initiating network associations, masquerading the configured AE Title of the remote Network AE. Format <Configured AE Title>:<Used Called AE Title>.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "dcmMasqueradeCallingAETitle": {
       "title": "Masquerade Calling AE Title",
       "description": "Titolo AE utilizzato per avviare associazioni di rete, mascherando il titolo AE effettivo per questo AE di rete - il prefisso opzionale [<titolo AE chiamato>] limita il mascheramento all'associazione a un particolare titolo AE",

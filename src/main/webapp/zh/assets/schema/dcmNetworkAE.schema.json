@@ -33,6 +33,14 @@
         "type": "string"
       }
     },
+    "dcmMasqueradeCalledAETitle": {
+      "title": "Masquerade Called AE Title",
+      "description": "Called AE Title used for initiating network associations, masquerading the configured AE Title of the remote Network AE. Format <Configured AE Title>:<Used Called AE Title>.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "dcmMasqueradeCallingAETitle": {
       "title": "正在调用伪装的AE标题",
       "description": "AE标题用于发起网络关联，掩盖本网络的实际AE标题 -- 可选前缀[<Called AE Title>]限制伪装与特定AE标题的关联",

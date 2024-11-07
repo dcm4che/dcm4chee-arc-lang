@@ -33,6 +33,14 @@
         "type": "string"
       }
     },
+    "dcmMasqueradeCalledAETitle": {
+      "title": "Masquerade Called AE Title",
+      "description": "Called AE Title used for initiating network associations, masquerading the configured AE Title of the remote Network AE. Format <Configured AE Title>:<Used Called AE Title>.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "dcmMasqueradeCallingAETitle": {
       "title": "マスカレード 呼びかけている AE タイトル",
       "description": "この ネットワーク AEの 実際の AE タイトルを マスカレードし、ネットワーク 関連付けの 開始に 使用される AE タイトル - 随意 接頭辞 [<Called AE Title>]は アソシエーションへの マスカレードを 特定の AE タイトルに 制限します",
