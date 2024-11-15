@@ -70,7 +70,7 @@ archiveNetworkAE.dcmAcceptedUserRole:Accepted User Role|Roles of users from whic
 archiveNetworkAE.dcmAllowDeleteStudyPermanently:Allow Delete Study permanently|Allow to delete Study permanently. REJECTED = only already rejected Studies. Overwrites value specified on Device level.
 archiveNetworkAE.dcmAllowDeletePatient:允许完全删除患者|枚举值:NEVER,ALWAYS,WITHOUT_STUDIES。覆盖在设备级别指定的值。
 archiveNetworkAE.dcmDefaultCharacterSet:默认字符集|由此AE接收的特定字符集（0008,0005）的值,该字符集（0008,0005）添加到“C-STORE RQ”和“没有特定字符集（0008,0005）的待定C-FIND RSP”。 覆盖在设备级别指定的值。
-archiveNetworkAE.dcmMWLWorklistLabel:MWL Worklist Label|Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages by the HL7 Receiver associated with this Archive AE. If absent, created MWL items are not bound to a particular MWL SCP.
+archiveNetworkAE.dcmMWLWorklistLabel:MWL Worklist Label|Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages by the HL7 Receiver associated with this Archive AE. If absent, created MWL items are not bound to a particular MWL SCP. Also, for MWL-RS Create / Update MWL, use this MWL Worklist Label as fall back, if Worklist Label (0074,1202) is missing or has no value in request payload - before falling back to *
 archiveNetworkAE.dcmUPSWorklistLabel:UPS工作列表标签|如果UPS推SCU或UPS-RS用户代理没有提供此属性的值,则此AE创建的UPS中的工作列表标签值（0074,1202）。 如果不存在,则使用传入AE的AE标题。 覆盖在设备级别指定的值。
 archiveNetworkAE.dcmUPSEventSCU:UPS事件SCU|此网络AE创建的订阅的UPS事件报告将发送到的UPS事件SOP类SCU的AE标题-如果订阅是由N-ACTION DIMSE服务或相应的UPS REST风格的服务独立创建的。 覆盖在设备级别指定的值。
 archiveNetworkAE.dcmUPSEventSCUKeepAlive:UPS事件SCU继续存在|与UPS事件SCU的关联继续存在超时（毫秒）。 否则,关联不会重复使用,以便将多个UPS事件报告发送到单个UPS事件SCU。 覆盖在设备级别指定的值。

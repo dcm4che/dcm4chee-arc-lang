@@ -506,7 +506,7 @@
     },
     "dcmMWLWorklistLabel": {
       "title": "MWL Worklist Label",
-      "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages by the HL7 Receiver associated with this Archive AE. If absent, created MWL items are not bound to a particular MWL SCP.",
+      "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages by the HL7 Receiver associated with this Archive AE. If absent, created MWL items are not bound to a particular MWL SCP. Also, for MWL-RS Create / Update MWL, use this MWL Worklist Label as fall back, if Worklist Label (0074,1202) is missing or has no value in request payload - before falling back to *",
       "type": "string",
       "format": "dcmMWLWorklistLabel"
     },

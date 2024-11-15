@@ -506,7 +506,7 @@
     },
     "dcmMWLWorklistLabel": {
       "title": "Etiqueta de lista de trabajo MWL",
-      "description": "Sólo se tienen en cuenta los elementos MWL con esta o ninguna etiqueta de lista de trabajo (0074,1202) para la correspondencia por parte de este AE de archivo que actúa como SCP MWP. Si no existe, los elementos MWL con cualquier valor de etiqueta de lista de trabajo (0074,1202) se tienen en cuenta para la correspondencia por parte de este AE de archivo que actúa como SCP MWL.",
+      "description": "Sólo se tienen en cuenta los elementos MWL con esta o ninguna etiqueta de lista de trabajo (0074,1202) para la correspondencia por parte de este AE de archivo que actúa como SCP MWP. Si no existe, los elementos MWL con cualquier valor de etiqueta de lista de trabajo (0074,1202) se tienen en cuenta para la correspondencia por parte de este AE de archivo que actúa como SCP MWL. Also, for MWL-RS Create / Update MWL, use this MWL Worklist Label as fall back, if Worklist Label (0074,1202) is missing or has no value in request payload - before falling back to *",
       "type": "string",
       "format": "dcmMWLWorklistLabel"
     },
