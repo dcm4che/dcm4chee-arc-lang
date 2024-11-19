@@ -84,6 +84,11 @@
       "description": "Indicates to check if a mounted file system did not get detached from its mount point, by specifying the path of a file relative to the path of the Storage URI, which is shadowed by the mount, so its visibility signals that the mount failed. If the file becomes visible, the write operation to the storage fails, preventing to store objects on the file system of the mount point directory.",
       "type": "string"
     },
+    "dcmCheckExistFilePath": {
+      "title": "Check Exist File Path",
+      "description": "Indicates to check if the specified file on the storage file system exists. If the file becomes inaccessible, the write operation to the storage fails, preventing to store objects on the file system.",
+      "type": "string"
+    },
     "dcmFileOpenOption": {
       "title": "File Open Option(s)",
       "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)",

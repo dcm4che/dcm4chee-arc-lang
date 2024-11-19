@@ -84,6 +84,11 @@
       "description": "Indica que se verifique si un sistema de archivos montado no se separó de su punto de montaje, especificando la ruta de un archivo sombra en el directorio utilizado como punto de montaje. Si el archivo sombra se vuelve inaccesible, falla la operación de escritura en el almacenamiento. Se comprueba para cada almacenamiento de objetos DICOM (operación de escritura). Normalmente aplicable a NFS / sistemas de archivos externos.",
       "type": "string"
     },
+    "dcmCheckExistFilePath": {
+      "title": "Check Exist File Path",
+      "description": "Indicates to check if the specified file on the storage file system exists. If the file becomes inaccessible, the write operation to the storage fails, preventing to store objects on the file system.",
+      "type": "string"
+    },
     "dcmFileOpenOption": {
       "title": "Opción(es) de apertura del archivo",
       "description": "Opciones que especifican cómo se abre el archivo para la escritura. Comportamiento por defecto 'CREAR_NUEVO'. (pase el ratón sobre las opciones para ver sus descripciones)",
