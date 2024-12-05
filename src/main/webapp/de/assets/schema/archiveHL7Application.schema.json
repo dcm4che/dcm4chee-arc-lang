@@ -126,6 +126,14 @@
         "type": "string"
       }
     },
+    "hl7NoPatientUpdateMessageType": {
+      "title": "HL7 No Patient Update Message Type",
+      "description": "Patient record will be not be updated by HL7 messages of specified Message Type(s) (MessageType^TriggerEvent). Overwrites value specified on Device level.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "hl7PatientArrivalMessageType": {
       "title": "HL7 Patient Arrival Message Type",
       "description": "Message Type of HL7 messages which triggers the change the status of Scheduled Procedure Steps associated with the Patient from SCHEDULED to ARRIVED. Overwrite value specified on Device level.",

@@ -126,6 +126,14 @@
         "type": "string"
       }
     },
+    "hl7NoPatientUpdateMessageType": {
+      "title": "HL7 No Patient Update Message Type",
+      "description": "Patient record will be not be updated by HL7 messages of specified Message Type(s) (MessageType^TriggerEvent). Overwrites value specified on Device level.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "hl7PatientArrivalMessageType": {
       "title": "HL7患者到达消息类型",
       "description": "触发将与患者相关联的预定程序步骤的状态从SCHEDULED更改为ARRIVED的HL7消息的消息类型。 覆盖在设备级别指定的值。",

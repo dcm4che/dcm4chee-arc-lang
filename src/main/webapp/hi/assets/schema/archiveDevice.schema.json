@@ -1064,6 +1064,14 @@
         "type": "string"
       }
     },
+    "hl7NoPatientUpdateMessageType": {
+      "title": "HL7 No Patient Update Message Type",
+      "description": "Patient record will be not be updated by HL7 messages of specified Message Type(s) (MessageType^TriggerEvent). May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "hl7PatientArrivalMessageType": {
       "title": "HL7 मरीज़ आगमन संदेश प्रकार",
       "description": "मरीज़ के रेकॉर्ड से संबंधित अनुसूचित प्रक्रिया स्टेप्स के स्थिति को अनुसूचित (SCHEDULED) से आगमन (ARRIVED) में बदलाव सक्रीय करनेवाले HL7 संदेश का प्रकार । यदि कॉन्फ़िगर नहीं किया है, तो अनुसूचित प्रक्रिया स्टेप्स की स्थिति HL7 ADT संदेशों से प्रभावित नहीं होगी । किसी आर्काइव HL7 अनुप्रयोग पे कॉन्फ़िगर किए गए मूल्य से अधिलेखित किया जा सकता है ।",

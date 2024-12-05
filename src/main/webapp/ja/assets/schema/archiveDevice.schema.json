@@ -1064,6 +1064,14 @@
         "type": "string"
       }
     },
+    "hl7NoPatientUpdateMessageType": {
+      "title": "HL7 No Patient Update Message Type",
+      "description": "Patient record will be not be updated by HL7 messages of specified Message Type(s) (MessageType^TriggerEvent). May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "hl7PatientArrivalMessageType": {
       "title": "HL7 患者 到着 メッセージ タイプ",
       "description": "患者に 関連付けられた 予定された 手順 ステップの ステータスを SCHEDULEDから ARRIVEDに 変更 する トリガーと なる HL7 メッセージの メッセージ タイプ。 存在しない 場合、 予定された 手順 ステップの ステータスは HL7 ADT メッセージの 影響を 受けません。 特定の アーカイブ HL7 アプリケーションの 構成された 値に よって 上書きされる 場合が あります。",
