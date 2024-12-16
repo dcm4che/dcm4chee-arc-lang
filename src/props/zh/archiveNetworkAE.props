@@ -114,6 +114,7 @@ archiveNetworkAE.dcmChangeRequesterAET:Change Requester AET|Indicates change Req
 archiveNetworkAE.dcmFilterByIssuerOfPatientID:Filter by Issuer of Patient ID|Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. Overwrites value specified on Device level.
 archiveNetworkAE.dcmMatchSOPClassOnInstanceLevel:Match SOP Class on Instance level|Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. Overwrites value specified on Device level.
 archiveNetworkAE.dcmUPSUpdateWithoutTransactionUID:UPS Update Without Transaction UID|Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. Overwrites value specified on Device level.
+archiveNetworkAE.dcmUPS2MWLCFindSCP:UPS 2 MWL C-Find SCP|Indicates to feed Modality Worklist C-FIND SCP service from managed list of Unified Procedure Step (UPS) instances mapped to MWL items. Overwrites value specified on Device level.
 archiveNetworkAE.dcmExportRule:导出规则|应用于由此AE接收的DICOM对象的导出规则。 补充在设备级别指定的导出规则。
 archiveNetworkAE.dcmExportPriorsRule:预实体导出规则|应用于由此AE接收的DICOM对象的预实体导出规则。 对在设备级别指定的先前实体的导出规则进行补充。
 archiveNetworkAE.dcmMPPSForwardRule:MPPS Forward Rule|MPPS Forward Rules applied to MPPS received by this AE.Supplements MPPS Forward Rules specified on Device Level.

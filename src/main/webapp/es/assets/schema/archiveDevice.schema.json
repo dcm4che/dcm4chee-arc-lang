@@ -105,6 +105,7 @@
     "dcmMatchSOPClassOnInstanceLevel",
     "dcmKeyValueRetentionFetchSize",
     "dcmUPSUpdateWithoutTransactionUID",
+    "dcmUPS2MWLCFindSCP",
     "dcmQStarVerificationFetchSize",
     "hl7PSUForRequestedProcedure",
     "hl7PSUTemplateParam",
@@ -1962,6 +1963,20 @@
       "description": "Indica que se permite a una UPS Pull SCU o a un cliente UPS-RS Web actualizar o cambiar el estado de un elemento de trabajo UPS en estado EN PROCESO sin especificar un UID de transacción. Puede sobrescribirse por el valor configurado para determinadas EAs de Red de Archivo.",
       "type": "boolean",
       "default" : false
+    },
+    "dcmUPS2MWLCFindSCP": {
+      "title": "UPS 2 MWL C-Find SCP",
+      "description": "Indicates to feed Modality Worklist C-FIND SCP service from managed list of Unified Procedure Step (UPS) instances mapped to MWL items. May be overwritten by configured value for particular Archive Network AEs.",
+      "type": "boolean",
+      "default" : false
+    },
+    "dcmUPS2MWLScheduledStationNameCode": {
+      "title": "UPS 2 MWL Scheduled Station Name Code",
+      "description": "Defines list of Station Name Codes in format (CV, CSD, \"CM\") used to map Scheduled Station AE Titles (0040,0001) in MWL C-FIND RQ/RSPs to Station Name Code Sequence (0040,4025) items of Unified Procedure Step (UPS) instances with the AE Title in the code meaning.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmQStarVerificationStorageID": {
       "title": "QStar Verification Storage ID",

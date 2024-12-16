@@ -796,6 +796,11 @@
       "description": "Indica que se permite a una UPS Pull SCU o a un cliente UPS-RS Web actualizar o cambiar el estado de un elemento de trabajo UPS en estado EN PROCESO sin especificar una UID de transacción. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "boolean"
     },
+    "dcmUPS2MWLCFindSCP": {
+      "title": "UPS 2 MWL C-Find SCP",
+      "description": "Indicates to feed Modality Worklist C-FIND SCP service from managed list of Unified Procedure Step (UPS) instances mapped to MWL items. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmExportRule": {
       "title": "Regla de exportación",
       "description": "Reglas de exportación aplicadas a los objetos DICOM recibidos por este AE. Complementa las reglas de exportación especificadas en el nivel de dispositivo.",

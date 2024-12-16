@@ -796,6 +796,11 @@
       "description": "Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. Overwrites value specified on Device level.",
       "type": "boolean"
     },
+    "dcmUPS2MWLCFindSCP": {
+      "title": "UPS 2 MWL C-Find SCP",
+      "description": "Indicates to feed Modality Worklist C-FIND SCP service from managed list of Unified Procedure Step (UPS) instances mapped to MWL items. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmExportRule": {
       "title": "导出规则",
       "description": "应用于由此AE接收的DICOM对象的导出规则。 补充在设备级别指定的导出规则。",
