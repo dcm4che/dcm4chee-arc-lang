@@ -106,6 +106,7 @@
     "dcmKeyValueRetentionFetchSize",
     "dcmUPSUpdateWithoutTransactionUID",
     "dcmUPS2MWLCFindSCP",
+    "dcmUPS2MWLScheduledStationNameCodeValueAsAET",
     "dcmQStarVerificationFetchSize",
     "hl7PSUForRequestedProcedure",
     "hl7PSUTemplateParam",
@@ -1972,11 +1973,17 @@
     },
     "dcmUPS2MWLScheduledStationNameCode": {
       "title": "UPS 2 MWL Scheduled Station Name Code",
-      "description": "Defines list of Station Name Codes in format (CV, CSD, \"CM\") used to map Scheduled Station AE Titles (0040,0001) in MWL C-FIND RQ/RSPs to Station Name Code Sequence (0040,4025) items of Unified Procedure Step (UPS) instances with the AE Title in the code meaning.",
+      "description": "Defines list of Station Name Codes in format (CV, CSD, \"CM\") used to map Scheduled Station AE Titles (0040,0001) in MWL C-FIND RQ/RSPs to Station Name Code Sequence (0040,4025) items of Unified Procedure Step (UPS) instances.",
       "type": "array",
       "items": {
         "type": "string"
       }
+    },
+    "dcmUPS2MWLScheduledStationNameCodeValueAsAET": {
+      "title": "UPS 2 MWL Scheduled Station Name Code Value as AE Title",
+      "description": "Indicates to map Code Value (0008,0101) - instead Code Meaning (0008,0104) - of Scheduled Station Name Code Sequence (0040,4025) items of Unified Procedure Step (UPS) instances to Scheduled Station AE Titles (0040,0001) of MWL C-FIND RQ/RSPs.",
+      "type": "boolean",
+      "default" : false
     },
     "dcmQStarVerificationStorageID": {
       "title": "QStar Verification Storage ID",
