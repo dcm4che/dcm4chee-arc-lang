@@ -548,6 +548,11 @@
       "type": "boolean",
       "default": false
     },
+    "dcmQidoResultOrderBy": {
+      "title": "QIDO Result Order By(s)",
+      "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string"
+    },
     "dcmFwdMppsDestination": {
       "title": "MPPS अग्रेषित गंतव्य",
       "description": "MPPS N-CREATE RQ आणि N-SET RQ विनंत्यांना अग्रेषित करण्यासाठी गंतव्य. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
