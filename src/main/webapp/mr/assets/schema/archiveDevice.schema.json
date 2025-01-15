@@ -549,9 +549,10 @@
       "default": false
     },
     "dcmQidoResultOrderBy": {
-      "title": "QIDO Result Order By(s)",
+      "title": "QIDO Result Order By",
       "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured values for particular Archive Network AEs.",
-      "type": "string"
+      "type": "array",
+      "items" : { "type": "string" },
     },
     "dcmFwdMppsDestination": {
       "title": "MPPS अग्रेषित गंतव्य",
