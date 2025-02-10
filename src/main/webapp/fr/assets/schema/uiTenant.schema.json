@@ -1,0 +1,92 @@
+{
+  "title": "Tenant config",
+  "description": "Tenant drop-down permission config",
+  "type": "object",
+  "required": [
+    "dcmuiTenantConfigName",
+    "dcmAcceptedUserRole"
+  ],
+  "properties": {
+    "dcmuiTenantConfigName": {
+      "title": "Tenant config name",
+      "description": "Define a name for this config",
+      "type": "string"
+    },
+    "dcmuiTenantConfigDescription": {
+      "title": "Description",
+      "description": "Tenant config description",
+      "type": "string"
+    },
+    "dcmuiWebAppLabels": {
+      "title": "MWL Worklist Label",
+      "description": "Web Application Labels",
+      "format": "dcmMWLWorklistLabel",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiUWLWebAppLabels": {
+      "title": "UWL Worklist Label",
+      "description": "Web Application Labels that will be used on the UWL / Work Items tab",
+      "format": "dcmMWLWorklistLabel",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiApplicationEntities": {
+      "title": "Aet",
+      "description": "Application Entities",
+      "format": "dcmAETitle",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiExporterDescriptions": {
+      "title": "Exporter",
+      "description": "Exporter Descriptor",
+      "format": "dcmExporterID",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiStorageDescriptors": {
+      "title": "Storage",
+      "description": "Storage Descriptor",
+      "format": "dcmStorageID",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiQueues": {
+      "title": "Queues",
+      "description": "Task Queues",
+      "format": "dcmQueueName",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiStoreAccessControlID": {
+      "title": "Store Access Control ID",
+      "description": "Access Control ID assigned to Studies which attributes match all conditions",
+      "type": "array",
+      "format": "dcmuiStoreAccessControlID",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmAcceptedUserRole": {
+      "title": "Accepted User Role",
+      "description": "Define the roles for which this config should be available, use 'user' to be available for all roles ( You should either define a username ( following attribute ) or user role ( this attribute ))",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    }
+  }
+}
