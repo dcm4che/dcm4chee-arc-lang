@@ -1,0 +1,10 @@
+uiDiffConfig:UI Diff Configuration|UI Diff Configuration
+uiDiffConfig.dcmuiDiffConfigName:UI Diff Configuration Name|UI Diff Configuration Name
+uiDiffConfig.dcmuiDiffCallingAET:Diff Calling AET|Diff Calling AET
+uiDiffConfig.dcmuiDiffPrimaryCFindSCP:UI Diff Primary C-FIND SCP|UI Diff Primary C-FIND SCP
+uiDiffConfig.dcmuiDiffPrimaryCMoveSCP:UI Diff Primary C-MOVE SCP|UI Diff Primary C-MOVE SCP
+uiDiffConfig.dcmuiDiffPrimaryCStoreSCP:UI Diff Primary C-STORE SCP|UI Diff Primary C-STORE SCP
+uiDiffConfig.dcmuiDiffSecondaryCFindSCP:UI Diff Secondary C-FIND SCP|UI Diff Secondary C-FIND SCP
+uiDiffConfig.dcmuiDiffSecondaryCMoveSCP:UI Diff Secondary C-MOVE SCP|UI Diff Secondary C-MOVE SCP
+uiDiffConfig.dcmuiDiffSecondaryCStoreSCP:UI Diff Secondary C-STORE SCP|UI Diff Secondary C-STORE SCP
+uiDiffConfig.dcmuiDiffCriteria:UI Diff Criteria|UI Diff Criteria

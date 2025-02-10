@@ -1,0 +1,5 @@
+queryRetrieveView:Query Retrieve View|Specifies behavior on Rejection Note Stored
+queryRetrieveView.dcmQueryRetrieveViewID:Query/Retrieve View ID|Query/Retrieve View Identifier
+queryRetrieveView.dcmShowInstancesRejectedByCode:Show Instances Rejected By Code|Indicates if the Q/R Services shall show instances rejected by the specified code in format (CV, CSD, 'CM')
+queryRetrieveView.dcmHideRejectionNoteWithCode:Hide Rejection Note With Code|Indicates if the Q/R Services shall hide Rejection Notes with the specified code in format (CV, CSD, 'CM')
+queryRetrieveView.dcmHideNotRejectedInstances:Hide Not Rejected Instances|Indicates if the Q/R Services shall hide instances not rejected by any reason.

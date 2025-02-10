@@ -1,0 +1,6 @@
+uiAet:Aet drop-down list|Aet drop-down list
+uiAet.dcmuiAetListName:List Name|Define a name for this config
+uiAet.dcmuiAetListDescription:Description|Aet List description
+uiAet.dcmuiMode:AEt list mode|Define in which mode should be this config available in 'internal' ( archive own AETs, in some places called also 'Home AET' or 'Local AET' ) or 'external' ( or in some places also called 'Remote AET' ) aet drop-down list, to be available for both don't select any of them
+uiAet.dcmuiAets:AETs|UI Action Parameter
+uiAet.dcmAcceptedUserRole:Accepted User Role|Define the roles for which this config should be available, use 'user' to be available for all roles
