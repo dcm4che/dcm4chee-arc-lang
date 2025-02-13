@@ -3,9 +3,7 @@ uiConfig.dcmuiConfigName:UI 構成名|UI 構成名
 uiConfig.dcmuiModalities:統計 モダリティ|統計 ページに 表示される 事前選択された モダリティ
 uiConfig.dcmuiLanguageConfig:Language Config|Config the languages of the UI
 uiConfig.dcmuiWidgetAets:ウィジェット AETs|AET ウィジェットに 表示したく AETを 選択します。ここで、新しく 追加された AETを 'Accepted Calling AE Title' として 選択する ことが できます。
-uiConfig.dcmuiBackgroundURL:背景 URL|UIの 背景を 変更するための 背景 URL。相対 URL または 絶対 URLに する ことが できます、画像の 幅は 少なくとも 1024pxで ある 必要が あります。
 uiConfig.dcmuiHideOtherPatientIDs:Hide Other Patient IDs|Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.
-uiConfig.dcmuiLogoURL:ロゴ URL|UIの ロゴを 変更するための ロゴ URL、相対 URL または 絶対 URLに する ことが できます, 画像の 幅は 140pxで、png 形式で あり、背景は 透明で ある 必要が あります。
 uiConfig.dcmuiDateTimeFormat:Format Date Time|Here you can format the date time in the UI by using 'yyyy' for the year, 'MM' for the Month, 'dd' for the date, 'HH' for the hour 'mm' for the minutes, 'ss' for the seconds and 'SSS' for milliseconds. To format Date, Time and Date-Time you should use `DATE`, `TIME` and `DATE-TIME` for example like this: `DATE=yyyy-MM-dd, TIME=HH:mm, DATE-TIME=yyyy-MM-dd HH:mm`
 uiConfig.dcmuiHideClock:Hide Clock|Set to true if you want to hide the clock in the UI
 uiConfig.dcmuiPageTitle:Page Title|If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser )

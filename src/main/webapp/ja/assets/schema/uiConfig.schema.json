@@ -38,21 +38,11 @@
       },
       "format": "dcmAETitle"
     },
-    "dcmuiBackgroundURL": {
-      "title": "背景 URL",
-      "description": "UIの 背景を 変更するための 背景 URL。相対 URL または 絶対 URLに する ことが できます、画像の 幅は 少なくとも 1024pxで ある 必要が あります。",
-      "type": "string"
-    },
     "dcmuiHideOtherPatientIDs": {
       "title": "Hide Other Patient IDs",
       "description": "Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.",
       "type": "boolean",
       "default": false
-    },
-    "dcmuiLogoURL": {
-      "title": "ロゴ URL",
-      "description": "UIの ロゴを 変更するための ロゴ URL、相対 URL または 絶対 URLに する ことが できます, 画像の 幅は 140pxで、png 形式で あり、背景は 透明で ある 必要が あります。",
-      "type": "string"
     },
     "dcmuiDateTimeFormat": {
       "title": "Format Date Time",

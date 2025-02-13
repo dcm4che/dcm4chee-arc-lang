@@ -38,21 +38,11 @@
       },
       "format": "dcmAETitle"
     },
-    "dcmuiBackgroundURL": {
-      "title": "Background URL",
-      "description": "Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px",
-      "type": "string"
-    },
     "dcmuiHideOtherPatientIDs": {
       "title": "Hide Other Patient IDs",
       "description": "Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.",
       "type": "boolean",
       "default": false
-    },
-    "dcmuiLogoURL": {
-      "title": "Logo URL",
-      "description": "Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background",
-      "type": "string"
     },
     "dcmuiDateTimeFormat": {
       "title": "Format Date Time",

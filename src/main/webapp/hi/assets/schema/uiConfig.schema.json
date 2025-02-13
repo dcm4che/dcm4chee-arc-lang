@@ -38,21 +38,11 @@
       },
       "format": "dcmAETitle"
     },
-    "dcmuiBackgroundURL": {
-      "title": "पृष्ठभूमि का URL",
-      "description": "UI का पृष्ठभूमि बदलने के लिए पृष्ठभूमि का URL, यह सापेक्ष या निरपेक्ष URL हो सकता है, छवि की चौड़ाई कम से कम १०२४px होनी चाहिए ।",
-      "type": "string"
-    },
     "dcmuiHideOtherPatientIDs": {
       "title": "Hide Other Patient IDs",
       "description": "Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.",
       "type": "boolean",
       "default": false
-    },
-    "dcmuiLogoURL": {
-      "title": "प्रतीक चिन्ह का URL",
-      "description": "UI का प्रतीक चिन्ह बदलने के लिए प्रतीक चिन्ह का URL, यह सापेक्ष या निरपेक्ष URL हो सकता है, छवि की चौड़ाई १४० पिक्सेल (140px) होनी चाहिए और पारदर्शी पृष्ठभूमि के साथ png प्रारूप में होनी चाहिए ।",
-      "type": "string"
     },
     "dcmuiDateTimeFormat": {
       "title": "Format Date Time",

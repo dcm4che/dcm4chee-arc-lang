@@ -3,9 +3,7 @@ uiConfig.dcmuiConfigName:Nombre Configuración UI|Nombre Configuración UI.
 uiConfig.dcmuiModalities:Modalidades Estadísticas|Modalidades preseleccionadas que deben mostrarse en la página de Estadísticas.
 uiConfig.dcmuiLanguageConfig:Language Config|Config the languages of the UI
 uiConfig.dcmuiWidgetAets:AETs Widget|Seleccione los AETs que desea ver en el widget AET, donde puede seleccionar en cual de ellos el nuevo AET añadido debe estar como `Título AE Llamada Aceptada`.
-uiConfig.dcmuiBackgroundURL:URL del fondo|URL del fondo para cambiar el fondo de la interfaz de usuario; puede ser una URL relativa o absoluta; la imagen debe tener una anchura mínima de 1024px.
 uiConfig.dcmuiHideOtherPatientIDs:Ocultar otros ID de pacientes|Indica si se deben ocultar otros identificadores de pacientes del registro de pacientes presentes en la secuencia Otros ID de pacientes (0010,1002). Por defecto, todos los identificadores de paciente del registro de paciente se muestran separados por comas.
-uiConfig.dcmuiLogoURL:URL del logotipo|URL del logotipo para cambiar el logotipo de la interfaz de usuario, puede ser una URL relativa o absoluta, la imagen debe tener una anchura de 140px y debe estar en formato png con fondo transparente.
 uiConfig.dcmuiDateTimeFormat:Formatear Fecha Hora|Aquí puede formatear la fecha y la hora en la interfaz de usuario utilizando "aaaa" para el año, "MM" para el mes, "dd" para la fecha, "HH" para la hora, "mm" para los minutos, "ss" para los segundos y "SSS" para los milisegundos. Para dar formato a la Fecha, Hora y Fecha-Hora debe utilizar "FECHA", "HORA" y "FECHA-HORA", por ejemplo, así `DATE=aaaa-MM-dd, TIME=HH:mm, DATE-TIME=aaaa-MM-dd HH:mm`.
 uiConfig.dcmuiHideClock:Ocultar Reloj|Ajuste a verdadero si desea ocultar el reloj en la interfaz de usuario.
 uiConfig.dcmuiPageTitle:Título de la Página|Si se establece, se utilizará como Título de la página UI (El Texto mostrado en la Pestaña del Navegador).

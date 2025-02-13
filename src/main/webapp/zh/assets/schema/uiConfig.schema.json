@@ -38,21 +38,11 @@
       },
       "format": "dcmAETitle"
     },
-    "dcmuiBackgroundURL": {
-      "title": "背景URL",
-      "description": "用于更改UI背景的背景URL。可以是相对URL或绝对URL,图像宽度必须至少为1024px",
-      "type": "string"
-    },
     "dcmuiHideOtherPatientIDs": {
       "title": "Hide Other Patient IDs",
       "description": "Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.",
       "type": "boolean",
       "default": false
-    },
-    "dcmuiLogoURL": {
-      "title": "Logo URL",
-      "description": "用于更改UI徽标的徽标URL,可以是相对URL或绝对URL,图像宽度必须为140px,png格式,背景必须是透明的。",
-      "type": "string"
     },
     "dcmuiDateTimeFormat": {
       "title": "Format Date Time",

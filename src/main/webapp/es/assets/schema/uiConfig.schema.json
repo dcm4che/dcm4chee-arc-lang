@@ -38,21 +38,11 @@
       },
       "format": "dcmAETitle"
     },
-    "dcmuiBackgroundURL": {
-      "title": "URL del fondo",
-      "description": "URL del fondo para cambiar el fondo de la interfaz de usuario; puede ser una URL relativa o absoluta; la imagen debe tener una anchura mínima de 1024px.",
-      "type": "string"
-    },
     "dcmuiHideOtherPatientIDs": {
       "title": "Ocultar otros ID de pacientes",
       "description": "Indica si se deben ocultar otros identificadores de pacientes del registro de pacientes presentes en la secuencia Otros ID de pacientes (0010,1002). Por defecto, todos los identificadores de paciente del registro de paciente se muestran separados por comas.",
       "type": "boolean",
       "default": false
-    },
-    "dcmuiLogoURL": {
-      "title": "URL del logotipo",
-      "description": "URL del logotipo para cambiar el logotipo de la interfaz de usuario, puede ser una URL relativa o absoluta, la imagen debe tener una anchura de 140px y debe estar en formato png con fondo transparente.",
-      "type": "string"
     },
     "dcmuiDateTimeFormat": {
       "title": "Formatear Fecha Hora",

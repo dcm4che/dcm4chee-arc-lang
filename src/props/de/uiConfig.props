@@ -3,9 +3,7 @@ uiConfig.dcmuiConfigName:UI Configuration Name|UI Configuration Name
 uiConfig.dcmuiModalities:Statistic Modalities|Preselected Modalities that should show in the Statistic page
 uiConfig.dcmuiLanguageConfig:Language Config|Config the languages of the UI
 uiConfig.dcmuiWidgetAets:Widget AETs|Select the AETs that you wan't to see in the AET widget, where you can select in which of them the newly added AET should be as `Accepted Calling AE Title`
-uiConfig.dcmuiBackgroundURL:Background URL|Background URL for changing the background of the UI, it can be relative or absolute URL, the image should have the width of at least of 1024px
 uiConfig.dcmuiHideOtherPatientIDs:Hide Other Patient IDs|Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.uiConfig.dcmuiLogoURL:Logo URL|Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background
-uiConfig.dcmuiLogoURL:Logo URL|Logo URL for changing the logo of the UI, it can be relative or absolute URL, the image should have the width of 140px and should be in format png with the transparent background
 uiConfig.dcmuiDateTimeFormat:Format Date Time|Here you can format the date time in the UI by using 'yyyy' for the year, 'MM' for the Month, 'dd' for the date, 'HH' for the hour 'mm' for the minutes, 'ss' for the seconds and 'SSS' for milliseconds. To format Date, Time and Date-Time you should use `DATE`, `TIME` and `DATE-TIME` for example like this: `DATE=yyyy-MM-dd, TIME=HH:mm, DATE-TIME=yyyy-MM-dd HH:mm`
 uiConfig.dcmuiHideClock:Hide Clock|Set to true if you want to hide the clock in the UI
 uiConfig.dcmuiPageTitle:Page Title|If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser )
