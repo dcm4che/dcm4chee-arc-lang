@@ -44,11 +44,6 @@
       "type": "boolean",
       "default": false
     },
-    "dcmuiAboutInfo": {
-      "title": "About Info",
-      "description": "Here you can add the information about the About page if you want to change the default info by using following keywords, for example like this:<code>title=\"J4Care\", subtitle=\"SMooTH Archive\", company_name=\"J4Care GmbH\", street=\"Enzersdorfer Strasse 7\", postal_code=\"A-2340\", town=\"Mödling\"</code>",
-      "type": "string"
-    },
     "dcmuiDateTimeFormat": {
       "title": "Format Date Time",
       "description": "Here you can format the date time in the UI by using 'yyyy' for the year, 'MM' for the Month, 'dd' for the date, 'HH' for the hour 'mm' for the minutes, 'ss' for the seconds and 'SSS' for milliseconds. To format Date, Time and Date-Time you should use `DATE`, `TIME` and `DATE-TIME` for example like this: `DATE=yyyy-MM-dd, TIME=HH:mm, DATE-TIME=yyyy-MM-dd HH:mm`",
@@ -87,22 +82,10 @@
         "type": "string"
       },
       "use": [
-        "$.dcmDevice.dcmuiConfig[*].dcmuiTenantConfig[*].dcmMWLWorklistLabel",
         "$.dcmDevice.dcmArchiveDevice.dcmMWLImport.dcmMWLWorklistLabel",
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmMWLWorklistLabel",
         "$.dcmDevice.hl7Application[*].dcmArchiveHL7Application.dcmMWLWorklistLabel",
         "$.dcmDevice.dcmArchiveDevice.dcmArchiveAttributeCoercion[*].dcmMergeLocalMWLWorklistLabel[*]"
-      ]
-    },
-    "dcmuiStoreAccessControlID": {
-      "title": "Store Access Control ID",
-      "description": "Access Control ID assigned to Studies which attributes match all conditions",
-      "type": "array",
-      "items" : {
-        "type": "string"
-      },
-      "use": [
-        "$.dcmDevice.dcmuiConfig[*].dcmuiTenantConfig[*].dcmuiStoreAccessControlID"
       ]
     },
     "dcmuiInstitutionNameFilterType": {
@@ -163,15 +146,6 @@
       "type": "array",
       "items" : {
         "$ref": "uiWebApp.schema.json"
-      }
-    },
-    "dcmuiTenantConfig": {
-      "title": "Tenant config",
-      "description": "Define which elements of the specified drop-downs should be visible for which role",
-      "titleKey":"{dcmuiTenantConfigName}",
-      "type": "array",
-      "items" : {
-        "$ref": "uiTenant.schema.json"
       }
     },
     "dcmuiPermission": {

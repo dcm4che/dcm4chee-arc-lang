@@ -18,7 +18,6 @@
       "description": "Exporter ID",
       "type": "string",
       "use": [
-        "$.dcmDevice.dcmuiConfig[*].dcmuiTenantConfig[*].dcmExporterID",
         "$.dcmDevice.dcmArchiveDevice.dcmExportPriorsRule[*].dcmExporterID[*]",
         "$.dcmDevice.dcmArchiveDevice.dcmExportRule[*].dcmExporterID[*]",
         "$.dcmDevice.dcmArchiveDevice.hl7ExportRule[*].dcmExporterID[*]",

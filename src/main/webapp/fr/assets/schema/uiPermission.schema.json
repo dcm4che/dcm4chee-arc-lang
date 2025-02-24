@@ -43,7 +43,6 @@
         "tab-configuration->ae_list",
         "tab-configuration->hl7_applications",
         "tab-configuration->permission",
-        "tab-configuration->tenant_config",
         "tab-correct_data->diff",
         "tab-correct_data->patient_data",
         "tab-move_data->retrieve",

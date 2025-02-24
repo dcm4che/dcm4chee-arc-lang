@@ -45,6 +45,7 @@
         "type": "string",
         "enum": [
           "QIDO_RS",
+          "AI_CHAT",
           "DOCUMENTATION",
           "STOW_RS",
           "WADO_RS",
@@ -67,7 +68,6 @@
           "XDS_RS",
           "AGFA_BLOB",
           "J4C_ROUTER",
-          "AI_CHAT",
           "FHIR",
           "WORKFLOW_MANAGER"
         ]

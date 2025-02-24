@@ -51,17 +51,6 @@
       "type": "string",
       "format": "webApp"
     },
-    "dcmuiGrafanaURL": {
-      "title": "Grafana URL",
-      "description": "Set the Grafana URL so that it will be used in the dashboard so one can open grafana",
-      "type": "string"
-    },
-    "dcmuiPrometheusWebApp": {
-      "title": "Prometheus Web App",
-      "description": "Selected Web App, It will be used to get the hardware data for the dashboard-hardware page",
-      "type": "string",
-      "format": "webApp"
-    },
     "dcmuiCompareSideObjects": {
       "title": "Compare Sides",
       "description": "Compare Sides",
@@ -76,14 +65,6 @@
       "description": "Names of the network devices in docker containers used in the hardware page.",
       "type": "array",
       "items" : { "type": "string" }
-    },
-    "dcmAcceptedUserRole": {
-      "title": "Accepted User Role",
-      "description": "Define the roles for which this config should be available, use 'user' to be available for all roles ( You should either define a username ( following attribute ) or user role ( this attribute ))",
-      "type": "array",
-      "items" : {
-        "type": "string"
-      }
     }
   }
 }

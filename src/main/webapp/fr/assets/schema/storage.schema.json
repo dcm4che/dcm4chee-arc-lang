@@ -30,7 +30,6 @@
       "description": "Storage ID",
       "type": "string",
       "use": [
-        "$.dcmDevice.dcmuiConfig[*].dcmuiTenantConfig[*].dcmStorageID",
         "$.dcmDevice.dcmArchiveDevice.dcmSeriesMetadataStorageID[*]",
         "$.dcmDevice.dcmArchiveDevice.dcmStorageVerificationStorageID[*]",
         "$.dcmDevice.dcmArchiveDevice.dcmStorage[*].dcmExportStorageID[*]",
