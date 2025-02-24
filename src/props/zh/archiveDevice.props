@@ -8,6 +8,7 @@ archiveDevice.dcmCalculateStudySizeFetchSize:检查大小计算提取大小|限�
 archiveDevice.dcmCalculateQueryAttributes:查询属性计算|指示查询属性的计算是通过配置"检查大小计算延迟"和"检查大小计算轮询间隔"来执行的。
 archiveDevice.dcmSeriesMetadataStorageID:系列元数据存储ID|存储包含系列所有实例的聚合元数据的ZIP归档文件的存储ID。可以配置多个存储系统。如果不存在,则不存储聚合系列元数据。
 archiveDevice.dcmSeriesMetadataDelay:聚合系列元数据延迟|聚合系列元数据在ISO-8601期间以PnDTnHnMnS格式延迟以存储。如果不存在,则不存储聚合系列元数据。某些存档网络AE的配置值可能会覆盖这些值。
+archiveDevice.dcmUpdateSeriesMetadata:Update Series Metadata|Indicates to update aggregated Series Metadata on attributes update.
 archiveDevice.dcmSeriesMetadataPollingInterval:系列元数据更新轮询间隔|ISO-8601周期格式PnDTnHnMnS计划元数据更新的系列的轮询间隔。如果不存在,则不存储聚合系列元数据。
 archiveDevice.dcmSeriesMetadataFetchSize:更新系列元数据提取大小|查询提取的计划系列元数据更新的最大数量。
 archiveDevice.dcmSeriesMetadataThreads:更新系列元数据线程|用于创建和更新系列元数据的线程数。

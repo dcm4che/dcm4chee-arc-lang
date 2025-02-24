@@ -7,6 +7,7 @@
     "dcmStoreImplementationVersionName",
     "dcmCalculateStudySizeFetchSize",
     "dcmCalculateQueryAttributes",
+    "dcmUpdateSeriesMetadata",
     "dcmSeriesMetadataFetchSize",
     "dcmSeriesMetadataThreads",
     "dcmSeriesMetadataMaxRetries",
@@ -193,6 +194,12 @@
       "description": "Delay in ISO-8601 duration format PnDTnHnMnS for storing aggregated Series Metadata on storage. If absent, no aggregated Series Metadata will be stored. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmUpdateSeriesMetadata": {
+      "title": "Update Series Metadata",
+      "description": "Indicates to update aggregated Series Metadata on attributes update.",
+      "type": "boolean",
+      "default" : true
     },
     "dcmSeriesMetadataPollingInterval": {
       "title": "Update Series Metadata Polling Interval",

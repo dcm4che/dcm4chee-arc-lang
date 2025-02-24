@@ -8,6 +8,7 @@ archiveDevice.dcmCalculateStudySizeFetchSize:検査 サイズ 計算 フェッ�
 archiveDevice.dcmCalculateQueryAttributes:クエリ 属性 計算|構成された 「検査 サイズ 計算 遅延」 と 「検査 サイズ 計算 ポーリング 間隔」 に より クエリ 属性の 計算を する ことを 示します。
 archiveDevice.dcmSeriesMetadataStorageID:シリーズ メタデータの 格納 ID|シリーズの すべての インスタンスの 集約 メタデータを 含む ZIP アーカイブが 保存される 格納の ID。 複数の 格納 システムを 構成できます。 存在しない 場合、 集約された シリーズ メタデータは 保存されません。
 archiveDevice.dcmSeriesMetadataDelay:集約 シリーズ メタデータの 遅延|集約 シリーズ メタデータを 格納に 保存 する ために ISO-8601 期間 PnDTnHnMnS 形式で 遅延。 存在しない 場合、 集約された シリーズ メタデータは 保存されません。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。
+archiveDevice.dcmUpdateSeriesMetadata:Update Series Metadata|Indicates to update aggregated Series Metadata on attributes update.
 archiveDevice.dcmSeriesMetadataPollingInterval:シリーズ メタデータの 更新 ポーリング 間隔|ISO-8601 期間 形式 PnDTnHnMnSで メタデータの 更新が 予定されて いる シリーズの ポーリング 間隔。 存在しない 場合、 集約された シリーズ メタデータは 保存されません。
 archiveDevice.dcmSeriesMetadataFetchSize:更新 シリーズ メタデータ フェッチ サイズ|1つの クエリで フェッチされた 予定された シリーズの メタデータ 更新の  最大数。
 archiveDevice.dcmSeriesMetadataThreads:更新 シリーズ メタデータ スレッド|シリーズ メタデータの 作成と 更新に 使用される スレッドの 数。

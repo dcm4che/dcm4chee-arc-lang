@@ -7,6 +7,7 @@
     "dcmStoreImplementationVersionName",
     "dcmCalculateStudySizeFetchSize",
     "dcmCalculateQueryAttributes",
+    "dcmUpdateSeriesMetadata",
     "dcmSeriesMetadataFetchSize",
     "dcmSeriesMetadataThreads",
     "dcmSeriesMetadataMaxRetries",
@@ -193,6 +194,12 @@
       "description": "एकत्रित मालिका मेटाडेटाला साठवणवर साठवण्यासाठी ISO-8601 कालावधि PnDTnHnMnS प्रारूपात विलंब. अनुपस्थित असल्यास, एकत्रित मालिका मेटाडेटा साठवले जाणार नाही. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmUpdateSeriesMetadata": {
+      "title": "Update Series Metadata",
+      "description": "Indicates to update aggregated Series Metadata on attributes update.",
+      "type": "boolean",
+      "default" : true
     },
     "dcmSeriesMetadataPollingInterval": {
       "title": "अद्यतन मालिका मेटाडेटा पोलिंग मध्यांतर",
@@ -550,9 +557,9 @@
     },
     "dcmQidoResultOrderBy": {
       "title": "QIDO Result Order By",
-      "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured values for particular Archive Network AEs.",
+      "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items" : { "type": "string" }
     },
     "dcmFwdMppsDestination": {
       "title": "MPPS अग्रेषित गंतव्य",

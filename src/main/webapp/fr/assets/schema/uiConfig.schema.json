@@ -57,7 +57,7 @@
     },
     "dcmuiPageTitle": {
       "title": "Page Title",
-      "description": "If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser ) ",
+      "description": "If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser )",
       "type": "string"
     },
     "dcmuiPersonNameFormat": {

@@ -8,6 +8,7 @@ archiveDevice.dcmCalculateStudySizeFetchSize:Calculate Study Size Fetch Size|Lim
 archiveDevice.dcmCalculateQueryAttributes:Calculate Query Attributes|Indicates to eager calculate Query Attributes according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.
 archiveDevice.dcmSeriesMetadataStorageID:Series Metadata Storage ID|ID of Storage on which ZIP archives with aggregated Metadata of all instances of a Series is stored. Multiple Storage Systems may be configured. If absent, no aggregated Series Metadata will be stored.
 archiveDevice.dcmSeriesMetadataDelay:Aggregate Series Metadata Delay|Delay in ISO-8601 duration format PnDTnHnMnS for storing aggregated Series Metadata on storage. If absent, no aggregated Series Metadata will be stored. May be overwritten by configured values for particular Archive Network AEs.
+archiveDevice.dcmUpdateSeriesMetadata:Update Series Metadata|Indicates to update aggregated Series Metadata on attributes update.
 archiveDevice.dcmSeriesMetadataPollingInterval:Update Series Metadata Polling Interval|Polling Interval for Series scheduled for Metadata update in ISO-8601 duration format PnDTnHnMnS. If absent, no aggregated Series Metadata will be stored.
 archiveDevice.dcmSeriesMetadataFetchSize:Update Series Metadata Fetch Size|Maximal number of Series scheduled for Metadata update fetched by one query.
 archiveDevice.dcmSeriesMetadataThreads:Update Series Metadata Threads|Number of Threads used for creation and update of Series Metadata.

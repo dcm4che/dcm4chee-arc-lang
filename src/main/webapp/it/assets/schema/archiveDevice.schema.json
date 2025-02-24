@@ -7,6 +7,7 @@
     "dcmStoreImplementationVersionName",
     "dcmCalculateStudySizeFetchSize",
     "dcmCalculateQueryAttributes",
+    "dcmUpdateSeriesMetadata",
     "dcmSeriesMetadataFetchSize",
     "dcmSeriesMetadataThreads",
     "dcmSeriesMetadataMaxRetries",
@@ -193,6 +194,12 @@
       "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMnS per l'archiviazione dei metadati della serie aggregati in archivio. Se assenti, non verranno archiviati metadati di serie aggregati. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmUpdateSeriesMetadata": {
+      "title": "Update Series Metadata",
+      "description": "Indicates to update aggregated Series Metadata on attributes update.",
+      "type": "boolean",
+      "default" : true
     },
     "dcmSeriesMetadataPollingInterval": {
       "title": "Aggiorna l'intervallo di polling dei metadati della serie",
@@ -550,7 +557,7 @@
     },
     "dcmQidoResultOrderBy": {
       "title": "QIDO Result Order By",
-      "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured values for particular Archive Network AEs.",
+      "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "array",
       "items" : { "type": "string" }
     },
