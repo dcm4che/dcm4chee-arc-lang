@@ -196,6 +196,11 @@
       "type": "boolean",
       "default": false
     },
+    "dcmDeleterMinStudyAccessTime": {
+      "title": "Deleter Min Study Access Time",
+      "description": "Least recent access time of Studies for Deletion in format YYYYMMDDHHMMSS.FFFFFF.",
+      "type": "string"
+    },
     "dcmDeleterThreshold": {
       "title": "Umbral de eliminación",
       "description": "Espacio mínimo utilizable en el sistema de almacenamiento para activar la eliminación. Si está presente, los estudios se borran del Sistema de Almacenamiento configurado para almacenamiento en caché (Duración del Almacenamiento = CACHE) o temporal (Duración del Almacenamiento = TEMPORAL), si el espacio utilizable cae por debajo de ese valor. Formato [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).",

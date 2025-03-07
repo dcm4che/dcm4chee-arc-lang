@@ -22,6 +22,7 @@ storage.dcmStorageThreshold:存储阈值|存储系统上的最小可用空间。
 storage.dcmStorageThresholdExceeded:超过存储门槛值|超过存储门槛值时,日期和时间以YYYYMMDDHHMMSS.FFFFFF格式显示。
 storage.dcmStorageThresholdExceedsPermanently:永久超过存储门槛|指示当超过存储门槛时,将从请求存储系统的网络AE的已配置存储系统列表中删除存储系统。
 storage.dcmNoDeletionConstraint:无删除约束|如果没有配置删除门槛值和其他删除约束,则从无删除约束的高速缓存/临时存储系统中删除检查。
+storage.dcmDeleterMinStudyAccessTime:Deleter Min Study Access Time|Least recent access time of Studies for Deletion in format YYYYMMDDHHMMSS.FFFFFF.
 storage.dcmDeleterThreshold:删除阈值|触发删除的存储系统的最小可用空间。如果存储系统为存储配置了高速缓存(Storage Duration =CACHE)或者临时缓存(Storage Duration=TEMPORARY)值，那么当可用空间小于该配置的值，检查将会从存储系统里删除。格式 [nn'['<schedule>']']nnn(MB|GB|MiB|GiB)。
 storage.dcmDeleterThresholdMaxUseableSpace:Deleter Threshold Max Usable Space|Maximal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the used disk space exceeds that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).
 storage.dcmDeleterThresholdBlocksFilePath:Deleter Threshold Blocks File Path|Path of file containing the current used disk space in blocks (1024 bytes), periodically updated by an external application.
