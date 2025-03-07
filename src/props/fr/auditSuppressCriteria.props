@@ -1,0 +1,14 @@
+auditSuppressCriteria:Audit Suppress Criteria|Audit Suppress Criteria
+auditSuppressCriteria.cn:Name|Arbitrary/Meaningful name of the Audit Suppress Criteria.
+auditSuppressCriteria.dcmAuditEventID:Audit Event ID|DICOM PS 3.15 A.5 Audit Event ID code and codeSystemName in format (CV, CSD, "CM").
+auditSuppressCriteria.dcmAuditEventTypeCode:Audit Event Type Code|DICOM PS 3.15 A.5 Audit Event Type code in format (CV, CSD, "CM").
+auditSuppressCriteria.dcmAuditEventActionCode:Event Action Code|DICOM PS 3.15 A.5 Audit Event Action Type code.
+auditSuppressCriteria.dcmAuditEventOutcomeIndicator:Event Outcome Indicator|DICOM PS 3.15 A.5 Audit Event Outcome Indicator.
+auditSuppressCriteria.dcmAuditUserID:User ID|DICOM PS 3.15 A.5 Audit Active Participant User ID.
+auditSuppressCriteria.dcmAuditAlternativeUserID:Alternative User ID|DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID.
+auditSuppressCriteria.dcmAuditUserRoleIDCode:User Role ID Code|DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, "CM").
+auditSuppressCriteria.dcmAuditNetworkAccessPointID:Network Access Point ID|DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID.
+auditSuppressCriteria.dcmAuditUserIsRequestor:User is Requestor|Indicates if Active Participant is initiator/requestor of the Audit Event as specified by DICOM PS 3.15 A.5
+auditSuppressCriteria.dcmParticipantObjectTypeCode:Participant Object Type Code|DICOM PS 3.15 A.5 Participant Object Type Code.
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole:Participant Object Type Code Role|DICOM PS 3.15 A.5 Participant Object Type Code Role.
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle:Participant Object Data Life Cycle|DICOM PS 3.15 A.5 Participant Object Data Life Cycle.

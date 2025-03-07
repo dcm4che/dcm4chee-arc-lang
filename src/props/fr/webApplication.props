@@ -1,0 +1,11 @@
+webApplication:Web Application|Web Application information
+webApplication.dcmWebAppName:Web Application name|Name of the Web Application
+webApplication.dicomNetworkConnectionReference:Web Application Network Connection|Network Connection(s) on which the services of the Web application are available
+webApplication.dicomDescription:Web Application Description|Unconstrained text description of the Web Application
+webApplication.dcmWebServicePath:Web Service Path|HTTP Path of the services of the Web application
+webApplication.dcmWebServiceClass:Web Service Class|Web Service Classes provided by the Web application
+webApplication.dcmKeycloakClientID:Keycloak Client ID|Keycloak Client ID for the Web application
+webApplication.dicomAETitle:AE Title|AE title of Network AE associated with this Web Application
+webApplication.dicomApplicationCluster:Application Cluster|Locally defined names for a subset of related applications
+webApplication.dcmProperty:Web Application Property|Web application property in format {name}={value}. Refer <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties" target="_blank">Web Application Properties</a> configuration examples based on use cases.
+webApplication.dicomInstalled:installed|True if the Web Application is installed on network. If not present, information about the installed status of the Web Application is inherited from the device

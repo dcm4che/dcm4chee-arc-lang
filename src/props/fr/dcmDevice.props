@@ -1,0 +1,24 @@
+dcmDevice:Device Extension|dcm4che proprietary Device Attributes
+dcmDevice.dcmRoleSelectionNegotiationLenient:Role Selection Negotiation Lenient|Indicates to disable check for required SCP/SCU role selection negotiation on sending of DIMSE-RQs. May be overwritten by configured value for particular Network AEs.
+dcmDevice.dcmLimitOpenAssociations:Association Limit|Maximal number of open DICOM connections; rejects Association requests if the limit is exceeded; 0 = unlimited.
+dcmDevice.dcmLimitAssociationsInitiatedBy:Association Limit for AE|Maximal number of open DICOM connections initiated by a particular Application Entity (AE) in format <ae-title>=<number>; rejects Association requests from that AE if the limit is exceeded.
+dcmDevice.dcmTrustStoreURL:Trust Store URL|URL of Trust Store with Certificates for DICOM nodes that are authorized to connect to this node; overrides dicomAuthorizedNodeCertificateReference
+dcmDevice.dcmTrustStoreType:Trust Store Type|Key Store Type of Trust Store specified by dcmTrustStoreURL. Enumerated values: JKS, PKCS12.
+dcmDevice.dcmTrustStorePin:Trust Store Pin|Key Store Password of Trust Store specified by Trust Store URL
+dcmDevice.dcmTrustStorePinProperty:Trust Store Pin Property|System property of Key Store Password of Trust Store specified by Trust Store URL
+dcmDevice.dcmKeyStoreURL:Key Store URL|URL of Key Store with private Key and certificate used to identify this DICOM node in TLS connections
+dcmDevice.dcmKeyStoreType:Key Store Type|Key Store Type of Key Store specified by Key Store URL. Enumerated values: JKS, PKCS12.
+dcmDevice.dcmKeyStorePin:Key Store Pin|Key Store Password of Key Store specified by Key Store URL
+dcmDevice.dcmKeyStorePinProperty:Key Store Pin Property|System property of Key Store Password of Key Store specified by Key Store URL
+dcmDevice.dcmKeyStoreKeyPin:Key Store Key Pin|Key Password of Key Store specified by Key Store URL
+dcmDevice.dcmKeyStoreKeyPinProperty:Key Store Key Pin Property|System property of Key Password of Key Store specified by Key Store URL
+dcmDevice.dcmTimeZoneOfDevice:Time Zone of Device|Time Zone ID of the Device; matches Java TimeZone ID
+dcmDevice.dcmWebApp:Web Applications|Web Applications provided by the Device
+dcmDevice.dcmKeycloakClient:Keycloak Clients|Keycloak Clients provided by the Device
+dcmDevice.hl7Application:HL7 Applications|HL7 Applications provided by the Device
+dcmDevice.dcmImageWriter:Image Writers|Specifies Java Image IO Image Writers with Write Parameters used for compressing DICOM images
+dcmDevice.dcmImageReader:Image Readers|Specifies Java Image IO Image Readers used for decompressing compressed DICOM images
+dcmDevice.dcmAuditLogger:Audit Logger|Audit Logger related information
+dcmDevice.dcmAuditRecordRepository:Audit Record Repository|Audit Record Repository related information
+dcmDevice.dcmArchiveDevice:Archive Device|DICOM Archive Device related information
+dcmDevice.dcmuiConfig:UI Configuration|UI Configuration

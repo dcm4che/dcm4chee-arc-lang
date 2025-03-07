@@ -1,0 +1,6 @@
+mwlIdleTimeout:MWL Idle Timeout|MWL Idle Timeout
+mwlIdleTimeout.cn:Name|Arbitrary/Meaningful name of the MWL Idle Timeout.
+mwlIdleTimeout.dicomAETitle:MWL SCP AE Title|Archive AE Title of MWL SCP on which the MWL Idle Timeout shall be applied.
+mwlIdleTimeout.dcmAETitle:Scheduled Station AE Title|Scheduled Station AE Title(s) of Scheduled Procedure Steps for which the MWL Idle Timeout shall be applied. If none is specified, the MWL Idle Timeout is applied to all Scheduled Procedure Steps provided by the MWL SCP.
+mwlIdleTimeout.dcmMWLStatusOnIdle:MWL Status on Idle|Change Status of idle Scheduled Procedure Steps to specified value.
+mwlIdleTimeout.dcmDuration:Idle Timeout|Timeout after which the Status of matching Scheduled Procedure Steps is changed to the specified final status.

@@ -38,21 +38,11 @@
       },
       "format": "dcmAETitle"
     },
-    "dcmuiBackgroundURL": {
-      "title": "背景 URL",
-      "description": "UIの 背景を 変更するための 背景 URL。相対 URL または 絶対 URLに する ことが できます、画像の 幅は 少なくとも 1024pxで ある 必要が あります。",
-      "type": "string"
-    },
     "dcmuiHideOtherPatientIDs": {
       "title": "Hide Other Patient IDs",
       "description": "Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.",
       "type": "boolean",
       "default": false
-    },
-    "dcmuiLogoURL": {
-      "title": "ロゴ URL",
-      "description": "UIの ロゴを 変更するための ロゴ URL、相対 URL または 絶対 URLに する ことが できます, 画像の 幅は 140pxで、png 形式で あり、背景は 透明で ある 必要が あります。",
-      "type": "string"
     },
     "dcmuiDateTimeFormat": {
       "title": "Format Date Time",
@@ -111,6 +101,30 @@
     "dcmuiInstitutionName": {
       "title": "Institution Names",
       "description": "This will be used in combination with the previous field 'Institution Name Filter Type' to prefill the Dropdown of the Filter Institution Names in the Navigation Page",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiIssuerOfPatientIDSequence": {
+      "title": "Issuer of Patient ID Sequence",
+      "description": "This will be used to show a dropdown in the Patient Identifier widget instead of the Issuer of Patient ID, Issuer of Patient ID Qualifiers Sequence - Universal Entity ID and Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type input fields. You can use the & character between the strings to mark the different fields like: 'issuerOfP&ipIDQuSeUniversalEntityID&ipIDQuSeUniversalEntityIDType'",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiIssuerOfAccessionNumberSequence": {
+      "title": "Issuer of Accession Number Sequence",
+      "description": "This will be used to show a dropdown in the Accession Number widget instead of the \"Local Namespace Entity ID\", \"Universal Entity ID\" and \"Universal Entity ID Type\" input fields. You can use the ^ character between the strings to mark the different fields like: 'dummylNamespace^uEntityID^uEntityIDType'",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "dcmuiIssuerOfAdmissionIDSequence": {
+      "title": "Issuer of Admission ID Sequence",
+      "description": "This will be used to show a dropdown in the Admission ID widget instead of the \"Local Namespace Entity ID\",\"Universal Entity ID\" and \"Universal Entity ID Type\" input fields. You can use the & character between the strings to mark the different fields like: 'dummylNamespace&uEntityID&uEntityIDType'",
       "type": "array",
       "items" : {
         "type": "string"

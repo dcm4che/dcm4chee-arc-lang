@@ -38,6 +38,7 @@ archiveNetworkAE.dcmWadoMetadataExcludePrivate:Wado Metadata Exclude Private|Ind
 archiveNetworkAE.dcmQueryMaxNumberOfResults:查询结果的最大数量|C-FIND SCP返回结果的最大数量。 如果匹配数超过限制,C-FIND请求将被拒绝。 0=无限制。 覆盖在设备级别指定的值。
 archiveNetworkAE.dcmQidoMaxNumberOfResults:QIDO结果的最大数量|QIDO-RS服务返回的最大数量。 0=无限制。 覆盖在设备级别指定的值。
 archiveNetworkAE.dcmQidoETag:Qido ETag|Indicates to the Search Series or Instances of a Study； 如果设备级别上的Overwrites值被指定为
+archiveNetworkAE.dcmQidoResultOrderBy:QIDO Result Order By|Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. Overwrites value specified on Device level.
 archiveNetworkAE.dcmFwdMppsDestination:MPPS转发目的地|用于转发MPPS N-CREATE RQ和N-SET RQ的目的地。 覆盖在设备级别指定的值。
 archiveNetworkAE.dcmIanDestination:Ian Destination|Destination to send IAN N-CREATE RQ. Overwrites value specified on Device level.
 archiveNetworkAE.dcmIanDelay:IAN延迟|ISO-8601周期格式PnDTnHnMnS中用于将接收到的检查IAN发送到配置的IAN目的地的延迟值。 覆盖在设备级别指定的值。

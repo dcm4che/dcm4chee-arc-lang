@@ -1,0 +1,8 @@
+exportPriorsRule:Export Priors Rule|Export Priors Rule
+exportPriorsRule.cn:Name|Arbitrary/Meaningful name of the Export Priors Rule
+exportPriorsRule.dcmExporterID:Exporter ID|Exporter ID
+exportPriorsRule.dcmProperty:Conditions|Conditions in format {key}[!]={value}. Refer <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">applicability, format and some examples.</a>
+exportPriorsRule.dcmSchedule:Time Conditions|Apply this rule only within specified time ranges.
+exportPriorsRule.dcmEntitySelector:Entity Selector|Specifies matching keys used to select prior Studies to export. Format: {key}={value}[&{key}={value}]..., with {key} = 'priors' | 'StudyAge' | {attributeID}. {value} in the format '$'{attributeID} are replaced by the value of the specified attribute from the received object which triggered the export. If no Entity Selector is specified, all prior Studies for the Patient will be exported. Example: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => select at most 2 prior Studies not older than 5 years containing at least one CT Series.
+exportPriorsRule.dcmDuration:Suppress Duplicate Export Interval|Suppress Export of Studies already exported not earlier than the specified interval to avoid duplicate exports.
+exportPriorsRule.dcmExportReoccurredInstances:Export Reoccurred Instances|Indicates if the entity shall be exported on subsequent occurrence of instances

@@ -290,6 +290,12 @@
       "description": "Indica que se devuelva Última Modificación y ETag para Series de Búsqueda o Instancias de un Estudio. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
+    "dcmQidoResultOrderBy": {
+      "title": "QIDO Result Order By",
+      "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. Overwrites value specified on Device level.",
+      "type": "array",
+      "items" : { "type": "string" }
+    },
     "dcmFwdMppsDestination": {
       "title": "Destino de reenvío de MPPS",
       "description": "Destino para reenviar MPPS N-CREATE RQ y N-SET RQ. Sobrescribe el valor especificado en Device level.",

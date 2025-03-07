@@ -196,6 +196,11 @@
       "type": "boolean",
       "default": false
     },
+    "dcmDeleterMinStudyAccessTime": {
+      "title": "Deleter Min Study Access Time",
+      "description": "Least recent access time of Studies for Deletion in format YYYYMMDDHHMMSS.FFFFFF.",
+      "type": "string"
+    },
     "dcmDeleterThreshold": {
       "title": "डिलीटर उंबरठा",
       "description": "हटविण्याची क्रिया ट्रिगर करण्यासाठी साठवण सिस्टमवरील किमान वापरण्यायोग्य जागा. जर निर्दिष्ट केले असेल तर, वापरण्यायोग्य जागा त्या मूल्यापेक्षा कमी असल्यास, कॉन्फीगर्ड कॅश ('साठवण कालावधी' = CACHE) किंवा तात्पुरते ('साठवण कालावधी' = TEMPORARY) साठवण सिस्टममधून अभ्यास हटविले जातील. प्रारूप [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).",

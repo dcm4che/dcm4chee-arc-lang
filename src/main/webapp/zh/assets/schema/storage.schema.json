@@ -196,6 +196,11 @@
       "type": "boolean",
       "default": false
     },
+    "dcmDeleterMinStudyAccessTime": {
+      "title": "Deleter Min Study Access Time",
+      "description": "Least recent access time of Studies for Deletion in format YYYYMMDDHHMMSS.FFFFFF.",
+      "type": "string"
+    },
     "dcmDeleterThreshold": {
       "title": "删除阈值",
       "description": "触发删除的存储系统的最小可用空间。如果存储系统为存储配置了高速缓存(Storage Duration =CACHE)或者临时缓存(Storage Duration=TEMPORARY)值，那么当可用空间小于该配置的值，检查将会从存储系统里删除。格式 [nn'['<schedule>']']nnn(MB|GB|MiB|GiB)。",

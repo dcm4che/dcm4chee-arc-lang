@@ -290,6 +290,12 @@
       "description": "स्टडीज के सीरीज या दृष्टांत खोज सेवाओंमें अंतिम-संशोधित और ETag वापस करने का संकेत देता है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "boolean"
     },
+    "dcmQidoResultOrderBy": {
+      "title": "QIDO Result Order By",
+      "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. Overwrites value specified on Device level.",
+      "type": "array",
+      "items" : { "type": "string" }
+    },
     "dcmFwdMppsDestination": {
       "title": "MPPS आगे भेजने का गंतव्य",
       "description": "MPPS N-CREATE RQ और N-SET RQ अनुरोधों को आगे भेजने का गंतव्य । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",

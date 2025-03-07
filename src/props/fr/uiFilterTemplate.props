@@ -1,0 +1,8 @@
+uiFilterTemplate:UI Filter Template|Defined filter template
+uiFilterTemplate.dcmuiFilterTemplateGroupName:Name|Name of the template
+uiFilterTemplate.dcmuiFilterTemplateID:ID|ID of the filter where this template can apply
+uiFilterTemplate.dcmuiFilterTemplateDescription:Description|Filter template description
+uiFilterTemplate.dcmuiFilterTemplateUsername:Username|Username that can use this template
+uiFilterTemplate.dcmuiFilterTemplateRole:Role|Username role that can use this template
+uiFilterTemplate.dcmuiFilterTemplateFilters:Filters|Default filters in this template, filter pare key=value (example LocalAET=DCM4CHEE). For date filter you can use the predefined keywords (today, yesterday, this_week, this_month, last_week, last_month, this_quarter, last_quarter, this_year, last_year) so the dynamic values of the filters can be generated.
+uiFilterTemplate.dcmuiFilterTemplateDefault:Default|Use this template as default

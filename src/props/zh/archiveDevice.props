@@ -8,6 +8,7 @@ archiveDevice.dcmCalculateStudySizeFetchSize:检查大小计算提取大小|限�
 archiveDevice.dcmCalculateQueryAttributes:查询属性计算|指示查询属性的计算是通过配置"检查大小计算延迟"和"检查大小计算轮询间隔"来执行的。
 archiveDevice.dcmSeriesMetadataStorageID:系列元数据存储ID|存储包含系列所有实例的聚合元数据的ZIP归档文件的存储ID。可以配置多个存储系统。如果不存在,则不存储聚合系列元数据。
 archiveDevice.dcmSeriesMetadataDelay:聚合系列元数据延迟|聚合系列元数据在ISO-8601期间以PnDTnHnMnS格式延迟以存储。如果不存在,则不存储聚合系列元数据。某些存档网络AE的配置值可能会覆盖这些值。
+archiveDevice.dcmUpdateSeriesMetadata:Update Series Metadata|Indicates to update aggregated Series Metadata on attributes update.
 archiveDevice.dcmSeriesMetadataPollingInterval:系列元数据更新轮询间隔|ISO-8601周期格式PnDTnHnMnS计划元数据更新的系列的轮询间隔。如果不存在,则不存储聚合系列元数据。
 archiveDevice.dcmSeriesMetadataFetchSize:更新系列元数据提取大小|查询提取的计划系列元数据更新的最大数量。
 archiveDevice.dcmSeriesMetadataThreads:更新系列元数据线程|用于创建和更新系列元数据的线程数。
@@ -55,6 +56,7 @@ archiveDevice.dcmQueryFetchSize:查询提取大小|查询服务一次从数据�
 archiveDevice.dcmQueryMaxNumberOfResults:查询结果的最大数目|C-FIND SCP返回结果的最大数目。如果匹配数超过限制,C-FIND请求将被拒绝。0=无限制。某些存档网络AE的配置值可能会覆盖这些值。
 archiveDevice.dcmQidoMaxNumberOfResults:最大QIDO结果数|QIDO-RS服务返回的最大结果数。0=无限制。某些存档网络AE的配置值可能会覆盖这些值。
 archiveDevice.dcmQidoETag:Qido ETag|要返回的搜索系列或学生Instances of a Instances的指示符为Last-Modified and ETag；在particular Archive Network AES上禁用了配置的values。
+archiveDevice.dcmQidoResultOrderBy:QIDO Result Order By|Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured value for particular Archive Network AEs.
 archiveDevice.dcmFwdMppsDestination:Mpps Forward Destination|Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs.
 archiveDevice.dcmIanDestination:Ian Destination|Destination to send IAN N-CREATE RQ. May be overwritten by configured values for particular Archive Network AEs.
 archiveDevice.dcmIanDelay:IAN延迟|IAN延迟,ISO-8601周期格式PnDTnHnMnS的延迟值,用于将接收到的检查IAN发送到配置的IAN目的地。如果不存在,则IAN由接收到的MPPS触发。某些存档网络AE的配置值可能会覆盖这些值。

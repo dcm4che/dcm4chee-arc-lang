@@ -196,6 +196,11 @@
       "type": "boolean",
       "default": false
     },
+    "dcmDeleterMinStudyAccessTime": {
+      "title": "Deleter Min Study Access Time",
+      "description": "Least recent access time of Studies for Deletion in format YYYYMMDDHHMMSS.FFFFFF.",
+      "type": "string"
+    },
     "dcmDeleterThreshold": {
       "title": "削除 敷居値",
       "description": "削除を トリガー する 格納 システムの 最小 使用 可能 スペース。 存在 する 場合、 使用 可能な スペースが その 値を 下回ると、 キャッシュ (「格納 期間」 = CACHE) または 一時的 (「格納 期間」 = TEMPORARY) 格納用に 構成された 格納 システムから 検査が 削除されます。 形式 [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).",

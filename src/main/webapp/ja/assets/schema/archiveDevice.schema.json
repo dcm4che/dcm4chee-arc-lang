@@ -7,6 +7,7 @@
     "dcmStoreImplementationVersionName",
     "dcmCalculateStudySizeFetchSize",
     "dcmCalculateQueryAttributes",
+    "dcmUpdateSeriesMetadata",
     "dcmSeriesMetadataFetchSize",
     "dcmSeriesMetadataThreads",
     "dcmSeriesMetadataMaxRetries",
@@ -193,6 +194,12 @@
       "description": "集約 シリーズ メタデータを 格納に 保存 する ために ISO-8601 期間 PnDTnHnMnS 形式で 遅延。 存在しない 場合、 集約された シリーズ メタデータは 保存されません。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
       "type": "string",
       "format": "dcmDuration"
+    },
+    "dcmUpdateSeriesMetadata": {
+      "title": "Update Series Metadata",
+      "description": "Indicates to update aggregated Series Metadata on attributes update.",
+      "type": "boolean",
+      "default" : true
     },
     "dcmSeriesMetadataPollingInterval": {
       "title": "シリーズ メタデータの 更新 ポーリング 間隔",
@@ -547,6 +554,12 @@
       "description": "検査の シリーズ または インスタンスの 検索 サービスに 最終 変更 と ETag を 返す ことを 示します。 不在の 場合は 無効に なります。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。",
       "type": "boolean",
       "default": false
+    },
+    "dcmQidoResultOrderBy": {
+      "title": "QIDO Result Order By",
+      "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured value for particular Archive Network AEs.",
+      "type": "array",
+      "items" : { "type": "string" }
     },
     "dcmFwdMppsDestination": {
       "title": "MPPS 転送 宛先",

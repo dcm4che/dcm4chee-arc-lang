@@ -196,6 +196,11 @@
       "type": "boolean",
       "default": false
     },
+    "dcmDeleterMinStudyAccessTime": {
+      "title": "Deleter Min Study Access Time",
+      "description": "Least recent access time of Studies for Deletion in format YYYYMMDDHHMMSS.FFFFFF.",
+      "type": "string"
+    },
     "dcmDeleterThreshold": {
       "title": "डिलीटर की सीमा",
       "description": "स्टोरेज सिस्टम पे विलोपन सक्रीय करने की न्यूतनम उपयोगी जगह । यदि निर्दिष्ट किया है, तो कॉन्फ़िगर्ड कैश ('स्टोरेज कालावधि' = CACHE) या अस्थायी ('स्टोरेज कालावधि' = TEMPORARY) स्टोरेज सिस्टम से स्टडीज मिटेंगे, अगर न्यूतनम उपयोगी जगह उस मूल्य से कम हो जाए, प्रारूप [nn'['<schedule>']']nnn(MB|GB|MiB|GiB) ।",
