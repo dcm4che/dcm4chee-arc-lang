@@ -110,7 +110,7 @@
     },
     "dcmMergeAttribute": {
       "title": "DICOM Attribute Coercion Parameters",
-      "description": "DICOM Attribute Coercion Parameters in format {attributeID}={value}. {attributeID} inside of {value} may be replaced by the value of that attribute in the original dataset. Only effective for merging attributes coercion type. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions#formats\" target=\"_blank\">formatting options</a> and <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions#examples\">examples.</a>",
+      "description": "DICOM Attribute Coercion Parameters in format {attributeID}={value}. {attributeID} inside of {value} may be replaced by the value of that attribute in the original dataset. Only effective for merging attributes coercion type. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions#formats\" target=\"_blank\">formatting options</a> and <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions#examples\" target=\"_blank\">examples.</a>",
       "type": "array",
       "items": {
         "type": "string"
