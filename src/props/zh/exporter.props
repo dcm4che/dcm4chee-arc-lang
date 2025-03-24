@@ -8,7 +8,7 @@ exporter.dcmExportAsSourceAE:导出为源应用实体(AE)|当建立与目的地�
 exporter.dcmDeleteStudyFromStorageID:从存储ID中删除检查|删除从存储系统ID导出的检查对象。 仅适用于验证级导出任务。
 exporter.dcmRejectForDataRetentionExpiry:由于数据保留到期而拒绝实体|在导出任务完成后由于数据保留到期而拒绝实体
 exporter.dcmStgCmtSCP:存储承诺SCP AE标题|外部存储承诺SCP的AE标题,用于确认导出到另一个档案。
-exporter.dcmIanDestination:Ian Destination|Destination to send IAN N-CREATE RQ
+exporter.dcmIanDestination:IAN Destination|Destination to send IAN N-CREATE RQ
 exporter.dcmRetrieveAET:读取AE标题|与网络AE相关联的AE标题
 exporter.dcmRetrieveLocationUID:读取位置UID|读取位置UID
 exporter.dcmInstanceAvailability:实例可用性|实例可用性
