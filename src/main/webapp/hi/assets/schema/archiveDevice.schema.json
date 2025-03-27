@@ -550,7 +550,7 @@
       "minimum": 0
     },
     "dcmQidoETag": {
-      "title": "Qido ETag",
+      "title": "QIDO ETag",
       "description": "स्टडीज के सीरीज या दृष्टांत खोज सेवाओंमें अंतिम-संशोधित और ETag वापस करने का संकेत देता है; अनुपस्थित होने पर अक्षम । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।",
       "type": "boolean",
       "default": false
@@ -574,6 +574,20 @@
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
+    },
+    "dcmIanTrigger": {
+      "title": "IAN Trigger",
+      "description": "Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "STUDY_RECEIVED",
+          "MPPS_RECEIVED",
+          "REJECTION_NOTE_RECEIVED",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+        ]
+      }
     },
     "dcmIanDelay": {
       "title": "IAN विलम्ब",

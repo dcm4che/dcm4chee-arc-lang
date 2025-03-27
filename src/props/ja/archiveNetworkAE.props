@@ -37,10 +37,11 @@ archiveNetworkAE.dcmWadoIgnorePresentationLUTShape:Wado プレゼンテーショ
 archiveNetworkAE.dcmWadoMetadataExcludePrivate:Wado プライベート メタデータを 除外 する|WADO-RS 読み出し トランザクションに よって 返される メタデータから プライベートデータ 要素を 除外 する ことを 示します。 デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmQueryMaxNumberOfResults:クエリの 結果の 最大数|C-FIND SCPに よる 戻り 結果の 最大数。 一致の 数が 制限を 超えると、 C-FIND 要求は 拒否されます。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmQidoMaxNumberOfResults:QIDO 結果の 最大数|QIDO-RS サービスに よる 戻り 結果の 最大数。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。
-archiveNetworkAE.dcmQidoETag:Qido ETag|Indicates to return Last-Modified and ETag for Search Series or Instances of a Study. デバイス レベルで 指定された 値を 上書きします。
+archiveNetworkAE.dcmQidoETag:QIDO ETag|Indicates to return Last-Modified and ETag for Search Series or Instances of a Study. デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmQidoResultOrderBy:QIDO Result Order By|Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. Overwrites value specified on Device level.
 archiveNetworkAE.dcmFwdMppsDestination:MPPS 転送 宛先|MPPS N-CREATE RQと N-SET RQを転送 する 宛先。 デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmIanDestination:IAN 宛先|IAN N-CREATE RQの 宛先。 デバイス レベルで 指定された 値を 上書きします。
+archiveNetworkAE.dcmIanTrigger:IAN Trigger|Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. Overwrites value specified on Device level.
 archiveNetworkAE.dcmIanDelay:IAN 遅延|構成された IAN 宛先に 受信した 検査の IANを 送信するために ISO-8601 期間 形式 PnDTnHnMnSで 遅延の 値。 デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmIanTimeout:IAN タイムアウト|MPPSで 参照される インスタンスの 受信を 待機するための ISO-8601 期間 形式 PnDTnHnMnSで タイムアウト。 デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmIanOnTimeout:タイムアウト時の IAN|参照された インスタンスの 受信を 待機 する ための タイムアウトを 超えた 場合に IANが 送信されるか どうかを 指定します。 デバイス レベルで 指定された 値を 上書きします。

@@ -550,7 +550,7 @@
       "minimum": 0
     },
     "dcmQidoETag": {
-      "title": "Qido ETag",
+      "title": "QIDO ETag",
       "description": "Indica que se devuelva Última Modificación y ETag para Series de Búsqueda o Instancias de un Estudio; desactivado si está ausente. Puede ser sobrescrito por valores configurados para determinados EAs de Red de Archivo.",
       "type": "boolean",
       "default": false
@@ -574,6 +574,20 @@
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
+    },
+    "dcmIanTrigger": {
+      "title": "IAN Trigger",
+      "description": "Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "STUDY_RECEIVED",
+          "MPPS_RECEIVED",
+          "REJECTION_NOTE_RECEIVED",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+        ]
+      }
     },
     "dcmIanDelay": {
       "title": "Retraso IAN",

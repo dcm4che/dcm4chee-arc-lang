@@ -55,10 +55,11 @@ archiveDevice.dcmWadoMetadataExcludePrivate:Wado Metadata Exclude Private|Indica
 archiveDevice.dcmQueryFetchSize:查询提取大小|查询服务一次从数据库中提取的行数。
 archiveDevice.dcmQueryMaxNumberOfResults:查询结果的最大数目|C-FIND SCP返回结果的最大数目。如果匹配数超过限制,C-FIND请求将被拒绝。0=无限制。某些存档网络AE的配置值可能会覆盖这些值。
 archiveDevice.dcmQidoMaxNumberOfResults:最大QIDO结果数|QIDO-RS服务返回的最大结果数。0=无限制。某些存档网络AE的配置值可能会覆盖这些值。
-archiveDevice.dcmQidoETag:Qido ETag|要返回的搜索系列或学生Instances of a Instances的指示符为Last-Modified and ETag；在particular Archive Network AES上禁用了配置的values。
+archiveDevice.dcmQidoETag:QIDO ETag|要返回的搜索系列或学生Instances of a Instances的指示符为Last-Modified and ETag；在particular Archive Network AES上禁用了配置的values。
 archiveDevice.dcmQidoResultOrderBy:QIDO Result Order By|Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured value for particular Archive Network AEs.
-archiveDevice.dcmFwdMppsDestination:Mpps Forward Destination|Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs.
-archiveDevice.dcmIanDestination:Ian Destination|Destination to send IAN N-CREATE RQ. May be overwritten by configured values for particular Archive Network AEs.
+archiveDevice.dcmFwdMppsDestination:MPPS Forward Destination|Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs.
+archiveDevice.dcmIanDestination:IAN Destination|Destination to send IAN N-CREATE RQ. May be overwritten by configured values for particular Archive Network AEs.
+archiveDevice.dcmIanTrigger:IAN Trigger|Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. May be overwritten by configured values for particular Archive Network AEs.
 archiveDevice.dcmIanDelay:IAN延迟|IAN延迟,ISO-8601周期格式PnDTnHnMnS的延迟值,用于将接收到的检查IAN发送到配置的IAN目的地。如果不存在,则IAN由接收到的MPPS触发。某些存档网络AE的配置值可能会覆盖这些值。
 archiveDevice.dcmIanTimeout:IAN超时|ISO-8601周期格式PnDTnHnMnS超时,以等待MPPS引用的实例。如果不存在,请永久检查完整性。某些存档网络AE的配置值可能会覆盖这些值。
 archiveDevice.dcmIanOnTimeout:IAN超时|指定是否在超时后发送IAN,以等待接收引用实例。某些存档网络AE的配置值可能会覆盖这些值。

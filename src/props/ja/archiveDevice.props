@@ -55,10 +55,11 @@ archiveDevice.dcmWadoMetadataExcludePrivate:Wado プライベート メタデー
 archiveDevice.dcmQueryFetchSize:クエリ フェッチ サイズ|クエリ サービスに よって データベースから 一度に フェッチされた 行数。
 archiveDevice.dcmQueryMaxNumberOfResults:クエリの 結果の 最大数|C-FIND SCPに よる 戻り 結果の 最大数。 一致の 数が 制限を 超えると、 C-FIND 要求は 拒否されます。 0 = 制限なし。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。
 archiveDevice.dcmQidoMaxNumberOfResults:QIDO 結果の 最大数|QIDO-RS サービスに よる 戻り 結果の 最大数。 0 = 制限なし。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。
-archiveDevice.dcmQidoETag:Qido ETag|検査の シリーズ または インスタンスの 検索 サービスに 最終 変更 と ETag を 返す ことを 示します。 不在の 場合は 無効に なります。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。
+archiveDevice.dcmQidoETag:QIDO ETag|検査の シリーズ または インスタンスの 検索 サービスに 最終 変更 と ETag を 返す ことを 示します。 不在の 場合は 無効に なります。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。
 archiveDevice.dcmQidoResultOrderBy:QIDO Result Order By|Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured value for particular Archive Network AEs.
 archiveDevice.dcmFwdMppsDestination:MPPS 転送 宛先|MPPS N-CREATE RQと N-SET RQを転送 する 宛先。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。
 archiveDevice.dcmIanDestination:IAN 宛先|IAN N-CREATE RQの 宛先。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。
+archiveDevice.dcmIanTrigger:IAN Trigger|Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. May be overwritten by configured values for particular Archive Network AEs.
 archiveDevice.dcmIanDelay:IAN 遅延|構成された IAN 宛先に 受信した 検査の IANを 送信するために ISO-8601 期間 形式 PnDTnHnMnSで 遅延の 値。 存在しない 場合、 IANは 受信した MPPSに よって トリガー されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。
 archiveDevice.dcmIanTimeout:IAN タイムアウト|MPPSで 参照される インスタンスの 受信を 待機するための ISO-8601 期間 形式 PnDTnHnMnSで タイムアウト。 存在しない 場合は、 完全性を 永久に 確認して ください。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。
 archiveDevice.dcmIanOnTimeout:タイムアウト時の IAN|参照された インスタンスの 受信を 待機 する ための タイムアウトを 超えた 場合に IANが 送信されるか どうかを 指定します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。

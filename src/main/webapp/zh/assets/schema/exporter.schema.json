@@ -78,7 +78,7 @@
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
-      "title": "Ian Destination",
+      "title": "IAN Destination",
       "description": "Destination to send IAN N-CREATE RQ",
       "type": "array",
       "items" : { "type": "string" },

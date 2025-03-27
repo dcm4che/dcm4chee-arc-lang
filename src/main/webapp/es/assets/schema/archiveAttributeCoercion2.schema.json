@@ -110,7 +110,7 @@
     },
     "dcmMergeAttribute": {
       "title": "Parámetros de coerción de atributos DICOM",
-      "description": "Parámetros de coerción de atributos DICOM en formato {attributeID}={value}. {attributeID} dentro de {value} puede sustituirse por el valor de ese atributo en el conjunto de datos original. Sólo es efectivo para fusionar atributos de tipo coerción. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dicom-attribute-coercion-parameters\" target=\"_blank\"> opciones de formato y ejemplos.</a>",
+      "description": "Parámetros de coerción de atributos DICOM en formato {attributeID}={value}. {attributeID} dentro de {value} puede sustituirse por el valor de ese atributo en el conjunto de datos original. Sólo es efectivo para fusionar atributos de tipo coerción. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions#formats\" target=\"_blank\">opciones de formato</a> y <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions#examples\" target=\"_blank\">ejemplos.</a>",
       "type": "array",
       "items": {
         "type": "string"
