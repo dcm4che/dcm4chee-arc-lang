@@ -31,6 +31,7 @@ archiveDevice.dcmRelationalMismatchPolicy:Relational Mismatch Policy|Specifies b
 archiveDevice.dcmRecordAttributeModification:记录属性更改|指示存储对象的属性更改是否记录在原始属性序列的项中。某些归档网络AE或归档HL7应用程序的设置可能会覆盖这些设置。
 archiveDevice.dcmAcceptMissingPatientID:接受缺少的患者ID|是否接受没有患者ID的实例以及是否创建患者ID。某些存档网络AE设置可能会覆盖这些设置。
 archiveDevice.dcmAcceptConflictingPatientID:接受不一致的患者ID|是否接受患者ID与以前接收的检查对象不同的对象。某些存档网络AE设置可能会覆盖这些设置。
+archiveDevice.dcmIdentifyPatientByIDAndName:Identify Patient by ID and Name|Indicates to consider also the Patient Name on receive of DICOM objects to determine if they belongs to an already existing Patient in the archive.
 archiveDevice.dcmIdentifyPatientByAllAttributes:在所有属性中标识患者|如果患者ID或通用实体ID的发布者没有指定分配患者ID的权限,则是否使用接收对象的所有患者属性与存档中的现有患者相关联。注:禁用对接收对象中的旧患者属性的强制,并中断依赖于患者ID清晰度的患者管理功能。
 archiveDevice.dcmBulkDataSpoolDirectory:批量数据假脱机目录|批量数据假脱机目录的路径。 覆盖在设备级别指定的值。
 archiveDevice.dcmHideSPSWithStatusFromMWL:Hide SPS with Status by MWL SCP|Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. May be overwritten by configured values for particular Archive Network AEs.
