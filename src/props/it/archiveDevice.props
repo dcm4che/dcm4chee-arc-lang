@@ -197,6 +197,7 @@ archiveDevice.dcmCompressionPollingInterval:Intervallo di polling di compression
 archiveDevice.dcmCompressionThreads:Threads per la compressione|Numero di thread utilizzati per la compressione.
 archiveDevice.dcmCompressionSchedule:Programma di compressione|Limita la compressione agli orari specificati nel formato "ora = [0-23] dayOfWeek = [0-6]" (0 = domenica)
 archiveDevice.dcmCompressionFetchSize:Dimensioni recupero per la compressione|Numero massimo di serie recuperate per la compressione attraverso una query.
+archiveDevice.dcmChangeAccessControlIDPollingInterval:Change Access Control ID Polling Interval|Polling Interval for Studies or Series to change its assigned Access Control ID according configured Change Access Control ID rules in ISO-8601 duration format PnDTnHnMnS.
 archiveDevice.dcmDiffTaskProgressUpdateInterval:Intervallo aggiornamento avanzamento attività diff|Intervallo di aggiornamento delle attività Diff in corso per il monitoraggio dei progressi; disabilitato se assente.
 archiveDevice.dcmPatientVerificationPDQServiceID:ID servizio PDQ verifica paziente|ID del servizio Patient Demographics Query utilizzato per la verifica dei dati anagrafici del paziente. In caso di assenza, non verrà eseguita alcuna verifica del paziente.
 archiveDevice.dcmPatientVerificationPollingInterval:Intervallo di polling di verifica del paziente|Intervallo di polling di verifica del paziente. In caso di assenza, non verrà eseguita alcuna verifica del paziente.
@@ -290,6 +291,7 @@ archiveDevice.dcmArchiveAttributeCoercion2:Attribute Coercion (New)|Attribute Co
 archiveDevice.dcmRejectionNote:Nota di rifiuto|Specifica il comportamento della nota di rifiuto memorizzata
 archiveDevice.dcmStudyRetentionPolicy:Politica di conservazione dello studio|Politiche di conservazione degli studi applicate agli studi ricevuti da qualsiasi AE. Può essere integrato da criteri di conservazione dello studio configurati per particolari AE della rete di archiviazione.
 archiveDevice.dcmStoreAccessControlIDRule:Regole per il controllo degli accessi|Regole di controllo dell'accesso allo storage applicate agli studi ricevuti da qualsiasi AE. Può essere integrato dalle regole di controllo dell'accesso allo storage configurate per particolari AE della rete di archiviazione.
+archiveDevice.dcmChangeAccessControlIDRule:Change Access Control Rules|Change Access Control Rules applied to received Studies or Series.
 archiveDevice.dcmUPSOnStore:UPS sulle regole dello storage|Regole UPS su Storage applicate agli oggetti DICOM ricevuti da qualsiasi AE. Può essere integrato da UPS configurati con regole di controllo per particolari AE della rete di archiviazione.
 archiveDevice.hl7UPSOnHL7:UPS su regole HL7|UPS su HL7 Regole applicate ai messaggi HL7 ricevuti da qualsiasi Applicazione HL7. Può essere integrato da UPS configurato sulle regole HL7 per particolari applicazioni HL7.
 archiveDevice.dcmUPSOnUPSCompleted:UPS con regole UPS completate|UPS su Regole UPS completate applicate a UPS gestiti da qualsiasi AE. Può essere integrato da UPS configurati con regole di controllo per particolari AE della rete di archiviazione.
