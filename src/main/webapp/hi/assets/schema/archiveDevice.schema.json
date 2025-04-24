@@ -1556,6 +1556,12 @@
       "minimum": 0,
       "exclusiveMinimum": true
     },
+    "dcmChangeAccessControlIDPollingInterval": {
+      "title": "Change Access Control ID Polling Interval",
+      "description": "Polling Interval for Studies or Series to change its assigned Access Control ID according configured Change Access Control ID rules in ISO-8601 duration format PnDTnHnMnS.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
     "dcmDiffTaskProgressUpdateInterval": {
       "title": "तुलना कार्य के प्रगति का अपडेट अंतराल",
       "description": "ISO-8601 कालावधि प्रारूप PnDTnHnMnS में प्रगति की निगरानी के लिए जारी तुलना कार्यों को अपडेट करने का अंतराल; यदि कॉन्फ़िगर नहीं किया है, तो कोई अपडेट नहीं होगा ।",
@@ -2249,6 +2255,15 @@
       "titleKey":"{cn}",
       "items" : {
         "$ref": "storeAccessControlIDRule.schema.json"
+      }
+    },
+    "dcmChangeAccessControlIDRule": {
+      "title": "Change Access Control Rules",
+      "description": "Change Access Control Rules applied to received Studies or Series.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "changeAccessControlIDRule.schema.json"
       }
     },
     "dcmUPSOnStore": {

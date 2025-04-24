@@ -198,6 +198,7 @@ archiveDevice.dcmCompressionPollingInterval:圧縮 ポーリング 間隔|シリ
 archiveDevice.dcmCompressionThreads:圧縮 スレッド|圧縮に 使用される スレッドの 数。
 archiveDevice.dcmCompressionSchedule:圧縮 予定|'hour=[0-23] dayOfWeek=[0-6]'の 形式で 指定された 時間に 圧縮を 制限します。(0 = 日曜日)
 archiveDevice.dcmCompressionFetchSize:圧縮 フェッチ サイズ|1つの クエリに よる 圧縮の ために フェッチ される シリーズの 最大数。
+archiveDevice.dcmChangeAccessControlIDPollingInterval:Change Access Control ID Polling Interval|Polling Interval for Studies or Series to change its assigned Access Control ID according configured Change Access Control ID rules in ISO-8601 duration format PnDTnHnMnS.
 archiveDevice.dcmDiffTaskProgressUpdateInterval:比較 タスクの 進捗状況の 更新 間隔|進捗状況の 監視の ために 処理中の 比較 タスクの 更新 間隔。 存在しない 場合は 無効に なります。
 archiveDevice.dcmPatientVerificationPDQServiceID:患者 検証 PDQ サービス ID|患者の 人口統計の 検証に 使用される Patient Demographics Query サービスの ID。 存在しない 場合、 患者の 検証は 行われません。
 archiveDevice.dcmPatientVerificationPollingInterval:患者 検証の ポーリング 間隔|患者 検証の ポーリング 間隔。 存在しない 場合、 患者 検証は 行われません。
@@ -291,6 +292,7 @@ archiveDevice.dcmArchiveAttributeCoercion2:Attribute Coercion (New)|Attribute Co
 archiveDevice.dcmRejectionNote:拒否 ノート|保存された 拒否 ノートの 動作を 指定します
 archiveDevice.dcmStudyRetentionPolicy:検査 保持 ポリシー|任意の AEが 受け取った 検査に 適用される 検査 保持 ポリシー。 特定の アーカイブ ネットワーク AEの 構成された 検査 保持 ポリシーに よって 補足される 場合が あります。
 archiveDevice.dcmStoreAccessControlIDRule:保存 アクセス 制御 ID 規則|任意の AEが 受け取った 検査に 適用される 保存 アクセス 制御 ID 規則。 特定の アーカイブ ネットワーク AEの 構成された 保存 アクセス 制御 ID 規則に よって 補足される 場合が あります。
+archiveDevice.dcmChangeAccessControlIDRule:Change Access Control Rules|Change Access Control Rules applied to received Studies or Series.
 archiveDevice.dcmUPSOnStore:格納に よって 作成された UPS|任意の AEが 受け取った DICOM オブジェクトに 適用される 格納に よって 作成された UPS 規則。 特定の アーカイブ ネットワーク AEの 構成された 検査 保持 ポリシーに よって 補足される 場合が あります。
 archiveDevice.hl7UPSOnHL7:HL7上の UPS 規則|任意の HL7 アプリケーションに よって 受信された HL7 メッセージに 適用された HL7上の UPS 規則。 特定の アーカイブ HL7 アプリケーションの 構成された HL7上の UPS 規則に よって 補足される 場合が あります。
 archiveDevice.dcmUPSOnUPSCompleted:以前の UPSの 完了に よって 作成された UPS|任意の AEに よって 管理された UPSに 適用される 以前の UPSの 完了に よって 作成された UPS。 特定の アーカイブ ネットワーク AEの 構成された 以前の UPSの 完了に よって 作成された UPSに よって 補足される 場合が あります。

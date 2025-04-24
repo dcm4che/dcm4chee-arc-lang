@@ -198,6 +198,7 @@ archiveDevice.dcmCompressionPollingInterval:Intervalo de sondeo de compresión|I
 archiveDevice.dcmCompressionThreads:Hilos de compresión|Número de hilos utilizados para la compresión.
 archiveDevice.dcmCompressionSchedule:Horario de compresión|Limita la compresión a las horas especificadas en formato 'hour=[0-23] díaDeSemana=[0-6]' (0=domingo)
 archiveDevice.dcmCompressionFetchSize:Tamaño de compresión|Número máximo de series que se pueden comprimir con una consulta.
+archiveDevice.dcmChangeAccessControlIDPollingInterval:Change Access Control ID Polling Interval|Polling Interval for Studies or Series to change its assigned Access Control ID according configured Change Access Control ID rules in ISO-8601 duration format PnDTnHnMnS.
 archiveDevice.dcmDiffTaskProgressUpdateInterval:Intervalo de Actualización del Progreso de las Tareas Diferenciadas|Intervalo de actualización de las Tareas Diferenciadas en proceso para la monitorización del progreso; desactivado si no existe.
 archiveDevice.dcmPatientVerificationPDQServiceID:ID del servicio PDQ de verificación del paciente|ID del servicio de consulta de datos demográficos del paciente utilizado para la verificación de los datos demográficos del paciente. Si no existe, no se realizará la verificación del paciente.
 archiveDevice.dcmPatientVerificationPollingInterval:Intervalo de sondeo de verificación de pacientes|Intervalo de sondeo de verificación de pacientes. Si no existe, no se realizará la verificación de pacientes.
@@ -291,6 +292,7 @@ archiveDevice.dcmArchiveAttributeCoercion2:Coerción de atributos (Nuevo)|Coerci
 archiveDevice.dcmRejectionNote:Nota de rechazo|Especifica el comportamiento de la nota de rechazo almacenada
 archiveDevice.dcmStudyRetentionPolicy:Política de Retención de Estudios|Políticas de Retención de Estudios aplicadas a los Estudios recibidos por cualquier EA. Puede complementarse con políticas de retención de estudios configuradas para determinados EA de la red de archivos.
 archiveDevice.dcmStoreAccessControlIDRule:Reglas de control de acceso al almacén|Reglas de control de acceso al almacén aplicadas a los estudios recibidos por cualquier AE. Puede complementarse con reglas de control de acceso a almacenes configuradas para determinados EA de la red de archivos.
+archiveDevice.dcmChangeAccessControlIDRule:Change Access Control Rules|Change Access Control Rules applied to received Studies or Series.
 archiveDevice.dcmUPSOnStore:UPS en Reglas de Almacenamiento|UPS en Reglas de Almacenamiento aplicadas a objetos DICOM recibidos por cualquier AE. Puede complementarse con reglas UPS en Almacén configuradas para determinados EA de la red de archivos.
 archiveDevice.hl7UPSOnHL7:USP sobre Reglas HL7|USP sobre Reglas HL7 aplicadas a mensajes HL7 recibidos por cualquier Aplicación HL7. Puede complementarse con UPS en Reglas HL7 configuradas para Aplicaciones HL7 concretas.
 archiveDevice.dcmUPSOnUPSCompleted:USP en Reglas de UPS completadas|UPS en Reglas de UPS completadas aplicadas a UPS gestionadas por cualquier AE. Pueden complementarse con reglas UPS en Almacén configuradas para determinados EA de la red de archivos.

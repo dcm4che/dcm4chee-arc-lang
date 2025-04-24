@@ -198,6 +198,7 @@ archiveDevice.dcmCompressionPollingInterval:压缩轮询间隔|ISO-8601周期PnD
 archiveDevice.dcmCompressionThreads:压缩线程|用于压缩的线程数。
 archiveDevice.dcmCompressionSchedule:待压缩|hour=[0-23]dayOfWeek=[0-6]"将压缩限制为指定的时间。 （0=星期日）
 archiveDevice.dcmCompressionFetchSize:压缩提取大小|为单个查询压缩而提取的最大系列数。
+archiveDevice.dcmChangeAccessControlIDPollingInterval:Change Access Control ID Polling Interval|Polling Interval for Studies or Series to change its assigned Access Control ID according configured Change Access Control ID rules in ISO-8601 duration format PnDTnHnMnS.
 archiveDevice.dcmDiffTaskProgressUpdateInterval:比较任务的进度更新间隔|正在处理以监视进度的比较任务的更新间隔。如果不存在,则将其禁用。
 archiveDevice.dcmPatientVerificationPDQServiceID:Patient Verification PDQ Service ID|ID of Patient Demographics Query Service used for Verification of Patient Demographic. If absent, no Patient Verification will be performed.
 archiveDevice.dcmPatientVerificationPollingInterval:患者验证轮询间隔|患者验证轮询间隔。如果不存在,则不进行患者验证。
@@ -291,6 +292,7 @@ archiveDevice.dcmArchiveAttributeCoercion2:Attribute Coercion (New)|Attribute Co
 archiveDevice.dcmRejectionNote:拒绝注释|指定保存的拒绝注释的行为
 archiveDevice.dcmStudyRetentionPolicy:CHECK保留策略|适用于任何AE接收的CHECK的CHECK保留策略。某些存档网络AE的配置检查保留策略可能会对其进行补充。
 archiveDevice.dcmStoreAccessControlIDRule:保存访问控制ID规则|应用于任何AE接收的检查的保存访问控制ID规则。可以通过为特定存档网络AE配置的存储访问控制ID规则进行补充。
+archiveDevice.dcmChangeAccessControlIDRule:Change Access Control Rules|Change Access Control Rules applied to received Studies or Series.
 archiveDevice.dcmUPSOnStore:UPS on Store Rules|UPS on Store Rules applied to DICOM objects received by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs.
 archiveDevice.hl7UPSOnHL7:UPS on HL7 Rules|UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured UPS on HL7 Rules for particular HL7 Applications.
 archiveDevice.dcmUPSOnUPSCompleted:UPS由以前的UPS完成创建|UPS由以前的UPS完成创建,应用于任何AE管理的UPS。它可能会被通过完成为特定存档网络AE配置的先前UPS而创建的UPS所补充。

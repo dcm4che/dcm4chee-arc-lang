@@ -1556,6 +1556,12 @@
       "minimum": 0,
       "exclusiveMinimum": true
     },
+    "dcmChangeAccessControlIDPollingInterval": {
+      "title": "Change Access Control ID Polling Interval",
+      "description": "Polling Interval for Studies or Series to change its assigned Access Control ID according configured Change Access Control ID rules in ISO-8601 duration format PnDTnHnMnS.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
     "dcmDiffTaskProgressUpdateInterval": {
       "title": "Intervalo de Actualización del Progreso de las Tareas Diferenciadas",
       "description": "Intervalo de actualización de las Tareas Diferenciadas en proceso para la monitorización del progreso; desactivado si no existe.",
@@ -2249,6 +2255,15 @@
       "titleKey":"{cn}",
       "items" : {
         "$ref": "storeAccessControlIDRule.schema.json"
+      }
+    },
+    "dcmChangeAccessControlIDRule": {
+      "title": "Change Access Control Rules",
+      "description": "Change Access Control Rules applied to received Studies or Series.",
+      "type": "array",
+      "titleKey":"{cn}",
+      "items" : {
+        "$ref": "changeAccessControlIDRule.schema.json"
       }
     },
     "dcmUPSOnStore": {
