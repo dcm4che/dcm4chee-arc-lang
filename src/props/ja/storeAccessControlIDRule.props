@@ -1,6 +1,6 @@
 storeAccessControlIDRule:保存 アクセス 制御 ID 規則|保存 アクセス 制御 ID 規則
 storeAccessControlIDRule.cn:名前|保存 アクセス 制御ID 規則の 任意 / 意味の ある 名前
 storeAccessControlIDRule.dcmStoreAccessControlID:保存 アクセス 制御 ID|すべての 条件に 一致 する 属性が 検査に 割り当てられた アクセス 制御 IDを 保存します
-storeAccessControlIDRule.dcmAccessControlSeriesIndividually:Access Control Series Individually|Indicates if access of series should be controlled individually or not.
+storeAccessControlIDRule.dcmEntity:Entity|Indicates if the Access Control ID shall be assigned to whole Studies or individual Series.
 storeAccessControlIDRule.dcmRulePriority:規則の 優先度|If the condition of several Store Access Control ID rules match for a received image, higher priority rule is applied. If there are several matching rules with equal priority, it is undefined which rule gets applied.
 storeAccessControlIDRule.dcmProperty:条件|(SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} 形式で 条件。 「|」 シンボルで 区切る ことに より、 特定の 属性に 複数の 値を 指定できます。 例 : SendingApplicationEntityTitle=FORWARD または Modality=MR|CT または ProcedureCodeSequence.CodeValue=MRProcedure または 00180015=KNEE または 00321034.00080100=RequestingServiceCode または ImageType[3]=LOCALIZER
