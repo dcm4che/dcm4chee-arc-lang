@@ -22,7 +22,7 @@
     },
     "dcmStoreAccessControlID": {
       "title": "Store Access Control ID",
-      "description": "New Access Control ID assigned to selected Studies or individual Series after specified delay after receive of the first object of the Study.",
+      "description": "New Access Control ID assigned to selected Studies or individual Series after specified delay after receive of the first object of the Study. '*' removes previous assigned Access Control ID, making the Study or Series accessible on all Archive AEs.",
       "type": "string"
     },
     "dcmEntity": {

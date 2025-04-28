@@ -5,7 +5,6 @@
   "required": [
     "cn",
     "dcmStoreAccessControlID",
-    "dcmAccessControlSeriesIndividually",
     "dcmRulePriority"
   ],
   "properties": {
@@ -19,11 +18,15 @@
       "description": "ID controllo accesso assegnato agli studi i cui attributi soddisfano tutte le condizioni",
       "type": "string"
     },
-    "dcmAccessControlSeriesIndividually": {
-      "title": "Access Control Series Individually",
-      "description": "Indicates if access of series should be controlled individually or not.",
-      "type": "boolean",
-      "default": false
+    "dcmEntity": {
+      "title": "Entity",
+      "description": "Indicates if the Access Control ID shall be assigned to whole Studies or individual Series.",
+      "type": "string",
+      "default": "Study",
+      "enum": [
+        "Study",
+        "Series"
+      ]
     },
     "dcmRulePriority": {
       "title": "Priorità delle regole",

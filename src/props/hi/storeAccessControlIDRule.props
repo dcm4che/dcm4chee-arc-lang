@@ -1,6 +1,6 @@
 storeAccessControlIDRule:संचय प्रवेश निरीक्षण ID नियम|संचय प्रवेश निरीक्षण ID नियम ।
 storeAccessControlIDRule.cn:नाम|संचय प्रवेश निरीक्षण ID नियम का मनमाना/सार्थक नाम ।
 storeAccessControlIDRule.dcmStoreAccessControlID:संचय प्रवेश निरीक्षण ID|सारे गुणों के नियम मिलने पे स्टडीज पे निरूपण किया गया प्रवेश निरीक्षण ID ।
-storeAccessControlIDRule.dcmAccessControlSeriesIndividually:Access Control Series Individually|Indicates if access of series should be controlled individually or not.
+storeAccessControlIDRule.dcmEntity:Entity|Indicates if the Access Control ID shall be assigned to whole Studies or individual Series.
 storeAccessControlIDRule.dcmRulePriority:नियम प्राथमिकता|If the condition of several Store Access Control ID rules match for a received image, higher priority rule is applied. If there are several matching rules with equal priority, it is undefined which rule gets applied.
 storeAccessControlIDRule.dcmProperty:नियम|नियम इस प्रारूप में (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx} । किसी दिए गए विशेषता के लिए एक से अधिक मूल्य निर्दिष्ट करने के लिए उन्हें | प्रतीक के सहारे अलग किया जा सकता है । उदाहरण के तौर पे : SendingApplicationEntityTitle=FORWARD या Modality=MR|CT या ProcedureCodeSequence.CodeValue=MRProcedure या 00180015=KNEE या 00321034.00080100=RequestingServiceCode या ImageType[3]=LOCALIZER
