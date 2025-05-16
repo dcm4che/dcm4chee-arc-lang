@@ -161,7 +161,6 @@
       "title": "Otras identificaciones de pacientes HL7",
       "description": "Especifica la política de inclusión de identificadores de pacientes en PID-3 / MRG-1 del mensaje HL7 en la secuencia Otras identificaciones de pacientes (0010,1002). Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
-      "default": "OTHER",
       "enum": [
         "ALL",
         "NONE",
