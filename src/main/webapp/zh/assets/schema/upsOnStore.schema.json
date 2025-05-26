@@ -25,8 +25,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmSchedule": {
       "title": "时间条件",

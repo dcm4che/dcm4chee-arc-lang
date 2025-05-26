@@ -750,8 +750,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmTaskPollingInterval": {
       "title": "Task Polling Interval",
@@ -1304,8 +1303,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "hl7CharsetNameMapping": {
       "title": "HL7 कॅरक्टर सेट नावाचे मॅपिंग",
@@ -1313,8 +1311,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmUPSWorklistLabel": {
       "title": "UPS वर्कलिस्ट लेबल",
@@ -1713,8 +1710,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "hl7PSUForRequestedProcedure": {
       "title": "विनंती केलेल्या प्रक्रियासाठी HL7 प्रक्रिया स्थिती अद्यतन",

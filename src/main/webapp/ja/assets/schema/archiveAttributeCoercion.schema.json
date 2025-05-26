@@ -61,8 +61,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmRetrieveAsReceived": {
       "title": "受信 として 読み出し",
@@ -200,8 +199,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmNullifyIssuerOfPatientID": {
       "title": "患者 IDの 発行者を ヌル する",

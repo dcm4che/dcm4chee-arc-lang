@@ -694,8 +694,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "hl7PSUForRequestedProcedure": {
       "title": "所请求过程的HL7过程状态更新",

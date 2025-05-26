@@ -99,8 +99,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dicomInstalled": {
       "title": "स्थापित",

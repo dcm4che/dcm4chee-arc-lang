@@ -61,8 +61,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmRetrieveAsReceived": {
       "title": "प्राप्त हुए रूप में पुनःप्राप्त करें",
@@ -200,8 +199,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmNullifyIssuerOfPatientID": {
       "title": "मरीज़़ की ID का जारीकर्ता को अमान्य करें",

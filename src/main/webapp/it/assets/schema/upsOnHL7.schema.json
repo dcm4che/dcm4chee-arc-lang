@@ -23,8 +23,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmSchedule": {
       "title": "Condizioni dei tempi",

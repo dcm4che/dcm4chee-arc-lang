@@ -87,8 +87,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmAttributeUpdatePolicy": {
       "title": "Attribute Update Policy",
@@ -114,8 +113,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmCoercionParam": {
       "title": "Other Coercion Parameters",
@@ -123,8 +121,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     }
   }
 }

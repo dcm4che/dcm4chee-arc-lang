@@ -25,8 +25,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmRequiresOtherUPSCompleted": {
       "title": "Requires other UPS completed",

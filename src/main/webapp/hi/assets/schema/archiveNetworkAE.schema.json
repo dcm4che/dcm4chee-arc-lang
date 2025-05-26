@@ -694,8 +694,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "hl7PSUForRequestedProcedure": {
       "title": "अनुरोधित प्रक्रिया के लिए HL7 प्रक्रिया स्थिति अपडेट",

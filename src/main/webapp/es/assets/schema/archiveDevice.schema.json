@@ -750,8 +750,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmTaskPollingInterval": {
       "title": "Intervalo de sondeo de tareas",
@@ -1304,8 +1303,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "hl7CharsetNameMapping": {
       "title": "Asignación de nombres de juegos de caracteres HL7",
@@ -1313,8 +1311,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmUPSWorklistLabel": {
       "title": "Etiqueta de la lista de trabajo de la UPS",
@@ -1713,8 +1710,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "hl7PSUForRequestedProcedure": {
       "title": "HL7 Actualización de Estado de Procedimiento para Procedimiento Solicitado",

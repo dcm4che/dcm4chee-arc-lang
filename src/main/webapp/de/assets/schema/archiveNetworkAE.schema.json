@@ -694,8 +694,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "hl7PSUForRequestedProcedure": {
       "title": "HL7 Procedure Status Update for Requested Procedure",

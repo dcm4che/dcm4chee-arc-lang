@@ -61,8 +61,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmRetrieveAsReceived": {
       "title": "Retrieve as Received",
@@ -200,8 +199,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmNullifyIssuerOfPatientID": {
       "title": "Nullify Issuer of Patient ID",

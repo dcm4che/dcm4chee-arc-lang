@@ -750,8 +750,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmTaskPollingInterval": {
       "title": "Task Polling Interval",
@@ -1304,8 +1303,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "hl7CharsetNameMapping": {
       "title": "HL7字符集名称映射",
@@ -1313,8 +1311,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmUPSWorklistLabel": {
       "title": "UPS工作列表标签",
@@ -1713,8 +1710,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "hl7PSUForRequestedProcedure": {
       "title": "所请求过程的HL7过程状态更新",

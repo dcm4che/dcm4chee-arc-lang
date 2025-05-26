@@ -694,8 +694,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "hl7PSUForRequestedProcedure": {
       "title": "要求された 手順のために HL7 手順 ステータス 更新",

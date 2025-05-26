@@ -61,8 +61,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmRetrieveAsReceived": {
       "title": "Recuperar como recibido",
@@ -200,8 +199,7 @@
       "type": "array",
       "items": {
         "type": "string"
-      },
-      "format": "dcmProperty"
+      }
     },
     "dcmNullifyIssuerOfPatientID": {
       "title": "Anular el emisor del paciente ID",
