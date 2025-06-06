@@ -2520,7 +2520,7 @@
     "task_created": "Tasks created successfully!",
     "task_delete_question": "Are you sure you want to delete all tasks to this batch?",
     "task_deleted": "Task deleted successfully!",
-    "task_deleted_param": "{$tasks} tasks deleted successfully!",
+    "task_deleted_param": "Task {$taskid} deleted successfully!",
     "task_id": "Task ID",
     "task_marked_for_export": "Task marked for export successfully!",
     "task_marked_for_export_param": "Task {$taskid} marked for export successfully!",
