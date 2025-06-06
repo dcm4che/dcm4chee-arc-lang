@@ -1,6 +1,6 @@
-mwlIdleTimeout:MWL Idle Timeout|MWL Idle Timeout
-mwlIdleTimeout.cn:Name|Arbitrary/Meaningful name of the MWL Idle Timeout.
-mwlIdleTimeout.dicomAETitle:MWL SCP AE Title|Archive AE Title of MWL SCP on which the MWL Idle Timeout shall be applied.
-mwlIdleTimeout.dcmAETitle:Scheduled Station AE Title|Scheduled Station AE Title(s) of Scheduled Procedure Steps for which the MWL Idle Timeout shall be applied. If none is specified, the MWL Idle Timeout is applied to all Scheduled Procedure Steps provided by the MWL SCP.
-mwlIdleTimeout.dcmMWLStatusOnIdle:MWL Status on Idle|Change Status of idle Scheduled Procedure Steps to specified value.
-mwlIdleTimeout.dcmDuration:Idle Timeout|Timeout after which the Status of matching Scheduled Procedure Steps is changed to the specified final status.
+mwlIdleTimeout:Tiempo de inactividad MWL|Tiempo de inactividad MWL.
+mwlIdleTimeout.cn:Nombre|Nombre arbitrario/significativo del MWL Tiempo de espera inactivo.
+mwlIdleTimeout.dicomAETitle:Título AE SCP MWL|Título AE del SCP MWL en el que se aplicará el tiempo de espera inactivo MWL.
+mwlIdleTimeout.dcmAETitle:Título AE de estación programada|Título(s) AE de estación programada de pasos de procedimiento programados para los que se aplicará el tiempo de espera de inactividad de MWL. Si no se especifica ninguno, el Tiempo de Espera MWL se aplica a todos los Pasos de Procedimiento Programados proporcionados por el SCP MWL.
+mwlIdleTimeout.dcmMWLStatusOnIdle:Estado MWL en Espera|Cambia el estado de los Pasos de Procedimiento Programados en espera al valor especificado.
+mwlIdleTimeout.dcmDuration:Tiempo de espera de inactividad|Tiempo de espera tras el cual el estado de los pasos de procedimiento programados coincidentes se cambia al estado final especificado.

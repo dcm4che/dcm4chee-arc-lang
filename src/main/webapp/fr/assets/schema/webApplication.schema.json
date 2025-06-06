@@ -1,6 +1,6 @@
 {
-  "title": "Web Application",
-  "description": "Web Application information",
+  "title": "Aplicación Web",
+  "description": "Información sobre la aplicación Web.",
   "type": "object",
   "required": [
     "dcmWebAppName",
@@ -9,8 +9,8 @@
   ],
   "properties": {
     "dcmWebAppName": {
-      "title": "Web Application name",
-      "description": "Name of the Web Application",
+      "title": "Nombre de la Aplicación Web",
+      "description": "Nombre de la Aplicación Web.",
       "type": "string",
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackWadoURIWebAppName",
@@ -20,26 +20,26 @@
       ]
     },
     "dicomNetworkConnectionReference": {
-      "title": "Web Application Network Connection",
-      "description": "Network Connection(s) on which the services of the Web application are available",
+      "title": "Conexión de red de la aplicación web",
+      "description": "Conexión o conexiones de red en las que están disponibles los servicios de la aplicación web.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dicomDescription": {
-      "title": "Web Application Description",
-      "description": "Unconstrained text description of the Web Application",
+      "title": "Descripción de la aplicación web",
+      "description": "Descripción de texto sin restricciones de la aplicación web.",
       "type": "string"
     },
     "dcmWebServicePath": {
-      "title": "Web Service Path",
-      "description": "HTTP Path of the services of the Web application",
+      "title": "Ruta del Servicio Web",
+      "description": "Ruta HTTP de los servicios de la aplicación Web.",
       "type": "string"
     },
     "dcmWebServiceClass": {
-      "title": "Web Service Class",
-      "description": "Web Service Classes provided by the Web application",
+      "title": "Clase de Servicio Web",
+      "description": "Clases de Servicio Web proporcionadas por la aplicación Web.",
       "type": "array",
       "items": {
         "type": "string",
@@ -74,36 +74,36 @@
       }
     },
     "dcmKeycloakClientID": {
-      "title": "Keycloak Client ID",
-      "description": "Keycloak Client ID for the Web application",
+      "title": "Identificación de cliente Keycloak",
+      "description": "Identificación de cliente Keycloak para la aplicación Web.",
       "type": "string",
       "format": "dcmKeycloakClient"
     },
     "dicomAETitle": {
-      "title": "AE Title",
-      "description": "AE title of Network AE associated with this Web Application",
+      "title": "Título AE",
+      "description": "Título AE de Red asociado a esta Aplicación Web.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dicomApplicationCluster": {
-      "title": "Application Cluster",
-      "description": "Locally defined names for a subset of related applications",
+      "title": "Grupo de aplicaciones",
+      "description": "Nombres definidos localmente para un subconjunto de aplicaciones relacionadas.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmProperty": {
-      "title": "Web Application Property",
-      "description": "Web application property in format {name}={value}. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties\" target=\"_blank\">Web Application Properties</a> configuration examples based on use cases.",
+      "title": "Propiedad de aplicación Web",
+      "description": "Propiedad de aplicación Web en formato {name}={value}. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties\" target=\"_blank\">Web Application Properties</a> ejemplos de configuración basados en casos de uso.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dicomInstalled": {
-      "title": "installed",
-      "description": "True if the Web Application is installed on network. If not present, information about the installed status of the Web Application is inherited from the device",
+      "title": "instalado",
+      "description": "Verdadero si la aplicación web está instalada en la red. Si no está presente, la información sobre el estado instalado de la Aplicación Web se hereda del dispositivo.",
       "type": "boolean"
     }
   }

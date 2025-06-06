@@ -1,46 +1,46 @@
 {
-  "title": "UI Table Configuration",
-  "description": "Study Table configuration for the pro version",
+  "title": "Configuración de la tabla UI",
+  "description": "Configuración de la tabla UI para la versión pro.",
   "type": "object",
   "required": [
     "dcmuiTableConfigName"
   ],
   "properties": {
     "dcmuiTableConfigName": {
-      "title": "Configuration Name",
-      "description": "UI  Table Configuration Name",
+      "title": "Nombre de configuración",
+      "description": "Nombre de configuración de la tabla UI.",
       "type": "string"
     },
     "dcmuiTableConfigUsername": {
-      "title": "Username",
-      "description": "Username to which this set should be available",
+      "title": "Nombre de usuario",
+      "description": "Nombre de usuario para el que debe estar disponible este conjunto.",
       "type": "array",
       "items" : {
         "type": "string"
       }
     },
     "dcmuiTableConfigRoles": {
-      "title": "Role",
-      "description": "Username role that can use this Set ( If you set the username, the role will be ignored )",
+      "title": "Rol",
+      "description": "Nombre de usuario que puede utilizar este conjunto (Si se establece el nombre de usuario, el rol será ignorado).",
       "type": "array",
       "items" : {
         "type": "string"
       }
     },
     "dcmuiTableID": {
-      "title": "Table ID",
-      "description": "The ID of the Table in the UI for which the config should be effective",
+      "title": "Identificador de Tabla",
+      "description": "El identificador de la tabla en la interfaz de usuario para la que la configuración debe ser efectiva.",
       "type": "string"
     },
     "dcmuiTableConfigIsDefault": {
-      "title": "Is Default",
-      "description": "Set this Column-Set to the default one. (Make sure that only one of the Set - siblings child is set to default).",
+      "title": "Es Predeterminado",
+      "description": "Configura esta columna como predeterminada. (Asegúrese de que sólo uno de los Conjuntos - hermanos hijo se establece por defecto).",
       "type": "boolean",
       "default": false
     },
     "dcmuiTableColumnConfigObjects": {
-      "title": "Table Columns",
-      "description": "Define Table Columns",
+      "title": "Columnas de la tabla",
+      "description": "Define las columnas de la tabla.",
       "titleKey":"{dcmuiColumnName}",
       "type": "array",
       "items" : {

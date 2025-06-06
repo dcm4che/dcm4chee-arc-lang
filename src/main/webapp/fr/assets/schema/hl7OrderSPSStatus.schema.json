@@ -1,6 +1,6 @@
 {
-  "title": "SPS Status for HL7 Order",
-  "description": "Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages",
+  "title": "Estado SPS para Orden HL7",
+  "description": "Especifica el Estado SPS de los ítems DICOM MWL creados/actualizados en los mensajes HL7 ORM^O01, OMI^O23, OMG^O19 recibidos.",
   "type": "object",
   "required": [
     "dcmSPSStatus",
@@ -8,8 +8,8 @@
   ],
   "properties": {
     "dcmSPSStatus": {
-      "title": "Scheduled Procedure Step Status code",
-      "description": "Scheduled Procedure Step Status code",
+      "title": "Código de estado de paso de procedimiento programado",
+      "description": "Código de estado de paso de procedimiento programado.",
       "type": "string",
       "enum": [
         "SCHEDULED",
@@ -19,8 +19,8 @@
       ]
     },
     "hl7OrderControlStatus": {
-      "title": "HL7 Order Control Status",
-      "description": "HL7 Order Control Status Code combinations. These combinations refer to values present in ORC-1_ORC-5.",
+      "title": "Combinaciones HL7 de Estado de Control de Pedidos",
+      "description": "HL7 Código de Estado de Control de Pedidos. Estas combinaciones se refieren a valores presentes en ORC-1_ORC-5.",
       "type": "array",
       "items": {
         "type": "string",

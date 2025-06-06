@@ -1,32 +1,32 @@
 {
-  "title": "Network AE Extension",
-  "description": "dcm4che proprietary Attributes of Network AE",
+  "title": "Extensión AE de red",
+  "description": "dcm4che atributos propietarios de la red AE",
   "type": "object",
   "properties": {
     "dcmRoleSelectionNegotiationLenient": {
-      "title": "Role Selection Negotiation Lenient",
-      "description": "Indicates to disable check for required SCP/SCU role selection negotiation on sending of DIMSE-RQs. Overwrites value specified on Device level.",
+      "title": "Negociación de selección de rol Lenient",
+      "description": "Indica que se desactive la comprobación de la negociación de selección de rol SCP/SCU necesaria al enviar DIMSE-RQs. Sobrescribe el valor especificado a nivel de dispositivo.",
       "type": "boolean"
     },
     "dcmAcceptedCallingAETitle": {
-      "title": "Accepted Calling AE Title",
-      "description": "Prohibit accepting associations from unlisted AE. If not present, any AE will be accepted",
+      "title": "Título AE Llamada Aceptada",
+      "description": "Prohibir aceptar asociaciones de AE no listados. Si no está presente, se aceptará cualquier AE.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmOtherAETitle": {
-      "title": "Other AE Title",
-      "description": "Additional AE Title of Network AE - will also accept Association RQs with such Called AE Title",
+      "title": "Otro título AE",
+      "description": "Título AE adicional de AE de red - también aceptará RQs de asociación con dicho título AE llamado.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmNoAsyncModeCalledAETitle": {
-      "title": "No Async Mode Called AE Title",
-      "description": "Blacklist AE Title of peer Network AE as not capable to handle Asynchronous Operations Window Negotiation correctly. Suppress including corresponding User-data sub-Item in A-ASSOCIATE RQs to that Network AEs.",
+      "title": "Ningún modo asíncrono llamado AE Título",
+      "description": "Título del AE de la red par no capaz de gestionar correctamente la negociación de la ventana de operaciones asíncronas. Suprimir la inclusión del correspondiente sub-ítem de datos de usuario en los RQs A-ASSOCIATE a ese AE de red.",
       "type": "array",
       "format": "dcmAETitle",
       "items": {
@@ -42,16 +42,16 @@
       }
     },
     "dcmMasqueradeCallingAETitle": {
-      "title": "Masquerade Calling AE Title",
-      "description": "Calling AE Title used for initiating network associations, masquerading the actual AE Title for this Network AE - optional prefix [<Called AE Title>] limits the masquerading to association to a particular AE Title.",
+      "title": "Enmascaramiento del Título AE Llamado",
+      "description": "Título AE Llamado utilizado para iniciar asociaciones de red, enmascarando el Título AE real para este AE de Red - el prefijo opcional [<Called AE Title>] limita el enmascaramiento a la asociación a un Título AE particular.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmPreferredTransferSyntax": {
-      "title": "Preferred Transfer Syntax",
-      "description": "Preferred Transfer Syntax for selection of Transfer Syntax within a Presentation Context, ordered by priority. If absent, the first acceptable Transfer Syntax in the offered Presentation Context will be selected. May be overwritten by configured values for particular Transfer Capabilities of this AE.",
+      "title": "Sintaxis de transferencia preferida",
+      "description": "Sintaxis de transferencia preferida para la selección de la sintaxis de transferencia dentro de un contexto de presentación, ordenada por prioridad. Si no existe, se seleccionará la primera sintaxis de transferencia aceptable en el contexto de presentación ofrecido. Puede ser sobrescrita por valores configurados para determinadas capacidades de transferencia de este AE.",
       "type": "array",
       "format": "dcmTransferSyntax",
       "items": {
@@ -65,14 +65,14 @@
       "format": "dcmArchiveAETitle"
     },
     "hl7ApplicationName": {
-      "title": "HL7 Application name",
-      "description": "HL7 Application and Facility name (Application|Facility) associated with this AE",
+      "title": "Nombre de la aplicación HL7",
+      "description": "Nombre de la aplicación HL7 y de la instalación (Aplicación|Instalación) asociada a este AE.",
       "type": "string",
       "format": "hl7ApplicationName"
     },
     "dcmArchiveNetworkAE": {
-      "title": "Archive Network AE",
-      "description": "DICOM Archive Network AE related information",
+      "title": "Archivo de red AE",
+      "description": "DICOM Archivo de red AE información relacionada.",
       "$ref": "archiveNetworkAE.schema.json"
     }
   }

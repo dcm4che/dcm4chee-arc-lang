@@ -1,6 +1,6 @@
-imageReader:Image Reader|Specifies Java Image IO Image Readers used for decompressing compressed DICOM images
-imageReader.dicomTransferSyntax:Transfer Syntax|Transfer Syntax of compressed DICOM image
-imageReader.dcmIIOFormatName:Image IO Reader Format Name|Image IO Reader Format Name
-imageReader.dcmJavaClassName:Java Class Name|Fully qualified Java class of Image IO Reader. If absent, use any Image Reader found for specified Format Name
-imageReader.dcmPatchJPEGLS:Patch JPEG-LS|Patch JPEG-LS before decompressing
-imageReader.dcmImageReadParam:Image Read Param|Image Read Parameter(s) (name=value)
+imageReader:Lector de imágenes|Especifica los lectores de imágenes Java Image IO utilizados para descomprimir imágenes DICOM comprimidas.
+imageReader.dicomTransferSyntax:Sintaxis de transferencia|Sintaxis de transferencia de imagen DICOM comprimida.
+imageReader.dcmIIOFormatName:Nombre del formato del lector de imágenes IO|Nombre del formato del lector de imágenes IO.
+imageReader.dcmJavaClassName:Nombre de clase Java|Clase Java totalmente calificada del lector de imágenes IO. Si no existe, utilice cualquier lector de imágenes encontrado para el nombre de formato especificado.
+imageReader.dcmPatchJPEGLS:Parche JPEG-LS|Parche JPEG-LS antes de descomprimir.
+imageReader.dcmImageReadParam:Parametros de lectura de imagen|Parámetros de lectura de imagen (nombre=valor).

@@ -1,10 +1,10 @@
-keycloakClient:Keycloak Client|Keycloak Client
-keycloakClient.dcmKeycloakClientID:Keycloak Client ID|Client ID used in token requests.
-keycloakClient.dcmURI:Server URL|The base URL of the Keycloak server.
-keycloakClient.dcmKeycloakRealm:Keycloak Realm|Name of the realm in token requests.
-keycloakClient.dcmKeycloakGrantType:Keycloak grant type|Keycloak grant type used in token requests.
-keycloakClient.dcmKeycloakClientSecret:Keycloak Client secret|Keycloak client secret. Required if grant type = client_credentials.
-keycloakClient.dcmTLSAllowAnyHostname:TLS Allow Any Hostname|If the other server requires HTTPS and this config option is set to true the other server’s certificate is validated via the truststore, but host name validation is not done.
-keycloakClient.dcmTLSDisableTrustManager:TLS Disable Trust Manager|If the other server requires HTTPS and this config option is set to true you do not have to specify a truststore
+keycloakClient:Cliente Keycloak|Cliente Keycloak
+keycloakClient.dcmKeycloakClientID:Keycloak Client ID|ID del cliente utilizado en las solicitudes de fichas.
+keycloakClient.dcmURI:URL del Servidor|La URL base del servidor Keycloak.
+keycloakClient.dcmKeycloakRealm:Dominio Keycloak|Nombre del dominio en las solicitudes de fichas.
+keycloakClient.dcmKeycloakGrantType:Tipo de concesión Keycloak|Tipo de concesión Keycloak utilizado en las solicitudes de fichas.
+keycloakClient.dcmKeycloakClientSecret:Secreto de cliente Keycloak|Secreto de cliente Keycloak. Obligatorio si el tipo de concesión = credenciales_cliente.
+keycloakClient.dcmTLSAllowAnyHostname:TLS Permitir Cualquier Nombre de Anfitrión|Si el otro servidor requiere HTTPS y esta opción de configuración está establecida a true, el certificado del otro servidor es validado a través del almacén de confianza, pero la validación del nombre de anfitrión no se realiza.
+keycloakClient.dcmTLSDisableTrustManager:TLS Deshabilitar Administrador de Confianza|Si el otro servidor requiere HTTPS y esta opción de configuración está establecida en true, no es necesario especificar un almacén de confianza.
 keycloakClient.uid:User ID|User ID. Required if grant type = password.
 keycloakClient.userPassword:User Password|User Password. Required if grant type = password.

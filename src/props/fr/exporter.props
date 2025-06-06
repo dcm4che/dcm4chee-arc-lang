@@ -1,16 +1,16 @@
-exporter:Exporter Descriptor|Exporter Descriptor
-exporter.dcmExporterID:Exporter ID|Exporter ID
-exporter.dcmURI:Exporter URI|RFC2079: Uniform Resource Identifier. Refer various <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties" target="_blank">Exporter URI</a> that can be configured based on the exporter type.
-exporter.dcmQueueName:Queue Name|Task Queue Name
-exporter.dicomDescription:Exporter Description|Unconstrained text description of the exporter
-exporter.dicomAETitle:Archive Application Entity (AE) title|Archive Application Entity (AE) title
-exporter.dcmExportAsSourceAE:Export as Source Application Entity (AE)|Mask the Archive Application Entity (AE) title by the title of the Application Entity (AE) from which a Series was received on establishing the Association to the Destination Application Entity (AE).
-exporter.dcmDeleteStudyFromStorageID:Delete Study From Storage ID|ID of Storage System from which the objects of the exported Study shall be deleted. Only effective for Export Tasks on Study level.
-exporter.dcmRejectForDataRetentionExpiry:Reject Entity for Data Retention Expiry|Reject entity for Data Retention Expiry after export on completion of Export Task.
-exporter.dcmStgCmtSCP:Storage Commitment SCP AE Title|AE Title of external Storage Commitment SCP used to verify export to another archive.
-exporter.dcmIanDestination:IAN Destination|Destination to send IAN N-CREATE RQ
-exporter.dcmRetrieveAET:Retrieve AE Title|AE Title associated with Network AE
-exporter.dcmRetrieveLocationUID:Retrieve Location UID|Retrieve Location UID.
-exporter.dcmInstanceAvailability:Instance Availability|Instance Availability.
-exporter.dcmSchedule:Export Schedule|Delay export to specified time periods. If no Export Schedule is specified, queue the export task for processing immediately. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
-exporter.dcmProperty:Exporter Property|Specify exporter properties in format {name}={value}. Refer various <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties" target="_blank">Exporter Properties</a> that can be configured based on the exporter type.
+exporter:Descriptor del exportador|Descriptor del exportador.
+exporter.dcmExporterID:ID del exportador|ID del exportador.
+exporter.dcmURI:Exporter URI|RFC2079:Identificador uniforme de recursos. Se refiere a varios <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties" target="_blank">URI de exportador</a> que pueden configurarse en función del tipo de exportador.
+exporter.dcmQueueName:Nombre de la cola|Nombre de la cola de tareas.
+exporter.dicomDescription:Descripción del exportador|Descripción en texto sin restricciones del exportador.
+exporter.dicomAETitle:Título de la Entidad de Aplicación (AE) de Archivo|Título de la Entidad de Aplicación (AE) de Archivo.
+exporter.dcmExportAsSourceAE:Exportar como Entidad de Aplicación (AE) de Origen|Enmascarar el título de la Entidad de Aplicación (AE) de Archivo por el título de la Entidad de Aplicación (AE) de la que se recibió una Serie al establecer la Asociación a la Entidad de Aplicación (AE) de Destino.
+exporter.dcmDeleteStudyFromStorageID:Borrar estudio del ID de almacenamiento|ID del sistema de almacenamiento del que se borrarán los objetos del estudio exportado. Sólo es efectivo para tareas de exportación a nivel de estudio.
+exporter.dcmRejectForDataRetentionExpiry:Rechazar Entidad por Vencimiento de Retención de Datos|Rechazar entidad por Vencimiento de Retención de Datos tras la exportación al finalizar la Tarea de Exportación.
+exporter.dcmStgCmtSCP:Título AE del SCP de compromiso de almacenamiento|Título AE del SCP de compromiso de almacenamiento externo utilizado para verificar la exportación a otro archivo.
+exporter.dcmIanDestination:Destino Ian|Destino para enviar IAN N-CREATE RQ
+exporter.dcmRetrieveAET:Recuperar Título AE|Título AE asociado con AE de red.
+exporter.dcmRetrieveLocationUID:Recuperar UID de ubicación|Recuperar UID de ubicación.
+exporter.dcmInstanceAvailability:Disponibilidad de instancia|Disponibilidad de instancia.
+exporter.dcmSchedule:Horario de exportación|Retrasa la exportación a los periodos de tiempo especificados. Si no especifica ningún calendario de exportación, la tarea de exportación se pondrá en cola para ser procesada inmediatamente. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
+exporter.dcmProperty:Propiedad del exportador|Especifique las propiedades del exportador en formato {name}={value}. Consulte varios <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties" target="_blank">Propiedades del exportador</a> que pueden configurarse en función del tipo de exportador.

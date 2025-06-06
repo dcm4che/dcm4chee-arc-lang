@@ -1,6 +1,6 @@
 {
-  "title": "Archive Network AE",
-  "description": "DICOM Archive Network AE related information",
+  "title": "Información relacionada con la Red de Archivo AE",
+  "description": "DICOM Archive Network AE",
   "type": "object",
   "required": [
     "dcmQueryRetrieveViewID",
@@ -8,8 +8,8 @@
   ],
   "properties": {
     "dcmObjectStorageID": {
-      "title": "Object Storage ID",
-      "description": "ID of Storage System on which received DICOM composite objects are stored. Multiple Storage Systems may be configured.",
+      "title": "Almacenamiento de objetos ID",
+      "description": "ID del sistema de almacenamiento en el que se almacenan los objetos compuestos DICOM recibidos. Se pueden configurar varios sistemas de almacenamiento.",
       "type": "array",
       "items" : {
         "type": "string"
@@ -17,15 +17,15 @@
       "format": "dcmStorageID"
     },
     "dcmObjectStorageCount": {
-      "title": "Object Storage Count",
-      "description": "Number of Storage Systems which are filled in parallel.",
+      "title": "Conteo de almacenamiento de objetos",
+      "description": "Número de sistemas de almacenamiento que se llenan en paralelo.",
       "type": "integer",
       "default": 1,
       "minimum": 1
     },
     "dcmMetadataStorageID": {
-      "title": "Metadata Storage ID",
-      "description": "ID of Storage on which Metadata is stored in JSON format - additionally to the complete DICOM composite object. Multiple Storage Systems may be configured. If absent, metadata is not stored additionally.",
+      "title": "ID de almacenamiento de metadatos",
+      "description": "ID del almacenamiento en el que se almacenan los metadatos en formato JSON - adicionalmente al objeto compuesto DICOM completo. Pueden configurarse varios sistemas de almacenamiento. Si está ausente, los metadatos no se almacenan adicionalmente.",
       "type": "array",
       "items" : {
         "type": "string"
@@ -33,45 +33,45 @@
       "format": "dcmStorageID"
     },
     "dcmBulkDataDescriptorID": {
-      "title": "Bulk Data Descriptor ID",
-      "description": "ID of Bulk Data Descriptor applied by all services of this Archive Network AE providing Metadata of archived instances. Overwrites value specified on Device level.",
+      "title": "Descriptor de datos masivos ID",
+      "description": "ID del descriptor de datos masivos aplicado por todos los servicios de esta red de archivos AE que proporciona metadatos de instancias archivadas. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "format": "dcmBulkDataDescriptorID"
     },
     "dcmSeriesMetadataDelay": {
-      "title": "Aggregate Series Metadata Delay",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS for storing aggregated Series Metadata on storage of objects received by this AE. Overwrites value specified on Device level.",
+      "title": "Retraso de metadatos de serie agregados",
+      "description": "Retraso en formato de duración ISO-8601 PnDTnHnMn.nS para almacenar metadatos de serie agregados en el almacenamiento de objetos recibidos por este AE. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeInstanceRecordsDelay": {
-      "title": "Purge Instance Records Delay",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB received by this AE. Overwrites value specified on Device level. Only effective, if Purge Instance Records on Device Level = true.",
+      "title": "Retraso en la purga de registros de instancia",
+      "description": "Retraso en formato de duración ISO-8601 PnDTnHnMn.nS para la purga de registros de instancia de la base de datos recibidos por este AE. Sobrescribe el valor especificado a nivel de Dispositivo. Sólo es efectivo si Purgar Registros de Instancia a Nivel de Dispositivo = verdadero.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmStoreAccessControlID": {
-      "title": "Store Access Control ID",
-      "description": "Access Control ID assigned to Studies received by this AE",
+      "title": "Almacenar ID de Control de Acceso",
+      "description": "ID de Control de Acceso asignado a los Estudios recibidos por este AE",
       "type": "string"
     },
     "dcmAccessControlID": {
-      "title": "Access Control ID",
-      "description": "Access Control IDs assigned to Query/Retrieve requests received by this AE.",
+      "title": "ID de control de acceso",
+      "description": "ID de control de acceso asignado a las solicitudes de consulta/recuperación recibidas por este AE.",
       "type": "array",
       "items": { "type": "string" }
     },
     "dcmAcceptedMoveDestination": {
-      "title": "Accepted Move Destination",
-      "description": "Accepted Move Destination in C-MOVE requests; any if absent.",
+      "title": "Destino de Movimiento Aceptado",
+      "description": "Destino de Movimiento Aceptado en peticiones C-MOVE; cualquiera si no existe.",
       "type": "array",
       "items" : {
         "type": "string"
       }
     },
     "dcmOverwritePolicy": {
-      "title": "Overwrite Policy",
-      "description": "Specifies behavior on receive of objects by this AE, which SOP Instance UID matches a previous received object. Overwrites value specified on Device level.",
+      "title": "Política de sobrescritura",
+      "description": "Política de sobrescritura para objetos recibidos por este AE. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
         "NEVER",
@@ -92,13 +92,13 @@
       ]
     },
     "dcmRecordAttributeModification": {
-      "title": "Record Attribute Modification",
-      "description": "Indicates if modifications of attributes of stored objects by this AE are recorded in Items of the Original Attributes Sequence. Overwrites value specified on Device level.",
+      "title": "Registrar Modificación de Atributos",
+      "description": "Indica si las modificaciones de atributos de objetos almacenados por este AE se registran en Ítems de la Secuencia de Atributos Originales. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "boolean"
     },
     "dcmAcceptMissingPatientID": {
-      "title": "Accept Missing Patient ID",
-      "description": "Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. Overwrites value specified on Device level.",
+      "title": "Aceptar ID de paciente ausente",
+      "description": "Indica si deben aceptarse objetos sin ID de paciente y si debe crearse una ID de paciente. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "enum": [
         "YES",
@@ -107,8 +107,8 @@
       ]
     },
     "dcmAcceptConflictingPatientID": {
-      "title": "Accept Conflicting Patient ID",
-      "description": "Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. Overwrites value specified on Device level.",
+      "title": "Aceptar ID de paciente en conflicto",
+      "description": "Indica si se aceptarán objetos con ID de paciente diferente de la ID de paciente de los objetos recibidos anteriormente en el estudio. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "enum": [
         "YES",
@@ -117,19 +117,19 @@
       ]
     },
     "dcmQueryRetrieveViewID": {
-      "title": "Query/Retrieve View ID",
-      "description": "Query/Retrieve View Identifier.",
+      "title": "Consultar/Recuperar Vista ID",
+      "description": "Consultar/Recuperar Vista Identificador.",
       "type": "string",
       "format": "dcmQueryRetrieveViewID"
     },
     "dcmBulkDataSpoolDirectory": {
-      "title": "Bulk Data Spool Directory",
-      "description": "Path to Bulk Data Spool Directory. Overwrites value specified on Device level.",
+      "title": "Directorio de datos a granel",
+      "description": "Ruta al directorio de datos a granel. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string"
     },
     "dcmHideSPSWithStatusFromMWL": {
-      "title": "Hide SPS with Status by MWL SCP",
-      "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. Overwrites value specified on Device level.",
+      "title": "Ocultar SPS con Estado por SCP MWL",
+      "description": "Códigos de Estado de Paso de Procedimiento Programado de elementos MWL que no serán devueltos por el SCP MWL. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "array",
       "items" : {
         "type": "string",
@@ -146,8 +146,8 @@
       }
     },
     "dcmHideSPSWithStatusFromMWLRS": {
-      "title": "Hide SPS with Status by MWL RS",
-      "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. Overwrites value specified on Device level.",
+      "title": "Ocultar SPS con Estado por MWL RS",
+      "description": "Paso de Procedimiento Programado Códigos de estado de los elementos MWL que no serán devueltos por MWL RS. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "array",
       "items" : {
         "type": "string",
@@ -164,26 +164,26 @@
       }
     },
     "dcmMWLAccessionNumberGenerator": {
-      "title": "MWL Accession Number Generator",
-      "description": "Identifies ID Generator to supplement missing Accession Numbers of Scheduled Procedures Steps created by RESTful service. Overwrites value specified on Device level.",
+      "title": "Generador de números de acceso MWL",
+      "description": "Identifica el generador de ID para complementar los números de acceso que faltan en los pasos de procedimientos programados creados por el servicio RESTful. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmIDGenerator"
     },
     "dcmMWLRequestedProcedureIDGenerator": {
-      "title": "MWL Requested Procedure ID Generator",
-      "description": "Identifies ID Generator to supplement missing Requested Procedure IDs of Scheduled Procedures Steps created by RESTful service. Overwrites value specified on Device level.",
+      "title": "MWL Generador de ID de Procedimiento Solicitado",
+      "description": "Identifica el Generador de ID para complementar las ID de Procedimiento Solicitado que faltan en los Pasos de Procedimientos Programados creados por el servicio RESTful. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmIDGenerator"
     },
     "dcmMWLScheduledProcedureStepIDGenerator": {
-      "title": "MWL Scheduled Procedure Step ID Generator",
-      "description": "Identifies ID Generator to supplement missing Scheduled Procedure Step IDs of Scheduled Procedures Steps created by RESTful service. Overwrites value specified on Device level.",
+      "title": "MWL Generador de ID de pasos de procedimientos programados",
+      "description": "Identifica el generador de ID para complementar los ID de pasos de procedimientos programados que faltan en los pasos de procedimientos programados creados por el servicio RESTful. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmIDGenerator"
     },
     "dcmEncodeAsJSONNumber": {
-      "title": "Encode as JSON Number",
-      "description": "VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. Supplements values specified on Device level.",
+      "title": "Codificar como número JSON",
+      "description": "VR codificado como número JSON. Si no se indican, los valores IS, DS, SV y UV se codifican como cadenas JSON. Complementa los valores especificados a nivel de dispositivo.",
       "type": "array",
       "items" : {
         "type": "string",
@@ -196,13 +196,13 @@
       }
     },
     "dcmValidateCallingAEHostname": {
-      "title": "Validate Calling AE Hostname",
-      "description": "Validate Calling AE Hostname or IP Address of Association requestors for this AE. Overwrites value specified on Device level.",
+      "title": "Validar nombre de anfitrión AE llamante",
+      "description": "Validar nombre de anfitrión AE llamante o dirección IP de los solicitantes de asociación para este AE. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "boolean"
     },
     "dcmUserIdentityNegotiation": {
-      "title": "User Identity Negotiation",
-      "description": "Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). Overwrites value specified on Device level.",
+      "title": "Negociación de Identidad de Usuario",
+      "description": "Especifica ignorar el Sub-Item de Negociación de Identidad de Usuario en las solicitudes de Asociación ( = NO_SOPORTADO), verificar que el Nombre de Usuario y la contraseña o el Token Web JSON pasados son contra un servidor Keycloak (= SOPORTADO), o rechazar las solicitudes de Asociación sin un Nombre de Usuario y contraseña válidos o Token Web JSON en su Sub-Item de Negociación de Identidad (= REQUERIDO). Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "enum": [
         "NOT_SUPPORTED",
@@ -211,83 +211,83 @@
       ]
     },
     "dcmUserIdentityNegotiationRole": {
-      "title": "User Identity Negotiation Role",
-      "description": "Constrain accepted User Identity Negotiation requests to users with specified role. Overwrites value specified on Device level.",
+      "title": "Rol de Negociación de Identidad de Usuario",
+      "description": "Restringe las solicitudes de Negociación de Identidad de Usuario aceptadas a los usuarios con el rol especificado. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string"
     },
     "dcmUserIdentityNegotiationKeycloakClientID": {
-      "title": "User Identity Negotiation Keycloak Client ID",
-      "description": "Keycloak Client ID referring Keycloak connection configuration for verifying passed username and password or JSON Web Token. Overwrites value specified on Device level.",
+      "title": "ID de cliente de negociación de identidad de usuario Keycloak",
+      "description": "ID de cliente Keycloak que hace referencia a la configuración de la conexión Keycloak para verificar el nombre de usuario y la contraseña transmitidos o el token web JSON. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmKeycloakClient"
     },
     "dcmPersonNameComponentOrderInsensitiveMatching": {
-      "title": "Person Name Component Order Insensitive Matching",
-      "description": "Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names by this AE. Overwrites value specified on Device level.",
+      "title": "Coincidencia insensible al orden de los componentes del nombre de persona",
+      "description": "Indica si la coincidencia insensible al orden de los componentes del nombre se realiza en la coincidencia semántica difusa de nombres de persona por este AE. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "dcmSendPendingCGet": {
-      "title": "Send Pending C-Get",
-      "description": "Enables pending C-GET responses. Overwrites value specified on Device level.",
+      "title": "Enviar C-Get pendientes",
+      "description": "Habilita las respuestas C-GET pendientes. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "boolean"
     },
     "dcmSendPendingCMoveInterval": {
-      "title": "Send Pending C-Move Interval",
-      "description": "Interval of pending C-MOVE responses in ISO-8601 duration format PnDTnHnMn.nS. Overwrites value specified on Device level.",
+      "title": "Intervalo de envío de respuestas C-MOVE pendientes",
+      "description": "Intervalo de respuestas C-MOVE pendientes en formato de duración ISO-8601 PnDTnHnMn.nS. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmWadoSR2HtmlTemplateURI": {
-      "title": "Wado SR2Html Template URI",
-      "description": "Specifies URI for the style sheet used to render structured reports to html. Overwrites value specified on Device level.",
+      "title": "Plantilla URI Wado SR2Html",
+      "description": "Especifica la URI de la hoja de estilo utilizada para convertir los informes estructurados a html. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string"
     },
     "dcmWadoSR2TextTemplateURI": {
-      "title": "Wado SR2Text Template URI",
-      "description": "Specifies URI for the style sheet used to render structured reports to plain text. Overwrites value specified on Device level.",
+      "title": "Plantilla URI de Wado SR2Text",
+      "description": "Especifica la URI de la hoja de estilo utilizada para convertir los informes estructurados en texto plano. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string"
     },
     "dcmWadoCDA2HtmlTemplateURI": {
-      "title": "Wado CDA to HTML Template URI",
-      "description": "URL to XSL style sheet inserted as <?xml-stylesheet type=\"text/xsl\" href=\"<url>\" > in CDA documents returned by WADO-URI service. If absent, the embedded CDI document is returned verbatim. Overwrites value specified on Device level.",
+      "title": "Plantilla Wado CDA a HTML URI",
+      "description": "URL a hoja de estilo XSL insertada como <?xml-stylesheet type=\"text/xsl\" href=\"<url>\" > en los documentos CDA devueltos por el servicio WADO-URI. Si está ausente, el documento CDI incrustado se devuelve literalmente. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string"
     },
     "dcmWadoThumbnailViewport": {
-      "title": "Wado Thumbnail Viewport",
-      "description": "Dimension of Thumbnails returned by WADO retrieve of Instance Thumbnails, if no Viewport is specified in the request. Format: <width>,<height>. Overwrites value specified on Device level.",
+      "title": "Vista de miniaturas Wado",
+      "description": "Dimensión de las miniaturas devueltas por la recuperación de miniaturas de instancias WADO, si no se especifica una vista en la solicitud. Formato: <width>, <height>. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmWadoThumbnailViewport"
     },
     "dcmWadoZIPEntryNameFormat": {
-      "title": "Wado ZIP Entry Name Format",
-      "description": "Format of entry names in ZIP archive returned by WADO-RS. Overwrites value specified on Device level.",
+      "title": "Formato de Nombre de Entrada Wado ZIP",
+      "description": "Formato de nombres de entrada en el archivo ZIP devuelto por WADO-RS. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string"
     },
     "dcmWadoIgnorePresentationLUTShape": {
-      "title": "Wado Ignore Presentation LUT Shape",
-      "description": "Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. Overwrites value specified on Device level.",
+      "title": "Wado Ignorar Presentación LUT Forma",
+      "description": "Indica ignorar (2050,0020) Presentación LUT Forma, pero priorizar el valor de (0028,0004) Interpretación Fotométrica para determinar si el valor mínimo de muestra debe ser mostrado como blanco (=MONCHROME1) o como negro (=MONCHROME2) en la recuperación de imágenes DICOM renderizadas por los servicios WADO-RS o WADO-URI. Sobrescribe el valor especificado en el nivel de Dispositivo.",
       "type": "boolean"
     },
     "dcmWadoMetadataExcludePrivate": {
-      "title": "Wado Metadata Exclude Private",
-      "description": "Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. Overwrites value specified on Device level.",
+      "title": "Wado Metadatos Excluir Privado",
+      "description": "Indica excluir Elementos de Datos Privados de Metadatos devueltos por WADO-RS Recuperar Transacción. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "boolean"
     },
     "dcmQueryMaxNumberOfResults": {
-      "title": "Query Max Number Of Results",
-      "description": "Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. Overwrites value specified on Device level.",
+      "title": "Consulta Número Máximo De Resultados",
+      "description": "Número máximo de resultados devueltos por C-FIND SCP. Si el número de coincidencias sobrepasa el límite, la petición C-FIND será rechazada. 0 = sin limitación. Sobrescribe el valor especificado a nivel de dispositivo.",
       "type": "integer",
       "minimum": 0
     },
     "dcmQidoMaxNumberOfResults": {
-      "title": "QIDO Max Number Of Results",
-      "description": "Maximal number of return results by QIDO-RS Service. 0 = unlimited. Overwrites value specified on Device level.",
+      "title": "Qido Número máximo de resultados",
+      "description": "Número máximo de resultados devueltos por el servicio QIDO-RS. 0 = ilimitado. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "integer",
       "minimum": 0
     },
     "dcmQidoETag": {
-      "title": "QIDO ETag",
-      "description": "Indicates to return Last-Modified and ETag for Search Series or Instances of a Study. Overwrites value specified on Device level.",
+      "title": "ETag de Qido",
+      "description": "Indica que se devuelva Última Modificación y ETag para Series de Búsqueda o Instancias de un Estudio. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "dcmQidoResultOrderBy": {
@@ -297,15 +297,15 @@
       "items" : { "type": "string" }
     },
     "dcmFwdMppsDestination": {
-      "title": "MPPS Forward Destination",
-      "description": "Destination to forward MPPS N-CREATE RQ and N-SET RQ. Overwrites value specified on Device level.",
+      "title": "Destino de reenvío de MPPS",
+      "description": "Destino para reenviar MPPS N-CREATE RQ y N-SET RQ. Sobrescribe el valor especificado en Device level.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
-      "title": "IAN Destination",
-      "description": "Destination to send IAN N-CREATE RQ. Overwrites value specified on Device level.",
+      "title": "Destino IAN",
+      "description": "Destino para enviar IAN N-CREATE RQ. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmAETitle"
@@ -325,31 +325,31 @@
       }
     },
     "dcmIanDelay": {
-      "title": "IAN Delay",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which an IAN for a received study is sent to configured IAN destinations. Overwrites value specified on Device level.",
+      "title": "Retraso IAN",
+      "description": "Retraso en formato de duración ISO-8601 PnDTnHnMn.nS tras el cual se envía una IAN para un estudio recibido a los destinos IAN configurados. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmIanTimeout": {
-      "title": "IAN Timeout",
-      "description": "Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS. Overwrites value specified on Device level.",
+      "title": "Tiempo de espera IAN",
+      "description": "Tiempo de espera en formato de duración ISO-8601 PnDTnHnMn.nS para esperar la recepción de instancias referenciadas en MPPS. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmIanOnTimeout": {
-      "title": "IAN On Timeout",
-      "description": "Specifies if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded. Overwrites value specified on Device level.",
+      "title": "Tiempo de Espera activo IAN",
+      "description": "Especifica si se envía el IAN si se excede el tiempo de espera de recepción de instancias referenciadas. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "boolean"
     },
     "dcmSpanningCFindSCP": {
-      "title": "Spanning C-Find SCP",
-      "description": "AE Title of external C-FIND SCP to forward C-FIND RQs and backward responses according configured Spanning C-Find SCP Policy. Overwrites value specified on Device level.",
+      "title": "SCP de C-Find de expansión",
+      "description": "AE Título del SCP de C-FIND externo para reenviar RQ de C-FIND y respuestas de retroceso según la política de SCP de C-Find de expansión configurada. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmSpanningCFindSCPPolicy": {
-      "title": "Spanning C-Find SCP Policy",
-      "description": "Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. SUPPLEMENT (= returns local matches before additional matches from Spanning C-Find SCP ), MERGE (= returns matches from Spanning C-Find SCP before additional local matches), REPLACE (= returns only matches from Spanning C-Find SCP). Overwrites value specified on Device level.",
+      "title": "Política de Spanning C-Find SCP",
+      "description": "Especifica la política para combinar las coincidencias devueltas por Spanning C-Find SCP configurado con las entradas coincidentes de la base de datos de archivos. SUPPLEMENT (= devuelve las coincidencias locales antes que las coincidencias adicionales de Spanning C-Find SCP ), MERGE (= devuelve las coincidencias de Spanning C-Find SCP antes que las coincidencias locales adicionales), REPLACE (= devuelve sólo las coincidencias de Spanning C-Find SCP). Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "enum": [
         "SUPPLEMENT",
@@ -358,8 +358,8 @@
       ]
     },
     "dcmSpanningCFindSCPRetrieveAET": {
-      "title": "Spanning C-Find SCP Retrieve AE Title",
-      "description": "Specifies Retrieve AE Title(s) in returned matches from Spanning C-Find SCP. Overwrites value specified on Device level.",
+      "title": "Recuperar título de AE",
+      "description": "Especifica Recuperar título(s) de AE en las coincidencias devueltas por Spanning C-Find SCP. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "array",
       "items": {
         "type": "string"
@@ -367,42 +367,42 @@
       "format": "dcmArchiveAETitle"
     },
     "dcmFallbackCMoveSCP": {
-      "title": "Fallback C-Move SCP",
-      "description": "AE Title of external C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not managed by this archive. Overwrites value specified on Device level.",
+      "title": "Fallo de C-Move SCP",
+      "description": "Título de AE de C-MOVE SCP externo para reenviar C-MOVE RQs si las Entidades solicitadas no están gestionadas por este archivo. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmFallbackCMoveSCPStudyOlderThan": {
-      "title": "Fallback C-Move SCP Study Older Than",
-      "description": "Specifies threshold for Study Date in format YYYYMMDD for marking received Studies as (potential) incomplete to enforce the retrieve from configured dcmFallbackCMoveSCP. Overwrites value specified on Device level.",
+      "title": "Fallo C-Move SCP Estudio más antiguo que",
+      "description": "Especifica el umbral para la fecha del estudio en formato AAAAMMDD para marcar los estudios recibidos como (potencialmente) incompletos para aplicar la recuperación desde dcmFallbackCMoveSCP configurado. Sobrescribe el valor especificado a nivel de dispositivo.",
       "type": "string"
     },
     "dcmFallbackCMoveSCPDestination": {
-      "title": "Fallback C-Move SCP Destination",
-      "description": "AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to the external C-MOVE SCP specified by dcmFallbackCMoveSCP. Overwrites value specified on Device level.",
+      "title": "Destino C-Move SCP Fallback",
+      "description": "AE Título del C-STORE-SCP local que se establecerá como Destino Move en las RQs C-MOVE reenviadas al C-MOVE SCP externo especificado por dcmFallbackCMoveSCP. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmFallbackCMoveSCPLeadingCFindSCP": {
-      "title": "Fallback C-Move SCP Leading C-Find SCP",
-      "description": "AE Title of external C-FIND SCP for Verification of Number of Instances retrieved from external C-MOVE SCP specified by dcmFallbackCMoveSCP. Overwrites value specified on Device level.",
+      "title": "Fallo de C-Move SCP que lidera C-Find SCP",
+      "description": "AE Título de C-FIND SCP externo para la verificación del número de instancias recuperadas de C-MOVE SCP externo especificado por dcmFallbackCMoveSCP. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmFallbackCMoveSCPRetries": {
-      "title": "Fallback C-Move SCP Retries",
-      "description": "Maximal number of retries to retrieve not available objects from C-MOVE SCP configured by dcmFallbackCMoveSCP. -1 = forever. Overwrites value specified on Device level.",
+      "title": "Reintentos Fallo C-Move SCP",
+      "description": "Número máximo de reintentos para recuperar objetos no disponibles desde C-MOVE SCP configurado por dcmFallbackCMoveSCP. -1 = para siempre. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "integer"
     },
     "dcmFallbackWadoURIWebAppName": {
-      "title": "Fallback WADO-URI Web Application Name",
-      "description": "Name of external Web Application to redirect WADO-URI requests if the requested Object is not available by this archive. Overwrites value specified on Device level.",
+      "title": "Nombre de Aplicación Web WADO-URI Fallo",
+      "description": "Nombre de la Aplicación Web externa para redirigir las peticiones WADO URI si el Objeto solicitado no está disponible en este archivo. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "format": "webApp"
     },
     "dcmFallbackWadoURIHttpStatusCode": {
-      "title": "Fallback WADO-URI HTTP Status Code",
-      "description": "HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level.",
+      "title": "Código de Estado HTTP WADO-URI Fallo",
+      "description": "Código de Estado HTTP de la Respuesta de Redirección configurada por el Nombre de la Aplicación Web WADO-URI Fallo. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "integer",
       "enum": [
         301,
@@ -412,19 +412,19 @@
       ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
-      "title": "Fallback WADO-URI Redirect On Not Found",
-      "description": "Indicates if WADO-URI requests are redirected to configured Fallback WADO-URI Web Application Name even if the object was not found or - if set to false - only if the object is no longer accessible on this archive. Overwrites value specified on Device level.",
+      "title": "Redireccionar WADO-URI fallido si no se encuentra",
+      "description": "Indica si las peticiones WADO-URI se redireccionan al Nombre de Aplicación Web WADO-URI fallido configurado incluso si el objeto no se encuentra o - si se establece en false - sólo si el objeto ya no es accesible en este archivo. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "dcmExternalWadoRSWebAppName": {
-      "title": "External WADO-RS Web Application Name",
-      "description": "Name of external Web Application to redirect WADO-RS requests if the requested Object is not available by this archive. Overwrites value specified on Device level.",
+      "title": "Nombre de la Aplicación Web WADO-RS Externa",
+      "description": "Nombre de la Aplicación Web externa para redirigir las solicitudes WADO URI si el objeto solicitado no está disponible en este archivo. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "format": "webApp"
     },
     "dcmExternalWadoRSHttpStatusCode": {
-      "title": "External WADO-RS HTTP Status Code",
-      "description": "HTTP Status code of Redirect Response configured by External WADO-RS Web Application Name. Overwrites value specified on Device level.",
+      "title": "Código de Estado HTTP WADO-RS Externo",
+      "description": "Código de Estado HTTP de la Respuesta de Redirección configurada por el Nombre de la Aplicación Web WADO-URI Fallback. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "integer",
       "enum": [
         301,
@@ -434,55 +434,55 @@
       ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {
-      "title": "External WADO-RS Redirect On Not Found",
-      "description": "Indicates if WADO-RS requests are redirected to configured External WADO-RS Web Application Name even if the requested objects were not found or - if set to false - only if some of the requested objects are no longer accessible on this archive. Overwrites value specified on Device level.",
+      "title": "Redirección WADO-RS Externa en No Encontrado",
+      "description": "Indica si las peticiones WADO-RS son redirigidas a la Aplicación Web WADO-RS Externa configurada, incluso si los objetos solicitados no fueron encontrados o - si se establece en false - sólo si algunos de los objetos solicitados ya no son accesibles en este archivo. Sobrescribe el valor especificado en el nivel de Dispositivo.",
       "type": "boolean"
     },
     "dcmFallbackCMoveSCPCallingAET": {
-      "title": "Fallback C-Move SCP Calling AE title",
-      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. Overwrites value specified on Device level.",
+      "title": "Fallback C-Move SCP Título AE de llamada",
+      "description": "Título AE de llamada utilizado en A-ASSOCIATE-RQ para configurar el SCP de C-MOVE de Fallback. Si no existe, se utiliza el título AE de la SCU C-MOVE externa. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmAltCMoveSCP": {
-      "title": "Alternative C-Move SCP",
-      "description": "AE Title of alternative C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not located on a local attached Storage. Overwrites value specified on Device level.",
+      "title": "C-Move SCP alternativo",
+      "description": "AE Título de C-MOVE SCP alternativo para reenviar C-MOVE RQs si las Entidades solicitadas no están localizadas en un Almacenamiento local adjunto. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmStorePermissionServiceURL": {
-      "title": "Store Permission Service URL",
-      "description": "URL of Store Permission Service which will be invoked on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. E.g. http(s)://<store-permission-service-provider-host>:<store-permission-service-provider-port>/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. Overwrites value specified on Device level.",
+      "title": "Servicio de Permisos de Almacenamiento URL",
+      "description": "URL del Servicio de Permisos de Almacenamiento que se invocará al recibir el primer objeto de un estudio. {<dicomTag>} se sustituirá por el valor del atributo en el objeto. Por ejemplo, http(s)://<store-permission-service-provider-host>:<store-permission-service-provider-port>/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string"
     },
     "dcmStorePermissionServiceResponse": {
-      "title": "Store Permission Service Response",
-      "description": "Emulate Store Permission Service Response on receive of the first object of a study. {<dicomTag>} will be replaced by the value of the attribute in the object. Only effective if no Store Permission Service Response is configured. Example: patientID={00100020},patientName={00100010},errorCode=0110H,errorComment=errorMessage. Overwrites value specified on Device level.",
+      "title": "Respuesta del servicio de permisos de almacenamiento",
+      "description": "Emular respuesta del servicio de permisos de almacenamiento al recibir el primer objeto de un estudio. {<dicomTag>} será sustituido por el valor del atributo en el objeto. Sólo es efectivo si no se ha configurado ninguna respuesta del servicio de permiso de almacenamiento. Example: patientID={00100020},patientName={00100010},errorCode=0110H,errorComment=errorMessage. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string"
     },
     "dcmStorePermissionServiceResponsePattern": {
-      "title": "Store Permission Service Response Pattern",
-      "description": "Regular Expression applied to responses from Store Permission Service to determine agreement for storage. E.g. \"validation\"\\s*:\\s*\"true\" or '(?<=patientName=)[^null].*?(?=,)'. Overwrites value specified on Device level.",
+      "title": "Patrón de respuesta del servicio de permiso de almacenamiento",
+      "description": "Expresión regular aplicada a las respuestas del servicio de permiso de almacenamiento para determinar el acuerdo de almacenamiento. Por ejemplo, \"validation\"s*:s*\"true\" o '(?<=patientName=)[^null].*?(?=,)'. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string"
     },
     "dcmStorePermissionServiceErrorCommentPattern": {
-      "title": "Store Permission Service Error Comment Pattern",
-      "description": "Regular Expression applied to responses from Store Permission Service to extract Error Comment. E.g. \"errorcomment\"\\s*:\\s*\"(.*)\". Overwrites value specified on Device level.",
+      "title": "Patrón de comentario de error del servicio de permiso de almacenamiento",
+      "description": "Expresión regular aplicada a las respuestas del servicio de permiso de almacenamiento para extraer el comentario de error. E.g. \"errorcomment\"\\s*:\\s*\"(.*)\". Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string"
     },
     "dcmStorePermissionServiceErrorCodePattern": {
-      "title": "Store Permission Service Error Code Pattern",
-      "description": "Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. \"errorcode\"\\s*:\\s*\"(\\p{XDigit}{4})\". Overwrites value specified on Device level.",
+      "title": "Patrón de código de error del servicio de permiso de almacenamiento",
+      "description": "Expresión regular aplicada a las respuestas del servicio de permiso de almacenamiento para extraer el código de error en hexadecimal. E.g. \"errorcode\"\\s*:\\s*\"(\\p{XDigit}{4})\". Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string"
     },
     "dcmStorePermissionServiceExpirationDatePattern": {
-      "title": "Store Permission Service Expiration Date Pattern",
-      "description": "Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. \"expirationdate\"\\s*:\\s*\"([0-9]{8})\". Overwrites value specified on Device level.",
+      "title": "Patrón de fecha de caducidad del servicio de permiso de almacenamiento",
+      "description": "Expresión regular aplicada a las respuestas del servicio de permiso de almacenamiento para extraer la fecha de caducidad inicial del estudio. E.g. \"expirationdate\"\\s*:\\s*\"([0-9]{8})\". Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string"
     },
     "dcmAllowRejectionForDataRetentionPolicyExpired": {
-      "title": "Allow Rejection For Data Retention Policy Expired",
-      "description": "Allow Rejection For Data Retention Policy Expired. Overwrites value specified on Device level.",
+      "title": "Permitir rechazo por política de retención de datos caducada",
+      "description": "Permitir rechazo por política de retención de datos caducada. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
         "NEVER",
@@ -492,16 +492,16 @@
       ]
     },
     "dcmAcceptedUserRole": {
-      "title": "Accepted User Role",
-      "description": "Roles of users from which web requests are accepted; any if absent.",
+      "title": "Rol de usuario aceptado",
+      "description": "Roles de los usuarios de los que se aceptan solicitudes web; cualquiera si está ausente.",
       "type": "array",
       "items" : {
         "type": "string"
       }
     },
     "dcmAllowDeleteStudyPermanently": {
-      "title": "Allow Delete Study permanently",
-      "description": "Allow to delete Study permanently. REJECTED = only already rejected Studies. Overwrites value specified on Device level.",
+      "title": "Permitir eliminar estudio permanentemente",
+      "description": "Permitir eliminar estudio permanentemente. RECHAZADO = sólo Estudios ya rechazados. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
         "ALWAYS",
@@ -509,8 +509,8 @@
       ]
     },
     "dcmAllowDeletePatient": {
-      "title": "Allow Delete Patient",
-      "description": "Allow permanent deletion of Patients. Enumerated values: NEVER, ALWAYS, WITHOUT_STUDIES. Overwrites value specified on Device level.",
+      "title": "Permitir eliminar paciente",
+      "description": "Permitir la eliminación permanente de pacientes. Valores enumerados: NUNCA, SIEMPRE, SIN_ESTUDIOS. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
         "NEVER",
@@ -519,25 +519,25 @@
       ]
     },
     "dcmDefaultCharacterSet": {
-      "title": "Default Character Set",
-      "description": "Value of Specific Character Set (0008,0005) added to Data Sets of C-STORE RQs and pending C-FIND RSPs without Specific Character Set (0008,0005) attribute received by this Network AE. Overwrites value specified on Device level.",
+      "title": "Conjunto de caracteres por defecto",
+      "description": "Valor del conjunto de caracteres específico (0008,0005) añadido a los conjuntos de datos de C-STORE RQ y C-FIND RSP pendientes sin atributo de conjunto de caracteres específico (0008,0005) recibidos por este AE de red. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "format": "dcmCharset"
     },
     "dcmMWLWorklistLabel": {
-      "title": "MWL Worklist Label",
-      "description": "Only consider MWL items with this or no Worklist Label (0074,1202) for matching by this Archive AE acting as MWP SCP. If absent, MWL items with any Value of Worklist Label (0074,1202) are considered for matching by this Archive AE acting as MWL SCP. Also, for MWL-RS Create / Update MWL, use this MWL Worklist Label as fall back, if Worklist Label (0074,1202) is missing or has no value in request payload - before falling back to *",
+      "title": "Etiqueta de lista de trabajo MWL",
+      "description": "Sólo se tienen en cuenta los elementos MWL con esta o ninguna etiqueta de lista de trabajo (0074,1202) para la correspondencia por parte de este AE de archivo que actúa como SCP MWP. Si no existe, los elementos MWL con cualquier valor de etiqueta de lista de trabajo (0074,1202) se tienen en cuenta para la correspondencia por parte de este AE de archivo que actúa como SCP MWL. Also, for MWL-RS Create / Update MWL, use this MWL Worklist Label as fall back, if Worklist Label (0074,1202) is missing or has no value in request payload - before falling back to *",
       "type": "string",
       "format": "dcmMWLWorklistLabel"
     },
     "dcmUPSWorklistLabel": {
-      "title": "UPS Worklist Label",
-      "description": "Value of Worklist Label (0074,1202) of created UPS by this Network AE, if the UPS Push SCU or UPS-RS User Agent does not provide a value for this attribute. If absent, the AE Title of the receiving AE will be used. Overwrites value specified on Device level.",
+      "title": "Etiqueta de la lista de trabajo de la UPS",
+      "description": "Valor de la etiqueta de la lista de trabajo (0074,1202) de la UPS creada por este AE de red, si la UPS Push SCU o el agente de usuario UPS-RS no proporciona un valor para este atributo. Si no existe, se utilizará el Título AE del AE receptor. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string"
     },
     "dcmUPSEventSCU": {
-      "title": "UPS Event SCU",
-      "description": "AE Title of UPS Event SOP Class SCU, to which UPS Event Reports are sent for subscriptions created on this Network AE  - independently if the subscription was created by the N-ACTION DIMSE service, or by a corresponding UPS RESTful service. Overwrites value specified on Device level.",
+      "title": "SCU de eventos UPS",
+      "description": "Título AE de la SCU de clase SOP de eventos UPS, a la que se envían los informes de eventos UPS para las suscripciones creadas en este AE de red - independientemente de si la suscripción fue creada por el servicio N-ACTION DIMSE, o por un servicio UPS RESTful correspondiente. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "array",
       "items": {
         "type": "string"
@@ -545,14 +545,14 @@
       "format": "dcmAETitle"
     },
     "dcmUPSEventSCUKeepAlive": {
-      "title": "UPS Event SCU Keep Alive",
-      "description": "Timeout in ms to keep associations to UPS Event SCUs alive. If absent, associations will not be reused for sending multiple UPS Event Reports to one UPS Event SCU. Overwrites value specified on Device level.",
+      "title": "Mantener Viva SCU de Sucesos UPS",
+      "description": "Tiempo de espera en ms para mantener vivas las asociaciones a SCUs de Sucesos UPS. Si no existe, las asociaciones no se reutilizarán para enviar varios informes de eventos de la UPS a una SCU de eventos de la UPS. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "integer",
       "minimum": 100
     },
     "dcmRetrieveAET": {
-      "title": "Retrieve AE Title",
-      "description": "Specifies Retrieve AE Titles associated with DICOM objects received by this Network AE. Overwrites value specified on Device level.",
+      "title": "Recuperar título AE",
+      "description": "Especifica Recuperar títulos AE asociados con objetos DICOM recibidos por este AE de red. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "array",
       "items": {
         "type": "string"
@@ -560,8 +560,8 @@
       "format": "dcmArchiveAETitle"
     },
     "dcmReturnRetrieveAET": {
-      "title": "Return Retrieve AE Title",
-      "description": "Retrieve AE Title returned in C-FIND and QIDO responses. If absent, the Retrieve AET associated with the archived entity will be returned. Overwrites value specified on Device level.",
+      "title": "Devuelve título AE recuperado",
+      "description": "Recuperar título AE devuelto en las respuestas C-FIND y QIDO. Si no existe, se devolverá el Retrieve AET asociado a la entidad archivada. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "array",
       "items": {
         "type": "string"
@@ -569,8 +569,8 @@
       "format": "dcmArchiveAETitle"
     },
     "dcmMultipleStoreAssociations": {
-      "title": "Multiple Store Associations",
-      "description": "Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. Examples : 2 or STORESCP:3 Supplements Multiple Store Associations specified on Device level.",
+      "title": "Asociaciones de almacenamiento múltiples",
+      "description": "Número de asociaciones de almacenamiento utilizadas para la recuperación de objetos compuestos. Los números específicos de C-STORE SCP pueden especificarse mediante el prefijo '<AETitle>:'. Ejemplos : 2 o STORESCP:3 Complementa múltiples asociaciones de almacén especificadas en el nivel de dispositivo.",
       "type": "array",
       "items": {
         "type": "string"
@@ -578,14 +578,14 @@
       "format": "dcmMultipleStoreAssociations"
     },
     "dcmExternalRetrieveAEDestination": {
-      "title": "External Retrieve AE Destination",
-      "description": "AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to external retrieve AE. Overwrites value specified on Device level.",
+      "title": "Destino del AE de recuperación externa",
+      "description": "AE Título del C-STORE-SCP local que se establecerá como destino de movimiento en los RQ de C-MOVE reenviados al AE de recuperación externa. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmCopyMoveUpdatePolicy": {
-      "title": "Copy Move Update Policy",
-      "description": "Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. Overwrites value specified on Device level.",
+      "title": "Política de actualización de copia/movimiento",
+      "description": "Especifica la política de actualización de atributos del estudio de destino al copiar/mover instancias de otro estudio. Si no existe, los atributos no se actualizarán. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "enum": [
         "PRESERVE",
@@ -596,8 +596,8 @@
       ]
     },
     "dcmLinkMWLEntryUpdatePolicy": {
-      "title": "Link MWL Entry Update Policy",
-      "description": "Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. Overwrites value specified on Device level.",
+      "title": "Política de actualización de entrada MWL de enlace",
+      "description": "Especifica la política de actualización de los atributos del estudio al enlazar instancias de otro estudio con una entrada MWL que hace referencia a un estudio existente. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "enum": [
         "PRESERVE",
@@ -608,8 +608,8 @@
       ]
     },
     "dcmStorageVerificationPolicy": {
-      "title": "Storage Verification Policy",
-      "description": "DB_RECORD_EXISTS: only check for existence of DB records, OBJECT_EXISTS: check if object exists on Storage System, OBJECT_SIZE: check size of object on Storage System, OBJECT_FETCH: fetch object from Storage System), OBJECT_CHECKSUM: recalculate checksum of object on Storage System, S3_MD5SUM: check MD5 checksum of object on S3 Storage System. Overwrites value specified on Device level.",
+      "title": "Política de verificación de almacenamiento",
+      "description": "EXISTE_REGISTRO_BD: sólo comprueba la existencia de registros de base de datos, EXISTE_ OBJETO: comprueba si el objeto existe en el sistema de almacenamiento, TAMAÑO_OBJETO: comprueba el tamaño del objeto en el sistema de almacenamiento, BUSCA_OBJETO: busca el objeto en el sistema de almacenamiento), SUMA_COMPROB_OBJETO: recalcula la suma de comprobación del objeto en el sistema de almacenamiento, SUMA_MD5_S3: comprueba la suma de comprobación MD5 del objeto en el sistema de almacenamiento S3. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
         "DB_RECORD_EXISTS",
@@ -621,97 +621,97 @@
       ]
     },
     "dcmStorageVerificationUpdateLocationStatus": {
-      "title": "Storage Verification Update Location Status",
-      "description": "Indicates if the Status of the Location DB record shall be updated on Storage Verification accordingly. Not effective with Storage Verification Policy: DB_RECORD_EXISTS. Overwrites value specified on Device level.",
+      "title": "Actualización del estado de la ubicación en la verificación de almacenamiento",
+      "description": "Indica si el estado del registro de la base de datos de ubicaciones debe actualizarse en la verificación de almacenamiento. No es efectivo con la política de verificación de almacenamiento: EXISTE_REGISTRO_BD. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "boolean"
     },
     "dcmStorageVerificationStorageID": {
-      "title": "Storage Verification Storage IDs",
-      "description": "Only accept Storage Verification if the validation of the storage of the object on one of the specified Storage Systems is successful. Not effective with Storage Verification Policy: DB_RECORD_EXISTS. Overwrites values specified on Device level.",
+      "title": "Verificación de almacenamiento ID de almacenamiento",
+      "description": "Sólo acepta la verificación de almacenamiento si la validación del almacenamiento del objeto en uno de los sistemas de almacenamiento especificados es correcta. No es efectivo con la Política de Verificación de Almacenamiento: *EXISTE_REGISTRO_BD. Sobrescribe los valores especificados en el nivel Dispositivo.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationInitialDelay": {
-      "title": "Storage Verification Initial Delay",
-      "description": "Delay in ISO-8601 duration format PnYnMnD or PnW of first Storage Verification of a Series after it was received. Overwrites values specified on Device level.",
+      "title": "Retraso inicial de verificación de almacenamiento",
+      "description": "Retraso en formato de duración ISO-8601 PnYnMnD o PnW de la primera verificación de almacenamiento de una serie tras su recepción. Sobrescribe los valores especificados a nivel de Dispositivo.",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmUpdateLocationStatusOnRetrieve": {
-      "title": "Update Location Status on Retrieve",
-      "description": "Indicates if the Status of the Location DB record shall be updated for objects failed to get fetched from storage on retrieve to MISSING_OBJECT or FAILED_TO_FETCH_OBJECT. Overwrites value specified on Device level.",
+      "title": "Actualizar estado de ubicación al recuperar",
+      "description": "Indica si se debe actualizar el estado del registro de la base de datos de ubicaciones para los objetos que no se han podido obtener del almacenamiento al recuperarlos a OBJETO_FALTANTE o FALLO_AL OBTENER_OBJETO. Sobrescribe el valor especificado a nivel de dispositivo.",
       "type": "boolean"
     },
     "dcmStorageVerificationOnRetrieve": {
-      "title": "Storage Verification on Retrieve",
-      "description": "Indicates if failures to fetch an object from Storage on retrieve shall trigger a Storage Verification of the whole Series. Overwrites value specified on Device level.",
+      "title": "Verificación de almacenamiento al recuperar",
+      "description": "Indica si los fallos al recuperar un objeto del almacenamiento deben activar una verificación de almacenamiento de toda la serie. Sobrescribe el valor especificado a nivel de dispositivo.",
       "type": "boolean"
     },
     "hl7PSUSendingApplication": {
-      "title": "HL7 Procedure Status Update Sending Application",
-      "description": "Application|Facility name of Sending Application for HL7 Procedure Status Update. Overwrites value specified on Device level.",
+      "title": "Actualización de estado de procedimiento HL7 Aplicación de envío",
+      "description": "Aplicación|Nombre de la aplicación de envío para la actualización de estado de procedimiento HL7. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "format": "hl7ApplicationName"
     },
     "hl7PSUReceivingApplication": {
-      "title": "HL7 Procedure Status Update Receiving Application",
-      "description": "Application|Facility name of Receiving Application for HL7 Procedure Status Update. Overwrites value specified on Device level.",
+      "title": "Actualización de estado de procedimiento HL7 Aplicación receptora",
+      "description": "Aplicación|Nombre de la aplicación receptora para la actualización de estado de procedimiento HL7. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
     "hl7PSUDelay": {
-      "title": "HL7 Procedure Status Update Delay",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS. Overwrites value specified on Device level.",
+      "title": "Demora de actualización de estado de procedimiento HL7",
+      "description": "Demora en formato de duración ISO-8601 PnDTnHnMn.nS tras la cual se envía una actualización de estado de procedimiento HL7 para un estudio recibido a los receptores HL7 configurados. Si no existe, la actualización del estado del procedimiento HL7 es activada por el MPPS recibido. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "format": "dcmDuration"
     },
     "hl7PSUStudyTemplateURI": {
-      "title": "HL7 Procedure Status Update Study Template URI",
-      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. Overwrites value specified on Device level.",
+      "title": "URI",
+      "description": "URL de la hoja de estilo XSL para crear un mensaje HL7v2 que notifique a los receptores HL7 configurados los cambios de estado de los procedimientos solicitados desencadenados por el estudio recibido. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string"
     },
     "hl7PSUTimeout": {
-      "title": "HL7 Procedure Status Update Timeout",
-      "description": "Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS. Overwrites value specified on Device level.",
+      "title": "Tiempo de espera de actualización de estado de procedimiento HL7",
+      "description": "Tiempo de espera en formato de duración ISO-8601 PnDTnHnMn.nS para esperar la recepción de instancias referenciadas en MPPS. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "format": "dcmDuration"
     },
     "hl7PSUOnTimeout": {
-      "title": "HL7 Procedure Status Update On Timeout",
-      "description": "Specifies if the HL7 Procedure Status Update is sent if the timeout for waiting on receive of instances referenced is exceeded. Overwrites value specified on Device level.",
+      "title": "Actualización de estado de procedimiento HL7 en tiempo de espera",
+      "description": "Especifica si se envía la actualización de estado de procedimiento HL7 si se supera el tiempo de espera para la recepción de instancias referenciadas. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "hl7PSUMppsTemplateURI": {
-      "title": "HL7 Procedure Status Update MPPS Template URI",
-      "description": "URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by MPPS. Overwrites value specified on Device level.",
+      "title": "URI de plantilla MPPS de actualización de estado de procedimiento HL7",
+      "description": "URL de la hoja de estilo XSL para crear un mensaje HL7v2 que notifique a los receptores HL7 configurados los cambios de estado de los procedimientos solicitados activados por MPPS. Overwrites value specified on Device level.",
       "type": "string"
     },
     "hl7PSUCondition": {
-      "title": "HL7 Procedure Status Update Conditions",
-      "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update by conditions on attributes of received composite object in format {key}[!]={value}. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">applicability, format and some examples</a>. Overwrites value specified on Device level.",
+      "title": "Condiciones de actualización del estado del procedimiento HL7",
+      "description": "Restringir la notificación de las aplicaciones receptoras de actualización del estado del procedimiento HL7 configuradas sobre la actualización del estado del procedimiento mediante condiciones en los atributos del objeto compuesto recibido en formato {key}[!]={value}. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">applicability, format and some examples</a>. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7PSUForRequestedProcedure": {
-      "title": "HL7 Procedure Status Update for Requested Procedure",
-      "description": "Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update to existence of Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. Overwrites value specified on Device level.",
+      "title": "Actualización de estado de procedimiento HL7 para procedimiento solicitado",
+      "description": "Notificación restringida de la actualización de estado de procedimiento HL7 configurada Aplicaciones receptoras sobre actualización de estado de procedimiento a la existencia de pasos de procedimiento programados de un procedimiento solicitado (elementos MWL en la base de datos) con UID de instancia de estudio coincidente. Sobrescribe el valor especificado a nivel de Dispositivo",
       "type": "boolean"
     },
     "hl7PSUTemplateParam": {
-      "title": "HL7 Procedure Status Update Template Parameters",
-      "description": "XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID,hash}' or 'AccessionNumber={0020000D,hash}'. Overwrites value specified on Device level.",
+      "title": "Parámetros de Plantilla de Actualización de Estado de Procedimiento HL7",
+      "description": "Parámetros XSLT en formato {attributeID}={value} pasados a la hoja de estilo especificada por URI de Plantilla MPPS de Actualización de Estado de Procedimiento HL7 o URI de Plantilla de Estudio de Actualización de Estado de Procedimiento HL7. {attributeID} dentro de {value} se sustituirá por el valor de ese atributo en el conjunto de datos original. Por ejemplo: 'RequestedProcedureID={StudyInstanceUID,hash}' o 'AccessionNumber={0020000D,hash}'. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7PSUMessageType": {
-      "title": "HL7 Procedure Status Update Message Type",
-      "description": "Message Type of HL7 Procedure Status Update message. Overwrites value specified on Device level.",
+      "title": "Tipo de mensaje de actualización de estado de procedimiento HL7",
+      "description": "Tipo de mensaje de actualización de estado de procedimiento HL7. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "enum": [
         "OMG_O19",
@@ -720,18 +720,18 @@
       ]
     },
     "hl7PSUPIDPV1": {
-      "title": "HL7 Procedure Status Update PID PV1",
-      "description": "Indicates to include a Patient Identification (PID) and a Patient Visit (PV1) segment in the HL7 Procedure Status Update message. Implicitly set, if HL7 Procedure Status Message Type = ORU_R01. Overwrites value specified on Device level.",
+      "title": "Actualización de estado de procedimiento HL7 PID PV1",
+      "description": "Indica que se incluya una identificación de paciente (PID) y un segmento de visita de paciente (PV1) en el mensaje de actualización de estado de procedimiento HL7. Implícitamente establecido, si el Tipo de Mensaje de Estado de Procedimiento HL7 = ORU_R01. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "hl7PSUMWL": {
-      "title": "HL7 Procedure Status Update MWL",
-      "description": "Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. Implicitly set to true, if notification to HL7 receivers is configured, triggered by received studies associated with MWL. Overwrites value specified on Device level.",
+      "title": "Actualización de Estado de Procedimiento HL7 MWL",
+      "description": "Especifica si el Estado de los Elementos MWL en la BD se actualiza a COMPLETADO para un estudio recibido después del Retraso de Actualización de Estado de Procedimiento HL7 configurado. Se establece implícitamente en verdadero, si se configura la notificación a los receptores HL7, activada por los estudios recibidos asociados con MWL. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "hl7PSUMWLMatchingKey": {
-      "title": "HL7 Procedure Status Update MWL Matching Key",
-      "description": "Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level.",
+      "title": "Clave de Coincidencia de Actualización de Estado de Procedimiento HL7 MWL",
+      "description": "Especifica el atributo del objeto recibido para buscar el Elemento MWL cuyo estado debe actualizarse a COMPLETADO. Sólo es aplicable si 'HL7 Actualización de Estado de Procedimiento MWL' está configurado como o implícitamente como verdadero. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
         "AccessionNumber",
@@ -739,45 +739,45 @@
       ]
     },
     "dcmRelationalQueryNegotiationLenient": {
-      "title": "Relational Query Negotiation Lenient",
-      "description": "Indicates to accept C-FIND RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. Overwrites value specified on Device level.",
+      "title": "Negociación de consultas relacionales flexibles",
+      "description": "Indica que se deben aceptar RQ C-FIND sin claves únicas para niveles superiores al nivel de consulta, incluso si no se ha negociado la compatibilidad con consultas relacionales. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "dcmRelationalRetrieveNegotiationLenient": {
-      "title": "Relational Retrieve Negotiation Lenient",
-      "description": "Indicates to accept C-MOVE and C-GET RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. Overwrites value specified on Device level. Overwrites value specified on Device level.",
+      "title": "Negociación de Recuperación Relacional Leniente",
+      "description": "Indica que se acepten RQs C-MOVE y C-GET sin claves únicas para niveles por encima del nivel de consulta también si el soporte para consultas relacionales no fue negociado. Sobrescribe el valor especificado en el nivel de dispositivo. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "dcmRestrictRetrieveSilently": {
-      "title": "Restrict Retrieve Silently",
-      "description": "Indicates if the set of requested objects to retrieve shall be silently (=without counting not transferred object as failures) restricted according the Transfer Capabilities of the Retrieve Destination. Otherwise the number of requested objects for which no Transfer Capability is configured for the Retrieve Destination and therefore are not retrieved is counted as failures. Only effective, if the Retrieve Destination has configured at least one Transfer Capability with SCP role. Overwrites value specified on Device level.",
+      "title": "Restringir recuperación silenciosamente",
+      "description": "Indica si el conjunto de objetos solicitados para recuperar se restringirá silenciosamente (=sin contar los objetos no transferidos como fallos) según las capacidades de transferencia del destino de recuperación. De lo contrario, el número de objetos solicitados para los que no se ha configurado ninguna capacidad de transferencia en el destino de recuperación y que, por lo tanto, no se recuperan, se cuenta como errores. Sólo es efectivo si el destino de recuperación ha configurado al menos una capacidad de transferencia con función SCP. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "boolean"
     },
     "dcmRejectConflictingPatientAttribute": {
-      "title": "Reject Conflicting Patient Attribute",
-      "description": "DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted. Overwrites value specified on Device level.",
+      "title": "Rechazar atributo del paciente en conflicto",
+      "description": "Etiqueta IDCOM del atributo del paciente que debe coincidir en los objetos recibidos con el valor de los objetos recibidos anteriormente con el mismo ID de paciente para ser aceptado. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
-      "title": "STOW Retired Transfer Syntax",
-      "description": "Store received JPEG Full Progression, Non-Hierarchical JPEG images in DICOM images with corresponding (retired) Transfer Syntax UID 1.2.840.10008.1.2.4.55. Otherwise set 1.2.840.10008.1.2.4.50 (= JPEG Baseline) or 1.2.840.10008.1.2.4.51 (= JPEG Extended) as Transfer Syntax UID of the stored DICOM image, without transcoding to JPEG Baseline or JPEG Extended, but including the JPEG image as received. Overwrites value specified on Device level.",
+      "title": "STOW Sintaxis de transferencia retirada",
+      "description": "Almacenar las imágenes JPEG no jerárquicas de progresión completa recibidas en imágenes DICOM con el correspondiente UID de sintaxis de transferencia (retirada) 1.2.840.10008.1.2.4.55. De lo contrario, establezca 1.2.840.10008.1.2.4.50 (= JPEG Baseline) o 1.2.840.10008.1.2.4.51 (= JPEG Extended) como UID de Sintaxis de Transferencia de la imagen DICOM almacenada, sin transcodificación a JPEG Baseline o a JPEG Extendido, pero incluyendo la imagen JPEG tal como se recibió. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "dcmStowExcludeAPPMarkers": {
-      "title": "STOW Exclude Application Markers",
-      "description": "Indicates if APP markers in JPEG images received in STOW-RS Metadata and Bulkdata requests shall be excluded from the JPEG bit streams encapsulated in created DICOM instances. Overwrites value specified on Device level.",
+      "title": "Excluir marcadores de aplicación STOW",
+      "description": "Indica si los marcadores APP de las imágenes JPEG recibidas en las solicitudes STOW-RS Metadata y Bulkdata deben excluirse de las secuencias de bits JPEG encapsuladas en las instancias DICOM creadas. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "dcmStowQuicktime2MP4": {
-      "title": "STOW Quicktime to MP4",
-      "description": "Indicates if QuickTime containers received in STOW-RS Metadata and Bulkdata requests shall be converted to MP4 containers encapsulated in created DICOM instances. The conversion requires that ffmpeg is installed and the ffmpeg CLI utility is available in the PATH. Otherwise Quicktime containers will get encapsulated in the stored DICOM object verbatim, with a declared DICOM MPEG-4 Transfer Syntax which reflects the encoding of the video stream in the container, but contradicts the actual container format. Overwrites value specified on Device level.",
+      "title": "De STOW Quicktime a MP4",
+      "description": "Indica si los contenedores QuickTime recibidos en las solicitudes STOW-RS Metadata y Bulkdata se convertirán en contenedores MP4 encapsulados en instancias DICOM creadas. La conversión requiere que ffmpeg esté instalado y que la utilidad ffmpeg CLI esté disponible en el PATH. De lo contrario, los contenedores Quicktime se encapsularán literalmente en el objeto DICOM almacenado, con una Sintaxis de Transferencia DICOM MPEG-4 declarada que refleja la codificación del flujo de vídeo en el contenedor, pero contradice el formato real del contenedor. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "dcmStowMaxFragmentLength": {
-      "title": "STOW Maximum Fragment Length",
-      "description": "Maximum length of data fragments of encapsulated JPEG/MPEG stream in stored DICOM object. If the received JPEG/MPEG stream exceeds that value, it will be split into several fragments, using a Fragmentable Encapsulated Transfer Syntax. Valid range: 1024..4294967294. Overwrites value specified on Device level.",
+      "title": "Longitud máxima de fragmento STOW",
+      "description": "Longitud máxima de los fragmentos de datos del flujo JPEG/MPEG encapsulado en el objeto DICOM almacenado. Si el flujo JPEG/MPEG recibido supera ese valor, se dividirá en varios fragmentos, utilizando una sintaxis de transferencia encapsulada fragmentable. Rango válido: 1024..4294967294. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "integer",
       "minimum": 1024,
       "exclusiveMinimum": false,
@@ -785,34 +785,34 @@
       "exclusiveMaximum": false
     },
     "dcmRetrieveTaskWarningOnNoMatch": {
-      "title": "Retrieve Task Warning on no Match",
-      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if none of the requested objects was found on the C-MOVE SCP. Overwrites value specified on Device level.",
+      "title": "Recuperar advertencia de tarea si no hay coincidencias",
+      "description": "Indica si el estado del resultado de las tareas de recuperación debe ser ADVERTENCIA si no se ha encontrado ninguno de los objetos solicitados en el SCP de C-MOVE. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "dcmRetrieveTaskWarningOnWarnings": {
-      "title": "Retrieve Task Warning on Warnings",
-      "description": "Indicates if the result status of Retrieve Tasks shall be set to WARNING if there are Warning Sub-Operations, even if the retrieve of all objects was successful. Overwrites value specified on Device level",
+      "title": "Recuperar advertencia de tarea en advertencias",
+      "description": "Indica si el estado del resultado de las tareas de recuperación se establecerá en ADVERTENCIA si hay suboperaciones de advertencia, aunque la recuperación de todos los objetos se haya realizado correctamente. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "boolean"
     },
     "dcmChangeRequesterAET": {
-      "title": "Change Requester AET",
-      "description": "Indicates change requester AET in rejections triggered by archive. Overwrites value specified on Device level.",
+      "title": "AET del solicitante de cambios",
+      "description": "Indica el AET del solicitante de cambios en los rechazos activados por el archivo. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmFilterByIssuerOfPatientID": {
-      "title": "Filter by Issuer of Patient ID",
-      "description": "Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. Overwrites value specified on Device level.",
+      "title": "Filtrar por emisor de ID de paciente",
+      "description": "Filtra por emisor de ID de paciente aunque no se especifique ninguna clave coincidente para ID de paciente. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "dcmMatchSOPClassOnInstanceLevel": {
-      "title": "Match SOP Class on Instance level",
-      "description": "Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. Overwrites value specified on Device level.",
+      "title": "Emparejar Clase SOP a nivel de Instancia",
+      "description": "Indica que se considere el UID de Clase SOP a nivel de Instancia para el cálculo de coincidencias con Clases SOP en Estudio (0008,0062); de lo contrario, confía en el UID de Clase SOP almacenado a nivel de Serie, lo que puede hacer que falten coincidencias si una Serie incluye Instancias de diferentes Clases SOP. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
     "dcmUPSUpdateWithoutTransactionUID": {
-      "title": "UPS Update Without Transaction UID",
-      "description": "Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. Overwrites value specified on Device level.",
+      "title": "Actualización UPS sin UID de transacción",
+      "description": "Indica que se permite a una UPS Pull SCU o a un cliente UPS-RS Web actualizar o cambiar el estado de un elemento de trabajo UPS en estado EN PROCESO sin especificar una UID de transacción. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "boolean"
     },
     "dcmUPS2MWLCFindSCP": {
@@ -821,8 +821,8 @@
       "type": "boolean"
     },
     "dcmExportRule": {
-      "title": "Export Rule",
-      "description": "Export Rules applied to DICOM objects received by this AE. Supplements Export Rules specified on Device level.",
+      "title": "Regla de exportación",
+      "description": "Reglas de exportación aplicadas a los objetos DICOM recibidos por este AE. Complementa las reglas de exportación especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -830,8 +830,8 @@
       }
     },
     "dcmExportPriorsRule": {
-      "title": "Export Priors Rule",
-      "description": "Export Priors Rules applied to DICOM objects received by this AE. Supplements Export Priors Rules specified on Device level.",
+      "title": "Regla de Prioridades de Exportación",
+      "description": "Reglas de Prioridades de Exportación aplicadas a los objetos DICOM recibidos por este AE. Complementa las reglas de exportación especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -839,8 +839,8 @@
       }
     },
     "dcmMPPSForwardRule": {
-      "title": "MPPS Forward Rule",
-      "description": "MPPS Forward Rules applied to MPPS received by this AE. Supplements MPPS Forward Rules specified on Device level.",
+      "title": "Regla de reenvío MPPS",
+      "description": "Reglas de reenvío MPPS aplicadas a los MPPS recibidos por este AE. Complementa las reglas de transmisión MPPS especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -848,8 +848,8 @@
       }
     },
     "dcmRSForwardRule": {
-      "title": "RESTful Forward Rule",
-      "description": "RESTful Forward Rules. Supplements RESTful Forward rules specified on Device level.",
+      "title": "Regla de reenvío RESTful",
+      "description": "Reglas de reenvío RESTful. Complementa las reglas de reenvío RESTful especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -857,8 +857,8 @@
       }
     },
     "dcmArchiveCompressionRule": {
-      "title": "Compression rule",
-      "description": "Compression rules. Supplements Compression rules specified on Device level.",
+      "title": "Regla de compresión",
+      "description": "Reglas de compresión. Complementa las reglas de compresión especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -866,8 +866,8 @@
       }
     },
     "dcmArchiveAttributeCoercion": {
-      "title": "Attribute Coercion (Legacy)",
-      "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
+      "title": "Coerción de atributos (Legado)",
+      "description": "Coerción de atributos de DIMSE recibidos/enviados. Complementa las coerciones de atributos especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -875,8 +875,8 @@
       }
     },
     "dcmArchiveAttributeCoercion2": {
-      "title": "Attribute Coercion (New)",
-      "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
+      "title": "Coerción de atributos (nuevo)",
+      "description": "Coerción de atributos de DIMSE recibidos/enviados. Complementa las coerciones de atributos especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -884,8 +884,8 @@
       }
     },
     "dcmStudyRetentionPolicy": {
-      "title": "Study Retention Policy",
-      "description": "Study Retention Policies. Supplements Study Retention Policies specified on Device level.",
+      "title": "Política de retención de estudios",
+      "description": "Políticas de retención de estudios. Complementa las políticas de retención de estudios especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey": "{cn}",
       "items": {
@@ -893,8 +893,8 @@
       }
     },
     "dcmStoreAccessControlIDRule": {
-      "title": "Store Access Control Rules",
-      "description": "Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level.",
+      "title": "Reglas de control de acceso al almacén",
+      "description": "Reglas de control de acceso al almacén aplicadas a los estudios recibidos por este AE. Complementa las reglas de control de acceso al almacén especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey":"{cn}",
       "items" : {
@@ -902,8 +902,8 @@
       }
     },
     "dcmUPSOnStore": {
-      "title": "UPS on Store Rule",
-      "description": "UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level.",
+      "title": "Regla UPS en almacén",
+      "description": "Reglas UPS en almacén aplicadas a los objetos DICOM recibidos por este AE. Complementa las reglas UPS on Store especificadas a nivel de dispositivo.",
       "type": "array",
       "titleKey":"{dcmUPSOnStoreID}",
       "items" : {
@@ -911,8 +911,8 @@
       }
     },
     "dcmUPSOnUPSCompleted": {
-      "title": "UPS on UPS Completed Rules",
-      "description": "UPS on UPS Completed Rules applied to UPS managed by this AE. Supplements UPS on UPS Completed Rules specified on Device level.",
+      "title": "Reglas UPS en UPS completadas",
+      "description": "Reglas UPS en UPS completadas aplicadas a UPS gestionadas por este AE. Complementa las reglas UPS en UPS completadas especificadas en el nivel de dispositivo.",
       "type": "array",
       "titleKey": "{dcmUPSOnUPSCompletedID}",
       "items": {

@@ -1,6 +1,6 @@
 {
-  "title": "UPS on HL7",
-  "description": "Create/Update Workitem in unified Worklist on receive of HL7v2 message",
+  "title": "UPS en HL7",
+  "description": "Crear/Actualizar Elemento de Trabajo en Lista de Trabajo unificada al recibir mensaje HL7v2.",
   "type": "object",
   "required": [
     "cn",
@@ -13,21 +13,21 @@
   ],
   "properties": {
     "hl7UPSOnHL7ID": {
-      "title": "UPS on HL7 ID",
-      "description": "ID of UPS on HL7 Rule",
+      "title": "ID de UPS en HL7",
+      "description": "ID de UPS en regla HL7.",
       "type": "string"
     },
     "dcmProperty": {
       "title": "Conditions",
-      "description": "Conditions in format <SEG>-<Seq#>[.<Comp#>[.<SubComp#>]][!]=<regEx>. Example: MSH-4=FORWARD or MSH-9=ORM\\^O01 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "description": "Condiciones en formato <SEG>-<Seq#>[.<Comp#>[.<SubComp#>]][!]=<regEx>. Ejemplo: MSH-4=FORWARD o MSH-9=ORM\\^O01 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmSchedule": {
-      "title": "Time Conditions",
-      "description": "Apply this rule only within specified time ranges.",
+      "title": "Condiciones temporales",
+      "description": "Aplique esta regla sólo dentro de los intervalos de tiempo especificados.",
       "type": "array",
       "items": {
         "type": "string"
@@ -35,18 +35,18 @@
       "format": "dcmSchedule"
     },
     "dcmUPSLabel": {
-      "title": "Procedure Step Label",
-      "description": "Value of Procedure Step Label (0074,1204) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "Etiqueta de paso de procedimiento",
+      "description": "Valor de la etiqueta de paso de procedimiento (0074,1204) en el UPS creado. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} será sustituido por el valor de ese campo en el mensaje HL7 recibido. Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmUPSWorklistLabel": {
-      "title": "Worklist Label",
-      "description": "Value of Worklist Label (0074,1202) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent or if value could not be found in HL7 Message, HL7 Application Name of the receiving HL7 Application will be used. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "Etiqueta de la lista de trabajo",
+      "description": "Valor de la etiqueta de la lista de trabajo (0074,1202) en el UPS creado. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} será sustituido por el valor de ese campo en el mensaje HL7 recibido. Si está ausente o si no se puede encontrar el valor en el mensaje HL7, se utilizará el nombre de aplicación HL7 de la aplicación HL7 receptora. Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmUPSPriority": {
-      "title": "Priority",
-      "description": "Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.",
+      "title": "Prioridad",
+      "description": "Valor de la Prioridad del Paso de Procedimiento Programado (0074,1200) en el UPS creado. Valores Enumerados: ALTA, MEDIA, BAJA. Si no existe, se aplicará MEDIO.",
       "type": "string",
       "default": "MEDIUM",
       "enum": [
@@ -56,8 +56,8 @@
       ]
     },
     "dcmUPSInputReadinessState": {
-      "title": "Input Readiness State",
-      "description": "Value of Input Readiness State (0040,4041) in created UPS",
+      "title": "Estado de disponibilidad de entrada",
+      "description": "Valor del estado de disponibilidad de entrada (0040,4041) en el UPS creado.",
       "type": "string",
       "default": "READY",
       "enum": [
@@ -67,135 +67,135 @@
       ]
     },
     "dcmUPSStartDateTimeDelay": {
-      "title": "Scheduled Procedure Step Start DateTime Delay",
-      "description": "Delay of Scheduled Procedure Step Start DateTime (0040,4005) in created UPS from receive time in format PnDTnHnMn.nS. Only effective, if no Scheduled Procedure Step Start DateTime is found in HL7 Message.",
+      "title": "Retraso de la Hora de Inicio del Paso Programado del Procedimiento",
+      "description": "Retraso de la Hora de Inicio del Paso Programado del Procedimiento (0040,4005) en UPS creado desde la hora de recepción en formato PnDTnHnMn.nS. Sólo es efectivo si no se encuentra ninguna hora de inicio de paso de procedimiento programado en el mensaje HL7.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmUPSCompletionDateTimeDelay": {
-      "title": "Expected Completion DateTime Delay",
-      "description": "Delay of Expected Completion DateTime (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.",
+      "title": "Retraso de la Fecha y Hora de Finalización Esperada",
+      "description": "Retraso de la Fecha y Hora de Finalización Esperada (0040,4011) en UPS creado a partir de la hora de recepción en formato PnDTnHnMn.nS. Si no existe, no se establecerá ninguna Fecha y Hora de Finalización Esperada.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmUPSInstanceUIDBasedOnName": {
-      "title": "UPS Instance UID based on name",
-      "description": "Value used to generate name based SOP Instance UID (0008,0018) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent, a random generated SOP Instance UID (0008,0018) will be used. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "Instancia UPS UID basada en el nombre",
+      "description": "Valor utilizado para generar la Instancia SOP UID basada en el nombre (0008,0018) en la UPS creada. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} se sustituirá por el valor de ese campo en el mensaje HL7 recibido. Si no existe, se utilizará un UID de instancia SOP generado aleatoriamente (0008,0018). Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmDestinationAE": {
-      "title": "Destination AE",
-      "description": "Title of a DICOM Application Entity to which Instances will be stored.",
+      "title": "AE de Destino",
+      "description": "Título de una Entidad de Aplicación DICOM en la que se almacenarán las Instancias.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmUPSScheduledWorkitemCode": {
-      "title": "Scheduled Workitem Code",
-      "description": "Item of Scheduled Workitem Code Sequence (0040,4018) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "Código de elemento de trabajo programado",
+      "description": "Elemento de la secuencia de códigos de elementos de trabajo programados (0040,4018) en el UPS creado en formato (CV, CSD, \"CM\").",
       "type": "string"
     },
     "dcmUPSScheduledStationNameCode": {
-      "title": "Scheduled Station Name Code",
-      "description": "Item of Scheduled Station Name Code Sequence (0040,4025) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "Código de nombre de estación programada",
+      "description": "Elemento de la secuencia de códigos de nombre de estación programada (0040,4025) en el UPS creado en formato (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmUPSScheduledStationClassCode": {
-      "title": "Scheduled Station Class Code",
-      "description": "Item of Scheduled Station Class Code Sequence (0040,4026) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "Código de clase de estación programada",
+      "description": "elemento de la secuencia de códigos de clase de estación programada (0040,4026) en el UPS creado en formato (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmUPSScheduledStationLocationCode": {
-      "title": "Scheduled Station Geographic Location Code",
-      "description": "Item of Scheduled Station Geographic Location Code Sequence (0040,4027) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "Código de localización geográfica de la estación programada",
+      "description": "Punto de la secuencia de códigos de localización geográfica de la estación programada (0040,4027) en el UPS creado en formato (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmUPSScheduledHumanPerformerCode": {
-      "title": "Scheduled Human Performer Code",
-      "description": "Item of Human Performer Code Sequence (0040,4009) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS in format (CV, CSD, \"CM\").",
+      "title": "Código de ejecutante humano programado",
+      "description": "Elemento de la secuencia de códigos de ejecutantes humanos (0040,4009) en Elemento de la secuencia de ejecutantes humanos programados (0040,4034) en el UPS creado en formato (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmUPSScheduledHumanPerformerName": {
-      "title": "Scheduled Human Performer Name",
-      "description": "Value of Human Performer's Name (0040,4037) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "Nombre del ejecutante humano programado",
+      "description": "Valor del nombre del ejecutante humano (0040,4037) en el elemento de la secuencia de ejecutantes humanos programados (0040,4034) en el UPS creado. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} será sustituido por el valor de ese campo en el mensaje HL7 recibido. Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmUPSScheduledHumanPerformerOrganization": {
-      "title": "Scheduled Human Performer Organization",
-      "description": "Value of Human Performer's Organization (0040,4036) in Item of Scheduled Human Performers Sequence (0040,4034) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "Organización del ejecutante humano programado",
+      "description": "Valor de la organización del ejecutante humano (0040,4036) en el elemento de la secuencia de ejecutantes humanos programados (0040,4034) en el UPS creado. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} será sustituido por el valor de ese campo en el mensaje HL7 recibido. Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmUPSIncludeStudyInstanceUID": {
-      "title": "Include Study Instance UID",
-      "description": "Indicates if Study Instance UID (0020,000D) in the received HL7 message shall be included in the created UPS",
+      "title": "Incluir UID de instancia de estudio",
+      "description": "Indica si la UID de instancia de estudio (0020,000D) del mensaje HL7 recibido se incluirá en el UPS creado.",
       "type": "boolean",
       "default": false
     },
     "dcmUPSIncludeReferencedRequest": {
-      "title": "Include Referenced Request",
-      "description": "Indicates if the Study Instance UID (0020,000D) in the received HL7 message and the specified Accession Number (0008,0050), Requested Procedure ID (0040,1001) and Requesting Service (0032,1033) shall be included in the item of the Referenced Request Sequence (0040,A370) in the created UPS. Otherwise an empty Referenced Request Sequence (0040,A370) is included.",
+      "title": "Incluir solicitud referenciada",
+      "description": "Indica si el UID de la instancia del estudio (0020,000D) en el mensaje HL7 recibido y el número de acceso (0008,0050), el ID del procedimiento solicitado (0040,1001) y el servicio solicitante (0032,1033) especificados se incluirán en el elemento de la secuencia de solicitud referenciada (0040,A370) en el UPS creado. En caso contrario, se incluirá una Secuencia de Solicitud Referenciada (0040,A370) vacía.",
       "type": "boolean",
       "default": false
     },
     "dcmStudyInstanceUID": {
-      "title": "Study Instance UID",
-      "description": "Value of Study Instance UID (0020,000D) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "UID de instancia de estudio",
+      "description": "Valor del UID de instancia de estudio (0020,000D) en el elemento de la secuencia de solicitud referenciada (0040,A370) en la UPS creada. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} será sustituido por el valor de ese campo en el mensaje HL7 recibido. Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmAdmissionID": {
-      "title": "Admission Number",
-      "description": "Value of Admission ID (0038,0010) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "Número de admisión",
+      "description": "Valor del ID de admisión (0038,0010) en el SAI creado. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} será sustituido por el valor de ese campo en el mensaje HL7 recibido. Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dicomIssuerOfAdmissionID": {
-      "title": "Issuer of Admission ID",
-      "description": "Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) of the Item of the Issuer of Admission ID Sequence (0038,0014) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "title": "ID de Emisor de Admisión",
+      "description": "Valor del ID de Entidad del Espacio de Nombres Local (0040,0031), ID de Entidad Universal (0040,0032) y Tipo de ID de Entidad Universal (0040,0033) del Elemento de la Secuencia ID de Emisor de Admisión (0038,0014) en UPS creado. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>].",
       "type": "string"
     },
     "dcmAccessionNumber": {
-      "title": "Accession Number",
-      "description": "Value of Accession Number (0008,0050) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "Número de acceso",
+      "description": "Valor del número de acceso (0008,0050) en el elemento de la secuencia de solicitud referenciada (0040,A370) en el UPS creado. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} será sustituido por el valor de ese campo en el mensaje HL7 recibido. Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dicomIssuerOfAccessionNumber": {
-      "title": "Issuer of Accession Number",
-      "description": "Value of Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) and Universal Entity ID Type (0040,0033) in Item of Issuer of Accession Number Sequence (0008,0051) in Item of Referenced Request Sequence (0040,A370) in created UPS. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "title": "Emisor del número de acceso",
+      "description": "Valor del ID de entidad del espacio de nombres local (0040,0031), ID de entidad universal (0040,0032) y tipo de ID de entidad universal (0040,0033) en el elemento de la secuencia del emisor del número de acceso (0008,0051) en el elemento de la secuencia de solicitud referenciada (0040,A370) en el SAI creado. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>].",
       "type": "string"
     },
     "dcmRequestedProcedureID": {
-      "title": "Requested Procedure ID",
-      "description": "Value of Requested Procedure ID (0040,1001) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "ID del procedimiento solicitado",
+      "description": "Valor del ID del procedimiento solicitado (0040,1001) en el elemento de la secuencia de solicitud referenciada (0040,A370) en el UPS creado. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} se sustituirá por el valor de ese campo en el mensaje HL7 recibido. Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmRequestedProcedureDescription": {
-      "title": "Requested Procedure Description",
-      "description": "Value of Requested Procedure Description (0032,1060) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "Descripción del procedimiento solicitado",
+      "description": "Valor de la descripción del procedimiento solicitado (0032,1060) en el elemento de la secuencia de solicitud referenciada (0040,A370) en el UPS creado. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} se sustituirá por el valor de ese campo en el mensaje HL7 recibido. Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmRequestingPhysician": {
-      "title": "Requesting Physician",
-      "description": "Value of Requesting Physician (0032,1032) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "Médico solicitante",
+      "description": "Valor del médico solicitante (0032,1032) en el elemento de la secuencia de solicitud referenciada (0040,A370) en el UPS creado. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} será sustituido por el valor de ese campo en el mensaje HL7 recibido. Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmRequestingService": {
-      "title": "Requesting Service",
-      "description": "Value of Requesting Service (0032,1033) in Item of Referenced Request Sequence (0040,A370) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]",
+      "title": "Servicio solicitante",
+      "description": "Valor del servicio solicitante (0032,1033) en el elemento de la secuencia de solicitud referenciada (0040,A370) en el UPS creado. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} será sustituido por el valor de ese campo en el mensaje HL7 recibido. Ejemplos: MSH-9 u ORC-1[.1] u ORC-10[.2[.1]]",
       "type": "string"
     },
     "dcmURI": {
-      "title": "XSL Stylesheet URI",
-      "description": "Specifies URI of the XSL style sheet to to transcode received HL7 message to include attributes in created UPS.",
+      "title": "URI de la hoja de estilo XSL",
+      "description": "Especifica el URI de la hoja de estilo XSL para transcodificar el mensaje HL7 recibido e incluir atributos en el UPS creado.",
       "type": "string",
       "default": "${jboss.server.temp.url}/dcm4chee-arc/hl7-order2ups.xsl"
     }

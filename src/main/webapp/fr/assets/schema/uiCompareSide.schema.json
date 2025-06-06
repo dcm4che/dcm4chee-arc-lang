@@ -1,6 +1,6 @@
 {
-  "title": "Compare Side",
-  "description": "Compare Side",
+  "title": "Comparar Lado",
+  "description": "Comparar Lado.",
   "type": "object",
   "required": [
     "dcmuiCompareSideName",
@@ -11,18 +11,18 @@
   ],
   "properties": {
     "dcmuiCompareSideName": {
-      "title": "Name",
-      "description": "Compare Side Name",
+      "title": "Nombre",
+      "description": "Nombre del lado de comparación.",
       "type": "string"
     },
     "dcmuiCompareSideDescription": {
-      "title": "Description",
-      "description": "A short description about this Group",
+      "title": "Descripción",
+      "description": "Una breve descripción sobre este Grupo.",
       "type": "string"
     },
     "dcmuiCompareSideOrder": {
-      "title": "Order",
-      "description": "Order of the Compare side",
+      "title": "Orden",
+      "description": "Orden del lado de comparación.",
       "type": "integer",
       "default":0,
       "enum":[
@@ -31,26 +31,26 @@
       ]
     },
     "dcmuiCompareSideCluster": {
-      "title": "Cluster",
-      "description": "Select a Cluster",
+      "title": "Grupo",
+      "description": "Seleccionar un Grupo.",
       "type": "string",
       "format":"dcmuiDeviceClusterObject"
     },
     "dcmuiCompareSideElasticsearch": {
       "title": "Elasticsearch",
-      "description": "Select an Elasticsearch URL",
+      "description": "Seleccionar una URL de Elasticsearch.",
       "type": "string",
       "format":"dcmuiElasticsearchConfig"
     },
     "dcmuiCompareSideQueueName": {
-      "title": "Queue",
-      "description": "Select the QueueName that should be used for the compare side",
+      "title": "Cola",
+      "description": "Seleccionar el nombre de la cola que se utilizará para el lado de comparación.",
       "type": "string",
       "format":"dcmQueueName"
     },
     "dcmuiCompareSideInstalled": {
-      "title": "Installed",
-      "description": "If true this Compare side is active in the dashboard",
+      "title": "Instalado",
+      "description": "Si es verdadero, este lado de comparación está activo en el panel de control.",
       "type": "boolean",
       "default": true
     }

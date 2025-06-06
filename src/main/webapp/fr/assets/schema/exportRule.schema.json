@@ -1,6 +1,6 @@
 {
-  "title": "Export Rule",
-  "description": "Export Rule",
+  "title": "Regla de exportación",
+  "description": "Regla de exportación",
   "type": "object",
   "required": [
     "cn",
@@ -11,13 +11,13 @@
   ],
   "properties": {
     "cn": {
-      "title": "Name",
-      "description": "Arbitrary/Meaningful name of the Export Rule",
+      "title": "Nombre",
+      "description": "Nombre arbitrario/significativo de la Regla de Exportación.",
       "type": "string"
     },
     "dcmEntity": {
       "title": "Export Entity",
-      "description": "Entity of Export",
+      "description": "Entidad de exportación",
       "type": "string",
       "enum": [
         "Study",
@@ -26,35 +26,35 @@
       ]
     },
     "dcmExporterID": {
-      "title": "Exporter ID",
-      "description": "Exporter ID",
+      "title": "ID del exportador",
+      "description": "ID del exportador",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmExporterID"
     },
     "dicomDeviceName": {
-      "title": "Exporter Device Name",
-      "description": "Specifies Device on which the Export Task(s) shall be scheduled. If not specified, the Export Task(s) is/are scheduled on the Device which received the objects. Attention: the specified Device must (also) have Exporters with the specified IDs configured!",
+      "title": "Nombre del dispositivo exportador",
+      "description": "Especifica el dispositivo en el que se programarán las tareas de exportación. Si no se especifica, la(s) Tarea(s) de Exportación se programará(n) en el Dispositivo que recibió los objetos. Atención: ¡el Dispositivo especificado debe (también) tener Exportadores con los IDs especificados configurados!",
       "type": "string",
       "format": "dicomDeviceName"
     },
     "dcmExportPreviousEntity": {
-      "title": "Export Previous Entity",
-      "description": "Specifies if the previous Entity of a replaced Instance shall be also exported.",
+      "title": "Exportar Entidad Previa",
+      "description": "Especifica si la Entidad previa de una Instancia reemplazada debe ser también exportada.",
       "type": "boolean",
       "default": false
     },
     "dcmProperty": {
-      "title": "Conditions",
-      "description": "Conditions in format {key}[!]={value}. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">applicability, format and some examples.</a>",
+      "title": "Condiciones",
+      "description": "Condiciones en formato {key}[!]={value}. Ver <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">aplicabilidad, formato y algunos ejemplos.</a>",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmSchedule": {
-      "title": "Time Conditions",
-      "description": "Apply this rule only within specified time ranges.",
+      "title": "Condiciones temporales",
+      "description": "Aplique esta regla sólo dentro de los intervalos de tiempo especificados.",
       "type": "array",
       "items": {
         "type": "string"
@@ -62,14 +62,14 @@
       "format": "dcmSchedule"
     },
     "dcmDuration": {
-      "title": "Export Delay",
-      "description": "Delay export of entities to accumulate multiple trigger events to one export task.",
+      "title": "Retraso de exportación",
+      "description": "Retrasa la exportación de entidades para acumular varios eventos de activación en una tarea de exportación.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmExportReoccurredInstances": {
-      "title": "Export Reoccurred Instances",
-      "description": "Indicates if the entity shall be exported on subsequent occurrence of instances",
+      "title": "Exportar Instancias Reocurridas",
+      "description": "Indica si la entidad debe ser exportada en la ocurrencia subsecuente de instancias.",
       "type": "string",
       "default": "REPLACE",
       "enum": [

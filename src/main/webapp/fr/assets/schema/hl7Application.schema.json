@@ -1,6 +1,6 @@
 {
-  "title": "HL7 Application",
-  "description": "HL7 Application information",
+  "title": "Aplicación HL7",
+  "description": "Información sobre la aplicación HL7",
   "type": "object",
   "required": [
     "hl7ApplicationName",
@@ -10,8 +10,8 @@
   ],
   "properties": {
     "hl7ApplicationName": {
-      "title": "HL7 Application name",
-      "description": "HL7 Application and Facility name (Application|Facility)",
+      "title": "Nombre de la aplicación HL7",
+      "description": "Nombre de la aplicación HL7 y de la instalación ( Aplicación| Instalación)",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.hl7ADTSendingApplication",
@@ -26,54 +26,54 @@
       ]
     },
     "dicomNetworkConnectionReference": {
-      "title": "Network Connection Reference",
-      "description": "The JSON Pointers to the Network Connection objects for this HL7 Application",
+      "title": "Referencia de Conexión de Red",
+      "description": "Los Punteros JSON a los objetos de Conexión de Red para esta Aplicación HL7",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7AcceptedSendingApplication": {
-      "title": "Accepted Sending Application",
-      "description": "Application|Facility name of accepted Sending Application(s); any if absent",
+      "title": "Aplicación de envío aceptada",
+      "description": "Aplicación|Nombre del centro de la(s) aplicación(es) de envío aceptada(s); cualquiera si no existe.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7OtherApplicationName": {
-      "title": "Other HL7 Application Name",
-      "description": "Additional HL7 Application and Facility name (Application|Facility) - will also accept HL7 messages with such Receiving Application and Facility name",
+      "title": "Otro Nombre de Aplicación HL7",
+      "description": "Nombre de Aplicación y Centro HL7 Adicional (Aplicación|Centro) - también aceptará mensajes HL7 con dicho nombre de Aplicación y Centro Receptor.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7AcceptedMessageType": {
-      "title": "Accepted Message Type",
-      "description": "Message Type(s) (MessageType^TriggerEvent) of accepted messages",
+      "title": "Tipo de mensaje aceptado",
+      "description": "Tipo(s) de mensaje (MessageType^TriggerEvent) de los mensajes aceptados.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "hl7DefaultCharacterSet": {
-      "title": "Default Character Set",
-      "description": "Character Set used to decode received messages if not specified by MSH-18.",
+      "title": "Juego de caracteres predeterminado",
+      "description": "Juego de caracteres utilizado para descodificar los mensajes recibidos si no lo especifica MSH-18.",
       "type": "string",
       "default": "ASCII",
       "format": "hl7Charset"
     },
     "hl7SendingCharacterSet": {
-      "title": "Sending Character Set",
-      "description": "Character Set used to encode HL7 messages sent from archive.",
+      "title": "Juego de caracteres de envío",
+      "description": "Juego de caracteres utilizado para codificar los mensajes HL7 enviados desde el archivo.",
       "type": "string",
       "default": "ASCII",
       "format": "hl7Charset"
     },
     "hl7OptionalMSHField": {
       "title": "Optional MSH Field",
-      "description": "Accept HL7 Messages with missing values for specified MSH fields, even they are required according to <a href=\"https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43\" target=\"_blank\">IHE RAD TF Vol 2 Message Control requirements</a>.",
+      "description": "Aceptar mensajes HL7 en los que falten valores para los campos MSH especificados, aunque sean obligatorios según <a href=\"https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43\" target=\"_blank\">IHE RAD TF Vol 2 requisitos de control de mensajes</a>.",
       "type": "array",
       "items": {
         "type": "integer",
@@ -90,26 +90,26 @@
       }
     },
     "dicomDescription": {
-      "title": "HL7 Description",
-      "description": "Unconstrained text description of the HL7 Application",
+      "title": "Descripción HL7",
+      "description": "Descripción de texto sin restricciones de la aplicación HL7.",
       "type": "string"
     },
     "dicomApplicationCluster": {
-      "title": "Application Cluster",
-      "description": "Locally defined names for a subset of related applications",
+      "title": "Grupo de aplicaciones",
+      "description": "Nombres definidos localmente para un subconjunto de aplicaciones relacionadas.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dicomInstalled": {
-      "title": "installed",
-      "description": "True if the HL7 Application is installed on network. If not present, information about the installed status of the HL7 Application is inherited from the device",
+      "title": "instalado",
+      "description": "Verdadero si la aplicación HL7 está instalada en la red. Si no está presente, la información sobre el estado de instalación de la aplicación HL7 se hereda del dispositivo.",
       "type": "boolean"
     },
     "dcmArchiveHL7Application": {
-      "title": "Archive HL7 Application",
-      "description": "DICOM Archive HL7 Application related information",
+      "title": "Archivar aplicación HL7",
+      "description": "DICOM Archiva la información relacionada con la aplicación HL7.",
       "$ref": "archiveHL7Application.schema.json"
     }
   }

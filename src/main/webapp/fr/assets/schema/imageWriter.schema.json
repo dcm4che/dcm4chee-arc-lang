@@ -1,6 +1,6 @@
 {
-  "title": "Image Writer",
-  "description": "Specifies Java Image IO Image Writer and Write Parameter used for compressing DICOM images",
+  "title": "Escritor de Imagen",
+  "description": "Especifica el Escritor de Imagen Java Image IO y el Parámetro de Escritura utilizado para comprimir imágenes DICOM.",
   "type": "object",
   "required": [
     "dicomTransferSyntax",
@@ -8,24 +8,24 @@
   ],
   "properties": {
     "dicomTransferSyntax": {
-      "title": "Transfer Syntax",
-      "description": "Transfer Syntax to which to compress the DICOM image",
+      "title": "Sintaxis de transferencia",
+      "description": "Sintaxis de transferencia a la que comprimir la imagen DICOM.",
       "type": "string",
       "format": "dcmTransferSyntax"
     },
     "dcmIIOFormatName": {
-      "title": "Image IO Writer Format Name",
-      "description": "Image IO Writer Format Name",
+      "title": "Nombre del formato del escritor de imágenes IO",
+      "description": "Nombre del formato del escritor de imágenes IO.",
       "type": "string"
     },
     "dcmJavaClassName": {
-      "title": "Java Class Name",
-      "description": "Fully qualified Java class of Image IO Writer. If absent, use any Image Writer found for specified Format Name",
+      "title": "Nombre de clase Java",
+      "description": "Clase Java totalmente calificada de la Escritora de imágenes IO. Si no existe, se utilizará cualquier grabadora de imágenes para el nombre de formato especificado.",
       "type": "string"
     },
     "dcmPatchJPEGLS": {
-      "title": "Patch JPEG-LS",
-      "description": "Patch JPEG-LS after compressing",
+      "title": "Parche JPEG-LS",
+      "description": "Parche JPEG-LS tras la compresión.",
       "type": "string",
       "enum": [
           "JAI2ISO",
@@ -34,8 +34,8 @@
       ]
     },
     "dcmImageWriteParam": {
-      "title": "Image Write Param",
-      "description": "Image Write Parameter(s) (name=value) set at on Image Writer before compression",
+      "title": "Parámetro de escritura de imagen",
+      "description": "Parámetros de escritura de imagen (nombre=valor) establecidos en la grabadora de imágenes antes de la compresión.",
       "type": "array",
       "items": {
         "type": "string"

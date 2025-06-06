@@ -1,5 +1,5 @@
-uiLanguageProfile:UI Elasticsearch URL Configuration|Elasticsearch URL
-uiLanguageProfile.dcmuiLanguageProfileName:Name|Language profile name
-uiLanguageProfile.dcmDefaultLanguage:Default language|Select default language for the UI
-uiLanguageProfile.dcmuiLanguageProfileRole:Role|Username role that this language profile should apply to
-uiLanguageProfile.dcmuiLanguageProfileUsername:Username|Username for the language profile
+uiLanguageProfile:Configuración URL UI Elasticsearch|Red URL Elasticsearch
+uiLanguageProfile.dcmuiLanguageProfileName:Nombre|Nombre del perfil de idioma.
+uiLanguageProfile.dcmDefaultLanguage:Idioma por defecto|Seleccionar idioma por defecto para la UI.
+uiLanguageProfile.dcmuiLanguageProfileRole:Rol|Rol de usuario al que se aplicará este perfil de idioma.
+uiLanguageProfile.dcmuiLanguageProfileUsername:Nombre de usuario|Nombre de usuario para el perfil de idioma.

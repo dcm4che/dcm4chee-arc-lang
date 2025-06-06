@@ -1,6 +1,6 @@
 {
-  "title": "Rejection Note",
-  "description": "Specifies behavior on Rejection Note Stored",
+  "title": "Nota de rechazo",
+  "description": "Especifica el comportamiento de la nota de rechazo almacenada.",
   "type": "object",
   "required": [
     "dcmRejectionNoteLabel",
@@ -9,16 +9,16 @@
   ],
   "properties": {
     "dcmRejectionNoteLabel": {
-      "title": "Rejection Note Label",
-      "description": "Rejection Note Label",
+      "title": "Etiqueta de Nota de Rechazo",
+      "description": "Etiqueta de Nota de Rechazo.",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmQueryRetrieveView[*].dcmShowInstancesRejectedByCode[*]"
       ]
     },
     "dcmRejectionNoteType": {
-      "title": "Rejection Note Type",
-      "description": "Type of Rejection Note.",
+      "title": "Tipo de nota de rechazo",
+      "description": "Tipo de nota de rechazo.",
       "type": "string",
       "enum": [
         "REJECTED_FOR_QUALITY_REASONS",
@@ -29,13 +29,13 @@
       ]
     },
     "dcmRejectionNoteCode": {
-      "title": "Rejection Note Code",
-      "description": "Specifies Document Title of Rejection Note in format (CV, CSD, 'CM')",
+      "title": "Código de Nota de Rechazo",
+      "description": "Especifica el Título del Documento de la Nota de Rechazo en formato (CV, CSD, 'CM').",
       "type": "string"
     },
     "dcmAcceptPreviousRejectedInstance": {
-      "title": "Accept Previous Rejected Instance",
-      "description": "Specifies behavior on subsequent occurrence of instances rejected by a particular Rejection Note.",
+      "title": "Aceptar instancia rechazada anterior",
+      "description": "Especifica el comportamiento en la aparición posterior de instancias rechazadas por una nota de rechazo concreta.",
       "type": "string",
       "default": "REJECT",
       "enum": [
@@ -45,28 +45,28 @@
       ]
     },
     "dcmOverwritePreviousRejection": {
-      "title": "Overwrite Previous Rejection",
-      "description": "Specifies Document Title of previous Rejection Note in format (CV, CSD, 'CM') which may be overwritten by that Rejection Note",
+      "title": "Sobrescribir rechazo anterior",
+      "description": "Especifica el título del documento de la nota de rechazo anterior en formato (CV, CSD, 'CM') que puede sobrescribirse con esa nota de rechazo.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAcceptRejectionBeforeStorage": {
-      "title": "Accept Rejection before Storage",
-      "description": "Time interval in ISO-8601 duration format PnDTnHnMn.nS after receive of a Rejection Note, in which received object referenced by this Rejection Note are treated as rejected. Referenced objects received afterwards are treated as subsequent occurrence of an already rejected instance. If not present, Rejection Notes which refers not yet received objects will not be accepted.",
+      "title": "Aceptar rechazo antes del almacenamiento",
+      "description": "Intervalo de tiempo en formato de duración ISO-8601 PnDTnHnMn.nS tras la recepción de una nota de rechazo, en el que el objeto recibido al que hace referencia esta nota de rechazo se trata como rechazado. Los objetos referenciados recibidos posteriormente se tratan como apariciones posteriores de una instancia ya rechazada. Si no está presente, no se aceptará las notas de rechazo que hagan referencia a objetos aún no recibidos.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmDeleteRejectedInstanceDelay": {
-      "title": "Delete Rejected Instance Delay",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which instances rejected by a particular Rejection Note are deleted. Infinite if absent.",
+      "title": "Retraso de eliminación de instancias rechazadas",
+      "description": "Retraso en formato de duración ISO-8601 PnDTnHnMn.nS tras el cual se eliminan las instancias rechazadas por una nota de rechazo concreta. Infinito si no existe.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmDeleteRejectionNoteDelay": {
-      "title": "Delete Rejection Note Delay",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which particular Rejection Notes are deleted. Infinite if absent.",
+      "title": "Retraso en la eliminación de notas de rechazo",
+      "description": "Retraso en formato de duración ISO-8601 PnDTnHnMn.nS tras el cual se eliminan determinadas notas de rechazo. Infinito si no existe.",
       "type": "string",
       "format": "dcmDuration"
     }

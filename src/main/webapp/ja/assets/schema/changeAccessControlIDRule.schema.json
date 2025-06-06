@@ -25,6 +25,12 @@
       "description": "New Access Control ID assigned to selected Studies or individual Series after specified delay after receive of the first object of the Study. '*' removes previous assigned Access Control ID, making the Study or Series accessible on all Archive AEs.",
       "type": "string"
     },
+    "dcmAccessControlID": {
+      "title": "Access Control ID",
+      "description": "Previous Access Control IDs assigned to selected Studies or individual Series to change. If no value is specified, all Access Control IDs accessible by the specified Archive Application Entity (AE) will be changed.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
     "dcmEntity": {
       "title": "Entity",
       "description": "Indicates if Access Control ID assigned to Studies or individual Series shall be changed.",

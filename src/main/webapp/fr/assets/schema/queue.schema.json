@@ -1,6 +1,6 @@
 {
-  "title": "Queue",
-  "description": "Managed Task Queue",
+  "title": "Cola",
+  "description": "Cola de tareas gestionadas.",
   "type": "object",
   "required": [
     "dcmQueueName",
@@ -13,8 +13,8 @@
   ],
   "properties": {
     "dcmQueueName": {
-      "title": "Queue Name",
-      "description": "Task Queue Name",
+      "title": "Nombre de la cola",
+      "description": "Nombre de la cola de tareas.",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiQueueName[*]",
@@ -22,83 +22,83 @@
       ]
     },
     "dicomInstalled": {
-      "title": "installed",
-      "description": "If false, processing of tasks in this queue is paused.",
+      "title": "instalada",
+      "description": "Si es falso, se pausa el procesamiento de tareas en esta cola.",
       "type": "boolean",
       "default": true
     },
     "dcmMaxTasksParallel": {
-      "title": "Maximum parallel Tasks",
-      "description": "Maximal number of tasks processed in parallel.",
+      "title": "Tareas paralelas máximas",
+      "description": "Número máximo de tareas procesadas en paralelo.",
       "type": "integer",
       "minimum": 1,
       "default": 1
     },
     "dicomDescription": {
-      "title": "DICOM Description",
-      "description": "Textual description of the DICOM entity",
+      "title": "Descripción DICOM",
+      "description": "Descripción textual de la entidad DICOM.",
       "type": "string"
     },
     "dcmMaxRetries": {
-      "title": "Maximum Number of Retries",
-      "description": "Maximal number of retries to process tasks scheduled in a specific queue.",
+      "title": "Número máximo de reintentos",
+      "description": "Número máximo de reintentos para procesar tareas programadas en una cola específica.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmRetryDelay": {
-      "title": "Retry Delay",
-      "description": "Delay to retry to process tasks scheduled in a specific queue in ISO-8601 duration format PnDTnHnMn.nS.",
+      "title": "Retraso de reintentos",
+      "description": "Retraso de reintentos para procesar tareas programadas en una cola específica en formato de duración ISO-8601 PnDTnHnMn.nS.",
       "type": "string",
       "default": "PT1M",
       "format": "dcmDuration"
     },
     "dcmMaxRetryDelay": {
-      "title": "Maximum Retry Delay",
-      "description": "Maximal Delay to retry to process tasks scheduled in a specific queue in ISO-8601 duration format PnDTnHnMn.nS. Infinite if absent.",
+      "title": "Retraso máximo de reintento",
+      "description": "Retraso máximo de reintento para procesar tareas programadas en una cola específica en formato de duración ISO-8601 PnDTnHnMn.nS. Infinito si no existe.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmRetryDelayMultiplier": {
-      "title": "Retry Delay Multiplier",
-      "description": "Multiplier in % that will take effect on top of dcmRetryDelay with dcmMaxRetryDelay to be taken into account.",
+      "title": "Multiplicador de Retraso de Reintento",
+      "description": "Multiplicador en % que tendrá efecto sobre dcmRetryDelay con dcmMaxRetryDelay a tener en cuenta.",
       "type": "integer",
       "minimum": 100,
       "default": 100
     },
     "dcmRetryOnWarning": {
-      "title": "Retry on Warning",
-      "description": "Enables retries to process tasks not only on failure but also on a warning outcome status in a specific queue.",
+      "title": "Reintentar en caso de advertencia",
+      "description": "Habilita los reintentos para procesar tareas no sólo en caso de fallo, sino también en caso de advertencia en una cola específica.",
       "type": "boolean",
       "default": false
     },
     "dcmPurgeQueueMessageCompletedDelay": {
-      "title": "Delay for purging completed tasks",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which completed tasks are purged. If absent, there is no deletion for that particular queue",
+      "title": "Retraso para purgar tareas completadas",
+      "description": "Retraso en formato de duración ISO-8601 PnDTnHnMn.nS tras el cual se purgan las tareas completadas. Si no existe, no hay purga para esa cola en particular.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageFailedDelay": {
-      "title": "Delay for purging failed tasks",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which failed tasks are purged. If absent, there is no deletion for that particular queue",
+      "title": "Retraso para purgar tareas fallidas",
+      "description": "Retraso en formato de duración ISO-8601 PnDTnHnMn.nS tras el cual se purgan las tareas fallidas. Si no existe, no hay eliminación para esa cola en particular.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageWarningDelay": {
-      "title": "Delay for purging warning tasks",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which warning tasks are purged. If absent, there is no deletion for that particular queue",
+      "title": "Retraso para purgar tareas de aviso",
+      "description": "Retraso en formato de duración ISO-8601 PnDTnHnMn.nS tras el cual se purgan las tareas de aviso. Si no existe, no hay eliminación para esa cola en particular.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmPurgeQueueMessageCanceledDelay": {
-      "title": "Delay for purging canceled tasks",
-      "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS after which canceled tasks are purged. If absent, there is no deletion for that particular queue",
+      "title": "Retraso para purgar tareas canceladas",
+      "description": "Retraso en formato de duración ISO-8601 PnDTnHnMn.nS tras el cual se purgan las tareas canceladas. Si no existe, no hay purga para esa cola en particular.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmSchedule": {
-      "title": "Restrict Scheduling",
-      "description": "Restrict Scheduling to specified time ranges.",
+      "title": "Restringir programación",
+      "description": "Restringir programación a intervalos de tiempo especificados.",
       "type": "array",
       "items": {
         "type": "string"
