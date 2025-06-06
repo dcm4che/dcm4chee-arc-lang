@@ -45,6 +45,7 @@
   <remoteResources>
     <remoteResource>de.json</remoteResource>
     <remoteResource>es.json</remoteResource>
+    <remoteResource>fr.json</remoteResource>
     <remoteResource>hi.json</remoteResource>
     <remoteResource>it.json</remoteResource>
     <remoteResource>ja.json</remoteResource>
