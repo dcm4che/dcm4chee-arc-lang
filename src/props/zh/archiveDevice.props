@@ -217,6 +217,7 @@ archiveDevice.hl7PSUSendingApplication:HL7过程状态更新发送应用程序|H
 archiveDevice.hl7PSUReceivingApplication:HL7过程状态更新接收应用程序|HL7过程状态更新接收应用程序的应用程序设施。某些存档网络AE的配置值可能会覆盖这些值。
 archiveDevice.hl7PSUTaskPollingInterval:HL7过程状态更新任务的轮询间隔|ISO-8601周期PnDTnHnMnS格式的HL7过程状态更新任务的轮询间隔, 如果不存在,则禁用。
 archiveDevice.hl7PSUTaskFetchSize:HL7过程状态更新任务的提取大小|在单个查询中提取的HL7过程状态更新任务的最大数量。
+archiveDevice.hl7PSUAction:HL7 Procedure Status Update Action|Specifies HL7 Procedure Status Update action: SEND_NOTIFICATION (= send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications), UPDATE_MWL_STATUS (= set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED). May be overwritten by configured values for particular Archive Network AEs.
 archiveDevice.hl7PSUDelay:HL7过程状态更新延迟|ISO-8601期间PnDTnHnMnS延迟后,接收到的检查的HL7过程状态更新被发送到配置的HL7接收应用程序。如果不存在,则HL7步骤状态更新由接收的MPPS触发。某些存档网络AE的配置值可能会覆盖这些值。
 archiveDevice.hl7PSUStudyTemplateURI:HL7 Procedure Status Update Study Template URI|URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. May be overwritten by configured values for particular Archive Network AEs.
 archiveDevice.hl7PSUTimeout:HL7过程状态更新超时|ISO-8601周期以PnDTnHnMnS格式超时,以等待接收MPPS引用的实例。 如果不存在,请永久验证完整性。 为特定存档网络AE配置的值可能会覆盖它。

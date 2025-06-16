@@ -661,6 +661,18 @@
       "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
+    "hl7PSUAction": {
+      "title": "HL7 Procedure Status Update Action",
+      "description": "Specifies HL7 Procedure Status Update action: SEND_NOTIFICATION (= send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications), UPDATE_MWL_STATUS (= set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED). May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "SEND_NOTIFICATION",
+          "UPDATE_MWL_STATUS"
+        ]
+      }
+    },
     "hl7PSUDelay": {
       "title": "HL7过程状态更新延迟",
       "description": "ISO-8601期间PnDTnHnMnS延迟后,接收到的检查的HL7过程状态更新被发送到配置的HL7接收应用程序。如果不存在,则HL7步骤状态更新由接收的MPPS触发。覆盖在设备级别指定的值。",

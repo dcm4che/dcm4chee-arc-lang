@@ -661,6 +661,18 @@
       "items" : { "type": "string" },
       "format": "hl7ApplicationName"
     },
+    "hl7PSUAction": {
+      "title": "HL7 Procedure Status Update Action",
+      "description": "Specifies HL7 Procedure Status Update action: SEND_NOTIFICATION (= send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications), UPDATE_MWL_STATUS (= set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED). May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "SEND_NOTIFICATION",
+          "UPDATE_MWL_STATUS"
+        ]
+      }
+    },
     "hl7PSUDelay": {
       "title": "Ritardo aggiornamento dello stato della procedura HL7",
       "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMnS dopo il quale un aggiornamento dello stato della procedura HL7 per uno studio ricevuto viene inviato ai ricevitori HL7 configurati. Se assente, l'aggiornamento dello stato della procedura HL7 viene attivato dall'MPPS ricevuto. Sovrascrive i valori specificati a livello del dispositivo.",
