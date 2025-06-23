@@ -1688,6 +1688,20 @@
         ]
       }
     },
+    "hl7PSUTrigger": {
+      "title": "HL7 Procedure Status Update Trigger",
+      "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "STUDY_RECEIVED",
+          "MPPS_RECEIVED",
+          "REJECTION_NOTE_RECEIVED",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+        ]
+      }
+    },
     "hl7PSUDelay": {
       "title": "HL7 手順 ステータス 更新 遅延",
       "description": "ISO-8601 期間 PnDTnHnMnS 形式で遅延の 後、受信した 検査の HL7 手順 ステータス 更新が 構成済みの HL7 受け取り アプリケーションに 送信されます。 存在しない 場合、 HL7 手順 ステータス 更新は 受信した MPPSに よって トリガーされます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",

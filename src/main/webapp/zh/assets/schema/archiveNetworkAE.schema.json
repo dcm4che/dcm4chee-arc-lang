@@ -673,6 +673,20 @@
         ]
       }
     },
+    "hl7PSUTrigger": {
+      "title": "HL7 Procedure Status Update Trigger",
+      "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. Overwrites value specified on Device level.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "STUDY_RECEIVED",
+          "MPPS_RECEIVED",
+          "REJECTION_NOTE_RECEIVED",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+        ]
+      }
+    },
     "hl7PSUDelay": {
       "title": "HL7过程状态更新延迟",
       "description": "ISO-8601期间PnDTnHnMnS延迟后,接收到的检查的HL7过程状态更新被发送到配置的HL7接收应用程序。如果不存在,则HL7步骤状态更新由接收的MPPS触发。覆盖在设备级别指定的值。",

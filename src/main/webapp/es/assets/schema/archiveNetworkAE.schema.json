@@ -673,6 +673,20 @@
         ]
       }
     },
+    "hl7PSUTrigger": {
+      "title": "HL7 Procedure Status Update Trigger",
+      "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. Overwrites value specified on Device level.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "STUDY_RECEIVED",
+          "MPPS_RECEIVED",
+          "REJECTION_NOTE_RECEIVED",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+        ]
+      }
+    },
     "hl7PSUDelay": {
       "title": "Demora de actualización de estado de procedimiento HL7",
       "description": "Demora en formato de duración ISO-8601 PnDTnHnMn.nS tras la cual se envía una actualización de estado de procedimiento HL7 para un estudio recibido a los receptores HL7 configurados. Si no existe, la actualización del estado del procedimiento HL7 es activada por el MPPS recibido. Sobrescribe el valor especificado en el nivel Dispositivo.",

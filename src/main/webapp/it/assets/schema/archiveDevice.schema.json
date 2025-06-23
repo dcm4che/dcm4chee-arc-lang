@@ -1688,6 +1688,20 @@
         ]
       }
     },
+    "hl7PSUTrigger": {
+      "title": "HL7 Procedure Status Update Trigger",
+      "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "STUDY_RECEIVED",
+          "MPPS_RECEIVED",
+          "REJECTION_NOTE_RECEIVED",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+        ]
+      }
+    },
     "hl7PSUDelay": {
       "title": "Ritardo aggiornamento dello stato della procedura HL7",
       "description": "Ritardo nel formato di durata ISO-8601 PnDTnHnMnS dopo il quale un aggiornamento dello stato della procedura HL7 per uno studio ricevuto viene inviato ai ricevitori HL7 configurati. Se assente, l'aggiornamento dello stato della procedura HL7 viene attivato dall'MPPS ricevuto. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",

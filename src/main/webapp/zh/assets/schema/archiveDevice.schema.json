@@ -1688,6 +1688,20 @@
         ]
       }
     },
+    "hl7PSUTrigger": {
+      "title": "HL7 Procedure Status Update Trigger",
+      "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "STUDY_RECEIVED",
+          "MPPS_RECEIVED",
+          "REJECTION_NOTE_RECEIVED",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+        ]
+      }
+    },
     "hl7PSUDelay": {
       "title": "HL7过程状态更新延迟",
       "description": "ISO-8601期间PnDTnHnMnS延迟后,接收到的检查的HL7过程状态更新被发送到配置的HL7接收应用程序。如果不存在,则HL7步骤状态更新由接收的MPPS触发。某些存档网络AE的配置值可能会覆盖这些值。",

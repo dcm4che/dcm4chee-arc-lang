@@ -673,6 +673,20 @@
         ]
       }
     },
+    "hl7PSUTrigger": {
+      "title": "HL7 Procedure Status Update Trigger",
+      "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. Overwrites value specified on Device level.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "STUDY_RECEIVED",
+          "MPPS_RECEIVED",
+          "REJECTION_NOTE_RECEIVED",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+        ]
+      }
+    },
     "hl7PSUDelay": {
       "title": "HL7 प्रक्रिया स्थिती अद्यतन विलंब",
       "description": "ISO-8601 कालावधि PnDTnHnMnS प्रारूपात विलंब ज्यानंतर प्राप्त झालेल्या अभ्यासासाठी HL7 प्रक्रिया स्थिती अद्यतन संदेशाला कॉन्फीगर्ड HL7 संदेश प्राप्त करणाऱ्या सिस्टम्सवर पाठवले जातील. अनुपस्थित असल्यास, HL7 प्रक्रिया स्थिती अद्यतन प्राप्त झालेल्या MPPS द्वारे सक्रीय होतील. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
