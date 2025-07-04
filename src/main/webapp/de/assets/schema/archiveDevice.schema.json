@@ -1381,6 +1381,36 @@
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
+    "dcmXDSiFallbackCFindSCP": {
+      "title": "XDS-I Fallback C-FIND SCP",
+      "description": "AE Title of external C-FIND SCP to query for requested Entities not managed by this XDS-I Imaging Document Source.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmXDSiFallbackCFindSCPCallingAET": {
+      "title": "XDS-I Fallback C-FIND SCP Calling AET",
+      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-FIND SCP.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmXDSiFallbackCMoveSCP": {
+      "title": "XDS-I Fallback C-MOVE SCP",
+      "description": "AE Title of external C-MOVE SCP to invoke C-MOVE RQs if the requested Entities are not managed by this XDS-I Imaging Document Source.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmXDSiFallbackCMoveSCPCallingAET": {
+      "title": "XDS-I Fallback C-MOVE SCP Calling AET",
+      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-MOVE SCP.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmXDSiFallbackCMoveSCPDestination": {
+      "title": "XDS-I Fallback C-MOVE SCP Destination",
+      "description": "AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs invoked to configured XDSi Fallback C-MOVE SCP.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
     "dcmQueueTasksFetchSize": {
       "title": "Queue Tasks Fetch Size",
       "description": "Maximal number of Tasks rescheduled or deleted or canceled in one transaction.",

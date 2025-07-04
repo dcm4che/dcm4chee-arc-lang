@@ -175,6 +175,11 @@ archiveDevice.dcmReturnRetrieveAET:返回读取AE标题|C-FIND和QIDO响应返�
 archiveDevice.dcmMultipleStoreAssociations:多个存储关联|用于读取复合对象的存储关联的数目。C-STORE SCP唯一编号可以使用"<AETitle>:"前缀指定。示例:2或STORESCP:3。如果不存在,则仅使用一个关联。某些存档网络AE的设置可能会提供补充。
 archiveDevice.dcmExternalRetrieveAEDestination:外部读取AE目标|本地C-STORE-SCP的AE标题,设置为传输到外部读取AE的C-MOVE RQ的移动目标。某些存档网络AE设置可能会覆盖这些设置。
 archiveDevice.dcmXDSiImagingDocumentSourceAETitle:XDS-I成像文档源AE标题|与XDS-I成像文档源相关联的本地应用实体的AE标题。
+archiveDevice.dcmXDSiFallbackCFindSCP:XDS-I Fallback C-FIND SCP|AE Title of external C-FIND SCP to query for requested Entities not managed by this XDS-I Imaging Document Source.
+archiveDevice.dcmXDSiFallbackCFindSCPCallingAET:XDS-I Fallback C-FIND SCP Calling AET|Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-FIND SCP.
+archiveDevice.dcmXDSiFallbackCMoveSCP:XDS-I Fallback C-MOVE SCP|AE Title of external C-MOVE SCP to invoke C-MOVE RQs if the requested Entities are not managed by this XDS-I Imaging Document Source.
+archiveDevice.dcmXDSiFallbackCMoveSCPCallingAET:XDS-I Fallback C-MOVE SCP Calling AET|Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-MOVE SCP.
+archiveDevice.dcmXDSiFallbackCMoveSCPDestination:XDS-I Fallback C-MOVE SCP Destination|AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs invoked to configured XDSi Fallback C-MOVE SCP.
 archiveDevice.dcmQueueTasksFetchSize:队列任务提取大小|事务中重新安排,删除或取消的最大任务数。
 archiveDevice.dcmRemapRetrieveURL:重映射读取URL|QIDO-RS和WADO-RS元数据响应中使用的重映射读取URL。如果需要,前缀为"[<http-client-host>]"。如果不存在或指定的<http-client-host>不匹配,则使用QIDO-RS或WADO-RS请求URL方案和服务器权限。
 archiveDevice.dcmProxyUpstreamURL:代理上游URL|代理的上游端点的URL。

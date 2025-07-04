@@ -175,6 +175,11 @@ archiveDevice.dcmReturnRetrieveAET:返し 読み出し AE タイトル|C-FIND �
 archiveDevice.dcmMultipleStoreAssociations:複数の ストア アソシエーション|複合 オブジェクトの 読み出しに 使用される 格納 アソシエーションの 数。 C-STORE SCP 固有の 番号は 「<AETitle>:」 接頭辞で 指定できます。 例 : 2 または STORESCP:3 。 存在しない 場合、 1つの 関連付け のみが 使用されます。 特定の アーカイブ ネットワーク AEの 設定値に よって 補足される 場合が あります。
 archiveDevice.dcmExternalRetrieveAEDestination:外部 読み出し AE 宛先|外部 読み出し AEに 転送された C-MOVE RQの 移動 宛先として 設定された 局所的 C-STORE-SCPの AE タイトル。 特定の アーカイブ ネットワーク AEの 設定値に よって 上書きされる 場合が あります。
 archiveDevice.dcmXDSiImagingDocumentSourceAETitle:XDS-I イメージング ドキュメント ソース AE タイトル|XDS-I イメージング ドキュメント ソースに 関連付けられた 局所的 アプリケーション エンティティの AE タイトル。
+archiveDevice.dcmXDSiFallbackCFindSCP:XDS-I Fallback C-FIND SCP|AE Title of external C-FIND SCP to query for requested Entities not managed by this XDS-I Imaging Document Source.
+archiveDevice.dcmXDSiFallbackCFindSCPCallingAET:XDS-I Fallback C-FIND SCP Calling AET|Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-FIND SCP.
+archiveDevice.dcmXDSiFallbackCMoveSCP:XDS-I Fallback C-MOVE SCP|AE Title of external C-MOVE SCP to invoke C-MOVE RQs if the requested Entities are not managed by this XDS-I Imaging Document Source.
+archiveDevice.dcmXDSiFallbackCMoveSCPCallingAET:XDS-I Fallback C-MOVE SCP Calling AET|Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-MOVE SCP.
+archiveDevice.dcmXDSiFallbackCMoveSCPDestination:XDS-I Fallback C-MOVE SCP Destination|AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs invoked to configured XDSi Fallback C-MOVE SCP.
 archiveDevice.dcmQueueTasksFetchSize:キュー タスク フェッチ サイズ|1つの トランザクションで 再予定、 削除、 または キャンセルされた タスクの 最大数。
 archiveDevice.dcmRemapRetrieveURL:リマップ 読み出し URL|QIDO-RSと WADO-RS メタデータ 応答で 使用される リマップ 読み出し URL。 必要に応じて "[<http-client-host>]" に 接頭辞された。 存在しない 場合、または 指定された <http-client-host>は 一致 しない 場合、QIDO-RS または WADO-RS 要求 URLの スキームと サーバー 権限が 使用されます。
 archiveDevice.dcmProxyUpstreamURL:プロキシ アップストリーム URL|プロキシされる アップストリーム エンドポイントの URL。
