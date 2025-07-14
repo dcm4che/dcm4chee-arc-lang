@@ -1383,13 +1383,13 @@
     },
     "dcmXDSiFallbackCFindSCP": {
       "title": "XDS-I Fallback C-FIND SCP",
-      "description": "AE Title of external C-FIND SCP to query for requested Entities not managed by this XDS-I Imaging Document Source.",
+      "description": "AE Title of external C-FIND SCP to query for requested Entities not managed by this XDS-I Imaging Document Source. If not specified, the configured AE Title by XDS-I Fallback C-MOVE SCP will be used.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmXDSiFallbackCFindSCPCallingAET": {
       "title": "XDS-I Fallback C-FIND SCP Calling AET",
-      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-FIND SCP.",
+      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-FIND SCP. If not specified, the AE Title by XDS-I Fallback C-MOVE SCP Calling AET will be used, if configured. Otherwise the configured XDS-I Imaging Document Source AE Title will be used.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
@@ -1401,13 +1401,13 @@
     },
     "dcmXDSiFallbackCMoveSCPCallingAET": {
       "title": "XDS-I Fallback C-MOVE SCP Calling AET",
-      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-MOVE SCP.",
+      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-MOVE SCP. If not specified, the configured XDS-I Imaging Document Source AE Title will be used.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmXDSiFallbackCMoveSCPDestination": {
       "title": "XDS-I Fallback C-MOVE SCP Destination",
-      "description": "AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs invoked to configured XDSi Fallback C-MOVE SCP.",
+      "description": "AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs invoked to configured XDSi Fallback C-MOVE SCP. If not specified, the configured XDS-I Imaging Document Source AE Title will be used.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
