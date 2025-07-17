@@ -1381,18 +1381,6 @@
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
-    "dcmXDSiFallbackCFindSCP": {
-      "title": "XDS-I Fallback C-FIND SCP",
-      "description": "AE Title of external C-FIND SCP to query for requested Entities not managed by this XDS-I Imaging Document Source. If not specified, the configured AE Title by XDS-I Fallback C-MOVE SCP will be used.",
-      "type": "string",
-      "format": "dcmAETitle"
-    },
-    "dcmXDSiFallbackCFindSCPCallingAET": {
-      "title": "XDS-I Fallback C-FIND SCP Calling AET",
-      "description": "Calling AE Title used in A-ASSOCIATE-RQ to configured XDSi Fallback C-FIND SCP. If not specified, the AE Title by XDS-I Fallback C-MOVE SCP Calling AET will be used, if configured. Otherwise the configured XDS-I Imaging Document Source AE Title will be used.",
-      "type": "string",
-      "format": "dcmArchiveAETitle"
-    },
     "dcmXDSiFallbackCMoveSCP": {
       "title": "XDS-I Fallback C-MOVE SCP",
       "description": "AE Title of external C-MOVE SCP to invoke C-MOVE RQs if the requested Entities are not managed by this XDS-I Imaging Document Source.",
