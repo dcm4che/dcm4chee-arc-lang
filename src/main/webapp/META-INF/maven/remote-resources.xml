@@ -52,6 +52,7 @@
     <remoteResource>mr.json</remoteResource>
     <remoteResource>pt.json</remoteResource>
     <remoteResource>ru.json</remoteResource>
+    <remoteResource>vi.json</remoteResource>
     <remoteResource>zh.json</remoteResource>
   </remoteResources>
   <sourceEncoding>UTF-8</sourceEncoding>

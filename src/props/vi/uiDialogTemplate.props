@@ -1,0 +1,5 @@
+uiDialogTemplate:UI Dialog Template|Define Create Dialog Template
+uiDialogTemplate.dcmuiTemplateName:Name|Name of the dialog template
+uiDialogTemplate.dcmTag:Attribute Tag|DICOM Tag as hex string which shall be included in this dialog template
+uiDialogTemplate.dicomDescription:Description|Dialog template description
+uiDialogTemplate.dcmuiDialog:Dialog Function|Specifies the function where this Dialog Template shall get applied

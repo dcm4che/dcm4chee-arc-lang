@@ -1,0 +1,10 @@
+exportRule:Export Rule|Export Rule
+exportRule.cn:Name|Arbitrary/Meaningful name of the Export Rule
+exportRule.dcmEntity:Export Entity|Entity of Export
+exportRule.dcmExporterID:Exporter ID|Exporter ID
+exportRule.dicomDeviceName:Exporter Device Name|Specifies Device on which the Export Task(s) shall be scheduled. If not specified, the Export Task(s) is/are scheduled on the Device which received the objects. Attention: the specified Device must (also) have Exporters with the specified IDs configured!
+exportRule.dcmExportPreviousEntity:Export Previous Entity|Specifies if the previous Entity of a replaced Instance shall be also exported.
+exportRule.dcmProperty:Conditions|Conditions in format {key}[!]={value}. Refer <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">applicability, format and some examples.</a>
+exportRule.dcmSchedule:Time Conditions|Apply this rule only within specified time ranges.
+exportRule.dcmDuration:Export Delay|Delay export of entities to accumulate multiple trigger events to one export task.
+exportRule.dcmExportReoccurredInstances:Export Reoccurred Instances|Indicates if the entity shall be exported on subsequent occurrence of instances

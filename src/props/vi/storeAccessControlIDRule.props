@@ -1,0 +1,6 @@
+storeAccessControlIDRule:Store Access Control ID Rule|Store Access Control ID Rule
+storeAccessControlIDRule.cn:Name|Arbitrary/Meaningful name of the Store Access Control ID Rule
+storeAccessControlIDRule.dcmStoreAccessControlID:Store Access Control ID|Access Control ID assigned to whole Studies or individual Series which attributes match all conditions.
+storeAccessControlIDRule.dcmEntity:Entity|Indicates if the Access Control ID shall be assigned to whole Studies or individual Series.
+storeAccessControlIDRule.dcmRulePriority:Rule Priority|If the condition of several Store Access Control ID rules match for a received image, higher priority rule is applied. If there are several matching rules with equal priority, it is undefined which rule gets applied.
+storeAccessControlIDRule.dcmProperty:Conditions|Conditions in format {key}[!]={value}. Refer <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">applicability, format and some examples.</a>

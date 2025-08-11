@@ -9,4 +9,5 @@ json2props src/main/webapp/ja/assets/schema src/props/ja
 json2props src/main/webapp/mr/assets/schema src/props/mr
 json2props src/main/webapp/pt/assets/schema src/props/pt
 json2props src/main/webapp/ru/assets/schema src/props/ru
+json2props src/main/webapp/zh/assets/schema src/props/vi
 json2props src/main/webapp/zh/assets/schema src/props/zh

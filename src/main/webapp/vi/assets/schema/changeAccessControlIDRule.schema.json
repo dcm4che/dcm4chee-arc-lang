@@ -1,0 +1,64 @@
+{
+  "title": "Change Access Control ID Rule",
+  "description": "Change Access Control ID Rule",
+  "type": "object",
+  "required": [
+    "cn",
+    "dicomAETitle",
+    "dcmStoreAccessControlID",
+    "dcmChangeAccessControlIDDelay"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the Change Access Control ID Rule",
+      "type": "string"
+    },
+    "dicomAETitle": {
+      "title": "Archive Application Entity (AE) title",
+      "description": "Title of Archive Application Entity (AE) which configured Query Retrieve View and Access Control ID are applied in the selection of Studies or Series which assigned Access Control ID shall be changed.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmStoreAccessControlID": {
+      "title": "Store Access Control ID",
+      "description": "New Access Control ID assigned to selected Studies or individual Series after specified delay after receive of the first object of the Study. '*' removes previous assigned Access Control ID, making the Study or Series accessible on all Archive AEs.",
+      "type": "string"
+    },
+    "dcmAccessControlID": {
+      "title": "Access Control ID",
+      "description": "Previous Access Control IDs assigned to selected Studies or individual Series to change. If no value is specified, all Access Control IDs accessible by the specified Archive Application Entity (AE) will be changed.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "dcmEntity": {
+      "title": "Entity",
+      "description": "Indicates if Access Control ID assigned to Studies or individual Series shall be changed.",
+      "type": "string",
+      "default": "Study",
+      "enum": [
+        "Study",
+        "Series"
+      ]
+    },
+    "dcmEntitySelector": {
+      "title": "Entity Selector",
+      "description": "Specifies matching keys used to select received Studies or Series which Access Control ID shall be updated. Format: {key}={value}[&{key}={value}]..., with {key} = {attributeID}. If no Entity Selector is specified, the Accession Control IDs of all Studies or Series visible for the specified Archive AE will be updated to the specified Store Access Control ID.",
+      "type": "array",
+      "items" : { "type": "string" },
+      "format": "dcmEntitySelector"
+    },
+    "dcmChangeAccessControlIDDelay": {
+      "title": "Change Access Control ID Delay",
+      "description": "Delay after receive of the first object of a Study/Series after which the Access Control ID associated with the Study or including Series shall be changed to the specified Store Access Control ID in ISO-8601 duration format PnDTnHnMn.nS.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmChangeAccessControlIDMaxDelay": {
+      "title": "Change Access Control ID Maximal Delay",
+      "description": "Indicates to stop applying this rule for Studies/Series which first object was received before the specified interval in ISO-8601 duration format PnDTnHnMn.nS. Required if there are other rules for changing the Access Control ID again in the future.",
+      "type": "string",
+      "format": "dcmDuration"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+uiTable:UI Table Configuration|Study Table configuration for the pro version
+uiTable.dcmuiTableConfigName:Configuration Name|UI  Table Configuration Name
+uiTable.dcmuiTableConfigUsername:Username|Username to which this set should be available
+uiTable.dcmuiTableConfigRoles:Role|Username role that can use this Set ( If you set the username, the role will be ignored )
+uiTable.dcmuiTableID:Table ID|The ID of the Table in the UI for which the config should be effective
+uiTable.dcmuiTableConfigIsDefault:Is Default|Set this Column-Set to the default one. (Make sure that only one of the Set - siblings child is set to default).
+uiTable.dcmuiTableColumnConfigObjects:Table Columns|Define Table Columns
