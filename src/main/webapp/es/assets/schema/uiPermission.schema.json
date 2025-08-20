@@ -103,7 +103,8 @@
           "upload",
           "reject",
           "restore",
-          "recreate"
+          "recreate",
+          "unmerge"
         ]
       }
     },
