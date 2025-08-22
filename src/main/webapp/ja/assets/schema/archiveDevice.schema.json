@@ -84,6 +84,7 @@
     "dcmQueueTasksFetchSize",
     "dcmSupplementIssuerFetchSize",
     "dcmUpdateCharsetFetchSize",
+    "dcmInExpressionCountLimit",
     "dcmCopyMoveUpdatePolicy",
     "dcmLinkMWLEntryUpdatePolicy",
     "dcmCSVUploadChunkSize",
@@ -1653,6 +1654,13 @@
       "type": "integer",
       "default": 100,
       "minimum": 1
+    },
+    "dcmInExpressionCountLimit": {
+      "title": "IN Expression Count Limit",
+      "description": "Limit the number of elements in the IN predicate used for matching SOP Instance UIDs in SQL queries (0 - only limited by DB specific constraint).",
+      "type": "integer",
+      "default": 1000,
+      "minimum": 0
     },
     "hl7ADTSendingApplication": {
       "title": "HL7 ADT 送信 アプリケーション",

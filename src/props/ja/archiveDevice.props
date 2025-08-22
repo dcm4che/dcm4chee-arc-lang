@@ -214,6 +214,7 @@ archiveDevice.dcmPatientVerificationMaxRetries:患者 検証の 最大 再試行
 archiveDevice.dcmPatientVerificationMaxStaleness:Patient Verification Maximum Staleness|Indicates to renew the verification of Patient Demographics on receive of objects for a patient, if previous verification is longer ago as the specified Interval. If absent, Patient Verification on receive of objects is disabled.
 archiveDevice.dcmSupplementIssuerFetchSize:発行者を 補足 する ための フェッチ サイズ|患者 IDの 発行者を 補足 する ための RESTful サービスに よって、 一致 する 患者の DB クエリの 結果 セットを 制限します。
 archiveDevice.dcmUpdateCharsetFetchSize:Update Charset Fetch Size|Limit result set of DB query for matching Patients by RESTful service to update the character set of Patient Attributes in DB BLOB fields.
+archiveDevice.dcmInExpressionCountLimit:IN Expression Count Limit|Limit the number of elements in the IN predicate used for matching SOP Instance UIDs in SQL queries (0 - only limited by DB specific constraint).
 archiveDevice.hl7ADTSendingApplication:HL7 ADT 送信 アプリケーション|実行された 患者 情報の 更新に ついて 外部 システムを 同期 する ために HL7 ADT メッセージの 送信 アプリケーションの 「アプリケーション | 施設」名前。 存在しない 場合、 HL7 ADT メッセージに よる 外部 システムの 同期は 無効に なります。
 archiveDevice.hl7ADTReceivingApplication:HL7 ADT 受信 アプリケーション|実行された 患者 情報の 更新に ついて 外部 システムを 同期 する ために HL7 ADT メッセージの 受信 アプリケーションの 「アプリケーション | 施設」名前。 存在しない 場合、 HL7 ADT メッセージに よる 外部 システムの 同期は 無効に なります。
 archiveDevice.hl7PSUSendingApplication:HL7 手順 ステータス 更新 送信 アプリケーション|HL7 手順 ステータス 更新の 送信 アプリケーションの 「アプリケーション | 施設」。 存在しない 場合、HL7 手順 ステータス 更新が 無効に なります。特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。
