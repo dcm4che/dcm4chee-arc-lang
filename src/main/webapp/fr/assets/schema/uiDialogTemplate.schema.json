@@ -1,6 +1,6 @@
 {
-  "title": "UI Plantilla de Diálogo",
-  "description": "Definir Crear Plantilla de Diálogo.",
+  "title": "UI Dialog Template",
+  "description": "Define Create Dialog Template",
   "type": "object",
   "required": [
     "dcmuiTemplateName",
@@ -8,25 +8,25 @@
   ],
   "properties": {
     "dcmuiTemplateName": {
-      "title": "Nombre",
-      "description": "Nombre de la plantilla de diálogo.",
+      "title": "Name",
+      "description": "Name of the dialog template",
       "type": "string"
     },
     "dcmTag": {
-      "title": "Atributo Etiqueta",
-      "description": "Etiqueta IDCOM como cadena hexadecimal que se incluirá en esta plantilla de diálogo.",
+      "title": "Attribute Tag",
+      "description": "DICOM Tag as hex string which shall be included in this dialog template",
       "type": "array",
       "items" : { "type": "string" },
       "format": "dcmTag"
     },
     "dicomDescription": {
-      "title": "Descripción",
-      "description": "Descripción de la plantilla de diálogo.",
+      "title": "Description",
+      "description": "Dialog template description",
       "type": "string"
     },
     "dcmuiDialog": {
-      "title": "Función de diálogo",
-      "description": "Especifica la función en la que se aplicará esta plantilla de diálogo.",
+      "title": "Dialog Function",
+      "description": "Specifies the function where this Dialog Template shall get applied",
       "type": "string",
       "enum": [
         "mwl",

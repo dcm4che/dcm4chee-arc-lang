@@ -1,6 +1,6 @@
 {
-  "title": "Configuración UI",
-  "description": "Configuración UI.",
+  "title": "UI Configuration",
+  "description": "UI Configuration",
   "type": "object",
   "required": [
     "dcmuiConfigName",
@@ -8,13 +8,13 @@
   ],
   "properties": {
     "dcmuiConfigName": {
-      "title": "Nombre Configuración UI",
-      "description": "Nombre Configuración UI.",
+      "title": "UI Configuration Name",
+      "description": "UI Configuration Name",
       "type": "string"
     },
     "dcmuiModalities": {
-      "title": "Modalidades Estadísticas",
-      "description": "Modalidades preseleccionadas que deben mostrarse en la página de Estadísticas.",
+      "title": "Statistic Modalities",
+      "description": "Preselected Modalities that should show in the Statistic page",
       "type": "array",
       "items" : {
         "type": "string"
@@ -30,8 +30,8 @@
       }
     },
     "dcmuiWidgetAets": {
-      "title": "AETs Widget",
-      "description": "Seleccione los AETs que desea ver en el widget AET, donde puede seleccionar en cual de ellos el nuevo AET añadido debe estar como `Título AE Llamada Aceptada`.",
+      "title": "Widget AETs",
+      "description": "Select the AETs that you wan't to see in the AET widget, where you can select in which of them the newly added AET should be as `Accepted Calling AE Title`",
       "type": "array",
       "items" : {
         "type": "string"
@@ -39,35 +39,35 @@
       "format": "dcmAETitle"
     },
     "dcmuiHideOtherPatientIDs": {
-      "title": "Ocultar otros ID de pacientes",
-      "description": "Indica si se deben ocultar otros identificadores de pacientes del registro de pacientes presentes en la secuencia Otros ID de pacientes (0010,1002). Por defecto, todos los identificadores de paciente del registro de paciente se muestran separados por comas.",
+      "title": "Hide Other Patient IDs",
+      "description": "Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.",
       "type": "boolean",
       "default": false
     },
     "dcmuiDateTimeFormat": {
-      "title": "Formatear Fecha Hora",
-      "description": "Aquí puede formatear la fecha y la hora en la interfaz de usuario utilizando \"aaaa\" para el año, \"MM\" para el mes, \"dd\" para la fecha, \"HH\" para la hora, \"mm\" para los minutos, \"ss\" para los segundos y \"SSS\" para los milisegundos. Para dar formato a la Fecha, Hora y Fecha-Hora debe utilizar \"FECHA\", \"HORA\" y \"FECHA-HORA\", por ejemplo, así `DATE=aaaa-MM-dd, TIME=HH:mm, DATE-TIME=aaaa-MM-dd HH:mm`.",
+      "title": "Format Date Time",
+      "description": "Here you can format the date time in the UI by using 'yyyy' for the year, 'MM' for the Month, 'dd' for the date, 'HH' for the hour 'mm' for the minutes, 'ss' for the seconds and 'SSS' for milliseconds. To format Date, Time and Date-Time you should use `DATE`, `TIME` and `DATE-TIME` for example like this: `DATE=yyyy-MM-dd, TIME=HH:mm, DATE-TIME=yyyy-MM-dd HH:mm`",
       "type": "string"
     },
     "dcmuiHideClock": {
-      "title": "Ocultar Reloj",
-      "description": "Ajuste a verdadero si desea ocultar el reloj en la interfaz de usuario.",
+      "title": "Hide Clock",
+      "description": "Set to true if you want to hide the clock in the UI",
       "type": "boolean",
       "default": false
     },
     "dcmuiPageTitle": {
-      "title": "Título de la Página",
-      "description": "Si se establece, se utilizará como Título de la página UI (El Texto mostrado en la Pestaña del Navegador).",
+      "title": "Page Title",
+      "description": "If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser ) ",
       "type": "string"
     },
     "dcmuiPersonNameFormat": {
-      "title": "Formatear el nombre de la persona",
-      "description": "Aquí puede formatear el nombre de la persona en la interfaz de usuario utilizando: {FAMILY-NAME}, {GIVEN-NAME}, {MIDDLE-NAME}, {NAME-PREFIX}, {NAME-SUFFIX} para alfabético, o añadiendo 'I_' para la versión ideográfica y 'P_' para la versión fonética, como {P_FAMILY-NAME}, {I_NAME-SUFFIX}.",
+      "title": "Format Person Name",
+      "description": "Here you can format the person Name in the UI by using:{FAMILY-NAME}, {GIVEN-NAME}, {MIDDLE-NAME}, {NAME-PREFIX}, {NAME-SUFFIX} for Alphabetic, or by appending 'I_' for the Ideographic and 'P_' for the Phonetic version like {P_FAMILY-NAME}, {I_NAME-SUFFIX}",
       "type": "string"
     },
     "dcmuiDefaultWidgetAets": {
-      "title": "AETs por defecto del widget",
-      "description": "Seleccione los AETs que deben preseleccionarse en los AETs del widget.",
+      "title": "Default Widget AETs",
+      "description": "Select the AETs that should be preselected on Widget AETs",
       "type": "array",
       "items" : {
         "type": "string"
@@ -75,8 +75,8 @@
       "format": "dcmAETitle"
     },
     "dcmuiMWLWorklistLabel": {
-      "title": "Etiqueta de la lista de trabajo MWL",
-      "description": "Valores seleccionables para la etiqueta de la lista de trabajo MWL.",
+      "title": "MWL Worklist Label",
+      "description": "Selectable values for MWL Worklist Label",
       "type": "array",
       "items" : {
         "type": "string"
@@ -89,8 +89,8 @@
       ]
     },
     "dcmuiInstitutionNameFilterType": {
-      "title": "Tipo de Filtro de Nombre de Institución",
-      "description": "Define cómo debe mostrarse el filtro de Nombre de Institución utilizado en la Página de Navegación y si debe haber un desplegable pre-rellenado y de dónde obtener esos datos.",
+      "title": "Institution Name Filter Type",
+      "description": "This will define how the Institution Name filter used in the Navigation Page should be displayed and if there should be a prefilled dropdown and where to get those data from",
       "type": "string",
       "enum": [
         "simple_filed|Simple input field|Simple input field",
@@ -99,8 +99,8 @@
       ]
     },
     "dcmuiInstitutionName": {
-      "title": "Nombres de instituciones",
-      "description": "Se utilizará en combinación con el campo anterior 'Tipo de filtro de nombres de instituciones' para rellenar previamente el desplegable del filtro de nombres de instituciones en la página de navegación.",
+      "title": "Institution Names",
+      "description": "This will be used in combination with the previous field 'Institution Name Filter Type' to prefill the Dropdown of the Filter Institution Names in the Navigation Page",
       "type": "array",
       "items" : {
         "type": "string"
@@ -131,8 +131,8 @@
       }
     },
     "dcmuiAetConfig": {
-      "title": "Lista desplegable de AETs",
-      "description": "Defina qué AETs deben ser visibles en las listas desplegables de la UI.",
+      "title": "AET drop-down list",
+      "description": "Define which AETs should be visible in the drop-down lists in the UI",
       "titleKey":"{dcmuiAetListName}",
       "type": "array",
       "items" : {
@@ -140,8 +140,8 @@
       }
     },
     "dcmuiWebAppConfig": {
-      "title": "Lista desplegable de Aplicaciones de Red",
-      "description": "Defina qué Aplicaciones de Red deben estar visibles en la parte superior de la lista desplegable de la interfaz de usuario.",
+      "title": "Web App drop-down list",
+      "description": "Define which WebApps should be visible on the top of the drop-down list in the UI",
       "titleKey":"{dcmuiWebAppListName}",
       "type": "array",
       "items" : {
@@ -149,8 +149,8 @@
       }
     },
     "dcmuiPermission": {
-      "title": "Permiso",
-      "description": "Permiso.",
+      "title": "Permission",
+      "description": "Permission",
       "titleKey":"{dcmuiPermissionName}",
       "type": "array",
       "items" : {
@@ -158,8 +158,8 @@
       }
     },
     "dcmuiFilterTemplateObject": {
-      "title": "Plantilla de filtro UI",
-      "description": "Plantilla de filtro definida.",
+      "title": "UI Filter Template",
+      "description": "Defined filter template",
       "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
       "type": "array",
       "items" : {
@@ -167,8 +167,8 @@
       }
     },
     "dcmuiDiffConfig": {
-      "title": "Configuración de diferencias de estudio",
-      "description": "Configuración de diferencias de estudio.",
+      "title": "Study Diff Configuration",
+      "description": "Study Diff Configuration",
       "titleKey":"{dcmuiDiffConfigName}",
       "type": "array",
       "items" : {
@@ -176,8 +176,8 @@
       }
     },
     "dcmuiTableConfig": {
-      "title": "Configuración de tabla de IU",
-      "description": "Configuración de tabla.",
+      "title": "UI Table Configuration",
+      "description": "Configuration of table",
       "titleKey":"{dcmuiTableConfigName}",
       "type": "array",
       "items" : {
@@ -185,8 +185,8 @@
       }
     },
     "dcmuiElasticsearchConfig": {
-      "title": "Configuración de UI Elasticsearch",
-      "description": "Configuración de Elasticsearch para la versión pro.",
+      "title": "UI Elasticsearch Configuration",
+      "description": "Elasticsearch Configuration for the pro version",
       "titleKey":"{dcmuiElasticsearchConfigName}",
       "type": "array",
       "items" : {
@@ -194,8 +194,8 @@
       }
     },
     "dcmuiDeviceClusterObject": {
-      "title": "Configuración de Grupos de UI",
-      "description": "Agrupar dispositivos en Grupos.",
+      "title": "UI Cluster Configuration",
+      "description": "Group Devices in Clusters",
       "titleKey":"{dcmuiDeviceClusterName}",
       "type": "array",
       "items" : {
@@ -203,8 +203,8 @@
       }
     },
     "dcmuiDashboardConfig": {
-      "title": "Configuración del Cuadro de Mando de IU",
-      "description": "Configuración del Cuadro de Mando de IU.",
+      "title": "UI Dashboard Configuration",
+      "description": "UI Dashboard Configuration",
       "titleKey":"{dcmuiDashboardConfigName}",
       "type": "array",
       "items" : {
@@ -212,8 +212,8 @@
       }
     },
     "dcmuiCreateDialogTemplate": {
-      "title": "UI Plantilla de Diálogo",
-      "description": "Configuración de UI Crear Plantillas de Diálogo.",
+      "title": "UI Dialog Template",
+      "description": "UI Create Dialog Templates Configuration",
       "titleKey":"{dcmuiTemplateName}",
       "type": "array",
       "items" : {

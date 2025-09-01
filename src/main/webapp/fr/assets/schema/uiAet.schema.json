@@ -1,6 +1,6 @@
 {
-  "title": "Lista desplegable Aet",
-  "description": "Lista desplegable Aet.",
+  "title": "Aet drop-down list",
+  "description": "Aet drop-down list",
   "type": "object",
   "required": [
     "dcmuiAetListName",
@@ -10,18 +10,18 @@
   ],
   "properties": {
     "dcmuiAetListName": {
-      "title": "Nombre de la lista",
-      "description": "Defina un nombre para esta configuración.",
+      "title": "List Name",
+      "description": "Define a name for this config",
       "type": "string"
     },
     "dcmuiAetListDescription": {
-      "title": "Descripción",
-      "description": "Descripción de la lista de AET.",
+      "title": "Description",
+      "description": "Aet List description",
       "type": "string"
     },
     "dcmuiMode": {
-      "title": "Modo de la lista de AETs",
-      "description": "Define en qué modo debe estar disponible esta configuración en la lista desplegable de AETs 'internos' ( AETs propios del archivo, en algunos lugares también llamados 'AET de casa' o 'AET local' ) o 'externos' ( o en algunos lugares también llamados 'AET remotos' ), para estar disponible para ambos no selecciones ninguno de ellos.",
+      "title": "AEt list mode",
+      "description": "Define in which mode should be this config available in 'internal' ( archive own AETs, in some places called also 'Home AET' or 'Local AET' ) or 'external' ( or in some places also called 'Remote AET' ) aet drop-down list, to be available for both don't select any of them",
       "type": "string",
       "enum": [
         "internal",
@@ -30,7 +30,7 @@
     },
     "dcmuiAets": {
       "title": "AETs",
-      "description": "Parámetro de acción UI.",
+      "description": "UI Action Parameter",
       "format": "dcmAETitle",
       "type": "array",
       "items" : {
@@ -38,8 +38,8 @@
       }
     },
     "dcmAcceptedUserRole": {
-      "title": "Rol de Usuario Aceptado",
-      "description": "Define los roles para los cuales esta configuración debe estar disponible, usa 'user' para estar disponible para todos los roles.",
+      "title": "Accepted User Role",
+      "description": "Define the roles for which this config should be available, use 'user' to be available for all roles",
       "type": "array",
       "items" : {
         "type": "string"

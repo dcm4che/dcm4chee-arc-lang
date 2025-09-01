@@ -1,6 +1,6 @@
 {
-  "title": "Almacenamiento",
-  "description": "Descriptor de almacenamiento",
+  "title": "Storage",
+  "description": "Storage Descriptor",
   "type": "object",
   "required": [
     "dcmStorageID",
@@ -40,25 +40,25 @@
       ]
     },
     "dcmURI": {
-      "title": "URI de almacenamiento",
-      "description": "RFC2079: Identificador Uniforme de Recursos",
+      "title": "Storage URI",
+      "description": "RFC2079: Uniform Resource Identifier",
       "type": "string"
     },
     "dcmArchiveSeriesAsTAR": {
-      "title": "Serie de Archivo como TAR",
-      "description": "Indica que los objetos binarios DICOM de una Serie están empaquetados en un archivo TAR en este Sistema de Almacenamiento; falso si no existe.",
+      "title": "Archive Series as TAR",
+      "description": "Indicates that binary DICOM objects of one Series are packed in one TAR archive on this Storage System; false if absent.",
       "type": "boolean",
       "default": false
     },
     "dcmStoragePathFormat": {
-      "title": "Formato de la ruta de almacenamiento",
-      "description": "Formato de la ruta de archivo de los objetos binarios DICOM o metadatos en formato JSON o de los archivos ZIP que contienen metadatos en formato JSON para cada objeto DICOM de una serie, escritos en este sistema de almacenamiento. '{now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}', si no existe.",
+      "title": "Storage Path Format",
+      "description": "Format of file path of DICOM binary objects or metadata in JSON format or of ZIP archives containing metadata in JSON format for each DICOM object of one Series, written to this Storage System. '{now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}', if absent.",
       "type": "string",
       "default": "{now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}"
     },
     "dcmOnStoragePathAlreadyExists": {
-      "title": "Ya existe en la ruta de almacenamiento",
-      "description": "Especifica el comportamiento si un objeto ya existe en la ruta de almacenamiento en el sistema de almacenamiento, ensamblado según el 'Formato de ruta de almacenamiento' configurado. Comportamiento por defecto 'RUTA_ALEATORIA'. (pase el ratón sobre las opciones para ver sus descripciones)",
+      "title": "Already Exists on Storage Path",
+      "description": "Specifies behavior if an object already exists on the storage path on the storage system, assembled according to the configured 'Storage Path Format'. Default behaviour 'RANDOM_PATH'. (hover on options to see their descriptions)",
       "type": "string",
       "enum": [
         "FAILURE|Signals failure writing the new object",
@@ -68,20 +68,20 @@
       "default": "RANDOM_PATH"
     },
     "dcmRetryCreateDirectories": {
-      "title": "Reintentar Crear Directorios",
-      "description": "Especifica el número de reintentos para crear directorios padre de la ruta de almacenamiento - puede solucionar problemas relacionados con NFS; 0 si no existe.",
+      "title": "Retry Create Directories",
+      "description": "Specifies number of retries to create parent directories of the storage file path - may workaround issues concerning NFS; 0 if absent.",
       "type": "integer",
       "default": 0
     },
     "dcmAltCreateDirectories": {
-      "title": "Crear directorios Alt",
-      "description": "Indicar que no se confíe en la función 'createDirectories' de la clase Java 'java.nio.file.Files', para crear primero todos los directorios padre inexistentes, sino que se creen explícitamente los directorios padre si se lanza NoSuchFileException. Puede solucionar problemas relacionados con NFS.",
+      "title": "Alt Create Directories",
+      "description": "Indicate to not rely on 'createDirectories' function in 'java.nio.file.Files' Java class, to create all nonexistent parent directories first, but instead explicitly create parent directories if NoSuchFileException is thrown. May workaround issues concerning NFS.",
       "type": "boolean",
       "default": false
     },
     "dcmCheckMountFilePath": {
-      "title": "Verificar ruta de archivo de montaje",
-      "description": "Indica que se verifique si un sistema de archivos montado no se separó de su punto de montaje, especificando la ruta de un archivo sombra en el directorio utilizado como punto de montaje. Si el archivo sombra se vuelve inaccesible, falla la operación de escritura en el almacenamiento. Se comprueba para cada almacenamiento de objetos DICOM (operación de escritura). Normalmente aplicable a NFS / sistemas de archivos externos.",
+      "title": "Check Mount File Path",
+      "description": "Indicates to check if a mounted file system did not get detached from its mount point, by specifying the path of a file relative to the path of the Storage URI, which is shadowed by the mount, so its visibility signals that the mount failed. If the file becomes visible, the write operation to the storage fails, preventing to store objects on the file system of the mount point directory.",
       "type": "string"
     },
     "dcmCheckExistFilePath": {
@@ -90,8 +90,8 @@
       "type": "string"
     },
     "dcmFileOpenOption": {
-      "title": "Opción(es) de apertura del archivo",
-      "description": "Opciones que especifican cómo se abre el archivo para la escritura. Comportamiento por defecto 'CREAR_NUEVO'. (pase el ratón sobre las opciones para ver sus descripciones)",
+      "title": "File Open Option(s)",
+      "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)",
       "type": "array",
       "items" : {
         "type": "string",
@@ -104,8 +104,8 @@
       "default": "CREATE_NEW"
     },
     "dcmLocationStatus": {
-      "title": "Estado de Ubicación",
-      "description": "Estado de Ubicación Inicial de los archivos DICOM escritos en este Sistema de Almacenamiento. Comportamiento por defecto 'OK' (pase el ratón sobre las opciones para ver sus descripciones)",
+      "title": "Location Status",
+      "description": "Initial Location Status of DICOM files written to this Storage System. Default behaviour 'OK'. (hover on options to see their descriptions)",
       "type": "string",
       "enum": [
         "OK|Indicates access state of stored objects is stable",
@@ -114,14 +114,14 @@
       "default": "OK"
     },
     "dcmCountLocationsByStatus": {
-      "title": "Contar Ubicaciones por Estado",
-      "description": "Indicar si se desea incluir el recuento de ubicaciones con estado != 0 (=OK) para este Sistema de Almacenamiento mediante el servicio RESTful para listar Sistemas de Almacenamiento; falso si no existe.",
+      "title": "Count Locations by Status",
+      "description": "Indicate to include counts of locations with status != 0 (=OK) for this Storage System by RESTful service to list Storage Systems; false if absent.",
       "type": "boolean",
       "default": false
     },
     "dcmDigestAlgorithm": {
-      "title": "Digerir Algoritmo",
-      "description": "Algoritmo para la generación de sumas de comprobación.",
+      "title": "Digest Algorithm",
+      "description": "Algorithm for generation of check sums.",
       "type": "string",
       "enum" : [
         "MD5|Message-digest algorithm",
@@ -129,21 +129,21 @@
       ]
     },
     "dcmMaxRetries": {
-      "title": "Número máximo de reintentos",
-      "description": "Número máximo de reintentos para almacenar un objeto en el sistema de almacenamiento.",
+      "title": "Maximum Number of Retries",
+      "description": "Maximum number of retries to store an object on the storage system.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmRetryDelay": {
-      "title": "Retraso de reintento",
-      "description": "Retraso de reintento para almacenar un objeto en el sistema de almacenamiento en formato de duración ISO-8601 PnDTnHnMn.nS. Reintentar inmediatamente si no existe.",
+      "title": "Retry Delay",
+      "description": "Delay to retry to store an object on the storage system in ISO-8601 duration format PnDTnHnMn.nS. Retry immediately if absent.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmInstanceAvailability": {
-      "title": "Disponibilidad de instancia",
-      "description": "Disponibilidad de instancia.",
+      "title": "Instance Availability",
+      "description": "Instance Availability.",
       "type": "string",
       "default": "ONLINE",
       "enum": [
@@ -153,8 +153,8 @@
       ]
     },
     "dcmStorageDuration": {
-      "title": "Duración del almacenamiento",
-      "description": "Indica el tipo de duración del almacenamiento. Los objetos se eliminan de la caché y del almacenamiento temporal de acuerdo con los umbrales de eliminación configurados o, si no se especifica ningún umbral de eliminación ni se configuran periodos de retención, se eliminarán todos los objetos del almacenamiento. En el caso del almacenamiento temporal, los estudios cuyos objetos se hayan purgado también se eliminarán de la base de datos.",
+      "title": "Storage Duration",
+      "description": "Indicates the type of storage duration. Objects get purged from cache and temporary storage according configured deleter thresholds or - if no deleter threshold is specified and no Retention Periods are configured - all objects on the Storage will get purged. In the case of temporary storage, the studies whose objects were purged are also deleted from the database.",
       "type": "string",
       "default": "PERMANENT",
       "enum": [
@@ -164,35 +164,35 @@
       ]
     },
     "dcmReadOnly": {
-      "title": "Sólo lectura",
-      "description": "Indica si un Sistema de Almacenamiento es de sólo lectura.",
+      "title": "Read Only",
+      "description": "Indicates if a Storage System is read only.",
       "type": "boolean",
       "default": false
     },
     "dcmStorageClusterID": {
-      "title": "ID de grupo de almacenamiento",
-      "description": "Identifica un almacenamiento CACHE perteneciente a un grupo de almacenamiento. Los objetos de un estudio pueden distribuirse entre los sistemas de almacenamiento de un grupo de almacenamiento. Se utiliza para la eliminación activada por umbral.",
+      "title": "Storage Cluster ID",
+      "description": "Identifies a CACHE Storage belonging to a Storage Cluster. Objects of one Study may be distributed over Storage Systems of one Storage Cluster. Used by threshold triggered deletion.",
       "type": "string"
     },
     "dcmStorageThreshold": {
-      "title": "Umbral de Almacenamiento",
-      "description": "Espacio Mínimo Utilizable en el Sistema de Almacenamiento. Si el espacio utilizable cae por debajo de ese valor, el Sistema de Almacenamiento se marcará como lleno estableciendo que el Umbral de Almacenamiento Excede a la hora actual y - si el Umbral de Almacenamiento Excede Permanentemente es verdadero - el Sistema de Almacenamiento se eliminará de la lista de Sistemas de Almacenamiento configurados del AE de Red que solicita ese Sistema de Almacenamiento. Formato nnn(MB|GB|MiB|GiB)",
+      "title": "Storage Threshold",
+      "description": "Minimal Usable Space on Storage System. If the usable space falls below that value the Storage System will be marked as full by setting Storage Threshold Exceeds to the current time and - if Storage Threshold Exceeds Permanently is true - the Storage System will be removed from the list of configured Storage Systems of the Network AE requesting that Storage System. Format nnn(MB|GB|MiB|GiB)",
       "type": "string"
     },
     "dcmStorageThresholdExceeded": {
-      "title": "Umbral de Almacenamiento Excedido",
-      "description": "Fecha y hora en formato AAAAMMDDHHMMSS.FFFFFF en que se excedió el Umbral de Almacenamiento.",
+      "title": "Storage Threshold Exceeded",
+      "description": "Date and time in format YYYYMMDDHHMMSS.FFFFFF when the Storage Threshold exceeded.",
       "type": "string"
     },
     "dcmStorageThresholdExceedsPermanently": {
-      "title": "Umbral de Almacenamiento Excedido Permanentemente",
-      "description": "Indica que se elimine el Sistema de Almacenamiento de la lista de Sistemas de Almacenamiento configurados del AE de Red que solicita dicho Sistema de Almacenamiento cuando se excede el Umbral de Almacenamiento.",
+      "title": "Storage Threshold Exceeds Permanently",
+      "description": "Indicates to removed the Storage System from the list of configured Storage Systems of the Network AE requesting that Storage System when the Storage Threshold exceeds.",
       "type": "boolean",
       "default": true
     },
     "dcmNoDeletionConstraint": {
-      "title": "Sin restricción de borrado",
-      "description": "Borrar estudios de la caché/sistema de almacenamiento temporal, si no se ha configurado ningún umbral de borrado ni ninguna otra restricción de borrado.",
+      "title": "No Deletion Constraint",
+      "description": "Delete Studies from cache/temporary Storage System, if no Deleter Threshold and no other deletion constraint is configured.",
       "type": "boolean",
       "default": false
     },
@@ -202,8 +202,8 @@
       "type": "string"
     },
     "dcmDeleterThreshold": {
-      "title": "Umbral de eliminación",
-      "description": "Espacio mínimo utilizable en el sistema de almacenamiento para activar la eliminación. Si está presente, los estudios se borran del Sistema de Almacenamiento configurado para almacenamiento en caché (Duración del Almacenamiento = CACHE) o temporal (Duración del Almacenamiento = TEMPORAL), si el espacio utilizable cae por debajo de ese valor. Formato [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).",
+      "title": "Deleter Threshold",
+      "description": "Minimal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the usable space fall below that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).",
       "type": "array",
       "items": {
         "type": "string"
@@ -223,8 +223,8 @@
       "type": "string"
     },
     "dcmDeleteStudiesOlderThan": {
-      "title": "Borrar estudios más antiguos que",
-      "description": "Borrar estudios del sistema de almacenamiento configurado para almacenamiento en caché (dcmStorageDuration=CACHE) o temporal (dcmStorageDuration=TEMPORARY), si su fecha de estudio es más antigua que el valor especificado en formato de periodo ISO-8601. Formato [nn\"[\"\"<schedule>\"]\"](PnYnMnD|PnW).",
+      "title": "Delete Studies Older Than",
+      "description": "Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if their Study Date is longer ago than the specified value in ISO-8601 period format. Format [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
       "type": "array",
       "items": {
         "type": "string"
@@ -232,8 +232,8 @@
       "format": "dcmPeriod"
     },
     "dcmDeleteStudiesReceivedBefore": {
-      "title": "Borrar estudios recibidos antes",
-      "description": "Borrar estudios del sistema de almacenamiento configurado para almacenamiento en caché (dcmStorageDuration=CACHE) o temporal (dcmStorageDuration=TEMPORARY), si se recibieron hace más tiempo que el valor especificado en formato de periodo ISO-8601. Formato [nn\"[\"\"<schedule>\"]\"](PnYnMnD|PnW).",
+      "title": "Delete Studies Received Before",
+      "description": "Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if they were received longer ago than the specified value in ISO-8601 period format. Format [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
       "type": "array",
       "items": {
         "type": "string"
@@ -241,8 +241,8 @@
       "format": "dcmPeriod"
     },
     "dcmDeleteStudiesNotUsedSince": {
-      "title": "Borrar estudios no utilizados desde",
-      "description": "Borrar estudios del sistema de almacenamiento configurado para almacenamiento en caché (dcmStorageDuration=CACHE) o temporal (dcmStorageDuration=TEMPORARY), si se accedió a ellos por última vez hace más tiempo que el valor especificado en formato de período ISO-8601. Formato [nn\"[\"\"<schedule>\"]\"](PnYnMnD|PnW).",
+      "title": "Delete Studies Not Used Since",
+      "description": "Delete Studies from the Storage System configured for cache (dcmStorageDuration=CACHE) or temporary (dcmStorageDuration=TEMPORARY) storage, if they were last accessed longer ago than the specified value in ISO-8601 period format. Format [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
       "type": "array",
       "items": {
         "type": "string"
@@ -250,16 +250,16 @@
       "format": "dcmPeriod"
     },
     "dcmDeleterThreads": {
-      "title": "Subprocesos de borrado",
-      "description": "Número de subprocesos utilizados para borrar objetos del sistema de almacenamiento.",
+      "title": "Deleter Threads",
+      "description": "Number of Threads used for deletion of objects from the Storage System.",
       "type": "integer",
       "default" : 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmExternalRetrieveAET": {
-      "title": "AETs de Recuperación Externa",
-      "description": "Restringe el borrado de Estudios, adicionalmente a los umbrales de borrado configurados y/o restricciones de periodo de retención de borrado, desde el Sistema de Almacenamiento a Estudios cuyos objetos son recuperables usando uno de los AEs desde un SCP C-MOVE externo.",
+      "title": "External Retrieve AETs",
+      "description": "Constrains deletion of Studies, additionally to configured deleter thresholds and/or deletion retention period constraints, from the Storage System to Studies which objects are retrievable using one of the AEs from an external C-MOVE SCP.",
       "type": "array",
       "items": {
         "type": "string"
@@ -267,8 +267,8 @@
       "format": "dcmAETitle"
     },
     "dcmExternalRetrieveInstanceAvailability": {
-      "title": "Disponibilidad de Instancias de Recuperación Externa",
-      "description": "Actualiza la disponibilidad de instancias en la eliminación de estudios para instancias disponibles en el archivo de recuperación externa.",
+      "title": "External Retrieve Instance Availability",
+      "description": "Updates instance availability on deletion of studies for instances available on external retrieve archive.",
       "type": "string",
       "enum": [
         "ONLINE",
@@ -277,8 +277,8 @@
       ]
     },
     "dcmExportStorageID": {
-      "title": "Exportar ID de Almacenamiento",
-      "description": "Restringe la eliminación de Estudios, además de los umbrales de eliminación configurados y/o las restricciones del periodo de retención de eliminación, desde el Sistema de Almacenamiento a Estudios cuyos objetos también son accesibles desde los otros almacenamientos especificados.",
+      "title": "Export Storage ID",
+      "description": "Constrains deletion of Studies, additionally to configured deleter thresholds and/or deletion retention period constraints, from the Storage System to Studies whose objects are also accessible from the specified other storages.",
       "type": "array",
       "items": {
         "type": "string"
@@ -292,14 +292,14 @@
       "default": false
     },
     "dcmRetrieveCacheStorageID": {
-      "title": "Recuperar ID de almacenamiento en caché",
-      "description": "Especifica otro almacenamiento en el que los objetos se copian en paralelo al recuperarlos para aumentar el rendimiento en el acceso a los sistemas de almacenamiento que proporciona más ancho de banda utilizando varias conexiones en paralelo.",
+      "title": "Retrieve Cache Storage ID",
+      "description": "Specifies another Storage to which objects are copied in parallel on retrieve to increase the performance on accessing storage systems which provides more bandwidth using multiple connections in parallel.",
       "type": "string",
       "format": "dcmStorageID"
     },
     "dcmNoRetrieveCacheOnDestinationAETitle": {
-      "title": "No Recuperar caché en el título AE de destino",
-      "description": "Especifica los títulos AE de los SCP de C-STORE en los que se recuperan los objetos sin copiarlos en un almacenamiento de caché de recuperación configurado.",
+      "title": "No Retrieve Cache on Destination AE Title",
+      "description": "Specifies AE Titles of C-STORE SCPs to which objects are retrieved without copying them to a configured Retrieve Cache Storage.",
       "type": "array",
       "items": {
         "type": "string"
@@ -307,22 +307,22 @@
       "format": "dcmAETitle"
     },
     "dcmNoRetrieveCacheOnPurgedInstanceRecords": {
-      "title": "No Recuperar Caché en Registros de Instancia Purgados",
-      "description": "Indica que NO se copien los objetos recuperados a un Almacenamiento de Caché de Recuperación configurado, en el que los Registros de Instancia correspondientes ya se purgaron de la BD.",
+      "title": "No Retrieve Cache on Purged Instance Records",
+      "description": "Indicates to NOT copy retrieved objects to a configured Retrieve Cache Storage, wherein corresponding Instance Records were already purged from the DB.",
       "type": "boolean",
       "default": false
     },
     "dcmRetrieveCacheMaxParallel": {
-      "title": "Recuperar Caché Máximo Paralelo",
-      "description": "Número máximo de copias paralelas al almacenamiento en caché al recuperar. Sólo efectivo si está configurado un ID de almacenamiento en caché de recuperación.",
+      "title": "Retrieve Cache Max Parallel",
+      "description": "Maximal number of parallel copies to cache storage on retrieve. Only effective if a Retrieve Cache Storage ID is configured.",
       "type": "integer",
       "default" : 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmProperty": {
-      "title": "Propiedad de almacenamiento",
-      "description": "Especifica las propiedades de almacenamiento en formato {name}={value}. Consulte varias <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Storage-Properties\" target=\"_blank\">Propiedades de almacenamiento</a> que pueden configurarse en función del tipo de almacenamiento.",
+      "title": "Storage Property",
+      "description": "Specify storage properties in format {name}={value}. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Storage-Properties\" target=\"_blank\">Storage Properties</a> that can be configured based on the storage type.",
       "type": "array",
       "items": {
         "type": "string"

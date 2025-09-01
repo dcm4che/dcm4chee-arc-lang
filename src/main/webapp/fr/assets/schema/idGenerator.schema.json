@@ -1,6 +1,6 @@
 {
-  "title": "Generador ID",
-  "description": "Generador ID",
+  "title": "ID Generator",
+  "description": "ID Generator",
   "type": "object",
   "required": [
     "dcmIDGeneratorName",
@@ -9,18 +9,18 @@
   ],
   "properties": {
     "dcmIDGeneratorName": {
-      "title": "Nombre del generador de ID",
-      "description": "Nombre del generador de ID.",
+      "title": "ID Generator Name",
+      "description": "ID Generator Name.",
       "type": "string"
     },
     "dcmIDGeneratorFormat": {
-      "title": "Formato del generador de ID",
-      "description": "Cadena de formato utilizada por este generador de ID. %0<width>d será reemplazado por un número secuencial con ceros a la izquierda de acuerdo al ancho dado.",
+      "title": "ID Generator Format",
+      "description": "Format string used by this ID Generator. %0<width>d will be replaced by a sequential number with leading zeros according the given width",
       "type": "string"
     },
     "dcmIDGeneratorInitialValue": {
-      "title": "Valor inicial del generador de ID",
-      "description": "Valor inicial de la secuencia utilizada por este generador de ID.",
+      "title": "ID Generator Initial Value",
+      "description": "Initial value for sequence used by this ID Generator.",
       "type": "integer",
       "minimum": 0,
       "default": 1

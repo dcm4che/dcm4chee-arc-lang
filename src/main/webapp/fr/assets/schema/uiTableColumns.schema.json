@@ -1,6 +1,6 @@
 {
-  "title": "Configuración de las Columnas de la Tabla de Estudio UI",
-  "description": "Columnas de la Tabla de Estudio.",
+  "title": "UI Study Table Columns Configuration",
+  "description": "Study Table Columns",
   "type": "object",
   "required": [
     "dcmuiColumnName",
@@ -9,28 +9,28 @@
   ],
   "properties": {
     "dcmuiColumnName": {
-      "title": "Nombre de Columna",
-      "description": "Nombre de la Columna en la Tabla de Estudio.",
+      "title": "Column Name",
+      "description": "The Name of the Column in the Study Table",
       "type": "string"
     },
     "dcmuiColumnId": {
-      "title": "ID de Columna",
-      "description": "Cada columna posible que se utiliza en la UI, tiene un ID, utilizando el ID puede cambiar algunas de las propiedades de esa Columna, como Nombre, Descripción, Orden o ancho.",
+      "title": "Column ID",
+      "description": "Every possible column that is used in the UI, has and ID, by using the ID you can change some of the properties of that Column, like Name, Description, Order or width",
       "type": "string"
     },
     "dcmuiColumnTitle": {
-      "title": "Descripción de la Columna",
-      "description": "Descripción de la Columna, mostrada al pasar el ratón por encima.",
+      "title": "Column Description",
+      "description": "Description of the Column, shown on hover",
       "type": "string"
     },
     "dcmuiValuePath": {
-      "title": "Ruta del valor",
-      "description": "Valor (objeto json) Ruta de la columna (por ejemplo: '00100010.Value[0].Alphabetic' para el nombre del paciente o '00100020.Value[0]' para el ID del paciente).",
+      "title": "Value path",
+      "description": "Value (json-Object) Path of the column (for Example: '00100010.Value[0].Alphabetic' for Patient's Name or '00100020.Value[0]' for Patient ID",
       "type": "string"
     },
     "dcmuiValueType": {
-      "title": "Tipo del valor",
-      "description": "Tipo de la columna como obtener el valor, por defecto debe ser 'valor'.",
+      "title": "Type of the value",
+      "description": "Type of the column how to get the value, default should be 'value'",
       "type": "string",
       "enum": [
         "value",
@@ -38,13 +38,13 @@
       ]
     },
     "dcmuiColumnWidth": {
-      "title": "Ancho de la columna en peso",
-      "description": "Ancho de la columna en peso ( x > 0.1 - x < infinito ) por defecto 1.",
+      "title": "Column width in weight",
+      "description": "Width of the column in weight ( x > 0.1 - x < infinite ) default 1",
       "type":  "string"
     },
     "dcmuiColumnOrder": {
-      "title": "Orden de la columna",
-      "description": "Orden de la columna.",
+      "title": "Order of the Column",
+      "description": "Order of the Column",
       "type":  "number"
     }
   }

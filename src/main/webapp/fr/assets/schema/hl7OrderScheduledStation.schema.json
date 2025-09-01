@@ -1,6 +1,6 @@
 {
-  "title": "Orden de estación programada para HL7",
-  "description": "Estación programada seleccionada en la fuente de órdenes MWL HL7.",
+  "title": "Scheduled Station for HL7 Order",
+  "description": "Scheduled Station selected on MWL HL7 Order Feed",
   "type": "object",
   "required": [
     "cn",
@@ -9,26 +9,26 @@
   ],
   "properties": {
     "cn": {
-      "title": "Nombre",
-      "description": "Nombre arbitrario/significativo para la asignación de órdenes de la estación programada.",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name for the Scheduled Station Order Mapping",
       "type": "string"
     },
     "hl7OrderScheduledStationDeviceName": {
-      "title": "Nombre de Dispositivo de Estación Programada",
-      "description": "Nombre de dispositivo de Estación Programada utilizado para Mensajes de Orden HL7.",
+      "title": "Scheduled Station Device Name",
+      "description": "Device name of Scheduled Station used for HL7 Order Messages.",
       "type": "string",
       "format": "dicomDeviceName"
     },
     "dcmRulePriority": {
-      "title": "Prioridad de mapeo",
-      "description": "Si la condición de varias reglas Scheduled Station for HL7 Order coinciden para un mensaje HL7 recibido y cada una tiene diferente prioridad, se aplica Scheduled Station Device Name de mayor prioridad. Si la condición de varias reglas de estación programada para pedido HL7 coincide para un mensaje HL7 recibido y cada una tiene la misma prioridad, se aplica el nombre de dispositivo de estación programada de cada una",
+      "title": "Mapping Priority",
+      "description": "If the condition of several Scheduled Station for HL7 Order rules match for a received HL7 message and each have different priority, Scheduled Station Device Name of highest priority is applied. If the condition of several Scheduled Station for HL7 Order rules match for a received HL7 message and each have equal priority, Scheduled Station Device Name of each is applied.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmProperty": {
-      "title": "Condiciones",
-      "description": "Condiciones en formato {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Ejemplos: MSH-4=FORWARD o MSH-9=ADT\\^A28^ADT_A05 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType.",
+      "title": "Conditions",
+      "description": "Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
       "items": {
         "type": "string"

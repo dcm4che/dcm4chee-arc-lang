@@ -1,13 +1,13 @@
-hl7Application:Aplicación HL7|Información sobre la aplicación HL7
-hl7Application.hl7ApplicationName:Nombre de la aplicación HL7|Nombre de la aplicación HL7 y de la instalación ( Aplicación| Instalación)
-hl7Application.dicomNetworkConnectionReference:Referencia de Conexión de Red|Los Punteros JSON a los objetos de Conexión de Red para esta Aplicación HL7
-hl7Application.hl7AcceptedSendingApplication:Aplicación de envío aceptada|Aplicación|Nombre del centro de la(s) aplicación(es) de envío aceptada(s); cualquiera si no existe.
-hl7Application.hl7OtherApplicationName:Otro Nombre de Aplicación HL7|Nombre de Aplicación y Centro HL7 Adicional (Aplicación|Centro) - también aceptará mensajes HL7 con dicho nombre de Aplicación y Centro Receptor.
-hl7Application.hl7AcceptedMessageType:Tipo de mensaje aceptado|Tipo(s) de mensaje (MessageType^TriggerEvent) de los mensajes aceptados.
-hl7Application.hl7DefaultCharacterSet:Juego de caracteres predeterminado|Juego de caracteres utilizado para descodificar los mensajes recibidos si no lo especifica MSH-18.
-hl7Application.hl7SendingCharacterSet:Juego de caracteres de envío|Juego de caracteres utilizado para codificar los mensajes HL7 enviados desde el archivo.
-hl7Application.hl7OptionalMSHField:Optional MSH Field|Aceptar mensajes HL7 en los que falten valores para los campos MSH especificados, aunque sean obligatorios según <a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43" target="_blank">IHE RAD TF Vol 2 requisitos de control de mensajes</a>.
-hl7Application.dicomDescription:Descripción HL7|Descripción de texto sin restricciones de la aplicación HL7.
-hl7Application.dicomApplicationCluster:Grupo de aplicaciones|Nombres definidos localmente para un subconjunto de aplicaciones relacionadas.
-hl7Application.dicomInstalled:instalado|Verdadero si la aplicación HL7 está instalada en la red. Si no está presente, la información sobre el estado de instalación de la aplicación HL7 se hereda del dispositivo.
-hl7Application.dcmArchiveHL7Application:Archivar aplicación HL7|DICOM Archiva la información relacionada con la aplicación HL7.
+hl7Application:HL7 Application|HL7 Application information
+hl7Application.hl7ApplicationName:HL7 Application name|HL7 Application and Facility name (Application|Facility)
+hl7Application.dicomNetworkConnectionReference:Network Connection Reference|The JSON Pointers to the Network Connection objects for this HL7 Application
+hl7Application.hl7AcceptedSendingApplication:Accepted Sending Application|Application|Facility name of accepted Sending Application(s); any if absent
+hl7Application.hl7OtherApplicationName:Other HL7 Application Name|Additional HL7 Application and Facility name (Application|Facility) - will also accept HL7 messages with such Receiving Application and Facility name
+hl7Application.hl7AcceptedMessageType:Accepted Message Type|Message Type(s) (MessageType^TriggerEvent) of accepted messages
+hl7Application.hl7DefaultCharacterSet:Default Character Set|Character Set used to decode received messages if not specified by MSH-18.
+hl7Application.hl7SendingCharacterSet:Sending Character Set|Character Set used to encode HL7 messages sent from archive.
+hl7Application.hl7OptionalMSHField:Optional MSH Field|Accept HL7 Messages with missing values for specified MSH fields, even they are required according to <a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43" target="_blank">IHE RAD TF Vol 2 Message Control requirements</a>.
+hl7Application.dicomDescription:HL7 Description|Unconstrained text description of the HL7 Application
+hl7Application.dicomApplicationCluster:Application Cluster|Locally defined names for a subset of related applications
+hl7Application.dicomInstalled:installed|True if the HL7 Application is installed on network. If not present, information about the installed status of the HL7 Application is inherited from the device
+hl7Application.dcmArchiveHL7Application:Archive HL7 Application|DICOM Archive HL7 Application related information

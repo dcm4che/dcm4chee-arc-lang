@@ -1,6 +1,6 @@
 {
-  "title": "Permiso UI",
-  "description": "Permiso UI.",
+  "title": "UI Permission",
+  "description": "UI Permission",
   "type": "object",
   "required": [
     "dcmuiPermissionName",
@@ -8,13 +8,13 @@
   ],
   "properties": {
     "dcmuiPermissionName": {
-      "title": "Nombre de permiso UI",
-      "description": "Nombre del permiso para la acción UI.",
+      "title": "UI Permission Name",
+      "description": "Name of Permission for UI Action",
       "type": "string"
     },
     "dcmuiAction": {
-      "title": "Acción UI",
-      "description": "Acción UI.",
+      "title": "UI Action",
+      "description": "UI Action",
       "type": "string",
       "enum": [
         "page-ai-chat-docs",
@@ -87,8 +87,8 @@
       ]
     },
     "dcmuiActionParam": {
-      "title": "Parámetro de acción UI",
-      "description": "Parámetro de acción UI.",
+      "title": "UI Action Parameter",
+      "description": "UI Action Parameter",
       "type": "array",
       "items" : {
         "type": "string",
@@ -109,8 +109,8 @@
       }
     },
     "dcmAcceptedUserRole": {
-      "title": "Rol de usuario aceptado",
-      "description": "Rol de usuario aceptado.",
+      "title": "Accepted User Role",
+      "description": "Accepted User Role",
       "type": "array",
       "items" : {
         "type": "string"

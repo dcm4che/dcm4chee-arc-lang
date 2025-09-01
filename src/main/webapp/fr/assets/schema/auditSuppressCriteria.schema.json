@@ -1,19 +1,19 @@
 {
-  "title": "Criterios de supresión de auditoría",
-  "description": "Criterios de supresión de auditoría.",
+  "title": "Audit Suppress Criteria",
+  "description": "Audit Suppress Criteria",
   "type": "object",
   "required": [
     "cn"
   ],
   "properties": {
     "cn": {
-      "title": "Nombre",
-      "description": "Nombre arbitrario/significativo del criterio de supresión de auditoría.",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the Audit Suppress Criteria.",
       "type": "string"
     },
     "dcmAuditEventID": {
-      "title": "Identificación del evento de auditoría",
-      "description": "DICOM PS 3.15 A.5 Código de identificación del evento de auditoría y nombre del sistema de códigos en formato (CV, CSD, \"CM\").",
+      "title": "Audit Event ID",
+      "description": "DICOM PS 3.15 A.5 Audit Event ID code and codeSystemName in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -42,8 +42,8 @@
       }
     },
     "dcmAuditEventTypeCode": {
-      "title": "Código de tipo de evento de auditoría",
-      "description": "DICOM PS 3.15 A.5 Código de tipo de evento de auditoría en formato (CV, CSD, \"CM\").",
+      "title": "Audit Event Type Code",
+      "description": "DICOM PS 3.15 A.5 Audit Event Type code in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -92,8 +92,8 @@
       }
     },
     "dcmAuditEventActionCode": {
-      "title": "Código de acción del evento",
-      "description": "DICOM PS 3.15 A.5 Código del tipo de acción del evento de auditoría.",
+      "title": "Event Action Code",
+      "description": "DICOM PS 3.15 A.5 Audit Event Action Type code.",
       "type": "array",
       "items": {
         "type": "string",
@@ -107,8 +107,8 @@
       }
     },
     "dcmAuditEventOutcomeIndicator": {
-      "title": "Indicador de resultado del evento",
-      "description": "DICOM PS 3.15 A.5 Indicador de resultado del evento de auditoría.",
+      "title": "Event Outcome Indicator",
+      "description": "DICOM PS 3.15 A.5 Audit Event Outcome Indicator.",
       "type": "array",
       "items": {
         "type": "string",
@@ -121,24 +121,24 @@
       }
     },
     "dcmAuditUserID": {
-      "title": "Identificación de usuario",
-      "description": "ID de usuario del participante activo de la auditoría PS 3.15 A.5.",
+      "title": "User ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant User ID.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditAlternativeUserID": {
-      "title": "Identificación de usuario alternativa",
-      "description": "DICOM PS 3.15 A.5 Identificación de usuario alternativo del participante activo en la auditoría.",
+      "title": "Alternative User ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditUserRoleIDCode": {
-      "title": "Código de identificación de la función del usuario",
-      "description": "DICOM PS 3.15 A.5 Código de identificación de la función del usuario del participante activo en formato de auditoría (CV, CSD, \"CM\").",
+      "title": "User Role ID Code",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant User Role ID code in format (CV, CSD, \"CM\").",
       "type": "array",
       "items": {
         "type": "string",
@@ -153,21 +153,21 @@
       }
     },
     "dcmAuditNetworkAccessPointID": {
-      "title": "Identificación del punto de acceso a la red",
-      "description": "DICOM PS 3.15 A.5 Identificación del punto de acceso a la red del participante activo en la auditoría.",
+      "title": "Network Access Point ID",
+      "description": "DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditUserIsRequestor": {
-      "title": "El usuario es el solicitante",
-      "description": "Indica si el participante activo es el iniciador/solicitante del evento de auditoría, tal como se especifica en DICOM PS 3.15 A.5.",
+      "title": "User is Requestor",
+      "description": "Indicates if Active Participant is initiator/requestor of the Audit Event as specified by DICOM PS 3.15 A.5",
       "type": "boolean"
     },
     "dcmParticipantObjectTypeCode": {
-      "title": "Código de tipo de objeto de participante",
-      "description": "DICOM PS 3.15 A.5 Código de tipo de objeto de participante.",
+      "title": "Participant Object Type Code",
+      "description": "DICOM PS 3.15 A.5 Participant Object Type Code.",
       "type": "array",
       "items": {
         "type": "string",
@@ -180,8 +180,8 @@
       }
     },
     "dcmParticipantObjectTypeCodeRole": {
-      "title": "Código de tipo de objeto de participante Función",
-      "description": "DICOM PS 3.15 A.5 Código de tipo de objeto de participante Función.",
+      "title": "Participant Object Type Code Role",
+      "description": "DICOM PS 3.15 A.5 Participant Object Type Code Role.",
       "type": "array",
       "items": {
         "type": "string",
@@ -216,8 +216,8 @@
       }
     },
     "dcmParticipantObjectDataLifeCycle": {
-      "title": "Ciclo de vida de los datos del objeto participante",
-      "description": "DICOM PS 3.15 A.5 Ciclo de vida de los datos del objeto participante.",
+      "title": "Participant Object Data Life Cycle",
+      "description": "DICOM PS 3.15 A.5 Participant Object Data Life Cycle.",
       "type": "array",
       "items": {
         "type": "string",

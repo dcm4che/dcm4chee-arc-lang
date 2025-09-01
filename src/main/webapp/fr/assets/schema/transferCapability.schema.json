@@ -1,6 +1,6 @@
 {
-  "title": "Capacidad de transferencia",
-  "description": "Cada capacidad de transferencia especifica la clase SOP que puede soportar el AE de red, el modo que puede utilizar (SCP o SCU) y la(s) sintaxis(s) de transferencia que puede utilizar.",
+  "title": "Transfer Capability",
+  "description": "Each transfer capability specifies the SOP class that the Network AE can support, the mode that it can utilize (SCP or SCU), and the Transfer Syntax(es) that it can utilize",
   "type": "object",
   "required": [
     "dicomSOPClass",
@@ -9,19 +9,19 @@
   ],
   "properties": {
     "cn": {
-      "title": "Nombre",
-      "description": "Nombre arbitrario/significativo para el objeto de capacidad de transferencia.",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name for the Transfer Capability object",
       "type": "string"
     },
     "dicomSOPClass": {
-      "title": "Clase SOP",
-      "description": "UID de clase SOP.",
+      "title": "SOP Class",
+      "description": "SOP Class UID",
       "type": "string",
       "format": "dcmSOPClass"
     },
     "dicomTransferRole": {
-      "title": "Función de transferencia DICOM",
-      "description": "Función de transferencia DICOM.",
+      "title": "DICOM Transfer Role",
+      "description": "DICOM Transfer Role.",
       "type": "string",
       "enum": [
         "SCP",
@@ -29,8 +29,8 @@
       ]
     },
     "dicomTransferSyntax": {
-      "title": "Sintaxis de transferencia",
-      "description": "Sintaxis de transferencia que puede solicitarse como SCU o que se ofrece como SCP.",
+      "title": "Transfer Syntax",
+      "description": "Transfer syntax(es) that may be requested as an SCU or that are offered as an SCP.",
       "type": "array",
       "format": "dcmTransferSyntax",
       "items": {
@@ -38,8 +38,8 @@
       }
     },
     "dcmTransferCapability": {
-      "title": "Extensión de la capacidad de transferencia",
-      "description": "Atributos de la capacidad de transferencia propietarios de dcm4che.",
+      "title": "Transfer Capability Extension",
+      "description": "dcm4che proprietary Transfer Capability Attributes",
       "$ref": "dcmTransferCapability.schema.json"
     }
   }

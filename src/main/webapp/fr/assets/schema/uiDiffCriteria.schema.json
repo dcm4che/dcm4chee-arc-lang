@@ -1,6 +1,6 @@
 {
-  "title": "Criterios UI de Diferencia",
-  "description": "Criterios UI de Diferencia.",
+  "title": "UI Diff Criteria",
+  "description": "UI Diff Criteria",
   "type": "object",
   "required": [
     "dcmuiDiffCriteriaTitle",
@@ -8,36 +8,36 @@
   ],
   "properties": {
     "dcmuiDiffCriteriaTitle": {
-      "title": "Título de Criterios de Diferencia UI",
-      "description": "Título de Criterios de Diferencia.",
+      "title": "UI Diff Criteria Title",
+      "description": "Title of Diff Criteria",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "Descripción de Criterios de Diferencia UI",
-      "description": "Descripción de texto sin restricciones de este Criterio de Diferencia UI.",
+      "title": "UI Diff Criteria Description",
+      "description": "Unconstrained text description of this UI Diff Criteria",
       "type": "string"
     },
     "dcmuiDiffCriteriaNumber": {
-      "title": "Número de Criterios de Diferencia UI",
-      "description": "Número de Conjunto de Atributos utilizado para ordenar los Conjuntos de Atributos.",
+      "title": "UI Diff Criteria Number",
+      "description": "Attribute Set Number used to order Attribute Sets.",
       "type": "integer",
       "minimum": 1
     },
     "dcmuiDiffIncludeMissing": {
-      "title": "UI Incluyendo Ausentes",
-      "description": "Indicar si se incluirán los Estudios que faltan.",
+      "title": "UI Including Missing",
+      "description": "Indicate if missing Studies shall be included",
       "type": "boolean",
       "default": false
     },
     "dcmAttributeSetID": {
-      "title": "ID de conjunto de atributos",
-      "description": "ID del conjunto de atributos que especifica los atributos comparados.",
+      "title": "Attribute Set ID",
+      "description": "ID of Attribute Set specifying compared attributes",
       "type": "string",
       "format": "dcmAttributeSetID"
     },
     "dcmuiDiffGroupButton": {
-      "title": "Botón de grupo de UI Diff",
-      "description": "Botón de grupo de UI Diff.",
+      "title": "UI Diff Group Button",
+      "description": "UI Diff Group Button",
       "type": "array",
       "items": {
         "type": "string",
@@ -49,8 +49,8 @@
       }
     },
     "dcmuiDiffAction": {
-      "title": "Acción de UI Diff",
-      "description": "Acción de UI Diff.",
+      "title": "UI Diff Action",
+      "description": "UI Diff Action",
       "type": "array",
       "items": {
         "type": "string",

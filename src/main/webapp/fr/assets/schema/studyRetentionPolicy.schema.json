@@ -1,6 +1,6 @@
 {
-  "title": "Política de retención de estudios",
-  "description": "Política de retención de estudios.",
+  "title": "Study Retention Policy",
+  "description": "Study Retention Policy",
   "type": "object",
   "required": [
     "cn",
@@ -13,58 +13,58 @@
   ],
   "properties": {
     "cn": {
-      "title": "Nombre",
-      "description": "Nombre arbitrario/significativo de la Política de Retención de Estudios.",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name of the Study Retention Policy",
       "type": "string"
     },
     "dcmRetentionPeriod": {
-      "title": "Periodo de Retención del Estudio",
-      "description": "Periodo de Retención del Estudio en formato ISO-8601 PnYnMnD o PnW.",
+      "title": "Study Retention Period",
+      "description": "Study Retention Period in ISO-8601 period format PnYnMnD or PnW",
       "type": "string",
       "format": "dcmPeriod"
     },
     "dcmRulePriority": {
-      "title": "Prioridad de la regla",
-      "description": "Si la condición de varias políticas de Retención de Estudio coinciden para una imagen recibida, se aplica la política de mayor prioridad. Si hay varias políticas coincidentes con la misma prioridad, no se define qué política se aplica",
+      "title": "Rule Priority",
+      "description": "If the condition of several Study Retention policies match for a received image, higher priority policy is applied. If there are several matching policies with equal priority, it is undefined which policy gets applied.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmProperty": {
-      "title": "Condiciones",
-      "description": "Condiciones en formato {key}[!]={value}. Consulte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">aplicabilidad, formato y algunos ejemplos.</a>.",
+      "title": "Conditions",
+      "description": "Conditions in format {key}[!]={value}. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">applicability, format and some examples.</a>",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmExpireSeriesIndividually": {
-      "title": "Expirar series individualmente",
-      "description": "Indica si las series deben expirar individualmente o no.",
+      "title": "Expire Series Individually",
+      "description": "Indicates if series should be expired individually or not.",
       "type": "boolean",
       "default": false
     },
     "dcmStartRetentionPeriodOnStudyDate": {
-      "title": "Comenzar el periodo de retención en la fecha del estudio",
-      "description": "Indica si el periodo de retención debe comenzar en la fecha del estudio en lugar de al recibir un objeto del estudio.",
+      "title": "Start Retention Period on Study Date",
+      "description": "Indicates if retention period should be started on Study Date instead on receive of an object of the Study",
       "type": "boolean",
       "default": false
     },
     "dcmExporterID": {
-      "title": "Exportar estudio caducado",
-      "description": "Exporta estudios/series caducados utilizando el exportador especificado.",
+      "title": "Export expired Study",
+      "description": "Export expired Study/Series using the specified Exporter",
       "type": "string",
       "format": "dcmExporterID"
     },
     "dcmFreezeExpirationDate": {
-      "title": "Congelar fecha de caducidad",
-      "description": "Indica que no se puede cambiar la fecha de caducidad en los siguientes eventos.",
+      "title": "Freeze Expiration Date",
+      "description": "Indicate to disable changes of the Expiration Date by following events.",
       "type": "boolean",
       "default": false
     },
     "dcmRevokeExpiration": {
-      "title": "Revocar fecha de caducidad",
-      "description": "Indica que se revoca una fecha de caducidad anterior.",
+      "title": "Revoke Expiration Date",
+      "description": "Indicate to revoke a previous set Expiration Date.",
       "type": "boolean",
       "default": false
     }

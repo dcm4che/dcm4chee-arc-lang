@@ -1,6 +1,6 @@
 {
-  "title": "Extensión de Conexión de Red",
-  "description": "dcm4che atributos de Conexión de Red del propietario.",
+  "title": "Network Connection Extension",
+  "description": "dcm4che proprietary Network Connection Attributes",
   "type": "object",
   "required": [
     "dcmProtocol",
@@ -19,8 +19,8 @@
   ],
   "properties": {
     "dcmProtocol": {
-      "title": "Protocolo",
-      "description": "Protocolo de Conexión de Red.",
+      "title": "Protocol",
+      "description": "Protocol of Network Connection.",
       "type": "string",
       "default": "DICOM",
       "enum": [
@@ -38,14 +38,14 @@
       "type": "string"
     },
     "dcmTLSNeedClientAuth": {
-      "title": "Necesita autenticación de cliente TLS",
-      "description": "Indica si se requiere autenticación de cliente TLS.",
+      "title": "TLS Need Client Auth",
+      "description": "Indicates if TLS client authentication is required.",
       "type": "boolean",
       "default": true
     },
     "dcmTLSProtocol": {
-      "title": "Protocolo TLS",
-      "description": "Protocolos TLS soportados.",
+      "title": "TLS Protocol",
+      "description": "The Supported TLS Protocols.",
       "default": ["TLSv1.2"],
       "type": "array",
       "items" : {
@@ -60,84 +60,84 @@
       }
     },
     "dcmTLSEndpointIdentificationAlgorithm": {
-      "title": "Algoritmo de Identificación de Extremo TLS",
-      "description": "Indica los procedimientos de identificación o verificación de extremo durante el intercambio TLS.",
+      "title": "TLS Endpoint Identification Algorithm",
+      "description": "Indicates the endpoint identification or verification procedures during TLS handshaking.",
       "type": "string",
       "enum": [ "HTTPS", "LDAPS"]
     },
     "dcmTCPBacklog": {
-      "title": "Cola de espera TCP",
-      "description": "Longitud máxima de la cola para conexiones TCP entrantes.",
+      "title": "TCP Backlog",
+      "description": "Maximum queue length for incoming TCP connections.",
       "type": "integer",
       "default": 50,
       "minimum": 1
     },
     "dcmTCPConnectTimeout": {
-      "title": "Tiempo de espera de conexión TCP",
-      "description": "Tiempo de espera de conexión TCP en ms; no hay tiempo de espera si no existe.",
+      "title": "TCP Connect Timeout",
+      "description": "TCP connect timeout in ms; no timeout if absent.",
       "type": "integer",
       "minimum": 100
     },
     "dcmTCPCloseDelay": {
-      "title": "Retraso de cierre TCP",
-      "description": "Retraso de cierre del conector TCP en ms tras el envío de la PDU A-ASSOCIATE-RJ, A-RELEASE-RP o A-ABORT.",
+      "title": "TCP Close Delay",
+      "description": "TCP socket close delay in ms after send of A-ASSOCIATE-RJ, A-RELEASE-RP or A-ABORT PDU.",
       "type": "integer",
       "default": 50,
       "minimum": 0
     },
     "dcmTCPSendBufferSize": {
-      "title": "Tamaño del búfer de envío TCP",
-      "description": "Tamaño del búfer de envío TCP; utilice los valores predeterminados del sistema si no existen.",
+      "title": "TCP Send Buffer Size",
+      "description": "TCP send buffer size; use system defaults if absent",
       "type": "integer",
       "minimum": 1024
     },
     "dcmTCPReceiveBufferSize": {
-      "title": "Tamaño búfer recepción TCP",
-      "description": "Tamaño del búfer de recepción TCP; utilizar los valores por defecto del sistema si no existen.",
+      "title": "TCP Receive Buffer Size",
+      "description": "TCP receive buffer size; use system defaults if absent",
       "type": "integer",
       "minimum": 1024
     },
     "dcmTCPNoDelay": {
-      "title": "Sin Retraso TCP",
-      "description": "Activar/desactivar TCP_SINRETRASO (desactivar/activar algoritmo Nagle).",
+      "title": "TCP No Delay",
+      "description": "Enable/disable TCP_NODELAY (disable/enable Nagle algorithm).",
       "type": "boolean",
       "default": true
     },
     "dcmBindAddress": {
-      "title": "Dirección de enlace",
-      "description": "Dirección de enlace del conector de escucha; utilice el nombre de anfitrión de la conexión si no existe.",
+      "title": "Bind Address",
+      "description": "Bind address of listening socket; use hostname of the connection if absent",
       "type": "string"
     },
     "dcmClientBindAddress": {
-      "title": "Dirección de enlace del cliente",
-      "description": "Dirección de enlace de las conexiones salientes; utilice el nombre de anfitrión de la conexión si no existe.",
+      "title": "Client Bind Address",
+      "description": "Bind address of outgoing connections; use hostname of the connection if absent",
       "type": "string"
     },
     "dcmBlacklistedHostname": {
-      "title": "Nombre de anfitrión en lista negra",
-      "description": "Nombres de anfitrión DNS en lista negra.",
+      "title": "Blacklisted Hostname",
+      "description": "blacklisted DNS hostnames",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmSendPDULength": {
-      "title": "Enviar PDU Longitud",
-      "description": "Longitud máxima de las PDU emitidas.",
+      "title": "Send PDU Length",
+      "description": "Maximal length of emitted PDUs.",
       "type": "integer",
       "default": 16378,
       "minimum": 1024
     },
     "dcmReceivePDULength": {
-      "title": "Recibir PDU Longitud",
-      "description": "Longitud máxima de las PDU recibidas.",
+      "title": "Receive PDU Length",
+      "description": "Maximal length of received PDUs.",
       "type": "integer",
       "default": 16378,
       "minimum": 1024
     },
     "dcmMaxOpsPerformed": {
-      "title": "Operaciones Máximas Invocadas",
-      "description": "Operaciones máximas realizadas|Número máximo de operaciones a realizar de forma asíncrona; 0 = infinito.",
+      "title": "Max Ops Performed",
+      "description": "Maximal number of operations to perform asynchronously; 0 = infinite.",
       "type": "integer",
       "default": 1,
       "minimum": 0
@@ -150,68 +150,68 @@
       "minimum": 0
     },
     "dcmPackPDV": {
-      "title": "Paquete PDV",
-      "description": "Activa/desactiva el empaquetado de PDV de comandos y datos en una PDU P-DATA-TF.",
+      "title": "Pack PDV",
+      "description": "Enable/disable packing of command and data PDVs into one P-DATA-TF PDU.",
       "type": "boolean",
       "default": true
     },
     "dcmAARQTimeout": {
-      "title": "Tiempo de espera AA-RQ",
-      "description": "Tiempo de espera en ms para la recepción de la PDU A-ASSOCIATE-RQ después de la conexión TCP; no hay tiempo de espera si no existe.",
+      "title": "AA-RQ Timeout",
+      "description": "Timeout in ms for receive of A-ASSOCIATE-RQ PDU after TCP connect; no timeout if absent",
       "type": "integer",
       "minimum": 100
     },
     "dcmAAACTimeout": {
-      "title": "Tiempo de espera AA-AC",
-      "description": "Tiempo de espera en ms para la recepción de PDU A-ASSOCIATE-AC tras el envío de PDU A-ASSOCIATE-RQ; no hay tiempo de espera si no existe.",
+      "title": "AA-AC Timeout",
+      "description": "Timeout in ms for receive of A-ASSOCIATE-AC PDU after send of A-ASSOCIATE-RQ PDU; no timeout if absent",
       "type": "integer",
       "minimum": 100
     },
     "dcmARRPTimeout": {
-      "title": "Tiempo de espera AR-RP",
-      "description": "Tiempo de espera en ms para recibir una PDU A-RELEASE-RP después de enviar una PDU A-RELEASE-RQ; no hay tiempo límite si no existe.",
+      "title": "AR-RP Timeout",
+      "description": "Timeout in ms for receive of A-RELEASE-RP PDU after send of A-RELEASE-RQ PDU; no timeout if absent",
       "type": "integer",
       "minimum": 100
     },
     "dcmSendTimeout": {
-      "title": "Enviar tiempo de espera",
-      "description": "Tiempo de espera en ms para enviar otros DIMSE RQs que no sean C-STORE RQs; no hay tiempo de espera si no existe.",
+      "title": "Send Timeout",
+      "description": "Timeout in ms for sending other DIMSE RQs than C-STORE RQs; no timeout if absent",
       "type": "integer",
       "minimum": 100
     },
     "dcmStoreTimeout": {
-      "title": "Almacenar tiempo de espera",
-      "description": "Tiempo de espera en ms para enviar C-STORE RQs; no hay tiempo de espera si no existe.",
+      "title": "Store Timeout",
+      "description": "Timeout in ms for sending C-STORE RQs; no timeout if absent",
       "type": "integer",
       "minimum": 100
     },
     "dcmResponseTimeout": {
-      "title": "Tiempo de espera de respuesta",
-      "description": "Tiempo de espera en ms para la recepcion de sobresaliente <br>- DIMSE RSPs other than C-MOVE / C-GET RSPs <br>- respuestas de mensajes HLT sobresalientes <br>- HTTP(S) respuestas <br>No hay tiempo de espera si no existe.",
+      "title": "Response Timeout",
+      "description": "Timeout in ms for receive of outstanding <br>- DIMSE RSPs other than C-MOVE / C-GET RSPs <br>- responses of outgoing HL7 messages <br>- HTTP(S) responses <br>No timeout if absent",
       "type": "integer",
       "minimum": 100
     },
     "dcmRetrieveTimeout": {
-      "title": "Recuperar tiempo de espera",
-      "description": "Tiempo de espera en ms para la recepción de RSPs C-GET o C-MOVE pendientes; no hay tiempo de espera si no existe.",
+      "title": "Retrieve Timeout",
+      "description": "Timeout in ms for receive of outstanding C-GET or C-MOVE RSPs; no timeout if absent",
       "type": "integer",
       "minimum": 100
     },
     "dcmRetrieveTimeoutTotal": {
-      "title": "Recuperar tiempo de espera total",
-      "description": "Indica si el temporizador con el tiempo de espera especificado para RSPs C-GET y C-MOVE pendientes se reiniciará al recibir RSPs pendientes (=falso) o no (=verdadero).",
+      "title": "Retrieve Timeout Total",
+      "description": "Indicates if the timer with the specified timeout for outstanding C-GET and C-MOVE RSPs shall be restarted on receive of pending RSPs (=false) or not (=true).",
       "type": "boolean",
       "default": false
     },
     "dcmIdleTimeout": {
-      "title": "Tiempo de espera inactivo",
-      "description": "Indica que se cancelen las asociaciones inactivas después del tiempo de espera especificado en ms; no hay tiempo de espera si no existe.",
+      "title": "Idle Timeout",
+      "description": "Indicates aborting of idle Associations after specified timeout in ms; no timeout if absent",
       "type": "integer",
       "minimum": 100
     },
     "dcmAATimeout": {
-      "title": "Tiempo de espera de A-ABORT",
-      "description": "Tiempo de espera en ms para terminar de enviar cualquier DIMSE antes de enviar una PDU A-ABORT, activada por la aplicación o por expiración de otro tiempo de espera configurado de esta Conexión. Si expira el tiempo de espera, la conexión TCP se cerrará sin enviar el A-ABORT.",
+      "title": "A-ABORT Timeout",
+      "description": "Timeout in ms for waiting for finishing sending any DIMSE before sending an A-ABORT PDU, triggered by the application or by expiration of a configured other timeout of this Connection. If the timeout expires, the TCP connection will be closed without sending the A-ABORT.",
       "type": "integer",
       "minimum": 0,
       "default": 1000

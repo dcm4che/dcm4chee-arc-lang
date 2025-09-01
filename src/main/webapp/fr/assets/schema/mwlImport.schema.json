@@ -1,6 +1,6 @@
 {
-  "title": "Importación MWL",
-  "description": "Especifica la importación de un Paso de Procedimiento Programado desde un SCP MWL externo.",
+  "title": "MWL Import",
+  "description": "Specifies import of Scheduled Procedure Step from external MWL SCP",
   "type": "object",
   "required": [
     "dcmMWLImportID",
@@ -11,63 +11,63 @@
   ],
   "properties": {
     "dcmMWLImportID": {
-      "title": "ID de Importación MWL",
-      "description": "ID de Importación MWL.",
+      "title": "MWL Import ID",
+      "description": "ID of MWL Import",
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "Título del AE que llama",
-      "description": "Título del AE que llama utilizado en A-ASSOCIATE-RQ al SCP MWL externo.",
+      "title": "Calling AE Title",
+      "description": "Calling AE Title used in A-ASSOCIATE-RQ to external MWL SCP",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmMergeMWLSCP": {
-      "title": "Fuente MWL SCP",
-      "description": "Título AE del SCP MWL externo a consultar para el Paso de Procedimiento Programado a importar.",
+      "title": "Source MWL SCP",
+      "description": "AE Title of external MWL SCP to query for Scheduled Procedure Step to import.",
       "type": "string",
       "format": "dcmAETitle"
     },
     "dcmMWLWorklistLabel": {
-      "title": "Etiqueta de la Lista de Trabajo MWL",
-      "description": "Valor de la Etiqueta de la Lista de Trabajo (0074,1202) de los elementos MWL importados obtenidos del SCP MWL Fuente. Si no existe, los elementos MWL importados son proporcionados por todos los EAs de la Red de Archivo MWL SCP.",
+      "title": "MWL Worklist Label",
+      "description": "Value of Worklist Label (0074,1202) of imported MWL items fetched from Source MWL SCP. If absent, imported MWL items are provided by all MWL SCP Archive Network AEs.",
       "type": "string",
       "format": "dcmMWLWorklistLabel"
     },
     "dcmDuration": {
-      "title": "Importar no antes de",
-      "description": "Importar Pasos de Procedimiento Programados desde SCP MWL externo a Pasos de Procedimiento Programados programados antes en el futuro que el intervalo de Tiempo especificado en formato de duración ISO-8601 PnDTnHnMn.nS; si no existe, importar todos los Pasos de Procedimiento Programados que estén programados en el futuro.",
+      "title": "Import not before",
+      "description": "Import Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled earlier in the future than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the future.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmMWLImportNotOlder": {
-      "title": "Importar no más antiguo que",
-      "description": "Importar Pasos de Procedimiento Programados desde un SCP MWL externo a Pasos de Procedimiento Programados programados más tarde en el pasado que el intervalo de Tiempo especificado en formato de duración ISO-8601 PnDTnHnMn.nS; si no existe, importa todos los Pasos de Procedimiento Programados que están programados en el pasado.",
+      "title": "Import not older than",
+      "description": "Import Scheduled Procedure Steps from external MWL SCP to Scheduled Procedure Steps scheduled later in the past than the specified Time interval in ISO-8601 duration format PnDTnHnMn.nS; if absent, import all Scheduled Procedure Steps which are scheduled in the past.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmMWLImportFilterBySCU": {
-      "title": "Filtrar por SCU",
-      "description": "Indica que se aplique el filtro especificado a las coincidencias devueltas por el SCP MWL externo.",
+      "title": "Filter by SCU",
+      "description": "Indicates to apply specified filter on matches returned by external MWL SCP.",
       "type": "boolean",
       "default": false
     },
     "dcmMWLImportDeleteNotFound": {
-      "title": "Borrar no encontrado",
-      "description": "Indica que se borren los Pasos de Procedimiento Programados de la MWL local no devueltos por la MWL SCP externa.",
+      "title": "Delete not found",
+      "description": "Indicates to delete Scheduled Procedure Steps from local MWL not returned by external MWL SCP.",
       "type": "boolean",
       "default": false
     },
     "dcmProperty": {
-      "title": "Claves de coincidencia",
-      "description": "Atributos de filtro en formato ({AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword})={value}. Ej: ScheduledProcedureStepSequence.ScheduledStationAETitle=MODALITY_XY",
+      "title": "Matching Keys",
+      "description": "Filter Attributes in format ({AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword})={value}. Eg: ScheduledProcedureStepSequence.ScheduledStationAETitle=MODALITY_XY",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmIncludeField": {
-      "title": "Devolver Claves",
-      "description": "Atributos en formato (all|{AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword}) solicitados al SCP MWL externo adicionales a los atributos que deben soportar los SCPs MWL según DICOM. all\" solicita todos los atributos configurados por el paciente y el filtro de atributos MWL del archivo.",
+      "title": "Return Keys",
+      "description": "Attributes in format (all|{AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword}) requested from the external MWL SCP additional to attributes required to be supported by MWL SCPs according DICOM. 'all' requests all attributes configured by the Patient and the MWL Attribute Filter of the Archive.",
       "type": "array",
       "items": {
         "type": "string"

@@ -1,6 +1,6 @@
 {
-  "title": "Regla de procesamiento UPS",
-  "description": "Procesar elementos de trabajo coincidentes en el pool de trabajo unificado.",
+  "title": "UPS Processing Rule",
+  "description": "Process matching Workitems in unified Worklist",
   "type": "object",
   "required": [
     "dcmUPSProcessingRuleID",
@@ -16,44 +16,44 @@
   ],
   "properties": {
     "dcmUPSProcessingRuleID": {
-      "title": "Regla de procesamiento UPS ID",
-      "description": "ID de la regla de procesamiento UPS.",
+      "title": "UPS Processing Rule ID",
+      "description": "ID of UPS Processing Rule",
       "type": "string"
     },
     "dicomAETitle": {
-      "title": "Título de la entidad de aplicación (AE)",
-      "description": "Título de la entidad de aplicación (AE).",
+      "title": "Application Entity (AE) title",
+      "description": "Application Entity (AE) title",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
     "dcmURI": {
-      "title": "URI del procesador UPS",
-      "description": "Identifica el procesador UPS para procesar los elementos de trabajo coincidentes.",
+      "title": "UPS Processor URI",
+      "description": "Identifies UPS Processor for processing matching Workitems",
       "type": "string"
     },
     "dcmProperty": {
-      "title": "Propiedad de procesamiento",
-      "description": "Propiedad dependiente del procesador UPS en formato <name>=<value>",
+      "title": "Processing Property",
+      "description": "UPS Processor dependent property in format <name>=<value>",
       "type": "array",
       "items": { "type": "string" }
     },
     "dcmSchedule": {
-      "title": "Horario de procesamiento",
-      "description": "Retrasa el procesamiento a los periodos de tiempo especificados. Si no se especifica un Horario de Procesamiento, procesa los elementos de trabajo se procesan a la hora de inicio de la etapa de procedimiento programada (0040,4005). Formato: 'hour=[0-23] díaDeLaSemana=[0-6]' (0=domingo).",
+      "title": "Processing Schedule",
+      "description": "Delay processing to specified time periods. If no Processing Schedule is specified, process Workitems at their Scheduled Procedure Step Start Date Time (0040,4005). Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
       "type": "array",
       "items": { "type": "string" },
       "format": "dcmSchedule"
     },
     "dcmMaxThreads": {
-      "title": "Número máximo de subprocesos",
-      "description": "Número máximo de subprocesos utilizados para procesar los elementos de trabajo correspondientes.",
+      "title": "Maximum Number of Threads",
+      "description": "Maximal number of threads used for processing of matching Workitems.",
       "type": "integer",
       "minimum": 1,
       "default": 1
     },
     "dcmUPSInputReadinessState": {
-      "title": "Estado de disponibilidad de entrada",
-      "description": "Procesar elementos de trabajo con el mismo estado de disponibilidad de entrada (0040,4041).",
+      "title": "Input Readiness State",
+      "description": "Process Workitems with matching Input Readiness State (0040,4041).",
       "type": "string",
       "default": "READY",
       "enum": [
@@ -63,8 +63,8 @@
       ]
     },
     "dcmUPSPriority": {
-      "title": "Prioridad",
-      "description": "Procesa los elementos de trabajo que coincidan con la prioridad del paso de procedimiento programado (0074,1200). Si no existe, procesa los elementos de trabajo de cualquier prioridad, pero ordena el procesamiento según su prioridad.",
+      "title": "Priority",
+      "description": "Process Workitems with matching Scheduled Procedure Step Priority (0074,1200). If absent, process Workitems of any priority, but order the processing according their priority.",
       "type": "string",
       "enum": [
         "HIGH",
@@ -73,91 +73,91 @@
       ]
     },
     "dcmUPSLabel": {
-      "title": "Etiqueta de paso de procedimiento",
-      "description": "Procesar elementos de trabajo con la etiqueta de paso de procedimiento correspondiente (0074,1204). Si no existe, procesa los elementos de trabajo con cualquier etiqueta de paso de procedimiento.",
+      "title": "Procedure Step Label",
+      "description": "Process Workitems with matching Procedure Step Label (0074,1204). If absent, process Workitems with any Procedure Step Label.",
       "type": "string"
     },
     "dcmUPSWorklistLabel": {
-      "title": "Etiqueta de Lista de Trabajo",
-      "description": "Procesar elementos de trabajo con etiqueta de lista de trabajo (0074,1202). Si no existe, procesa los elementos de trabajo con cualquier etiqueta.",
+      "title": "Worklist Label",
+      "description": "Process Workitems with matching Worklist Label (0074,1202). If absent, process Workitems with any Worklist Label.",
       "type": "string"
     },
     "dcmUPSScheduledWorkitemCode": {
-      "title": "Código de Elemento de Trabajo Programado",
-      "description": "Procesar los Elementos de Trabajo con Código coincidente en la Secuencia de Código de Elemento de Trabajo Programado (0040,4018) en formato (CV, CSD, \"CM\"). Si no existe, procesa los elementos de trabajo con cualquier código de elemento de trabajo programado.",
+      "title": "Scheduled Workitem Code",
+      "description": "Process Workitems with matching Code in Scheduled Workitem Code Sequence (0040,4018) in format (CV, CSD, \"CM\"). If absent, process Workitems with any Scheduled Workitem Code.",
       "type": "string"
     },
     "dcmUPSScheduledStationNameCode": {
-      "title": "Código de nombre de estación programada",
-      "description": "Procesa los elementos de trabajo con un código coincidente en la secuencia de códigos de nombre de estación programada (0040,4025) en formato (CV, CSD, \"CM\"). Si no existe, procesa los elementos de trabajo con cualquier código de nombre de estación programada.",
+      "title": "Scheduled Station Name Code",
+      "description": "Process Workitems with matching Code in Scheduled Station Name Code Sequence (0040,4025) in format (CV, CSD, \"CM\"). If absent, process Workitems with any Scheduled Station Name Code.",
       "type": "string"
     },
     "dcmUPSScheduledStationClassCode": {
-      "title": "Código de clase de estación programada",
-      "description": "Procesar los elementos de trabajo con código coincidente en la secuencia de códigos de clase de nombre de estación programada (0040,4026) en formato (CV, CSD, \"CM\"). Si no existe, procesa los elementos de trabajo con cualquier código de clase de estación programada.",
+      "title": "Scheduled Station Class Code",
+      "description": "Process Workitems with matching Code in Scheduled Station Name Class Sequence (0040,4026) in format (CV, CSD, \"CM\"). If absent, process Workitems with any Scheduled Station Class Code.",
       "type": "string"
     },
     "dcmUPSScheduledStationLocationCode": {
-      "title": "Código de ubicación geográfica de estación programada",
-      "description": "Procesar elementos de trabajo con código coincidente en la secuencia de clases de ubicación geográfica de estación programada (0040,4027) en formato (CV, CSD, \"CM\"). Si no existe, procesa los elementos de trabajo con cualquier código de ubicación geográfica de estación programada.",
+      "title": "Scheduled Station Geographic Location Code",
+      "description": "Process Workitems with matching Code in Scheduled Station Geographic Location Class Sequence (0040,4027) in format (CV, CSD, \"CM\"). If absent, process Workitems with any Scheduled Station Geographic Location Code.",
       "type": "string"
     },
     "dcmUPSPerformedWorkitemCode": {
-      "title": "Código del elemento de trabajo realizado",
-      "description": "Secuencia del código del elemento de trabajo realizado (0040,4019) en el UPS procesado en formato (CV, CSD, \"CM\").",
+      "title": "Performed Workitem Code",
+      "description": "Item of Performed Workitem Code Sequence (0040,4019) in processed UPS in format (CV, CSD, \"CM\").",
       "type": "string",
       "default": "(NO_WORKITEM_CODE, 99DCM4CHEE, \"Workitem Code\")"
     },
     "dcmUPSPerformedStationNameCode": {
-      "title": "Código de Nombre de Estación Realizada",
-      "description": "Elemento de la Secuencia de Código de Nombre de Estación Realizada (0040,4028) en SAI procesado en formato (CV, CSD, \"CM\").",
+      "title": "Performed Station Name Code",
+      "description": "Item of Performed Station Name Code Sequence (0040,4028) in processed UPS in format (CV, CSD, \"CM\").",
       "type": "string",
       "default": "(NO_STATION_NAME, 99DCM4CHEE, \"No Station Name specified\")"
     },
     "dcmUPSIgnoreDiscontinuationReasonCode": {
-      "title": "Ignorar código de motivo de interrupción",
-      "description": "Especifica el código de motivo de interrupción en formato (CV, CSD, \"CM\") para ignorarlo y cambiar el estado de la UPS a COMPLETADA - en lugar de CANCELADA.",
+      "title": "Ignore Discontinuation Reason Code",
+      "description": "Specifies Discontinuation Reason Code in format (CV, CSD, \"CM\") to ignore and change UPS State to COMPLETED - instead of CANCELED.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmUPSRescheduleDiscontinuationReasonCode": {
-      "title": "Reprogramar código de motivo de interrupción",
-      "description": "Especifica el código de motivo de interrupción en formato (CV, CSD, \"CM\") para reprogramar la UPS cancelada. Si no existe, las UPS canceladas con cualquier código de motivo de cancelación se reprogramarán de acuerdo con el número máximo de reprogramaciones especificado.",
+      "title": "Reschedule Discontinuation Reason Code",
+      "description": "Specifies Discontinuation Reason Code in format (CV, CSD, \"CM\") to reschedule the canceled UPS. If absent, UPS canceled with any Discontinuation Reason Code will be rescheduled according specified Maximum Number of Rescheduling.",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmUPSTemplateID": {
-      "title": "Crear UPS al cancelar",
-      "description": "Especifica el UID de instancia de elemento de trabajo de plantilla de UPS para crear una UPS si falla el procesamiento y ya no está programado el reintento. Si no existe, no se creará ninguna UPS en caso de fallo.",
+      "title": "Create UPS on Cancel",
+      "description": "Specifies UPS Template Workitem Instance UID for creating an UPS if the processing failed and retry is not scheduled any more. If absent, no UPS will be created on failures.",
       "type": "string"
     },
     "dcmMaxRetries": {
-      "title": "Número máximo de reprogramaciones",
-      "description": "Número máximo de reprogramaciones de un elemento de trabajo cuyo procesamiento ha fallado.",
+      "title": "Maximum Number of Rescheduling",
+      "description": "Maximal number a Workitem which processing failed is rescheduled.",
       "type": "integer",
       "minimum": 0,
       "default": 0
     },
     "dcmRetryDelay": {
-      "title": "Retraso de reprogramación",
-      "description": "Retraso para reprogramar un elemento de trabajo cuyo procesamiento ha fallado en formato de duración ISO-8601 PnDTnHnMn.nS.",
+      "title": "Reschedule Delay",
+      "description": "Delay to reschedule a Workitem which processing failed in ISO-8601 duration format PnDTnHnMn.nS.",
       "type": "string",
       "default": "PT1M",
       "format": "dcmDuration"
     },
     "dcmMaxRetryDelay": {
-      "title": "Retraso máximo de reprogramación",
-      "description": "Retraso máximo para reprogramar un elemento de trabajo cuyo procesamiento falló en formato de duración ISO-8601 PnDTnHnMn.nS. Infinito si no existe.",
+      "title": "Maximum Reschedule Delay",
+      "description": "Maximal Delay to reschedule a Workitem which processing failed in ISO-8601 duration format PnDTnHnMn.nS. Infinite if absent.",
       "type": "string",
       "format": "dcmDuration"
     },
     "dcmRetryDelayMultiplier": {
-      "title": "Multiplicador de la demora de reprogramación",
-      "description": "Multiplicador en % que tendrá efecto sobre la demora de reprogramación con la demora máxima de reprogramación que debe tenerse en cuenta.",
+      "title": "Reschedule Delay Multiplier",
+      "description": "Multiplier in % that will take effect on top of Reschedule Delay with Maximum Reschedule Delay to be taken into account.",
       "type": "integer",
       "minimum": 100,
       "default": 100

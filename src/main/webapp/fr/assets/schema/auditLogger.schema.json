@@ -1,6 +1,6 @@
 {
-  "title": "Registrador de Auditoría",
-  "description": "Información relacionada con el Registrador de Auditoría.",
+  "title": "Audit Logger",
+  "description": "Audit Logger related information",
   "type": "object",
   "required": [
     "cn",
@@ -21,45 +21,45 @@
   ],
   "properties": {
     "cn": {
-      "title": "Nombre",
-      "description": "Nombre arbitrario/significativo para el objeto Registrador de Auditoría",
+      "title": "Name",
+      "description": "Arbitrary/Meaningful name for the Audit Logger object",
       "type": "string"
     },
     "dicomNetworkConnectionReference": {
-      "title": "Referencia de conexión de red",
-      "description": "Los punteros JSON a los objetos de conexión de red utilizados por este Registrador de Auditoría.",
+      "title": "Network Connection Reference",
+      "description": "The JSON Pointers to the Network Connection objects used by this Audit Logger",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditRecordRepositoryDeviceName": {
-      "title": "Nombre de dispositivo del repositorio de registros de auditoría",
-      "description": "Nombre del dispositivo del repositorio de registros de auditoría al que se envían los mensajes de auditoría.",
+      "title": "Audit Record Repository Device Name",
+      "description": "Device Name of Audit Record Repository to which Audit Messages are sent",
       "type": "string",
       "format": "dicomDeviceName"
     },
     "dcmAuditSourceID": {
-      "title": "Identificación de la Fuente",
-      "description": "RFC 3881 Identificación de la Fuente de Auditoría; nombre del dispositivo si no existe.",
+      "title": "Source ID",
+      "description": "RFC 3881 Audit Source ID; device name if absent",
       "type": "string"
     },
     "dcmAuditEnterpriseSiteID": {
-      "title": "Identificación del sitio de la empresa",
-      "description": "RFC 3881 Identificación del sitio de la empresa de auditoría; el valor 'dicomInstitutionName' se sustituye por el nombre de la institución del dispositivo DICOM.",
+      "title": "Enterprise Site ID",
+      "description": "RFC 3881 Audit Enterprise Site ID; value 'dicomInstitutionName' is replaced by the institution name of the DICOM device",
       "type": "string"
     },
     "dcmAuditSourceTypeCode": {
-      "title": "Código de tipo de fuente",
-      "description": "RFC 3881 Código de tipo de fuente de auditoría; el valor 'dicomPrimaryDeviceType' se sustituye por el tipo primario del dispositivo DICOM.",
+      "title": "Source Type Code",
+      "description": "RFC 3881 Audit Source Type Code; value 'dicomPrimaryDeviceType' is replaced by the primary type of the DICOM device",
       "type": "array",
       "items": {
         "type": "string"
       }
     },
     "dcmAuditFacility": {
-      "title": "Instalación de Syslog",
-      "description": "RFC 5424 Valor de cadena de la instalación de Syslog del mensaje de auditoría.",
+      "title": "Syslog Facility",
+      "description": "RFC 5424 Syslog Facility string value of audit message.",
       "type": "string",
       "default": "authpriv",
       "enum": [
@@ -90,8 +90,8 @@
       ]
     },
     "dcmAuditSuccessSeverity": {
-      "title": "Severidad Syslog - Éxito",
-      "description": "RFC 5424 Valor de cadena de Severidad Syslog del mensaje de auditoría con Indicador de Resultado de Evento 0 (Éxito).",
+      "title": "Syslog Severity - Success",
+      "description": "RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 0 (Success).",
       "type": "string",
       "default": "notice",
       "enum": [
@@ -106,8 +106,8 @@
       ]
     },
     "dcmAuditMinorFailureSeverity": {
-      "title": "Severidad Syslog - Fallo",
-      "description": "RFC 5424 Valor de cadena de Severidad Syslog de mensaje de auditoría con Indicador de Resultado de Suceso 4 (Fallo menor).",
+      "title": "Syslog Severity - Failure",
+      "description": "RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 4 (Minor failure).",
       "type": "string",
       "default": "warning",
       "enum": [
@@ -122,8 +122,8 @@
       ]
     },
     "dcmAuditSeriousFailureSeverity": {
-      "title": "Severidad Syslog - Fallo",
-      "description": "RFC 5424 Valor de cadena de Severidad Syslog de mensaje de auditoría con Indicador de Resultado de Suceso 8 (Fallo grave).",
+      "title": "Syslog Severity - Failure",
+      "description": "RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 8 (Serious failure).",
       "type": "string",
       "default": "err",
       "enum": [
@@ -138,8 +138,8 @@
       ]
     },
     "dcmAuditMajorFailureSeverity": {
-      "title": "Severidad Syslog - Mayor",
-      "description": "RFC 5424 Valor de cadena de Severidad Syslog de mensaje de auditoría con Indicador de Resultado de Evento 12 (Fallo Mayor).",
+      "title": "Syslog Severity - Major",
+      "description": "RFC 5424 Syslog Severity string value of audit message with Event Outcome Indicator 12 (Major failure).",
       "type": "string",
       "default": "crit",
       "enum": [
@@ -154,71 +154,71 @@
       ]
     },
     "dcmAuditApplicationName": {
-      "title": "Nombre de aplicación de Syslog",
-      "description": "RFC 5424 APP-NAME de Syslog del mensaje de auditoría; ID de fuente de auditoría si no existe.",
+      "title": "Syslog Application Name",
+      "description": "RFC 5424 Syslog APP-NAME of audit message; Audit Source ID if absent",
       "type": "string"
     },
     "dcmAuditMessageID": {
-      "title": "Identificación de mensaje Syslog",
-      "description": "RFC 5424 Syslog MSGID del mensaje de auditoría.",
+      "title": "Syslog Message ID",
+      "description": "RFC 5424 Syslog MSGID of audit message.",
       "type": "string",
       "default": "IHE+RFC-3881"
     },
     "dcmAuditMessageEncoding": {
-      "title": "Codificación de mensaje",
-      "description": "Codificación de caracteres de la parte RFC 5424 Syslog MSG del mensaje de auditoría.",
+      "title": "Message Encoding",
+      "description": "Character encoding of RFC 5424 Syslog MSG part of audit message.",
       "type": "string",
       "default": "UTF-8"
     },
     "dcmAuditMessageBOM": {
-      "title": "Mensaje BOM",
-      "description": "Activar/desactivar el prefijo Unicode BOM de la parte RFC 5424 Syslog MSG del mensaje de auditoría; incluir BOM si no existe.",
+      "title": "Message BOM",
+      "description": "Enable/disable Unicode BOM prefix of RFC 5424 Syslog MSG part of audit message; include BOM if absent",
       "type": "boolean",
       "default": true
     },
     "dcmAuditTimestampInUTC": {
-      "title": "Marca de tiempo en UTC",
-      "description": "Especifique si RFC 5424 Syslog TIMESTAMP y la Fecha/Hora del evento del mensaje de auditoría se especifican en Tiempo Universal Coordinado. Por defecto indica que será en Zona Horaria Local.",
+      "title": "Timestamp in UTC",
+      "description": "Specify if RFC 5424 Syslog TIMESTAMP and the Event Date/Time of the audit message are specified in Coordinated Universal Time. Default indicates it will be in Local Time zone.",
       "type": "boolean",
       "default": false
     },
     "dcmAuditMessageFormatXML": {
-      "title": "Formato de mensaje XML",
-      "description": "Especifica si el mensaje de auditoría XML está formateado con saltos de línea y sangría.",
+      "title": "Message Format XML",
+      "description": "Specify whether or not the XML audit message is formatted with line feeds and indentation.",
       "type": "boolean",
       "default": false
     },
     "dcmAuditMessageSchemaURI": {
-      "title": "Esquema de Mensaje URI",
-      "description": "URI del Esquema de Mensaje de Auditoría DICOM referenciado en el mensaje de auditoría.",
+      "title": "Message Schema URI",
+      "description": "URI of DICOM Audit Message Schema referenced in audit message",
       "type": "string",
       "default": "http://www.dcm4che.org/DICOM/audit-message.rnc"
     },
     "dcmAuditIncludeInstanceUID": {
-      "title": "Incluir UIDs de Instancia",
-      "description": "Indica si el Mensaje de Registro de Auditoría debe contener UIDs de Instancia opcionales.",
+      "title": "Include Instance UIDs",
+      "description": "Indicates if Audit Log Message should contain optional Instance UIDs",
       "type": "boolean",
       "default": false
     },
     "dcmAuditLoggerSpoolDirectoryURI": {
-      "title": "Directorio de spool URI",
-      "description": "URI del directorio de spool utilizado para almacenar los mensajes que no pudieron entregarse al repositorio de registros; utilice el directorio temporal del sistema si no existe.",
+      "title": "Spool Directory URI",
+      "description": "URI of spool directory used to store messages which could not delivered to the record repository; use system temporary directory if absent.",
       "type": "string"
     },
     "dcmAuditLoggerRetryInterval": {
-      "title": "Intervalo de reintento",
-      "description": "Intervalo de reintento en s para volver a enviar mensajes que no se han podido entregar al repositorio de registros; no reintentar volver a enviar mensajes si están ausentes.",
+      "title": "Retry Interval",
+      "description": "Retry interval in s to re-sent messages which could not delivered to the record repository; do no retry to re-sent messages if absent",
       "type": "integer",
       "minimum": 1
     },
     "dicomInstalled": {
-      "title": "instalado",
-      "description": "Verdadero si el Registrador de Auditoría está instalado en la red. Si no está presente, la información sobre el estado instalado del Audit Logger se hereda del dispositivo.",
+      "title": "installed",
+      "description": "True if the Audit Logger is installed on network. If not present, information about the installed status of the Audit Logger is inherited from the device",
       "type": "boolean"
     },
     "dcmAuditSuppressCriteria": {
-      "title": "Criterios de supresión de auditoría",
-      "description": "Criterios de supresión de auditoría.",
+      "title": "Audit Suppress Criteria",
+      "description": "Audit Suppress Criteria",
       "type": "array",
       "titleKey":"{cn}",
       "items": {

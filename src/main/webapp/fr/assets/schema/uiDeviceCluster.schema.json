@@ -1,6 +1,6 @@
 {
-  "title": "Configuración del Grupo de IU",
-  "description": "Configuración de la URL del dispositivo que se utilizará junto a la URL principal de la IU.",
+  "title": "UI Cluster Configuration",
+  "description": "Configuration of Device URL to use beside the main UI URL",
   "type": "object",
   "required": [
     "dcmuiDeviceClusterName",
@@ -9,31 +9,31 @@
   ],
   "properties": {
     "dcmuiDeviceClusterName": {
-      "title": "Nombre",
-      "description": "Nombre del Grupo.",
+      "title": "Name",
+      "description": "Cluster Name",
       "type": "string"
     },
     "dcmuiDeviceClusterDescription": {
-      "title": "Descripción",
-      "description": "Descripción del Grupo.",
+      "title": "Description",
+      "description": "Cluster Description",
       "type": "string"
     },
     "dcmuiDeviceClusterDevices": {
-      "title": "Aplicación de Red para Dispositivos",
-      "description": "Seleccione las Aplicaciones de Red configuradas que se utilizarán para acceder a los dispositivos correspondientes.",
+      "title": "Web Application for Devices",
+      "description": "Select configured WebApps to used to access the corresponding devices",
       "type": "array",
       "items" : { "type": "string" },
       "format": "webApp"
     },
     "dcmuiClusterWebApp": {
-      "title": "Aplicación de Red",
-      "description": "Aplicación de Red con la clase QIDO-RS.",
+      "title": "Web Application",
+      "description": "Web Application with the class QIDO-RS",
       "type":  "string",
       "format": "webApp"
     },
     "dcmuiDeviceClusterInstalled": {
-      "title": "Instalada",
-      "description": "Utilizar esta URL en la UI.",
+      "title": "Installed",
+      "description": "Use this URL in the UI",
       "type": "boolean",
       "default": true
     }

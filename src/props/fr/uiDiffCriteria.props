@@ -1,8 +1,8 @@
-uiDiffCriteria:Criterios UI de Diferencia|Criterios UI de Diferencia.
-uiDiffCriteria.dcmuiDiffCriteriaTitle:Título de Criterios de Diferencia UI|Título de Criterios de Diferencia.
-uiDiffCriteria.dicomDescription:Descripción de Criterios de Diferencia UI|Descripción de texto sin restricciones de este Criterio de Diferencia UI.
-uiDiffCriteria.dcmuiDiffCriteriaNumber:Número de Criterios de Diferencia UI|Número de Conjunto de Atributos utilizado para ordenar los Conjuntos de Atributos.
-uiDiffCriteria.dcmuiDiffIncludeMissing:UI Incluyendo Ausentes|Indicar si se incluirán los Estudios que faltan.
-uiDiffCriteria.dcmAttributeSetID:ID de conjunto de atributos|ID del conjunto de atributos que especifica los atributos comparados.
-uiDiffCriteria.dcmuiDiffGroupButton:Botón de grupo de UI Diff|Botón de grupo de UI Diff.
-uiDiffCriteria.dcmuiDiffAction:Acción de UI Diff|Acción de UI Diff.
+uiDiffCriteria:UI Diff Criteria|UI Diff Criteria
+uiDiffCriteria.dcmuiDiffCriteriaTitle:UI Diff Criteria Title|Title of Diff Criteria
+uiDiffCriteria.dicomDescription:UI Diff Criteria Description|Unconstrained text description of this UI Diff Criteria
+uiDiffCriteria.dcmuiDiffCriteriaNumber:UI Diff Criteria Number|Attribute Set Number used to order Attribute Sets.
+uiDiffCriteria.dcmuiDiffIncludeMissing:UI Including Missing|Indicate if missing Studies shall be included
+uiDiffCriteria.dcmAttributeSetID:Attribute Set ID|ID of Attribute Set specifying compared attributes
+uiDiffCriteria.dcmuiDiffGroupButton:UI Diff Group Button|UI Diff Group Button
+uiDiffCriteria.dcmuiDiffAction:UI Diff Action|UI Diff Action

@@ -1,6 +1,6 @@
 {
-  "title": "Configuración URL Elasticsearch UI",
-  "description": "Red URL Elasticsearch.",
+  "title": "UI Elasticsearch URL Configuration",
+  "description": "Elasticsearch URL",
   "type": "object",
   "required": [
     "dcmuiElasticsearchURLName",
@@ -10,30 +10,30 @@
   ],
   "properties": {
     "dcmuiElasticsearchURLName": {
-      "title": "Nombre URL Elasticsearch",
-      "description": "Nombre URL Elasticsearch UI.",
+      "title": "Elasticsearch URL Name",
+      "description": "UI Elasticsearch URL Name",
       "type": "string"
     },
     "dcmuiElasticsearchWebApp": {
-      "title": "Aplicación de red de Elasticsearch",
-      "description": "Aplicación de red que se utilizará para extraer la URL de Elasticsearch y acceder a Elasticsearch.",
+      "title": "Elasticsearch WebApp",
+      "description": "Web Application that will be used te extract the Elasticsearch URL and access Elasticsearch",
       "type": "string",
       "format": "webApp"
     },
     "dcmuiAuditEnterpriseSiteID": {
-      "title": "Auditoría de la Empresa SiteID",
-      "description": "Establecer la Auditoría de la Empresa SiteID que se utilizará en las consultas de Elasticsearch.",
+      "title": "Audit Enterprise SiteID",
+      "description": "Set Audit Enterprise SiteID which should be used on Elasticsearch queries",
       "type": "string"
     },
     "dcmuiElasticsearchIsDefault": {
-      "title": "es por defecto",
-      "description": "Establece la URL por defecto. (Asegúrese de que sólo una de las urls - hermanos hijo se establece como predeterminada).",
+      "title": "Is Default",
+      "description": "Set this URL to the default one. (Make sure that only one of the urls - siblings child is set to default).",
       "type": "boolean",
       "default": false
     },
     "dcmuiElasticsearchInstalled": {
-      "title": "Instalado",
-      "description": "Utiliza esta URL en la UI.",
+      "title": "Installed",
+      "description": "Use this URL in the UI",
       "type": "boolean",
       "default": true
     }

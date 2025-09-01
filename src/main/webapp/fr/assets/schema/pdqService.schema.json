@@ -1,6 +1,6 @@
 {
-  "title": "PDQ Servicio",
-  "description": "Descriptor del servicio de consulta de datos demográficos de pacientes.",
+  "title": "PDQ Service",
+  "description": "Patient Demographics Query Service Descriptor",
   "type": "object",
   "required": [
     "dcmPDQServiceID",
@@ -9,26 +9,26 @@
   ],
   "properties": {
     "dcmPDQServiceID": {
-      "title": "ID del servicio PDQ",
-      "description": "ID del servicio de consulta de datos demográficos del paciente.",
+      "title": "PDQ Service ID",
+      "description": "Patient Demographics Query Service ID",
       "type": "string",
       "use": [
         "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
       ]
     },
     "dcmURI": {
-      "title": "URI del servicio de consulta de datos demográficos del paciente",
-      "description": "URI del servicio PDQ, por ejemplo 'pdq-dicom:FINDSCP' o 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility' o pdq-fhir:HL7-FHIR-R4-WebApplication.",
+      "title": "Patient Demographics Query Service URI",
+      "description": "PDQ Service URI, e.g. 'pdq-dicom:FINDSCP' or 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility' or pdq-fhir:HL7-FHIR-R4-WebApplication.",
       "type": "string"
     },
     "dicomDescription": {
-      "title": "Descripción del servicio PDQ",
-      "description": "Descripción en texto sin restricciones del servicio de consulta de datos demográficos del paciente.",
+      "title": "PDQ Service Description",
+      "description": "Unconstrained text description of the Patient Demographics Query Service",
       "type": "string"
     },
     "dcmTag": {
-      "title": "Atributos del paciente",
-      "description": "Atributos del paciente consultados: si no se especifica, se consultarán todos los atributos del paciente disponibles. Sólo aplicable al servicio PDQ 'pdq-dicom.",
+      "title": "Patient Attributes",
+      "description": "Queried Patient Attributes - if not specified all available Patient attributes will be queried. Only applicable for 'pdq-dicom' PDQ Service",
       "type": "array",
       "items": {
         "type": "string"
@@ -36,15 +36,15 @@
       "format": "dcmTag"
     },
     "dcmEntity": {
-      "title": "Entidad de consulta",
-      "description": "Indica si el SCP C-FIND se consulta para un paciente concreto o para los estudios de un paciente concreto. Sólo es efectivo para servicios PDQ DICOM (URI: pdq-dicom:{AETitle}).",
+      "title": "Query Entity",
+      "description": "Indicates if the C-FIND SCP is queried for a particular Patient or for Studies of a particular Patient. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle}).",
       "type": "string",
       "enum": [ "Patient", "Study" ],
       "default": "Patient"
     },
     "dcmProperty": {
-      "title": "Propiedad de servicio PDQ",
-      "description": "Propiedad en formato <name>=<value>, por ejemplo, 'LocalAET=DCM4CHEE' para URI con esquema pdq-dicom o 'XSLStylesheetURI=${jboss.server.temp. url}/dcm4chee-arc/hl7-adt2dcm.xsl' para URI con esquema pdq-hl7 o 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/fhir-pat2dcm.xsl' para URI con esquema pdq-fhir. Pueden establecerse propiedades adicionales para URI con esquema pdq-fhir, por ejemplo, 'search._format=xml', 'search.identifier.system={issuer}'. La lista completa de propiedades puede consultarse en https://github.com/dcm4che/dcm4chee-arc-light/issues/3307.",
+      "title": "PDQ Service Property",
+      "description": "Property in format <name>=<value>, e.g. 'LocalAET=DCM4CHEE' for URI with schema pdq-dicom or 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl' for URI with schema pdq-hl7 or 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/fhir-pat2dcm.xsl' for URI with schema pdq-fhir. Additional properties for URI with schema pdq-fhir may be set eg. 'search._format=xml', 'search.identifier.system={issuer}'. For complete list of properties, refer https://github.com/dcm4che/dcm4chee-arc-light/issues/3307",
       "type": "array",
       "items": {
         "type": "string"

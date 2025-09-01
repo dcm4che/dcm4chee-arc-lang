@@ -1,6 +1,6 @@
 {
-  "title": "Configuración URL UI Elasticsearch",
-  "description": "Red URL Elasticsearch",
+  "title": "UI Elasticsearch URL Configuration",
+  "description": "Elasticsearch URL",
   "type": "object",
   "required": [
     "dcmuiLanguageProfileName",
@@ -8,13 +8,13 @@
   ],
   "properties": {
     "dcmuiLanguageProfileName": {
-      "title": "Nombre",
-      "description": "Nombre del perfil de idioma.",
+      "title": "Name",
+      "description": "Language profile name",
       "type": "string"
     },
     "dcmDefaultLanguage": {
-      "title": "Idioma por defecto",
-      "description": "Seleccionar idioma por defecto para la UI.",
+      "title": "Default language",
+      "description": "Select default language for the UI",
       "type": "string",
       "items" : {
         "type": "string"
@@ -22,16 +22,16 @@
       "format": "dcmDefaultLanguage"
     },
     "dcmuiLanguageProfileRole": {
-      "title": "Rol",
-      "description": "Rol de usuario al que se aplicará este perfil de idioma.",
+      "title": "Role",
+      "description": "Username role that this language profile should apply to",
       "type": "array",
       "items" : {
         "type": "string"
       }
     },
     "dcmuiLanguageProfileUsername": {
-      "title": "Nombre de usuario",
-      "description": "Nombre de usuario para el perfil de idioma.",
+      "title": "Username",
+      "description": "Username for the language profile",
       "type": "string"
     }
   }

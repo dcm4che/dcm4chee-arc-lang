@@ -1,6 +1,6 @@
 {
-  "title": "Comparar Lado",
-  "description": "Comparar Lado.",
+  "title": "Compare Side",
+  "description": "Compare Side",
   "type": "object",
   "required": [
     "dcmuiCompareSideName",
@@ -11,18 +11,18 @@
   ],
   "properties": {
     "dcmuiCompareSideName": {
-      "title": "Nombre",
-      "description": "Nombre del lado de comparación.",
+      "title": "Name",
+      "description": "Compare Side Name",
       "type": "string"
     },
     "dcmuiCompareSideDescription": {
-      "title": "Descripción",
-      "description": "Una breve descripción sobre este Grupo.",
+      "title": "Description",
+      "description": "A short description about this Group",
       "type": "string"
     },
     "dcmuiCompareSideOrder": {
-      "title": "Orden",
-      "description": "Orden del lado de comparación.",
+      "title": "Order",
+      "description": "Order of the Compare side",
       "type": "integer",
       "default":0,
       "enum":[
@@ -31,26 +31,26 @@
       ]
     },
     "dcmuiCompareSideCluster": {
-      "title": "Grupo",
-      "description": "Seleccionar un Grupo.",
+      "title": "Cluster",
+      "description": "Select a Cluster",
       "type": "string",
       "format":"dcmuiDeviceClusterObject"
     },
     "dcmuiCompareSideElasticsearch": {
       "title": "Elasticsearch",
-      "description": "Seleccionar una URL de Elasticsearch.",
+      "description": "Select an Elasticsearch URL",
       "type": "string",
       "format":"dcmuiElasticsearchConfig"
     },
     "dcmuiCompareSideQueueName": {
-      "title": "Cola",
-      "description": "Seleccionar el nombre de la cola que se utilizará para el lado de comparación.",
+      "title": "Queue",
+      "description": "Select the QueueName that should be used for the compare side",
       "type": "string",
       "format":"dcmQueueName"
     },
     "dcmuiCompareSideInstalled": {
-      "title": "Instalado",
-      "description": "Si es verdadero, este lado de comparación está activo en el panel de control.",
+      "title": "Installed",
+      "description": "If true this Compare side is active in the dashboard",
       "type": "boolean",
       "default": true
     }

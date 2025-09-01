@@ -1,3 +1,3 @@
-metadataFilter:Filtro de Metadatos|Nombre del Filtro de Atributos para peticiones de Metadatos WADO-RS.
-metadataFilter.dcmMetadataFilterName:Nombre del Filtro de Metadatos|Nombre del Filtro de Metadatos referenciado por el Parámetro de Consulta propietario 'includefields' de las peticiones de Metadatos WADO-RS.
-metadataFilter.dcmTag:Etiqueta de Atributo|Etiqueta DICOM como cadena hexadecimal.
+metadataFilter:Metadata Filter|Named Attribute Filter for WADO-RS Metadata requests.
+metadataFilter.dcmMetadataFilterName:Metadata Filter Name|Metadata Filter Name referenced by proprietary 'includefields' Query Parameter of WADO-RS Metadata requests.
+metadataFilter.dcmTag:Attribute Tag|DICOM Tag as hex string

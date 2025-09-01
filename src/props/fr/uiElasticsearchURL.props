@@ -1,6 +1,6 @@
-uiElasticsearchURL:Configuración URL Elasticsearch UI|Red URL Elasticsearch.
-uiElasticsearchURL.dcmuiElasticsearchURLName:Nombre URL Elasticsearch|Nombre URL Elasticsearch UI.
-uiElasticsearchURL.dcmuiElasticsearchWebApp:Aplicación de red de Elasticsearch|Aplicación de red que se utilizará para extraer la URL de Elasticsearch y acceder a Elasticsearch.
-uiElasticsearchURL.dcmuiAuditEnterpriseSiteID:Auditoría de la Empresa SiteID|Establecer la Auditoría de la Empresa SiteID que se utilizará en las consultas de Elasticsearch.
-uiElasticsearchURL.dcmuiElasticsearchIsDefault:es por defecto|Establece la URL por defecto. (Asegúrese de que sólo una de las urls - hermanos hijo se establece como predeterminada).
-uiElasticsearchURL.dcmuiElasticsearchInstalled:Instalado|Utiliza esta URL en la UI.
+uiElasticsearchURL:UI Elasticsearch URL Configuration|Elasticsearch URL
+uiElasticsearchURL.dcmuiElasticsearchURLName:Elasticsearch URL Name|UI Elasticsearch URL Name
+uiElasticsearchURL.dcmuiElasticsearchWebApp:Elasticsearch WebApp|Web Application that will be used te extract the Elasticsearch URL and access Elasticsearch
+uiElasticsearchURL.dcmuiAuditEnterpriseSiteID:Audit Enterprise SiteID|Set Audit Enterprise SiteID which should be used on Elasticsearch queries
+uiElasticsearchURL.dcmuiElasticsearchIsDefault:Is Default|Set this URL to the default one. (Make sure that only one of the urls - siblings child is set to default).
+uiElasticsearchURL.dcmuiElasticsearchInstalled:Installed|Use this URL in the UI
