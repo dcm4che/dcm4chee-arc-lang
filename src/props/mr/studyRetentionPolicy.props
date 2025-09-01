@@ -7,4 +7,4 @@ studyRetentionPolicy.dcmExpireSeriesIndividually:मालिका वैयक
 studyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:अभ्यासाच्या तारखेपासून धारणा कालावधी सुरू करा|धारणा कालावधीला, अभ्यासांच्या दृष्टांतांच्या संग्रहणांत साठवण होण्याच्या तारखेऐवजी अभ्यासाच्या तारखेपासून सुरु करण्यासाठी सूचित करते.
 studyRetentionPolicy.dcmExporterID:कालबाह्य झालेला अभ्यास निर्यात करा|निर्दिष्ट केलेले निर्यातकद्वारे कालबाह्य झालेले अभ्यास / मालिका निर्यात करा.
 studyRetentionPolicy.dcmFreezeExpirationDate:समाप्ती तारीख गोठवा|यापुढील घटनेंद्वारे समाप्ती तारखेत असक्षम करण्यासाठी सूचित करते.
-studyRetentionPolicy.dcmRevokeExpiration:समाप्ती तारीख मागे घ्या|पहले संच केलेले समाप्ती तारीख मागे घेण्यासाठी सूचित करते.
+studyRetentionPolicy.dcmRevokeExpiration:समाप्ती तारीख मागे घ्या|पहले संच केलेले समाप्ती तारीख मागे घेण्यासाठी सूचित करते and protect the study by permanently freezing it. Only effective if 'Freeze Expiration Date' is also configured.

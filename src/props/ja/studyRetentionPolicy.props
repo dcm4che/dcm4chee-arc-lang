@@ -7,4 +7,4 @@ studyRetentionPolicy.dcmExpireSeriesIndividually:シリーズを 個別に 期�
 studyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:検査日に 保存 期間を 開始します|検査の オブジェクトを 受信したときではなく、 検査日に 保存 期間を 開始するか どうかを 示します
 studyRetentionPolicy.dcmExporterID:期限切れの 検査を 書き出す|指定された エクスポーターを 使用した 期限切れの 検査 / シリーズを 書き出す
 studyRetentionPolicy.dcmFreezeExpirationDate:失効日を 凍結 する|つぎの イベントに 従うことに よる 失効日の 変更を 無効に する ことを 示します。
-studyRetentionPolicy.dcmRevokeExpiration:失効日を 取り消す|以前に 設定された 失効日を 取り消す ことを 示します。
+studyRetentionPolicy.dcmRevokeExpiration:失効日を 取り消す|以前に 設定された 失効日を 取り消す ことを 示します and protect the study by permanently freezing it. Only effective if 'Freeze Expiration Date' is also configured。

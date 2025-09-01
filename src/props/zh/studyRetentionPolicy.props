@@ -7,4 +7,4 @@ studyRetentionPolicy.dcmExpireSeriesIndividually:使系列单独过期|指示是
 studyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:在检验日期启动保留期|指示是否在检验日期启动保留期,而不是在接收到检验对象时启动保留期
 studyRetentionPolicy.dcmExporterID:导出过期检查|使用指定的暴露符导出过期检查/系列
 studyRetentionPolicy.dcmFreezeExpirationDate:冻结过期日期|指示通过以下事件使过期日期更改无效
-studyRetentionPolicy.dcmRevokeExpiration:取消过期日期|指示取消先前设置的过期日期。
+studyRetentionPolicy.dcmRevokeExpiration:取消过期日期|指示取消先前设置的过期日期 and protect the study by permanently freezing it. Only effective if 'Freeze Expiration Date' is also configured。

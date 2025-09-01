@@ -64,7 +64,7 @@
     },
     "dcmRevokeExpiration": {
       "title": "Revocar fecha de caducidad",
-      "description": "Indica que se revoca una fecha de caducidad anterior.",
+      "description": "Indica que se revoca una fecha de caducidad anterior and protect the study by permanently freezing it. Only effective if 'Freeze Expiration Date' is also configured.",
       "type": "boolean",
       "default": false
     }

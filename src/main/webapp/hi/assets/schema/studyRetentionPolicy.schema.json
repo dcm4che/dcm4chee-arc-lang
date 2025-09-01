@@ -64,7 +64,7 @@
     },
     "dcmRevokeExpiration": {
       "title": "समाप्ति तारीख को अभिशून्य करें",
-      "description": "पहले सेट किए हुए समाप्ति तारीख को अभिशून्य करने का संकेत करता है ।",
+      "description": "पहले सेट किए हुए समाप्ति तारीख को अभिशून्य करने का संकेत करता है and protect the study by permanently freezing it. Only effective if 'Freeze Expiration Date' is also configured।",
       "type": "boolean",
       "default": false
     }

@@ -7,4 +7,4 @@ studyRetentionPolicy.dcmExpireSeriesIndividually:Expirar series individualmente|
 studyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:Comenzar el periodo de retención en la fecha del estudio|Indica si el periodo de retención debe comenzar en la fecha del estudio en lugar de al recibir un objeto del estudio.
 studyRetentionPolicy.dcmExporterID:Exportar estudio caducado|Exporta estudios/series caducados utilizando el exportador especificado.
 studyRetentionPolicy.dcmFreezeExpirationDate:Congelar fecha de caducidad|Indica que no se puede cambiar la fecha de caducidad en los siguientes eventos.
-studyRetentionPolicy.dcmRevokeExpiration:Revocar fecha de caducidad|Indica que se revoca una fecha de caducidad anterior.
+studyRetentionPolicy.dcmRevokeExpiration:Revocar fecha de caducidad|Indica que se revoca una fecha de caducidad anterior and protect the study by permanently freezing it. Only effective if 'Freeze Expiration Date' is also configured.

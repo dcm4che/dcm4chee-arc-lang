@@ -7,4 +7,4 @@ studyRetentionPolicy.dcmExpireSeriesIndividually:Fa scadere le serie individualm
 studyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:Inizia il Periodo di conservazione sulla data dello Studio|Indica se il periodo di conservazione deve essere avviato alla Data dello studio anziché al ricevimento di un oggetto dello studio
 studyRetentionPolicy.dcmExporterID:Esporta studio scaduto|Esporta studi/serie scaduti utilizzando l'esportatore specificato
 studyRetentionPolicy.dcmFreezeExpirationDate:Congela la data di scadenza|Indica di disabilitare le modifiche della Data di Scadenza dagli eventi seguenti.
-studyRetentionPolicy.dcmRevokeExpiration:Revoca data di scadenza|Indica i revocare una data di scadenza impostata in precedenza.
+studyRetentionPolicy.dcmRevokeExpiration:Revoca data di scadenza|Indica i revocare una data di scadenza impostata in precedenza and protect the study by permanently freezing it. Only effective if 'Freeze Expiration Date' is also configured.
