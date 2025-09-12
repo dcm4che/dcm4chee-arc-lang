@@ -1743,6 +1743,8 @@
     "replace": "Sustituir",
     "replace_study_by_requested_procedure_in_selected_mwl": "Reemplazar Estudio por Procedimiento solicitado del Elemento MWL seleccionado",
     "repositories": "Repositories",
+    "req_attrs_seq_acc_num": "Req Attrs Seq - Accession No. & Issuer",
+    "req_attrs_seq_acc_num_hover": "Accession Number & Issuer of Accession Number Sequence in Request Attributes Sequence",
     "request_cancellation_of_workitem": "Solicitar Cancelación de Elemento de Trabajo",
     "request_instance_availability_of_instance_to_external_instance_availability_scp": "Solicitar Disponibilidad de Instancia de Instancia a SCP externo de Disponibilidad de Instancia",
     "request_instance_availability_of_series_to_external_instance_availability_scp": "Solicitar Disponibilidad de Instancia de Serie a SCP externo de Disponibilidad de Instancia",

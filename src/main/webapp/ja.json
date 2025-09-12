@@ -1743,6 +1743,8 @@
     "replace": "置換 する",
     "replace_study_by_requested_procedure_in_selected_mwl": "Replace Study by Requested Procedure from selected MWL Item",
     "repositories": "Repositories",
+    "req_attrs_seq_acc_num": "Req Attrs Seq - Accession No. & Issuer",
+    "req_attrs_seq_acc_num_hover": "Accession Number & Issuer of Accession Number Sequence in Request Attributes Sequence",
     "request_cancellation_of_workitem": "作業項目の キャンセルを 要求して ください",
     "request_instance_availability_of_instance_to_external_instance_availability_scp": "インスタンスの インスタンス 可用性を 外部 インスタンス 可用性 SCPに 頼む",
     "request_instance_availability_of_series_to_external_instance_availability_scp": "シリーズの インスタンス 可用性を 外部 インスタンス 可用性 SCPに 頼む",

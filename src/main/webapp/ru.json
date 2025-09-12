@@ -1743,6 +1743,8 @@
     "replace": "Заменить",
     "replace_study_by_requested_procedure_in_selected_mwl": "Replace Study by Requested Procedure from selected MWL Item",
     "repositories": "Repositories",
+    "req_attrs_seq_acc_num": "Req Attrs Seq - Accession No. & Issuer",
+    "req_attrs_seq_acc_num_hover": "Accession Number & Issuer of Accession Number Sequence in Request Attributes Sequence",
     "request_cancellation_of_workitem": "Запросить Отмену Рабочего Элемента",
     "request_instance_availability_of_instance_to_external_instance_availability_scp": "Запросить Доступность Объекта во внешнем SCP Доступности Объекта",
     "request_instance_availability_of_series_to_external_instance_availability_scp": "Запросить Доступность Серии во внешнем SCP Доступности Объекта",
