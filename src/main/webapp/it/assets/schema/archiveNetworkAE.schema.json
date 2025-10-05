@@ -750,11 +750,6 @@
       "description": "Indica di includere un segmento di identificazione del paziente (PID) e di visita del paziente (PV1) nel messaggio di aggiornamento dello stato della procedura HL7. Impostato in modo implicito, se il tipo di messaggio di stato della procedura HL7 = ORU_R01. Sovrascrive i valori specificati a livello del dispositivo.",
       "type": "boolean"
     },
-    "hl7PSUMWL": {
-      "title": "Aggiornamento dello stato della procedura HL7 MWL",
-      "description": "Specifica se lo stato degli elementi MWL nel database viene aggiornato a COMPLETED / DISCONTINUED per uno studio ricevuto dopo il ritardo di aggiornamento dello stato della procedura HL7 configurato o per l'MPPS ricevuto dopo il timeout di aggiornamento dello stato della procedura HL7 configurato. Implicitamente impostato su true, se è configurata la notifica dei ricevitori HL7. Sovrascrive i valori specificati a livello del dispositivo.",
-      "type": "boolean"
-    },
     "hl7PSUMWLMatchingKey": {
       "title": "HL7 Procedure Status Update MWL Matching Key",
       "description": "Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level.",

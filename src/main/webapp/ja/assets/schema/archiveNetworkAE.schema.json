@@ -750,11 +750,6 @@
       "description": "HL7 手順 ステータス 更新 メッセージに 患者 識別 (PID) と 患者 来院 (PV1) セグメントを 含める ことを 示します。 HL7 手順 ステータス メッセージ タイプ = ORU^R01の 場合、 暗黙的に 設定されます。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "boolean"
     },
-    "hl7PSUMWL": {
-      "title": "HL7 手順 ステータス 更新 MWL",
-      "description": "DB内の MWL アイテムの ステータスが 、構成された 「HL7 手順 ステータス 更新 遅延」後に 受信した 検査には 更新されるか どうかを 指定します。 HL7 受信機への通知が、MWL に関連する受信スタディのトリガーとして設定されている場合、暗黙のうちに true に設定される。 デバイス レベルで 指定された 値を 上書きします。",
-      "type": "boolean"
-    },
     "hl7PSUMWLMatchingKey": {
       "title": "HL7 Procedure Status Update MWL Matching Key",
       "description": "Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level.",

@@ -113,7 +113,6 @@
     "dcmQStarVerificationFetchSize",
     "hl7PSUForRequestedProcedure",
     "hl7PSUTemplateParam",
-    "hl7PSUMWL",
     "hl7PSUMWLMatchingKey",
     "hl7PSUOnTimeout",
     "hl7PSUMessageType",
@@ -1792,12 +1791,6 @@
     "hl7PSUPIDPV1": {
       "title": "HL7 Procedure Status Update PID PV1",
       "description": "Indicates to include a Patient Identification (PID) and a Patient Visit (PV1) segment in the HL7 Procedure Status Update message. Implicitly set, if HL7 Procedure Status Message Type = ORU_R01. May be overwritten by configured values for particular Archive Network AEs.",
-      "type": "boolean",
-      "default": false
-    },
-    "hl7PSUMWL": {
-      "title": "HL7 Procedure Status Update MWL",
-      "description": "Specifies if the Status of MWL Items in the DB is updated to COMPLETED for a received study after the configured HL7 Procedure Status Update Delay. Implicitly set to true, if notification to HL7 receivers is configured, triggered by received studies associated with MWL. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "boolean",
       "default": false
     },

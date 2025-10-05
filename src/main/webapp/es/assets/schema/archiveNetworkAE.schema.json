@@ -750,11 +750,6 @@
       "description": "Indica que se incluya una identificación de paciente (PID) y un segmento de visita de paciente (PV1) en el mensaje de actualización de estado de procedimiento HL7. Implícitamente establecido, si el Tipo de Mensaje de Estado de Procedimiento HL7 = ORU_R01. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "boolean"
     },
-    "hl7PSUMWL": {
-      "title": "Actualización de Estado de Procedimiento HL7 MWL",
-      "description": "Especifica si el Estado de los Elementos MWL en la BD se actualiza a COMPLETADO para un estudio recibido después del Retraso de Actualización de Estado de Procedimiento HL7 configurado. Se establece implícitamente en verdadero, si se configura la notificación a los receptores HL7, activada por los estudios recibidos asociados con MWL. Sobrescribe el valor especificado en el nivel Dispositivo.",
-      "type": "boolean"
-    },
     "hl7PSUMWLMatchingKey": {
       "title": "Clave de Coincidencia de Actualización de Estado de Procedimiento HL7 MWL",
       "description": "Especifica el atributo del objeto recibido para buscar el Elemento MWL cuyo estado debe actualizarse a COMPLETADO. Sólo es aplicable si 'HL7 Actualización de Estado de Procedimiento MWL' está configurado como o implícitamente como verdadero. Sobrescribe el valor especificado en el nivel de dispositivo.",

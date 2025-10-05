@@ -113,7 +113,6 @@
     "dcmQStarVerificationFetchSize",
     "hl7PSUForRequestedProcedure",
     "hl7PSUTemplateParam",
-    "hl7PSUMWL",
     "hl7PSUMWLMatchingKey",
     "hl7PSUOnTimeout",
     "hl7PSUMessageType",
@@ -1792,12 +1791,6 @@
     "hl7PSUPIDPV1": {
       "title": "HL7 Actualización del Estado del Procedimiento PID PV1",
       "description": "Indica que se incluya un segmento de Identificación del Paciente (PID) y un segmento de Visita del Paciente (PV1) en el mensaje de Actualización del Estado del Procedimiento HL7. Implícitamente establecido, si HL7 Procedure Status Message Type = ORU_R01. Puede sobrescribirse mediante valores configurados para determinados EA de la red de archivos.",
-      "type": "boolean",
-      "default": false
-    },
-    "hl7PSUMWL": {
-      "title": "Actualización de Estado de Procedimiento HL7 MWL",
-      "description": "Especifica si el Estado de los Elementos MWL en la BD se actualiza a COMPLETADO para un estudio recibido después del Retraso de Actualización de Estado de Procedimiento HL7 configurado. Se establece implícitamente en true, si se configura la notificación a los receptores HL7, activada por los estudios recibidos asociados con MWL. Puede sobrescribirse mediante valores configurados para determinados EA de la red de archivos.",
       "type": "boolean",
       "default": false
     },

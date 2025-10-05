@@ -113,7 +113,6 @@
     "dcmQStarVerificationFetchSize",
     "hl7PSUForRequestedProcedure",
     "hl7PSUTemplateParam",
-    "hl7PSUMWL",
     "hl7PSUMWLMatchingKey",
     "hl7PSUOnTimeout",
     "hl7PSUMessageType",
@@ -1792,12 +1791,6 @@
     "hl7PSUPIDPV1": {
       "title": "HL7 手順 ステータス 更新 PID PV1",
       "description": "HL7 手順 ステータス 更新 メッセージに 患者 識別 (PID) と 患者 来院 (PV1) セグメントを 含める ことを 示します。 HL7 手順 ステータス メッセージ タイプ = ORU^R01の 場合、 暗黙的に 設定されます。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
-      "type": "boolean",
-      "default": false
-    },
-    "hl7PSUMWL": {
-      "title": "HL7 手順 ステータス 更新 MWL",
-      "description": "DB内の MWL アイテムの ステータスが 、構成された 「HL7 手順 ステータス 更新 遅延」後に 受信した 検査には 更新されるか どうかを 指定します。 HL7 受信機への通知が、MWL に関連する受信スタディのトリガーとして設定されている場合、暗黙のうちに true に設定される。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
       "type": "boolean",
       "default": false
     },

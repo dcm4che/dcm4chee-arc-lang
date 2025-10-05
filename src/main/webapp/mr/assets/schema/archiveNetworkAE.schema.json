@@ -750,11 +750,6 @@
       "description": "HL7 प्रक्रिया स्थिती अद्यतन संदेशामध्ये रुग्णाची ओळख (PID) आणि रुग्णाची भेट (PV1) सेगमेंट्सला समाविष्ट करण्याचे संकेत करते. स्पष्टपणे समाविष्ट होईल, जर 'HL7 प्रक्रिया स्थिती संदेशाचे प्रकार' चे मूल्य ORU_R01 आहे. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
       "type": "boolean"
     },
-    "hl7PSUMWL": {
-      "title": "HL7 प्रक्रिया स्थिती MWL अद्यतन",
-      "description": "प्राप्त झालेल्या अभ्यासासाठी कॉन्फीगर्ड 'HL7 प्रक्रिया स्थिती अद्यतन विलंब' वेळेंची मूल्ये पोहोचल्यावर डेटाबेसमधील MWL आयटम्सच्या स्थितीला COMPLETED (संपूर्ण) म्हणून अद्यतन करण्याचे निर्दिष्ट करते. आपोआप 'हो' म्हणून संच केले जाईल, जर HL7 संदेश प्राप्त करणाऱ्या सिस्टम्सना प्राप्त झालेल्या अभ्यासासाठी कळवण्याचे कॉन्फिगरेशन उपलब्ध आहे. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
-      "type": "boolean"
-    },
     "hl7PSUMWLMatchingKey": {
       "title": "HL7 Procedure Status Update MWL Matching Key",
       "description": "Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level.",

@@ -113,7 +113,6 @@
     "dcmQStarVerificationFetchSize",
     "hl7PSUForRequestedProcedure",
     "hl7PSUTemplateParam",
-    "hl7PSUMWL",
     "hl7PSUMWLMatchingKey",
     "hl7PSUOnTimeout",
     "hl7PSUMessageType",
@@ -1792,12 +1791,6 @@
     "hl7PSUPIDPV1": {
       "title": "HL7程序状态更新PID PV1",
       "description": "HL7程序状态更新消息包括患者标识(PID)和患者就诊（PV1）段。如果HL7步骤状态消息类型=ORU^R01,则隐式设置。 为特定存档网络AE配置的值可能会覆盖它。",
-      "type": "boolean",
-      "default": false
-    },
-    "hl7PSUMWL": {
-      "title": "HL7过程状态更新MWL",
-      "description": "指定DB中的MWL项的状态是否更新为COMPLETED / DISCONTINUED,用于在配置的HL7过程状态更新延迟之后接收的检查,或用于在配置的HL7过程状态更新超时之后接收的MPPS。 如果已配置HL7步骤状态更新接收应用产品,则将其隐式设置为真。 为特定存档网络AE配置的值可能会覆盖它。",
       "type": "boolean",
       "default": false
     },
