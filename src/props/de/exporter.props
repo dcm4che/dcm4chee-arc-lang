@@ -7,6 +7,7 @@ exporter.dicomAETitle:Archive Application Entity (AE) title|Archive Application 
 exporter.dcmExportAsSourceAE:Export as Source Application Entity (AE)|Mask the Archive Application Entity (AE) title by the title of the Application Entity (AE) from which a Series was received on establishing the Association to the Destination Application Entity (AE).
 exporter.dcmDeleteStudyFromStorageID:Delete Study From Storage ID|ID of Storage System from which the objects of the exported Study shall be deleted. Only effective for Export Tasks on Study level.
 exporter.dcmRejectForDataRetentionExpiry:Reject Entity for Data Retention Expiry|Reject entity for Data Retention Expiry after export on completion of Export Task.
+exporter.dcmCheckIfAlreadyExistsOnDestination:Check if already exists on Destination|Indicates to only export an object if there is not already an object with such Storage Path on the destination storage.
 exporter.dcmStgCmtSCP:Storage Commitment SCP AE Title|AE Title of external Storage Commitment SCP used to verify export to another archive.
 exporter.dcmIanDestination:IAN Destination|Destination to send IAN N-CREATE RQ
 exporter.dcmRetrieveAET:Retrieve AE Title|AE Title associated with Network AE

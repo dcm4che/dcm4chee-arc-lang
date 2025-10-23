@@ -10,7 +10,8 @@
     "dcmInstanceAvailability",
     "dicomAETitle",
     "dcmExportAsSourceAE",
-    "dcmRejectForDataRetentionExpiry"
+    "dcmRejectForDataRetentionExpiry",
+    "dcmCheckIfAlreadyExistsOnDestination"
   ],
   "properties": {
     "dcmExporterID": {
@@ -68,6 +69,12 @@
     "dcmRejectForDataRetentionExpiry": {
       "title": "Rifiuta entità per scadenza conservazione dati",
       "description": "Rifiuta entità per la scadenza della conservazione dei dati dopo l'esportazione al completamento dell'attività di esportazione.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmCheckIfAlreadyExistsOnDestination": {
+      "title": "Check if already exists on Destination",
+      "description": "Indicates to only export an object if there is not already an object with such Storage Path on the destination storage.",
       "type": "boolean",
       "default": false
     },

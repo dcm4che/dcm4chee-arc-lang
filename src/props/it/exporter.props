@@ -7,6 +7,7 @@ exporter.dicomAETitle:Titolo dell'entità dell'applicazione di archiviazione (AE
 exporter.dcmExportAsSourceAE:Esporta come entità applicazione di origine (AE)|Mascherare il titolo dell'entità dell'applicazione di archiviazione (AE) con il titolo dell'entità dell'applicazione (AE) da cui è stata ricevuta una serie al momento della costituzione dell'Associazione all'entità dell'applicazione di destinazione (AE).
 exporter.dcmDeleteStudyFromStorageID:Elimina studio dall'ID di archiviazione|ID del sistema di archiviazione da cui verranno eliminati gli oggetti dello studio esportato. Efficace solo per attività di esportazione a livello di studio.
 exporter.dcmRejectForDataRetentionExpiry:Rifiuta entità per scadenza conservazione dati|Rifiuta entità per la scadenza della conservazione dei dati dopo l'esportazione al completamento dell'attività di esportazione.
+exporter.dcmCheckIfAlreadyExistsOnDestination:Check if already exists on Destination|Indicates to only export an object if there is not already an object with such Storage Path on the destination storage.
 exporter.dcmStgCmtSCP:AE Title di Storage Commitment SCP|AE Titolo dell'impegno di archiviazione esterno SCP utilizzato per verificare l'esportazione in un altro archivio.
 exporter.dcmIanDestination:Destinazione IAN|Destinazione per inviare IAN N-CREATE RQ.
 exporter.dcmRetrieveAET:AE Title di recupero|Titolo AE associato al AE di rete

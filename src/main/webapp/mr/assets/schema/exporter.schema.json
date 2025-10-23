@@ -10,7 +10,8 @@
     "dcmInstanceAvailability",
     "dicomAETitle",
     "dcmExportAsSourceAE",
-    "dcmRejectForDataRetentionExpiry"
+    "dcmRejectForDataRetentionExpiry",
+    "dcmCheckIfAlreadyExistsOnDestination"
   ],
   "properties": {
     "dcmExporterID": {
@@ -68,6 +69,12 @@
     "dcmRejectForDataRetentionExpiry": {
       "title": "डेटा धारणा कालबाह्यतेसाठी घटक अस्वीकृत करा",
       "description": "निर्यात कार्य पूर्ण झाल्यावर, डेटा धारणा कालबाह्यतेसाठी घटक अस्वीकृत करा.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmCheckIfAlreadyExistsOnDestination": {
+      "title": "Check if already exists on Destination",
+      "description": "Indicates to only export an object if there is not already an object with such Storage Path on the destination storage.",
       "type": "boolean",
       "default": false
     },

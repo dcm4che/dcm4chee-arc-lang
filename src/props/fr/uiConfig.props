@@ -1,27 +1,27 @@
-uiConfig:UI Configuration|UI Configuration
-uiConfig.dcmuiConfigName:UI Configuration Name|UI Configuration Name
-uiConfig.dcmuiModalities:Statistic Modalities|Preselected Modalities that should show in the Statistic page
+uiConfig:Configuración UI|Configuración UI.
+uiConfig.dcmuiConfigName:Nombre Configuración UI|Nombre Configuración UI.
+uiConfig.dcmuiModalities:Modalidades Estadísticas|Modalidades preseleccionadas que deben mostrarse en la página de Estadísticas.
 uiConfig.dcmuiLanguageConfig:Language Config|Config the languages of the UI
-uiConfig.dcmuiWidgetAets:Widget AETs|Select the AETs that you wan't to see in the AET widget, where you can select in which of them the newly added AET should be as `Accepted Calling AE Title`
-uiConfig.dcmuiHideOtherPatientIDs:Hide Other Patient IDs|Indicates if other patient identifiers of patient record present in Other Patient IDs Sequence (0010,1002) shall be hidden. By default, all patient identifiers of patient record are displayed separated by comma.
-uiConfig.dcmuiDateTimeFormat:Format Date Time|Here you can format the date time in the UI by using 'yyyy' for the year, 'MM' for the Month, 'dd' for the date, 'HH' for the hour 'mm' for the minutes, 'ss' for the seconds and 'SSS' for milliseconds. To format Date, Time and Date-Time you should use `DATE`, `TIME` and `DATE-TIME` for example like this: `DATE=yyyy-MM-dd, TIME=HH:mm, DATE-TIME=yyyy-MM-dd HH:mm`
-uiConfig.dcmuiHideClock:Hide Clock|Set to true if you want to hide the clock in the UI
-uiConfig.dcmuiPageTitle:Page Title|If set, it will be used as UI page Title ( The Text shown in the Tab of the Browser ) 
-uiConfig.dcmuiPersonNameFormat:Format Person Name|Here you can format the person Name in the UI by using:{FAMILY-NAME}, {GIVEN-NAME}, {MIDDLE-NAME}, {NAME-PREFIX}, {NAME-SUFFIX} for Alphabetic, or by appending 'I_' for the Ideographic and 'P_' for the Phonetic version like {P_FAMILY-NAME}, {I_NAME-SUFFIX}
-uiConfig.dcmuiDefaultWidgetAets:Default Widget AETs|Select the AETs that should be preselected on Widget AETs
-uiConfig.dcmuiMWLWorklistLabel:MWL Worklist Label|Selectable values for MWL Worklist Label
-uiConfig.dcmuiInstitutionNameFilterType:Institution Name Filter Type|This will define how the Institution Name filter used in the Navigation Page should be displayed and if there should be a prefilled dropdown and where to get those data from
-uiConfig.dcmuiInstitutionName:Institution Names|This will be used in combination with the previous field 'Institution Name Filter Type' to prefill the Dropdown of the Filter Institution Names in the Navigation Page
+uiConfig.dcmuiWidgetAets:AETs Widget|Seleccione los AETs que desea ver en el widget AET, donde puede seleccionar en cual de ellos el nuevo AET añadido debe estar como `Título AE Llamada Aceptada`.
+uiConfig.dcmuiHideOtherPatientIDs:Ocultar otros ID de pacientes|Indica si se deben ocultar otros identificadores de pacientes del registro de pacientes presentes en la secuencia Otros ID de pacientes (0010,1002). Por defecto, todos los identificadores de paciente del registro de paciente se muestran separados por comas.
+uiConfig.dcmuiDateTimeFormat:Formatear Fecha Hora|Aquí puede formatear la fecha y la hora en la interfaz de usuario utilizando "aaaa" para el año, "MM" para el mes, "dd" para la fecha, "HH" para la hora, "mm" para los minutos, "ss" para los segundos y "SSS" para los milisegundos. Para dar formato a la Fecha, Hora y Fecha-Hora debe utilizar "FECHA", "HORA" y "FECHA-HORA", por ejemplo, así `DATE=aaaa-MM-dd, TIME=HH:mm, DATE-TIME=aaaa-MM-dd HH:mm`.
+uiConfig.dcmuiHideClock:Ocultar Reloj|Ajuste a verdadero si desea ocultar el reloj en la interfaz de usuario.
+uiConfig.dcmuiPageTitle:Título de la Página|Si se establece, se utilizará como Título de la página UI (El Texto mostrado en la Pestaña del Navegador).
+uiConfig.dcmuiPersonNameFormat:Formatear el nombre de la persona|Aquí puede formatear el nombre de la persona en la interfaz de usuario utilizando: {FAMILY-NAME}, {GIVEN-NAME}, {MIDDLE-NAME}, {NAME-PREFIX}, {NAME-SUFFIX} para alfabético, o añadiendo 'I_' para la versión ideográfica y 'P_' para la versión fonética, como {P_FAMILY-NAME}, {I_NAME-SUFFIX}.
+uiConfig.dcmuiDefaultWidgetAets:AETs por defecto del widget|Seleccione los AETs que deben preseleccionarse en los AETs del widget.
+uiConfig.dcmuiMWLWorklistLabel:Etiqueta de la lista de trabajo MWL|Valores seleccionables para la etiqueta de la lista de trabajo MWL.
+uiConfig.dcmuiInstitutionNameFilterType:Tipo de Filtro de Nombre de Institución|Define cómo debe mostrarse el filtro de Nombre de Institución utilizado en la Página de Navegación y si debe haber un desplegable pre-rellenado y de dónde obtener esos datos.
+uiConfig.dcmuiInstitutionName:Nombres de instituciones|Se utilizará en combinación con el campo anterior 'Tipo de filtro de nombres de instituciones' para rellenar previamente el desplegable del filtro de nombres de instituciones en la página de navegación.
 uiConfig.dcmuiIssuerOfPatientIDSequence:Issuer of Patient ID Sequence|This will be used to show a dropdown in the Patient Identifier widget instead of the Issuer of Patient ID, Issuer of Patient ID Qualifiers Sequence - Universal Entity ID and Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type input fields. You can use the & character between the strings to mark the different fields like: 'issuerOfP&ipIDQuSeUniversalEntityID&ipIDQuSeUniversalEntityIDType'
 uiConfig.dcmuiIssuerOfAccessionNumberSequence:Issuer of Accession Number Sequence|This will be used to show a dropdown in the Accession Number widget instead of the "Local Namespace Entity ID", "Universal Entity ID" and "Universal Entity ID Type" input fields. You can use the ^ character between the strings to mark the different fields like: 'dummylNamespace^uEntityID^uEntityIDType'
 uiConfig.dcmuiIssuerOfAdmissionIDSequence:Issuer of Admission ID Sequence|This will be used to show a dropdown in the Admission ID widget instead of the "Local Namespace Entity ID","Universal Entity ID" and "Universal Entity ID Type" input fields. You can use the & character between the strings to mark the different fields like: 'dummylNamespace&uEntityID&uEntityIDType'
-uiConfig.dcmuiAetConfig:AET drop-down list|Define which AETs should be visible in the drop-down lists in the UI
-uiConfig.dcmuiWebAppConfig:Web App drop-down list|Define which WebApps should be visible on the top of the drop-down list in the UI
-uiConfig.dcmuiPermission:Permission|Permission
-uiConfig.dcmuiFilterTemplateObject:UI Filter Template|Defined filter template
-uiConfig.dcmuiDiffConfig:Study Diff Configuration|Study Diff Configuration
-uiConfig.dcmuiTableConfig:UI Table Configuration|Configuration of table
-uiConfig.dcmuiElasticsearchConfig:UI Elasticsearch Configuration|Elasticsearch Configuration for the pro version
-uiConfig.dcmuiDeviceClusterObject:UI Cluster Configuration|Group Devices in Clusters
-uiConfig.dcmuiDashboardConfig:UI Dashboard Configuration|UI Dashboard Configuration
-uiConfig.dcmuiCreateDialogTemplate:UI Dialog Template|UI Create Dialog Templates Configuration
+uiConfig.dcmuiAetConfig:Lista desplegable de AETs|Defina qué AETs deben ser visibles en las listas desplegables de la UI.
+uiConfig.dcmuiWebAppConfig:Lista desplegable de Aplicaciones de Red|Defina qué Aplicaciones de Red deben estar visibles en la parte superior de la lista desplegable de la interfaz de usuario.
+uiConfig.dcmuiPermission:Permiso|Permiso.
+uiConfig.dcmuiFilterTemplateObject:Plantilla de filtro UI|Plantilla de filtro definida.
+uiConfig.dcmuiDiffConfig:Configuración de diferencias de estudio|Configuración de diferencias de estudio.
+uiConfig.dcmuiTableConfig:Configuración de tabla de IU|Configuración de tabla.
+uiConfig.dcmuiElasticsearchConfig:Configuración de UI Elasticsearch|Configuración de Elasticsearch para la versión pro.
+uiConfig.dcmuiDeviceClusterObject:Configuración de Grupos de UI|Agrupar dispositivos en Grupos.
+uiConfig.dcmuiDashboardConfig:Configuración del Cuadro de Mando de IU|Configuración del Cuadro de Mando de IU.
+uiConfig.dcmuiCreateDialogTemplate:UI Plantilla de Diálogo|Configuración de UI Crear Plantillas de Diálogo.

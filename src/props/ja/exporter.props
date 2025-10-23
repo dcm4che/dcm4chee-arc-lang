@@ -7,6 +7,7 @@ exporter.dicomAETitle:アーカイブ アプリケーション エンティテ�
 exporter.dcmExportAsSourceAE:ソース アプリケーション エンティティ (AE) として 書き出す|アーカイブ アプリケーション エンティティ (AE)の タイトルを、 シリーズを 送信した アプリケーション エンティティ (AE)の タイトルで、 宛先 アプリケーション エンティティ (AE)への 関連付けを 確立 する 際に マスク する。
 exporter.dcmDeleteStudyFromStorageID:格納 IDから 検査を 削除|格納 システム IDから 書き出された 検査の オブジェクトを 削除 する。 検査 レベルの 書き出し タスクにのみ 有効です。
 exporter.dcmRejectForDataRetentionExpiry:データ 保持 期限切れの ために エンティティを 拒否 する|書き出し タスクの 完了後に データ 保持 期限切れの ために エンティティを 拒否します。
+exporter.dcmCheckIfAlreadyExistsOnDestination:Check if already exists on Destination|Indicates to only export an object if there is not already an object with such Storage Path on the destination storage.
 exporter.dcmStgCmtSCP:格納 コミットメント SCP AE タイトル|別の アーカイブへの 書き出しを 確認 する ために 使用される 外部 格納 コミットメント SCPの AE タイトル。
 exporter.dcmIanDestination:IAN 宛先|IAN N-CREATE RQを 送信 する ために 宛先
 exporter.dcmRetrieveAET:読み出し AE タイトル|ネットワーク AEに 関連付けられた AE タイトル

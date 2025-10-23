@@ -1,4 +1,4 @@
-hl7ForwardRule:HL7 Forward Rule|HL7 Forward Rule
-hl7ForwardRule.cn:Name|Arbitrary/Meaningful name of the HL7 Forward Rule
-hl7ForwardRule.hl7FwdApplicationName:HL7 Forward Application Name|HL7 Forward Destination Application and Facility name (Application|Facility)
-hl7ForwardRule.dcmProperty:Conditions|Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType
+hl7ForwardRule:Regla de reenvío HL7|Regla de reenvío HL7.
+hl7ForwardRule.cn:Nombre|Nombre arbitrario/significativo de la regla de reenvío HL7.
+hl7ForwardRule.hl7FwdApplicationName:Nombre de aplicación de reenvío HL7|Nombre de aplicación y centro de destino de reenvío HL7 (Aplicación|Centro).
+hl7ForwardRule.dcmProperty:Condiciones|Condiciones en formato {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Ejemplos: MSH-4=FORWARD o MSH-9=ADT\\^A28^ADT_A05 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType.
