@@ -2,7 +2,7 @@
 json2props src/main/webapp/de/assets/schema src/props/de
 json2props src/main/webapp/en/assets/schema src/props/en
 json2props src/main/webapp/es/assets/schema src/props/es
-json2props src/main/webapp/es/assets/schema src/props/fr
+json2props src/main/webapp/fr/assets/schema src/props/fr
 json2props src/main/webapp/hi/assets/schema src/props/hi
 json2props src/main/webapp/it/assets/schema src/props/it
 json2props src/main/webapp/ja/assets/schema src/props/ja
