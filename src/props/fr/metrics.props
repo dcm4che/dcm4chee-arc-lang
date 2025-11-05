@@ -1,5 +1,5 @@
-metrics:Descriptor de métricas|Descriptor de métricas.
-metrics.dcmMetricsName:Nombre de la métrica|Nombre de la métrica.
-metrics.dicomDescription:Descripción de las métricas|Descripción en texto sin restricciones de las métricas.
-metrics.dcmMetricsRetentionPeriod:Periodo de retención de métricas|Periodo de retención de métricas en minutos.
-metrics.dcmUnit:Unidad de métricas|Unidad de datos de métricas.
+metrics:Metrics Descriptor|Metrics Descriptor
+metrics.dcmMetricsName:Metrics Name|Metrics Name
+metrics.dicomDescription:Metrics Description|Unconstrained text description of the metrics
+metrics.dcmMetricsRetentionPeriod:Metrics Retention Period|Metrics Retention Period in minutes
+metrics.dcmUnit:Metrics Unit|Unit of metrics data

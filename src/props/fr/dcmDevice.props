@@ -1,24 +1,24 @@
-dcmDevice:Extensión de dispositivo|dcm4che atributos de dispositivo propietarios.
-dcmDevice.dcmRoleSelectionNegotiationLenient:Negociación de Selección de Rol Leniente|Indica que se deshabilite la comprobación de la negociación de selección de rol SCP/SCU requerida en el envío de DIMSE-RQs. Puede ser sobrescrito por el valor configurado para determinados sistemas operativos de red.
-dcmDevice.dcmLimitOpenAssociations:Límite de asociación|Número máximo de conexiones DICOM abiertas; rechaza las solicitudes de asociación si se supera el límite; 0 = ilimitado.
-dcmDevice.dcmLimitAssociationsInitiatedBy:Límite de asociación para AE|Número máximo de conexiones DICOM abiertas iniciadas por una entidad de aplicación (AE) concreta en formato <ae-title>=<number>; rechaza las solicitudes de asociación de esa AE si se supera el límite.
-dcmDevice.dcmTrustStoreURL:Confiar en la URL del almacén|URL del almacén de confianza con certificados para nodos DICOM que están autorizados a conectarse a este nodo; anula dicomAuthorizedNodeCertificateReference.
-dcmDevice.dcmTrustStoreType:Tipo de Almacén de Confianza|Almacén de Claves Tipo de Almacén de Confianza especificado por dcmTrustStoreURL. Valores enumerados: JKS, PKCS12.
-dcmDevice.dcmTrustStorePin:Trust Store Pin|Contraseña de Almacén de confianza especificada por la URL de Almacén de confianza.
-dcmDevice.dcmTrustStorePinProperty:Propiedad de PIN de almacén de confianza|Propiedad del sistema del almacén de claves Contraseña del almacén de confianza especificada por la URL del almacén de confianza.
-dcmDevice.dcmKeyStoreURL:URL de almacén de claves|URL de almacén de claves con clave privada y certificado utilizado para identificar este nodo DICOM en conexiones TLS.
-dcmDevice.dcmKeyStoreType:Tipo de almacén de claves|Tipo de almacén de claves especificado por la URL del almacén de claves. Valores enumerados: JKS, PKCS12.
-dcmDevice.dcmKeyStorePin:PIN del almacén de claves|Contraseña del almacén de claves especificado por la URL del almacén de claves.
-dcmDevice.dcmKeyStorePinProperty:Propiedad Pin de Almacén de Claves|Propiedad del sistema de Almacén de Claves Contraseña de Almacén de Claves especificada por URL de Almacén de Claves.
-dcmDevice.dcmKeyStoreKeyPin:PIN de clave de almacén de claves|Contraseña de almacén de claves especificada por URL de almacén de claves.
-dcmDevice.dcmKeyStoreKeyPinProperty:Propiedad Pin de clave de almacén de claves|Propiedad del sistema de Clave Contraseña de almacén de claves especificada por URL de almacén de claves.
-dcmDevice.dcmTimeZoneOfDevice:Zona horaria del dispositivo|ID de zona horaria del dispositivo; coincide con el ID de zona horaria de Java.
-dcmDevice.dcmWebApp:Aplicaciones web|Aplicaciones web proporcionadas por el dispositivo.
-dcmDevice.dcmKeycloakClient:Clientes Keycloak|Clientes Keycloak proporcionados por el dispositivo.
-dcmDevice.hl7Application:Aplicaciones HL7|Aplicaciones HL7 proporcionadas por el dispositivo.
-dcmDevice.dcmImageWriter:Escritores de Imagen|Especifica Escritores de Imagen Java Image IO con Parámetros de Escritura usados para comprimir imágenes DICOM.
-dcmDevice.dcmImageReader:Lectores de Imagen|Especifica los Lectores de Imagen Java Image IO utilizados para descomprimir imágenes DICOM comprimidas.
-dcmDevice.dcmAuditLogger:Registrador de auditoría|Información relacionada con el registrador de auditoría.
-dcmDevice.dcmAuditRecordRepository:Depósito de registros de auditoría|Información relacionada con el depósito de registros de auditoría.
-dcmDevice.dcmArchiveDevice:Dispositivo de Archivo|Información relacionada con el Dispositivo de Archivo DICOM.
-dcmDevice.dcmuiConfig:Configuración UI|Configuración UI.
+dcmDevice:Device Extension|dcm4che proprietary Device Attributes
+dcmDevice.dcmRoleSelectionNegotiationLenient:Role Selection Negotiation Lenient|Indicates to disable check for required SCP/SCU role selection negotiation on sending of DIMSE-RQs. May be overwritten by configured value for particular Network AEs.
+dcmDevice.dcmLimitOpenAssociations:Association Limit|Maximal number of open DICOM connections; rejects Association requests if the limit is exceeded; 0 = unlimited.
+dcmDevice.dcmLimitAssociationsInitiatedBy:Association Limit for AE|Maximal number of open DICOM connections initiated by a particular Application Entity (AE) in format <ae-title>=<number>; rejects Association requests from that AE if the limit is exceeded.
+dcmDevice.dcmTrustStoreURL:Trust Store URL|URL of Trust Store with Certificates for DICOM nodes that are authorized to connect to this node; overrides dicomAuthorizedNodeCertificateReference
+dcmDevice.dcmTrustStoreType:Trust Store Type|Key Store Type of Trust Store specified by dcmTrustStoreURL. Enumerated values: JKS, PKCS12.
+dcmDevice.dcmTrustStorePin:Trust Store Pin|Key Store Password of Trust Store specified by Trust Store URL
+dcmDevice.dcmTrustStorePinProperty:Trust Store Pin Property|System property of Key Store Password of Trust Store specified by Trust Store URL
+dcmDevice.dcmKeyStoreURL:Key Store URL|URL of Key Store with private Key and certificate used to identify this DICOM node in TLS connections
+dcmDevice.dcmKeyStoreType:Key Store Type|Key Store Type of Key Store specified by Key Store URL. Enumerated values: JKS, PKCS12.
+dcmDevice.dcmKeyStorePin:Key Store Pin|Key Store Password of Key Store specified by Key Store URL
+dcmDevice.dcmKeyStorePinProperty:Key Store Pin Property|System property of Key Store Password of Key Store specified by Key Store URL
+dcmDevice.dcmKeyStoreKeyPin:Key Store Key Pin|Key Password of Key Store specified by Key Store URL
+dcmDevice.dcmKeyStoreKeyPinProperty:Key Store Key Pin Property|System property of Key Password of Key Store specified by Key Store URL
+dcmDevice.dcmTimeZoneOfDevice:Time Zone of Device|Time Zone ID of the Device; matches Java TimeZone ID
+dcmDevice.dcmWebApp:Web Applications|Web Applications provided by the Device
+dcmDevice.dcmKeycloakClient:Keycloak Clients|Keycloak Clients provided by the Device
+dcmDevice.hl7Application:HL7 Applications|HL7 Applications provided by the Device
+dcmDevice.dcmImageWriter:Image Writers|Specifies Java Image IO Image Writers with Write Parameters used for compressing DICOM images
+dcmDevice.dcmImageReader:Image Readers|Specifies Java Image IO Image Readers used for decompressing compressed DICOM images
+dcmDevice.dcmAuditLogger:Audit Logger|Audit Logger related information
+dcmDevice.dcmAuditRecordRepository:Audit Record Repository|Audit Record Repository related information
+dcmDevice.dcmArchiveDevice:Archive Device|DICOM Archive Device related information
+dcmDevice.dcmuiConfig:UI Configuration|UI Configuration
