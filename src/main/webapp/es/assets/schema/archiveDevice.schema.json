@@ -1771,7 +1771,7 @@
     },
     "hl7PSUTemplateParam": {
       "title": "Parámetros de la plantilla de actualización del estado del procedimiento HL7",
-      "description": "Parámetros XSLT en formato {attributeID}={value} pasados a la hoja de estilo especificada por el URI de la plantilla MPPS de actualización del estado del procedimiento HL7 o el URI de la plantilla de estudio de actualización del estado del procedimiento HL7. {attributeID} dentro de {value} se sustituirá por el valor de ese atributo en el conjunto de datos original. Por ejemplo: 'RequestedProcedureID={StudyInstanceUID,hash}' o 'AccessionNumber={0020000D,hash}'. Puede sobrescribirse mediante valores configurados para determinados EA de la red de archivos.",
+      "description": "Parámetros XSLT en formato {attributeID}={value} pasados a la hoja de estilo especificada por el URI de la plantilla MPPS de actualización del estado del procedimiento HL7 o el URI de la plantilla de estudio de actualización del estado del procedimiento HL7. {attributeID} dentro de {value} se sustituirá por el valor de ese atributo en el conjunto de datos original. Por ejemplo: 'RequestedProcedureID={StudyInstanceUID}' o 'AccessionNumber={0020000D}'. Puede sobrescribirse mediante valores configurados para determinados EA de la red de archivos.",
       "type": "array",
       "items": {
         "type": "string"
