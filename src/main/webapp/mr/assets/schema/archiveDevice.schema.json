@@ -2127,6 +2127,61 @@
         "type": "string"
       }
     },
+    "fhirPreferredAssigningAuthorityOfPatientID": {
+      "title": "FHIR Preferred Assigning Authority of Patient ID",
+      "description": "Assigning Authority of preferred Patient ID in logical reference of Patients with multiple Patient IDs in outgoing FHIR messages. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
+      "type": "string"
+    },
+    "fhirDefaultSystemOfPatientID": {
+      "title": "FHIR Default System of Patient ID",
+      "description": "Namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages, if no value is derived from the 'Issuer of Patient ID' or the 'Universal Entity ID' according configured 'FHIR System of Patient ID' and 'FHIR System by Issuer of Patient ID'.",
+      "type": "string"
+    },
+    "fhirSystemOfPatientID": {
+      "title": "FHIR System of Patient ID",
+      "description": "Specifies if the 'Issuer of Patient ID' (= Local Namespace Entity ID) or the 'Universal Entity ID' shall be used as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages. If both are specified, the 'Issuer of Patient ID' will only be used if there is no the 'Universal Entity ID'.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "LocalNamespaceEntityID",
+          "UniversalEntityID"
+        ]
+      }
+    },
+    "fhirSystemByIssuerOfPatientID": {
+      "title": "FHIR System by Issuer of Patient ID",
+      "description": "Specifies mapping of 'Issuer of Patient ID' to namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages. Format: {Issuer of Patient ID}={system}. Required if 'FHIR System of Patient ID' includes 'LocalNamespaceEntityID'.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
+    "fhirDefaultSystemOfAccessionNumber": {
+      "title": "FHIR Default System of Accession Number",
+      "description": "Namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages, if no value is derived from the Local Namespace Entity ID or the Universal Entity ID according configured 'FHIR System of Accession Number' and 'FHIR System by Local Namespace Entity ID of Accession Number'.",
+      "type": "string"
+    },
+    "fhirSystemOfAccessionNumber": {
+      "title": "FHIR System of Accession Number",
+      "description": "Specifies if the 'Local Namespace Entity ID' or the 'Universal Entity ID' shall be used as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. If both are specified, the 'Local Namespace Entity ID' will only be used if there is no 'Universal Entity ID'.",
+      "type": "array",
+      "items" : {
+        "type": "string",
+        "enum": [
+          "LocalNamespaceEntityID",
+          "UniversalEntityID"
+        ]
+      }
+    },
+    "fhirSystemByLocalNamespaceEntityIDOfAccessionNumber": {
+      "title": "FHIR System by Local Namespace Entity ID of Accession Number",
+      "description": "Specifies Mapping of 'Local Namespace Entity ID' to namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. Format: {Local Namespace Entity ID}={system}. Required if 'Accession Number' includes 'LocalNamespaceEntityID'.",
+      "type": "array",
+      "items" : {
+        "type": "string"
+      }
+    },
     "dcmAttributeFilter": {
       "title": "विशेषता फ़िल्टर",
       "description": "डेटाबेसमध्ये साठवलेले विशेषता.",
