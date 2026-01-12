@@ -2176,7 +2176,7 @@
     },
     "fhirSystemByLocalNamespaceEntityIDOfAccessionNumber": {
       "title": "FHIR System by Local Namespace Entity ID of Accession Number",
-      "description": "Specifies Mapping of 'Local Namespace Entity ID' to namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. Format: {Local Namespace Entity ID}={system}. Required if 'Accession Number' includes 'LocalNamespaceEntityID'.",
+      "description": "Specifies Mapping of 'Local Namespace Entity ID' to namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. Format: {Local Namespace Entity ID}={system}. Required if 'FHIR System of Accession Number' includes 'LocalNamespaceEntityID'.",
       "type": "array",
       "items" : {
         "type": "string"
