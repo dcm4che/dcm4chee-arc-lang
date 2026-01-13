@@ -35,6 +35,7 @@ archiveNetworkAE.dcmWadoThumbnailViewport:WADO サムネイル ビューポー�
 archiveNetworkAE.dcmWadoZIPEntryNameFormat:WADO ZIP エントリ名の 形式|WADO-RSに よって 返される ZIP アーカイブ内の エントリ名の 形式。 デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmWadoIgnorePresentationLUTShape:Wado プレゼンテーション LUT 状態を 無視 する|プレゼンテーション LUT 形状 (2050,0020) を 無視 する ことを 示しますが、測光 解釈 (0028,0004) の 値に 優先 順位を 付けて、 WADO-RS または WADO-URI サービスに よる レンダリングされた DICOM 画像の 取得時に 最小 サンプル 値を 白 (=MONCHROME1) または 黒 (=MONCHROME２) で 表示 する ことを 意図して いるか どうかを 判断 します。 デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmWadoMetadataExcludePrivate:Wado プライベート メタデータを 除外 する|WADO-RS 読み出し トランザクションに よって 返される メタデータから プライベートデータ 要素を 除外 する ことを 示します。 デバイス レベルで 指定された 値を 上書きします。
+archiveNetworkAE.dcmWadoVideoAcceptRanges:Wado Video Accept Ranges|Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. Overwrites value specified on Device level.
 archiveNetworkAE.dcmQueryMaxNumberOfResults:クエリの 結果の 最大数|C-FIND SCPに よる 戻り 結果の 最大数。 一致の 数が 制限を 超えると、 C-FIND 要求は 拒否されます。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmQidoMaxNumberOfResults:QIDO 結果の 最大数|QIDO-RS サービスに よる 戻り 結果の 最大数。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。
 archiveNetworkAE.dcmQidoETag:QIDO ETag|Indicates to return Last-Modified and ETag for Search Series or Instances of a Study. デバイス レベルで 指定された 値を 上書きします。

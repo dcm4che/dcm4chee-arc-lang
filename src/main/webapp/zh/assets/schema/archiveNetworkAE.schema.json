@@ -273,6 +273,16 @@
       "description": "Indicates to exclude private Data Elements from Metadata returned by WADO-RS retrieve Transaction.Overwrites value specified on Device Level.",
       "type": "boolean"
     },
+    "dcmWadoVideoAcceptRanges": {
+      "title": "Wado Video Accept Ranges",
+      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "YES",
+        "NO",
+        "KNOWN_TOTAL_LENGTH"
+      ]
+    },
     "dcmQueryMaxNumberOfResults": {
       "title": "查询结果的最大数量",
       "description": "C-FIND SCP返回结果的最大数量。 如果匹配数超过限制,C-FIND请求将被拒绝。 0=无限制。 覆盖在设备级别指定的值。",

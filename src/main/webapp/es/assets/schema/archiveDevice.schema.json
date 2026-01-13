@@ -97,6 +97,7 @@
     "dcmAuditSoftwareConfigurationVerbose",
     "dcmWadoIgnorePresentationLUTShape",
     "dcmWadoMetadataExcludePrivate",
+    "dcmWadoVideoAcceptRanges",
     "dcmStowExcludeAPPMarkers",
     "dcmStowQuicktime2MP4",
     "dcmStowMaxFragmentLength",
@@ -534,6 +535,17 @@
       "description": "Indica excluir Elementos de Datos Privados de los Metadatos devueltos por la Transacción de Recuperación WADO-RS. Puede ser sobrescrito por los valores configurados para la Red de Archivo particular AEs.",
       "type": "boolean",
       "default": false
+    },
+    "dcmWadoVideoAcceptRanges": {
+      "title": "Wado Video Accept Ranges",
+      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. May be overwritten by configured value for particular Archive Network AEs.",
+      "type": "string",
+      "default": "KNOWN_TOTAL_LENGTH",
+      "enum": [
+        "YES",
+        "NO",
+        "KNOWN_TOTAL_LENGTH"
+      ]
     },
     "dcmQueryFetchSize": {
       "title": "Tamaño de búsqueda de la consulta",

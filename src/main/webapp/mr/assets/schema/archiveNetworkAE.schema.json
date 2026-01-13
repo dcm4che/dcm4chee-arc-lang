@@ -273,6 +273,16 @@
       "description": "WADO-RS पुनर्प्राप्ती ट्रान्झॅक्शनद्वारे परत केलेल्या मेटाडेटामधून खाजगी डेटा घटक वगळण्याचे सूचित करते. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य अधिलिखित होतील.",
       "type": "boolean"
     },
+    "dcmWadoVideoAcceptRanges": {
+      "title": "Wado Video Accept Ranges",
+      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "YES",
+        "NO",
+        "KNOWN_TOTAL_LENGTH"
+      ]
+    },
     "dcmQueryMaxNumberOfResults": {
       "title": "प्राप्ती परिणामांची कमाल संख्या",
       "description": "C-Find SCP द्वारे परत केलेले परिणामांची कमाल संख्या. जर परिणामांची संख्या सीमा ओलांडली, तर C-FIND विनंती अस्वीकार होतील. ० = असीमित. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",

@@ -273,6 +273,16 @@
       "description": "Indica excluir Elementos de Datos Privados de Metadatos devueltos por WADO-RS Recuperar Transacción. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "boolean"
     },
+    "dcmWadoVideoAcceptRanges": {
+      "title": "Wado Video Accept Ranges",
+      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "YES",
+        "NO",
+        "KNOWN_TOTAL_LENGTH"
+      ]
+    },
     "dcmQueryMaxNumberOfResults": {
       "title": "Consulta Número Máximo De Resultados",
       "description": "Número máximo de resultados devueltos por C-FIND SCP. Si el número de coincidencias sobrepasa el límite, la petición C-FIND será rechazada. 0 = sin limitación. Sobrescribe el valor especificado a nivel de dispositivo.",

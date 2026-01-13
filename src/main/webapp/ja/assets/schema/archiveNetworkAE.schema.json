@@ -273,6 +273,16 @@
       "description": "WADO-RS 読み出し トランザクションに よって 返される メタデータから プライベートデータ 要素を 除外 する ことを 示します。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "boolean"
     },
+    "dcmWadoVideoAcceptRanges": {
+      "title": "Wado Video Accept Ranges",
+      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "YES",
+        "NO",
+        "KNOWN_TOTAL_LENGTH"
+      ]
+    },
     "dcmQueryMaxNumberOfResults": {
       "title": "クエリの 結果の 最大数",
       "description": "C-FIND SCPに よる 戻り 結果の 最大数。 一致の 数が 制限を 超えると、 C-FIND 要求は 拒否されます。 0 = 制限なし。 デバイス レベルで 指定された 値を 上書きします。",

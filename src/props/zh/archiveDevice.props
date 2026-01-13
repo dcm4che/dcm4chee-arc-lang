@@ -53,6 +53,7 @@ archiveDevice.dcmWadoThumbnailViewport:WADO缩略图视口|如果请求中未指
 archiveDevice.dcmWadoZIPEntryNameFormat:WADO ZIP条目名称格式|WADO-RS返回的ZIP归档中条目名称的格式。某些存档网络AE的配置值可能会覆盖这些值。
 archiveDevice.dcmWadoIgnorePresentationLUTShape:忽略Wado演示LUT状态|指示要忽略演示LUT Shape（2050,0020）,要知道Photometric Interpretation（0028,0004）要显示的最小样值为white（=MONCHROME1）或要重置的DICOM图像（=MONCHROME2）on WADO-RS或WADO-URI services retrieve of rendered DICOM images。配置特定的归档网络AE的值可能会覆盖。
 archiveDevice.dcmWadoMetadataExcludePrivate:Wado Metadata Exclude Private|Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. May be overwritten by configured values for particular Archive Network AEs.
+archiveDevice.dcmWadoVideoAcceptRanges:Wado Video Accept Ranges|Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. May be overwritten by configured value for particular Archive Network AEs.
 archiveDevice.dcmQueryFetchSize:查询提取大小|查询服务一次从数据库中提取的行数。
 archiveDevice.dcmQueryMaxNumberOfResults:查询结果的最大数目|C-FIND SCP返回结果的最大数目。如果匹配数超过限制,C-FIND请求将被拒绝。0=无限制。某些存档网络AE的配置值可能会覆盖这些值。
 archiveDevice.dcmQidoMaxNumberOfResults:最大QIDO结果数|QIDO-RS服务返回的最大结果数。0=无限制。某些存档网络AE的配置值可能会覆盖这些值。

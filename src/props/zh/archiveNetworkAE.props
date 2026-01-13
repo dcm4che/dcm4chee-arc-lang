@@ -35,6 +35,7 @@ archiveNetworkAE.dcmWadoThumbnailViewport:WADO缩略图视口|如果在请求中
 archiveNetworkAE.dcmWadoZIPEntryNameFormat:WADO ZIP条目名称的格式|由WADO-RS返回的ZIP档案中条目名称的格式。 覆盖在设备级别指定的值。
 archiveNetworkAE.dcmWadoIgnorePresentationLUTShape:忽略Wado演示LUT状态|Indicates to ignore Presentation LUT Shape（2050,0020）,but prioritize value of Photometric Interpretation（0028,0004）to determine if minimum sample value is intended to displayed as white（=MONCHROME1）or as black（=MONCHROME2）on retrieve of rendered DICOM images by WADO-RS or WADO-URI service.覆盖在设备级别指定的值。
 archiveNetworkAE.dcmWadoMetadataExcludePrivate:Wado Metadata Exclude Private|Indicates to exclude private Data Elements from Metadata returned by WADO-RS retrieve Transaction.Overwrites value specified on Device Level.
+archiveNetworkAE.dcmWadoVideoAcceptRanges:Wado Video Accept Ranges|Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. Overwrites value specified on Device level.
 archiveNetworkAE.dcmQueryMaxNumberOfResults:查询结果的最大数量|C-FIND SCP返回结果的最大数量。 如果匹配数超过限制,C-FIND请求将被拒绝。 0=无限制。 覆盖在设备级别指定的值。
 archiveNetworkAE.dcmQidoMaxNumberOfResults:QIDO结果的最大数量|QIDO-RS服务返回的最大数量。 0=无限制。 覆盖在设备级别指定的值。
 archiveNetworkAE.dcmQidoETag:QIDO ETag|Indicates to the Search Series or Instances of a Study； 如果设备级别上的Overwrites值被指定为
