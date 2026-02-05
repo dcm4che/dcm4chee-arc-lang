@@ -2149,7 +2149,7 @@
     },
     "fhirDefaultSystemOfPatientID": {
       "title": "FHIR Default System of Patient ID",
-      "description": "Namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages, if no value is derived from the 'Issuer of Patient ID' or the 'Universal Entity ID' according configured 'FHIR System of Patient ID' and 'FHIR System by Issuer of Patient ID'.",
+      "description": "Namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages, if no value is derived from the 'Issuer of Patient ID' or the 'Universal Entity ID' according configured 'FHIR System of Patient ID', 'FHIR System by Issuer of Patient ID' and 'FHIR System Issuer of Patient ID Prefix'.",
       "type": "string"
     },
     "fhirSystemOfPatientID": {
@@ -2179,7 +2179,7 @@
     },
     "fhirDefaultSystemOfAccessionNumber": {
       "title": "FHIR Default System of Accession Number",
-      "description": "Namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages, if no value is derived from the Local Namespace Entity ID or the Universal Entity ID according configured 'FHIR System of Accession Number' and 'FHIR System by Local Namespace Entity ID of Accession Number'.",
+      "description": "Namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages, if no value is derived from the Local Namespace Entity ID or the Universal Entity ID according configured 'FHIR System of Accession Number', 'FHIR System by Local Namespace Entity ID of Accession Number' and 'FHIR System Local Namespace Entity ID of Accession Number Prefix'.",
       "type": "string"
     },
     "fhirSystemOfAccessionNumber": {
