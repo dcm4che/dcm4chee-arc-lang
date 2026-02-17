@@ -36,6 +36,7 @@
         "tab-monitoring->associations",
         "tab-monitoring->storage_commitments",
         "tab-monitoring->storage_systems",
+        "tab-monitoring->storage_verification",
         "tab-monitoring->diff",
         "tab-statistics->statistics",
         "tab-statistics->studies-stored",
