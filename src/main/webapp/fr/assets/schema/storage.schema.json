@@ -210,7 +210,7 @@
         "type": "string"
       }
     },
-    "dcmDeleterThresholdMaxUseableSpace": {
+    "dcmDeleterThresholdMaxUsableSpace": {
       "title": "Deleter Threshold Max Usable Space",
       "description": "Maximal Usable Space on Storage System to trigger deletion. If present, studies are deleted from the Storage System configured for cache (Storage Duration = CACHE) or temporary (Storage Duration = TEMPORARY) storage, if the used disk space exceeds that value. Format [nn'['<schedule>']']nnn(MB|GB|MiB|GiB).",
       "type": "array",
