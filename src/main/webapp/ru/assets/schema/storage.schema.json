@@ -4,25 +4,7 @@
   "type": "object",
   "required": [
     "dcmStorageID",
-    "dcmURI",
-    "dcmArchiveSeriesAsTAR",
-    "dcmStoragePathFormat",
-    "dcmOnStoragePathAlreadyExists",
-    "dcmRetryCreateDirectories",
-    "dcmAltCreateDirectories",
-    "dcmFileOpenOption",
-    "dcmLocationStatus",
-    "dcmCountLocationsByStatus",
-    "dcmMaxRetries",
-    "dcmInstanceAvailability",
-    "dcmRetrieveCacheMaxParallel",
-    "dcmReadOnly",
-    "dcmStorageThresholdExceedsPermanently",
-    "dcmNoDeletionConstraint",
-    "dcmSingleExportStorageByStudy",
-    "dcmNoRetrieveCacheOnPurgedInstanceRecords",
-    "dcmDeleterThreads",
-    "dcmStorageDuration"
+    "dcmURI"
   ],
   "properties": {
     "dcmStorageID": {
