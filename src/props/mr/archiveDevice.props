@@ -311,6 +311,7 @@ archiveDevice.dcmChangeAccessControlIDRule:Change Access Control Rules|Change Ac
 archiveDevice.dcmUPSOnStore:दृष्टांतांच्या साठवण्यावर UPS नियम|कोणत्याही AE द्वारे प्राप्त झालेल्या DICOM दृष्टांतांवर दृष्टांतांच्या साठवण्यावर UPS नियम लागू करा. आर्काइव्ह नेटवर्क AE स्तरावर कॉन्फीगर केलेले दृष्टांतांच्या साठवण्यावर UPS नियम पूरक होतील.
 archiveDevice.hl7UPSOnHL7:HL7 प्राप्त होण्यावर UPS नियम|HL7 प्राप्त होण्यावर UPS नियम जे कोणत्याही HL7 अनुप्रयोगाद्वारे प्राप्त झालेल्या HL7 संदेशांवर लागू होतील. आर्काइव्ह HL7 अनुप्रयोगावर कॉन्फीगर केलेल्या HL7 प्राप्त होण्यावर UPS नियम पूरक होतील.
 archiveDevice.dcmUPSOnUPSCompleted:UPS पूर्ण होण्यावर परत UPS रेकॉर्ड निर्माण करण्याचे नियम|कुठल्याही AE द्वारे व्यवस्थापित UPS वर लागू होणारे UPS पूर्ण होण्यावर परत UPS रेकॉर्ड निर्माण करण्याचे नियम. आर्काइव्ह नेटवर्क AE स्तरावर कॉन्फीगर केलेले UPS पूर्ण होण्यावर परत UPS रेकॉर्ड निर्माण करण्याचे नियम पूरक होतील.
+archiveDevice.dcmUPSOnUPSCanceled:UPS on UPS Canceled Rules|UPS on UPS Canceled Rules applied to UPS managed by any AE. May be supplemented by configured UPS on UPS Canceled Rules for particular Archive Network AEs.
 archiveDevice.dcmUPSProcessingRule:UPS प्रक्रिया नियम|UPS प्रक्रिया नियम.
 archiveDevice.dcmIDGenerator:ID जनरेटर|ID जनरेटर.
 archiveDevice.dcmMWLImport:MWL Import|MWL Import

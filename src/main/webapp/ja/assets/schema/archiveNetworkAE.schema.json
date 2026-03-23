@@ -949,6 +949,15 @@
       "items": {
         "$ref": "upsOnUPSCompleted.schema.json"
       }
+    },
+    "dcmUPSOnUPSCanceled": {
+      "title": "UPS on UPS Canceled Rules",
+      "description": "UPS on UPS Canceled Rules applied to UPS managed by any AE. Supplements UPS on UPS Canceled Rules specified on Device level.",
+      "type": "array",
+      "titleKey": "{dcmUPSOnUPSCanceledID}",
+      "items": {
+        "$ref": "upsOnUPSCanceled.schema.json"
+      }
     }
   }
 }

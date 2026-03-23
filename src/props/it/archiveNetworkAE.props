@@ -130,3 +130,4 @@ archiveNetworkAE.dcmStudyRetentionPolicy:Politica di conservazione dello studio|
 archiveNetworkAE.dcmStoreAccessControlIDRule:Regole per il controllo degli accessi|Regole di controllo dell'accesso allo storage applicate agli studi ricevuti da qualsiasi AE. Integra le regole di controllo dell'accesso al negozio specificate a livello di dispositivo.
 archiveNetworkAE.dcmUPSOnStore:Regola di UPS sull'archivio|Regole UPS su Archivio applicate agli oggetti DICOM ricevuti da qualsiasi AE. Integra le regole UPS su archivio specificate a livello di dispositivo.
 archiveNetworkAE.dcmUPSOnUPSCompleted:UPS con regole UPS completate|UPS su Regole UPS completate applicate a UPS gestiti da questo AE. Integra UPS sulle regole UPS completate specificate a livello di dispositivo.
+archiveNetworkAE.dcmUPSOnUPSCanceled:UPS on UPS Canceled Rules|UPS on UPS Canceled Rules applied to UPS managed by this AE. Supplements UPS on UPS Canceled Rules specified on Device level.

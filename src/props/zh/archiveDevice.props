@@ -311,6 +311,7 @@ archiveDevice.dcmChangeAccessControlIDRule:Change Access Control Rules|Change Ac
 archiveDevice.dcmUPSOnStore:UPS on Store Rules|UPS on Store Rules applied to DICOM objects received by any AE. May be supplemented by configured UPS on Store Rules for particular Archive Network AEs.
 archiveDevice.hl7UPSOnHL7:UPS on HL7 Rules|UPS on HL7 Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured UPS on HL7 Rules for particular HL7 Applications.
 archiveDevice.dcmUPSOnUPSCompleted:UPS由以前的UPS完成创建|UPS由以前的UPS完成创建,应用于任何AE管理的UPS。它可能会被通过完成为特定存档网络AE配置的先前UPS而创建的UPS所补充。
+archiveDevice.dcmUPSOnUPSCanceled:UPS on UPS Canceled Rules|UPS on UPS Canceled Rules applied to UPS managed by any AE. May be supplemented by configured UPS on UPS Canceled Rules for particular Archive Network AEs.
 archiveDevice.dcmUPSProcessingRule:UPS处理规则|UPS处理规则
 archiveDevice.dcmIDGenerator:ID生成器|ID生成器。
 archiveDevice.dcmMWLImport:MWL Import|MWL Import

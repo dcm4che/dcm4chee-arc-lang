@@ -311,6 +311,7 @@ archiveDevice.dcmChangeAccessControlIDRule:Change Access Control Rules|Change Ac
 archiveDevice.dcmUPSOnStore:UPS sulle regole dello storage|Regole UPS su Storage applicate agli oggetti DICOM ricevuti da qualsiasi AE. Può essere integrato da UPS configurati con regole di controllo per particolari AE della rete di archiviazione.
 archiveDevice.hl7UPSOnHL7:UPS su regole HL7|UPS su HL7 Regole applicate ai messaggi HL7 ricevuti da qualsiasi Applicazione HL7. Può essere integrato da UPS configurato sulle regole HL7 per particolari applicazioni HL7.
 archiveDevice.dcmUPSOnUPSCompleted:UPS con regole UPS completate|UPS su Regole UPS completate applicate a UPS gestiti da qualsiasi AE. Può essere integrato da UPS configurati con regole di controllo per particolari AE della rete di archiviazione.
+archiveDevice.dcmUPSOnUPSCanceled:UPS on UPS Canceled Rules|UPS on UPS Canceled Rules applied to UPS managed by any AE. May be supplemented by configured UPS on UPS Canceled Rules for particular Archive Network AEs.
 archiveDevice.dcmUPSProcessingRule:Regole di elaborazione UPS|Regole di elaborazione UPS.
 archiveDevice.dcmIDGenerator:Generatore di ID|Generatore di ID
 archiveDevice.dcmMWLImport:MWL Import|MWL Import

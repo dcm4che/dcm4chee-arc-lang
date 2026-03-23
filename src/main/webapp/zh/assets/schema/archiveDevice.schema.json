@@ -2414,6 +2414,15 @@
         "$ref": "upsOnUPSCompleted.schema.json"
       }
     },
+    "dcmUPSOnUPSCanceled": {
+      "title": "UPS on UPS Canceled Rules",
+      "description": "UPS on UPS Canceled Rules applied to UPS managed by any AE. May be supplemented by configured UPS on UPS Canceled Rules for particular Archive Network AEs.",
+      "type": "array",
+      "titleKey": "{dcmUPSOnUPSCanceledID}",
+      "items": {
+        "$ref": "upsOnUPSCanceled.schema.json"
+      }
+    },
     "dcmUPSProcessingRule": {
       "title": "UPS处理规则",
       "description": "UPS处理规则",

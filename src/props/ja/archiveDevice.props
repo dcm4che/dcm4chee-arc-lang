@@ -311,6 +311,7 @@ archiveDevice.dcmChangeAccessControlIDRule:Change Access Control Rules|Change Ac
 archiveDevice.dcmUPSOnStore:格納に よって 作成された UPS|任意の AEが 受け取った DICOM オブジェクトに 適用される 格納に よって 作成された UPS 規則。 特定の アーカイブ ネットワーク AEの 構成された 検査 保持 ポリシーに よって 補足される 場合が あります。
 archiveDevice.hl7UPSOnHL7:HL7上の UPS 規則|任意の HL7 アプリケーションに よって 受信された HL7 メッセージに 適用された HL7上の UPS 規則。 特定の アーカイブ HL7 アプリケーションの 構成された HL7上の UPS 規則に よって 補足される 場合が あります。
 archiveDevice.dcmUPSOnUPSCompleted:以前の UPSの 完了に よって 作成された UPS|任意の AEに よって 管理された UPSに 適用される 以前の UPSの 完了に よって 作成された UPS。 特定の アーカイブ ネットワーク AEの 構成された 以前の UPSの 完了に よって 作成された UPSに よって 補足される 場合が あります。
+archiveDevice.dcmUPSOnUPSCanceled:UPS on UPS Canceled Rules|UPS on UPS Canceled Rules applied to UPS managed by any AE. May be supplemented by configured UPS on UPS Canceled Rules for particular Archive Network AEs.
 archiveDevice.dcmUPSProcessingRule:UPS 処理 規則|UPS 処理 規則。
 archiveDevice.dcmIDGenerator:ID ジェネレーター|ID ジェネレーター
 archiveDevice.dcmMWLImport:MWL Import|MWL Import
