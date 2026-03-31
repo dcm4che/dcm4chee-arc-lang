@@ -34,8 +34,12 @@
     },
     "dcmTrustStoreType": {
       "title": "Tipo de Almacén de Confianza",
-      "description": "Almacén de Claves Tipo de Almacén de Confianza especificado por dcmTrustStoreURL. Valores enumerados: JKS, PKCS12.",
-      "type":"string"
+      "description": "Almacén de Claves Tipo de Almacén de Confianza especificado por dcmTrustStoreURL.",
+      "type":"string",
+      "enum": [
+        "JKS|Java KeyStore",
+        "PKCS12|Public-Key Cryptography Standards #12"
+      ]
     },
     "dcmTrustStorePin": {
       "title": "Trust Store Pin",
@@ -54,8 +58,12 @@
     },
     "dcmKeyStoreType": {
       "title": "Tipo de almacén de claves",
-      "description": "Tipo de almacén de claves especificado por la URL del almacén de claves. Valores enumerados: JKS, PKCS12.",
-      "type": "string"
+      "description": "Tipo de almacén de claves especificado por la URL del almacén de claves.",
+      "type": "string",
+      "enum": [
+        "JKS|Java KeyStore",
+        "PKCS12|Public-Key Cryptography Standards #12"
+      ]
     },
     "dcmKeyStorePin": {
       "title": "PIN del almacén de claves",

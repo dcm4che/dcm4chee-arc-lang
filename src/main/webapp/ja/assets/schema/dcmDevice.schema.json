@@ -34,8 +34,12 @@
     },
     "dcmTrustStoreType": {
       "title": "トラストストア タイプ",
-      "description": "トラストストア URLで 指定された トラストストアの キーストア タイプ。 列挙値 : JKS, PKCS12.",
-      "type":"string"
+      "description": "トラストストア URLで 指定された トラストストアの キーストア タイプ。",
+      "type":"string",
+      "enum": [
+        "JKS|Java KeyStore",
+        "PKCS12|Public-Key Cryptography Standards #12"
+      ]
     },
     "dcmTrustStorePin": {
       "title": "トラストストア ピン",
@@ -54,8 +58,12 @@
     },
     "dcmKeyStoreType": {
       "title": "キーストア タイプ",
-      "description": "キーストア URLで 指定された キーストアの タイプ。 列挙値 : JKS, PKCS12.",
-      "type": "string"
+      "description": "キーストア URLで 指定された キーストアの タイプ。",
+      "type": "string",
+      "enum": [
+        "JKS|Java KeyStore",
+        "PKCS12|Public-Key Cryptography Standards #12"
+      ]
     },
     "dcmKeyStorePin": {
       "title": "キーストア ピン",

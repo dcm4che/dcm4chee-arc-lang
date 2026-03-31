@@ -35,7 +35,11 @@
     "dcmTrustStoreType": {
       "title": "Tipo di archivio attendibile",
       "description": "Tipo Key Store di Trust Store specificato da dcmTrustStoreURL.",
-      "type":"string"
+      "type":"string",
+      "enum": [
+        "JKS|Java KeyStore",
+        "PKCS12|Public-Key Cryptography Standards #12"
+      ]
     },
     "dcmTrustStorePin": {
       "title": "Pin del Trust Store",
@@ -55,7 +59,11 @@
     "dcmKeyStoreType": {
       "title": "Tipo di archivio chiavi",
       "description": "Tipo di Archivio chiavi dell'archivio chiavi specificato dall'URL dell'archivio chiavi.",
-      "type": "string"
+      "type": "string",
+      "enum": [
+        "JKS|Java KeyStore",
+        "PKCS12|Public-Key Cryptography Standards #12"
+      ]
     },
     "dcmKeyStorePin": {
       "title": "Pin del Archivio chiavi",

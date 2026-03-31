@@ -34,8 +34,12 @@
     },
     "dcmTrustStoreType": {
       "title": "信任存储库类型",
-      "description": "信任存储库URL中指定的信任存储库密钥库类型。枚举:JKS，PKCS12",
-      "type":"string"
+      "description": "信任存储库URL中指定的信任存储库密钥库类型。",
+      "type":"string",
+      "enum": [
+        "JKS|Java KeyStore",
+        "PKCS12|Public-Key Cryptography Standards #12"
+      ]
     },
     "dcmTrustStorePin": {
       "title": "TrustStore Pin",
@@ -54,8 +58,12 @@
     },
     "dcmKeyStoreType": {
       "title": "Key Store类型",
-      "description": "keystore URL中指定的keystore类型。枚举:JKS，PKCS12.",
-      "type": "string"
+      "description": "keystore URL中指定的keystore类型。",
+      "type": "string",
+      "enum": [
+        "JKS|Java KeyStore",
+        "PKCS12|Public-Key Cryptography Standards #12"
+      ]
     },
     "dcmKeyStorePin": {
       "title": "keystore pin",
