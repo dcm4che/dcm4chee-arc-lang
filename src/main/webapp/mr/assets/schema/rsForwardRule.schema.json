@@ -70,6 +70,7 @@
           "UpdateStudyExpirationDate",
           "UpdateSeriesExpirationDate",
           "UpdateStudyAccessControlID",
+          "UpdateSeriesAccessControlID",
           "MoveStudyToPatient",
           "LinkStudyToMWLMerge",
           "CreateMWL",
