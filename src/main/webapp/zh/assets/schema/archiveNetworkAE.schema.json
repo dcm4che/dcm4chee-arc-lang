@@ -545,6 +545,12 @@
       "description": "如果UPS推SCU或UPS-RS用户代理没有提供此属性的值,则此AE创建的UPS中的工作列表标签值（0074,1202）。 如果不存在,则使用传入AE的AE标题。 覆盖在设备级别指定的值。",
       "type": "string"
     },
+    "dcmUPSWorklistLabelFilter": {
+      "title": "UPS Worklist Label Filter",
+      "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (UPS Query SOP Class) or dicomWeb (Worklist Search Transaction) service for matching Unified Procedure Steps (UPS), if no matching key for this attribute is specified in the request. If multiple values are specified, UPS with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, UPS with any value of Worklist Label (0074,1202) will match.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
     "dcmUPSEventSCU": {
       "title": "UPS事件SCU",
       "description": "此网络AE创建的订阅的UPS事件报告将发送到的UPS事件SOP类SCU的AE标题-如果订阅是由N-ACTION DIMSE服务或相应的UPS REST风格的服务独立创建的。 覆盖在设备级别指定的值。",

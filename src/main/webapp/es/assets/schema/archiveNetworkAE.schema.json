@@ -545,6 +545,12 @@
       "description": "Valor de la etiqueta de la lista de trabajo (0074,1202) de la UPS creada por este AE de red, si la UPS Push SCU o el agente de usuario UPS-RS no proporciona un valor para este atributo. Si no existe, se utilizará el Título AE del AE receptor. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string"
     },
+    "dcmUPSWorklistLabelFilter": {
+      "title": "UPS Worklist Label Filter",
+      "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (UPS Query SOP Class) or dicomWeb (Worklist Search Transaction) service for matching Unified Procedure Steps (UPS), if no matching key for this attribute is specified in the request. If multiple values are specified, UPS with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, UPS with any value of Worklist Label (0074,1202) will match.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
     "dcmUPSEventSCU": {
       "title": "SCU de eventos UPS",
       "description": "Título AE de la SCU de clase SOP de eventos UPS, a la que se envían los informes de eventos UPS para las suscripciones creadas en este AE de red - independientemente de si la suscripción fue creada por el servicio N-ACTION DIMSE, o por un servicio UPS RESTful correspondiente. Sobrescribe el valor especificado en el nivel de dispositivo.",

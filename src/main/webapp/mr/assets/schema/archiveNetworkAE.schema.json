@@ -545,6 +545,12 @@
       "description": "कुठल्याही AE द्वारे निर्माण केलेल्या UPS मध्ये वर्कलिस्ट लेबल (००७४,१२०२) चे मूल्य, जर UPS Push SCU किंवा UPS-RS सेवाचा वापरकर्ता या विशेषताचे मूल्य पाठवत नाही. अनुपस्थित असल्यास, बोलावलेल्या AE चे नाव वापरले जातील. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
       "type": "string"
     },
+    "dcmUPSWorklistLabelFilter": {
+      "title": "UPS Worklist Label Filter",
+      "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (UPS Query SOP Class) or dicomWeb (Worklist Search Transaction) service for matching Unified Procedure Steps (UPS), if no matching key for this attribute is specified in the request. If multiple values are specified, UPS with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, UPS with any value of Worklist Label (0074,1202) will match.",
+      "type": "array",
+      "items": { "type": "string" }
+    },
     "dcmUPSEventSCU": {
       "title": "UPS घटना SCU",
       "description": "UPS घटना SOP वर्ग SCU AE चे नाव, ज्याला UPS घटना रिपोर्ट्स स्वतंत्रपणे पाठवले जातील - जर सदस्य्ता N-ACTION DIMSE सेवा किंवा UPS-RS सेवेद्वारे निर्माण झाले असेल. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
