@@ -46,7 +46,7 @@
     },
     "dcmUPSPriority": {
       "title": "优先级",
-      "description": "创建的UPS中计划的过程步骤的优先级值（0074,1200）。枚举值:HIGH,MEDIUM,LOW。 如果不存在,则应用MEDIUM。",
+      "description": "创建的UPS中计划的过程步骤的优先级值（0074,1200）。",
       "type": "string",
       "default": "MEDIUM",
       "enum": [

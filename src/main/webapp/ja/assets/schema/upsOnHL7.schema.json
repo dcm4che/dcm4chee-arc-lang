@@ -46,7 +46,7 @@
     },
     "dcmUPSPriority": {
       "title": "優先度",
-      "description": "作成された UPSの 中で 予定 手順 ステップの 優先度の 値 (0074,1200)。 列挙値: HIGH, MEDIUM, LOW。存在しない 場合、MEDIUMが 適用されます。",
+      "description": "作成された UPSの 中で 予定 手順 ステップの 優先度の 値 (0074,1200)。",
       "type": "string",
       "default": "MEDIUM",
       "enum": [

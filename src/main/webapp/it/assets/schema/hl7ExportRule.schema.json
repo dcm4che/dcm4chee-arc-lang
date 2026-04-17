@@ -39,9 +39,9 @@
       "description": "Ignorare in modo condizionale l'autorità di assegnazione dell'ID paziente (PID-3.4) nel messaggio HL7 ricevuto che ha attivato il l'esportazione per la selezione degli studi del paziente.",
       "type": "string",
       "enum": [
-        "ALWAYS",
-        "MATCHING",
-        "NOT_MATCHING"
+        "ALWAYS|Always ignore Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "MATCHING|Ignore matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "NOT_MATCHING|Ignore not matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient"
       ]
     },
     "dcmIssuerOfPatientID": {

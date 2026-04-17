@@ -25,14 +25,14 @@
       "items": {
         "type": "string",
         "enum": [
-          "NW_SC",
-          "NW_IP",
-          "CA_CA",
-          "DC_CA",
-          "XO_SC",
-          "XO_CM",
-          "SC_CM",
-          "SC_A"
+          "NW_SC|ORC.1 = NW & ORC.5 = SC => SPSStatus = SCHEDULED",
+          "NW_IP|ORC.1 = NW & ORC.5 = IP => SPSStatus = SCHEDULED",
+          "CA_CA|ORC.1 = CA & ORC.5 = CA => SPSStatus = CANCELED",
+          "DC_CA|ORC.1 = DC & ORC.5 = CA => SPSStatus = DISCONTINUED",
+          "XO_SC|ORC.1 = XO & ORC.5 = SC => SPSStatus = SCHEDULED",
+          "XO_CM|ORC.1 = XO & ORC.5 = CM => SPSStatus = COMPLETED",
+          "SC_CM|ORC.1 = SC & ORC.5 = CM => SPSStatus = COMPLETED",
+          "SC_A|ORC.1 = SC & ORC.5 = A => SPSStatus = COMPLETED"
         ]
       }
     }

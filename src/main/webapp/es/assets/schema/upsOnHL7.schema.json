@@ -46,7 +46,7 @@
     },
     "dcmUPSPriority": {
       "title": "Prioridad",
-      "description": "Valor de la Prioridad del Paso de Procedimiento Programado (0074,1200) en el UPS creado. Valores Enumerados: ALTA, MEDIA, BAJA. Si no existe, se aplicará MEDIO.",
+      "description": "Valor de la Prioridad del Paso de Procedimiento Programado (0074,1200) en el UPS creado.",
       "type": "string",
       "default": "MEDIUM",
       "enum": [

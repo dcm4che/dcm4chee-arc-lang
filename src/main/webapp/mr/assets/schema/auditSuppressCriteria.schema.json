@@ -98,11 +98,11 @@
       "items": {
         "type": "string",
         "enum": [
-          "C",
-          "R",
-          "U",
-          "D",
-          "E"
+          "C|Create",
+          "R|Read",
+          "U|Update",
+          "D|Delete",
+          "E|Execute"
         ]
       }
     },
@@ -113,10 +113,10 @@
       "items": {
         "type": "string",
         "enum": [
-          "0",
-          "4",
-          "8",
-          "12"
+          "0|Success",
+          "4|Minor Failure",
+          "8|Major Failure",
+          "12|Serious Failure"
         ]
       }
     },
@@ -172,10 +172,10 @@
       "items": {
         "type": "string",
         "enum": [
-          "1",
-          "2",
-          "3",
-          "4"
+          "1|Person",
+          "2|System Object",
+          "3|Organization",
+          "4|Other"
         ]
       }
     },
@@ -186,32 +186,32 @@
       "items": {
         "type": "string",
         "enum": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24",
-          "25",
-          "26"
+          "1|Patient",
+          "2|Location",
+          "3|Report",
+          "4|Resource",
+          "5|Master File",
+          "6|User",
+          "7|List",
+          "8|Doctor",
+          "9|Subscriber",
+          "10|Guarantor",
+          "11|Security User Entity",
+          "12|Security User Group",
+          "13|Security Resource",
+          "14|Security Granualarity Definition",
+          "15|Provider",
+          "16|Report Destination",
+          "17|Report Library",
+          "18|Schedule",
+          "19|Customeer",
+          "20|Job",
+          "21|Job Stream",
+          "22|Table",
+          "23|Routing Criteria",
+          "24|Query",
+          "25|Data Source",
+          "26|Processing Element"
         ]
       }
     },
@@ -222,21 +222,21 @@
       "items": {
         "type": "string",
         "enum": [
-          "1",
-          "2",
-          "3",
-          "4",
-          "5",
-          "6",
-          "7",
-          "8",
-          "9",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15"
+          "1|Origination Creation",
+          "2|Import Copy From Original",
+          "3|Amendment",
+          "4|Verification",
+          "5|Translation",
+          "6|Access Use",
+          "7|DeIdentification",
+          "8|Aggregation Summarization Derivation",
+          "9|Report",
+          "10|Export Copy To Target",
+          "11|Disclosure",
+          "12|Receipt Of Disclosure",
+          "13|Archiving",
+          "14|Logical Deletion",
+          "15|Permanent Erasure Physical Destruction"
         ]
       }
     }

@@ -48,7 +48,7 @@
     },
     "dcmUPSPriority": {
       "title": "प्राथमिकता",
-      "description": "निर्माण किए गए UPS में अनुसूचित प्रक्रिया स्टेप प्राथमिकता (००७४,१२००) का मूल्य । प्रगणित मूल्य: HIGH, MEDIUM, LOW । यदि निर्दिष्ट नहीं किया गया है, तो MEDIUM लागू होगा ।",
+      "description": "निर्माण किए गए UPS में अनुसूचित प्रक्रिया स्टेप प्राथमिकता (००७४,१२००) का मूल्य ।",
       "type": "string",
       "default": "MEDIUM",
       "enum": [
@@ -87,15 +87,15 @@
     },
     "dcmUPSIncludeInputInformation": {
       "title": "इनपुट जानकारी समावेश करें",
-      "description": "प्राप्त हुए दृष्टांतों को निर्माण किए गए UPS में इनपुट जानकारी क्रम (००४०,४०२१) में संदर्भित करने का संकेत करता है । SINGLE (= पहले से मौजूद UPS को अपडेट न करें), APPEND (= पहले से मौजूद अनुसूचित (SCHEDULED) स्थिति के UPS को अपडेट करें), SINGLE_OR_CREATE (= पहले से मौजूद UPS हो तो, व्युत्पन्न UID के साथ नया UPS निर्माण करें), APPEND_OR_CREATE (= पहले से मौजूद UPS अनुसूचित (SCHEDULED) स्थिति में न हो तो, व्युत्पन्न UID के साथ नया UPS निर्माण करें) ।",
+      "description": "प्राप्त हुए दृष्टांतों को निर्माण किए गए UPS में इनपुट जानकारी क्रम (००४०,४०२१) में संदर्भित करने का संकेत करता है ।",
       "type": "string",
       "default": "APPEND_OR_CREATE",
       "enum": [
-        "NO",
-        "SINGLE",
-        "APPEND",
-        "SINGLE_OR_CREATE",
-        "APPEND_OR_CREATE"
+        "NO|Do not include Input Information Sequence",
+        "SINGLE|पहले से मौजूद UPS को अपडेट न करें",
+        "APPEND|पहले से मौजूद अनुसूचित (SCHEDULED) स्थिति के UPS को अपडेट करें",
+        "SINGLE_OR_CREATE|पहले से मौजूद UPS हो तो, व्युत्पन्न UID के साथ नया UPS निर्माण करें",
+        "APPEND_OR_CREATE|पहले से मौजूद UPS अनुसूचित (SCHEDULED) स्थिति में न हो तो, व्युत्पन्न UID के साथ नया UPS निर्माण करें"
       ]
     },
     "dcmUPSIncludePatient": {

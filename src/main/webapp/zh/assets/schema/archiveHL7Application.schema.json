@@ -48,13 +48,13 @@
     },
     "hl7ORUAction": {
       "title": "HL7 ORU动作",
-      "description": "HL7 ORU^R01指定接收消息时的动作:IMPORT_REPORT（=将接收到的HL7 ORU^R01转码为DICOM SR）,MWL_COMPLETED（=将匹配的MWL项的状态设置为COMPLETED）。 覆盖在设备级别指定的值。",
+      "description": "HL7 ORU^R01指定接收消息时的动作。 覆盖在设备级别指定的值。",
       "type": "array",
       "items": {
         "type": "string",
         "enum": [
-          "IMPORT_REPORT",
-          "MWL_COMPLETED"
+          "IMPORT_REPORT|将接收到的HL7 ORU^R01转码为DICOM SR or PDF or CDA",
+          "MWL_COMPLETED|将匹配的MWL项的状态设置为COMPLETED"
         ]
       }
     },
@@ -86,8 +86,8 @@
       "description": "指定收到的HL7订单消息的预定协议代码的位置。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "OBR_4_1",
-        "OBR_4_4"
+        "OBR_4_1|HL7 Schedule Protocol Code in Order in OBR.4.1 to OBR.4.3",
+        "OBR_4_4|HL7 Schedule Protocol Code in Order in OBR.4.4 to OBR.4.6"
       ]
     },
     "hl7ScheduledStationAETInOrder": {
@@ -95,7 +95,7 @@
       "description": "指定接收到的HL7订单消息中的预定站点AE标题的位置。 请勿配置具有IPC段的HL7 v2.5.1 OMI^O23。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "ORC_18"
+        "ORC_18|HL7 Schedule Station AET in Order in ORC.18"
       ]
     },
     "hl7LogFilePattern": {
@@ -139,7 +139,7 @@
       "description": "触发将与患者相关联的预定程序步骤的状态从SCHEDULED更改为ARRIVED的HL7消息的消息类型。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "ADT^A10"
+        "ADT^A10|Patient Arriving / Tracking"
       ]
     },
     "hl7UseNullValue": {
@@ -162,9 +162,9 @@
       "description": "Specifies inclusion policy for patient identifiers in PID-3 / MRG-1 of HL7 message in Other Patient IDs Sequence (0010,1002). Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "ALL",
-        "NONE",
-        "OTHER"
+        "ALL|Include all patient identifiers in PID.3 / MRG.1, including patient identifier on root dataset in Other Patient IDs Sequence (0010,1002)",
+        "NONE|Include no patient identifiers from PID.3 / MRG.1 in Other Patient IDs Sequence (0010,1002)",
+        "OTHER|Include all patient identifiers in PID.3 / MRG.1, except patient identifier on root dataset in Other Patient IDs Sequence (0010,1002)"
       ]
     },
     "hl7OrderMissingStudyIUIDPolicy": {
@@ -172,9 +172,9 @@
       "description": "如果收到的HL7订单消息没有研究实例UID,则指定策略。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "REJECT",
-        "GENERATE",
-        "ACCESSION_BASED"
+        "REJECT|Reject HL7 Order Messages with missing Study Instance UID in ZDS.1 / IPC.3",
+        "GENERATE|Generate random Study Instance UID if missing in HL7 Order Messages in ZDS.1 / IPC.3",
+        "ACCESSION_BASED|Generate Study Instance UID based on Accession Number present in OBR.18 / IPC.1 if Study Instance UID missing in HL7 Order Messages in ZDS.1 / IPC.3"
       ]
     },
     "hl7OrderMissingAdmissionIDPolicy": {
@@ -182,9 +182,9 @@
       "description": "Specifies policy on incoming HL7 Order messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "ACCEPT",
-        "REJECT",
-        "ACCESSION_AS_ADMISSION"
+        "ACCEPT|Accept HL7 Order Messages with missing Admission ID in PV1.19 / PID.18",
+        "REJECT|Reject HL7 Order Messages with missing Admission ID in PV1.19 / PID.18",
+        "ACCESSION_AS_ADMISSION|Use Accession Number present in OBR.18 / IPC.1 as Admission ID if it is missing in HL7 Order Message in PV1.19 / PID.18"
       ]
     },
     "hl7ImportReportMissingStudyIUIDPolicy": {
@@ -192,9 +192,9 @@
       "description": "如果收到的HL7导入报告(ORU)消息没有研究实例UID,则指定策略。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "REJECT",
-        "GENERATE",
-        "ACCESSION_BASED"
+        "REJECT|Reject HL7 ORU^R01 message with missing Study Instance UID in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study'",
+        "GENERATE|Generate random Study Instance UID if it is missing in HL7 ORU^R01 Message in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study'",
+        "ACCESSION_BASED|Generate Study Instance UID based on Accession Number present in OBR.18 if Study Instance UID missing in HL7 ORU^R01 Messages in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study'"
       ]
     },
     "hl7ImportReportMissingAdmissionIDPolicy": {
@@ -202,9 +202,9 @@
       "description": "Specifies policy on incoming HL7 ImportReport (ORU) messages without a value for PID-18 Patient Account Number nor field PV1-19 Visit Number. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "ACCEPT",
-        "REJECT",
-        "ACCESSION_AS_ADMISSION"
+        "ACCEPT|Accept HL7 ORU^R01 Messages with missing Admission ID in PV1.19 / PID.18",
+        "REJECT|Reject HL7 ORU^R01 Messages with missing Admission ID in PV1.19 / PID.18",
+        "ACCESSION_AS_ADMISSION|Use Accession Number present in OBR.18 as Admission ID if it is missing in HL7 ORU^R01 Message in PV1.19 / PID.18"
       ]
     },
     "hl7ImportReportMissingStudyIUIDCFindSCP": {
@@ -218,8 +218,8 @@
       "description": "Specifies adjustment of Series and SOP Instances UIDs returned by XSLT on incoming HL7 Import Report (ORU) messages. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "NONE",
-        "APPEND_HASH_OF_STUDY_INSTANCE_UID"
+        "NONE|No adjustment done to Study / Series / SOP IUIDs",
+        "APPEND_HASH_OF_STUDY_INSTANCE_UID|Hash of Study Instance UID appended as suffix to Study / Series / SOP IUIDs"
       ]
     },
     "hl7ReferredMergedPatientPolicy": {
@@ -227,10 +227,10 @@
       "description": "指定引用已合并患者的传入HL7消息的策略。 Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/HL7-Referred-Merged-Patient-Policy\" target=\"_blank\">HL7 Referred Merged Patient Policy</a> meanings. 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "REJECT",
-        "IGNORE",
-        "IGNORE_DUPLICATE_MERGE",
-        "ACCEPT_INVERSE_MERGE"
+        "REJECT|Reject any incoming HL7 messages referring an already merged Patient",
+        "IGNORE|Ignore any incoming HL7 messages referring an already merged Patient",
+        "IGNORE_DUPLICATE_MERGE|Ignore only duplicate incoming HL7 Patient Merge (ADT^A40) messages referring an already merged Patient. Reject any other incoming HL7 messages referring an already merged Patient.",
+        "ACCEPT_INVERSE_MERGE|Accept any incoming inverse HL7 Patient Merge (ADT^A40) messages referring an already merged Patient, optionally allowing inverse merging of patient records if clients send duplicated ADT^A40 patient merge messages repeatedly, just reversing the patient identifier values in PID / MRG segments."
       ]
     },
     "hl7DicomCharacterSet": {

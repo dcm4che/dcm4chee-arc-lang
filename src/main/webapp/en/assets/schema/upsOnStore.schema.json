@@ -48,7 +48,7 @@
     },
     "dcmUPSPriority": {
       "title": "Priority",
-      "description": "Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.",
+      "description": "Value of Scheduled Procedure Step Priority (0074,1200) in created UPS.",
       "type": "string",
       "default": "MEDIUM",
       "enum": [
@@ -87,15 +87,15 @@
     },
     "dcmUPSIncludeInputInformation": {
       "title": "Include Input Information",
-      "description": "Indicates if received objects shall be referenced in the Input Information Sequence (0040,4021) in created UPS. SINGLE (= do not updating existing UPS), APPEND (= update existing UPS in state SCHEDULED), SINGLE_OR_CREATE (= if UPS already exists, create new UPS with derived UID), APPEND_OR_CREATE (= if existing UPS is no longer in state SCHEDULED, create new UPS with derived UID).",
+      "description": "Indicates if received objects shall be referenced in the Input Information Sequence (0040,4021) in created UPS.",
       "type": "string",
       "default": "APPEND_OR_CREATE",
       "enum": [
-        "NO",
-        "SINGLE",
-        "APPEND",
-        "SINGLE_OR_CREATE",
-        "APPEND_OR_CREATE"
+        "NO|Do not include Input Information Sequence",
+        "SINGLE|Do not updating existing UPS",
+        "APPEND|Update existing UPS in state SCHEDULED",
+        "SINGLE_OR_CREATE|If UPS already exists, create new UPS with derived UID",
+        "APPEND_OR_CREATE|If existing UPS is no longer in state SCHEDULED, create new UPS with derived UID"
       ]
     },
     "dcmUPSIncludePatient": {

@@ -39,9 +39,9 @@
       "description": "प्राप्त हुए HL7 संदेश, जिससे मरीज़़ के चुने हुए स्टडीज का निर्यात सक्रीय हुआ, में मरीज़़ की ID के जारीकर्ता पी.आई.डी.-३.४ (याने की पी.आई.डी. सेगमेंट के तीसरे फील्ड के चौथे कॉम्पोनेन्ट में पाया जाता है; PID-3.4) को सशर्त रूप से नज़रअंदाज़ करें ।",
       "type": "string",
       "enum": [
-        "ALWAYS",
-        "MATCHING",
-        "NOT_MATCHING"
+        "ALWAYS|Always ignore Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "MATCHING|Ignore matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "NOT_MATCHING|Ignore not matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient"
       ]
     },
     "dcmIssuerOfPatientID": {

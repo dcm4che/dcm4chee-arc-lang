@@ -39,9 +39,9 @@
       "description": "प्राप्त झालेले HL7 संदेश, ज्याने रुग्णाचे निवडलेले अभ्यासांचा निर्यात ट्रिगर झाले, ज्यामध्ये रुग्णच्या ID च्या जारीकर्ता (म्हणजे PID सेगमेंटच्या तिसऱ्या फील्डच्या चौथ्या कॉम्पोनेन्टमध्ये असतो; PID-3.4) ला सशर्तपणे दुर्लक्ष करा.",
       "type": "string",
       "enum": [
-        "ALWAYS",
-        "MATCHING",
-        "NOT_MATCHING"
+        "ALWAYS|Always ignore Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "MATCHING|Ignore matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "NOT_MATCHING|Ignore not matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient"
       ]
     },
     "dcmIssuerOfPatientID": {

@@ -53,13 +53,13 @@
     },
     "dcmExportReoccurredInstances": {
       "title": "Export Reoccurred Instances",
-      "description": "Indicates if the entity shall be exported on subsequent occurrence of instances",
+      "description": "Indicates if prior studies shall be exported on subsequent occurrence of instances",
       "type": "string",
       "default": "REPLACE",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "REPLACE"
+        "NEVER|Never export prior Studies on reoccurrence of instances",
+        "ALWAYS|Always export prior Studies on reoccurrence of instances",
+        "REPLACE|Export prior Studies only on reoccurrence of replaced instances"
       ]
     }
   }

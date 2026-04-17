@@ -74,10 +74,10 @@
       "description": "由此存档网络AE接收的对象的重写策略。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "SAME_SOURCE",
-        "EVEN_WITH_EQUAL_DIGEST"
+        "NEVER|Never overwrite previous received object on receive of object with matching SOP Instance UID",
+        "ALWAYS|Always overwrite previous received object on receive of object with matching SOP Instance UID and if instance location digest is unequal",
+        "SAME_SOURCE|Overwrite previous received object on receive of object with matching SOP Instance UID if it is from same source (Calling AET)",
+        "EVEN_WITH_EQUAL_DIGEST|Overwrite previous received object on receive of object with matching SOP Instance UID even if instance location digest is equal"
       ]
     },
     "dcmRelationalMismatchPolicy": {
@@ -85,10 +85,10 @@
       "description": "Specifies behavior on receive of objects by this AE, which SOP Instance UID matches a previous received object belonging to a different Series. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "IGNORE",
-        "REJECT",
-        "OVERWRITE",
-        "STORE_ADDITIONALLY"
+        "IGNORE|Silently ignores the received object",
+        "REJECT|Reject the received object with error status A77BH",
+        "OVERWRITE|Replace previous received object by new one belonging to other Series (\"poor-man IOCM\")",
+        "STORE_ADDITIONALLY|Store received object, retaining the previous received object, replacing the value SAME_SOURCE of config field Overwrite Policy"
       ]
     },
     "dcmRecordAttributeModification": {
@@ -101,9 +101,9 @@
       "description": "是否接受没有患者ID的实例,以及是否创建患者ID。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "YES",
-        "NO",
-        "CREATE"
+        "YES|Accept missing Patient ID (0010,0020) in DICOM dataset",
+        "NO|Do not accept missing Patient ID (0010,0020) in DICOM dataset",
+        "CREATE|Create patient identifier if missing Patient ID (0010,0020) in DICOM dataset"
       ]
     },
     "dcmAcceptConflictingPatientID": {
@@ -111,9 +111,9 @@
       "description": "是否接受患者ID与先前接受检查的对象的患者ID不同的对象。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "YES",
-        "NO",
-        "MERGED"
+        "YES|Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
+        "NO|Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
+        "MERGED|Accept patient identifier in DICOM dataset if already merged with another patient identifier"
       ]
     },
     "dcmQueryRetrieveViewID": {
@@ -188,10 +188,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "DS",
-          "IS",
-          "SV",
-          "UV"
+          "DS|Decimal String",
+          "IS|Integer String",
+          "SV|Signed 64-bit Very Long",
+          "UV|Unsigned 64-bit Very Long"
         ]
       }
     },
@@ -205,9 +205,9 @@
       "description": "指定一个选项-NOT_SUPPORTED（=忽略关联请求中的用户身份协商子项）或SUPPORTS（=确认传递的用户名和密码或JSON Web令牌是针对密钥遮盖服务器的）或REQUIRED（=拒绝关联请求中没有有效用户名和密码或JSON Web令牌的身份协商子项）。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "NOT_SUPPORTED",
-        "SUPPORTS",
-        "REQUIRED"
+        "NOT_SUPPORTED|Ignore User Identity Negotiation Sub-Item in Association requests",
+        "SUPPORTS|Verify passed Username and password or JSON Web Token are against a Keycloak server",
+        "REQUIRED|Reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item"
       ]
     },
     "dcmUserIdentityNegotiationRole": {
@@ -275,12 +275,12 @@
     },
     "dcmWadoVideoAcceptRanges": {
       "title": "Wado Video Accept Ranges",
-      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. Overwrites value specified on Device level.",
+      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "YES",
-        "NO",
-        "KNOWN_TOTAL_LENGTH"
+        "YES|HTTP Range Requests supported",
+        "NO|HTTP Range Requests not supported",
+        "KNOWN_TOTAL_LENGTH|HTTP Range Requests supported if Encapsulated Pixel Data Value Total Length is known"
       ]
     },
     "dcmQueryMaxNumberOfResults": {
@@ -327,10 +327,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "STUDY_RECEIVED",
-          "MPPS_RECEIVED",
-          "REJECTION_NOTE_RECEIVED",
-          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+          "STUDY_RECEIVED|Send IAN on receiving studies",
+          "MPPS_RECEIVED|Send IAN on receiving MPPS",
+          "REJECTION_NOTE_RECEIVED|Send IAN on IOCM trigger",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED|Send IAN on receiving first object of study"
         ]
       }
     },
@@ -359,12 +359,12 @@
     },
     "dcmSpanningCFindSCPPolicy": {
       "title": "生成C-Find SCP策略",
-      "description": "指定用于将从配置的生成C-Find SCP返回的匹配与来自存档DB的匹配项组合的策略。 SUPPLEMENT（=在来自生成C-Find SCP的附加匹配之前返回局部匹配）,MERGE（=在来自附加局部匹配之前返回来自生成C-Find SCP的匹配）,REPLACE（=仅返回来自生成C-Find SCP的匹配）。 覆盖在设备级别指定的值。",
+      "description": "指定用于将从配置的生成C-Find SCP返回的匹配与来自存档DB的匹配项组合的策略。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "SUPPLEMENT",
-        "MERGE",
-        "REPLACE"
+        "SUPPLEMENT|在来自生成C-Find SCP的附加匹配之前返回局部匹配",
+        "MERGE|在来自附加局部匹配之前返回来自生成C-Find SCP的匹配",
+        "REPLACE|仅返回来自生成C-Find SCP的匹配"
       ]
     },
     "dcmSpanningCFindSCPRetrieveAET": {
@@ -495,10 +495,10 @@
       "description": "允许在过期时拒绝数据保留策略。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "EXPIRED_UNSET",
-        "ONLY_EXPIRED"
+        "NEVER|Never allow rejection for Data Retention Policy Expired",
+        "ALWAYS|Always allow rejection for Data Retention Policy Expired",
+        "EXPIRED_UNSET|Allow rejection for Data Retention Policy Expired for expired studies or studies with no expiration date",
+        "ONLY_EXPIRED|Allow rejection for Data Retention Policy Expired only for expired studies"
       ]
     },
     "dcmAcceptedUserRole": {
@@ -511,21 +511,21 @@
     },
     "dcmAllowDeleteStudyPermanently": {
       "title": "Allow Delete Study permanently",
-      "description": "Allow to delete Study permanently. REJECTED = only already rejected Studies. Overwrites value specified on Device level.",
+      "description": "Allow to delete Study permanently. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "ALWAYS",
-        "REJECTED"
+        "ALWAYS|Always allow delete study permanently",
+        "REJECTED|Allow delete study permanently only for study with all objects rejected"
       ]
     },
     "dcmAllowDeletePatient": {
       "title": "允许完全删除患者",
-      "description": "枚举值:NEVER,ALWAYS,WITHOUT_STUDIES。覆盖在设备级别指定的值。",
+      "description": "覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "WITHOUT_STUDIES"
+        "NEVER|Never allow delete patient permanently",
+        "ALWAYS|Always allow delete patient permanently",
+        "WITHOUT_STUDIES|Allow delete patient permanently only for patient without studies"
       ]
     },
     "dcmDefaultCharacterSet": {
@@ -604,11 +604,11 @@
       "description": "为从另一个验证复制/移动实例的目标验证属性指定更新策略。 如果不存在,则不会更新属性。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "PRESERVE",
-        "SUPPLEMENT",
-        "MERGE",
-        "OVERWRITE",
-        "REPLACE"
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values",
+        "REPLACE|The attributes will be completely overwritten"
       ]
     },
     "dcmLinkMWLEntryUpdatePolicy": {
@@ -616,24 +616,24 @@
       "description": "指定与具有引用现有检查的MWL条目的另一个检查实例的链接相关的检查属性的更新策略。 覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "PRESERVE",
-        "SUPPLEMENT",
-        "MERGE",
-        "OVERWRITE",
-        "REPLACE"
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values",
+        "REPLACE|The attributes will be completely overwritten"
       ]
     },
     "dcmStorageVerificationPolicy": {
       "title": "存储验证策略",
-      "description": "DB_RECORD_EXISTS：仅检查DB记录是否存在,OBJECT_EXISTS：检查存储系统中的对象是否存在,OBJECT_SIZE：检查存储系统中的对象大小,OBJECT_FETCH：从存储系统中提取对象,OBJECT_CHECKSUM：重新计算存储系统中对象的校验和,S3_MD5SUM：S3检查存储系统中对象的MD5校验和。覆盖在设备级别指定的值。",
+      "description": "Policy applied on storage verification of studies。覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "DB_RECORD_EXISTS",
-        "OBJECT_EXISTS",
-        "OBJECT_SIZE",
-        "OBJECT_FETCH",
-        "OBJECT_CHECKSUM",
-        "S3_MD5SUM"
+        "DB_RECORD_EXISTS|仅检查DB记录是否存在",
+        "OBJECT_EXISTS|检查存储系统中的对象是否存在",
+        "OBJECT_SIZE|检查存储系统中的对象大小",
+        "OBJECT_FETCH|从存储系统中提取对象",
+        "OBJECT_CHECKSUM|重新计算存储系统中对象的校验和",
+        "S3_MD5SUM|S3检查存储系统中对象的MD5校验和"
       ]
     },
     "dcmStorageVerificationUpdateLocationStatus": {
@@ -679,13 +679,13 @@
     },
     "hl7PSUAction": {
       "title": "HL7 Procedure Status Update Action",
-      "description": "Specifies HL7 Procedure Status Update action: SEND_NOTIFICATION (= send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications), UPDATE_MWL_STATUS (= set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED). Overwrites value specified on Device level.",
+      "description": "Specifies HL7 Procedure Status Update action. Overwrites value specified on Device level.",
       "type": "array",
       "items": {
         "type": "string",
         "enum": [
-          "SEND_NOTIFICATION",
-          "UPDATE_MWL_STATUS"
+          "SEND_NOTIFICATION|Send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications",
+          "UPDATE_MWL_STATUS|Set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED"
         ]
       }
     },
@@ -696,10 +696,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "STUDY_RECEIVED",
-          "MPPS_RECEIVED",
-          "REJECTION_NOTE_RECEIVED",
-          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+          "STUDY_RECEIVED|Send notification on receive of studies",
+          "MPPS_RECEIVED|Send notification on receive of MPPS",
+          "REJECTION_NOTE_RECEIVED|Send notification on receive of IOCM KO",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED|Send notification on receive of first object of study"
         ]
       }
     },
@@ -756,9 +756,9 @@
       "description": "HL7过程状态更新消息的消息类型。覆盖在设备级别指定的值。",
       "type": "string",
       "enum": [
-        "OMG_O19",
-        "ORU_R01",
-        "OMI_O23"
+        "OMG_O19|Eyecare Order Message",
+        "ORU_R01|Unsolicited Observation Message",
+        "OMI_O23|Clinical Order Message"
       ]
     },
     "hl7PSUPIDPV1": {
@@ -771,8 +771,8 @@
       "description": "Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "AccessionNumber",
-        "StudyInstanceUID"
+        "AccessionNumber|Use Accession Number (0008,0050) for matching MWL",
+        "StudyInstanceUID|Use Study Instance UID (0020,000D) for matching MWL"
       ]
     },
     "dcmRelationalQueryNegotiationLenient": {

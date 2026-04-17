@@ -79,9 +79,9 @@
       "description": "有条件地忽略患者ID分配权限（PID-3.4）。这可以在接收到的HL7消息中找到,该消息触发了预取以选择患者检查",
       "type": "string",
       "enum": [
-        "ALWAYS",
-        "MATCHING",
-        "NOT_MATCHING"
+        "ALWAYS|Always ignore Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "MATCHING|Ignore matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "NOT_MATCHING|Ignore not matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient"
       ]
     },
     "dcmIssuerOfPatientID": {

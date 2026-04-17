@@ -74,10 +74,10 @@
       "description": "अधिलेखन नीति । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "SAME_SOURCE",
-        "EVEN_WITH_EQUAL_DIGEST"
+        "NEVER|Never overwrite previous received object on receive of object with matching SOP Instance UID",
+        "ALWAYS|Always overwrite previous received object on receive of object with matching SOP Instance UID and if instance location digest is unequal",
+        "SAME_SOURCE|Overwrite previous received object on receive of object with matching SOP Instance UID if it is from same source (Calling AET)",
+        "EVEN_WITH_EQUAL_DIGEST|Overwrite previous received object on receive of object with matching SOP Instance UID even if instance location digest is equal"
       ]
     },
     "dcmRelationalMismatchPolicy": {
@@ -85,10 +85,10 @@
       "description": "Specifies behavior on receive of objects by this AE, which SOP Instance UID matches a previous received object belonging to a different Series. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "IGNORE",
-        "REJECT",
-        "OVERWRITE",
-        "STORE_ADDITIONALLY"
+        "IGNORE|Silently ignores the received object",
+        "REJECT|Reject the received object with error status A77BH",
+        "OVERWRITE|Replace previous received object by new one belonging to other Series (\"poor-man IOCM\")",
+        "STORE_ADDITIONALLY|Store received object, retaining the previous received object, replacing the value SAME_SOURCE of config field Overwrite Policy"
       ]
     },
     "dcmRecordAttributeModification": {
@@ -101,9 +101,9 @@
       "description": "दृष्टांतों में अनुपस्थित मरीज़ की ID को स्वीकार कर मरीज़ के लिए नई ID निर्माण करने का संकेत करता है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "YES",
-        "NO",
-        "CREATE"
+        "YES|Accept missing Patient ID (0010,0020) in DICOM dataset",
+        "NO|Do not accept missing Patient ID (0010,0020) in DICOM dataset",
+        "CREATE|Create patient identifier if missing Patient ID (0010,0020) in DICOM dataset"
       ]
     },
     "dcmAcceptConflictingPatientID": {
@@ -111,9 +111,9 @@
       "description": "यदि प्राप्त हुए दृष्टांतों में मरीज़ की ID पहले से प्राप्त हुए स्टडी के दृष्टांतों में मरीज़ की ID के साथ परस्पर विरोधी हो तो, ऐसे दृष्टांतों को स्वीकार करने का संकेत करता है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "YES",
-        "NO",
-        "MERGED"
+        "YES|Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
+        "NO|Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
+        "MERGED|Accept patient identifier in DICOM dataset if already merged with another patient identifier"
       ]
     },
     "dcmQueryRetrieveViewID": {
@@ -188,10 +188,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "DS",
-          "IS",
-          "SV",
-          "UV"
+          "DS|Decimal String",
+          "IS|Integer String",
+          "SV|Signed 64-bit Very Long",
+          "UV|Unsigned 64-bit Very Long"
         ]
       }
     },
@@ -205,9 +205,9 @@
       "description": "निर्दिष्ट करता है की, संपर्क अनुरोधों में उपभोक्ता पहचान व्यवहार उप आयटम नज़रअंदाज़ करें (=NOT_SUPPORTED), या भेजे गए उपभोक्ता नाम और पासवर्ड अन्यथा JSON वेब टोकन को कीक्लोक सर्वरद्वारा जांच करें (=SUPPORTS), या संपर्क अनुरोधों में पहचान व्यवहार उप आयटम में सही उपभोक्ता नाम और पासवर्ड अन्यथा JSON वेब टोकन न होने पे अस्वीकार करें (=REQUIRED)। आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "NOT_SUPPORTED",
-        "SUPPORTS",
-        "REQUIRED"
+        "NOT_SUPPORTED|Ignore User Identity Negotiation Sub-Item in Association requests",
+        "SUPPORTS|Verify passed Username and password or JSON Web Token are against a Keycloak server",
+        "REQUIRED|Reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item"
       ]
     },
     "dcmUserIdentityNegotiationRole": {
@@ -275,12 +275,12 @@
     },
     "dcmWadoVideoAcceptRanges": {
       "title": "Wado Video Accept Ranges",
-      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. Overwrites value specified on Device level.",
+      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "YES",
-        "NO",
-        "KNOWN_TOTAL_LENGTH"
+        "YES|HTTP Range Requests supported",
+        "NO|HTTP Range Requests not supported",
+        "KNOWN_TOTAL_LENGTH|HTTP Range Requests supported if Encapsulated Pixel Data Value Total Length is known"
       ]
     },
     "dcmQueryMaxNumberOfResults": {
@@ -327,10 +327,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "STUDY_RECEIVED",
-          "MPPS_RECEIVED",
-          "REJECTION_NOTE_RECEIVED",
-          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+          "STUDY_RECEIVED|Send IAN on receiving studies",
+          "MPPS_RECEIVED|Send IAN on receiving MPPS",
+          "REJECTION_NOTE_RECEIVED|Send IAN on IOCM trigger",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED|Send IAN on receiving first object of study"
         ]
       }
     },
@@ -359,12 +359,12 @@
     },
     "dcmSpanningCFindSCPPolicy": {
       "title": "स्पेनिंग C-Find SCP नीति",
-      "description": "कॉन्फ़िगर्ड स्पेनिंग C-Find SCP से वापस किए गए नतीजों को आर्काइव डेटाबेस के रिकार्ड्स के साथ संयोजित करने की नीति को निर्दिष्ट करता है । SUPPLEMENT (= स्थानीय रेकॉर्ड्स को अधिक स्पेनिंग C-Find SCP से वापस किए गए रेकॉर्ड्स के पहले भेजा जाएगा), MERGE (= स्पेनिंग C-Find SCP से वापस किए गए रेकॉर्ड्स को स्थानीय रेकॉर्ड्स के पहले भेजा जाएगा), REPLACE (= सिर्फ स्पेनिंग C-Find SCP से वापस किए गए रेकॉर्ड्स को भेजा जाएगा) । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "description": "कॉन्फ़िगर्ड स्पेनिंग C-Find SCP से वापस किए गए नतीजों को आर्काइव डेटाबेस के रिकार्ड्स के साथ संयोजित करने की नीति को निर्दिष्ट करता है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "SUPPLEMENT",
-        "MERGE",
-        "REPLACE"
+        "SUPPLEMENT|स्थानीय रेकॉर्ड्स को अधिक स्पेनिंग C-Find SCP से वापस किए गए रेकॉर्ड्स के पहले भेजा जाएगा",
+        "MERGE|स्पेनिंग C-Find SCP से वापस किए गए रेकॉर्ड्स को स्थानीय रेकॉर्ड्स के पहले भेजा जाएगा",
+        "REPLACE|सिर्फ स्पेनिंग C-Find SCP से वापस किए गए रेकॉर्ड्स को भेजा जाएगा"
       ]
     },
     "dcmSpanningCFindSCPRetrieveAET": {
@@ -495,10 +495,10 @@
       "description": "डेटा धारण नीति समाप्ति पे अस्वीकृति की अनुमति दे । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "EXPIRED_UNSET",
-        "ONLY_EXPIRED"
+        "NEVER|Never allow rejection for Data Retention Policy Expired",
+        "ALWAYS|Always allow rejection for Data Retention Policy Expired",
+        "EXPIRED_UNSET|Allow rejection for Data Retention Policy Expired for expired studies or studies with no expiration date",
+        "ONLY_EXPIRED|Allow rejection for Data Retention Policy Expired only for expired studies"
       ]
     },
     "dcmAcceptedUserRole": {
@@ -511,21 +511,21 @@
     },
     "dcmAllowDeleteStudyPermanently": {
       "title": "स्टडी को पूरी तरह मिटाने की अनुमति दे",
-      "description": "स्टडी को पूरी तरह मिटाने की अनुमति दे । REJECTED = सिर्फ पहले से अस्वीकृत किए हुए स्टडीज । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "description": "स्टडी को पूरी तरह मिटाने की अनुमति दे । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "ALWAYS",
-        "REJECTED"
+        "ALWAYS|Always allow delete study permanently",
+        "REJECTED|सिर्फ पहले से अस्वीकृत किए हुए स्टडीज"
       ]
     },
     "dcmAllowDeletePatient": {
       "title": "मरीज़ के रेकॉर्ड को मिटाने की अनुमति दे",
-      "description": "मरीज़ के रेकॉर्ड को पूरी तरह मिटाने की अनुमति दे । इन मूल्यों में से चुने : NEVER (= कभी नहीं), ALWAYS (= हमेशा), WITHOUT_STUDIES (= बिना स्टडीज के) । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "description": "मरीज़ के रेकॉर्ड को पूरी तरह मिटाने की अनुमति दे । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "WITHOUT_STUDIES"
+        "NEVER|मरीज़ के रेकॉर्ड को मिटाने की अनुमति कभी नहीं दे",
+        "ALWAYS|मरीज़ के रेकॉर्ड को मिटाने की अनुमति हमेशा दे",
+        "WITHOUT_STUDIES|मरीज़ के रेकॉर्ड को मिटाने की अनुमति मरीज़ रेकॉर्ड बिना स्टडीज को दे"
       ]
     },
     "dcmDefaultCharacterSet": {
@@ -604,11 +604,11 @@
       "description": "किसी स्टडी के दृष्टांतों को कॉपी या मूव करने पे गंतव्य स्टडी के गुणों पे लागू की गई नीति को निर्दिष्ट करता है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "PRESERVE",
-        "SUPPLEMENT",
-        "MERGE",
-        "OVERWRITE",
-        "REPLACE"
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values",
+        "REPLACE|The attributes will be completely overwritten"
       ]
     },
     "dcmLinkMWLEntryUpdatePolicy": {
@@ -616,24 +616,24 @@
       "description": "पहले से मौजूद स्टडी को संदर्भित करनेवाले MWL एंट्री के साथ दूसरे स्टडी के दृष्टांतों को संयुक्त करने पे स्टडी के गुणों पे लागू हुई अपडेट नीति को निर्दिष्ट करता है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "PRESERVE",
-        "SUPPLEMENT",
-        "MERGE",
-        "OVERWRITE",
-        "REPLACE"
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values",
+        "REPLACE|The attributes will be completely overwritten"
       ]
     },
     "dcmStorageVerificationPolicy": {
       "title": "स्टोरेज सिद्धकरण नीति",
-      "description": "DB_RECORD_EXISTS: सिर्फ डेटाबेस के रेकॉर्ड्स के  मौजूदगी की जाँच करें, OBJECT_EXISTS: जाँच करें यदि दृष्टांत स्टोरेज सिस्टम पे मौजूद है, OBJECT_SIZE: स्टोरेज सिस्टम पे दृष्टांत के माप की जाँच करें, OBJECT_FETCH: स्टोरेज सिस्टम से दृष्टांत को प्राप्त करें, OBJECT_CHECKSUM: स्टोरेज सिस्टम पे दृष्टांत के चेकसम की पुनर्गणना करें, S3_MD5SUM: S3 स्टोरेज सिस्टम पे DICOM फ़ाइल के MD5 की जांच योग करें । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
+      "description": "Policy applied on storage verification of studies । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "DB_RECORD_EXISTS",
-        "OBJECT_EXISTS",
-        "OBJECT_SIZE",
-        "OBJECT_FETCH",
-        "OBJECT_CHECKSUM",
-        "S3_MD5SUM"
+        "DB_RECORD_EXISTS|सिर्फ डेटाबेस के रेकॉर्ड्स के  मौजूदगी की जाँच करें",
+        "OBJECT_EXISTS|जाँच करें यदि दृष्टांत स्टोरेज सिस्टम पे मौजूद है",
+        "OBJECT_SIZE|स्टोरेज सिस्टम पे दृष्टांत के माप की जाँच करें",
+        "OBJECT_FETCH|स्टोरेज सिस्टम से दृष्टांत को प्राप्त करें",
+        "OBJECT_CHECKSUM|स्टोरेज सिस्टम पे दृष्टांत के चेकसम की पुनर्गणना करें",
+        "S3_MD5SUM|S3 स्टोरेज सिस्टम पे DICOM फ़ाइल के MD5 की जांच योग करें"
       ]
     },
     "dcmStorageVerificationUpdateLocationStatus": {
@@ -679,13 +679,13 @@
     },
     "hl7PSUAction": {
       "title": "HL7 Procedure Status Update Action",
-      "description": "Specifies HL7 Procedure Status Update action: SEND_NOTIFICATION (= send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications), UPDATE_MWL_STATUS (= set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED). Overwrites value specified on Device level.",
+      "description": "Specifies HL7 Procedure Status Update action. Overwrites value specified on Device level.",
       "type": "array",
       "items": {
         "type": "string",
         "enum": [
-          "SEND_NOTIFICATION",
-          "UPDATE_MWL_STATUS"
+          "SEND_NOTIFICATION|Send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications",
+          "UPDATE_MWL_STATUS|Set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED"
         ]
       }
     },
@@ -696,10 +696,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "STUDY_RECEIVED",
-          "MPPS_RECEIVED",
-          "REJECTION_NOTE_RECEIVED",
-          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+          "STUDY_RECEIVED|Send notification on receive of studies",
+          "MPPS_RECEIVED|Send notification on receive of MPPS",
+          "REJECTION_NOTE_RECEIVED|Send notification on receive of IOCM KO",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED|Send notification on receive of first object of study"
         ]
       }
     },
@@ -756,9 +756,9 @@
       "description": "HL7 प्रक्रिया स्थिति अपडेट संदेश का प्रकार । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "string",
       "enum": [
-        "OMG_O19",
-        "ORU_R01",
-        "OMI_O23"
+        "OMG_O19|Eyecare Order Message",
+        "ORU_R01|Unsolicited Observation Message",
+        "OMI_O23|Clinical Order Message"
       ]
     },
     "hl7PSUPIDPV1": {
@@ -771,8 +771,8 @@
       "description": "Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "AccessionNumber",
-        "StudyInstanceUID"
+        "AccessionNumber|Use Accession Number (0008,0050) for matching MWL",
+        "StudyInstanceUID|Use Study Instance UID (0020,000D) for matching MWL"
       ]
     },
     "dcmRelationalQueryNegotiationLenient": {

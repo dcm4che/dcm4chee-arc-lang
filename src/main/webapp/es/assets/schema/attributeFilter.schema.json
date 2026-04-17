@@ -45,14 +45,15 @@
     },
     "dcmAttributeUpdatePolicy": {
       "title": "Política de actualización de atributos",
-      "description": "Especifica la política de actualización de los atributos extraídos en la base de datos a nivel de serie, estudio y paciente al recibir una nueva instancia de la entidad. PRESERVE (= anula los atributos en el nuevo conjunto de datos que no están presentes en el conjunto de datos original), SUPPLEMENT (= los atributos que no están presentes en el conjunto de datos original se complementarán), REPLACE (= el conjunto de datos original se sustituye por completo), MERGE (= los valores de los atributos se escribirán desde el nuevo conjunto de datos), OVERWRITE (= los valores de los atributos, si son nulos en el nuevo conjunto de datos, se anularán en el conjunto de datos original). Si no está, se aplicará PRESERVE.",
+      "description": "Especifica la política de actualización de los atributos extraídos en la base de datos a nivel de serie, estudio y paciente al recibir una nueva instancia de la entidad.",
       "type": "string",
+      "default": "PRESERVE",
       "enum": [
-        "PRESERVE",
-        "SUPPLEMENT",
-        "MERGE",
-        "OVERWRITE",
-        "REPLACE"
+        "PRESERVE|Anula los atributos en el nuevo conjunto de datos que no están presentes en el conjunto de datos original",
+        "SUPPLEMENT|Los atributos que no están presentes en el conjunto de datos original se complementarán",
+        "MERGE|Los valores de los atributos se escribirán desde el nuevo conjunto de datos",
+        "OVERWRITE|Los valores de los atributos, si son nulos en el nuevo conjunto de datos, se anularán en el conjunto de datos original",
+        "REPLACE|El conjunto de datos original se sustituye por completo"
       ]
     }
   }

@@ -48,7 +48,7 @@
     },
     "dcmUPSPriority": {
       "title": "優先度",
-      "description": "作成された UPSの 中で 予定 手順 ステップの 優先度の 値 (0074,1200)。 列挙値: HIGH, MEDIUM, LOW。存在しない 場合、MEDIUMが 適用されます。",
+      "description": "作成された UPSの 中で 予定 手順 ステップの 優先度の 値 (0074,1200)。",
       "type": "string",
       "default": "MEDIUM",
       "enum": [
@@ -87,15 +87,15 @@
     },
     "dcmUPSIncludeInputInformation": {
       "title": "入力 情報を 含める",
-      "description": "作成された UPSの 中で 入力 情報 シーケンス（0040,4021）の 中で 受信した オブジェクトを 参照する 必要が あるか どうかを 示します。 SINGLE (= 既存の UPSを 更新しない), APPEND (= 状態が SCHEDULEDの 既存の UPSを 更新 する), SINGLE_OR_CREATE (= UPSが すでに 存在する 場合、派生 UIDを 使用して 新しい UPSを 作成する), APPEND_OR_CREATE (= 既存の UPSが 状態 SCHEDULEDでなくなった 場合、派生 UIDで 新しい UPSを 作成します).",
+      "description": "作成された UPSの 中で 入力 情報 シーケンス（0040,4021）の 中で 受信した オブジェクトを 参照する 必要が あるか どうかを 示します。",
       "type": "string",
       "default": "APPEND_OR_CREATE",
       "enum": [
-        "NO",
-        "SINGLE",
-        "APPEND",
-        "SINGLE_OR_CREATE",
-        "APPEND_OR_CREATE"
+        "NO|Do not include Input Information Sequence",
+        "SINGLE|既存の UPSを 更新しない",
+        "APPEND|状態が SCHEDULEDの 既存の UPSを 更新 する",
+        "SINGLE_OR_CREATE|UPSが すでに 存在する 場合、派生 UIDを 使用して 新しい UPSを 作成する",
+        "APPEND_OR_CREATE|既存の UPSが 状態 SCHEDULEDでなくなった 場合、派生 UIDで 新しい UPSを 作成します"
       ]
     },
     "dcmUPSIncludePatient": {

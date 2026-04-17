@@ -16,13 +16,13 @@
     },
     "dcmAttributeSetType": {
       "title": "属性集类型",
-      "description": "指定此属性集是由QIDO-RS和WADO-RS元数据查询参数\"includefields\"使用,还是由DIFF-RS请求查询参数\"comparefield\"使用。",
+      "description": "指定此属性集是由。",
       "type": "string",
       "enum": [
-        "QIDO_RS",
-        "WADO_RS",
-        "DIFF_RS",
-        "LEADING_CFIND_SCP"
+        "QIDO_RS|QIDO-RS元数据查询参数\"includefields\"使用",
+        "WADO_RS|WADO-RS元数据查询参数\"includefields\"使用",
+        "DIFF_RS|还是由DIFF-RS请求查询参数\"comparefield\"使用",
+        "LEADING_CFIND_SCP|Attribute Set is used by Leading C-FIND SCP coercion"
       ]
     },
     "dcmAttributeSetID": {

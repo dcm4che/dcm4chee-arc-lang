@@ -79,9 +79,9 @@
       "description": "Ignorar condicionalmente la Autoridad Asignadora de ID de Paciente (PID-3.4) en el mensaje HL7 recibido que activó la búsqueda previa para seleccionar los Estudios del Paciente.",
       "type": "string",
       "enum": [
-        "ALWAYS",
-        "MATCHING",
-        "NOT_MATCHING"
+        "ALWAYS|Always ignore Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "MATCHING|Ignore matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "NOT_MATCHING|Ignore not matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient"
       ]
     },
     "dcmIssuerOfPatientID": {

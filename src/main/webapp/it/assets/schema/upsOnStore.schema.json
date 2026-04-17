@@ -48,7 +48,7 @@
     },
     "dcmUPSPriority": {
       "title": "Priorità",
-      "description": "Valore della priorità del passo della procedura pianificata (0074,1200) nell'UPS creato. Valori enumerati: HIGH, MEDIUM, LOW. Se assente, verrà applicato MEDIO.",
+      "description": "Valore della priorità del passo della procedura pianificata (0074,1200) nell'UPS creato.",
       "type": "string",
       "default": "MEDIUM",
       "enum": [
@@ -87,15 +87,15 @@
     },
     "dcmUPSIncludeInputInformation": {
       "title": "Includi informazioni di input",
-      "description": "Indica se gli oggetti ricevuti devono essere referenziati nella sequenza di informazioni di ingresso (0040,4021) nell'UPS creato. SINGLE (= non aggiorna UPS esistente), APPEND (= aggiorna UPS esistente nello stato SCHEDULED), SINGLE_OR_CREATE (= se UPS esiste già, crea un nuovo UPS con UID derivato), APPEND_OR_CREATE (= se UPS esistente non è più nello stato SCHEDULED, creare nuovo UPS con UID derivato).",
+      "description": "Indica se gli oggetti ricevuti devono essere referenziati nella sequenza di informazioni di ingresso (0040,4021) nell'UPS creato.",
       "type": "string",
       "default": "APPEND_OR_CREATE",
       "enum": [
-        "NO",
-        "SINGLE",
-        "APPEND",
-        "SINGLE_OR_CREATE",
-        "APPEND_OR_CREATE"
+        "NO|Do not include Input Information Sequence",
+        "SINGLE|non aggiorna UPS esistente",
+        "APPEND|aggiorna UPS esistente nello stato SCHEDULED",
+        "SINGLE_OR_CREATE|se UPS esiste già, crea un nuovo UPS con UID derivato",
+        "APPEND_OR_CREATE|se UPS esistente non è più nello stato SCHEDULED, creare nuovo UPS con UID derivato"
       ]
     },
     "dcmUPSIncludePatient": {

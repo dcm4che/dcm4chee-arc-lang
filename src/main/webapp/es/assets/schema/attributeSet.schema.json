@@ -16,13 +16,13 @@
     },
     "dcmAttributeSetType": {
       "title": "Tipo de conjunto de atributos",
-      "description": "Especifica si este conjunto de atributos es utilizado por el parámetro de consulta \"includefields\" de los metadatos QIDO-RS y WADO-RS o por el parámetro de consulta \"comparefield\" de las solicitudes DIFF-RS.",
+      "description": "Specifies usage of this Attribute Set Type.",
       "type": "string",
       "enum": [
-        "QIDO_RS",
-        "WADO_RS",
-        "DIFF_RS",
-        "LEADING_CFIND_SCP"
+        "QIDO_RS|Attribute Set is used by Query Parameter 'includefields' of QIDO-RS requests",
+        "WADO_RS|Attribute Set is used by Query Parameter 'includefields' of WADO-RS requests",
+        "DIFF_RS|Attribute Set is used by Query Parameter 'comparefields' of DIFF-RS requests",
+        "LEADING_CFIND_SCP|Attribute Set is used by Leading C-FIND SCP coercion"
       ]
     },
     "dcmAttributeSetID": {

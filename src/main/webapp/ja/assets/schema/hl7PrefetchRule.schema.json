@@ -79,9 +79,9 @@
       "description": "条件付きで 患者 IDの 割り当て 権限 (PID-3.4) を 無視します。 これは、患者の 検査を 選択 する ための プリフェッチを トリガーした 受信 HL7 メッセージに あります。",
       "type": "string",
       "enum": [
-        "ALWAYS",
-        "MATCHING",
-        "NOT_MATCHING"
+        "ALWAYS|Always ignore Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "MATCHING|Ignore matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "NOT_MATCHING|Ignore not matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient"
       ]
     },
     "dcmIssuerOfPatientID": {

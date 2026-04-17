@@ -74,10 +74,10 @@
       "description": "Política de sobrescritura para objetos recibidos por este AE. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "SAME_SOURCE",
-        "EVEN_WITH_EQUAL_DIGEST"
+        "NEVER|Never overwrite previous received object on receive of object with matching SOP Instance UID",
+        "ALWAYS|Always overwrite previous received object on receive of object with matching SOP Instance UID and if instance location digest is unequal",
+        "SAME_SOURCE|Overwrite previous received object on receive of object with matching SOP Instance UID if it is from same source (Calling AET)",
+        "EVEN_WITH_EQUAL_DIGEST|Overwrite previous received object on receive of object with matching SOP Instance UID even if instance location digest is equal"
       ]
     },
     "dcmRelationalMismatchPolicy": {
@@ -85,10 +85,10 @@
       "description": "Specifies behavior on receive of objects by this AE, which SOP Instance UID matches a previous received object belonging to a different Series. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "IGNORE",
-        "REJECT",
-        "OVERWRITE",
-        "STORE_ADDITIONALLY"
+        "IGNORE|Silently ignores the received object",
+        "REJECT|Reject the received object with error status A77BH",
+        "OVERWRITE|Replace previous received object by new one belonging to other Series (\"poor-man IOCM\")",
+        "STORE_ADDITIONALLY|Store received object, retaining the previous received object, replacing the value SAME_SOURCE of config field Overwrite Policy"
       ]
     },
     "dcmRecordAttributeModification": {
@@ -101,9 +101,9 @@
       "description": "Indica si deben aceptarse objetos sin ID de paciente y si debe crearse una ID de paciente. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "enum": [
-        "YES",
-        "NO",
-        "CREATE"
+        "YES|Accept missing Patient ID (0010,0020) in DICOM dataset",
+        "NO|Do not accept missing Patient ID (0010,0020) in DICOM dataset",
+        "CREATE|Create patient identifier if missing Patient ID (0010,0020) in DICOM dataset"
       ]
     },
     "dcmAcceptConflictingPatientID": {
@@ -111,9 +111,9 @@
       "description": "Indica si se aceptarán objetos con ID de paciente diferente de la ID de paciente de los objetos recibidos anteriormente en el estudio. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "enum": [
-        "YES",
-        "NO",
-        "MERGED"
+        "YES|Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
+        "NO|Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
+        "MERGED|Accept patient identifier in DICOM dataset if already merged with another patient identifier"
       ]
     },
     "dcmQueryRetrieveViewID": {
@@ -188,10 +188,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "DS",
-          "IS",
-          "SV",
-          "UV"
+          "DS|Decimal String",
+          "IS|Integer String",
+          "SV|Signed 64-bit Very Long",
+          "UV|Unsigned 64-bit Very Long"
         ]
       }
     },
@@ -205,9 +205,9 @@
       "description": "Especifica ignorar el Sub-Item de Negociación de Identidad de Usuario en las solicitudes de Asociación ( = NO_SOPORTADO), verificar que el Nombre de Usuario y la contraseña o el Token Web JSON pasados son contra un servidor Keycloak (= SOPORTADO), o rechazar las solicitudes de Asociación sin un Nombre de Usuario y contraseña válidos o Token Web JSON en su Sub-Item de Negociación de Identidad (= REQUERIDO). Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "enum": [
-        "NOT_SUPPORTED",
-        "SUPPORTS",
-        "REQUIRED"
+        "NOT_SUPPORTED|Ignore User Identity Negotiation Sub-Item in Association requests",
+        "SUPPORTS|Verify passed Username and password or JSON Web Token are against a Keycloak server",
+        "REQUIRED|Reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item"
       ]
     },
     "dcmUserIdentityNegotiationRole": {
@@ -275,12 +275,12 @@
     },
     "dcmWadoVideoAcceptRanges": {
       "title": "Wado Video Accept Ranges",
-      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. Overwrites value specified on Device level.",
+      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. Overwrites value specified on Device level.",
       "type": "string",
       "enum": [
-        "YES",
-        "NO",
-        "KNOWN_TOTAL_LENGTH"
+        "YES|HTTP Range Requests supported",
+        "NO|HTTP Range Requests not supported",
+        "KNOWN_TOTAL_LENGTH|HTTP Range Requests supported if Encapsulated Pixel Data Value Total Length is known"
       ]
     },
     "dcmQueryMaxNumberOfResults": {
@@ -327,10 +327,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "STUDY_RECEIVED",
-          "MPPS_RECEIVED",
-          "REJECTION_NOTE_RECEIVED",
-          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+          "STUDY_RECEIVED|Send IAN on receiving studies",
+          "MPPS_RECEIVED|Send IAN on receiving MPPS",
+          "REJECTION_NOTE_RECEIVED|Send IAN on IOCM trigger",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED|Send IAN on receiving first object of study"
         ]
       }
     },
@@ -359,12 +359,12 @@
     },
     "dcmSpanningCFindSCPPolicy": {
       "title": "Política de Spanning C-Find SCP",
-      "description": "Especifica la política para combinar las coincidencias devueltas por Spanning C-Find SCP configurado con las entradas coincidentes de la base de datos de archivos. SUPPLEMENT (= devuelve las coincidencias locales antes que las coincidencias adicionales de Spanning C-Find SCP ), MERGE (= devuelve las coincidencias de Spanning C-Find SCP antes que las coincidencias locales adicionales), REPLACE (= devuelve sólo las coincidencias de Spanning C-Find SCP). Sobrescribe el valor especificado en el nivel Dispositivo.",
+      "description": "Especifica la política para combinar las coincidencias devueltas por Spanning C-Find SCP configurado con las entradas coincidentes de la base de datos de archivos. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "enum": [
-        "SUPPLEMENT",
-        "MERGE",
-        "REPLACE"
+        "SUPPLEMENT|Devuelve las coincidencias locales antes que las coincidencias adicionales de Spanning C-Find SCP",
+        "MERGE|Devuelve las coincidencias de Spanning C-Find SCP antes que las coincidencias locales adicionales",
+        "REPLACE|Devuelve sólo las coincidencias de Spanning C-Find SCP"
       ]
     },
     "dcmSpanningCFindSCPRetrieveAET": {
@@ -495,10 +495,10 @@
       "description": "Permitir rechazo por política de retención de datos caducada. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "EXPIRED_UNSET",
-        "ONLY_EXPIRED"
+        "NEVER|Never allow rejection for Data Retention Policy Expired",
+        "ALWAYS|Always allow rejection for Data Retention Policy Expired",
+        "EXPIRED_UNSET|Allow rejection for Data Retention Policy Expired for expired studies or studies with no expiration date",
+        "ONLY_EXPIRED|Allow rejection for Data Retention Policy Expired only for expired studies"
       ]
     },
     "dcmAcceptedUserRole": {
@@ -511,21 +511,21 @@
     },
     "dcmAllowDeleteStudyPermanently": {
       "title": "Permitir eliminar estudio permanentemente",
-      "description": "Permitir eliminar estudio permanentemente. RECHAZADO = sólo Estudios ya rechazados. Sobrescribe el valor especificado en el nivel de dispositivo.",
+      "description": "Permitir eliminar estudio permanentemente. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
-        "ALWAYS",
-        "REJECTED"
+        "ALWAYS|Always allow delete study permanently",
+        "REJECTED|sólo Estudios ya rechazados"
       ]
     },
     "dcmAllowDeletePatient": {
       "title": "Permitir eliminar paciente",
-      "description": "Permitir la eliminación permanente de pacientes. Valores enumerados: NUNCA, SIEMPRE, SIN_ESTUDIOS. Sobrescribe el valor especificado en el nivel de dispositivo.",
+      "description": "Permitir la eliminación permanente de pacientes. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "WITHOUT_STUDIES"
+        "NEVER|Never allow delete patient permanently",
+        "ALWAYS|Always allow delete patient permanently",
+        "WITHOUT_STUDIES|Allow delete patient permanently only for patient without studies"
       ]
     },
     "dcmDefaultCharacterSet": {
@@ -604,11 +604,11 @@
       "description": "Especifica la política de actualización de atributos del estudio de destino al copiar/mover instancias de otro estudio. Si no existe, los atributos no se actualizarán. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "enum": [
-        "PRESERVE",
-        "SUPPLEMENT",
-        "MERGE",
-        "OVERWRITE",
-        "REPLACE"
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values",
+        "REPLACE|The attributes will be completely overwritten"
       ]
     },
     "dcmLinkMWLEntryUpdatePolicy": {
@@ -616,24 +616,24 @@
       "description": "Especifica la política de actualización de los atributos del estudio al enlazar instancias de otro estudio con una entrada MWL que hace referencia a un estudio existente. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "string",
       "enum": [
-        "PRESERVE",
-        "SUPPLEMENT",
-        "MERGE",
-        "OVERWRITE",
-        "REPLACE"
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values",
+        "REPLACE|The attributes will be completely overwritten"
       ]
     },
     "dcmStorageVerificationPolicy": {
       "title": "Política de verificación de almacenamiento",
-      "description": "EXISTE_REGISTRO_BD: sólo comprueba la existencia de registros de base de datos, EXISTE_ OBJETO: comprueba si el objeto existe en el sistema de almacenamiento, TAMAÑO_OBJETO: comprueba el tamaño del objeto en el sistema de almacenamiento, BUSCA_OBJETO: busca el objeto en el sistema de almacenamiento), SUMA_COMPROB_OBJETO: recalcula la suma de comprobación del objeto en el sistema de almacenamiento, SUMA_MD5_S3: comprueba la suma de comprobación MD5 del objeto en el sistema de almacenamiento S3. Sobrescribe el valor especificado en el nivel de dispositivo.",
+      "description": "Policy applied on storage verification of studies. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
-        "DB_RECORD_EXISTS",
-        "OBJECT_EXISTS",
-        "OBJECT_SIZE",
-        "OBJECT_FETCH",
-        "OBJECT_CHECKSUM",
-        "S3_MD5SUM"
+        "DB_RECORD_EXISTS|Sólo comprueba la existencia de registros de base de datos",
+        "OBJECT_EXISTS|Comprueba si el objeto existe en el sistema de almacenamiento",
+        "OBJECT_SIZE|Comprueba el tamaño del objeto en el sistema de almacenamiento",
+        "OBJECT_FETCH|Obtiene el objeto del sistema de almacenamiento",
+        "OBJECT_CHECKSUM|Recalcula la suma de comprobación del objeto en el sistema de almacenamiento",
+        "S3_MD5SUM|Comprueba la suma de comprobación MD5 del objeto en el sistema de almacenamiento S3"
       ]
     },
     "dcmStorageVerificationUpdateLocationStatus": {
@@ -679,13 +679,13 @@
     },
     "hl7PSUAction": {
       "title": "HL7 Procedure Status Update Action",
-      "description": "Specifies HL7 Procedure Status Update action: SEND_NOTIFICATION (= send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications), UPDATE_MWL_STATUS (= set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED). Overwrites value specified on Device level.",
+      "description": "Specifies HL7 Procedure Status Update action. Overwrites value specified on Device level.",
       "type": "array",
       "items": {
         "type": "string",
         "enum": [
-          "SEND_NOTIFICATION",
-          "UPDATE_MWL_STATUS"
+          "SEND_NOTIFICATION|Send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications",
+          "UPDATE_MWL_STATUS|Set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED"
         ]
       }
     },
@@ -696,10 +696,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "STUDY_RECEIVED",
-          "MPPS_RECEIVED",
-          "REJECTION_NOTE_RECEIVED",
-          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+          "STUDY_RECEIVED|Send notification on receive of studies",
+          "MPPS_RECEIVED|Send notification on receive of MPPS",
+          "REJECTION_NOTE_RECEIVED|Send notification on receive of IOCM KO",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED|Send notification on receive of first object of study"
         ]
       }
     },
@@ -756,9 +756,9 @@
       "description": "Tipo de mensaje de actualización de estado de procedimiento HL7. Sobrescribe el valor especificado en el nivel Dispositivo.",
       "type": "string",
       "enum": [
-        "OMG_O19",
-        "ORU_R01",
-        "OMI_O23"
+        "OMG_O19|Eyecare Order Message",
+        "ORU_R01|Unsolicited Observation Message",
+        "OMI_O23|Clinical Order Message"
       ]
     },
     "hl7PSUPIDPV1": {
@@ -771,8 +771,8 @@
       "description": "Especifica el atributo del objeto recibido para buscar el Elemento MWL cuyo estado debe actualizarse a COMPLETADO. Sólo es aplicable si 'HL7 Actualización de Estado de Procedimiento MWL' está configurado como o implícitamente como verdadero. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "string",
       "enum": [
-        "AccessionNumber",
-        "StudyInstanceUID"
+        "AccessionNumber|Use Accession Number (0008,0050) for matching MWL",
+        "StudyInstanceUID|Use Study Instance UID (0020,000D) for matching MWL"
       ]
     },
     "dcmRelationalQueryNegotiationLenient": {

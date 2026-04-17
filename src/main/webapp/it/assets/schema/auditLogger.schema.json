@@ -63,22 +63,22 @@
       "type": "string",
       "default": "authpriv",
       "enum": [
-        "kern",
-        "user",
-        "mail",
-        "daemon",
-        "auth",
-        "syslog",
-        "lpr",
-        "news",
-        "uucp",
-        "cron",
-        "authpriv",
-        "ftp",
-        "ntp",
-        "audit",
-        "console",
-        "cron2",
+        "kern|kernel messages",
+        "user|user-level messages",
+        "mail|mail system messages",
+        "daemon|system daemons' messages",
+        "auth|authorization messages",
+        "syslog|messages generated internally by syslogd",
+        "lpr|line printer subsystem messages",
+        "news|network news subsystem messages",
+        "uucp|UUCP subsystem messages",
+        "cron|clock daemon messages",
+        "authpriv|security/authorization messages",
+        "ftp|ftp daemon messages",
+        "ntp|NTP subsystem messages",
+        "audit|audit messages",
+        "console|console messages",
+        "cron2|clock daemon messages",
         "local0",
         "local1",
         "local2",
@@ -95,14 +95,14 @@
       "type": "string",
       "default": "notice",
       "enum": [
-        "emerg",
-        "alert",
-        "crit",
-        "err",
-        "warning",
-        "notice",
-        "info",
-        "debug"
+        "emerg|emergency; system is unusable",
+        "alert|action must be taken immediately",
+        "crit|critical condition",
+        "err|error condition",
+        "warning|warning condition",
+        "notice|normal but significant condition",
+        "info|informational message",
+        "debug|debug-level messages"
       ]
     },
     "dcmAuditMinorFailureSeverity": {
@@ -111,14 +111,14 @@
       "type": "string",
       "default": "warning",
       "enum": [
-        "emerg",
-        "alert",
-        "crit",
-        "err",
-        "warning",
-        "notice",
-        "info",
-        "debug"
+        "emerg|emergency; system is unusable",
+        "alert|action must be taken immediately",
+        "crit|critical condition",
+        "err|error condition",
+        "warning|warning condition",
+        "notice|normal but significant condition",
+        "info|informational message",
+        "debug|debug-level messages"
       ]
     },
     "dcmAuditSeriousFailureSeverity": {
@@ -127,14 +127,14 @@
       "type": "string",
       "default": "err",
       "enum": [
-        "emerg",
-        "alert",
-        "crit",
-        "err",
-        "warning",
-        "notice",
-        "info",
-        "debug"
+        "emerg|emergency; system is unusable",
+        "alert|action must be taken immediately",
+        "crit|critical condition",
+        "err|error condition",
+        "warning|warning condition",
+        "notice|normal but significant condition",
+        "info|informational message",
+        "debug|debug-level messages"
       ]
     },
     "dcmAuditMajorFailureSeverity": {
@@ -143,14 +143,14 @@
       "type": "string",
       "default": "crit",
       "enum": [
-        "emerg",
-        "alert",
-        "crit",
-        "err",
-        "warning",
-        "notice",
-        "info",
-        "debug"
+        "emerg|emergency; system is unusable",
+        "alert|action must be taken immediately",
+        "crit|critical condition",
+        "err|error condition",
+        "warning|warning condition",
+        "notice|normal but significant condition",
+        "info|informational message",
+        "debug|debug-level messages"
       ]
     },
     "dcmAuditApplicationName": {

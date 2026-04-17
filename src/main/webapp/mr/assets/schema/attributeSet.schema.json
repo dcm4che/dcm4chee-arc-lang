@@ -16,13 +16,13 @@
     },
     "dcmAttributeSetType": {
       "title": "विशेषता सेट प्रकार",
-      "description": "QIDO-RS आणि WADO-RS मेटाडेटाच्या विनंत्यांचे 'includefields' प्राप्ति मापदंड आणि DIFF-RS विनंतीचे 'comparefield' प्राप्ति मापदंड, यांच्याद्वारे हा विशेषता सेटचा वापर केले जातील, हे निर्दिष्ट करते.",
+      "description": "विशेषता सेटचा वापर केले जातील, हे निर्दिष्ट करते.",
       "type": "string",
       "enum": [
-        "QIDO_RS",
-        "WADO_RS",
-        "DIFF_RS",
-        "LEADING_CFIND_SCP"
+        "QIDO_RS|Attribute Set is used by Query Parameter 'includefields' of QIDO-RS requests",
+        "WADO_RS|Attribute Set is used by Query Parameter 'includefields' of WADO-RS requests",
+        "DIFF_RS|Attribute Set is used by Query Parameter 'comparefields' of DIFF-RS requests",
+        "LEADING_CFIND_SCP|Attribute Set is used by Leading C-FIND SCP coercion"
       ]
     },
     "dcmAttributeSetID": {

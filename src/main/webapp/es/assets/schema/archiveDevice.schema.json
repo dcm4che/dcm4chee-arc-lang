@@ -136,12 +136,12 @@
       "description": "Especifica la clase de implementación del algoritmo difuso.",
       "type": "string",
       "enum":[
-      "org.dcm4che3.soundex.Soundex",
-      "org.dcm4che3.soundex.ESoundex",
-      "org.dcm4che3.soundex.ESoundex9",
-      "org.dcm4che3.soundex.Metaphone",
-      "org.dcm4che3.soundex.KPhonetik",
-      "org.dcm4che3.soundex.Phonem"
+        "org.dcm4che3.soundex.Soundex|Classic Soundex phonetic algorithm that encodes names into a 4-character code based on English pronunciation so similarly sounding names match despite spelling differences",
+        "org.dcm4che3.soundex.ESoundex|Extended Soundex variant that produces variable-length phonetic codes (instead of fixed 4 characters) to improve matching accuracy for longer words",
+        "org.dcm4che3.soundex.ESoundex9|Extended Soundex variant that generates phonetic codes up to 9 characters long for higher precision fuzzy matching than standard Soundex",
+        "org.dcm4che3.soundex.Metaphone|Metaphone phonetic algorithm that encodes words based on English pronunciation rules and spelling patterns, providing more accurate phonetic matching than Soundex",
+        "org.dcm4che3.soundex.KPhonetik|Cologne Phonetic (Kölner Phonetik) algorithm optimized for German phonetics to match words that sound similar in German pronunciation",
+        "org.dcm4che3.soundex.Phonem|Phonem algorithm that normalizes words into a simplified phonetic representation to improve fuzzy matching across spelling variations (commonly used for Germanic names)"
       ]
     },
     "dcmStoreImplementationVersionName": {
@@ -322,10 +322,10 @@
       "type": "string",
       "default": "NEVER",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "SAME_SOURCE",
-        "EVEN_WITH_EQUAL_DIGEST"
+        "NEVER|Never overwrite previous received object on receive of object with matching SOP Instance UID",
+        "ALWAYS|Always overwrite previous received object on receive of object with matching SOP Instance UID and if instance location digest is unequal",
+        "SAME_SOURCE|Overwrite previous received object on receive of object with matching SOP Instance UID if it is from same source (Calling AET)",
+        "EVEN_WITH_EQUAL_DIGEST|Overwrite previous received object on receive of object with matching SOP Instance UID even if instance location digest is equal"
       ]
     },
     "dcmRelationalMismatchPolicy": {
@@ -334,10 +334,10 @@
       "type": "string",
       "default": "IGNORE",
       "enum": [
-        "IGNORE",
-        "REJECT",
-        "OVERWRITE",
-        "STORE_ADDITIONALLY"
+        "IGNORE|Silently ignores the received object",
+        "REJECT|Reject the received object with error status A77BH",
+        "OVERWRITE|Replace previous received object by new one belonging to other Series (\"poor-man IOCM\")",
+        "STORE_ADDITIONALLY|Store received object, retaining the previous received object, replacing the value SAME_SOURCE of config field Overwrite Policy"
       ]
     },
     "dcmRecordAttributeModification": {
@@ -352,9 +352,9 @@
       "type": "string",
       "default": "CREATE",
       "enum": [
-        "YES",
-        "NO",
-        "CREATE"
+        "YES|Accept missing Patient ID (0010,0020) in DICOM dataset",
+        "NO|Do not accept missing Patient ID (0010,0020) in DICOM dataset",
+        "CREATE|Create patient identifier if missing Patient ID (0010,0020) in DICOM dataset"
       ]
     },
     "dcmAcceptConflictingPatientID": {
@@ -363,9 +363,9 @@
       "type": "string",
       "default": "MERGED",
       "enum": [
-        "YES",
-        "NO",
-        "MERGED"
+        "YES|Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
+        "NO|Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
+        "MERGED|Accept patient identifier in DICOM dataset if already merged with another patient identifier"
       ]
     },
     "dcmIdentifyPatientByIDAndName": {
@@ -429,10 +429,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "DS",
-          "IS",
-          "SV",
-          "UV"
+          "DS|Decimal String",
+          "IS|Integer String",
+          "SV|Signed 64-bit Very Long",
+          "UV|Unsigned 64-bit Very Long"
         ]
       }
     },
@@ -448,9 +448,9 @@
       "type": "string",
       "default": "SUPPORTS",
       "enum": [
-        "NOT_SUPPORTED",
-        "SUPPORTS",
-        "REQUIRED"
+        "NOT_SUPPORTED|Ignore User Identity Negotiation Sub-Item in Association requests",
+        "SUPPORTS|Verify passed Username and password or JSON Web Token are against a Keycloak server",
+        "REQUIRED|Reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item"
       ]
     },
     "dcmUserIdentityNegotiationRole": {
@@ -538,13 +538,13 @@
     },
     "dcmWadoVideoAcceptRanges": {
       "title": "Wado Video Accept Ranges",
-      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. KNOWN_TOTAL_LENGTH: support if Encapsulated Pixel Data Value Total Length is known. May be overwritten by configured value for particular Archive Network AEs.",
+      "description": "Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "string",
       "default": "KNOWN_TOTAL_LENGTH",
       "enum": [
-        "YES",
-        "NO",
-        "KNOWN_TOTAL_LENGTH"
+        "YES|HTTP Range Requests supported",
+        "NO|HTTP Range Requests not supported",
+        "KNOWN_TOTAL_LENGTH|HTTP Range Requests supported if Encapsulated Pixel Data Value Total Length is known"
       ]
     },
     "dcmQueryFetchSize": {
@@ -601,10 +601,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "STUDY_RECEIVED",
-          "MPPS_RECEIVED",
-          "REJECTION_NOTE_RECEIVED",
-          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+          "STUDY_RECEIVED|Send IAN on receiving studies",
+          "MPPS_RECEIVED|Send IAN on receiving MPPS",
+          "REJECTION_NOTE_RECEIVED|Send IAN on IOCM trigger",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED|Send IAN on receiving first object of study"
         ]
       }
     },
@@ -648,13 +648,13 @@
     },
     "dcmSpanningCFindSCPPolicy": {
       "title": "Política de Spanning de C-Find SCP",
-      "description": "Especifica la política para combinar las coincidencias devueltas por la función Spanning C-Find SCP configurada con las entradas coincidentes de la base de datos de archivos. SUPLEMENTAR (= devuelve las coincidencias locales antes que las coincidencias adicionales de Spanning C-Find SCP ), FUSIONAR (= devuelve las coincidencias de Spanning C-Find SCP antes que las coincidencias locales adicionales), SUSTITUIR (= devuelve sólo las coincidencias de Spanning C-Find SCP). Puede sobrescribirse mediante valores configurados para determinados EA de red de archivos.",
+      "description": "Especifica la política para combinar las coincidencias devueltas por la función Spanning C-Find SCP configurada con las entradas coincidentes de la base de datos de archivos. SUPLEMENTAR (= ), FUSIONAR (= ), SUSTITUIR (= devuelve sólo las coincidencias de Spanning C-Find SCP). Puede sobrescribirse mediante valores configurados para determinados EA de red de archivos.",
       "type": "string",
       "default": "REPLACE",
       "enum": [
-        "SUPPLEMENT",
-        "MERGE",
-        "REPLACE"
+        "SUPPLEMENT|Devuelve las coincidencias locales antes que las coincidencias adicionales de Spanning C-Find SCP",
+        "MERGE|Devuelve las coincidencias de Spanning C-Find SCP antes que las coincidencias locales adicionales",
+        "REPLACE|Devuelve sólo las coincidencias de Spanning C-Find SCP"
       ]
     },
     "dcmSpanningCFindSCPRetrieveAET": {
@@ -976,9 +976,9 @@
       "type": "string",
       "default": "PLAIN_TEXT",
       "enum": [
-        "PLAIN_TEXT",
-        "HASH_NAME",
-        "HASH_NAME_AND_ID"
+        "PLAIN_TEXT|Patient Identifier and Patient Name shown as plain text in system logs",
+        "HASH_NAME|Patient Identifier shown as plain text, Patient Name shown as hashed in system logs",
+        "HASH_NAME_AND_ID|Patient Identifier and Patient Name shown as hashed in system logs"
       ]
     },
     "dcmShowPatientInfoInAuditLog": {
@@ -987,9 +987,9 @@
       "type": "string",
       "default": "PLAIN_TEXT",
       "enum": [
-        "PLAIN_TEXT",
-        "HASH_NAME",
-        "HASH_NAME_AND_ID"
+        "PLAIN_TEXT|Patient Identifier and Patient Name shown as plain text in audit logs",
+        "HASH_NAME|Patient Identifier shown as plain text, Patient Name shown as hashed in audit logs",
+        "HASH_NAME_AND_ID|Patient Identifier and Patient Name shown as hashed in audit logs"
       ]
     },
     "dcmStowSpoolDirectory": {
@@ -1027,13 +1027,13 @@
     },
     "hl7ORUAction": {
       "title": "Acción HL7 ORU",
-      "description": "Especifica la acción al recibir el mensaje HL7 ORU^R01: IMPORT_REPORT (= transcodificar HL7 ORU^R01 recibido a DICOM SR), MWL_COMPLETED (= establecer el estado de los elementos MWL coincidentes en COMPLETED). Puede sobrescribirse mediante valores configurados para una aplicación HL7 de archivo concreta.",
+      "description": "Especifica la acción al recibir el mensaje HL7 ORU^R01. Puede sobrescribirse mediante valores configurados para una aplicación HL7 de archivo concreta.",
       "type": "array",
       "items": {
         "type": "string",
         "enum": [
-          "IMPORT_REPORT",
-          "MWL_COMPLETED"
+          "IMPORT_REPORT|Transcodificar HL7 ORU^R01 recibido a DICOM SR or PDF or CDA",
+          "MWL_COMPLETED|Establecer el estado de los elementos MWL coincidentes en COMPLETED"
         ]
       }
     },
@@ -1071,8 +1071,8 @@
       "type": "string",
       "default": "OBR_4_4",
       "enum": [
-        "OBR_4_1",
-        "OBR_4_4"
+        "OBR_4_1|HL7 Schedule Protocol Code in Order in OBR.4.1 to OBR.4.3",
+        "OBR_4_4|HL7 Schedule Protocol Code in Order in OBR.4.4 to OBR.4.6"
       ]
     },
     "hl7ScheduledStationAETInOrder": {
@@ -1080,7 +1080,7 @@
       "description": "Especifica la ubicación del Título AE de Estación Programada en el mensaje de Orden HL7 recibido. No debe configurarse para HL7 v2.5.1 OMI^O23 con segmento IPC. Si no se proporciona ningún valor en el campo configurado, el título AE de la estación programada se selecciona de acuerdo con las reglas configuradas. Puede sobrescribirse mediante valores configurados para una aplicación HL7 de archivo concreta.",
       "type": "string",
       "enum": [
-        "ORC_18"
+        "ORC_18|HL7 Schedule Station AET in Order in ORC.18"
       ]
     },
     "hl7LogFilePattern": {
@@ -1124,7 +1124,7 @@
       "description": "Tipo de mensaje HL7 que desencadena el cambio del estado de los Pasos de Procedimiento Programados asociados con el Paciente de PROGRAMADO a LLEGADO. Si está ausente, el estado de los Pasos de Procedimiento Programados no se verá afectado por los mensajes HL7 ADT. Puede ser sobrescrito por valores configurados para una Aplicación HL7 de Archivo en particular.",
       "type": "string",
       "enum": [
-        "ADT^A10"
+        "ADT^A10|Patient Arriving / Tracking"
       ]
     },
     "dcmUnzipVendorDataToURI": {
@@ -1264,31 +1264,31 @@
       "type": "string",
       "default": "EXPIRED_UNSET",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "EXPIRED_UNSET",
-        "ONLY_EXPIRED"
+        "NEVER|Never allow rejection for Data Retention Policy Expired",
+        "ALWAYS|Always allow rejection for Data Retention Policy Expired",
+        "EXPIRED_UNSET|Allow rejection for Data Retention Policy Expired for expired studies or studies with no expiration date",
+        "ONLY_EXPIRED|Allow rejection for Data Retention Policy Expired only for expired studies"
       ]
     },
     "dcmAllowDeleteStudyPermanently": {
       "title": "Permitir eliminar estudio permanentemente",
-      "description": "Permitir eliminar estudio permanentemente. RECHAZADO = sólo Estudios ya rechazados. Puede sobrescribirse con valores configurados para determinados EA de la red de archivos.",
+      "description": "Permitir eliminar estudio permanentemente. Puede sobrescribirse con valores configurados para determinados EA de la red de archivos.",
       "type": "string",
       "default": "REJECTED",
       "enum": [
-        "ALWAYS",
-        "REJECTED"
+        "ALWAYS|Always allow delete study permanently",
+        "REJECTED|sólo Estudios ya rechazados"
       ]
     },
     "dcmAllowDeletePatient": {
       "title": "Permitir Borrar Paciente",
-      "description": "Permitir el borrado permanente de Pacientes. SIN_ESTUDIOS = sólo Pacientes sin Estudios.",
+      "description": "Permitir el borrado permanente de Pacientes. Puede sobrescribirse con valores configurados para determinados EA de la red de archivos.",
       "type": "string",
       "default": "WITHOUT_STUDIES",
       "enum": [
-          "NEVER",
-          "ALWAYS",
-          "WITHOUT_STUDIES"
+          "NEVER|Never allow delete patient permanently",
+          "ALWAYS|Always allow delete patient permanently",
+          "WITHOUT_STUDIES|Permitir Borrar Paciente sólo Pacientes sin Estudios."
         ]
       },
     "dcmPurgeStgCmtCompletedDelay": {
@@ -1434,11 +1434,11 @@
       "type": "string",
       "default": "PRESERVE",
       "enum": [
-        "PRESERVE",
-        "SUPPLEMENT",
-        "MERGE",
-        "OVERWRITE",
-        "REPLACE"
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values",
+        "REPLACE|The attributes will be completely overwritten"
       ]
     },
     "dcmLinkMWLEntryUpdatePolicy": {
@@ -1447,25 +1447,25 @@
       "type": "string",
       "default": "PRESERVE",
       "enum": [
-        "PRESERVE",
-        "SUPPLEMENT",
-        "MERGE",
-        "OVERWRITE",
-        "REPLACE"
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values",
+        "REPLACE|The attributes will be completely overwritten"
       ]
     },
     "dcmStorageVerificationPolicy": {
       "title": "Política de verificación de almacenamiento",
-      "description": "EXISTE_REGISTRO_BD: sólo comprueba la existencia de registros de base de datos, OBJECTO_EXISTE: comprueba si el objeto existe en el sistema de almacenamiento, TAMAÑO_OBJETO: comprueba el tamaño del objeto en el sistema de almacenamiento, RECUPERAR_OBJETO: obtiene el objeto del sistema de almacenamiento), SUMADECOMPROBACIÓPN_OBJETO: recalcula la suma de comprobación del objeto en el sistema de almacenamiento, S3_MD5SUM: comprueba la suma de comprobación MD5 del objeto en el sistema de almacenamiento S3. Pueden sobrescribirse con los valores configurados para determinados EA de red de archivos.",
+      "description": "Policy applied on storage verification of studies. Pueden sobrescribirse con los valores configurados para determinados EA de red de archivos.",
       "type": "string",
       "default": "OBJECT_CHECKSUM",
       "enum": [
-        "DB_RECORD_EXISTS",
-        "OBJECT_EXISTS",
-        "OBJECT_SIZE",
-        "OBJECT_FETCH",
-        "OBJECT_CHECKSUM",
-        "S3_MD5SUM"
+        "DB_RECORD_EXISTS|Sólo comprueba la existencia de registros de base de datos",
+        "OBJECT_EXISTS|Comprueba si el objeto existe en el sistema de almacenamiento",
+        "OBJECT_SIZE|Comprueba el tamaño del objeto en el sistema de almacenamiento",
+        "OBJECT_FETCH|Obtiene el objeto del sistema de almacenamiento",
+        "OBJECT_CHECKSUM|Recalcula la suma de comprobación del objeto en el sistema de almacenamiento",
+        "S3_MD5SUM|Comprueba la suma de comprobación MD5 del objeto en el sistema de almacenamiento S3"
       ]
     },
     "dcmStorageVerificationUpdateLocationStatus": {
@@ -1715,13 +1715,13 @@
     },
     "hl7PSUAction": {
       "title": "HL7 Procedure Status Update Action",
-      "description": "Specifies HL7 Procedure Status Update action: SEND_NOTIFICATION (= send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications), UPDATE_MWL_STATUS (= set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED). May be overwritten by configured values for particular Archive Network AEs.",
+      "description": "Specifies HL7 Procedure Status Update action. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
       "items": {
         "type": "string",
         "enum": [
-          "SEND_NOTIFICATION",
-          "UPDATE_MWL_STATUS"
+          "SEND_NOTIFICATION|Send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications",
+          "UPDATE_MWL_STATUS|Set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED"
         ]
       }
     },
@@ -1732,10 +1732,10 @@
       "items" : {
         "type": "string",
         "enum": [
-          "STUDY_RECEIVED",
-          "MPPS_RECEIVED",
-          "REJECTION_NOTE_RECEIVED",
-          "FIRST_OBJECT_OF_STUDY_RECEIVED"
+          "STUDY_RECEIVED|Send notification on receive of studies",
+          "MPPS_RECEIVED|Send notification on receive of MPPS",
+          "REJECTION_NOTE_RECEIVED|Send notification on receive of IOCM KO",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED|Send notification on receive of first object of study"
         ]
       }
     },
@@ -1795,9 +1795,9 @@
       "type": "string",
       "default": "OMG_O19",
       "enum": [
-        "OMG_O19",
-        "ORU_R01",
-        "OMI_O23"
+        "OMG_O19|Eyecare Order Message",
+        "ORU_R01|Unsolicited Observation Message",
+        "OMI_O23|Clinical Order Message"
       ]
     },
     "hl7PSUPIDPV1": {
@@ -1812,8 +1812,8 @@
       "type": "string",
       "default": "StudyInstanceUID",
       "enum": [
-        "AccessionNumber",
-        "StudyInstanceUID"
+        "AccessionNumber|Use Accession Number (0008,0050) for matching MWL",
+        "StudyInstanceUID|Use Study Instance UID (0020,000D) for matching MWL"
       ]
     },
     "hl7TrackChangedPatientID": {
@@ -1845,9 +1845,9 @@
       "type": "string",
       "default": "OTHER",
       "enum": [
-        "ALL",
-        "NONE",
-        "OTHER"
+        "ALL|Include all patient identifiers in PID.3 / MRG.1, including patient identifier on root dataset in Other Patient IDs Sequence (0010,1002)",
+        "NONE|Include no patient identifiers from PID.3 / MRG.1 in Other Patient IDs Sequence (0010,1002)",
+        "OTHER|Include all patient identifiers in PID.3 / MRG.1, except patient identifier on root dataset in Other Patient IDs Sequence (0010,1002)"
       ]
     },
     "hl7OrderMissingStudyIUIDPolicy": {
@@ -1856,9 +1856,9 @@
       "type": "string",
       "default": "GENERATE",
       "enum": [
-        "REJECT",
-        "GENERATE",
-        "ACCESSION_BASED"
+        "REJECT|Reject HL7 Order Messages with missing Study Instance UID in ZDS.1 / IPC.3",
+        "GENERATE|Generate random Study Instance UID if missing in HL7 Order Messages in ZDS.1 / IPC.3",
+        "ACCESSION_BASED|Generate Study Instance UID based on Accession Number present in OBR.18 / IPC.1 if Study Instance UID missing in HL7 Order Messages in ZDS.1 / IPC.3"
       ]
     },
     "hl7OrderMissingAdmissionIDPolicy": {
@@ -1867,9 +1867,9 @@
       "type": "string",
       "default": "ACCEPT",
       "enum": [
-        "ACCEPT",
-        "REJECT",
-        "ACCESSION_AS_ADMISSION"
+        "ACCEPT|Accept HL7 Order Messages with missing Admission ID in PV1.19 / PID.18",
+        "REJECT|Reject HL7 Order Messages with missing Admission ID in PV1.19 / PID.18",
+        "ACCESSION_AS_ADMISSION|Use Accession Number present in OBR.18 / IPC.1 as Admission ID if it is missing in HL7 Order Message in PV1.19 / PID.18"
       ]
     },
     "hl7ImportReportMissingStudyIUIDPolicy": {
@@ -1878,9 +1878,9 @@
       "type": "string",
       "default": "GENERATE",
       "enum": [
-        "REJECT",
-        "GENERATE",
-        "ACCESSION_BASED"
+        "REJECT|Reject HL7 ORU^R01 message with missing Study Instance UID in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study'",
+        "GENERATE|Generate random Study Instance UID if it is missing in HL7 ORU^R01 Message in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study'",
+        "ACCESSION_BASED|Generate Study Instance UID based on Accession Number present in OBR.18 if Study Instance UID missing in HL7 ORU^R01 Messages in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study'"
       ]
     },
     "hl7ImportReportMissingAdmissionIDPolicy": {
@@ -1889,9 +1889,9 @@
       "type": "string",
       "default": "ACCEPT",
       "enum": [
-        "ACCEPT",
-        "REJECT",
-        "ACCESSION_AS_ADMISSION"
+        "ACCEPT|Accept HL7 ORU^R01 Messages with missing Admission ID in PV1.19 / PID.18",
+        "REJECT|Reject HL7 ORU^R01 Messages with missing Admission ID in PV1.19 / PID.18",
+        "ACCESSION_AS_ADMISSION|Use Accession Number present in OBR.18 as Admission ID if it is missing in HL7 ORU^R01 Message in PV1.19 / PID.18"
       ]
     },
     "hl7ImportReportMissingStudyIUIDCFindSCP": {
@@ -1906,20 +1906,20 @@
       "type": "string",
       "default": "NONE",
       "enum": [
-        "NONE",
-        "APPEND_HASH_OF_STUDY_INSTANCE_UID"
+        "NONE|No adjustment done to Study / Series / SOP IUIDs",
+        "APPEND_HASH_OF_STUDY_INSTANCE_UID|Hash of Study Instance UID appended as suffix to Study / Series / SOP IUIDs"
       ]
     },
     "hl7ReferredMergedPatientPolicy": {
       "title": "Política de Paciente Fusionado Referido HL7",
-      "description": "Especifica la política sobre los mensajes HL7 entrantes que refieren a un Paciente ya fusionado. Refer <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/HL7-Referred-Merged-Patient-Policy\" target=\"_blank\">HL7 Referred Merged Patient Policy</a> meanings. Puede sobrescribirse con los valores configurados para una aplicación HL7 de archivo concreta.",
+      "description": "Especifica la política sobre los mensajes HL7 entrantes que refieren a un Paciente ya fusionado. Puede sobrescribirse con los valores configurados para una aplicación HL7 de archivo concreta.",
       "type": "string",
       "default": "REJECT",
       "enum": [
-        "REJECT",
-        "IGNORE",
-        "IGNORE_DUPLICATE_MERGE",
-        "ACCEPT_INVERSE_MERGE"
+        "REJECT|Reject any incoming HL7 messages referring an already merged Patient",
+        "IGNORE|Ignore any incoming HL7 messages referring an already merged Patient",
+        "IGNORE_DUPLICATE_MERGE|Ignore only duplicate incoming HL7 Patient Merge (ADT^A40) messages referring an already merged Patient. Reject any other incoming HL7 messages referring an already merged Patient.",
+        "ACCEPT_INVERSE_MERGE|Accept any incoming inverse HL7 Patient Merge (ADT^A40) messages referring an already merged Patient, optionally allowing inverse merging of patient records if clients send duplicated ADT^A40 patient merge messages repeatedly, just reversing the patient identifier values in PID / MRG segments."
       ]
     },
     "hl7DicomCharacterSet": {
@@ -2159,8 +2159,8 @@
       "items" : {
         "type": "string",
         "enum": [
-          "LocalNamespaceEntityID",
-          "UniversalEntityID"
+          "LocalNamespaceEntityID|Use IssuerOfPatientID as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages",
+          "UniversalEntityID|Use IssuerOfPatientIDQualifiersSequence.UniversalEntityID as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages"
         ]
       }
     },
@@ -2189,8 +2189,8 @@
       "items" : {
         "type": "string",
         "enum": [
-          "LocalNamespaceEntityID",
-          "UniversalEntityID"
+          "LocalNamespaceEntityID|Use IssuerOfAccessionNumberSequence.LocalNamespaceEntityID as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages",
+          "UniversalEntityID|Use IssuerOfAccessionNumberSequence.UniversalEntityID as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages"
         ]
       }
     },

@@ -46,7 +46,7 @@
     },
     "dcmUPSPriority": {
       "title": "Priority",
-      "description": "Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.",
+      "description": "Value of Scheduled Procedure Step Priority (0074,1200) in created UPS.",
       "type": "string",
       "default": "MEDIUM",
       "enum": [

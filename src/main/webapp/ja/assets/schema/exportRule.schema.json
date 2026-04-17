@@ -73,9 +73,9 @@
       "type": "string",
       "default": "REPLACE",
       "enum": [
-        "NEVER",
-        "ALWAYS",
-        "REPLACE"
+        "NEVER|Never export entity on reoccurrence of instances",
+        "ALWAYS|Always export entity on reoccurrence of instances",
+        "REPLACE|Export entity only on reoccurrence of replaced instances"
       ]
     }
   }
