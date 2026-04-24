@@ -536,9 +536,15 @@
     },
     "dcmMWLWorklistLabel": {
       "title": "MWL Worklist Label",
-      "description": "Value of Worklist Label (0074,1202) of created MWL items on receive of HL7 Order messages by the HL7 Receiver associated with this Archive AE. If absent, created MWL items are not bound to a particular MWL SCP. Also, for MWL-RS Create / Update MWL, use this MWL Worklist Label as fall back, if Worklist Label (0074,1202) is missing or has no value in request payload - before falling back to *",
+      "description": "Value of Worklist Label (0074,1202) of created MWL items by this AE on receive of Create Scheduled Procedure Step REST API if Worklist Label (0074,1202) is missing or empty in request payload. If absentno value is configured, created MWL items are not bound to a particular MWL Worklist and are provided by all Archive AEs with MWL SCP Transfer Capability.",
       "type": "string",
       "format": "dcmMWLWorklistLabel"
+    },
+    "dcmMWLWorklistLabelFilter": {
+      "title": "MWL Worklist Label Filter",
+      "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (MWL Query SOP Class) or dicomWeb (Modality Worklist Search Transaction) service for matching Modality Worklist items (MWL), if no matching key for this attribute is specified in the request. If multiple values are specified, MWL with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, MWL with any value of Worklist Label (0074,1202) will match.",
+      "type": "array",
+      "items": { "type": "string" }
     },
     "dcmUPSWorklistLabel": {
       "title": "UPS ワークリスト ラベル",
