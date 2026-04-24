@@ -78,14 +78,14 @@
       "items": {
         "type": "integer",
         "enum": [
-          3,
-          4,
-          5,
-          6,
-          7,
-          10,
-          11,
-          12
+          "3|Sending Application",
+          "4|Sending Facility",
+          "5|Receiving Application",
+          "6|Receiving Facility",
+          "7|Date/Time of Message",
+          "10|Message Control ID",
+          "11|Processing ID",
+          "12|Version ID"
         ]
       }
     },

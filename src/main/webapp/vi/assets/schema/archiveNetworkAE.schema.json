@@ -415,10 +415,10 @@
       "description": "HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level.",
       "type": "integer",
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
       ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
@@ -437,10 +437,10 @@
       "description": "HTTP Status code of Redirect Response configured by External WADO-RS Web Application Name. Overwrites value specified on Device level.",
       "type": "integer",
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
       ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {

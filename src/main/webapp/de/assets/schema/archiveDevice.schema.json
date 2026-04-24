@@ -708,10 +708,10 @@
       "type": "integer",
       "default": 303,
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
        ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
@@ -732,10 +732,10 @@
       "type": "integer",
       "default": 303,
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
        ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {
@@ -2111,16 +2111,16 @@
     },
     "dcmQStarVerificationMockAccessState": {
       "title": "QStar Verification Mock Access State",
-      "description": "Indicates to mock invoke of QStar Archive Storage Manager (ASM) WEB Services by return of specified Access State (0 - ACCESS_STATE_NONE, 1 - ACCESS_STATE_EMPTY, 2 - ACCESS_STATE_UNSTABLE, 3 - ACCESS_STATE_STABLE, 4 - ACCESS_STATE_OUT_OF_CACHE, 5 - ACCESS_STATE_OFFLINE, -1 - simulate error response) for testing.",
+      "description": "Indicates to mock invoke of QStar Archive Storage Manager (ASM) WEB Services by return of specified Access State for testing.",
       "type": "integer",
       "enum": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        -1
+        "0|ACCESS_STATE_NONE",
+        "1|ACCESS_STATE_EMPTY",
+        "2|ACCESS_STATE_UNSTABLE",
+        "3|ACCESS_STATE_STABLE",
+        "4|ACCESS_STATE_OUT_OF_CACHE",
+        "5|ACCESS_STATE_OFFLINE",
+        "-1|simulate error response"
       ]
     },
     "dcmTrustedPatientIDPattern": {

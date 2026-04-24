@@ -415,10 +415,10 @@
       "description": "フォールバック WADO-URI ウェブ アプリケーション名で 構成された リダイレクト 応答の HTTP ステータス コード。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "integer",
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
       ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
@@ -437,10 +437,10 @@
       "description": "HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level.",
       "type": "integer",
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
       ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {

@@ -415,10 +415,10 @@
       "description": "Código de Estado HTTP de la Respuesta de Redirección configurada por el Nombre de la Aplicación Web WADO-URI Fallo. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "integer",
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
       ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
@@ -437,10 +437,10 @@
       "description": "Código de Estado HTTP de la Respuesta de Redirección configurada por el Nombre de la Aplicación Web WADO-URI Fallback. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "integer",
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
       ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {

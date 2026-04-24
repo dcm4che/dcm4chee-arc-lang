@@ -708,10 +708,10 @@
       "type": "integer",
       "default": 303,
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
        ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
@@ -732,10 +732,10 @@
       "type": "integer",
       "default": 303,
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
        ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {
@@ -2111,16 +2111,16 @@
     },
     "dcmQStarVerificationMockAccessState": {
       "title": "Verificación QStar Estado de Acceso Simulado",
-      "description": "Indica la invocación simulada de los Servicios de la Red QStar de Administrador de Almacenamiento de Archivos (AAA) devolviendo el Estado de Acceso especificado (0 - ESTADO_ACCESO_NINGUNO, 1 - ESTADO_ACCESO_VACÍO, 2 - ESTADO_ACCESO_INESTABLE, 3 - ESTADO_ACCESO_ESTABLE, 4 - ESTADO_ACCESO_SIN_CAJA, 5 - ESTADO_ACCESO_APAGADO, -1 - simular respuesta de error) para pruebas.",
+      "description": "Indica la invocación simulada de los Servicios de la Red QStar de Administrador de Almacenamiento de Archivos (AAA) devolviendo el Estado de Acceso especificado para pruebas.",
       "type": "integer",
       "enum": [
-        0,
-        1,
-        2,
-        3,
-        4,
-        5,
-        -1
+        "0|ESTADO_ACCESO_NINGUNO",
+        "1|ESTADO_ACCESO_VACÍO",
+        "2|ESTADO_ACCESO_INESTABLE",
+        "3|ESTADO_ACCESO_ESTABLE",
+        "4|ESTADO_ACCESO_SIN_CAJA",
+        "5|ESTADO_ACCESO_APAGADO",
+        "-1|simular respuesta de error"
       ]
     },
     "dcmTrustedPatientIDPattern": {

@@ -415,10 +415,10 @@
       "description": "'फॉलबॅक WADO-URI वेब अनुप्रयोगाचे नाव' द्वारे कॉन्फीगर्ड HTTP स्थिती कोड. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.",
       "type": "integer",
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
       ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
@@ -437,10 +437,10 @@
       "description": "HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level.",
       "type": "integer",
       "enum": [
-        301,
-        302,
-        303,
-        307
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
       ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {
