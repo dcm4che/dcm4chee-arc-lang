@@ -4,7 +4,7 @@ upsOnUPSCompleted.dcmProperty:Condition|Conditions in format {attributeID[number
 upsOnUPSCompleted.dcmRequiresOtherUPSCompleted:Requires other UPS completed|Specifies Query Parameters for other UPS referring the same request (= Study Instance UID), which must be already be completed for creating this UPS. Format: {attributeID}={value}[&...]
 upsOnUPSCompleted.dcmUPSLabel:手順 ステップ ラベル|作成された UPSの 中で 手順 ステップ ラベルの 値 (0074,1204)。 {attributeID}は、以前の UPSの データセット 内の その 属性の 値に 置き換えられます。 例 : {StudyDescription}。
 upsOnUPSCompleted.dcmUPSWorklistLabel:ワークリスト ラベル|作成された UPSの 中で ワークリスト ラベルの 値 (0074,1202)。 {attributeID}は、以前の UPSの データセット 内の その 属性の 値に 置き換えられます。 例 : {StudyDescription}。
-upsOnUPSCompleted.dcmUPSPriority:優先度|作成された UPSの 中で 予定 手順 ステップの 優先度の 値 (0074,1200)。 列挙値: HIGH, MEDIUM, LOW。存在しない 場合、MEDIUMが 適用されます。
+upsOnUPSCompleted.dcmUPSPriority:優先度|作成された UPSの 中で 予定 手順 ステップの 優先度の 値 (0074,1200)。
 upsOnUPSCompleted.dcmUPSInputReadinessState:入力 覚悟 状態|作成された UPSの 中で 入力 覚悟 状態の 値 (0040,4041)
 upsOnUPSCompleted.dcmUPSStartDateTimeDelay:予定された 手順 ステップ 開始 日時の 遅延|作成された UPSの 中で  PnDTnHnMn.nS 形式で 予定 手順 ステップ 開始 日時の 受信 時刻からの 遅延 (0040,4005)。 存在しない 場合、遅延はありません。
 upsOnUPSCompleted.dcmUPSCompletionDateTimeDelay:予期される 完了 日時の 遅延|作成された UPSの 中で PnDTnHnMn.nS 形式で 予期される 完了 日時の 受信 時刻からの 遅延 (0040,4011)。存在しない 場合、完了 予期 日時は 設定されません。

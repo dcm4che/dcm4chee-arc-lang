@@ -16,7 +16,7 @@
     "dcmStoreAccessControlID": {
       "title": "साठवण प्रवेश नियंत्रण ID",
       "description": "सर्व अति जुळण्यावर अभ्यासांवर नियुक्त केलेला प्रवेश नियंत्रण ID.",
-      "type": "string"
+      "items": { "type": "string" }
     },
     "dcmEntity": {
       "title": "Entity",

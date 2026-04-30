@@ -4,7 +4,7 @@ upsOnHL7.dcmProperty:条件|<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]][!]=<regEx>格式
 upsOnHL7.dcmSchedule:时间条件|仅在指定的时间范围内应用此规则。
 upsOnHL7.dcmUPSLabel:过程步骤标签|创建的UPS中的过程步骤标签的值（0074,1204）。 {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。 例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。
 upsOnHL7.dcmUPSWorklistLabel:工作列表标签|创建的UPS中工作列表标签的值（0074,1202）。 {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。 如果不存在,或者在HL7消息中找不到值,则使用接收HL7应用程序的HL7应用程序名称。 例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。
-upsOnHL7.dcmUPSPriority:优先级|创建的UPS中计划的过程步骤的优先级值（0074,1200）。枚举值:HIGH,MEDIUM,LOW。 如果不存在,则应用MEDIUM。
+upsOnHL7.dcmUPSPriority:优先级|创建的UPS中计划的过程步骤的优先级值（0074,1200）。
 upsOnHL7.dcmUPSInputReadinessState:准备输入状态|创建的UPS中准备输入状态的值（0040,4041）
 upsOnHL7.dcmUPSStartDateTimeDelay:计划的过程步骤开始日期和时间的延迟|在创建的UPS中,以PnDTnHnMn.nS格式,从接收到计划的过程步骤开始日期和时间的时间开始的延迟（0040,4005）。仅在找不到HL7消息中调度的步骤步骤的开始日期和时间时有效。
 upsOnHL7.dcmUPSCompletionDateTimeDelay:预期完成时间延迟|从PnDTnHnMn.nS格式创建的UPS中的预期完成时间接收时间起的延迟（0040,4011）。如果不存在,则不会设置完成预期日期和时间。

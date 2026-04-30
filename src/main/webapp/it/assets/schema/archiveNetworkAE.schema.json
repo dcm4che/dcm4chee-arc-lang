@@ -53,7 +53,7 @@
     "dcmStoreAccessControlID": {
       "title": "ID controllo accesso all'archivio",
       "description": "ID controllo accesso assegnato agli studi ricevuti da questo AE",
-      "type": "string"
+      "items": { "type": "string" }
     },
     "dcmAccessControlID": {
       "title": "ID Controllo accesso",

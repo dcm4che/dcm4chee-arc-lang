@@ -53,7 +53,7 @@
     "dcmStoreAccessControlID": {
       "title": "存储的访问控制ID",
       "description": "分配给此AE接收的检查的访问控制ID",
-      "type": "string"
+      "items": { "type": "string" }
     },
     "dcmAccessControlID": {
       "title": "访问控制ID",

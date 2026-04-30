@@ -4,7 +4,7 @@ upsOnUPSCompleted.dcmProperty:Condition|Conditions in format {attributeID[number
 upsOnUPSCompleted.dcmRequiresOtherUPSCompleted:Requires other UPS completed|Specifies Query Parameters for other UPS referring the same request (= Study Instance UID), which must be already be completed for creating this UPS. Format: {attributeID}={value}[&...]
 upsOnUPSCompleted.dcmUPSLabel:Procedure Step Label|Value of Procedure Step Label (0074,1204) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {StudyDescription}
 upsOnUPSCompleted.dcmUPSWorklistLabel:Worklist Label|Value of Worklist Label (0074,1202) in created UPS. {attributeID} will be replaced by the value of that attribute in the previous UPS dataset. Example: {StudyDescription}
-upsOnUPSCompleted.dcmUPSPriority:Priority|Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.
+upsOnUPSCompleted.dcmUPSPriority:Priority|Value of Scheduled Procedure Step Priority (0074,1200) in created UPS.
 upsOnUPSCompleted.dcmUPSInputReadinessState:Input Readiness State|Value of Input Readiness State (0040,4041) in created UPS
 upsOnUPSCompleted.dcmUPSStartDateTimeDelay:Scheduled Procedure Step Start DateTime Delay|Delay of Scheduled Procedure Step Start DateTime (0040,4005) in created UPS from receive time in format PnDTnHnMn.nS. No delay if absent.
 upsOnUPSCompleted.dcmUPSCompletionDateTimeDelay:Expected Completion DateTime Delay|Delay of Expected Completion DateTime (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.

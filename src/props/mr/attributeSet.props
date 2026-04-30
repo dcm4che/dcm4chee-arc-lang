@@ -1,6 +1,6 @@
 attributeSet:विशेषता सेट|QIDO-RS आणि WADO-RS मेटाडेटाच्या विनंत्यांचे 'includefields' प्राप्ति मापदंड आणि DIFF-RS विनंतीचे 'comparefield' प्राप्ति मापदंड, यांचा नामित विशेषता सेट.
 attributeSet.dicomDescription:विशेषता सेटचे वर्णन|विशेषता सेटचे अनियंत्रित मजकूर वर्णन.
-attributeSet.dcmAttributeSetType:विशेषता सेट प्रकार|QIDO-RS आणि WADO-RS मेटाडेटाच्या विनंत्यांचे 'includefields' प्राप्ति मापदंड आणि DIFF-RS विनंतीचे 'comparefield' प्राप्ति मापदंड, यांच्याद्वारे हा विशेषता सेटचा वापर केले जातील, हे निर्दिष्ट करते.
+attributeSet.dcmAttributeSetType:विशेषता सेट प्रकार|विशेषता सेटचा वापर केले जातील, हे निर्दिष्ट करते.
 attributeSet.dcmAttributeSetID:विशेषता सेट ID|QIDO-RS आणि WADO-RS मेटाडेटाच्या विनंत्यांचे 'includefields' प्राप्ति मापदंड आणि DIFF-RS विनंतीचे 'comparefield' प्राप्ति मापदंड, यांच्याद्वारे वापर केलेल्या या विशेषता सेटचे अभिज्ञापक.
 attributeSet.dcmAttributeSetTitle:विशेषता सेटचे शीर्षक|या विशेषता सेटचे शीर्षक.
 attributeSet.dcmAttributeSetNumber:विशेषता सेट क्रमांक|विशेषता सेट्स ऑर्डर करण्यासाठी वापरलेली संख्या.

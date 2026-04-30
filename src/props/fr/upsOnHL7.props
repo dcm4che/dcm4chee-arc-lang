@@ -4,7 +4,7 @@ upsOnHL7.dcmProperty:Conditions|Conditions in format <SEG>-<Seq#>[.<Comp#>[.<Sub
 upsOnHL7.dcmSchedule:Time Conditions|Apply this rule only within specified time ranges.
 upsOnHL7.dcmUPSLabel:Procedure Step Label|Value of Procedure Step Label (0074,1204) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
 upsOnHL7.dcmUPSWorklistLabel:Worklist Label|Value of Worklist Label (0074,1202) in created UPS. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} will be replaced by the value of that field in the received HL7 message. If absent or if value could not be found in HL7 Message, HL7 Application Name of the receiving HL7 Application will be used. Examples: MSH-9 or ORC-1[.1] or ORC-10[.2[.1]]
-upsOnHL7.dcmUPSPriority:Priority|Value of Scheduled Procedure Step Priority (0074,1200) in created UPS. Enumerated Values: HIGH, MEDIUM, LOW. If absent, MEDIUM will be applied.
+upsOnHL7.dcmUPSPriority:Priority|Value of Scheduled Procedure Step Priority (0074,1200) in created UPS.
 upsOnHL7.dcmUPSInputReadinessState:Input Readiness State|Value of Input Readiness State (0040,4041) in created UPS
 upsOnHL7.dcmUPSStartDateTimeDelay:Scheduled Procedure Step Start DateTime Delay|Delay of Scheduled Procedure Step Start DateTime (0040,4005) in created UPS from receive time in format PnDTnHnMn.nS. Only effective, if no Scheduled Procedure Step Start DateTime is found in HL7 Message.
 upsOnHL7.dcmUPSCompletionDateTimeDelay:Expected Completion DateTime Delay|Delay of Expected Completion DateTime (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.

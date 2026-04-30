@@ -16,7 +16,7 @@
     "dcmStoreAccessControlID": {
       "title": "存储访问控制ID",
       "description": "存储分配给符合所有条件的属性的访问控制ID",
-      "type": "string"
+      "items": { "type": "string" }
     },
     "dcmEntity": {
       "title": "Entity",

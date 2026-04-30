@@ -53,7 +53,7 @@
     "dcmStoreAccessControlID": {
       "title": "साठवण प्रवेश नियंत्रण ID",
       "description": "या AE द्वारे साठवलेले अभ्यासांवर नियुक्त प्रवेश निरीक्षण ID चे मूल्य.",
-      "type": "string"
+      "items": { "type": "string" }
     },
     "dcmAccessControlID": {
       "title": "प्रवेश निरीक्षण ID",

@@ -15,8 +15,8 @@
     },
     "dcmStoreAccessControlID": {
       "title": "Store Access Control ID",
-      "description": "Access Control ID assigned to whole Studies or individual Series which attributes match all conditions.",
-      "type": "string"
+      "description": "Access Control IDs assigned to whole Studies or individual Series which attributes match all conditions.",
+      "items": { "type": "string" }
     },
     "dcmEntity": {
       "title": "Entity",

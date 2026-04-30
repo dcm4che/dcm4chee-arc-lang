@@ -1,6 +1,6 @@
 attributeSet:Conjunto de Atributos|Conjunto de Atributos Nominal para el Parámetro de Consulta 'includefields' de los Metadatos QIDO-RS y WADO-RS o por el Parámetro de Consulta 'comparefield' de las peticiones DIFF-RS.
 attributeSet.dicomDescription:Descripción del conjunto de atributos|Descripción en texto sin restricciones de este conjunto de atributos
-attributeSet.dcmAttributeSetType:Tipo de conjunto de atributos|Especifica si este conjunto de atributos es utilizado por el parámetro de consulta "includefields" de los metadatos QIDO-RS y WADO-RS o por el parámetro de consulta "comparefield" de las solicitudes DIFF-RS.
+attributeSet.dcmAttributeSetType:Tipo de conjunto de atributos|Specifies usage of this Attribute Set Type.
 attributeSet.dcmAttributeSetID:ID del conjunto de atributos|ID utilizado por el parámetro de consulta "includefields" de las solicitudes de metadatos QIDO-RS y WADO-RS y por el parámetro de consulta "comparefield" de las solicitudes DIFF-RS para hacer referencia a este conjunto de atributos.
 attributeSet.dcmAttributeSetTitle:Título del conjunto de atributos|Título de este conjunto de atributos.
 attributeSet.dcmAttributeSetNumber:Número del conjunto de atributos|Número utilizado para ordenar los conjuntos de atributos.

@@ -16,7 +16,7 @@
     "dcmStoreAccessControlID": {
       "title": "ID de control de acceso de la tienda",
       "description": "ID de control de acceso asignado a los estudios cuyos atributos coinciden con todas las condiciones.",
-      "type": "string"
+      "items": { "type": "string" }
     },
     "dcmEntity": {
       "title": "Entity",

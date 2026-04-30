@@ -53,7 +53,7 @@
     "dcmStoreAccessControlID": {
       "title": "Almacenar ID de Control de Acceso",
       "description": "ID de Control de Acceso asignado a los Estudios recibidos por este AE",
-      "type": "string"
+      "items": { "type": "string" }
     },
     "dcmAccessControlID": {
       "title": "ID de control de acceso",

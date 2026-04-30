@@ -3,11 +3,11 @@ dcmDevice.dcmRoleSelectionNegotiationLenient:Role Selection Negotiation Lenient|
 dcmDevice.dcmLimitOpenAssociations:Association Limit|Maximal number of open DICOM connections; rejects Association requests if the limit is exceeded; 0 = unlimited.
 dcmDevice.dcmLimitAssociationsInitiatedBy:Association Limit for AE|Maximal number of open DICOM connections initiated by a particular Application Entity (AE) in format <ae-title>=<number>; rejects Association requests from that AE if the limit is exceeded.
 dcmDevice.dcmTrustStoreURL:Trust Store URL|URL of Trust Store with Certificates for DICOM nodes that are authorized to connect to this node; overrides dicomAuthorizedNodeCertificateReference
-dcmDevice.dcmTrustStoreType:Trust Store Type|Key Store Type of Trust Store specified by dcmTrustStoreURL. Enumerated values: JKS, PKCS12.
+dcmDevice.dcmTrustStoreType:Trust Store Type|Key Store Type of Trust Store specified by dcmTrustStoreURL.
 dcmDevice.dcmTrustStorePin:Trust Store Pin|Key Store Password of Trust Store specified by Trust Store URL
 dcmDevice.dcmTrustStorePinProperty:Trust Store Pin Property|System property of Key Store Password of Trust Store specified by Trust Store URL
 dcmDevice.dcmKeyStoreURL:Key Store URL|URL of Key Store with private Key and certificate used to identify this DICOM node in TLS connections
-dcmDevice.dcmKeyStoreType:Key Store Type|Key Store Type of Key Store specified by Key Store URL. Enumerated values: JKS, PKCS12.
+dcmDevice.dcmKeyStoreType:Key Store Type|Key Store Type of Key Store specified by Key Store URL.
 dcmDevice.dcmKeyStorePin:Key Store Pin|Key Store Password of Key Store specified by Key Store URL
 dcmDevice.dcmKeyStorePinProperty:Key Store Pin Property|System property of Key Store Password of Key Store specified by Key Store URL
 dcmDevice.dcmKeyStoreKeyPin:Key Store Key Pin|Key Password of Key Store specified by Key Store URL

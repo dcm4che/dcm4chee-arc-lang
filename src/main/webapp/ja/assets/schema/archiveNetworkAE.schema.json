@@ -53,7 +53,7 @@
     "dcmStoreAccessControlID": {
       "title": "保存 アクセス 制御 ID",
       "description": "この AEが 受け取った 検査に 割り当てられた アクセス 制御 ID",
-      "type": "string"
+      "items": { "type": "string" }
     },
     "dcmAccessControlID": {
       "title": "アクセス 制御 ID",

@@ -3,11 +3,11 @@ dcmDevice.dcmRoleSelectionNegotiationLenient:Negociación de Selección de Rol L
 dcmDevice.dcmLimitOpenAssociations:Límite de asociación|Número máximo de conexiones DICOM abiertas; rechaza las solicitudes de asociación si se supera el límite; 0 = ilimitado.
 dcmDevice.dcmLimitAssociationsInitiatedBy:Límite de asociación para AE|Número máximo de conexiones DICOM abiertas iniciadas por una entidad de aplicación (AE) concreta en formato <ae-title>=<number>; rechaza las solicitudes de asociación de esa AE si se supera el límite.
 dcmDevice.dcmTrustStoreURL:Confiar en la URL del almacén|URL del almacén de confianza con certificados para nodos DICOM que están autorizados a conectarse a este nodo; anula dicomAuthorizedNodeCertificateReference.
-dcmDevice.dcmTrustStoreType:Tipo de Almacén de Confianza|Almacén de Claves Tipo de Almacén de Confianza especificado por dcmTrustStoreURL. Valores enumerados: JKS, PKCS12.
+dcmDevice.dcmTrustStoreType:Tipo de Almacén de Confianza|Almacén de Claves Tipo de Almacén de Confianza especificado por dcmTrustStoreURL.
 dcmDevice.dcmTrustStorePin:Trust Store Pin|Contraseña de Almacén de confianza especificada por la URL de Almacén de confianza.
 dcmDevice.dcmTrustStorePinProperty:Propiedad de PIN de almacén de confianza|Propiedad del sistema del almacén de claves Contraseña del almacén de confianza especificada por la URL del almacén de confianza.
 dcmDevice.dcmKeyStoreURL:URL de almacén de claves|URL de almacén de claves con clave privada y certificado utilizado para identificar este nodo DICOM en conexiones TLS.
-dcmDevice.dcmKeyStoreType:Tipo de almacén de claves|Tipo de almacén de claves especificado por la URL del almacén de claves. Valores enumerados: JKS, PKCS12.
+dcmDevice.dcmKeyStoreType:Tipo de almacén de claves|Tipo de almacén de claves especificado por la URL del almacén de claves.
 dcmDevice.dcmKeyStorePin:PIN del almacén de claves|Contraseña del almacén de claves especificado por la URL del almacén de claves.
 dcmDevice.dcmKeyStorePinProperty:Propiedad Pin de Almacén de Claves|Propiedad del sistema de Almacén de Claves Contraseña de Almacén de Claves especificada por URL de Almacén de Claves.
 dcmDevice.dcmKeyStoreKeyPin:PIN de clave de almacén de claves|Contraseña de almacén de claves especificada por URL de almacén de claves.

@@ -3,11 +3,11 @@ dcmDevice.dcmRoleSelectionNegotiationLenient:役割 選択 ネゴシエーショ
 dcmDevice.dcmLimitOpenAssociations:関連付け 制限|開いて いる DICOM 接続の 最大数; 制限を 超えた 場合、 関連付け 要求 を 拒否します; 0 = 無制限。
 dcmDevice.dcmLimitAssociationsInitiatedBy:AEの 関連付け 制限|<ae-title>=<number> 形式で 特定の アプリケーション エンティティ (AE)に よって 開始された 開いて いる DICOM 接続の 最大数; 制限を 超えた 場合、 その AEからの関連付け 要求を 拒否します。
 dcmDevice.dcmTrustStoreURL:トラストストア URL|この ノードへの 接続が 許可されて いる DICOM ノードの 証明書を 含む トラストストア URL; 「dicomAuthorizedNodeCertificateReference」を 上書きします。
-dcmDevice.dcmTrustStoreType:トラストストア タイプ|トラストストア URLで 指定された トラストストアの キーストア タイプ。 列挙値 : JKS, PKCS12.
+dcmDevice.dcmTrustStoreType:トラストストア タイプ|トラストストア URLで 指定された トラストストアの キーストア タイプ。
 dcmDevice.dcmTrustStorePin:トラストストア ピン|トラストストア URLで 指定された トラストストアの キーストア パスワード
 dcmDevice.dcmTrustStorePinProperty:トラストストア ピン 属性|トラストストア URLで 指定された トラストストアの キーストア パスワードの システム 属性
 dcmDevice.dcmKeyStoreURL:キーストア URL|TLS 接続で この DICOM ノードを 識別するために 使用される 秘密鍵と 証明書を 含む キーストア URL
-dcmDevice.dcmKeyStoreType:キーストア タイプ|キーストア URLで 指定された キーストアの タイプ。 列挙値 : JKS, PKCS12.
+dcmDevice.dcmKeyStoreType:キーストア タイプ|キーストア URLで 指定された キーストアの タイプ。
 dcmDevice.dcmKeyStorePin:キーストア ピン|キーストア URLで 指定された キーストアの キーストア パスワード
 dcmDevice.dcmKeyStorePinProperty:キーストア ピン 属性|キーストア URLで 指定された キーストアの キーストア パスワードの システム 属性
 dcmDevice.dcmKeyStoreKeyPin:キーストアの キー ピン|キーストア URLで 指定された キーストアの キー パスワード

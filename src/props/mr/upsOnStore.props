@@ -4,12 +4,12 @@ upsOnStore.dcmProperty:अटी|अटी या प्रारूपात (S
 upsOnStore.dcmSchedule:वेळ अटी|हा नियम केवळ निर्दिष्ट कालावधी दरम्यान लागू करा.
 upsOnStore.dcmUPSLabel:प्रक्रिया स्टेप लेबल|तयार केलेल्या UPS मध्ये प्रक्रियेच्या स्टेप लेबलचे मूल्य (००७४,१२०४). प्राप्त झालेल्या डेटासेटमधील {attributeID} च्या मूल्याने बदलले जाईल. उदाहरण : {StudyDescription}.
 upsOnStore.dcmUPSWorklistLabel:वर्कलिस्ट लेबल|तयार केलेल्या UPS मध्ये कार्यसूची लेबलचे मूल्य (००७४,१२०२). प्राप्त झालेल्या डेटासेटमधील {attributeID} च्या मूल्याने बदलले जाईल. उदाहरण : {StudyDescription}.
-upsOnStore.dcmUPSPriority:अग्रक्रम|तयार केलेल्या UPS मध्ये अनुसूचित प्रक्रियेच्या स्टेप प्राधान्यचे मूल्य (००७४,१२००). गणित मूल्ये: HIGH, MEDIUM, LOW. गैरहजर राहिल्यास, MEDIUM लागू केले जाईल.
+upsOnStore.dcmUPSPriority:अग्रक्रम|तयार केलेल्या UPS मध्ये अनुसूचित प्रक्रियेच्या स्टेप प्राधान्यचे मूल्य (००७४,१२००).
 upsOnStore.dcmUPSInputReadinessState:इनपुट तत्परता स्थिती|तयार केलेल्या UPS मध्ये इनपुट तत्परता स्थितीचे (००४०,४०४१) मूल्य.
 upsOnStore.dcmUPSStartDateTimeDelay:अनुसूचित प्रक्रिया स्टेप प्रारंभ तारीख आणि वेळ विलंब|प्राप्त झालेल्या वेळेपासून अनुसूचित प्रक्रिया स्टेप प्रारंभ तारीख आणि वेळेचे विलंब (००४०,४००५) या प्रारूपात PnDTnHnMn.nS. केवळ प्रभावी, जर कोणतीही अनुसूची प्रक्रिया स्टेप प्रारंभ तारीख दिनांक HL7 संदेशामध्ये आढळला नाही.
 upsOnStore.dcmUPSCompletionDateTimeDelay:अपेक्षित पूर्ण होण्याची तारीख आणि वेळ विलंब|प्राप्त झालेल्या वेळेपासून अपेक्षित पूर्ण होण्याची तारीख आणि वेळेचे विलंब (००४०,४०११) या प्रारूपात PnDTnHnMn.nS. अनुपस्थित असल्यास, कोणतीही अपेक्षित समाप्ती तारीख आणि वेळ संच केला जाणार नाही.
 upsOnStore.dcmUPSInstanceUIDBasedOnName:नावावर आधारित UPS दृष्टांत UID|तयार केलेल्या UPS मध्ये नाव आधारित SOP दृष्टांत UID (०००८,००१८) व्युत्पन्न करण्यासाठी वापरलेले मूल्य. प्राप्त झालेल्या डेटासेटमधील {attributeID} च्या मूल्याने बदलले जाईल. अनुपस्थित असल्यास, यादृच्छिक व्युत्पन्न केलेला एसओपी दृष्टांत UID (०००८,००१८) वापरला जाईल.
-upsOnStore.dcmUPSIncludeInputInformation:इनपुट माहिती सामावणे|प्राप्त झालेल्या दृष्टांतांना निर्माण केलेल्या UPS मध्ये इनपुट माहिती क्रम (००४०,४०२१) मध्ये संदर्भित करायला दर्शविते. SINGLE (= आधीपासून असलेले UPS ला अद्यतनित करू नका), APPEND (= आधीपासून असलेले अनुसूचित (SCHEDULED) स्थिति चे UPS ला अद्यतनित करा), SINGLE_OR_CREATE (= आधीपासून असलेले UPS असेल तर, साधित UID ने नवीन UPS निर्माण करा), APPEND_OR_CREATE (= आधीपासून असलेले UPS अनुसूचित (SCHEDULED) स्थिति मध्ये नसेल तर, साधित UID ने नवीन UPS निर्माण करा).
+upsOnStore.dcmUPSIncludeInputInformation:इनपुट माहिती सामावणे|प्राप्त झालेल्या दृष्टांतांना निर्माण केलेल्या UPS मध्ये इनपुट माहिती क्रम (००४०,४०२१) मध्ये संदर्भित करायला दर्शविते.
 upsOnStore.dcmUPSIncludePatient:UPS Include Patient|Indicates if patient (associated with created UPS) is created using patient attributes in received object; true if absent.
 upsOnStore.dcmDestinationAE:गंतव्य AE|DICOM अनुप्रयोग घटकाचे शीर्षक ज्यामध्ये दृष्टांते साठवले जातील.
 upsOnStore.dcmEntity:जमा होण्याची व्याप्ती|जमा होण्याची व्याप्ती.
