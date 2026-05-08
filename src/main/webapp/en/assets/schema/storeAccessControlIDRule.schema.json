@@ -17,9 +17,7 @@
       "title": "Store Access Control ID",
       "description": "Access Control IDs assigned to whole Studies or individual Series which attributes match all conditions.",
       "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "items": { "type": "string" }
     },
     "dcmEntity": {
       "title": "Entity",

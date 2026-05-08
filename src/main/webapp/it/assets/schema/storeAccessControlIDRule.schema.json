@@ -16,6 +16,7 @@
     "dcmStoreAccessControlID": {
       "title": "ID controllo accesso all'archivio",
       "description": "ID controllo accesso assegnato agli studi i cui attributi soddisfano tutte le condizioni",
+      "type": "array",
       "items": { "type": "string" }
     },
     "dcmEntity": {
