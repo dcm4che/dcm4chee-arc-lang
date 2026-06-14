@@ -1,0 +1,51 @@
+{
+  "title": "Konfiguracija UI tabele",
+  "description": "Konfiguracija Study tabele za pro verziju",
+  "type": "object",
+  "required": [
+    "dcmuiTableConfigName"
+  ],
+  "properties": {
+    "dcmuiTableConfigName": {
+      "title": "Ime konfiguracije",
+      "description": "Ime UI Table konfiguracije",
+      "type": "string"
+    },
+    "dcmuiTableConfigUsername": {
+      "title": "Korisničko ime",
+      "description": "Korisničko ime kojem ovaj skup treba biti dostupan",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiTableConfigRoles": {
+      "title": "Uloga",
+      "description": "Korisnička uloga koja može koristiti ovaj skup (Ako postavite korisničko ime, uloga će biti ignorisana)",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiTableID": {
+      "title": "ID tabele",
+      "description": "ID tabele u UI-ju za koju konfiguracija treba da bude na snazi",
+      "type": "string"
+    },
+    "dcmuiTableConfigIsDefault": {
+      "title": "Podrazumevano",
+      "description": "Postavi ovaj Column-Set kao podrazumevani. (Uverite se da je samo jedan od Set - siblings child postavljen kao podrazumevani).",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiTableColumnConfigObjects": {
+      "title": "Kolone tabele",
+      "description": "Definiši kolone tabele",
+      "titleKey": "{dcmuiColumnName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiTableColumns.schema.json"
+      }
+    }
+  }
+}

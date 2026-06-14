@@ -1,0 +1,5 @@
+queryRetrieveView:Pregled upita/preuzimanja|Zadaje ponašanje pri sačuvavanju napomene o odbacivanju
+queryRetrieveView.dcmQueryRetrieveViewID:ID pregleda upita/preuzimanja|Query/Retrieve View identifikator
+queryRetrieveView.dcmShowInstancesRejectedByCode:Prikaži instance odbijene po kodu|Ukazuje da li Q/R usluge treba da prikažu instance odbijene navedenim kodom u formatu (CV, CSD, 'CM')
+queryRetrieveView.dcmHideRejectionNoteWithCode:Sakrij napomenu o odbacivanju sa kodom|Ukazuje da li Q/R usluge treba da sakriju Rejection Notes sa navedenim kodom u formatu (CV, CSD, 'CM')
+queryRetrieveView.dcmHideNotRejectedInstances:Sakrij instance koje nisu odbijene|Ukazuje da li Q/R usluge treba da sakriju instance koje nisu odbijene iz bilo kog razloga.

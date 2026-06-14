@@ -1,0 +1,3 @@
+auditRecordRepository:Repozitorijum zapisa revizije|Informacije povezane sa repozitorijumom zapisa revizije
+auditRecordRepository.dicomNetworkConnectionReference:Referenca mrežne konekcije|JSON Pointers na Network Connection objekte ovog Audit Record Repository-ja
+auditRecordRepository.dicomInstalled:instaliran|Tačno ako je ARR instaliran na mreži. Ako nije navedeno, informacija o statusu instalacije ARR se nasleđuje od uređaja

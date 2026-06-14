@@ -1,0 +1,34 @@
+{
+  "title": "UI konfiguracija jezika",
+  "description": "UI Language konfiguracija",
+  "type": "object",
+  "required": [
+    "dcmLanguages",
+    "dcmuiLanguageConfigName"
+  ],
+  "properties": {
+    "dcmuiLanguageConfigName": {
+      "title": "Ime konfiguracije jezika",
+      "description": "Ime Language Config-a",
+      "type": "string"
+    },
+    "dcmLanguages": {
+      "title": "Dostupni jezici",
+      "description": "Postavi jezike koji treba da budu dostupni u UI-ju (JSON fajlovi za te jezike moraju postojati u kodu, ako ne postoje otvorite Issue na github-u",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmLanguageChooser"
+    },
+    "dcmuiLanguageProfileObjects": {
+      "title": "Profil jezika",
+      "description": "Jezički profil za korisničko ime, ulogu ili sve",
+      "titleKey": "{dcmuiLanguageProfileName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiLanguageProfile.schema.json"
+      }
+    }
+  }
+}

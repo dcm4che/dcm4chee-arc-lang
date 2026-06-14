@@ -1,0 +1,68 @@
+{
+  "title": "Pravilo promene ID-a kontrole pristupa",
+  "description": "Change Access Control ID pravilo",
+  "type": "object",
+  "required": [
+    "cn",
+    "dicomAETitle",
+    "dcmStoreAccessControlID",
+    "dcmChangeAccessControlIDDelay"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime Change Access Control ID pravila",
+      "type": "string"
+    },
+    "dicomAETitle": {
+      "title": "Naslov arhivskog aplikacionog entiteta (AE)",
+      "description": "Title Archive Application Entity (AE) čiji konfigurisani Query Retrieve View i Access Control ID se primenjuju pri izboru Studies ili Series čijem dodeljenom Access Control ID treba promeniti.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmStoreAccessControlID": {
+      "title": "ID kontrole pristupa skladištu",
+      "description": "Novi Access Control ID dodeljen selektovanim studijama ili pojedinačnim serijama nakon navedenog kašnjenja nakon prijema prvog objekta studije. '*' uklanja prethodno dodeljeni Access Control ID, čineći studiju ili seriju dostupnom na svim Archive AE-ovima.",
+      "type": "string"
+    },
+    "dcmAccessControlID": {
+      "title": "ID kontrole pristupa",
+      "description": "Prethodni Access Control ID-ovi dodeljeni selektovanim studijama ili pojedinačnim serijama za promenu. Ako nije navedena vrednost, svi Access Control ID-ovi dostupni od strane navedenog Archive Application Entity (AE) će biti promenjeni.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmEntity": {
+      "title": "Entitet",
+      "description": "Ukazuje da li Access Control ID dodeljen studijama ili pojedinačnim serijama treba biti promenjen.",
+      "type": "string",
+      "default": "Study",
+      "enum": [
+        "Study",
+        "Series"
+      ]
+    },
+    "dcmEntitySelector": {
+      "title": "Birač entiteta",
+      "description": "Specificira ključeve podudaranja korišćene za selekciju primljenih studija ili serija čiji Access Control ID treba da bude ažuriran. Format: {key}={value}[&{key}={value}]..., sa {key} = {attributeID}. Ako nije naveden Entity Selector, Accession Control ID-ovi svih studija ili serija vidljivih za navedeni Archive AE će biti ažurirani na navedeni Store Access Control ID.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmEntitySelector"
+    },
+    "dcmChangeAccessControlIDDelay": {
+      "title": "Kašnjenje promene ID-a kontrole pristupa",
+      "description": "Kašnjenje nakon prijema prvog objekta studije/serije nakon kojeg će se Access Control ID povezan sa studijom ili uključujućom serijom promeniti u navedeni Store Access Control ID u ISO-8601 formatu trajanja PnDTnHnMn.nS.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmChangeAccessControlIDMaxDelay": {
+      "title": "Maksimalno kašnjenje promene ID-a kontrole pristupa",
+      "description": "Ukazuje na prestanak primene ovog pravila za studije/serije čiji je prvi objekat primljen pre navedenog intervala u ISO-8601 formatu trajanja PnDTnHnMn.nS. Obavezno ako postoje druga pravila za ponovnu promenu Access Control ID-a u budućnosti.",
+      "type": "string",
+      "format": "dcmDuration"
+    }
+  }
+}

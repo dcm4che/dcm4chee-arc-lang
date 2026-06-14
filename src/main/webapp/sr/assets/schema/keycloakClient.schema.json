@@ -1,0 +1,72 @@
+{
+  "title": "Keycloak klijent",
+  "description": "Keycloak klijent",
+  "type": "object",
+  "required": [
+    "dcmKeycloakClientID",
+    "dcmURI",
+    "dcmKeycloakRealm",
+    "dcmKeycloakGrantType",
+    "dcmTLSAllowAnyHostname",
+    "dcmTLSDisableTrustManager"
+  ],
+  "properties": {
+    "dcmKeycloakClientID": {
+      "title": "ID Keycloak klijenta",
+      "description": "Client ID korišćen u zahtevima za token.",
+      "type": "string",
+      "use": [
+        "$.dcmWebApp[*].dcmKeycloakClientID",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmUserIdentityNegotiationKeycloakClientID",
+        "$.dcmDevice.dcmArchiveDevice.dcmUserIdentityNegotiationKeycloakClientID"
+      ]
+    },
+    "dcmURI": {
+      "title": "URL servera",
+      "description": "Bazni URL Keycloak servera.",
+      "type": "string"
+    },
+    "dcmKeycloakRealm": {
+      "title": "Keycloak Realm",
+      "description": "Ime realm-a u zahtevima za token.",
+      "type": "string"
+    },
+    "dcmKeycloakGrantType": {
+      "title": "Tip Keycloak ovlašćenja",
+      "description": "Keycloak grant type korišćen u zahtevima za token.",
+      "type": "string",
+      "enum": [
+        "client_credentials",
+        "password"
+      ],
+      "default": "client_credentials"
+    },
+    "dcmKeycloakClientSecret": {
+      "title": "Tajna Keycloak klijenta",
+      "description": "Keycloak client secret. Obavezno ako je grant type = client_credentials.",
+      "type": "string"
+    },
+    "dcmTLSAllowAnyHostname": {
+      "title": "TLS dozvoli bilo koje ime hosta",
+      "description": "Ako drugi server zahteva HTTPS i ova konfiguraciona opcija je postavljena na true, sertifikat drugog servera se validira putem truststore-a, ali se validacija imena hosta ne vrši.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmTLSDisableTrustManager": {
+      "title": "TLS onemogući Trust Manager",
+      "description": "Ako drugi server zahteva HTTPS i ova konfiguraciona opcija je postavljena na true, ne morate navesti truststore",
+      "type": "boolean",
+      "default": false
+    },
+    "uid": {
+      "title": "ID korisnika",
+      "description": "User ID. Obavezno ako je grant type = password.",
+      "type": "string"
+    },
+    "userPassword": {
+      "title": "Korisnička lozinka",
+      "description": "User Password. Obavezno ako je grant type = password.",
+      "type": "string"
+    }
+  }
+}

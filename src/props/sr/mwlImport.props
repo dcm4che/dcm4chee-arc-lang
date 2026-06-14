@@ -1,0 +1,11 @@
+mwlImport:MWL uvoz|Specificira uvoz Scheduled Procedure Step iz eksternog MWL SCP-a
+mwlImport.dcmMWLImportID:ID MWL uvoza|ID MWL uvoza
+mwlImport.dicomAETitle:Pozivajući AE naslov|Calling AE Title korišćen u A-ASSOCIATE-RQ za eksterni MWL SCP
+mwlImport.dcmMergeMWLSCP:Izvorni MWL SCP|AE Title eksternog MWL SCP-a za upit za Scheduled Procedure Step za uvoz.
+mwlImport.dcmMWLWorklistLabel:MWL oznaka Worklist-e|Vrednost Worklist Label (0074,1202) uvezenih MWL stavki preuzetih sa Source MWL SCP. Ako nije navedeno, uvezene MWL stavke pružaju svi MWL SCP Archive Network AE.
+mwlImport.dcmDuration:Uvezi ne pre|Uvoz Scheduled Procedure Steps iz externog MWL SCP za Scheduled Procedure Steps zakazane ranije u budućnosti od navedenog intervala u ISO-8601 formatu trajanja PnDTnHnMn.nS; ako nije navedeno, uvoze se svi Scheduled Procedure Steps koji su zakazani u budućnosti.
+mwlImport.dcmMWLImportNotOlder:Uvezi ne starije od|Uvoz Scheduled Procedure Steps iz externog MWL SCP za Scheduled Procedure Steps zakazane kasnije u prošlosti od navedenog intervala u ISO-8601 formatu trajanja PnDTnHnMn.nS; ako nije navedeno, uvoze se svi Scheduled Procedure Steps koji su zakazani u prošlosti.
+mwlImport.dcmMWLImportFilterBySCU:Filtriraj po SCU|Označava da se navedeni filter primenjuje na podudaranja koja vrati eksterni MWL SCP.
+mwlImport.dcmMWLImportDeleteNotFound:Obriši nepronađeno|Ukazuje na brisanje Scheduled Procedure Steps iz lokalnog MWL-a koje nije vratio eksterni MWL SCP.
+mwlImport.dcmProperty:Ključevi podudaranja|Filter atributi u formatu ({AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword})={value}. Npr: ScheduledProcedureStepSequence.ScheduledStationAETitle=MODALITY_XY
+mwlImport.dcmIncludeField:Ključevi vraćanja|Atributi u formatu (all|{AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword}) koji se traže od eksternog MWL SCP-a dodatno na atribute koje MWL SCP-ovi moraju podržavati prema DICOM-u. 'all' traži sve atribute konfigurisane u Patient i MWL Attribute Filter-u arhive.

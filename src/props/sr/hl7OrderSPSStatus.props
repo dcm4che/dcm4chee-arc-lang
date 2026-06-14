@@ -1,0 +1,3 @@
+hl7OrderSPSStatus:SPS status za HL7 nalog|Specificira SPS Status DICOM MWL stavki kreiranih/ažuriranih na primljenim HL7 ORM^O01, OMI^O23, OMG^O19 porukama
+hl7OrderSPSStatus.dcmSPSStatus:Kôd statusa zakazanog koraka procedure|Status kod Scheduled Procedure Step-a
+hl7OrderSPSStatus.hl7OrderControlStatus:Status HL7 kontrole naloga|Kombinacije HL7 Order Control Status Code-a. Ove kombinacije se referišu na vrednosti prisutne u ORC-1_ORC-5.

@@ -1,0 +1,225 @@
+{
+  "title": "Ekstenzija mrežne konekcije",
+  "description": "dcm4che vlasnički atributi mrežne konekcije",
+  "type": "object",
+  "required": [
+    "dcmProtocol",
+    "dcmTLSNeedClientAuth",
+    "dcmTLSProtocol",
+    "dcmTCPBacklog",
+    "dcmTCPCloseDelay",
+    "dcmTCPNoDelay",
+    "dcmSendPDULength",
+    "dcmReceivePDULength",
+    "dcmMaxOpsPerformed",
+    "dcmMaxOpsInvoked",
+    "dcmPackPDV",
+    "dcmRetrieveTimeoutTotal",
+    "dcmAATimeout"
+  ],
+  "properties": {
+    "dcmProtocol": {
+      "title": "Protokol",
+      "description": "Protokol Network Connection-a.",
+      "type": "string",
+      "default": "DICOM",
+      "enum": [
+        "DICOM",
+        "HL7",
+        "HL7_MLLP2",
+        "SYSLOG_TLS",
+        "SYSLOG_UDP",
+        "HTTP"
+      ]
+    },
+    "dcmHTTPProxy": {
+      "title": "HTTP proxy",
+      "description": "HTTP Proxy: [user:password@]host:port",
+      "type": "string"
+    },
+    "dcmTLSNeedClientAuth": {
+      "title": "TLS zahteva autentifikaciju klijenta",
+      "description": "Ukazuje da li je TLS autentifikacija klijenta obavezna.",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmTLSProtocol": {
+      "title": "TLS protokol",
+      "description": "Podržani TLS protokoli.",
+      "default": [
+        "TLSv1.2"
+      ],
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "TLSv1.3",
+          "TLSv1.2",
+          "TLSv1.1",
+          "TLSv1",
+          "SSLv3"
+        ]
+      }
+    },
+    "dcmTLSEndpointIdentificationAlgorithm": {
+      "title": "Algoritam identifikacije TLS krajnje tačke",
+      "description": "Ukazuje na procedure identifikacije ili verifikacije krajnje tačke tokom TLS handshake-a.",
+      "type": "string",
+      "enum": [
+        "HTTPS",
+        "LDAPS"
+      ]
+    },
+    "dcmTCPBacklog": {
+      "title": "TCP zaostatak",
+      "description": "Maksimalna dužina reda za dolazne TCP konekcije.",
+      "type": "integer",
+      "default": 50,
+      "minimum": 1
+    },
+    "dcmTCPConnectTimeout": {
+      "title": "Istek TCP konekcije",
+      "description": "TCP connect timeout u ms; bez timeout-a ako nije navedeno.",
+      "type": "integer",
+      "minimum": 100
+    },
+    "dcmTCPCloseDelay": {
+      "title": "Kašnjenje TCP zatvaranja",
+      "description": "TCP socket close delay u ms nakon slanja A-ASSOCIATE-RJ, A-RELEASE-RP ili A-ABORT PDU.",
+      "type": "integer",
+      "default": 50,
+      "minimum": 0
+    },
+    "dcmTCPSendBufferSize": {
+      "title": "Veličina TCP bafera slanja",
+      "description": "TCP send buffer veličina; koristi sistemske podrazumevane vrednosti ako nije navedeno",
+      "type": "integer",
+      "minimum": 1024
+    },
+    "dcmTCPReceiveBufferSize": {
+      "title": "Veličina TCP bafera prijema",
+      "description": "TCP receive buffer veličina; koristi sistemske podrazumevane vrednosti ako nije navedeno",
+      "type": "integer",
+      "minimum": 1024
+    },
+    "dcmTCPNoDelay": {
+      "title": "TCP bez kašnjenja",
+      "description": "Omogući/onemogući TCP_NODELAY (onemogući/omogući Nagle algoritam).",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmBindAddress": {
+      "title": "Adresa vezivanja",
+      "description": "Bind adresa slušnog soketa; koristi ime hosta konekcije ako nije navedeno",
+      "type": "string"
+    },
+    "dcmClientBindAddress": {
+      "title": "Adresa vezivanja klijenta",
+      "description": "Bind adresa odlaznih konekcija; koristi ime hosta konekcije ako nije navedeno",
+      "type": "string"
+    },
+    "dcmBlacklistedHostname": {
+      "title": "Crna lista imena hostova",
+      "description": "na crnoj listi DNS imena hostova",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmSendPDULength": {
+      "title": "Dužina PDU slanja",
+      "description": "Maksimalna dužina emitovanih PDU-ova.",
+      "type": "integer",
+      "default": 16378,
+      "minimum": 1024
+    },
+    "dcmReceivePDULength": {
+      "title": "Dužina PDU prijema",
+      "description": "Maksimalna dužina primljenih PDU-ova.",
+      "type": "integer",
+      "default": 16378,
+      "minimum": 1024
+    },
+    "dcmMaxOpsPerformed": {
+      "title": "Maks. izvršenih operacija",
+      "description": "Maksimalan broj operacija za asinhrono izvršavanje; 0 = beskonačno.",
+      "type": "integer",
+      "default": 1,
+      "minimum": 0
+    },
+    "dcmMaxOpsInvoked": {
+      "title": "Maks. pozvanih operacija",
+      "description": "Maksimalan broj operacija za asinhrono pozivanje; 0 = beskonačno.",
+      "type": "integer",
+      "default": 1,
+      "minimum": 0
+    },
+    "dcmPackPDV": {
+      "title": "Pakovanje PDV",
+      "description": "Omogući/onemogući pakovanje komandnih i podatkovnih PDV-ova u jedan P-DATA-TF PDU.",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmAARQTimeout": {
+      "title": "AA-RQ istek vremena",
+      "description": "Timeout u ms za prijem A-ASSOCIATE-RQ PDU nakon TCP connect; bez timeout-a ako nije navedeno",
+      "type": "integer",
+      "minimum": 100
+    },
+    "dcmAAACTimeout": {
+      "title": "AA-AC istek vremena",
+      "description": "Timeout u ms za prijem A-ASSOCIATE-AC PDU nakon slanja A-ASSOCIATE-RQ PDU; bez timeout-a ako nije navedeno",
+      "type": "integer",
+      "minimum": 100
+    },
+    "dcmARRPTimeout": {
+      "title": "AR-RP istek vremena",
+      "description": "Timeout u ms za prijem A-RELEASE-RP PDU nakon slanja A-RELEASE-RQ PDU; bez timeout-a ako nije navedeno",
+      "type": "integer",
+      "minimum": 100
+    },
+    "dcmSendTimeout": {
+      "title": "Istek vremena slanja",
+      "description": "Timeout u ms za slanje drugih DIMSE RQ-ova osim C-STORE RQ-ova; bez timeout-a ako nije navedeno",
+      "type": "integer",
+      "minimum": 100
+    },
+    "dcmStoreTimeout": {
+      "title": "Istek vremena skladištenja",
+      "description": "Timeout u ms za slanje C-STORE RQ-ova; bez timeout-a ako nije navedeno",
+      "type": "integer",
+      "minimum": 100
+    },
+    "dcmResponseTimeout": {
+      "title": "Istek vremena odgovora",
+      "description": "Timeout u ms za prijem outstanding <br>- DIMSE RSP-ova osim C-MOVE / C-GET RSP-ova <br>- odgovora odlaznih HL7 poruka <br>- HTTP(S) odgovora <br>Bez timeout-a ako nije navedeno",
+      "type": "integer",
+      "minimum": 100
+    },
+    "dcmRetrieveTimeout": {
+      "title": "Istek vremena preuzimanja",
+      "description": "Timeout u ms za prijem outstanding C-GET ili C-MOVE RSP-ova; bez timeout-a ako nije navedeno",
+      "type": "integer",
+      "minimum": 100
+    },
+    "dcmRetrieveTimeoutTotal": {
+      "title": "Ukupan istek vremena preuzimanja",
+      "description": "Ukazuje da li tajmer sa navedenim timeout-om za izvršne C-GET i C-MOVE RSP-ove treba restartovati pri prijemu pending RSP-ova (=false) ili ne (=true).",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmIdleTimeout": {
+      "title": "Vreme neaktivnosti",
+      "description": "Ukazuje na prekidanje neaktivnih asocijacija nakon navedenog timeout-a u ms; bez timeout-a ako nije navedeno",
+      "type": "integer",
+      "minimum": 100
+    },
+    "dcmAATimeout": {
+      "title": "A-ABORT istek vremena",
+      "description": "Timeout u ms za čekanje završetka slanja bilo kog DIMSE pre slanja A-ABORT PDU, pokrenut od strane aplikacije ili isticanjem konfigurisanog drugog timeout-a ove Connection. Ako timeout istekne, TCP konekcija će biti zatvorena bez slanja A-ABORT.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 1000
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "title": "MWL vreme neaktivnosti",
+  "description": "MWL vreme neaktivnosti",
+  "type": "object",
+  "required": [
+    "cn",
+    "dicomAETitle",
+    "dcmMWLStatusOnIdle",
+    "dcmDuration"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime MWL Idle Timeout-a.",
+      "type": "string"
+    },
+    "dicomAETitle": {
+      "title": "AE naslov MWL SCP-a",
+      "description": "Archive AE Title MWL SCP-a na koji će se primeniti MWL Idle Timeout.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmAETitle": {
+      "title": "AE naslov zakazane stanice",
+      "description": "Scheduled Station AE Title(ovi) Scheduled Procedure Steps-a za koje se MWL Idle Timeout primenjuje. Ako nijedan nije naveden, MWL Idle Timeout se primenjuje na sve Scheduled Procedure Steps koje pruža MWL SCP.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmMWLStatusOnIdle": {
+      "title": "MWL status pri neaktivnosti",
+      "description": "Promena statusa neaktivnih Scheduled Procedure Steps u navedenu vrednost.",
+      "type": "string",
+      "enum": [
+        "CANCELED",
+        "DISCONTINUED",
+        "COMPLETED"
+      ]
+    },
+    "dcmDuration": {
+      "title": "Vreme neaktivnosti",
+      "description": "Timeout nakon kojeg se Status poklapajućih Scheduled Procedure Steps menja u navedeni konačni status.",
+      "type": "string",
+      "format": "dcmDuration"
+    }
+  }
+}

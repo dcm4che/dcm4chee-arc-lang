@@ -1,0 +1,77 @@
+{
+  "title": "MWL uvoz",
+  "description": "Specificira uvoz Scheduled Procedure Step iz eksternog MWL SCP-a",
+  "type": "object",
+  "required": [
+    "dcmMWLImportID",
+    "dicomAETitle",
+    "dcmMergeMWLSCP",
+    "dcmMWLImportFilterBySCU",
+    "dcmMWLImportDeleteNotFound"
+  ],
+  "properties": {
+    "dcmMWLImportID": {
+      "title": "ID MWL uvoza",
+      "description": "ID MWL uvoza",
+      "type": "string"
+    },
+    "dicomAETitle": {
+      "title": "Pozivajući AE naslov",
+      "description": "Calling AE Title korišćen u A-ASSOCIATE-RQ za eksterni MWL SCP",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmMergeMWLSCP": {
+      "title": "Izvorni MWL SCP",
+      "description": "AE Title eksternog MWL SCP-a za upit za Scheduled Procedure Step za uvoz.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmMWLWorklistLabel": {
+      "title": "MWL oznaka Worklist-e",
+      "description": "Vrednost Worklist Label (0074,1202) uvezenih MWL stavki preuzetih sa Source MWL SCP. Ako nije navedeno, uvezene MWL stavke pružaju svi MWL SCP Archive Network AE.",
+      "type": "string",
+      "format": "dcmMWLWorklistLabel"
+    },
+    "dcmDuration": {
+      "title": "Uvezi ne pre",
+      "description": "Uvoz Scheduled Procedure Steps iz externog MWL SCP za Scheduled Procedure Steps zakazane ranije u budućnosti od navedenog intervala u ISO-8601 formatu trajanja PnDTnHnMn.nS; ako nije navedeno, uvoze se svi Scheduled Procedure Steps koji su zakazani u budućnosti.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmMWLImportNotOlder": {
+      "title": "Uvezi ne starije od",
+      "description": "Uvoz Scheduled Procedure Steps iz externog MWL SCP za Scheduled Procedure Steps zakazane kasnije u prošlosti od navedenog intervala u ISO-8601 formatu trajanja PnDTnHnMn.nS; ako nije navedeno, uvoze se svi Scheduled Procedure Steps koji su zakazani u prošlosti.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmMWLImportFilterBySCU": {
+      "title": "Filtriraj po SCU",
+      "description": "Označava da se navedeni filter primenjuje na podudaranja koja vrati eksterni MWL SCP.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmMWLImportDeleteNotFound": {
+      "title": "Obriši nepronađeno",
+      "description": "Ukazuje na brisanje Scheduled Procedure Steps iz lokalnog MWL-a koje nije vratio eksterni MWL SCP.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmProperty": {
+      "title": "Ključevi podudaranja",
+      "description": "Filter atributi u formatu ({AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword})={value}. Npr: ScheduledProcedureStepSequence.ScheduledStationAETitle=MODALITY_XY",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmIncludeField": {
+      "title": "Ključevi vraćanja",
+      "description": "Atributi u formatu (all|{AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword}) koji se traže od eksternog MWL SCP-a dodatno na atribute koje MWL SCP-ovi moraju podržavati prema DICOM-u. 'all' traži sve atribute konfigurisane u Patient i MWL Attribute Filter-u arhive.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

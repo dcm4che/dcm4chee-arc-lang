@@ -1,0 +1,141 @@
+{
+  "title": "HL7 pravilo preduzimanja",
+  "description": "HL7 Prefetch pravilo",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmQueueName",
+    "dicomAETitle",
+    "dcmPrefetchCFindSCP",
+    "dcmPrefetchCMoveSCP",
+    "dcmPrefetchCStoreSCP",
+    "dcmDuration",
+    "dcmHistorySize"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime Prefetch pravila",
+      "type": "string"
+    },
+    "dcmQueueName": {
+      "title": "Ime reda",
+      "description": "Ime Task Queue-a korišćenog za planiranje retrieve zadataka okinutih ovim Prefetch pravilom",
+      "type": "string",
+      "format": "dcmQueueName"
+    },
+    "dicomAETitle": {
+      "title": "Arhivski AE naslov",
+      "description": "AE Title Archive Application Entity-ja korišćenog za preuzimanje selektovanih studija sa Prefetch C-Move SCP.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmPrefetchCFindSCP": {
+      "title": "Preduzimanje C-FIND SCP",
+      "description": "AE Title C-FIND SCP-a koji se upituje za studije koje odgovaraju navedenom Entity Selector-u.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmPrefetchCMoveSCP": {
+      "title": "Preduzimanje C-MOVE SCP",
+      "description": "AE Title C-MOVE SCP-a sa kojeg se preuzimaju selektovane studije.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmPrefetchCStoreSCP": {
+      "title": "Preduzimanje C-STORE SCP",
+      "description": "AE Title C-STORE SCP-a na koji se preuzimaju selektovane studije.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmDestinationCFindSCP": {
+      "title": "Odredišni C-FIND SCP",
+      "description": "Suzbij preuzimanje selektovanih studija sa Prefetch C-Move SCP-a koje su (već) dostupne na navedenom Destination C-FIND SCP-u sa jednakim ili većim brojem Number of Study Related Instances kao što je vraćeno od strane Prefetch C-FIND SCP-a. Preuzmi sve selektovane studije ako nije navedeno.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dicomDeviceName": {
+      "title": "Ime uređaja preduzimanja",
+      "description": "Specificira uređaj na kojem će Retrieve Task(ovi) biti planirani. Ako nije navedeno, Retrieve Task(ovi) se planiraju na uređaju koji je primio HL7 poruke.",
+      "type": "string",
+      "format": "dicomDeviceName"
+    },
+    "dcmProperty": {
+      "title": "Uslovi",
+      "description": "Uslovi u formatu {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Primer: MSH-4=FORWARD ili MSH-9=ORM\\^O01 ili PID-3[.3]=PIDIssuer ili PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmEntitySelector": {
+      "title": "Birač entiteta",
+      "description": "Specificira ključeve podudaranja korišćene za selekciju studija za prefetch. Format: {key}={value}[&{key}={value)]..., sa {key} = 'priors' | 'StudyAge' | {attributeID}. {value} u formatu '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] se zamenjuje vrednošću navedenog HL7 polja iz primljene HL7 poruke koja je okinula prefetch. Ako nije naveden Entity Selector, prefetch-ovaće se sve studije za pacijenta. Primer: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=$OBR-24' => selektiraj najviše 2 prethodne studije ne starije od 5 godina koje sadrže barem jednu seriju sa modality iz OBR-24.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmEntitySelector"
+    },
+    "dcmNullifyIssuerOfPatientID": {
+      "title": "Ignoriši izdavaoca autoriteta ID-a pacijenta",
+      "description": "Uslovno ignoriši Assigning Authority of Patient ID (PID-3.4) u primljenoj HL7 poruci koja je okinula prefetch za selekciju studija pacijenta.",
+      "type": "string",
+      "enum": [
+        "ALWAYS|Always ignore Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "MATCHING|Ignore matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "NOT_MATCHING|Ignore not matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient"
+      ]
+    },
+    "dcmIssuerOfPatientID": {
+      "title": "Izdavalac autoriteta ID-a pacijenta",
+      "description": "Assigning Authority Patient ID-a se podudara sa vrednostima u primljenoj HL7 poruci, ako je Assigning Authority of Patient ID postavljen na MATCHING ili NOT_MATCHING. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmPrefetchForIssuerOfPatientID": {
+      "title": "Preduzimanje za izdavaoca autoriteta ID-a pacijenta",
+      "description": "Assigning Authority Patient ID-a u primljenoj HL7 poruci korišćen za pretragu kvalifikovanog identifikatora pacijenta u listi identifikatora u PID-3. Studije koje odgovaraju navedenom Entity Selector-u ovog kvalifikovanog identifikatora pacijenta će biti upitane. Ako nije navedeno, podrazumevano će se koristiti prvi kvalifikovani identifikator pacijenta u PID-3. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
+      "type": "string"
+    },
+    "dcmDuration": {
+      "title": "Interval suzbijanja duplog preuzimanja",
+      "description": "Suzbij preuzimanje studija već preuzetih ne ranije od navedenog intervala radi izbegavanja duplih preuzimanja.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmHistorySize": {
+      "title": "Veličina suzbijanja istorije duplikata",
+      "description": "Maksimalan broj HL7 poruka sa različitim PID-3 koje pokreću ovo pravilo za pamćenje na history listi.",
+      "type": "integer",
+      "default": 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
+    "dcmPrefetchDateTimeField": {
+      "title": "Polje datuma/vremena preduzimanja",
+      "description": "Odgodi preuzimanje selektovanih studija na vreme iz referisanog HL7 TS polja u formatu {SEG}-{Seq#}[.{Comp#}]. Primer: TQ1-7 ili SCH-11.4. Rasporedi preuzimanje selektovanih studija odmah ako nije navedeno.",
+      "type": "string"
+    },
+    "dcmPrefetchInAdvance": {
+      "title": "Preduzimanje unapred",
+      "description": "Planiraj preuzimanje selektovanih studija unapred u odnosu na vreme iz konfigurisanog dcmPrefetchDateTimeField-a sa datim vremenskim rasponom u ISO-8601 formatu trajanja PnDTnHnMn.nS. Nije efikasno ako dcmPrefetchDateTimeField nije navedeno.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmSchedule": {
+      "title": "Zakazano preduzimanje",
+      "description": "Odgodi prefetch u navedene vremenske periode dodatno na konfigurisano Prefetch Date Time polje. Ako nije naveden Prefetch Schedule, stavi Prefetch zadatak u red za selektovane studije pacijenta na osnovu konfigurisanog Prefetch Date Time polja. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSchedule"
+    }
+  }
+}

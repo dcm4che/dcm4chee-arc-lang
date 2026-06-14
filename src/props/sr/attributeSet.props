@@ -1,0 +1,9 @@
+attributeSet:Skup atributa|Imenovani skup atributa za parametar upita 'includefields' QIDO-RS i WADO-RS metapodataka ili za parametar upita 'comparefield' DIFF-RS zahteva.
+attributeSet.dicomDescription:Opis skupa atributa|Nesputani tekstualni opis ovog Attribute Set
+attributeSet.dcmAttributeSetType:Tip skupa atributa|Specificira upotrebu ovog Attribute Set Type-a.
+attributeSet.dcmAttributeSetID:ID skupa atributa|ID koji koristi Query Parameter 'includefields' QIDO-RS i WADO-RS Metadata zahteva i Query Parameter 'comparefield' DIFF-RS zahteva za referenciranje ovog Attribute Set-a.
+attributeSet.dcmAttributeSetTitle:Naslov skupa atributa|Naslov ovog skupa atributa.
+attributeSet.dcmAttributeSetNumber:Broj skupa atributa|Broj korišćen za sortiranje Attribute Sets.
+attributeSet.dicomInstalled:instaliran|Bulova vrednost koja ukazuje da li je ovaj skup atributa trenutno instaliran na archive uređaju
+attributeSet.dcmTag:Oznaka atributa|DICOM oznaka kao heksadecimalni string
+attributeSet.dcmProperty:Svojstvo|Svojstvo u formatu <name>=<value>

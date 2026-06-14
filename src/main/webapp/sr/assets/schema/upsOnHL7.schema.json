@@ -1,0 +1,203 @@
+{
+  "title": "UPS na HL7",
+  "description": "Kreiraj/Ažuriraj Workitem u objedinjenoj Worklist pri prijemu HL7v2 poruke",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmUPSLabel",
+    "dcmUPSPriority",
+    "dcmUPSInputReadinessState",
+    "dcmUPSIncludeStudyInstanceUID",
+    "dcmUPSIncludeReferencedRequest",
+    "dcmURI"
+  ],
+  "properties": {
+    "hl7UPSOnHL7ID": {
+      "title": "ID UPS-a na HL7",
+      "description": "ID UPS on HL7 pravila",
+      "type": "string"
+    },
+    "dcmProperty": {
+      "title": "Uslovi",
+      "description": "Uslovi u formatu <SEG>-<Seq#>[.<Comp#>[.<SubComp#>]][!]=<regEx>. Primer: MSH-4=FORWARD ili MSH-9=ORM\\^O01 ili PID-3[.3]=PIDIssuer ili PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmSchedule": {
+      "title": "Vremenski uslovi",
+      "description": "Primeni ovo pravilo samo u navedenim vremenskim opsezima.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSchedule"
+    },
+    "dcmUPSLabel": {
+      "title": "Oznaka koraka procedure",
+      "description": "Vrednost Procedure Step Label (0074,1204) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dcmUPSWorklistLabel": {
+      "title": "Oznaka Worklist-e",
+      "description": "Vrednost Worklist Label (0074,1202) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Ako nije navedeno ili ako vrednost ne može biti pronađena u HL7 poruci, koristiće se HL7 Application Name prijemne HL7 Application. Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dcmUPSPriority": {
+      "title": "Prioritet",
+      "description": "Vrednost Scheduled Procedure Step Priority (0074,1200) u kreiranom UPS-u.",
+      "type": "string",
+      "default": "MEDIUM",
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "dcmUPSInputReadinessState": {
+      "title": "Stanje spremnosti unosa",
+      "description": "Vrednost Input Readiness State (0040,4041) u kreiranom UPS-u",
+      "type": "string",
+      "default": "READY",
+      "enum": [
+        "INCOMPLETE",
+        "UNAVAILABLE",
+        "READY"
+      ]
+    },
+    "dcmUPSStartDateTimeDelay": {
+      "title": "Kašnjenje datuma/vremena početka zakazanog koraka procedure",
+      "description": "Kašnjenje Scheduled Procedure Step Start DateTime (0040,4005) u kreiranom UPS-u od vremena prijema u formatu PnDTnHnMn.nS. Efikasno samo ako se ne pronađe Scheduled Procedure Step Start DateTime u HL7 poruci.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmUPSCompletionDateTimeDelay": {
+      "title": "Kašnjenje očekivanog datuma/vremena završetka",
+      "description": "Kašnjenje Expected Completion DateTime (0040,4011) u kreiranom UPS-u od vremena prijema u formatu PnDTnHnMn.nS. Ako nije navedeno, neće se postaviti Expected Completion Date i Time.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmUPSInstanceUIDBasedOnName": {
+      "title": "UID UPS instance na osnovu imena",
+      "description": "Vrednost koja se koristi za generisanje name based SOP Instance UID (0008,0018) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Ako nije navedeno, koristiće se random generisan SOP Instance UID (0008,0018). Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dcmDestinationAE": {
+      "title": "Odredišni AE",
+      "description": "Naslov DICOM aplikacionog entiteta u koji će instance biti sačuvane.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmUPSScheduledWorkitemCode": {
+      "title": "Kôd zakazanog Workitem-a",
+      "description": "Stavka sekvence koda zakazanog Workitem-a (0040,4018) u kreiranom UPS-u u formatu (CV, CSD, \"CM\").",
+      "type": "string"
+    },
+    "dcmUPSScheduledStationNameCode": {
+      "title": "Kôd imena zakazane stanice",
+      "description": "Stavka sekvence koda imena zakazane stanice (0040,4025) u kreiranom UPS-u u formatu (CV, CSD, \"CM\").",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSScheduledStationClassCode": {
+      "title": "Kôd klase zakazane stanice",
+      "description": "Stavka sekvence koda klase zakazane stanice (0040,4026) u kreiranom UPS-u u formatu (CV, CSD, \"CM\").",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSScheduledStationLocationCode": {
+      "title": "Kôd geografske lokacije zakazane stanice",
+      "description": "Stavka sekvence koda geografske lokacije zakazane stanice (0040,4027) u kreiranom UPS-u u formatu (CV, CSD, \"CM\").",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSScheduledHumanPerformerCode": {
+      "title": "Kôd zakazanog ljudskog izvršioca",
+      "description": "Stavka Human Performer Code Sequence (0040,4009) u stavci Scheduled Human Performers Sequence (0040,4034) u kreiranom UPS-u u formatu (CV, CSD, \"CM\").",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSScheduledHumanPerformerName": {
+      "title": "Ime zakazanog ljudskog izvršioca",
+      "description": "Vrednost Human Performer's Name (0040,4037) u stavci Scheduled Human Performers Sequence (0040,4034) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dcmUPSScheduledHumanPerformerOrganization": {
+      "title": "Organizacija zakazanog ljudskog izvršioca",
+      "description": "Vrednost Human Performer's Organization (0040,4036) u stavci Scheduled Human Performers Sequence (0040,4034) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dcmUPSIncludeStudyInstanceUID": {
+      "title": "Uključi Study Instance UID",
+      "description": "Ukazuje da li Study Instance UID (0020,000D) u primljenoj HL7 poruci treba biti uključen u kreirani UPS",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmUPSIncludeReferencedRequest": {
+      "title": "Uključi referencirani zahtev",
+      "description": "Ukazuje da li će Study Instance UID (0020,000D) u primljenoj HL7 poruci i navedeni Accession Number (0008,0050), Requested Procedure ID (0040,1001) i Requesting Service (0032,1033) biti uključeni u stavku Referenced Request Sequence (0040,A370) u kreiranom UPS-u. U suprotnom, uključuje se prazna Referenced Request Sequence (0040,A370).",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmStudyInstanceUID": {
+      "title": "Study Instance UID",
+      "description": "Vrednost Study Instance UID (0020,000D) u stavci Referenced Request Sequence (0040,A370) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dcmAdmissionID": {
+      "title": "Broj prijema",
+      "description": "Vrednost Admission ID (0038,0010) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dicomIssuerOfAdmissionID": {
+      "title": "Izdavalac ID-a prijema",
+      "description": "Vrednost Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) i Universal Entity ID Type (0040,0033) stavke Issuer of Admission ID Sequence (0038,0014) u kreiranom UPS-u. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "type": "string"
+    },
+    "dcmAccessionNumber": {
+      "title": "Pristupni broj",
+      "description": "Vrednost Accession Number (0008,0050) u stavci Referenced Request Sequence (0040,A370) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dicomIssuerOfAccessionNumber": {
+      "title": "Izdavalac pristupnog broja",
+      "description": "Vrednost Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) i Universal Entity ID Type (0040,0033) u stavki Issuer of Accession Number Sequence (0008,0051) u stavci Referenced Request Sequence (0040,A370) u kreiranom UPS-u. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "type": "string"
+    },
+    "dcmRequestedProcedureID": {
+      "title": "ID traženog postupka",
+      "description": "Vrednost Requested Procedure ID (0040,1001) u stavci Referenced Request Sequence (0040,A370) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dcmRequestedProcedureDescription": {
+      "title": "Opis traženog postupka",
+      "description": "Vrednost Requested Procedure Description (0032,1060) u stavci Referenced Request Sequence (0040,A370) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dcmRequestingPhysician": {
+      "title": "Lekar koji traži",
+      "description": "Vrednost Requesting Physician (0032,1032) u stavci Referenced Request Sequence (0040,A370) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dcmRequestingService": {
+      "title": "Servis koji traži",
+      "description": "Vrednost Requesting Service (0032,1033) u stavci Referenced Request Sequence (0040,A370) u kreiranom UPS-u. {<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]} će biti zamenjeno vrednošću tog polja u primljenoj HL7 poruci. Primeri: MSH-9 ili ORC-1[.1] ili ORC-10[.2[.1]]",
+      "type": "string"
+    },
+    "dcmURI": {
+      "title": "URI XSL stilnog lista",
+      "description": "Specificira URI XSL style sheet-a za transkodiranje primljene HL7 poruke za uključivanje atributa u kreirani UPS.",
+      "type": "string",
+      "default": "${jboss.server.temp.url}/dcm4chee-arc/hl7-order2ups.xsl"
+    }
+  }
+}

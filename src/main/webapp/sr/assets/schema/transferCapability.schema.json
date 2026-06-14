@@ -1,0 +1,46 @@
+{
+  "title": "Transfer Capability",
+  "description": "Svaka transfer capability specificira SOP klasu koju Network AE može da podrži, mod koji može da koristi (SCP ili SCU), i Transfer Syntax(e) koje može da koristi",
+  "type": "object",
+  "required": [
+    "dicomSOPClass",
+    "dicomTransferRole",
+    "dicomTransferSyntax"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime za Transfer Capability objekat",
+      "type": "string"
+    },
+    "dicomSOPClass": {
+      "title": "SOP klasa",
+      "description": "SOP Class UID",
+      "type": "string",
+      "format": "dcmSOPClass"
+    },
+    "dicomTransferRole": {
+      "title": "DICOM uloga prenosa",
+      "description": "DICOM Transfer uloga.",
+      "type": "string",
+      "enum": [
+        "SCP",
+        "SCU"
+      ]
+    },
+    "dicomTransferSyntax": {
+      "title": "Transfer Syntax",
+      "description": "Transfer syntax(e) koje mogu biti zahtevane kao SCU ili ponuđene kao SCP.",
+      "type": "array",
+      "format": "dcmTransferSyntax",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmTransferCapability": {
+      "title": "Ekstenzija Transfer Capability-ja",
+      "description": "dcm4che vlasnički atributi Transfer Capability-ja",
+      "$ref": "dcmTransferCapability.schema.json"
+    }
+  }
+}

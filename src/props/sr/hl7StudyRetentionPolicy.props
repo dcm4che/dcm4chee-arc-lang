@@ -1,0 +1,11 @@
+hl7StudyRetentionPolicy:HL7 politika zadržavanja studije|HL7 Study Retention politika
+hl7StudyRetentionPolicy.cn:Ime|Proizvoljno/Smisleno ime HL7 Study Retention politike
+hl7StudyRetentionPolicy.dicomAETitle:Naslov aplikacionog entiteta (AE)|Naslov aplikacionog entiteta (AE)
+hl7StudyRetentionPolicy.dcmRetentionPeriod:Minimalni period zadržavanja studije|Minimalan Study Retention Period u ISO-8601 formatu perioda PnYnMnD ili PnW. Neefikasno ako je 'Maximal Study Retention Period' takođe postavljeno.
+hl7StudyRetentionPolicy.dcmMaxRetentionPeriod:Maksimalni period zadržavanja studije|Maksimalan Study Retention Period u ISO-8601 formatu perioda PnYnMnD ili PnW
+hl7StudyRetentionPolicy.dcmRulePriority:Prioritet pravila|Ako se stanje više HL7 Study Retention politika podudara za primljenu HL7 poruku, primenjuje se politika višeg prioriteta. Ako postoji više podudarnih politika sa jednakim prioritetom, nedefinisano je koja se politika primenjuje.
+hl7StudyRetentionPolicy.dcmProperty:Uslovi|Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType
+hl7StudyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:Počni period zadržavanja od datuma studije|Ukazuje da li period zadržavanja treba početi na pojedinačnim Study Date-ovima umesto na prijemu HL7 poruke koja okida ovo pravilo.
+hl7StudyRetentionPolicy.dcmExporterID:Izvezi isteklu studiju|Izvezi istekle Study/Series koristeći navedeni Exporter
+hl7StudyRetentionPolicy.dcmFreezeExpirationDate:Zamrzni datum isteka|Ukazuje na onemogućavanje promena Expiration Date-a od strane naknadnih događaja.
+hl7StudyRetentionPolicy.dcmRevokeExpiration:Opozovi datum isteka|Ukazuje na opoziv prethodno postavljenog Expiration Date-a.

@@ -1,0 +1,13 @@
+networkAE:Mrežni AE|Aplikacioni entitet koji pruža usluge na mreži
+networkAE.dicomAETitle:AE naslov|Jedinstveni AE title za ovaj Network AE
+networkAE.dicomNetworkConnectionReference:Referenca mrežne konekcije|JSON Pointers na Network Connection objekte za ovaj AE
+networkAE.dicomAssociationInitiator:Inicijator asocijacije|Tačno ako Network AE može pokretati asocijacije.
+networkAE.dicomAssociationAcceptor:Akceptor asocijacije|Tačno ako Network AE može prihvatiti asocijacije.
+networkAE.dicomDescription:Opis AE|Nesputani tekstualni opis application entity
+networkAE.dicomApplicationCluster:Klaster aplikacija|Lokalno definisana imena za podskup srodnih aplikacija
+networkAE.dicomPreferredCalledAETitle:Preferirani pozvani AE naslov|AE Title(ovi) koji su preferirani za pokretanje asocijacija
+networkAE.dicomPreferredCallingAETitle:Preferirani pozivajući AE naslov|AE Title(ovi) koji su preferirani za prihvatanje asocijacija
+networkAE.dicomSupportedCharacterSet:Podržani skup znakova|Skup(ovi) znakova koje podržava Network AE za skupove podataka koje prima
+networkAE.dicomInstalled:instaliran|Tačno ako je AE instaliran na mreži. Ako nije navedeno, informacija o statusu instalacije AE se nasleđuje od uređaja
+networkAE.dicomTransferCapability:Transfer Capability-ji|Transfer capabilities koje pruža aplikacioni entitet
+networkAE.dcmNetworkAE:Ekstenzija mrežnog AE-a|dcm4che vlasnički atributi mrežnog AE-a

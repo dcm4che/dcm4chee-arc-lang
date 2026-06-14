@@ -1,0 +1,54 @@
+{
+  "title": "Mrežna konekcija",
+  "description": "Opisuje jedan TCP/UDP port na jednom mrežnom uređaju.",
+  "type": "object",
+  "required": [
+    "dicomHostname"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime za Network Connection objekat",
+      "type": "string"
+    },
+    "dicomHostname": {
+      "title": "Ime hosta",
+      "description": "DNS ime za ovu posebnu konekciju",
+      "type": "string"
+    },
+    "dicomPort": {
+      "title": "Port",
+      "description": "TCP/UDP port na kojem usluga sluša. Može nedostajati ako se ova mrežna konekcija koristi samo za odlazne konekcije",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 99999
+    },
+    "dicomTLSCipherSuite": {
+      "title": "TLS Cipher Suite-ovi",
+      "description": "TLS CipherSuites koje su podržane na ovoj posebnoj konekciji. Ako nije navedeno, TLS je onemogućen",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "SSL_RSA_WITH_NULL_SHA",
+          "TLS_RSA_WITH_AES_128_CBC_SHA",
+          "SSL_RSA_WITH_3DES_EDE_CBC_SHA",
+          "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_DHE_RSA_WITH_AES_128_GCM_SHA256",
+          "TLS_DHE_RSA_WITH_AES_256_GCM_SHA384",
+          "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384"
+        ]
+      }
+    },
+    "dicomInstalled": {
+      "title": "instaliran",
+      "description": "Tačno ako je Network Connection instaliran na mreži. Ako nije navedeno, informacija o statusu instalacije Network Connection-a se nasleđuje od uređaja",
+      "type": "boolean"
+    },
+    "dcmNetworkConnection": {
+      "title": "Ekstenzija mrežne konekcije",
+      "description": "dcm4che vlasnički atributi mrežne konekcije",
+      "$ref": "dcmNetworkConnection.schema.json"
+    }
+  }
+}

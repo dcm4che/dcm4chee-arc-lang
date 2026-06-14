@@ -1,0 +1,40 @@
+{
+  "title": "SPS status za HL7 nalog",
+  "description": "Specificira SPS Status DICOM MWL stavki kreiranih/ažuriranih na primljenim HL7 ORM^O01, OMI^O23, OMG^O19 porukama",
+  "type": "object",
+  "required": [
+    "dcmSPSStatus",
+    "hl7OrderControlStatus"
+  ],
+  "properties": {
+    "dcmSPSStatus": {
+      "title": "Kôd statusa zakazanog koraka procedure",
+      "description": "Status kod Scheduled Procedure Step-a",
+      "type": "string",
+      "enum": [
+        "SCHEDULED",
+        "CANCELED",
+        "DISCONTINUED",
+        "COMPLETED"
+      ]
+    },
+    "hl7OrderControlStatus": {
+      "title": "Status HL7 kontrole naloga",
+      "description": "Kombinacije HL7 Order Control Status Code-a. Ove kombinacije se referišu na vrednosti prisutne u ORC-1_ORC-5.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "NW_SC|ORC.1 = NW & ORC.5 = SC => SPSStatus = SCHEDULED",
+          "NW_IP|ORC.1 = NW & ORC.5 = IP => SPSStatus = SCHEDULED",
+          "CA_CA|ORC.1 = CA & ORC.5 = CA => SPSStatus = CANCELED",
+          "DC_CA|ORC.1 = DC & ORC.5 = CA => SPSStatus = DISCONTINUED",
+          "XO_SC|ORC.1 = XO & ORC.5 = SC => SPSStatus = SCHEDULED",
+          "XO_CM|ORC.1 = XO & ORC.5 = CM => SPSStatus = COMPLETED",
+          "SC_CM|ORC.1 = SC & ORC.5 = CM => SPSStatus = COMPLETED",
+          "SC_A|ORC.1 = SC & ORC.5 = A => SPSStatus = COMPLETED"
+        ]
+      }
+    }
+  }
+}

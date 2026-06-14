@@ -1,0 +1,5 @@
+uiDialogTemplate:Šablon UI dijaloga|Definiši Create Dialog šablon
+uiDialogTemplate.dcmuiTemplateName:Ime|Ime šablona dijaloga
+uiDialogTemplate.dcmTag:Oznaka atributa|DICOM oznaka kao heksadecimalni string koja treba da bude uključena u ovaj šablon dijaloga
+uiDialogTemplate.dicomDescription:Opis|Opis šablona dijaloga
+uiDialogTemplate.dcmuiDialog:Funkcija dijaloga|Specificira funkciju gde će se ovaj Dialog Template primeniti

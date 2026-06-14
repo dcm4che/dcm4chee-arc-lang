@@ -1,0 +1,127 @@
+{
+  "title": "Arhivsko coercion atributa - New",
+  "description": "Arhivsko coercion atributa primljenih/poslatih DIMSE",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmDIMSE",
+    "dicomTransferRole",
+    "dcmURI",
+    "dcmCoercionSufficient",
+    "dcmCoercionOnFailure",
+    "dcmRulePriority",
+    "dcmAttributeUpdatePolicy"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime arhivskog coercion-a atributa",
+      "type": "string"
+    },
+    "dicomDescription": {
+      "title": "Opis coercion-a atributa",
+      "description": "Neograničeni tekstualni opis coercion-a atributa",
+      "type": "string"
+    },
+    "dcmURI": {
+      "title": "URI coercion-a atributa",
+      "description": "Identifikuje Attribute Coercion putem Uniform Resource Identifier-a. Pogledajte vrednosti koje možete postaviti za <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-uri\" target=\"_blank\">Attribute Coercion URI</a> polje u zavisnosti od coercion tipa.",
+      "type": "string"
+    },
+    "dcmCoercionSufficient": {
+      "title": "Coercion atributa dovoljan",
+      "description": "Ne primenjuj druge podudarne Attribute Coercions nižeg prioriteta, ako je ova Attribute Coercion efikasno primenjena.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmCoercionOnFailure": {
+      "title": "Coercion atributa pri neuspehu",
+      "description": "Ponašanje pri neuspehu primene ove Attribute Coercion. Pogledajte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#attribute-coercion-on-failure\" target=\"_blank\">značenja Attribute Coercion on Failure.</a>",
+      "type": "string",
+      "default": "RETHROW",
+      "enum": [
+        "RETHROW|Propagates failure to operation which applied this (current) Attribute Coercion",
+        "CONTINUE|Continues applying other matching attribute coercions of lesser priority",
+        "SUFFICIENT|Does not apply other matching attribute coercions of lesser priority"
+      ]
+    },
+    "dcmRulePriority": {
+      "title": "Prioritet coercion-a atributa",
+      "description": "Ako se stanje više archive attribute coercion (new) podudara za primljenu sliku, coercion višeg prioriteta ima prednost. Ako postoji više podudarnih coercion-a sa jednakim prioritetom, nedefinisano je koja coercion ima prednost.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "dcmDIMSE": {
+      "title": "DIMSE",
+      "description": "DICOM Message Element na koji se ova Attribute Coercion primenjuje. Takođe <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#dimse\" target=\"_blank\">primenjivo ako se zahtevi primaju preko web-a.</a>",
+      "type": "string",
+      "enum": [
+        "N_CREATE_RQ|Applicable to MPPS N-CREATE request datasets",
+        "C_STORE_RQ|Applicable to objects stored / retrieved using C_STORE / C-MOVE / STOW / WADO-RS",
+        "C_FIND_RQ|Applicable to C-FIND / QIDO request datasets",
+        "C_FIND_RSP|Applicable to C-FIND / QIDO response datasets"
+      ]
+    },
+    "dicomTransferRole": {
+      "title": "DICOM uloga prenosa",
+      "description": "DICOM uloga prenosa peer DICOM AE-a.",
+      "type": "string",
+      "enum": [
+        "SCU|Service Class User",
+        "SCP|Service Class Provider"
+      ]
+    },
+    "dcmSOPClass": {
+      "title": "SOP Class UID",
+      "description": "UID SOP klase za koju se ovaj coercion atributa primenjuje. Ako nedostaje, primenjuje se na bilo koju.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSOPClass"
+    },
+    "dcmProperty": {
+      "title": "Uslov",
+      "description": "Uslovi u formatu {key}[!]={value}. Pogledajte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">primenljivost, format i primere.</a>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAttributeUpdatePolicy": {
+      "title": "Politika ažuriranja atributa",
+      "description": "Primenjena Attribute Update Policy. Efikasno samo za coerce from Leading C-FIND SCP coercion tip. Pogledajte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy\" target=\"_blank\">značenja Attribute Update Policies.</a>",
+      "type": "string",
+      "default": "MERGE",
+      "enum": [
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values"
+      ]
+    },
+    "dcmSupplementFromDeviceReference": {
+      "title": "Parametar coercion-a imena uređaja",
+      "description": "Device Name Coercion parametar. Efikasan samo za supplementing from device coercion tip.",
+      "type": "string",
+      "format": "dicomDeviceName"
+    },
+    "dcmMergeAttribute": {
+      "title": "Parametri DICOM coercion-a atributa",
+      "description": "DICOM Attribute Coercion parametri u formatu {attributeID}={value}. {attributeID} unutar {value} se može zameniti vrednošću tog atributa u originalnom dataset-u. Efikasno samo za merging attributes coercion tip. Pogledajte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/DICOM-Attribute-Coercion-Parameters\" target=\"_blank\">DICOM Attribute Coercion Parameters</a> za opcije formatiranja i primere.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmCoercionParam": {
+      "title": "Ostali parametri coercion-a",
+      "description": "Pogledajte primenljivost na coercion tipove i primere u <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/New-Archive-Attribute-Coercion---Application-of-multiple-coercions-for-one-use-case-using-multiple-rules#other-coercion-parameters\" target=\"_blank\">Other Attribute Coercion specifični parametri</a>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

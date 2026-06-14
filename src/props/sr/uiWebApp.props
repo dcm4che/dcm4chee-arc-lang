@@ -1,0 +1,7 @@
+uiWebApp:Padajuća lista veb aplikacija|Padajuća lista Web App
+uiWebApp.dcmuiWebAppListName:Ime liste|Definišite ime za ovu konfiguraciju
+uiWebApp.dcmuiWebAppListDescription:Opis|Opis liste Web aplikacija
+uiWebApp.dcmuiMode:Režim liste|Imate dve mogućnosti kako da prikažete definisanu listu: 1.) Na vrhu iznad ostatka liste 'separated' sa linijom, 2.) Prikaži samo ovde definisane ( 'exclusive' ).
+uiWebApp.dcmuiWebApps:Veb aplikacije|Veb aplikacija
+uiWebApp.dcmAcceptedUserRole:Prihvaćena korisnička uloga|Definiši uloge za koje ova konfiguracija treba da bude dostupna, koristi 'user' da bude dostupna za sve uloge ( Treba da definišete ili korisničko ime ( sledeći atribut ) ili korisničku ulogu ( ovaj atribut ))
+uiWebApp.dcmAcceptedUserName:Prihvaćeno korisničko ime|Definiši korisničko ime za koje ova konfiguracija treba da bude dostupna ( Treba da definišete ili korisničko ime ( ovaj atribut ) ili korisničku ulogu ( prethodni atribut ))

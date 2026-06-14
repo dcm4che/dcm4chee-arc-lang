@@ -1,0 +1,141 @@
+{
+  "title": "Mrežni AE",
+  "description": "Aplikacioni entitet koji pruža usluge na mreži",
+  "type": "object",
+  "required": [
+    "dicomAETitle",
+    "dicomNetworkConnectionReference",
+    "dicomAssociationInitiator",
+    "dicomAssociationAcceptor"
+  ],
+  "properties": {
+    "dicomAETitle": {
+      "title": "AE naslov",
+      "description": "Jedinstveni AE title za ovaj Network AE",
+      "type": "string",
+      "maxLength": 16,
+      "order": 1,
+      "use": [
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmSpanningCFindSCPRetrieveAET[*]",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackCMoveSCPDestination",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmRetrieveAET[*]",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmReturnRetrieveAET[*]",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackCMoveSCPCallingAET",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmExternalRetrieveAEDestination",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmExporter[*].dicomAETitle",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmExporter[*].dcmRetrieveAET[*]",
+        "$.dcmDevice.dcmWebApp[*].dicomAETitle",
+        "$.dcmDevice.hl7Application[*].dcmArchiveHL7Application.dicomAETitle",
+        "$.dcmDevice.dcmArchiveDevice.dcmSpanningCFindSCPRetrieveAET[*]",
+        "$.dcmDevice.dcmArchiveDevice.dcmFallbackCMoveSCPDestination",
+        "$.dcmDevice.dcmArchiveDevice.dcmRejectExpiredStudiesAETitle",
+        "$.dcmDevice.dcmArchiveDevice.dcmRetrieveAET[*]",
+        "$.dcmDevice.dcmArchiveDevice.dcmReturnRetrieveAET[*]",
+        "$.dcmDevice.dcmArchiveDevice.dcmExternalRetrieveAEDestination",
+        "$.dcmDevice.dcmArchiveDevice.dcmXDSiImagingDocumentSourceAETitle",
+        "$.dcmDevice.dcmArchiveDevice.dcmStorageVerificationAETitle",
+        "$.dcmDevice.dcmArchiveDevice.dcmCompressionAETitle",
+        "$.dcmDevice.dcmArchiveDevice.dcmRejectionNoteStorageAET",
+        "$.dcmDevice.dcmArchiveDevice.dcmFallbackCMoveSCPCallingAET",
+        "$.dcmDevice.dcmArchiveDevice.hl7StudyRetentionPolicy[*].dicomAETitle",
+        "$.dcmDevice.hl7Application[*].dcmArchiveHL7Application.hl7StudyRetentionPolicy[*].dicomAETitle",
+        "$.dcmDevice.dcmArchiveDevice.hl7PrefetchRule[*].dicomAETitle",
+        "$.dcmDevice.hl7Application[*].dcmArchiveHL7Application.hl7PrefetchRule[*].dicomAETitle",
+        "$.dcmDevice.dcmArchiveDevice.dcmExporter[*].dicomAETitle",
+        "$.dcmDevice.dcmArchiveDevice.dcmExporter[*].dcmRetrieveAET[*]",
+        "$.dcmDevice.dcmArchiveDevice.dcmMWLIdleTimeout[*].dicomAETitle",
+        "$.dcmDevice.dcmArchiveDevice.dcmUPSProcessingRule[*].dicomAETitle",
+        "$.dcmDevice.dcmuiConfig[*].dcmuiDiffConfig[*].dcmuiDiffCallingAET",
+        "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiCountAET"
+      ]
+    },
+    "dicomNetworkConnectionReference": {
+      "title": "Referenca mrežne konekcije",
+      "description": "JSON Pointers na Network Connection objekte za ovaj AE",
+      "type": "array",
+      "order": 2,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomAssociationInitiator": {
+      "title": "Inicijator asocijacije",
+      "description": "Tačno ako Network AE može pokretati asocijacije.",
+      "type": "boolean",
+      "default": true,
+      "order": 3
+    },
+    "dicomAssociationAcceptor": {
+      "title": "Akceptor asocijacije",
+      "description": "Tačno ako Network AE može prihvatiti asocijacije.",
+      "type": "boolean",
+      "default": true,
+      "order": 4
+    },
+    "dicomDescription": {
+      "title": "Opis AE",
+      "description": "Nesputani tekstualni opis application entity",
+      "type": "string",
+      "order": 5
+    },
+    "dicomApplicationCluster": {
+      "title": "Klaster aplikacija",
+      "description": "Lokalno definisana imena za podskup srodnih aplikacija",
+      "type": "array",
+      "order": 6,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomPreferredCalledAETitle": {
+      "title": "Preferirani pozvani AE naslov",
+      "description": "AE Title(ovi) koji su preferirani za pokretanje asocijacija",
+      "type": "array",
+      "order": 7,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomPreferredCallingAETitle": {
+      "title": "Preferirani pozivajući AE naslov",
+      "description": "AE Title(ovi) koji su preferirani za prihvatanje asocijacija",
+      "type": "array",
+      "order": 8,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomSupportedCharacterSet": {
+      "title": "Podržani skup znakova",
+      "description": "Skup(ovi) znakova koje podržava Network AE za skupove podataka koje prima",
+      "type": "array",
+      "order": 9,
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmCharset"
+    },
+    "dicomInstalled": {
+      "title": "instaliran",
+      "description": "Tačno ako je AE instaliran na mreži. Ako nije navedeno, informacija o statusu instalacije AE se nasleđuje od uređaja",
+      "order": 10,
+      "type": "boolean"
+    },
+    "dicomTransferCapability": {
+      "title": "Transfer Capability-ji",
+      "description": "Transfer capabilities koje pruža aplikacioni entitet",
+      "type": "array",
+      "order": 11,
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "transferCapability.schema.json"
+      }
+    },
+    "dcmNetworkAE": {
+      "title": "Ekstenzija mrežnog AE-a",
+      "description": "dcm4che vlasnički atributi mrežnog AE-a",
+      "$ref": "dcmNetworkAE.schema.json",
+      "order": 12
+    }
+  }
+}

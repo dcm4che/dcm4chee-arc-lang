@@ -1,0 +1,6 @@
+imageReader:Image Reader|Zadaje Java Image IO Image Reader-e korišćene za dekompresiju kompresovanih DICOM slika
+imageReader.dicomTransferSyntax:Transfer Syntax|Transfer Syntax kompresovane DICOM slike
+imageReader.dcmIIOFormatName:Ime formata Image IO Reader-a|Image IO Reader Format ime
+imageReader.dcmJavaClassName:Ime Java klase|Potpuno kvalifikovana Java klasa Image IO Reader-a. Ako nije navedeno, koristi bilo koji Image Reader pronađen za navedeno Format ime
+imageReader.dcmPatchJPEGLS:Zakrpa JPEG-LS|Patch JPEG-LS pre dekompresije
+imageReader.dcmImageReadParam:Parametar čitanja slike|Image Read parametar(i) (name=value)

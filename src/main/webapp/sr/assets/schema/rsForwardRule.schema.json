@@ -1,0 +1,84 @@
+{
+  "title": "RESTful pravilo prosleđivanja",
+  "description": "RESTful Forward pravilo",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmWebAppName",
+    "dcmTLSAllowAnyHostname",
+    "dcmTLSDisableTrustManager"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime RESTful Forward pravila",
+      "type": "string"
+    },
+    "dcmWebAppName": {
+      "title": "Ime veb aplikacije",
+      "description": "Ime veb aplikacije",
+      "type": "string",
+      "format": "webApp"
+    },
+    "dcmURIPattern": {
+      "title": "Obrazac URL zahteva",
+      "description": "Samo prosledi zahteve koji odgovaraju datom Regular Expression-u. Ako je prefiksovano sa !, samo prosledi zahteve koji ne odgovaraju datom Regular Expression-u.",
+      "type": "string"
+    },
+    "dcmHostnamePattern": {
+      "title": "Obrazac imena hosta",
+      "description": "Samo prosledi zahteve primljene od klijenata čije ime hosta odgovara datom Regular Expression-u. Ako je prefiksovano sa !, samo prosledi zahteve od klijenata čije ime hosta ne odgovara datom Regular Expression-u.",
+      "type": "string"
+    },
+    "dcmIPAddressPattern": {
+      "title": "Obrazac IP adrese",
+      "description": "Samo prosledi zahteve primljene od klijenata koji odgovaraju datom Regular Expression-u. Ako je prefiksovano sa !, samo prosledi zahteve od klijenata čija IP adresa ne odgovara datom Regular Expression-u.",
+      "type": "string"
+    },
+    "dcmRSOperation": {
+      "title": "RESTful Operation",
+      "description": "Ime RESTful operacije koja treba da bude prosleđena drugoj instanci arhive.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "CreatePatient",
+          "UpdatePatient",
+          "UpdatePatientByPID",
+          "DeletePatient",
+          "DeletePatientByPID",
+          "ChangePatientID",
+          "ChangePatientID2",
+          "ChangePatientIDByPID",
+          "MergePatient",
+          "MergePatient2",
+          "MergePatientByPID",
+          "UnmergePatient",
+          "UnmergePatientByPID",
+          "SupplementIssuer",
+          "UpdateCharset",
+          "UpdateStudy",
+          "UpdateStudyRequest",
+          "UpdateSeries",
+          "UpdateSeriesRequest",
+          "DeleteStudy",
+          "RejectStudy",
+          "RejectSeries",
+          "RejectInstance",
+          "ApplyRetentionPolicy",
+          "ReimportStudy",
+          "UpdateStudyExpirationDate",
+          "UpdateSeriesExpirationDate",
+          "UpdateStudyAccessControlID",
+          "UpdateSeriesAccessControlID",
+          "MoveStudyToPatient",
+          "LinkStudyToMWLMerge",
+          "CreateMWL",
+          "UpdateMWL",
+          "UpdateMWLStatus",
+          "DeleteMWL"
+        ]
+      }
+    }
+  }
+}

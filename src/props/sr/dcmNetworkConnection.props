@@ -1,0 +1,30 @@
+dcmNetworkConnection:Ekstenzija mrežne konekcije|dcm4che vlasnički atributi mrežne konekcije
+dcmNetworkConnection.dcmProtocol:Protokol|Protokol Network Connection-a.
+dcmNetworkConnection.dcmHTTPProxy:HTTP proxy|HTTP Proxy: [user:password@]host:port
+dcmNetworkConnection.dcmTLSNeedClientAuth:TLS zahteva autentifikaciju klijenta|Ukazuje da li je TLS autentifikacija klijenta obavezna.
+dcmNetworkConnection.dcmTLSProtocol:TLS protokol|Podržani TLS protokoli.
+dcmNetworkConnection.dcmTLSEndpointIdentificationAlgorithm:Algoritam identifikacije TLS krajnje tačke|Ukazuje na procedure identifikacije ili verifikacije krajnje tačke tokom TLS handshake-a.
+dcmNetworkConnection.dcmTCPBacklog:TCP zaostatak|Maksimalna dužina reda za dolazne TCP konekcije.
+dcmNetworkConnection.dcmTCPConnectTimeout:Istek TCP konekcije|TCP connect timeout u ms; bez timeout-a ako nije navedeno.
+dcmNetworkConnection.dcmTCPCloseDelay:Kašnjenje TCP zatvaranja|TCP socket close delay u ms nakon slanja A-ASSOCIATE-RJ, A-RELEASE-RP ili A-ABORT PDU.
+dcmNetworkConnection.dcmTCPSendBufferSize:Veličina TCP bafera slanja|TCP send buffer veličina; koristi sistemske podrazumevane vrednosti ako nije navedeno
+dcmNetworkConnection.dcmTCPReceiveBufferSize:Veličina TCP bafera prijema|TCP receive buffer veličina; koristi sistemske podrazumevane vrednosti ako nije navedeno
+dcmNetworkConnection.dcmTCPNoDelay:TCP bez kašnjenja|Omogući/onemogući TCP_NODELAY (onemogući/omogući Nagle algoritam).
+dcmNetworkConnection.dcmBindAddress:Adresa vezivanja|Bind adresa slušnog soketa; koristi ime hosta konekcije ako nije navedeno
+dcmNetworkConnection.dcmClientBindAddress:Adresa vezivanja klijenta|Bind adresa odlaznih konekcija; koristi ime hosta konekcije ako nije navedeno
+dcmNetworkConnection.dcmBlacklistedHostname:Crna lista imena hostova|na crnoj listi DNS imena hostova
+dcmNetworkConnection.dcmSendPDULength:Dužina PDU slanja|Maksimalna dužina emitovanih PDU-ova.
+dcmNetworkConnection.dcmReceivePDULength:Dužina PDU prijema|Maksimalna dužina primljenih PDU-ova.
+dcmNetworkConnection.dcmMaxOpsPerformed:Maks. izvršenih operacija|Maksimalan broj operacija za asinhrono izvršavanje; 0 = beskonačno.
+dcmNetworkConnection.dcmMaxOpsInvoked:Maks. pozvanih operacija|Maksimalan broj operacija za asinhrono pozivanje; 0 = beskonačno.
+dcmNetworkConnection.dcmPackPDV:Pakovanje PDV|Omogući/onemogući pakovanje komandnih i podatkovnih PDV-ova u jedan P-DATA-TF PDU.
+dcmNetworkConnection.dcmAARQTimeout:AA-RQ istek vremena|Timeout u ms za prijem A-ASSOCIATE-RQ PDU nakon TCP connect; bez timeout-a ako nije navedeno
+dcmNetworkConnection.dcmAAACTimeout:AA-AC istek vremena|Timeout u ms za prijem A-ASSOCIATE-AC PDU nakon slanja A-ASSOCIATE-RQ PDU; bez timeout-a ako nije navedeno
+dcmNetworkConnection.dcmARRPTimeout:AR-RP istek vremena|Timeout u ms za prijem A-RELEASE-RP PDU nakon slanja A-RELEASE-RQ PDU; bez timeout-a ako nije navedeno
+dcmNetworkConnection.dcmSendTimeout:Istek vremena slanja|Timeout u ms za slanje drugih DIMSE RQ-ova osim C-STORE RQ-ova; bez timeout-a ako nije navedeno
+dcmNetworkConnection.dcmStoreTimeout:Istek vremena skladištenja|Timeout u ms za slanje C-STORE RQ-ova; bez timeout-a ako nije navedeno
+dcmNetworkConnection.dcmResponseTimeout:Istek vremena odgovora|Timeout u ms za prijem outstanding <br>- DIMSE RSP-ova osim C-MOVE / C-GET RSP-ova <br>- odgovora odlaznih HL7 poruka <br>- HTTP(S) odgovora <br>Bez timeout-a ako nije navedeno
+dcmNetworkConnection.dcmRetrieveTimeout:Istek vremena preuzimanja|Timeout u ms za prijem outstanding C-GET ili C-MOVE RSP-ova; bez timeout-a ako nije navedeno
+dcmNetworkConnection.dcmRetrieveTimeoutTotal:Ukupan istek vremena preuzimanja|Ukazuje da li tajmer sa navedenim timeout-om za izvršne C-GET i C-MOVE RSP-ove treba restartovati pri prijemu pending RSP-ova (=false) ili ne (=true).
+dcmNetworkConnection.dcmIdleTimeout:Vreme neaktivnosti|Ukazuje na prekidanje neaktivnih asocijacija nakon navedenog timeout-a u ms; bez timeout-a ako nije navedeno
+dcmNetworkConnection.dcmAATimeout:A-ABORT istek vremena|Timeout u ms za čekanje završetka slanja bilo kog DIMSE pre slanja A-ABORT PDU, pokrenut od strane aplikacije ili isticanjem konfigurisanog drugog timeout-a ove Connection. Ako timeout istekne, TCP konekcija će biti zatvorena bez slanja A-ABORT.

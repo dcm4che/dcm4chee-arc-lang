@@ -1,0 +1,81 @@
+{
+  "title": "HL7 pravilo izvoza",
+  "description": "HL7 Export pravilo",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmExporterID",
+    "dcmDuration",
+    "dcmHistorySize"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime HL7 Export pravila",
+      "type": "string"
+    },
+    "dcmExporterID": {
+      "title": "ID izvoznika",
+      "description": "ID izvoznika",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmExporterID"
+    },
+    "dcmProperty": {
+      "title": "Uslovi",
+      "description": "Uslovi u formatu {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Primer: MSH-4=FORWARD ili MSH-9=ORM\\^O01 ili PID-3[.3]=PIDIssuer ili PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmEntitySelector": {
+      "title": "Birač entiteta",
+      "description": "Specificira ključeve podudaranja korišćene za selekciju studija za izvoz. Format: {key}={value}[&{key}={value)]..., sa {key} = 'StudyAge' | {attributeID}. {value} u formatu '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] se zamenjuje vrednošću navedenog HL7 polja iz primljene HL7 poruke koja je okinula izvoz. Ako nije naveden Entity Selector, izvešće se sve studije za pacijenta. Primer: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => selektiraj najviše 2 prethodne studije ne starije od 5 godina koje sadrže barem jednu CT seriju.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmEntitySelector"
+    },
+    "dcmNullifyIssuerOfPatientID": {
+      "title": "Ignoriši izdavaoca autoriteta ID-a pacijenta",
+      "description": "Uslovno ignoriši Assigning Authority of Patient ID (PID-3.4) u primljenoj HL7 poruci koja je okinula izvoz za selekciju studija pacijenta.",
+      "type": "string",
+      "enum": [
+        "ALWAYS|Always ignore Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "MATCHING|Ignore matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient",
+        "NOT_MATCHING|Ignore not matching Assigning Authority of Patient ID (PID-3.4) for selecting Studies of the Patient"
+      ]
+    },
+    "dcmIssuerOfPatientID": {
+      "title": "Izdavalac autoriteta ID-a pacijenta",
+      "description": "Assigning Authority Patient ID-a se podudara sa vrednostima u primljenoj HL7 poruci, ako je Assigning Authority of Patient ID postavljen na MATCHING ili NOT_MATCHING. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmPrefetchForIssuerOfPatientID": {
+      "title": "Izvoz za izdavaoca autoriteta ID-a pacijenta",
+      "description": "Assigning Authority Patient ID-a u primljenoj HL7 poruci korišćen za pretragu kvalifikovanog identifikatora pacijenta u listi identifikatora u PID-3. Studije koje odgovaraju navedenom Entity Selector-u ovog kvalifikovanog identifikatora pacijenta će biti upitane. Ako nije navedeno, podrazumevano će se koristiti prvi kvalifikovani identifikator pacijenta u PID-3. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
+      "type": "string"
+    },
+    "dcmDuration": {
+      "title": "Interval suzbijanja duplog izvoza",
+      "description": "Suzbij izvoz studija već izvezenih ne ranije od navedenog intervala radi izbegavanja duplih izvoza.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmHistorySize": {
+      "title": "Veličina suzbijanja istorije duplikata",
+      "description": "Maksimalan broj HL7 poruka sa različitim PID-3 koje pokreću ovo pravilo za pamćenje na history listi.",
+      "type": "integer",
+      "default": 100,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    }
+  }
+}

@@ -1,0 +1,24 @@
+auditLogger:Logger revizije|Informacije povezane sa Logger-om revizije
+auditLogger.cn:Ime|Proizvoljno/Smisleno ime za Audit Logger objekat
+auditLogger.dicomNetworkConnectionReference:Referenca mrežne konekcije|JSON Pointers na Network Connection objekte koje koristi ovaj Audit Logger
+auditLogger.dcmAuditRecordRepositoryDeviceName:Ime uređaja repozitorijuma zapisa revizije|Ime uređaja Audit Record Repository-ja kojem se šalju Audit Messages
+auditLogger.dcmAuditSourceID:ID izvora|RFC 3881 Audit Source ID; ime uređaja ako nije navedeno
+auditLogger.dcmAuditEnterpriseSiteID:ID sajta preduzeća|RFC 3881 Audit Enterprise Site ID; vrednost 'dicomInstitutionName' se zamenjuje imenom institucije DICOM uređaja
+auditLogger.dcmAuditSourceTypeCode:Kôd vrste izvora|RFC 3881 Audit Source Type Code; vrednost 'dicomPrimaryDeviceType' se zamenjuje primarnim tipom DICOM uređaja
+auditLogger.dcmAuditFacility:Syslog objekat|RFC 5424 Syslog Facility string vrednost poruke revizije.
+auditLogger.dcmAuditSuccessSeverity:Syslog ozbiljnost - uspeh|RFC 5424 Syslog Severity string vrednost poruke revizije sa Event Outcome Indicator 0 (Success).
+auditLogger.dcmAuditMinorFailureSeverity:Syslog ozbiljnost - neuspeh|RFC 5424 Syslog Severity string vrednost poruke revizije sa Event Outcome Indicator 4 (Minor failure).
+auditLogger.dcmAuditSeriousFailureSeverity:Syslog ozbiljnost - neuspeh|RFC 5424 Syslog Severity string vrednost poruke revizije sa Event Outcome Indicator 8 (Serious failure).
+auditLogger.dcmAuditMajorFailureSeverity:Syslog ozbiljnost - veliko|RFC 5424 Syslog Severity string vrednost poruke revizije sa Event Outcome Indicator 12 (Major failure).
+auditLogger.dcmAuditApplicationName:Ime Syslog aplikacije|RFC 5424 Syslog APP-NAME poruke revizije; Audit Source ID ako nije navedeno
+auditLogger.dcmAuditMessageID:ID Syslog poruke|RFC 5424 Syslog MSGID poruke revizije.
+auditLogger.dcmAuditMessageEncoding:Kodiranje poruke|Kodiranje znakova RFC 5424 Syslog MSG dela poruke revizije.
+auditLogger.dcmAuditMessageBOM:BOM poruke|Omogući/onemogući Unicode BOM prefiks RFC 5424 Syslog MSG dela poruke revizije; uključi BOM ako nije navedeno
+auditLogger.dcmAuditTimestampInUTC:Vremenska oznaka u UTC|Navedite da li su RFC 5424 Syslog TIMESTAMP i Event Date/Time poruke revizije navedeni u Coordinated Universal Time. Podrazumevano ukazuje da će biti u lokalnoj vremenskoj zoni.
+auditLogger.dcmAuditMessageFormatXML:Format poruke XML|Navedite da li je ili ne XML audit poruka formatirana sa line feeds i uvlačenjem.
+auditLogger.dcmAuditMessageSchemaURI:URI šeme poruke|URI DICOM Audit Message Scheme referenciran u poruci revizije
+auditLogger.dcmAuditIncludeInstanceUID:Uključi UID-ove instanci|Ukazuje da li Audit Log Message treba da sadrži opcione Instance UID-ove
+auditLogger.dcmAuditLoggerSpoolDirectoryURI:URI direktorijuma spool-a|URI spool direktorijuma korišćenog za skladištenje poruka koje nisu mogle biti isporučene record repository-ju; koristi sistemski privremeni direktorijum ako nije navedeno.
+auditLogger.dcmAuditLoggerRetryInterval:Interval ponovnog pokušaja|Retry interval u s za ponovno slanje poruka koje nisu mogle biti isporučene record repository; ako nije navedeno, ne pokušavaj ponovno slanje poruka
+auditLogger.dicomInstalled:instaliran|Tačno ako je Audit Logger instaliran na mreži. Ako nije navedeno, informacija o statusu instalacije Audit Logger-a se nasleđuje od uređaja
+auditLogger.dcmAuditSuppressCriteria:Kriterijumi suzbijanja revizije|Kriterijumi suzbijanja revizije

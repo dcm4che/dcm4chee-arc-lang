@@ -1,0 +1,178 @@
+{
+  "title": "Ekstenzija uređaja",
+  "description": "dcm4che vlasnički atributi uređaja",
+  "type": "object",
+  "required": [
+    "dcmRoleSelectionNegotiationLenient",
+    "dcmLimitOpenAssociations"
+  ],
+  "properties": {
+    "dcmRoleSelectionNegotiationLenient": {
+      "title": "Popustljiv pregovor izbora uloga",
+      "description": "Ukazuje na onemogućavanje provere potrebne SCP/SCU role selection negocijacije pri slanju DIMSE-RQ-ova. Može biti prepisano konfigurisanim vrednostima za pojedine Archive Network AE.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmLimitOpenAssociations": {
+      "title": "Limit asocijacija",
+      "description": "Maksimalan broj otvorenih DICOM konekcija; odbija Association zahteve ako se ograničenje prekorači; 0 = neograničeno.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmLimitAssociationsInitiatedBy": {
+      "title": "Limit asocijacija za AE",
+      "description": "Maksimalan broj otvorenih DICOM konekcija pokrenutih od strane pojedinog Application Entity (AE) u formatu <ae-title>=<number>; odbija Association zahteve od tog AE-a ako je limit premašen.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmLimitAssociationsInitiatedBy"
+    },
+    "dcmTrustStoreURL": {
+      "title": "URL Trust Store-a",
+      "description": "URL Trust Store-a sa sertifikatima za DICOM čvorove koji su ovlašćeni da se povežu na ovaj čor; prepisuje dicomAuthorizedNodeCertificateReference",
+      "type": "string"
+    },
+    "dcmTrustStoreType": {
+      "title": "Tip Trust Store-a",
+      "description": "Key Store Type Trust Store-a navedenog u dcmTrustStoreURL.",
+      "type": "string",
+      "enum": [
+        "JKS|Java KeyStore",
+        "PKCS12|Public-Key Cryptography Standards #12"
+      ]
+    },
+    "dcmTrustStorePin": {
+      "title": "PIN Trust Store-a",
+      "description": "Key Store Password Trust Store-a navedenog u Trust Store URL",
+      "type": "string"
+    },
+    "dcmTrustStorePinProperty": {
+      "title": "Svojstvo PIN-a Trust Store-a",
+      "description": "System property Key Store Password Trust Store-a navedenog u Trust Store URL",
+      "type": "string"
+    },
+    "dcmKeyStoreURL": {
+      "title": "URL Key Store-a",
+      "description": "URL Key Store-a sa privatnim ključem i sertifikatom korišćenim za identifikaciju ovog DICOM čvora u TLS konekcijama",
+      "type": "string"
+    },
+    "dcmKeyStoreType": {
+      "title": "Tip Key Store-a",
+      "description": "Key Store Type Key Store-a navedenog u Key Store URL.",
+      "type": "string",
+      "enum": [
+        "JKS|Java KeyStore",
+        "PKCS12|Public-Key Cryptography Standards #12"
+      ]
+    },
+    "dcmKeyStorePin": {
+      "title": "PIN Key Store-a",
+      "description": "Key Store Password Key Store-a navedenog u Key Store URL",
+      "type": "string"
+    },
+    "dcmKeyStorePinProperty": {
+      "title": "Svojstvo PIN-a Key Store-a",
+      "description": "System property Key Store Password Key Store-a navedenog u Key Store URL",
+      "type": "string"
+    },
+    "dcmKeyStoreKeyPin": {
+      "title": "PIN ključa Key Store-a",
+      "description": "Key Password Key Store-a navedenog u Key Store URL",
+      "type": "string"
+    },
+    "dcmKeyStoreKeyPinProperty": {
+      "title": "Svojstvo PIN-a ključa Key Store-a",
+      "description": "System property Key Password Key Store-a navedenog u Key Store URL",
+      "type": "string"
+    },
+    "dcmTimeZoneOfDevice": {
+      "title": "Vremenska zona uređaja",
+      "description": "Time Zone ID uređaja; odgovara Java TimeZone ID-u",
+      "type": "string"
+    },
+    "dcmWebApp": {
+      "title": "Veb aplikacije",
+      "description": "Web aplikacije koje pruža uređaj",
+      "type": "array",
+      "titleKey": "{dcmWebAppName}",
+      "order": 26,
+      "items": {
+        "$ref": "webApplication.schema.json"
+      }
+    },
+    "dcmKeycloakClient": {
+      "title": "Keycloak klijenti",
+      "description": "Keycloak klijenti koje pruža uređaj",
+      "type": "array",
+      "titleKey": "{dcmKeycloakClientID}",
+      "order": 27,
+      "items": {
+        "$ref": "keycloakClient.schema.json"
+      }
+    },
+    "hl7Application": {
+      "title": "HL7 aplikacije",
+      "description": "HL7 aplikacije koje pruža uređaj",
+      "type": "array",
+      "titleKey": "{hl7ApplicationName}",
+      "order": 28,
+      "items": {
+        "$ref": "hl7Application.schema.json"
+      }
+    },
+    "dcmImageWriter": {
+      "title": "Image Writer-i",
+      "description": "Specificira Java Image IO Image Writers sa Write Parameters korišćenim za kompresiju DICOM slika",
+      "type": "array",
+      "titleKey": "{dicomTransferSyntax}",
+      "order": 29,
+      "items": {
+        "$ref": "imageWriter.schema.json"
+      }
+    },
+    "dcmImageReader": {
+      "title": "Image Reader-i",
+      "description": "Zadaje Java Image IO Image Reader-e korišćene za dekompresiju kompresovanih DICOM slika",
+      "type": "array",
+      "titleKey": "{dicomTransferSyntax}",
+      "order": 30,
+      "items": {
+        "$ref": "imageReader.schema.json"
+      }
+    },
+    "dcmAuditLogger": {
+      "title": "Logger revizije",
+      "description": "Informacije povezane sa Logger-om revizije",
+      "titleKey": "{cn}",
+      "type": "array",
+      "order": 31,
+      "items": {
+        "$ref": "auditLogger.schema.json"
+      }
+    },
+    "dcmAuditRecordRepository": {
+      "title": "Repozitorijum zapisa revizije",
+      "description": "Informacije povezane sa repozitorijumom zapisa revizije",
+      "$ref": "auditRecordRepository.schema.json",
+      "order": 32
+    },
+    "dcmArchiveDevice": {
+      "title": "Arhivski uređaj",
+      "description": "Informacije povezane sa DICOM arhivskim uređajem",
+      "order": 33,
+      "$ref": "archiveDevice.schema.json"
+    },
+    "dcmuiConfig": {
+      "title": "UI konfiguracija",
+      "description": "UI konfiguracija",
+      "titleKey": "{dcmuiConfigName}",
+      "type": "array",
+      "order": 34,
+      "items": {
+        "$ref": "uiConfig.schema.json"
+      }
+    }
+  }
+}

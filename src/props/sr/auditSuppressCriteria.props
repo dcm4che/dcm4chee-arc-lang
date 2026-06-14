@@ -1,0 +1,14 @@
+auditSuppressCriteria:Kriterijumi suzbijanja revizije|Kriterijumi suzbijanja revizije
+auditSuppressCriteria.cn:Ime|Proizvoljno/Smisleno ime Audit Suppress kriterijuma.
+auditSuppressCriteria.dcmAuditEventID:ID događaja revizije|DICOM PS 3.15 A.5 Audit Event ID kod i codeSystemName u formatu (CV, CSD, "CM").
+auditSuppressCriteria.dcmAuditEventTypeCode:Kôd vrste događaja revizije|DICOM PS 3.15 A.5 Audit Event Type kod u formatu (CV, CSD, "CM").
+auditSuppressCriteria.dcmAuditEventActionCode:Kôd akcije događaja|DICOM PS 3.15 A.5 Audit Event Action Type kod.
+auditSuppressCriteria.dcmAuditEventOutcomeIndicator:Indikator ishoda događaja|DICOM PS 3.15 A.5 Audit Event Outcome Indicator.
+auditSuppressCriteria.dcmAuditUserID:ID korisnika|DICOM PS 3.15 A.5 Audit Active Participant User ID.
+auditSuppressCriteria.dcmAuditAlternativeUserID:Alternativni ID korisnika|DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID.
+auditSuppressCriteria.dcmAuditUserRoleIDCode:Kôd ID-a uloge korisnika|DICOM PS 3.15 A.5 Audit Active Participant User Role ID kod u formatu (CV, CSD, "CM").
+auditSuppressCriteria.dcmAuditNetworkAccessPointID:ID mrežne pristupne tačke|DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID.
+auditSuppressCriteria.dcmAuditUserIsRequestor:Korisnik je podnosilac|Ukazuje da li je Active Participant inicijator/tražilac Audit Event-a kao što je specificirano u DICOM PS 3.15 A.5
+auditSuppressCriteria.dcmParticipantObjectTypeCode:Kôd vrste objekta učesnika|DICOM PS 3.15 A.5 Participant Object Type Code.
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole:Uloga koda vrste objekta učesnika|DICOM PS 3.15 A.5 Participant Object Type Code Role.
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle:Životni ciklus podataka objekta učesnika|DICOM PS 3.15 A.5 Participant Object Data Life Cycle.

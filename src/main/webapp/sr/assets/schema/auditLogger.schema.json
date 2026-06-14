@@ -1,0 +1,229 @@
+{
+  "title": "Logger revizije",
+  "description": "Informacije povezane sa Logger-om revizije",
+  "type": "object",
+  "required": [
+    "cn",
+    "dicomNetworkConnectionReference",
+    "dcmAuditRecordRepositoryDeviceName",
+    "dcmAuditFacility",
+    "dcmAuditSuccessSeverity",
+    "dcmAuditMinorFailureSeverity",
+    "dcmAuditSeriousFailureSeverity",
+    "dcmAuditMajorFailureSeverity",
+    "dcmAuditMessageID",
+    "dcmAuditMessageEncoding",
+    "dcmAuditMessageSchemaURI",
+    "dcmAuditMessageBOM",
+    "dcmAuditTimestampInUTC",
+    "dcmAuditMessageFormatXML",
+    "dcmAuditIncludeInstanceUID"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime za Audit Logger objekat",
+      "type": "string"
+    },
+    "dicomNetworkConnectionReference": {
+      "title": "Referenca mrežne konekcije",
+      "description": "JSON Pointers na Network Connection objekte koje koristi ovaj Audit Logger",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAuditRecordRepositoryDeviceName": {
+      "title": "Ime uređaja repozitorijuma zapisa revizije",
+      "description": "Ime uređaja Audit Record Repository-ja kojem se šalju Audit Messages",
+      "type": "string",
+      "format": "dicomDeviceName"
+    },
+    "dcmAuditSourceID": {
+      "title": "ID izvora",
+      "description": "RFC 3881 Audit Source ID; ime uređaja ako nije navedeno",
+      "type": "string"
+    },
+    "dcmAuditEnterpriseSiteID": {
+      "title": "ID sajta preduzeća",
+      "description": "RFC 3881 Audit Enterprise Site ID; vrednost 'dicomInstitutionName' se zamenjuje imenom institucije DICOM uređaja",
+      "type": "string"
+    },
+    "dcmAuditSourceTypeCode": {
+      "title": "Kôd vrste izvora",
+      "description": "RFC 3881 Audit Source Type Code; vrednost 'dicomPrimaryDeviceType' se zamenjuje primarnim tipom DICOM uređaja",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAuditFacility": {
+      "title": "Syslog objekat",
+      "description": "RFC 5424 Syslog Facility string vrednost poruke revizije.",
+      "type": "string",
+      "default": "authpriv",
+      "enum": [
+        "kern|kernel messages",
+        "user|user-level messages",
+        "mail|mail system messages",
+        "daemon|system daemons' messages",
+        "auth|authorization messages",
+        "syslog|messages generated internally by syslogd",
+        "lpr|line printer subsystem messages",
+        "news|network news subsystem messages",
+        "uucp|UUCP subsystem messages",
+        "cron|clock daemon messages",
+        "authpriv|security/authorization messages",
+        "ftp|ftp daemon messages",
+        "ntp|NTP subsystem messages",
+        "audit|audit messages",
+        "console|console messages",
+        "cron2|clock daemon messages",
+        "local0",
+        "local1",
+        "local2",
+        "local3",
+        "local4",
+        "local5",
+        "local6",
+        "local7"
+      ]
+    },
+    "dcmAuditSuccessSeverity": {
+      "title": "Syslog ozbiljnost - uspeh",
+      "description": "RFC 5424 Syslog Severity string vrednost poruke revizije sa Event Outcome Indicator 0 (Success).",
+      "type": "string",
+      "default": "notice",
+      "enum": [
+        "emerg|emergency; system is unusable",
+        "alert|action must be taken immediately",
+        "crit|critical condition",
+        "err|error condition",
+        "warning|warning condition",
+        "notice|normal but significant condition",
+        "info|informational message",
+        "debug|debug-level messages"
+      ]
+    },
+    "dcmAuditMinorFailureSeverity": {
+      "title": "Syslog ozbiljnost - neuspeh",
+      "description": "RFC 5424 Syslog Severity string vrednost poruke revizije sa Event Outcome Indicator 4 (Minor failure).",
+      "type": "string",
+      "default": "warning",
+      "enum": [
+        "emerg|emergency; system is unusable",
+        "alert|action must be taken immediately",
+        "crit|critical condition",
+        "err|error condition",
+        "warning|warning condition",
+        "notice|normal but significant condition",
+        "info|informational message",
+        "debug|debug-level messages"
+      ]
+    },
+    "dcmAuditSeriousFailureSeverity": {
+      "title": "Syslog ozbiljnost - neuspeh",
+      "description": "RFC 5424 Syslog Severity string vrednost poruke revizije sa Event Outcome Indicator 8 (Serious failure).",
+      "type": "string",
+      "default": "err",
+      "enum": [
+        "emerg|emergency; system is unusable",
+        "alert|action must be taken immediately",
+        "crit|critical condition",
+        "err|error condition",
+        "warning|warning condition",
+        "notice|normal but significant condition",
+        "info|informational message",
+        "debug|debug-level messages"
+      ]
+    },
+    "dcmAuditMajorFailureSeverity": {
+      "title": "Syslog ozbiljnost - veliko",
+      "description": "RFC 5424 Syslog Severity string vrednost poruke revizije sa Event Outcome Indicator 12 (Major failure).",
+      "type": "string",
+      "default": "crit",
+      "enum": [
+        "emerg|emergency; system is unusable",
+        "alert|action must be taken immediately",
+        "crit|critical condition",
+        "err|error condition",
+        "warning|warning condition",
+        "notice|normal but significant condition",
+        "info|informational message",
+        "debug|debug-level messages"
+      ]
+    },
+    "dcmAuditApplicationName": {
+      "title": "Ime Syslog aplikacije",
+      "description": "RFC 5424 Syslog APP-NAME poruke revizije; Audit Source ID ako nije navedeno",
+      "type": "string"
+    },
+    "dcmAuditMessageID": {
+      "title": "ID Syslog poruke",
+      "description": "RFC 5424 Syslog MSGID poruke revizije.",
+      "type": "string",
+      "default": "IHE+RFC-3881"
+    },
+    "dcmAuditMessageEncoding": {
+      "title": "Kodiranje poruke",
+      "description": "Kodiranje znakova RFC 5424 Syslog MSG dela poruke revizije.",
+      "type": "string",
+      "default": "UTF-8"
+    },
+    "dcmAuditMessageBOM": {
+      "title": "BOM poruke",
+      "description": "Omogući/onemogući Unicode BOM prefiks RFC 5424 Syslog MSG dela poruke revizije; uključi BOM ako nije navedeno",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmAuditTimestampInUTC": {
+      "title": "Vremenska oznaka u UTC",
+      "description": "Navedite da li su RFC 5424 Syslog TIMESTAMP i Event Date/Time poruke revizije navedeni u Coordinated Universal Time. Podrazumevano ukazuje da će biti u lokalnoj vremenskoj zoni.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmAuditMessageFormatXML": {
+      "title": "Format poruke XML",
+      "description": "Navedite da li je ili ne XML audit poruka formatirana sa line feeds i uvlačenjem.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmAuditMessageSchemaURI": {
+      "title": "URI šeme poruke",
+      "description": "URI DICOM Audit Message Scheme referenciran u poruci revizije",
+      "type": "string",
+      "default": "http://www.dcm4che.org/DICOM/audit-message.rnc"
+    },
+    "dcmAuditIncludeInstanceUID": {
+      "title": "Uključi UID-ove instanci",
+      "description": "Ukazuje da li Audit Log Message treba da sadrži opcione Instance UID-ove",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmAuditLoggerSpoolDirectoryURI": {
+      "title": "URI direktorijuma spool-a",
+      "description": "URI spool direktorijuma korišćenog za skladištenje poruka koje nisu mogle biti isporučene record repository-ju; koristi sistemski privremeni direktorijum ako nije navedeno.",
+      "type": "string"
+    },
+    "dcmAuditLoggerRetryInterval": {
+      "title": "Interval ponovnog pokušaja",
+      "description": "Retry interval u s za ponovno slanje poruka koje nisu mogle biti isporučene record repository; ako nije navedeno, ne pokušavaj ponovno slanje poruka",
+      "type": "integer",
+      "minimum": 1
+    },
+    "dicomInstalled": {
+      "title": "instaliran",
+      "description": "Tačno ako je Audit Logger instaliran na mreži. Ako nije navedeno, informacija o statusu instalacije Audit Logger-a se nasleđuje od uređaja",
+      "type": "boolean"
+    },
+    "dcmAuditSuppressCriteria": {
+      "title": "Kriterijumi suzbijanja revizije",
+      "description": "Kriterijumi suzbijanja revizije",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "auditSuppressCriteria.schema.json"
+      }
+    }
+  }
+}

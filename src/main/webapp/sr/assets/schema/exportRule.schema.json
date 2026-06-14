@@ -1,0 +1,84 @@
+{
+  "title": "Pravilo izvoza",
+  "description": "Export pravilo",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmEntity",
+    "dcmExporterID",
+    "dcmExportPreviousEntity",
+    "dcmExportReoccurredInstances"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime Export pravila",
+      "type": "string"
+    },
+    "dcmEntity": {
+      "title": "Entitet izvoza",
+      "description": "Entitet izvoza",
+      "type": "string",
+      "enum": [
+        "Study",
+        "Series",
+        "Instance"
+      ]
+    },
+    "dcmExporterID": {
+      "title": "ID izvoznika",
+      "description": "ID izvoznika",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmExporterID"
+    },
+    "dicomDeviceName": {
+      "title": "Ime uređaja izvoznika",
+      "description": "Specificira uređaj na kojem će Export Task(ovi) biti planirani. Ako nije navedeno, Export Task(ovi) se planiraju na uređaju koji je primio objekte. Pažnja: navedeni uređaj mora (takođe) imati Exporters sa navedenim ID-ovima konfigurisane!",
+      "type": "string",
+      "format": "dicomDeviceName"
+    },
+    "dcmExportPreviousEntity": {
+      "title": "Entitet izvoza prethodnih",
+      "description": "Specificira da li prethodni entitet zamenjene instance treba takođe biti izvezen.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmProperty": {
+      "title": "Uslovi",
+      "description": "Uslovi u formatu {key}[!]={value}. Pogledajte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">primenljivost, format i primere.</a>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmSchedule": {
+      "title": "Vremenski uslovi",
+      "description": "Primeni ovo pravilo samo u navedenim vremenskim opsezima.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSchedule"
+    },
+    "dcmDuration": {
+      "title": "Kašnjenje izvoza",
+      "description": "Odgodi izvoz entiteta radi akumuliranja više okidačkih događaja u jedan zadatak izvoza.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmExportReoccurredInstances": {
+      "title": "Izvezi ponovo pojavljene instance",
+      "description": "Ukazuje da li entitet treba izvesti pri naknadnom pojavljivanju instanci",
+      "type": "string",
+      "default": "REPLACE",
+      "enum": [
+        "NEVER|Never export entity on reoccurrence of instances",
+        "ALWAYS|Always export entity on reoccurrence of instances",
+        "REPLACE|Export entity only on reoccurrence of replaced instances"
+      ]
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Pravilo izvoza prethodnih",
+  "description": "Export Priors pravilo",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmExporterID",
+    "dcmDuration",
+    "dcmExportReoccurredInstances"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime Export Priors pravila",
+      "type": "string"
+    },
+    "dcmExporterID": {
+      "title": "ID izvoznika",
+      "description": "ID izvoznika",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmExporterID"
+    },
+    "dcmProperty": {
+      "title": "Uslovi",
+      "description": "Uslovi u formatu {key}[!]={value}. Pogledajte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">primenljivost, format i primere.</a>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmSchedule": {
+      "title": "Vremenski uslovi",
+      "description": "Primeni ovo pravilo samo u navedenim vremenskim opsezima.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSchedule"
+    },
+    "dcmEntitySelector": {
+      "title": "Birač entiteta",
+      "description": "Specificira ključeve podudaranja korišćene za selekciju prethodnih studija za izvoz. Format: {key}={value}[&{key}={value}]..., sa {key} = 'priors' | 'StudyAge' | {attributeID}. {value} u formatu '$'{attributeID} se zamenjuje vrednošću navedenog atributa iz primljenog objekta koji je okinuo izvoz. Ako nije naveden Entity Selector, izvešće se sve prethodne studije za pacijenta. Primer: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => selektiraj najviše 2 prethodne studije ne starije od 5 godina koje sadrže barem jednu CT seriju.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmEntitySelector"
+    },
+    "dcmDuration": {
+      "title": "Interval suzbijanja duplog izvoza",
+      "description": "Suzbij izvoz studija već izvezenih ne ranije od navedenog intervala radi izbegavanja duplih izvoza.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmExportReoccurredInstances": {
+      "title": "Izvezi ponovo pojavljene instance",
+      "description": "Ukazuje da li prethodne studije treba izvesti pri naknadnom pojavljivanju instanci",
+      "type": "string",
+      "default": "REPLACE",
+      "enum": [
+        "NEVER|Never export prior Studies on reoccurrence of instances",
+        "ALWAYS|Always export prior Studies on reoccurrence of instances",
+        "REPLACE|Export prior Studies only on reoccurrence of replaced instances"
+      ]
+    }
+  }
+}

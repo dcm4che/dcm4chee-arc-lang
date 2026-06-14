@@ -1,0 +1,49 @@
+{
+  "title": "Padajuća lista AET-ova",
+  "description": "Padajuća lista AET",
+  "type": "object",
+  "required": [
+    "dcmuiAetListName",
+    "dcmuiAets",
+    "dcmAcceptedUserRole",
+    "dcmuiMode"
+  ],
+  "properties": {
+    "dcmuiAetListName": {
+      "title": "Ime liste",
+      "description": "Definišite ime za ovu konfiguraciju",
+      "type": "string"
+    },
+    "dcmuiAetListDescription": {
+      "title": "Opis",
+      "description": "Opis AET liste",
+      "type": "string"
+    },
+    "dcmuiMode": {
+      "title": "Režim liste AET-ova",
+      "description": "Definiši u kom modu treba da bude ova konfiguracija dostupna u 'internal' ( archive sopstveni AET-ovi, na nekim mestima takođe zvani 'Home AET' ili 'Local AET' ) ili 'external' ( ili na nekim mestima takođe zvani 'Remote AET' ) aet padajućoj listi, da bi bila dostupna za oba nemojte selektovati nijedan",
+      "type": "string",
+      "enum": [
+        "internal",
+        "external"
+      ]
+    },
+    "dcmuiAets": {
+      "title": "AET-ovi",
+      "description": "Parametar UI akcije",
+      "format": "dcmAETitle",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAcceptedUserRole": {
+      "title": "Prihvaćena korisnička uloga",
+      "description": "Definiši uloge za koje ova konfiguracija treba da bude dostupna, koristi 'user' da bude dostupna za sve uloge",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

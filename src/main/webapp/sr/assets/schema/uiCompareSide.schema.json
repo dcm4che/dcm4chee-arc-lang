@@ -1,0 +1,58 @@
+{
+  "title": "Strana upoređivanja",
+  "description": "Strana poređenja",
+  "type": "object",
+  "required": [
+    "dcmuiCompareSideName",
+    "dcmuiCompareSideCluster",
+    "dcmuiCompareSideElasticsearch",
+    "dcmuiCompareSideInstalled",
+    "dcmuiCompareSideOrder"
+  ],
+  "properties": {
+    "dcmuiCompareSideName": {
+      "title": "Ime",
+      "description": "Ime strane poređenja",
+      "type": "string"
+    },
+    "dcmuiCompareSideDescription": {
+      "title": "Opis",
+      "description": "Kratak opis ove grupe",
+      "type": "string"
+    },
+    "dcmuiCompareSideOrder": {
+      "title": "Redosled",
+      "description": "Redosled Compare strane",
+      "type": "integer",
+      "default": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "dcmuiCompareSideCluster": {
+      "title": "Klaster",
+      "description": "Izaberi klaster",
+      "type": "string",
+      "format": "dcmuiDeviceClusterObject"
+    },
+    "dcmuiCompareSideElasticsearch": {
+      "title": "Elasticsearch",
+      "description": "Izaberi Elasticsearch URL",
+      "type": "string",
+      "format": "dcmuiElasticsearchConfig"
+    },
+    "dcmuiCompareSideQueueName": {
+      "title": "Red",
+      "description": "Izaberi QueueName koji treba koristiti za stranu poređenja",
+      "type": "string",
+      "format": "dcmQueueName"
+    },
+    "dcmuiCompareSideInstalled": {
+      "title": "Instaliran",
+      "description": "Ako je tačno, ova strana poređenja je aktivna na kontrolnoj tabli",
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

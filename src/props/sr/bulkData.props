@@ -1,0 +1,5 @@
+bulkData:Deskriptor Bulk Data|Deskriptor Bulk Data
+bulkData.dcmBulkDataDescriptorID:ID deskriptora Bulk Data|ID deskriptora Bulk Data
+bulkData.dcmBulkDataExcludeDefaults:Isključi podrazumevane|Ukazuje da li atributi specificirani 'Composite Instance Retrieve Without Bulk Data Service Class'-om treba implicitno da se tretiraju kao Bulk Data (=false) ili ne (=true).
+bulkData.dcmAttributeSelector:Birač atributa|Specificira pojedinačne atribute tretirane kao Bulk Data putem XPath-a (npr. 'DicomAttribute[@tag="54000100"]/Item/DicomAttribute[@tag="54001010"]').
+bulkData.dcmBulkDataVRLengthThreshold:Prag dužine VR|Specificira da tretira sve atribute sa pojedinim Value Representation (VR) čija dužina vrednosti premašuje navedeni prag kao Bulk Data. Format: <VR>=<length-threshold>.

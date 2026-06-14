@@ -1,0 +1,15 @@
+queue:Red|Upravljani red zadataka
+queue.dcmQueueName:Ime reda|Ime reda zadataka
+queue.dicomInstalled:instaliran|Ako je netačno, obrada zadataaka u ovom redu je pauzirana.
+queue.dcmMaxTasksParallel:Maksimalno paralelnih zadataka|Maksimalan broj task-ova obrađenih paralelno.
+queue.dicomDescription:DICOM opis|Tekstualni opis DICOM entiteta
+queue.dcmMaxRetries:Maksimalan broj ponovnih pokušaja|Maksimalan broj pokušaja obrade zadataka zakazanih u specifičnom redu.
+queue.dcmRetryDelay:Kašnjenje ponovnog pokušaja|Kašnjenje ponovnog pokušaja obrade zadataaka planiranih u pojedinom redu u ISO-8601 formatu trajanja PnDTnHnMn.nS.
+queue.dcmMaxRetryDelay:Maksimalno kašnjenje ponovnog pokušaja|Maksimalno kašnjenje ponovnog pokušaja obrade zadataka planiranih u pojedinom redu u ISO-8601 formatu trajanja PnDTnHnMn.nS. Beskonačno ako nije navedeno.
+queue.dcmRetryDelayMultiplier:Množilac kašnjenja ponovnog pokušaja|Multiplikator u % koji će se primeniti na vrhu dcmRetryDelay sa dcmMaxRetryDelay koji se uzima u obzir.
+queue.dcmRetryOnWarning:Ponovi pri upozorenju|Omogućava ponovne pokušaje obrade zadataaka ne samo pri neuspehu već i pri warning statusu ishoda u pojedinom redu.
+queue.dcmPurgeQueueMessageCompletedDelay:Kašnjenje brisanja završenih zadataka|Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS nakon kojeg se završeni zadaci pročišćavaju. Ako nije navedeno, nema brisanja za taj pojedini red
+queue.dcmPurgeQueueMessageFailedDelay:Kašnjenje brisanja neuspelih zadataka|Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS nakon kojeg se neuspeli zadaci pročišćavaju. Ako nije navedeno, nema brisanja za taj pojedini red
+queue.dcmPurgeQueueMessageWarningDelay:Kašnjenje brisanja zadataka sa upozorenjem|Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS nakon kojeg se zadaci sa upozorenjem pročišćavaju. Ako nije navedeno, nema brisanja za taj pojedini red
+queue.dcmPurgeQueueMessageCanceledDelay:Kašnjenje brisanja otkazanih zadataka|Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS nakon kojeg se otkazani zadaci pročišćavaju. Ako nije navedeno, nema brisanja za taj pojedini red
+queue.dcmSchedule:Ograniči zakazivanje|Ograniči planiranje na navedene vremenske opsege.
