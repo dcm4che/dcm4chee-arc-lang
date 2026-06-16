@@ -35,13 +35,17 @@
       "title": "処理 属性",
       "description": "UPS プロセッサー 依存 属性。 形式 : <名前>=<値>",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmSchedule": {
       "title": "処理 予定",
       "description": "指定した 期間に 処理を 遅延 する。 処理 予定が 指定されて いない 場合、 予定された 手順 ステップの 開始日時 (0040,4005)で 作業項目を 処理します。 形式: 'hour=[0-23] dayOfWeek=[0-6]' (0=日曜日 )",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     },
     "dcmMaxThreads": {

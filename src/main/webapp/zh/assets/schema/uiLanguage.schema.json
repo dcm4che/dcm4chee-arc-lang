@@ -24,9 +24,9 @@
     "dcmuiLanguageProfileObjects": {
       "title": "语言配置文件",
       "description": "用户名,角色或所有人的语言配置文件。",
-      "titleKey":"{dcmuiLanguageProfileName}",
+      "titleKey": "{dcmuiLanguageProfileName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiLanguageProfile.schema.json"
       }
     }

@@ -92,7 +92,7 @@
       "title": "UI动作参数",
       "description": "UI动作参数",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum":[
           "edit",
@@ -113,7 +113,7 @@
       "title": "授权的用户角色",
       "description": "授权的用户角色",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     }

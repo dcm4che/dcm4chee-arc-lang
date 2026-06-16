@@ -35,13 +35,17 @@
       "title": "处理属性",
       "description": "UPS处理器相关属性, 格式:<名称>=<值>",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmSchedule": {
       "title": "待处理",
       "description": "将延迟处理到指定的时间段。如果未指定处理计划,则在计划步骤的开始日期和时间（0040,4005）处理工作项目。格式:'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)。",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     },
     "dcmMaxThreads": {

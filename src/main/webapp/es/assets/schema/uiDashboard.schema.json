@@ -16,34 +16,42 @@
       "title": "Show Star Block",
       "description": "Show Star Block - tasks without defined deviceName",
       "type": "boolean",
-      "default" : true
+      "default": true
     },
     "dcmuiQueueName": {
       "title": "Colas",
       "description": "Nombres de colas para la configuración del panel de interfaz de usuario utilizada en el bloque de colas.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format" : "dcmQueueName"
     },
     "dcmuiExportName": {
       "title": "IDs de exportador",
       "description": "IDs de exportador para la configuración del panel de interfaz de usuario utilizada en el bloque de cola y comparación.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format" : "dcmExporterID"
     },
     "dicomuiDeviceName": {
       "title": "Nombres de dispositivos",
       "description": "Nombres de dispositivos para la configuración del panel de interfaz de usuario utilizados para generar el bloque de recuperación y exportación.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dicomDeviceName"
     },
     "dicomuiIgnoreParams": {
       "title": "Ignorar Parámetros de Eventos de Auditoría",
       "description": "Establezca los parámetros de Elasticsearch que deben ser ignorados en los Eventos de Auditoría. Por ejemplo: Fuente. UsuarioID=TESTVALUE.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmuiCountWebApp": {
       "title": "Contar Aplicación Web",
@@ -54,9 +62,9 @@
     "dcmuiCompareSideObjects": {
       "title": "Comparar lados",
       "description": "Comparar lados.",
-      "titleKey":"{dcmuiCompareSideName}",
+      "titleKey": "{dcmuiCompareSideName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiCompareSide.schema.json"
       }
     },
@@ -64,7 +72,9 @@
       "title": "Archivar Contenedores Docker",
       "description": "Nombres de los contenedores docker de archivo utilizados en la página de herramientas.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

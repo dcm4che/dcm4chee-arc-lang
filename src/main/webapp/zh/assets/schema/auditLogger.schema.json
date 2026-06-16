@@ -220,7 +220,7 @@
       "title": "审计抑制标准",
       "description": "审计抑制标准",
       "type": "array",
-      "titleKey":"{cn}",
+      "titleKey": "{cn}",
       "items": {
         "$ref": "auditSuppressCriteria.schema.json"
       }

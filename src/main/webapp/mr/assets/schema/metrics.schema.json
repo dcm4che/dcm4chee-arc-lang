@@ -21,7 +21,7 @@
       "title": "मेट्रिक्स धारणा कालावधी",
       "description": "मिनिटांमध्ये मेट्रिक्स धारणा कालावधी.",
       "type": "integer",
-      "default" : 60,
+      "default": 60,
       "minimum": 1
     },
     "dcmUnit": {

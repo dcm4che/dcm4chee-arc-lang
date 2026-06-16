@@ -15,7 +15,7 @@
       "title": "Nombre de usuario",
       "description": "Nombre de usuario para el que debe estar disponible este conjunto.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -23,7 +23,7 @@
       "title": "Rol",
       "description": "Nombre de usuario que puede utilizar este conjunto (Si se establece el nombre de usuario, el rol será ignorado).",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -41,9 +41,9 @@
     "dcmuiTableColumnConfigObjects": {
       "title": "Columnas de la tabla",
       "description": "Define las columnas de la tabla.",
-      "titleKey":"{dcmuiColumnName}",
+      "titleKey": "{dcmuiColumnName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiTableColumns.schema.json"
       }
     }

@@ -39,7 +39,7 @@
       "title": "RESTful कतृत्व",
       "description": "अन्य आर्काइव पे फॉरवर्ड करने के लिए RESTful कतृत्वों के नाम ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "CreatePatient",

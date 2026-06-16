@@ -18,7 +18,9 @@
       "title": "Exporter ID",
       "description": "Exporter ID",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmExporterID"
     },
     "dcmProperty": {
@@ -42,7 +44,9 @@
       "title": "Entity Selector",
       "description": "Specifies matching keys used to select prior Studies to export. Format: {key}={value}[&{key}={value}]..., with {key} = 'priors' | 'StudyAge' | {attributeID}. {value} in the format '$'{attributeID} are replaced by the value of the specified attribute from the received object which triggered the export. If no Entity Selector is specified, all prior Studies for the Patient will be exported. Example: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => select at most 2 prior Studies not older than 5 years containing at least one CT Series.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmDuration": {

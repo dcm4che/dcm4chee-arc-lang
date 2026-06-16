@@ -16,7 +16,7 @@
       "title": "默认语言",
       "description": "选择UI的默认语言。",
       "type": "string",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmDefaultLanguage"
@@ -25,7 +25,7 @@
       "title": "角色",
       "description": "必须应用此语言配置文件的用户名角色。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },

@@ -16,7 +16,9 @@
       "title": "Destino de reenvío MPPS",
       "description": "Destino para reenviar MPPS N-CREATE RQ y N-SET RQ.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmProperty": {

@@ -16,7 +16,9 @@
       "title": "Attribute Tag",
       "description": "DICOM Tag as hex string which shall be included in this dialog template",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dicomDescription": {

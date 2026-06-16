@@ -37,44 +37,44 @@
       "title": "デバイス名",
       "description": "この デバイスの 一意の 名前",
       "type": "string",
-      "order":1
+      "order": 1
     },
     "dicomDescription": {
       "title": "デバイスの 説明",
       "description": "デバイスの 制約のない テキスト 説明",
       "type": "string",
-      "order":2
+      "order": 2
     },
-    "dicomVendorData":{
+    "dicomVendorData": {
       "title": "Vendor Device Data",
       "description": "Device specific vendor configuration information",
       "type": "boolean",
-      "order":2
+      "order": 2
     },
     "dicomDeviceUID": {
       "title": "デバイス UID",
       "description": "デバイスの 一意の 識別子",
       "type": "string",
       "pattern": "^[0-2]((\\.0)|(\\.[1-9][0-9]*))*$",
-      "order":3
+      "order": 3
     },
     "dicomManufacturer": {
       "title": "製造元",
       "description": "この デバイスに よって 作成された SOP インスタンスの 製造元 (0008,0070) 属性の 値と 同じで ある 必要が あります",
       "type": "string",
-      "order":4
+      "order": 4
     },
     "dicomManufacturerModelName": {
       "title": "製造元 モデル名",
       "description": "この デバイスに よって 作成された SOP インスタンスの 製造元 モデル名 (0008,1090) 属性の 値と 同じで ある 必要が あります",
       "type": "string",
-      "order":5
+      "order": 5
     },
     "dicomSoftwareVersion": {
       "title": "ソフトウェア版",
       "description": "この デバイスに よって 作成された SOP インスタンスの ソフトウェア版 (0018,1020) 属性の 値と 同じで ある 必要が あります",
       "type": "array",
-      "order":6,
+      "order": 6,
       "items": {
         "type": "string"
       }
@@ -83,20 +83,20 @@
       "title": "ステーション名",
       "description": "この デバイスに よって 作成された SOP インスタンスの ステーション名 (0018,1010) 属性の 値と 同じで ある 必要が あります",
       "type": "string",
-      "order":7
+      "order": 7
     },
     "dicomDeviceSerialNumber": {
       "title": "デバイスの シリアル 番号",
       "description": "この デバイスに よって 作成された SOP インスタンスの デバイスの シリアル 番号 (0018,1000) 属性の 値と 同じで ある 必要が あります",
       "type": "string",
-      "order":8
+      "order": 8
     },
     "dicomPrimaryDeviceType": {
       "title": "プライマリ デバイス タイプ",
       "description": "デバイスの 種類を 表し、取得 モダリティに 最も 適しています",
       "type": "array",
-      "order":9,
-      "items" : {
+      "order": 9,
+      "items": {
         "type": "string",
         "enum":[
           "ARCHIVE|Archive",
@@ -157,7 +157,7 @@
       "title": "機関名",
       "description": "この デバイスに よって 作成された SOP インスタンスの 機関名 (0008,0080) 属性の 値と 同じで ある 必要が あります",
       "type": "array",
-      "order":10,
+      "order": 10,
       "items": {
         "type": "string"
       }
@@ -166,7 +166,7 @@
       "title": "機関 コード",
       "description": "この デバイスに よって 作成された SOP インスタンスの (CV, CSD, \"CM\") 形式で 機関 コード 属性の 値と 同じで ある 必要が あります",
       "type": "array",
-      "order":11,
+      "order": 11,
       "items": {
         "type": "string"
       }
@@ -175,7 +175,7 @@
       "title": "機関 住所",
       "description": "この デバイスに よって 作成された SOP インスタンスの 機関の 住所 (0008,0081) 属性の 値と 同じで ある 必要が あります",
       "type": "array",
-      "order":12,
+      "order": 12,
       "items": {
         "type": "string"
       }
@@ -184,7 +184,7 @@
       "title": "機関 部門名",
       "description": "この デバイスに よって 作成された SOP インスタンスの 機関 部門名 (0008,1040) 属性の 値と 同じで ある 必要が あります",
       "type": "array",
-      "order":13,
+      "order": 13,
       "items": {
         "type": "string"
       }
@@ -193,55 +193,55 @@
       "title": "患者 IDの 発行者",
       "description": "この デバイスに よって 作成された または クエリされた SOP インスタンスの 中で、 「患者 IDの 発行者 (0010,0021)」 と 「患者 IDの 発行者 シーケンス (0010,0024)」 アイテムの 中で 「ユニバーサル エンティティ ID (0040,0032)」 と 「ユニバーサル エンティティ ID タイプ (0040,0033)」 の デフォルト値。 形式 : {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":14
+      "order": 14
     },
     "dicomIssuerOfAccessionNumber": {
       "title": "アクセッション 番号の 発行者",
       "description": "この デバイスに よって 作成された または クエリされた SOP インスタンスの 中で、 「アクセッション 番号の 発行者 シーケンス (0008,0051)」 アイテムの 中で 「ローカル 名前空間 エンティティ ID (0040,0031)」、 「ユニバーサル エンティティ ID (0040,0032)」 と 「ユニバーサル エンティティ ID タイプ (0040,0033)」 の デフォルト値。 形式 : {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":15
+      "order": 15
     },
     "dicomOrderPlacerIdentifier": {
       "title": "オーダー プレーサー 識別子",
       "description": "この デバイスに よって 作成された または クエリされた SOP インスタンスの 中で、 「オーダー プレーサー 識別子 シーケンス (0040,0026)」 アイテムの 中で 「ローカル 名前空間 エンティティ ID (0040,0031)」、 「ユニバーサル エンティティ ID (0040,0032)」 と 「ユニバーサル エンティティ ID タイプ (0040,0033)」 の デフォルト値。 形式 : {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":16
+      "order": 16
     },
     "dicomOrderFillerIdentifier": {
       "title": "オーダー フィラー 識別子",
       "description": "この デバイスに よって 作成された または クエリされた SOP インスタンスの 中で、 「オーダー フィラー 識別子 シーケンス (0040,0027)」 アイテムの 中で 「ローカル 名前空間 エンティティ ID (0040,0031)」、 「ユニバーサル エンティティ ID (0040,0032)」 と 「ユニバーサル エンティティ ID タイプ (0040,0033)」 の デフォルト値。 形式 : {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":17
+      "order": 17
     },
     "dicomIssuerOfAdmissionID": {
       "title": "アドミッション IDの 発行者",
       "description": "この デバイスに よって 作成された または クエリされた SOP インスタンスの 中で、 「アドミッション 番号の 発行者 シーケンス (0038,0014)」 アイテムの 中で「ローカル 名前空間 エンティティ ID (0040,0031)」、 「ユニバーサル エンティティ ID (0040,0032)」 と 「ユニバーサル エンティティ ID タイプ (0040,0033)」 の デフォルト値。 形式 : {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":18
+      "order": 18
     },
     "dicomIssuerOfServiceEpisodeID": {
       "title": "サービス エピソード IDの 発行者",
       "description": "この デバイスに よって 作成された または クエリされた SOP インスタンスの 中で、 「サービス エピソード IDの 発行者 シーケンス (0038,0064)」 アイテムの 中で 「ローカル 名前空間 エンティティ ID (0040,0031)」、 「ユニバーサル エンティティ ID (0040,0032)」 と 「ユニバーサル エンティティ ID タイプ (0040,0033)」 の デフォルト値。 形式 : {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":19
+      "order": 19
     },
     "dicomIssuerOfContainerIdentifier": {
       "title": "コンテナー 識別子の 発行者",
       "description": "この デバイスに よって 作成された または クエリされた SOP インスタンスの 中で、 「コンテナー 識別子の 発行者 シーケンス (0040,0513)」 アイテムの 中で 「ローカル 名前空間 エンティティ ID (0040,0031)」、 「ユニバーサル エンティティ ID (0040,0032)」 と 「ユニバーサル エンティティ ID タイプ (0040,0033)」 の デフォルト値。 形式 : {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":20
+      "order": 20
     },
     "dicomIssuerOfSpecimenIdentifier": {
       "title": "検体 識別子の 発行者",
       "description": "この デバイスに よって 作成された または クエリされた SOP インスタンスの 中で、 「検体 識別子の 発行者 シーケンス (0040,0562)」 アイテムの 中で 「ローカル 名前空間 エンティティ ID (0040,0031)」、 「ユニバーサル エンティティ ID (0040,0032)」 と 「ユニバーサル エンティティ ID タイプ (0040,0033)」 の デフォルト値。 形式 : {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":21
+      "order": 21
     },
     "dicomAuthorizedNodeCertificateReference": {
       "title": "承認済み ノードの 証明書 リファレンス",
       "description": "この デバイスへの 接続が 承認されて いる ノードの 証明書の DN",
       "type": "array",
-      "order":22,
+      "order": 22,
       "items": {
         "type": "string"
       }
@@ -250,7 +250,7 @@
       "title": "この ノード 証明書 リファレンス",
       "description": "この ノードの パブリック 証明書の DN",
       "type": "array",
-      "order":23,
+      "order": 23,
       "items": {
         "type": "string"
       }
@@ -259,15 +259,15 @@
       "title": "インストール済み",
       "description": "この デバイスが 現在 ネットワークに インストールされて いるか どうかを 示しされた ブーリアン。",
       "type": "boolean",
-      "order":24,
+      "order": 24,
       "default": true
     },
     "dicomNetworkConnection": {
       "title": "ネットワーク 接続",
       "description": "デバイスの ネットワーク 接続",
       "type": "array",
-      "order":25,
-      "titleKey":"{dicomHostname}:{dicomPort} {cn}",
+      "order": 25,
+      "titleKey": "{dicomHostname}:{dicomPort} {cn}",
       "items": {
         "$ref": "networkConnection.schema.json"
       }
@@ -276,8 +276,8 @@
       "title": "ネットワーク AEs",
       "description": "デバイスに よって 提供される アプリケーション エンティティ",
       "type": "array",
-      "titleKey":"{dicomAETitle}",
-      "order":26,
+      "titleKey": "{dicomAETitle}",
+      "order": 26,
       "items": {
         "$ref": "networkAE.schema.json"
       }
@@ -286,7 +286,7 @@
       "title": "デバイス 拡張",
       "description": "デバイス 属性の「dcm4che」 独自 属性",
       "$ref": "dcmDevice.schema.json",
-      "order":27
+      "order": 27
     }
   }
 }

@@ -243,8 +243,8 @@
       "title": "HL7传输规则",
       "description": "HL7传输规则。 补充在设备级别指定的HL7上的UPS规则。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -252,8 +252,8 @@
       "title": "HL7导出规则",
       "description": "应用于此HL7应用程序接收的HL7消息的导出规则。 补充在设备级别指定的HL7上的UPS规则。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -270,8 +270,8 @@
       "title": "HL7 Prefetch Rule",
       "description": "Prefetch Rules applied to HL7 messages received by this HL7 Application. Supplements HL7 Prefetch Rules specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -279,8 +279,8 @@
       "title": "HL7检查保留策略",
       "description": "由此HL7应用程序接收的HL7消息触发的HL7检查保留策略。 补充在设备级别指定的HL7上的UPS规则。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -288,8 +288,8 @@
       "title": "HL7订单的预定站",
       "description": "在此HL7应用程序接收到的MWL HL7订单源中选择的预定站。 补充在设备级别指定的HL7上的UPS规则。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
@@ -297,8 +297,8 @@
       "title": "HL7订单的SPS状态",
       "description": "指定在收到的HL7 ORM^O01,OMI^O23,OMG^O19消息中创建/更新的DICOM MWL项目的SPS状态。覆盖在设备级别指定的值。",
       "type": "array",
-      "titleKey":"{dcmSPSStatus}",
-      "items" : {
+      "titleKey": "{dcmSPSStatus}",
+      "items": {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     }

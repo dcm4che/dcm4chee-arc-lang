@@ -243,8 +243,8 @@
       "title": "HL7 Forward Rule",
       "description": "HL7 Forward Rule. Supplements values specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -252,8 +252,8 @@
       "title": "HL7 Export Rule",
       "description": "Export Rules applied to HL7 messages received by this HL7 Application. Supplements HL7 Export Rules specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -270,8 +270,8 @@
       "title": "HL7 Prefetch Rule",
       "description": "Prefetch Rules applied to HL7 messages received by this HL7 Application. Supplements HL7 Prefetch Rules specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -279,8 +279,8 @@
       "title": "HL7 Study Retention Policy",
       "description": "HL7 Study Retention Policies triggered by HL7 messages received by this HL7 Application. Supplements values specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -288,8 +288,8 @@
       "title": "Scheduled Station for HL7 Order",
       "description": "Scheduled Station selected on MWL HL7 Order Feed. Supplements values specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
@@ -297,8 +297,8 @@
       "title": "SPS Status for HL7 Order",
       "description": "Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. Overwrites values specified on Device level.",
       "type": "array",
-      "titleKey":"{dcmSPSStatus}",
-      "items" : {
+      "titleKey": "{dcmSPSStatus}",
+      "items": {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     }

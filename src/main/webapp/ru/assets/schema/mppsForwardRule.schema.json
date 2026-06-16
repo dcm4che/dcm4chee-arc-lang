@@ -16,7 +16,9 @@
       "title": "MPPS Forward Destination",
       "description": "Destination to forward MPPS N-CREATE RQ and N-SET RQ",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmProperty": {

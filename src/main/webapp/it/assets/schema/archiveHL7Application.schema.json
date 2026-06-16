@@ -243,8 +243,8 @@
       "title": "Regola di inoltro HL7",
       "description": "HL7 Forward Rule. Integra i valori specificati a livello di dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -252,8 +252,8 @@
       "title": "Regola di esportazione HL7",
       "description": "Regole di esportazione applicate ai messaggi HL7 ricevuti da questa applicazione HL7. Integra le regole di esportazione HL7 specificate a livello di dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -270,8 +270,8 @@
       "title": "Regole di Prefetch HL7",
       "description": "Regole di esportazione applicate ai messaggi HL7 ricevuti da questa applicazione HL7. Integra le regole di esportazione HL7 specificate a livello di dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -279,8 +279,8 @@
       "title": "Criteri di Conservazione Studio HL7",
       "description": "Criteri di conservazione dello studio HL7 attivati dai messaggi HL7 ricevuti da questa applicazione HL7. Integra i valori specificati a livello di dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -288,8 +288,8 @@
       "title": "Stazione Pianificata per un Ordine HL7",
       "description": "Scheduled Station selected on MWL HL7 Order Feed. Integra i valori specificati a livello di dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
@@ -297,8 +297,8 @@
       "title": "Stato SPS per un Ordine HL7",
       "description": "Specifica lo stato SPS degli elementi DICOM MWL creati/aggiornati sui messaggi HL7 ORM ^ O01, OMI ^ O23, OMG ^ O19 ricevuti. Sovrascrive i valori specificati a livello di dispositivo.",
       "type": "array",
-      "titleKey":"{dcmSPSStatus}",
-      "items" : {
+      "titleKey": "{dcmSPSStatus}",
+      "items": {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     }

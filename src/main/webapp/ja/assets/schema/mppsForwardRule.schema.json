@@ -16,7 +16,9 @@
       "title": "MPPS 転送 宛先",
       "description": "MPPS N-CREATE RQ と N-SET RQを 転送 する 宛先",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmProperty": {

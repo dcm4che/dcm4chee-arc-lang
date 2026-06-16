@@ -22,7 +22,9 @@
       "title": "Aplicación de Red para Dispositivos",
       "description": "Seleccione las Aplicaciones de Red configuradas que se utilizarán para acceder a los dispositivos correspondientes.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "webApp"
     },
     "dcmuiClusterWebApp": {

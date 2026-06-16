@@ -40,12 +40,12 @@
     "dcmuiColumnWidth": {
       "title": "Širina kolone u težini",
       "description": "Širina kolone u težini ( x > 0.1 - x < beskonačno ) podrazumevano 1",
-      "type": "string"
+      "type":  "string"
     },
     "dcmuiColumnOrder": {
       "title": "Redosled kolone",
       "description": "Redosled Column-e",
-      "type": "number"
+      "type":  "number"
     }
   }
 }

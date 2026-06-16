@@ -724,7 +724,7 @@
         "302|Found",
         "303|See Other",
         "307|Temporary Redirect"
-      ]
+       ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
       "title": "Preusmeravanje rezervnog WADO-URI-ja pri nepronalaženju",
@@ -748,7 +748,7 @@
         "302|Found",
         "303|See Other",
         "307|Temporary Redirect"
-      ]
+       ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {
       "title": "Preusmeravanje eksternog WADO-RS-a pri nepronalaženju",
@@ -1298,11 +1298,11 @@
       "type": "string",
       "default": "WITHOUT_STUDIES",
       "enum": [
-        "NEVER|Never allow delete patient permanently",
-        "ALWAYS|Always allow delete patient permanently",
-        "WITHOUT_STUDIES|Allow delete patient permanently only for patient without studies"
-      ]
-    },
+          "NEVER|Never allow delete patient permanently",
+          "ALWAYS|Always allow delete patient permanently",
+          "WITHOUT_STUDIES|Allow delete patient permanently only for patient without studies"
+        ]
+      },
     "dcmPurgeStgCmtCompletedDelay": {
       "title": "Kašnjenje brisanja završenih Storage Commitment-a",
       "description": "Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMnS nakon kojeg se rezultati završenih Storage Commitment zahteva pročišćavaju. Ako nije navedeno, nema brisanja.",
@@ -1387,8 +1387,8 @@
     "dcmMultipleStoreAssociations": {
       "title": "Višestruke Store asocijacije",
       "description": "Broj Storage Associations korišćenih za preuzimanje Composite Objects. C-STORE SCP specifični brojevi mogu se navesti prefiksom '<AETitle>:'. Ako nije navedeno, koristiće se samo jedna Association. Primeri: 2 ili STORESCP:3 Može biti dopunjeno konfigurisanim Multiple Store Associations za pojedine Archive Network AE.",
-      "type": "array",
-      "items": {
+        "type": "array",
+        "items": {
         "type": "string"
       },
       "format": "dcmMultipleStoreAssociations"
@@ -2000,7 +2000,7 @@
     "dcmRejectConflictingPatientAttribute": {
       "title": "Odbaci konfliktni atribut pacijenta",
       "description": "DICOM oznaka atributa pacijenta koja mora da se podudara u primljenim objektima sa vrednošću u prethodno primljenim objektima sa jednakim Patient ID-om da bi bili prihvaćeni. Može biti prepisano konfigurisanom vrednošću za pojedine Archive Network AE.",
-      "type": "array",
+      "type": "array", 
       "items": {
         "type": "string"
       },

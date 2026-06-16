@@ -243,8 +243,8 @@
       "title": "HL7 転送 規則",
       "description": "HL7 転送 規則。 デバイス レベルで 指定された HL7上の UPS 規則を 補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -252,8 +252,8 @@
       "title": "HL7 エクスポート 規則",
       "description": "この HL7 アプリケーションが 受信した HL7 メッセージに 適用される エクスポート 規則。 デバイス レベルで 指定された HL7上の UPS 規則を 補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -270,8 +270,8 @@
       "title": "HL7 プリフェッチ 規則",
       "description": "この HL7 アプリケーションが 受信した HL7 メッセージに 適用される HL7 プリフェッチ 規則。 デバイス レベルで 指定された HL7上の UPS 規則を 補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -279,8 +279,8 @@
       "title": "HL7 検査 保存 ポリシー",
       "description": "この HL7 アプリケーションが 受信した HL7 メッセージに よって トリガーされる HL7 検査 保存 ポリシー。 デバイス レベルで 指定された HL7上の UPS 規則を 補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -288,8 +288,8 @@
       "title": "HL7 オーダーの 予定された ステーション",
       "description": "この HL7 アプリケーションが 受信した MWL HL7 オーダー フィードで 選択された 予定された ステーション。 デバイス レベルで 指定された HL7上の UPS 規則を 補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
@@ -297,8 +297,8 @@
       "title": "HL7 オーダーの SPS ステータス",
       "description": "受信した HL7 ORM^O01, OMI^O23, OMG^O19 メッセージで 作成 / 更新された DICOM MWL アイテムの SPS ステータスを 指定します。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "array",
-      "titleKey":"{dcmSPSStatus}",
-      "items" : {
+      "titleKey": "{dcmSPSStatus}",
+      "items": {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     }

@@ -24,7 +24,9 @@
       "title": "Association Limit for AE",
       "description": "Maximal number of open DICOM connections initiated by a particular Application Entity (AE) in format <ae-title>=<number>; rejects Association requests from that AE if the limit is exceeded.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmLimitAssociationsInitiatedBy"
     },
     "dcmTrustStoreURL": {
@@ -94,8 +96,8 @@
       "title": "Web Applications",
       "description": "Web Applications provided by the Device",
       "type": "array",
-      "titleKey":"{dcmWebAppName}",
-      "order":26,
+      "titleKey": "{dcmWebAppName}",
+      "order": 26,
       "items": {
         "$ref": "webApplication.schema.json"
       }
@@ -104,8 +106,8 @@
       "title": "Keycloak Clients",
       "description": "Keycloak Clients provided by the Device",
       "type": "array",
-      "titleKey":"{dcmKeycloakClientID}",
-      "order":27,
+      "titleKey": "{dcmKeycloakClientID}",
+      "order": 27,
       "items": {
         "$ref": "keycloakClient.schema.json"
       }
@@ -114,8 +116,8 @@
       "title": "HL7 Applications",
       "description": "HL7 Applications provided by the Device",
       "type": "array",
-      "titleKey":"{hl7ApplicationName}",
-      "order":28,
+      "titleKey": "{hl7ApplicationName}",
+      "order": 28,
       "items": {
         "$ref": "hl7Application.schema.json"
       }
@@ -124,8 +126,8 @@
       "title": "Image Writers",
       "description": "Specifies Java Image IO Image Writers with Write Parameters used for compressing DICOM images",
       "type": "array",
-      "titleKey":"{dicomTransferSyntax}",
-      "order":29,
+      "titleKey": "{dicomTransferSyntax}",
+      "order": 29,
       "items": {
         "$ref": "imageWriter.schema.json"
       }
@@ -134,8 +136,8 @@
       "title": "Image Readers",
       "description": "Specifies Java Image IO Image Readers used for decompressing compressed DICOM images",
       "type": "array",
-      "titleKey":"{dicomTransferSyntax}",
-      "order":30,
+      "titleKey": "{dicomTransferSyntax}",
+      "order": 30,
       "items": {
         "$ref": "imageReader.schema.json"
       }
@@ -143,10 +145,10 @@
     "dcmAuditLogger": {
       "title": "Audit Logger",
       "description": "Audit Logger related information",
-      "titleKey":"{cn}",
+      "titleKey": "{cn}",
       "type": "array",
-      "order":31,
-      "items" : {
+      "order": 31,
+      "items": {
         "$ref": "auditLogger.schema.json"
       }
     },
@@ -154,21 +156,21 @@
       "title": "Audit Record Repository",
       "description": "Audit Record Repository related information",
       "$ref": "auditRecordRepository.schema.json",
-      "order":32
+      "order": 32
     },
     "dcmArchiveDevice": {
       "title": "Archive Device",
       "description": "DICOM Archive Device related information",
-      "order":33,
+      "order": 33,
       "$ref": "archiveDevice.schema.json"
     },
     "dcmuiConfig": {
       "title": "UI Configuration",
       "description": "UI Configuration",
-      "titleKey":"{dcmuiConfigName}",
+      "titleKey": "{dcmuiConfigName}",
       "type": "array",
-      "order":34,
-      "items" : {
+      "order": 34,
+      "items": {
         "$ref": "uiConfig.schema.json"
       }
     }

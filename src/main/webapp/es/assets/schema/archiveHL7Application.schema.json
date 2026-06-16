@@ -243,8 +243,8 @@
       "title": "Regla de reenvío HL7",
       "description": "Regla de reenvío HL7. Complementa los valores especificados en el nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -252,8 +252,8 @@
       "title": "Regla de exportación HL7",
       "description": "Reglas de exportación aplicadas a los mensajes HL7 recibidos por esta aplicación HL7. Complementa las reglas de exportación HL7 especificadas en el nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -270,8 +270,8 @@
       "title": "Reglas de Prefetch HL7",
       "description": "Reglas de Prefetch aplicadas a mensajes HL7 recibidos por esta Aplicación HL7. Complementa las reglas HL7 Prefetch especificadas a nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -279,8 +279,8 @@
       "title": "Política de Retención de Estudios HL7",
       "description": "Políticas de Retención de Estudios HL7 activadas por mensajes HL7 recibidos por esta Aplicación HL7. Complementa los valores especificados a nivel de Dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -288,8 +288,8 @@
       "title": "Estación Programada para Orden HL7",
       "description": "Estación Programada seleccionada en la Alimentación de Orden HL7 MWL. Complementa los valores especificados en el nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
@@ -297,8 +297,8 @@
       "title": "Estado SPS para pedido HL7",
       "description": "Especifica el estado SPS de los elementos DICOM MWL creados/actualizados en los mensajes HL7 ORM^O01, OMI^O23, OMG^O19 recibidos. Sobrescribe los valores especificados en el nivel Dispositivo.",
       "type": "array",
-      "titleKey":"{dcmSPSStatus}",
-      "items" : {
+      "titleKey": "{dcmSPSStatus}",
+      "items": {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     }

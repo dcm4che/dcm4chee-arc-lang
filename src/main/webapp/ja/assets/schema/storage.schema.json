@@ -75,7 +75,7 @@
       "title": "File Open Option(s)",
       "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "CREATE_NEW|Create a new file, failing if the file already exists",
@@ -236,7 +236,7 @@
       "title": "削除 スレッド",
       "description": "格納 システムからの オブジェクトの 削除に 使用される スレッドの 数。",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -299,7 +299,7 @@
       "title": "読み出し キャッシュ 最大数 並列",
       "description": "読み出し時に キャッシュ 格納に 並列 コピーの 最大数。 「読み出し キャッシュ 格納 ID」が 設定されて いる 場合にのみ 有効です。",
       "type": "integer",
-      "default" : 10,
+      "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },

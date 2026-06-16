@@ -56,9 +56,9 @@
     "dcmuiDiffCriteria": {
       "title": "Criterios de UI Diff",
       "description": "Criterios de UI Diff.",
-      "titleKey":"{dcmuiDiffCriteriaTitle}",
+      "titleKey": "{dcmuiDiffCriteriaTitle}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiDiffCriteria.schema.json"
       }
     }

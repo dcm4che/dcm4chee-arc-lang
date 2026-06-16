@@ -18,20 +18,26 @@
       "title": "निर्यातक ID",
       "description": "निर्यातक ID ।",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmExporterID"
     },
     "dcmProperty": {
       "title": "नियम",
       "description": "नियम इस प्रारूप में {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. उदाहरण के तौर पे: MSH-4=FORWARD या MSH-9=ORM\\^O01 या PID-3[.3]=PIDIssuer या PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType ।",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmEntitySelector": {
       "title": "तत्व चयनकर्ता",
       "description": "निर्यात करने के लिए स्टडीज को चुनने में इस्तमाल किए गए मिलान कुंजियों को निर्दिष्ट करता है । प्रारूप : {कुंजी}={मूल्य}[&{कुंजी}={मूल्य)]..., जहा {कुंजी} = 'StudyAge' | {attributeID} । इस प्रारूप में '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] में जो {मूल्य} है, वे HL7 संदेश, जिससे निर्यात सक्रीय हुआ, उसके HL7 फील्ड के मूल्य से बदले जाएंगे । यदि कोई तत्व चयनकर्ता निर्दिष्ट नहीं किया है, तो मरीज़ के सारे स्टडीज निर्यात होंगे । उदाहरण के तौर पे: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => अधिक से अधिक पिछले २ स्टडीज जो ५ साल से पुराने न होकर और जिनमे कम से कम एक CT सीरीज हो ।",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
@@ -48,7 +54,9 @@
       "title": "मरीज़़ की ID का जारीकर्ता",
       "description": "प्राप्त हुए HL7 संदेश में मरीज़़ की ID का जारीकर्ता के मूल्य के साथ मेल मिलनेवाले मरीज़़ की ID का जारीकर्ता के मूल्य, यदि मरीज़़ की ID का जारीकर्ता को MATCHING या NOT_MATCHING सेट किया है । प्रारूप: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}] ।",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "मरीज़़ की ID का जारीकर्ता के लिए निर्यात",
@@ -65,7 +73,7 @@
       "title": "डुप्लिकेट निर्यात न करने के लिए इतिहास सूची का माप",
       "description": "इतिहास सूची में नोट की गई, इस नियम को ट्रिगर करने वाले विशिष्ट PID-3 वाले HL7 संदेशों की अधिकतम संख्या ।",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     }

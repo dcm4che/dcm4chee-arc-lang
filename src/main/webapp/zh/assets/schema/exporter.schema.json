@@ -88,14 +88,18 @@
       "title": "IAN Destination",
       "description": "Destination to send IAN N-CREATE RQ",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmRetrieveAET": {
       "title": "读取AE标题",
       "description": "与网络AE相关联的AE标题",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmArchiveAETitle"
     },
     "dcmRetrieveLocationUID": {
@@ -119,14 +123,18 @@
       "title": "导出计划",
       "description": "将导出延迟到指定的时间段。如果未指定导出计划,则将导出任务排队以便立即处理。 格式:‘'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     },
     "dcmProperty": {
       "title": "Exporter 属性",
       "description": "Specify exporter 格式为{name}={value}的属性. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">Exporter Properties</a> that can be configured based on the exporter type.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

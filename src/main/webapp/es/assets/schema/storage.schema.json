@@ -75,7 +75,7 @@
       "title": "Opción(es) de apertura del archivo",
       "description": "Opciones que especifican cómo se abre el archivo para la escritura. Comportamiento por defecto 'CREAR_NUEVO'. (pase el ratón sobre las opciones para ver sus descripciones)",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "CREATE_NEW|Create a new file, failing if the file already exists",
@@ -236,7 +236,7 @@
       "title": "Subprocesos de borrado",
       "description": "Número de subprocesos utilizados para borrar objetos del sistema de almacenamiento.",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -299,7 +299,7 @@
       "title": "Recuperar Caché Máximo Paralelo",
       "description": "Número máximo de copias paralelas al almacenamiento en caché al recuperar. Sólo efectivo si está configurado un ID de almacenamiento en caché de recuperación.",
       "type": "integer",
-      "default" : 10,
+      "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },

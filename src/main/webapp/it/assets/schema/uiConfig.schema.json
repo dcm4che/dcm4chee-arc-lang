@@ -16,16 +16,16 @@
       "title": "Statistic Modalities",
       "description": "Modalità preselezionate che dovrebbero essere visualizzate nella pagina Statistiche",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
     "dcmuiLanguageConfig":{
       "title": "Language Config",
       "description": "Config the languages of the UI",
-      "titleKey":"{dcmuiLanguageConfigName}",
+      "titleKey": "{dcmuiLanguageConfigName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiLanguage.schema.json"
       }
     },
@@ -33,7 +33,7 @@
       "title": "Widget AETs",
       "description": "Seleziona gli AET che non vuoi vedere nel widget AET, dove puoi selezionare in quale di essi l'AET appena aggiunto dovrebbe essere come `Titolo AE di chiamata accettato`",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmAETitle"
@@ -69,7 +69,7 @@
       "title": "Default Widget AETs",
       "description": "Seleziona gli AET che dovrebbero essere preselezionati su Widget AETs",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmAETitle"
@@ -78,7 +78,7 @@
       "title": "MWL Worklist Label",
       "description": "Selectable values for MWL Worklist Label",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "use": [
@@ -102,7 +102,7 @@
       "title": "Institution Names",
       "description": "This will be used in combination with the previous field 'Institution Name Filter Type' to prefill the Dropdown of the Filter Institution Names in the Navigation Page",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -110,7 +110,7 @@
       "title": "Issuer of Patient ID Sequence",
       "description": "This will be used to show a dropdown in the Patient Identifier widget instead of the Issuer of Patient ID, Issuer of Patient ID Qualifiers Sequence - Universal Entity ID and Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type input fields. You can use the & character between the strings to mark the different fields like: 'issuerOfP&ipIDQuSeUniversalEntityID&ipIDQuSeUniversalEntityIDType'",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -118,7 +118,7 @@
       "title": "Issuer of Accession Number Sequence",
       "description": "This will be used to show a dropdown in the Accession Number widget instead of the \"Local Namespace Entity ID\", \"Universal Entity ID\" and \"Universal Entity ID Type\" input fields. You can use the ^ character between the strings to mark the different fields like: 'dummylNamespace^uEntityID^uEntityIDType'",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -126,97 +126,97 @@
       "title": "Issuer of Admission ID Sequence",
       "description": "This will be used to show a dropdown in the Admission ID widget instead of the \"Local Namespace Entity ID\",\"Universal Entity ID\" and \"Universal Entity ID Type\" input fields. You can use the & character between the strings to mark the different fields like: 'dummylNamespace&uEntityID&uEntityIDType'",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
     "dcmuiAetConfig": {
       "title": "Elenco a discesa AET",
       "description": "Definisci quali AET devono essere visibili negli elenchi a discesa dell'interfaccia utente",
-      "titleKey":"{dcmuiAetListName}",
+      "titleKey": "{dcmuiAetListName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiAet.schema.json"
       }
     },
     "dcmuiWebAppConfig": {
       "title": "Elenco a discesa delle app Web",
       "description": "Definisci quali WebApp devono essere visibili nella parte superiore dell'elenco a discesa nell'interfaccia utente",
-      "titleKey":"{dcmuiWebAppListName}",
+      "titleKey": "{dcmuiWebAppListName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiWebApp.schema.json"
       }
     },
     "dcmuiPermission": {
       "title": "Permission",
       "description": "Permission",
-      "titleKey":"{dcmuiPermissionName}",
+      "titleKey": "{dcmuiPermissionName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiPermission.schema.json"
       }
     },
     "dcmuiFilterTemplateObject": {
       "title": "UI Filter Template",
       "description": "Defined filter template",
-      "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
+      "titleKey": "{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiFilterTemplate.schema.json"
       }
     },
     "dcmuiDiffConfig": {
       "title": "Configurazione confronto studio",
       "description": "Configurazione confronto studio",
-      "titleKey":"{dcmuiDiffConfigName}",
+      "titleKey": "{dcmuiDiffConfigName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiDiffConfig.schema.json"
       }
     },
     "dcmuiTableConfig": {
       "title": "UI Table Configuration",
       "description": "Configuration of table",
-      "titleKey":"{dcmuiTableConfigName}",
+      "titleKey": "{dcmuiTableConfigName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiTable.schema.json"
       }
     },
     "dcmuiElasticsearchConfig": {
       "title": "Configurazione Elasticsearch dell'interfaccia utente",
       "description": "Configurazione di Elasticsearch per la versione pro",
-      "titleKey":"{dcmuiElasticsearchConfigName}",
+      "titleKey": "{dcmuiElasticsearchConfigName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiElasticsearch.schema.json"
       }
     },
     "dcmuiDeviceClusterObject": {
       "title": "Configurazione cluster UI",
       "description": "Dispositivi di gruppo in cluster",
-      "titleKey":"{dcmuiDeviceClusterName}",
+      "titleKey": "{dcmuiDeviceClusterName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiDeviceCluster.schema.json"
       }
     },
     "dcmuiDashboardConfig": {
       "title": "Configurazione dashboard dell'interfaccia utente",
       "description": "Configurazione dashboard dell'interfaccia utente",
-      "titleKey":"{dcmuiDashboardConfigName}",
+      "titleKey": "{dcmuiDashboardConfigName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiDashboard.schema.json"
       }
     },
     "dcmuiCreateDialogTemplate": {
       "title": "UI Create-Dialog Template",
       "description": "Template that will be used on the create-dialogs while crating MWL or Patient",
-      "titleKey":"{dcmuiTemplateName}",
+      "titleKey": "{dcmuiTemplateName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiDialogTemplate.schema.json"
       }
     }

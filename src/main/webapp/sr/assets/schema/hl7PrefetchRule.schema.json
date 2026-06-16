@@ -22,7 +22,7 @@
       "title": "Ime reda",
       "description": "Ime Task Queue-a korišćenog za planiranje retrieve zadataka okinutih ovim Prefetch pravilom",
       "type": "string",
-      "format": "dcmQueueName"
+      "format":"dcmQueueName"
     },
     "dicomAETitle": {
       "title": "Arhivski AE naslov",

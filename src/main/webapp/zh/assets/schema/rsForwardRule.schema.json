@@ -39,7 +39,7 @@
       "title": "RESTful Operation",
       "description": "Name of RESTful Operation which shall be forwarded to another archive instance.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "CreatePatient",

@@ -135,7 +135,7 @@
       "title": "Fuzzy Algorithm Class",
       "description": "Specifies Fuzzy Algorithm Implementation Class.",
       "type": "string",
-      "enum":[
+      "enum": [
         "org.dcm4che3.soundex.Soundex|Classic Soundex phonetic algorithm that encodes names into a 4-character code based on English pronunciation so similarly sounding names match despite spelling differences",
         "org.dcm4che3.soundex.ESoundex|Extended Soundex variant that produces variable-length phonetic codes (instead of fixed 4 characters) to improve matching accuracy for longer words",
         "org.dcm4che3.soundex.ESoundex9|Extended Soundex variant that generates phonetic codes up to 9 characters long for higher precision fuzzy matching than standard Soundex",
@@ -148,7 +148,7 @@
       "title": "Store Implementation Version Name",
       "description": "Indicates to include Implementation Version Name (0002,0012) in the File Meta Information of stored DICOM objects.",
       "type": "boolean",
-      "default" : true
+      "default": true
     },
     "dcmBulkDataDescriptorID": {
       "title": "Bulk Data Descriptor ID",
@@ -172,7 +172,7 @@
       "title": "Calculate Study Size Fetch Size",
       "description": "Limit result set of DB query for Studies with unknown size.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -180,13 +180,13 @@
       "title": "Calculate Query Attributes",
       "description": "Indicates to eager calculate Query Attributes according configured Calculate Study Size Delay and Calculate Study Size Polling Interval.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmSeriesMetadataStorageID": {
       "title": "Series Metadata Storage ID",
       "description": "ID of Storage on which ZIP archives with aggregated Metadata of all instances of a Series is stored. Multiple Storage Systems may be configured. If absent, no aggregated Series Metadata will be stored.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -201,7 +201,7 @@
       "title": "Update Series Metadata",
       "description": "Indicates to update aggregated Series Metadata on attributes update.",
       "type": "boolean",
-      "default" : true
+      "default": true
     },
     "dcmSeriesMetadataPollingInterval": {
       "title": "Update Series Metadata Polling Interval",
@@ -213,7 +213,7 @@
       "title": "Update Series Metadata Fetch Size",
       "description": "Maximal number of Series scheduled for Metadata update fetched by one query.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -221,7 +221,7 @@
       "title": "Update Series Metadata Threads",
       "description": "Number of Threads used for creation and update of Series Metadata.",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -242,7 +242,7 @@
       "title": "Purge(d) Instance Records",
       "description": "Indicates to purge instance records from DB. Also indicates to explicitly query series metadata zip files to check for purged instances for subsequent processing of archive functions. Set to 'True' if 'Purge Instance Records Delay' is configured.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmPurgeInstanceRecordsDelay": {
       "title": "Purge Instance Records Delay",
@@ -260,7 +260,7 @@
       "title": "Purge Instance Records Fetch Size",
       "description": "Maximal number of Series scheduled for purging Instance Records from the DB fetched by one query. Only effective, if Purge Instance Records = true.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -274,7 +274,7 @@
       "title": "MWL Fetch Size",
       "description": "Maximal number of MWL items to update or delete in one transaction.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -288,7 +288,9 @@
       "title": "Delete MWL Delay",
       "description": "Delay in ISO-8601 duration format PnDTnHnMn.nS for deleting MWL items, whose updated_time is older than the specified delay. Status specific delays can be specified by prefix 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. Examples: PT5M or CANCELED:PT10M. If absent, MWL Items will not get deleted.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmDeleteUPSPollingInterval": {
       "title": "Delete UPS Polling Interval",
@@ -300,7 +302,7 @@
       "title": "Delete UPS Fetch Size",
       "description": "Maximal number of Unified Procedure Steps (UPS) to delete in one transaction.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -390,7 +392,7 @@
       "title": "Hide SPS with Status by MWL SCP",
       "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -408,7 +410,7 @@
       "title": "Hide SPS with Status by MWL RS",
       "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -426,7 +428,7 @@
       "title": "Encode as JSON Number",
       "description": "VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. May be supplemented by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "DS|Decimal String",
@@ -486,14 +488,18 @@
       "title": "Wado Supported SR Classes",
       "description": "Supported SR SOP classes for WADO retrieval",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSOPClass"
     },
     "dcmWadoSupportedPRClasses": {
       "title": "Wado Supported PR Classes",
       "description": "Supported PR SOP classes for WADO retrieval",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSOPClass"
     },
     "dcmWadoSR2HtmlTemplateURI": {
@@ -578,27 +584,33 @@
       "title": "QIDO Result Order By",
       "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmFwdMppsDestination": {
       "title": "MPPS Forward Destination",
       "description": "Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
       "title": "IAN Destination",
       "description": "Destination to send IAN N-CREATE RQ. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanTrigger": {
       "title": "IAN Trigger",
       "description": "Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send IAN on receiving studies",
@@ -890,7 +902,7 @@
       "title": "DB Read Only",
       "description": "Indicates read-only access to the database, preventing DB updates on query/retrieve.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmMaxAccessTimeStaleness": {
       "title": "Maximum Access Time Staleness",
@@ -1478,7 +1490,9 @@
       "title": "Storage Verification Storage IDs",
       "description": "Indicates that for successful Storage Verification the object must be stored on (one of) the specified Storage System. If absent, successful verification of the storage on any Storage System is sufficient. Not effective with Storage Validation Policy: DB_RECORD_EXISTS. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationAETitle": {
@@ -1530,7 +1544,7 @@
       "title": "Storage Verification Fetch Size",
       "description": "Maximal number of Series scheduled for Storage Verification fetched by one query.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1562,7 +1576,7 @@
       "title": "Compression Threads",
       "description": "Number of Threads used for Compression.",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1579,7 +1593,7 @@
       "title": "Compression Fetch Size",
       "description": "Maximal number of Series fetched for compression by one query.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1611,7 +1625,7 @@
       "title": "Patient Verification Fetch Size",
       "description": "Maximal number of Patients fetched for Patient Verification in one query.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1619,7 +1633,7 @@
       "title": "Patient Verification Adjust Issuer of Patient ID",
       "description": "Indicates if the Issuer Of Patient ID shall be adjusted to the value returned by the PDQ Service.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmPatientVerificationPeriod": {
       "title": "Patient Verification Period",
@@ -1683,7 +1697,9 @@
       "title": "HL7 ADT Receiving Application",
       "description": "Application|Facility name of Receiving Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "hl7ApplicationName"
     },
     "hl7PSUSendingApplication": {
@@ -1696,7 +1712,9 @@
       "title": "HL7 Procedure Status Update Receiving Application",
       "description": "Application|Facility name of Receiving Application for HL7 Procedure Status Update. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "hl7ApplicationName"
     },
     "hl7PSUTaskPollingInterval": {
@@ -1729,7 +1747,7 @@
       "title": "HL7 Procedure Status Update Trigger",
       "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send notification on receive of studies",
@@ -1975,34 +1993,36 @@
       "title": "Scheduler Minimum Start Delay",
       "description": "Minimal delay in s to start schedulers on system start up.",
       "type": "integer",
-      "default" : 60,
+      "default": 60,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRejectConflictingPatientAttribute": {
       "title": "Reject Conflicting Patient Attribute",
       "description": "DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted. May be overwritten by configured value for particular Archive Network AEs.",
-      "type": "array",
-      "items" : { "type": "string" },
+      "type": "array", 
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
       "title": "STOW Retired Transfer Syntax",
       "description": "Store received JPEG Full Progression, Non-Hierarchical JPEG images in DICOM images with corresponding (retired) Transfer Syntax UID 1.2.840.10008.1.2.4.55. Otherwise set 1.2.840.10008.1.2.4.50 (= JPEG Baseline) or 1.2.840.10008.1.2.4.51 (= JPEG Extended) as Transfer Syntax UID of the stored DICOM image, without transcoding to JPEG Baseline or JPEG Extended, but including the JPEG image as received. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmStowExcludeAPPMarkers": {
       "title": "STOW Exclude Application Markers",
       "description": "Indicates if APP markers in JPEG images received in STOW-RS Metadata and Bulkdata requests shall be excluded from the JPEG bit streams encapsulated in created DICOM instances. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmStowQuicktime2MP4": {
       "title": "STOW Quicktime to MP4",
       "description": "Indicates if QuickTime containers received in STOW-RS Metadata and Bulkdata requests shall be converted to MP4 containers encapsulated in created DICOM instances. The conversion requires that ffmpeg is installed and the ffmpeg CLI utility is available in the PATH. Otherwise Quicktime containers will get encapsulated in the stored DICOM object verbatim, with a declared DICOM MPEG-4 Transfer Syntax which reflects the encoding of the video stream in the container, but contradicts the actual container format. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmStowMaxFragmentLength": {
       "title": "STOW Maximum Fragment Length",
@@ -2024,13 +2044,13 @@
       "title": "Filter by Issuer of Patient ID",
       "description": "Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : true
+      "default": true
     },
     "dcmMatchSOPClassOnInstanceLevel": {
       "title": "Match SOP Class on Instance level",
       "description": "Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmKeyValueRetentionPollingInterval": {
       "title": "Key Value Retention Polling Interval",
@@ -2042,7 +2062,7 @@
       "title": "Key Value Retention Fetch Size",
       "description": "Limit result set of DB query for Key Value pairs which retention period expired; 100 if absent",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -2056,13 +2076,13 @@
       "title": "UPS Update Without Transaction UID",
       "description": "Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmUPS2MWLCFindSCP": {
       "title": "UPS 2 MWL C-Find SCP",
       "description": "Indicates to feed Modality Worklist C-FIND SCP service from managed list of Unified Procedure Step (UPS) instances mapped to MWL items. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmUPS2MWLScheduledStationNameCode": {
       "title": "UPS 2 MWL Scheduled Station Name Code",
@@ -2076,7 +2096,7 @@
       "title": "UPS 2 MWL Scheduled Station Name Code Value as AE Title",
       "description": "Indicates to map Code Value (0008,0101) - instead Code Meaning (0008,0104) - of Scheduled Station Name Code Sequence (0040,4025) items of Unified Procedure Step (UPS) instances to Scheduled Station AE Titles (0040,0001) of MWL C-FIND RQ/RSPs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmQStarVerificationStorageID": {
       "title": "QStar Verification Storage ID",
@@ -2094,7 +2114,7 @@
       "title": "QStar Verification Fetch Size",
       "description": "Limit result set of DB query for Verification of Access State of objects stored on QStar Tape File System; 100 if absent.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": 0
     },
@@ -2127,7 +2147,7 @@
       "title": "Trusted Patient ID Pattern",
       "description": "Regular Expression identifying trusted Patient IDs in HL7 v2 CX format: {Patient ID}^^^{Issuer of Patient ID}&{Universal Entity ID}&{Universal Entity ID Type} in received DICOM objects and HL7 messages. Only Patient IDs matching one of the specified patterns or Patient IDs qualified by an Assigning Authority matching one of the configured 'Trusted Issuers of Patient IDs' will be used for identifying the Patient. If neither this attribute nor any 'Trusted Issuers of Patient ID' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2135,7 +2155,7 @@
       "title": "Trusted Issuer of Patient ID",
       "description": "Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. Only Patient IDs qualified by an Assigning Authority matching one of the specified values or Patient IDs matching one of the configured 'Trusted Patient ID Patterns' will be used for identifying the Patient. If neither this attribute nor dcmTrustedPatientIDPattern is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2143,7 +2163,7 @@
       "title": "FHIR Preferred Assigning Authority of Patient ID",
       "description": "Assigning Authority of Patient IDs included in outgoing FHIR messages. If absent, all Patient IDs of the Patient are included. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2156,7 +2176,7 @@
       "title": "FHIR System of Patient ID",
       "description": "Specifies if the 'Issuer of Patient ID' (= Local Namespace Entity ID) or the 'Universal Entity ID' shall be used as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages. If both are specified, the 'Issuer of Patient ID' will only be used if there is no the 'Universal Entity ID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "LocalNamespaceEntityID|Use IssuerOfPatientID as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages",
@@ -2168,7 +2188,7 @@
       "title": "FHIR System by Issuer of Patient ID",
       "description": "Specifies mapping of 'Issuer of Patient ID' to namespace (system) of the Patient ID in outgoing FHIR messages. Format: {Issuer of Patient ID}={system}. Required if 'FHIR System of Patient ID' includes 'LocalNamespaceEntityID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2186,7 +2206,7 @@
       "title": "FHIR System of Accession Number",
       "description": "Specifies if the 'Local Namespace Entity ID' or the 'Universal Entity ID' shall be used as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. If both are specified, the 'Local Namespace Entity ID' will only be used if there is no 'Universal Entity ID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "LocalNamespaceEntityID|Use IssuerOfAccessionNumberSequence.LocalNamespaceEntityID as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages",
@@ -2198,7 +2218,7 @@
       "title": "FHIR System by Local Namespace Entity ID of Accession Number",
       "description": "Specifies Mapping of 'Local Namespace Entity ID' to namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. Format: {Local Namespace Entity ID}={system}. Required if 'FHIR System of Accession Number' includes 'LocalNamespaceEntityID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2211,8 +2231,8 @@
       "title": "Attribute Filter",
       "description": "Specifies Attributes stored in the database",
       "type": "array",
-      "titleKey":"{dcmEntity}",
-      "items" : {
+      "titleKey": "{dcmEntity}",
+      "items": {
         "$ref": "attributeFilter.schema.json"
       }
     },
@@ -2220,8 +2240,8 @@
       "title": "Attribute Set",
       "description": "Named Attribute Set for Query Parameter 'includefields' of QIDO-RS and WADO-RS Metadata or by Query Parameter 'comparefield' of DIFF-RS requests.",
       "type": "array",
-      "titleKey":"{dcmAttributeSetType}:{dcmAttributeSetID}",
-      "items" : {
+      "titleKey": "{dcmAttributeSetType}:{dcmAttributeSetID}",
+      "items": {
         "$ref": "attributeSet.schema.json"
       }
     },
@@ -2229,8 +2249,8 @@
       "title": "Bulk Data Descriptor",
       "description": "Specifies Bulk Data Descriptors applied by services providing Metadata of archived instances.",
       "type": "array",
-      "titleKey":"{dcmBulkDataDescriptorID}",
-      "items" : {
+      "titleKey": "{dcmBulkDataDescriptorID}",
+      "items": {
         "$ref": "bulkData.schema.json"
       }
     },
@@ -2238,8 +2258,8 @@
       "title": "Storage Descriptor",
       "description": "Specifies Storage System",
       "type": "array",
-      "titleKey":"{dcmStorageID}",
-      "items" : {
+      "titleKey": "{dcmStorageID}",
+      "items": {
         "$ref": "storage.schema.json"
       }
     },
@@ -2247,8 +2267,8 @@
       "title": "Query Retrieve View",
       "description": "Specifies behavior on Rejection Note Stored",
       "type": "array",
-      "titleKey":"{dcmQueryRetrieveViewID}",
-      "items" : {
+      "titleKey": "{dcmQueryRetrieveViewID}",
+      "items": {
         "$ref": "queryRetrieveView.schema.json"
       }
     },
@@ -2256,8 +2276,8 @@
       "title": "Queue",
       "description": "Managed Task Queue",
       "type": "array",
-      "titleKey":"{dcmQueueName}",
-      "items" : {
+      "titleKey": "{dcmQueueName}",
+      "items": {
         "$ref": "queue.schema.json"
       }
     },
@@ -2265,8 +2285,8 @@
       "title": "Metrics",
       "description": "Activated Metrics",
       "type": "array",
-      "titleKey":"{dcmMetricsName}",
-      "items" : {
+      "titleKey": "{dcmMetricsName}",
+      "items": {
         "$ref": "metrics.schema.json"
       }
     },
@@ -2274,8 +2294,8 @@
       "title": "PDQ Service Descriptor",
       "description": "Patient Demographics Query Service Descriptor",
       "type": "array",
-      "titleKey":"{dcmPDQServiceID}",
-      "items" : {
+      "titleKey": "{dcmPDQServiceID}",
+      "items": {
         "$ref": "pdqService.schema.json"
       }
     },
@@ -2283,8 +2303,8 @@
       "title": "Exporter Descriptor",
       "description": "Exporter Descriptor",
       "type": "array",
-      "titleKey":"{dcmExporterID}",
-      "items" : {
+      "titleKey": "{dcmExporterID}",
+      "items": {
         "$ref": "exporter.schema.json"
       }
     },
@@ -2292,8 +2312,8 @@
       "title": "Export Rule",
       "description": "Export Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Rules for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportRule.schema.json"
       }
     },
@@ -2301,8 +2321,8 @@
       "title": "Export Priors Rule",
       "description": "Export Priors Rules applied to DICOM objects received by any AE. May be supplemented by configured Export Priors Rules for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportPriorsRule.schema.json"
       }
     },
@@ -2310,8 +2330,8 @@
       "title": "MPPS Forward Rule",
       "description": "MPPS Forward Rules applied to MPPS received by any AE. May be supplemented by configured MPPS Forward Rules for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "mppsForwardRule.schema.json"
       }
     },
@@ -2319,8 +2339,8 @@
       "title": "RESTful Forward Rule",
       "description": "RESTful Forward Rules. May be supplemented by configured RESTful Forward Rules for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "rsForwardRule.schema.json"
       }
     },
@@ -2328,8 +2348,8 @@
       "title": "Compression rule",
       "description": "Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveCompressionRule.schema.json"
       }
     },
@@ -2337,8 +2357,8 @@
       "title": "Attribute Coercion (Legacy)",
       "description": "Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion.schema.json"
       }
     },
@@ -2346,8 +2366,8 @@
       "title": "Attribute Coercion (New)",
       "description": "Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
@@ -2355,8 +2375,8 @@
       "title": "Rejection Note",
       "description": "Specifies behavior on Rejection Note Stored",
       "type": "array",
-      "titleKey":"{dcmRejectionNoteLabel}",
-      "items" : {
+      "titleKey": "{dcmRejectionNoteLabel}",
+      "items": {
         "$ref": "rejectionNote.schema.json"
       }
     },
@@ -2364,8 +2384,8 @@
       "title": "Study Retention Policy",
       "description": "Study Retention Policies applied to Studies received by any AE. May be supplemented by configured Study Retention Policies for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "studyRetentionPolicy.schema.json"
       }
     },
@@ -2373,8 +2393,8 @@
       "title": "Store Access Control Rules",
       "description": "Store Access Control Rules applied to Studies received by any AE. May be supplemented by configured Store Access Control Rules for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "storeAccessControlIDRule.schema.json"
       }
     },
@@ -2382,8 +2402,8 @@
       "title": "Change Access Control Rules",
       "description": "Change Access Control Rules applied to received Studies or Series.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "changeAccessControlIDRule.schema.json"
       }
     },
@@ -2436,8 +2456,8 @@
       "title": "ID Generator",
       "description": "ID Generator",
       "type": "array",
-      "titleKey":"{dcmIDGeneratorName}",
-      "items" : {
+      "titleKey": "{dcmIDGeneratorName}",
+      "items": {
         "$ref": "idGenerator.schema.json"
       }
     },
@@ -2445,8 +2465,8 @@
       "title": "MWL Import",
       "description": "MWL Import",
       "type": "array",
-      "titleKey":"{dcmMWLImportID}",
-      "items" : {
+      "titleKey": "{dcmMWLImportID}",
+      "items": {
         "$ref": "mwlImport.schema.json"
       }
     },
@@ -2454,8 +2474,8 @@
       "title": "MWL Idle Timeout",
       "description": "MWL Idle Timeout",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "mwlIdleTimeout.schema.json"
       }
     },
@@ -2463,8 +2483,8 @@
       "title": "HL7 Forward Rule",
       "description": "HL7 Forward Rules for HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Forward Rules for particular HL7 Applications.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -2472,8 +2492,8 @@
       "title": "HL7 Export Rule",
       "description": "Export Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Export Rules for particular HL7 Application.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -2481,8 +2501,8 @@
       "title": "HL7 Prefetch Rule",
       "description": "HL7 Prefetch Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Prefetch Rules for particular HL7 Application.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -2490,8 +2510,8 @@
       "title": "HL7 Study Retention Policy",
       "description": "HL7 Study Retention Policies triggered by HL7 messages received by any HL7 Application. May be supplemented by configured Study Retention Policies for particular HL7 Applications.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -2499,8 +2519,8 @@
       "title": "Scheduled Station for HL7 Order",
       "description": "Scheduled Station selected on MWL HL7 Order Feed received by any HL7 Application. May be supplemented by configured values for particular HL7 Applications.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
@@ -2508,8 +2528,8 @@
       "title": "SPS Status for HL7 Order",
       "description": "Specifies SPS Status of DICOM MWL items created/updated on received HL7 ORM^O01, OMI^O23, OMG^O19 messages. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "array",
-      "titleKey":"{dcmSPSStatus}",
-      "items" : {
+      "titleKey": "{dcmSPSStatus}",
+      "items": {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     },

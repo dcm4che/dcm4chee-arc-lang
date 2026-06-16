@@ -88,14 +88,18 @@
       "title": "IAN 宛先",
       "description": "IAN N-CREATE RQを 送信 する ために 宛先",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmRetrieveAET": {
       "title": "読み出し AE タイトル",
       "description": "ネットワーク AEに 関連付けられた AE タイトル",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmArchiveAETitle"
     },
     "dcmRetrieveLocationUID": {
@@ -119,14 +123,18 @@
       "title": "書き出し 予定",
       "description": "指定した 期間に 書き出しを 遅延 する。 書き出し 予定が 指定されて いない 場合、 すぐに 処理 する ために 書き出し タスクを キューに 入れます。 形式: 'hour=[0-23] dayOfWeek=[0-6]' (0=日曜日)",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     },
     "dcmProperty": {
       "title": "エクスポーター 属性",
       "description": "Specify エクスポーター 属性 形式 {name}={value}. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">エクスポーター 属性</a> that can be configured based on the exporter type.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

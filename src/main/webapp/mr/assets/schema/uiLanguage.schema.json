@@ -24,9 +24,9 @@
     "dcmuiLanguageProfileObjects": {
       "title": "भाषा प्रोफाइल",
       "description": "वापरकर्ताचे नाव, भूमिका किंवा प्रत्येकासाठी भाषा प्रोफाइल.",
-      "titleKey":"{dcmuiLanguageProfileName}",
+      "titleKey": "{dcmuiLanguageProfileName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiLanguageProfile.schema.json"
       }
     }

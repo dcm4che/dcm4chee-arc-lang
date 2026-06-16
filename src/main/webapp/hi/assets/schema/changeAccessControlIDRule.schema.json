@@ -29,7 +29,9 @@
       "title": "Access Control ID",
       "description": "Previous Access Control IDs assigned to selected Studies or individual Series to change. If no value is specified, all Access Control IDs accessible by the specified Archive Application Entity (AE) will be changed.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmEntity": {
       "title": "Entity",
@@ -45,7 +47,9 @@
       "title": "Entity Selector",
       "description": "Specifies matching keys used to select received Studies or Series which Access Control ID shall be updated. Format: {key}={value}[&{key}={value}]..., with {key} = {attributeID}. If no Entity Selector is specified, the Accession Control IDs of all Studies or Series visible for the specified Archive AE will be updated to the specified Store Access Control ID.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmChangeAccessControlIDDelay": {

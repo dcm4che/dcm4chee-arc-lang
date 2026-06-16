@@ -21,7 +21,7 @@
       "title": "Metrics Retention Period",
       "description": "Metrics Retention Period in minutes",
       "type": "integer",
-      "default" : 60,
+      "default": 60,
       "minimum": 1
     },
     "dcmUnit": {

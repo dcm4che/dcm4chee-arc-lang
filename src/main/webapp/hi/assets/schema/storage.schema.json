@@ -75,7 +75,7 @@
       "title": "File Open Option(s)",
       "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "CREATE_NEW|Create a new file, failing if the file already exists",
@@ -236,7 +236,7 @@
       "title": "डिलीटर थ्रेड्स",
       "description": "स्टोरेज सिस्टम से दृष्टांतों के विलोपन के लिए इस्तमाल किए गए थ्रेड्स की संख्या ।",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -299,7 +299,7 @@
       "title": "पुनःप्राप्ति कैश अधिकतम समानांतर",
       "description": "पुनःप्राप्ति पे कैश स्टोरेज पे समानांतर रूप से प्रतिरूप की अधिकतम संख्या । सिर्फ प्रभावशाली यदि 'पुनःप्राप्ति कैश स्टोरेज ID' भी कॉन्फ़िगर्ड है ।",
       "type": "integer",
-      "default" : 10,
+      "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },

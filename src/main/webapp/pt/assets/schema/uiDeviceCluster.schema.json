@@ -22,7 +22,9 @@
       "title": "Web Application for Devices",
       "description": "Select configured WebApps to used to access the corresponding devices",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "webApp"
     },
     "dcmuiClusterWebApp": {

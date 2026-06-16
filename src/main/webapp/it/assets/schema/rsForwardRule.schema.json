@@ -39,7 +39,7 @@
       "title": "Operazione RESTful",
       "description": "Nome dell'operazione RESTful che deve essere inoltrata a un'altra istanza di archivio.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "CreatePatient",

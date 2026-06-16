@@ -23,7 +23,7 @@
       "title": "Priorità delle regole",
       "description": "Priorità delle regole",
       "type": "integer",
-      "default" : 0,
+      "default": 0,
       "minimum": 0
     },
     "dcmProperty": {

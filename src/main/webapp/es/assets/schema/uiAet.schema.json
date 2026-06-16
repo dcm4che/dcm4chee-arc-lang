@@ -33,7 +33,7 @@
       "description": "Parámetro de acción UI.",
       "format": "dcmAETitle",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -41,7 +41,7 @@
       "title": "Rol de Usuario Aceptado",
       "description": "Define los roles para los cuales esta configuración debe estar disponible, usa 'user' para estar disponible para todos los roles.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     }

@@ -88,14 +88,18 @@
       "title": "IAN गंतव्य",
       "description": "IAN N-CREATE विनंती पाठवण्यासाठी गंतव्य.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmRetrieveAET": {
       "title": "प्राप्ति AE चे शीर्षक",
       "description": "या नेटवर्क AE शी संबंधित AE चे शीर्षक.",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmArchiveAETitle"
     },
     "dcmRetrieveLocationUID": {
@@ -119,14 +123,18 @@
       "title": "निर्यात वेळापत्रक",
       "description": "निर्दिष्ट वेळापत्रकांमध्ये निर्यात अनुसूचित करा. कोणतेही निर्यात वेळापत्रक निर्दिष्ट केलेले नसल्यास, प्रक्रिया करण्यासाठी निर्यात कार्यास त्वरित रांगेत ठेवा. या प्रारूपात : 'hour=[0-23] dayOfWeek=[0-6]' (0=रविवार).",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     },
     "dcmProperty": {
       "title": "निर्यातक विशेषता",
       "description": "Specify निर्यातक विशेषता या प्रारूपात {name}={value}. Refer various <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">निर्यातक विशेषता</a> that can be configured based on the exporter type.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

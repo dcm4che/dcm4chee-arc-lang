@@ -46,7 +46,9 @@
       "title": "प्रीफ़ेच C-STORE SCP",
       "description": "C-STORE SCP AE का नाम जहा चुने हुए स्टडीज पुनःप्राप्त किए जाएंगे ।",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmDestinationCFindSCP": {
@@ -65,13 +67,17 @@
       "title": "नियम",
       "description": "नियम इस प्रारूप में {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx} । उदाहरण के तौर पे: MSH-4=FORWARD या MSH-9=ORM\\^O01 या PID-3[.3]=PIDIssuer या PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType ।",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmEntitySelector": {
       "title": "तत्व चयनकर्ता",
       "description": "प्रीफ़ेच करने के लिए स्टडीज को चुनने में इस्तमाल किए गए मिलान कुंजियों को निर्दिष्ट करता है । प्रारूप : {कुंजी}={मूल्य}[&{कुंजी}={मूल्य)]..., जहा {कुंजी} = 'priors' | 'StudyAge' | {attributeID} । इस प्रारूप में '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] में जो {मूल्य} है, वे HL7 संदेश, जिससे प्रीफ़ेच सक्रीय हुआ, उसके HL7 फील्ड के मूल्य से बदले जाएंगे । यदि कोई तत्व चयनकर्ता निर्दिष्ट नहीं किया है, तो मरीज़ के सारे स्टडीज प्रीफ़ेच होंगे । उदाहरण के तौर पे: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=$OBR-24' => अधिक से अधिक पिछले २ स्टडीज जो ५ साल से पुराने न होकर और जिनमे कम से कम एक सीरीज हो जिसका मोडेलिटी HL7 संदेश के OBR-24 फील्ड से मेल मिलता हो, ऐसे स्टडीज चुने ।",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
@@ -88,7 +94,9 @@
       "title": "मरीज़़ की ID का जारीकर्ता",
       "description": "प्राप्त हुए HL7 संदेश में मरीज़़ की ID का जारीकर्ता के मूल्यों के साथ मेल मिलनेवाले मरीज़़ की ID का जारीकर्ता के मूल्य, यदि मरीज़़ की ID का जारीकर्ता को MATCHING या NOT_MATCHING सेट किया है । प्रारूप: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}] ।",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "मरीज़़ की ID का जारीकर्ता के लिए प्रीफ़ेच",
@@ -105,7 +113,7 @@
       "title": "डुप्लिकेट प्रीफ़ेच न करने के लिए इतिहास सूची का माप",
       "description": "इतिहास सूची में नोट की गई, इस नियम को ट्रिगर करने वाले विशिष्ट PID-3 वाले HL7 संदेशों की अधिकतम संख्या ।",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -124,7 +132,9 @@
       "title": "प्रीफ़ेच अनुसूची",
       "description": "कॉन्फ़िगर किए गए 「प्रीफ़ेच तारीख फील्ड」 के साथ प्रीफ़ेच को अनुसूचित समय में करें । यदि कोई प्रीफ़ेच अनुसूची निर्दिष्ट नहीं किया है, तो मरीज़ के चुने हुए स्टडीज को कॉन्फ़िगर किए गए 「प्रीफ़ेच तारीख फील्ड」 के अनुसार प्रीफ़ेच कार्य कतार में डाले । प्रारूप : 'hour=[0-23] dayOfWeek=[0-6]' (0=रविवार) ।",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     }
   }

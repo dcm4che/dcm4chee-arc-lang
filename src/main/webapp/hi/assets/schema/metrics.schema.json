@@ -21,7 +21,7 @@
       "title": "नाप धारण कालावधि",
       "description": "मिनटों में नाप धारण कालावधि ।",
       "type": "integer",
-      "default" : 60,
+      "default": 60,
       "minimum": 1
     },
     "dcmUnit": {

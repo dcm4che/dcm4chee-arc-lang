@@ -25,7 +25,9 @@
       "title": "属性 タグ",
       "description": "16進 文字列としての DICOM タグ",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmCustomAttribute1": {

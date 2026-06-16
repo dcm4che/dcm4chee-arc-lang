@@ -23,7 +23,7 @@
       "title": "规则优先级",
       "description": "如果多个压缩规则的条件与接收到的图像匹配,则应用最高优先级的规则。如果存在多个具有相同优先级的匹配规则,则没有定义要应用的规则。",
       "type": "integer",
-      "default" : 0,
+      "default": 0,
       "minimum": 0
     },
     "dcmProperty": {

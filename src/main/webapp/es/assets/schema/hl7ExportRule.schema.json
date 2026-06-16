@@ -18,20 +18,26 @@
       "title": "ID del exportador",
       "description": "ID del exportador",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmExporterID"
     },
     "dcmProperty": {
       "title": "Condiciones",
       "description": "Condiciones en formato {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Ejemplo: MSH-4=FORWARD o MSH-9=ORM\\^O01 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmEntitySelector": {
       "title": "Selector de Entidades",
       "description": "Especifica las claves de coincidencia utilizadas para seleccionar los Estudios a exportar. Formato: {key}={value}[&{key}={value)]..., con {key} = 'StudyAge' | {attributeID}. {value} en el formato '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] se sustituyen por el valor del campo HL7 especificado del mensaje HL7 recibido que activó la exportación. Si no se especifica ningún Selector de Entidad, se exportarán todos los Estudios del Paciente. Ejemplo: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => selecciona como máximo 2 Estudios previos no más antiguos de 5 años que contengan al menos una Serie CT.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
@@ -48,7 +54,9 @@
       "title": "Asignar Autoridad del ID del Paciente",
       "description": "Asignar Autoridad del ID del Paciente contra los valores del mensaje HL7 recibido, si Asignar Autoridad del ID del Paciente está configurado como EMPAREJADO o NO EMPAREJADO. Formato: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "Exportación para Asignar Autoridad de ID de Paciente",
@@ -65,7 +73,7 @@
       "title": "Suprimir tamaño de historial duplicado",
       "description": "Número máximo de mensajes HL7 con PID-3 distintos que activan esta regla para recordar en la lista de historial.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     }

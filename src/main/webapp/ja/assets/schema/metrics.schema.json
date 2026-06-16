@@ -21,7 +21,7 @@
       "title": "メトリック 保持 期間",
       "description": "分で メトリック 保持 期間",
       "type": "integer",
-      "default" : 60,
+      "default": 60,
       "minimum": 1
     },
     "dcmUnit": {

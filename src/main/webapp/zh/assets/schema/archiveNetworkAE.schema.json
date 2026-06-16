@@ -11,7 +11,7 @@
       "title": "对象存储ID",
       "description": "存储接收到的DICOM复合对象的存储系统的ID。可以配置多个存储系统。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -27,7 +27,7 @@
       "title": "元数据存储ID",
       "description": "元数据以JSON格式存储的存储ID-除了完整的DICOM复合对象之外。 可以配置多个存储系统。 如果不存在元数据,则不保存其他元数据。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -53,19 +53,24 @@
     "dcmStoreAccessControlID": {
       "title": "存储的访问控制ID",
       "description": "分配给此AE接收的检查的访问控制ID",
-      "items": { "type": "string" }
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmAccessControlID": {
       "title": "访问控制ID",
       "description": "分配给此AE接收的查询/读取请求的访问控制ID。",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmAcceptedMoveDestination": {
       "title": "批准的目标",
       "description": "C-MOVE请求接受的目标； 如果不存在,则任意目标。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -131,7 +136,7 @@
       "title": "隐藏SPS状态",
       "description": "MWL SCP未返回的MWL项目的计划步骤状态代码。 覆盖在设备级别指定的值。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -149,7 +154,7 @@
       "title": "Hide SPS with Status by MWL RS",
       "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -185,7 +190,7 @@
       "title": "Encode as JSON Number",
       "description": "VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. Supplements values specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "DS|Decimal String",
@@ -304,27 +309,33 @@
       "title": "QIDO Result Order By",
       "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmFwdMppsDestination": {
       "title": "MPPS转发目的地",
       "description": "用于转发MPPS N-CREATE RQ和N-SET RQ的目的地。 覆盖在设备级别指定的值。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
       "title": "IAN Destination",
       "description": "Destination to send IAN N-CREATE RQ. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanTrigger": {
       "title": "IAN Trigger",
       "description": "Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send IAN on receiving studies",
@@ -505,7 +516,7 @@
       "title": "Accepted User Role",
       "description": "Roles of users from which web requests are accepted; any if absent.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -544,7 +555,9 @@
       "title": "MWL Worklist Label Filter",
       "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (MWL Query SOP Class) or dicomWeb (Modality Worklist Search Transaction) service for matching Modality Worklist items (MWL), if no matching key for this attribute is specified in the request. If multiple values are specified, MWL with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, MWL with any value of Worklist Label (0074,1202) will match.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSWorklistLabel": {
       "title": "UPS工作列表标签",
@@ -555,7 +568,9 @@
       "title": "UPS Worklist Label Filter",
       "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (UPS Query SOP Class) or dicomWeb (Worklist Search Transaction) service for matching Unified Procedure Steps (UPS), if no matching key for this attribute is specified in the request. If multiple values are specified, UPS with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, UPS with any value of Worklist Label (0074,1202) will match.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSEventSCU": {
       "title": "UPS事件SCU",
@@ -651,7 +666,9 @@
       "title": "存储验证存储IDs",
       "description": "指示对象必须存储在一个指定的存储系统中,才能成功执行存储验证。存储验证策略=DB_RECORD_EXISTS无效。覆盖在设备级别指定的值。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationInitialDelay": {
@@ -680,7 +697,9 @@
       "title": "HL7过程状态更新接收应用程序",
       "description": "HL7过程状态更新接收应用程序的\"应用程序设施\"。覆盖在设备级别指定的值。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "hl7ApplicationName"
     },
     "hl7PSUAction": {
@@ -699,7 +718,7 @@
       "title": "HL7 Procedure Status Update Trigger",
       "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send notification on receive of studies",
@@ -800,7 +819,9 @@
       "title": "拒绝不一致的患者属性",
       "description": "如果患者ID与先前接收的对象的患者ID匹配的对象的指定患者属性值不匹配,则拒绝DICOM对象。 覆盖在设备级别指定的值。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
@@ -867,8 +888,8 @@
       "title": "导出规则",
       "description": "应用于由此AE接收的DICOM对象的导出规则。 补充在设备级别指定的导出规则。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportRule.schema.json"
       }
     },
@@ -876,8 +897,8 @@
       "title": "预实体导出规则",
       "description": "应用于由此AE接收的DICOM对象的预实体导出规则。 对在设备级别指定的先前实体的导出规则进行补充。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportPriorsRule.schema.json"
       }
     },
@@ -885,8 +906,8 @@
       "title": "MPPS Forward Rule",
       "description": "MPPS Forward Rules applied to MPPS received by this AE.Supplements MPPS Forward Rules specified on Device Level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "mppsForwardRule.schema.json"
       }
     },
@@ -894,8 +915,8 @@
       "title": "REST风格的传输规则",
       "description": "REST风格的传输规则。 补充在设备级别指定的REST风格的传输规则。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "rsForwardRule.schema.json"
       }
     },
@@ -903,8 +924,8 @@
       "title": "压缩规则",
       "description": "压缩规则。 补充在设备级别指定的压缩规则。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveCompressionRule.schema.json"
       }
     },
@@ -912,8 +933,8 @@
       "title": "属性强制",
       "description": "传入/传出DIMSE的属性强制。 补充在设备级别指定的属性强制。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion.schema.json"
       }
     },
@@ -921,8 +942,8 @@
       "title": "Attribute Coercion (New)",
       "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
@@ -939,8 +960,8 @@
       "title": "存储的访问控制ID规则",
       "description": "应用于由此AE接收的检查的存储的访问控制ID规则。 对在设备级别指定的保存的访问控制ID规则进行补充。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "storeAccessControlIDRule.schema.json"
       }
     },
@@ -948,8 +969,8 @@
       "title": "UPS on Store Rule",
       "description": "UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level.",
       "type": "array",
-      "titleKey":"{dcmUPSOnStoreID}",
-      "items" : {
+      "titleKey": "{dcmUPSOnStoreID}",
+      "items": {
         "$ref": "upsOnStore.schema.json"
       }
     },

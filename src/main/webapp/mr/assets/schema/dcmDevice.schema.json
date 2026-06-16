@@ -24,7 +24,9 @@
       "title": "AE साठी असोसिएशन मर्यादा",
       "description": "विशिष्ट अनुप्रयोग तत्त्व (AE) द्वारे सुरू केलेल्या उघडे DICOM संपर्काची कमाल संख्या; इस प्रारूप में <ae-title>=<number>; मर्यादा ओलांडल्यास त्या AE द्वारे असोसिएशनच्या विनंत्यांना अस्वीकार करा.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmLimitAssociationsInitiatedBy"
     },
     "dcmTrustStoreURL": {
@@ -94,8 +96,8 @@
       "title": "वेब अनुप्रयोग",
       "description": "डिव्हाइसद्वारे प्रदान केलेले वेब अनुप्रयोग.",
       "type": "array",
-      "titleKey":"{dcmWebAppName}",
-      "order":26,
+      "titleKey": "{dcmWebAppName}",
+      "order": 26,
       "items": {
         "$ref": "webApplication.schema.json"
       }
@@ -104,8 +106,8 @@
       "title": "कीक्लोक क्लाइंट",
       "description": "डिव्हाइसद्वारे प्रदान केलेले कीक्लोक क्लायंट.",
       "type": "array",
-      "titleKey":"{dcmKeycloakClientID}",
-      "order":27,
+      "titleKey": "{dcmKeycloakClientID}",
+      "order": 27,
       "items": {
         "$ref": "keycloakClient.schema.json"
       }
@@ -114,8 +116,8 @@
       "title": "एच.एल.७. अनुप्रयोग",
       "description": "डिव्हाइसद्वारे प्रदान केलेले HL7 अनुप्रयोग.",
       "type": "array",
-      "titleKey":"{hl7ApplicationName}",
-      "order":28,
+      "titleKey": "{hl7ApplicationName}",
+      "order": 28,
       "items": {
         "$ref": "hl7Application.schema.json"
       }
@@ -124,8 +126,8 @@
       "title": "प्रतिमा लेखक",
       "description": "DICOM दृष्टांते संकुचित करण्यात वापरलेले जावा प्रतिमा IO प्रतिमा लेखक व लेखन मापदंड निर्दिष्ट करते.",
       "type": "array",
-      "titleKey":"{dicomTransferSyntax}",
-      "order":29,
+      "titleKey": "{dicomTransferSyntax}",
+      "order": 29,
       "items": {
         "$ref": "imageWriter.schema.json"
       }
@@ -134,8 +136,8 @@
       "title": "प्रतिमा वाचक",
       "description": "संकुचित DICOM दृष्टांते असंकुचित करण्यात वापरलेले जावा प्रतिमा IO प्रतिमा वाचक निर्दिष्ट करते.",
       "type": "array",
-      "titleKey":"{dicomTransferSyntax}",
-      "order":30,
+      "titleKey": "{dicomTransferSyntax}",
+      "order": 30,
       "items": {
         "$ref": "imageReader.schema.json"
       }
@@ -143,10 +145,10 @@
     "dcmAuditLogger": {
       "title": "ऑडिट लॉगर",
       "description": "ऑडिट लॉगर संबंधित माहिती.",
-      "titleKey":"{cn}",
+      "titleKey": "{cn}",
       "type": "array",
-      "order":31,
-      "items" : {
+      "order": 31,
+      "items": {
         "$ref": "auditLogger.schema.json"
       }
     },
@@ -154,21 +156,21 @@
       "title": "ऑडिट रेकॉर्ड रेपॉजिटरी",
       "description": "ऑडिट रेकॉर्ड रेपॉजिटरी संबंधित माहिती.",
       "$ref": "auditRecordRepository.schema.json",
-      "order":32
+      "order": 32
     },
     "dcmArchiveDevice": {
       "title": "आर्काइव्ह डिव्हाइस",
       "description": "DICOM आर्काइव्ह डिव्हाइस संबंधित माहिती.",
-      "order":33,
+      "order": 33,
       "$ref": "archiveDevice.schema.json"
     },
     "dcmuiConfig": {
       "title": "UI कॉन्फिगरेशन",
       "description": "UI कॉन्फिगरेशन.",
-      "titleKey":"{dcmuiConfigName}",
+      "titleKey": "{dcmuiConfigName}",
       "type": "array",
-      "order":34,
-      "items" : {
+      "order": 34,
+      "items": {
         "$ref": "uiConfig.schema.json"
       }
     }

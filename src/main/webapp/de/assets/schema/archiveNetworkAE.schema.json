@@ -11,7 +11,7 @@
       "title": "Object Storage ID",
       "description": "ID of Storage System on which received DICOM composite objects are stored. Multiple Storage Systems may be configured.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -27,7 +27,7 @@
       "title": "Metadata Storage ID",
       "description": "ID of Storage on which Metadata is stored in JSON format - additionally to the complete DICOM composite object. Multiple Storage Systems may be configured. If absent, metadata is not stored additionally.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -53,19 +53,24 @@
     "dcmStoreAccessControlID": {
       "title": "Store Access Control ID",
       "description": "Access Control IDs assigned to Studies received by this AE",
-      "items": { "type": "string" }
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmAccessControlID": {
       "title": "Access Control ID",
       "description": "Access Control IDs assigned to Query/Retrieve requests received by this AE.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmAcceptedMoveDestination": {
       "title": "Accepted Move Destination",
       "description": "Accepted Move Destination in C-MOVE requests; any if absent.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -131,7 +136,7 @@
       "title": "Hide SPS with Status by MWL SCP",
       "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -149,7 +154,7 @@
       "title": "Hide SPS with Status by MWL RS",
       "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -185,7 +190,7 @@
       "title": "Encode as JSON Number",
       "description": "VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. Supplements values specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "DS|Decimal String",
@@ -304,27 +309,33 @@
       "title": "QIDO Result Order By",
       "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmFwdMppsDestination": {
       "title": "MPPS Forward Destination",
       "description": "Destination to forward MPPS N-CREATE RQ and N-SET RQ. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
       "title": "IAN Destination",
       "description": "Destination to send IAN N-CREATE RQ. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanTrigger": {
       "title": "IAN Trigger",
       "description": "Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send IAN on receiving studies",
@@ -505,7 +516,7 @@
       "title": "Accepted User Role",
       "description": "Roles of users from which web requests are accepted; any if absent.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -544,7 +555,9 @@
       "title": "MWL Worklist Label Filter",
       "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (MWL Query SOP Class) or dicomWeb (Modality Worklist Search Transaction) service for matching Modality Worklist items (MWL), if no matching key for this attribute is specified in the request. If multiple values are specified, MWL with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, MWL with any value of Worklist Label (0074,1202) will match.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSWorklistLabel": {
       "title": "UPS Worklist Label",
@@ -555,7 +568,9 @@
       "title": "UPS Worklist Label Filter",
       "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (UPS Query SOP Class) or dicomWeb (Worklist Search Transaction) service for matching Unified Procedure Steps (UPS), if no matching key for this attribute is specified in the request. If multiple values are specified, UPS with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, UPS with any value of Worklist Label (0074,1202) will match.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSEventSCU": {
       "title": "UPS Event SCU",
@@ -651,7 +666,9 @@
       "title": "Storage Verification Storage IDs",
       "description": "Only accept Storage Verification if the validation of the storage of the object on one of the specified Storage Systems is successful. Not effective with Storage Verification Policy: DB_RECORD_EXISTS. Overwrites values specified on Device level.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationInitialDelay": {
@@ -680,7 +697,9 @@
       "title": "HL7 Procedure Status Update Receiving Application",
       "description": "Application|Facility name of Receiving Application for HL7 Procedure Status Update. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "hl7ApplicationName"
     },
     "hl7PSUAction": {
@@ -699,7 +718,7 @@
       "title": "HL7 Procedure Status Update Trigger",
       "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send notification on receive of studies",
@@ -800,7 +819,9 @@
       "title": "Reject Conflicting Patient Attribute",
       "description": "DICOM Tag of Patient Attribute which have to match in received objects with the value in previous received objects with equal Patient ID to be accepted. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
@@ -867,8 +888,8 @@
       "title": "Export Rule",
       "description": "Export Rules applied to DICOM objects received by this AE. Supplements Export Rules specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportRule.schema.json"
       }
     },
@@ -876,8 +897,8 @@
       "title": "Export Priors Rule",
       "description": "Export Priors Rules applied to DICOM objects received by this AE. Supplements Export Priors Rules specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportPriorsRule.schema.json"
       }
     },
@@ -885,8 +906,8 @@
       "title": "MPPS Forward Rule",
       "description": "MPPS Forward Rules applied to MPPS received by this AE. Supplements MPPS Forward Rules specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "mppsForwardRule.schema.json"
       }
     },
@@ -894,8 +915,8 @@
       "title": "RESTful Forward Rule",
       "description": "RESTful Forward Rules. Supplements RESTful Forward rules specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "rsForwardRule.schema.json"
       }
     },
@@ -903,8 +924,8 @@
       "title": "Compression rule",
       "description": "Compression rules. Supplements Compression rules specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveCompressionRule.schema.json"
       }
     },
@@ -912,8 +933,8 @@
       "title": "Attribute Coercion (Legacy)",
       "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion.schema.json"
       }
     },
@@ -921,8 +942,8 @@
       "title": "Attribute Coercion (New)",
       "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
@@ -939,8 +960,8 @@
       "title": "Store Access Control Rules",
       "description": "Store Access Control Rules applied to Studies received by this AE. Supplements Store Access Control Rules specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "storeAccessControlIDRule.schema.json"
       }
     },
@@ -948,8 +969,8 @@
       "title": "UPS on Store Rule",
       "description": "UPS on Store Rules applied to DICOM objects received by this AE. Supplements UPS on Store Rules specified on Device level.",
       "type": "array",
-      "titleKey":"{dcmUPSOnStoreID}",
-      "items" : {
+      "titleKey": "{dcmUPSOnStoreID}",
+      "items": {
         "$ref": "upsOnStore.schema.json"
       }
     },

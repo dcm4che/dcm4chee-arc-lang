@@ -22,7 +22,7 @@
       "title": "Režim liste",
       "description": "Imate dve mogućnosti kako da prikažete definisanu listu: 1.) Na vrhu iznad ostatka liste 'separated' sa linijom, 2.) Prikaži samo ovde definisane ( 'exclusive' ).",
       "type": "string",
-      "default": "separated",
+      "default":"separated",
       "enum": [
         "separated",
         "exclusive"

@@ -11,7 +11,7 @@
       "title": "दृष्टांत स्टोरेज ID",
       "description": "स्टोरेज सिस्टम् की ID जिसपे प्राप्त हुए DICOM मिश्र दृष्टांतों को सहेजा जाएगा । विविध स्टोरेज सिस्टम्स कॉन्फ़िगर किए जा सकते है ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -27,7 +27,7 @@
       "title": "मेटाडेटा स्टोरेज ID",
       "description": "स्टोरेज सिस्टम् की ID जिसपे JSON प्रारूप में मेटाडेटा को सहेजा जाएगा - DICOM मिश्र दृष्टांत के अतिरिक्त ।विविध स्टोरेज सिस्टम्स कॉन्फ़िगर किए जा सकते है । यदि कॉन्फ़िगर नहीं किया है, तो मेटाडेटा अतिरिक्त रूप से नहीं सहेजा जाएगा ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -53,19 +53,24 @@
     "dcmStoreAccessControlID": {
       "title": "संचय प्रवेश निरीक्षण ID",
       "description": "इस AE द्वारा सहेजे गए स्टडीज पे निरूपित प्रवेश निरीक्षण ID का मूल्य ।",
-      "items": { "type": "string" }
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmAccessControlID": {
       "title": "प्रवेश निरीक्षण ID",
       "description": "इस AE द्वारा प्राप्त हुए प्राप्ति या पुनःप्राप्ति अनुरोधों पे निरूपित प्रवेश निरीक्षण ID के मूल्य ।",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmAcceptedMoveDestination": {
       "title": "स्वीकृत मूव गंतव्य",
       "description": "C-MOVE अनुरोधों में स्वीकृत मूव गंतव्य; यदि कॉन्फ़िगर नहीं किया है, तो कोई भी गंतव्य स्वीकार करें ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -131,7 +136,7 @@
       "title": "MWL SCP द्वारा इन स्थिति के एसपीएस को छिपाए",
       "description": "MWL SCP से न वापस की जानेवाले MWL आइटम्स के अनुसूचित प्रक्रिया स्टेप कोड । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -149,7 +154,7 @@
       "title": "MWL RS द्वारा इन स्थिति के एसपीएस को छिपाए",
       "description": "MWL RS से न वापस की जानेवाले MWL आइटम्स के अनुसूचित प्रक्रिया स्टेप कोड । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -185,7 +190,7 @@
       "title": "JSON नंबर के रूप में एनकोड करें",
       "description": "VR को JSON नंबर के रूप में एनकोड किया जाए । यदि कॉन्फ़िगर्ड नहीं है, तो IS, DS, SV और UV के मूल्यों को JSON स्ट्रिंग्स के रूप में एन्कोड किए जाएगा । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य पूरक होंगे ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "DS|Decimal String",
@@ -304,27 +309,33 @@
       "title": "QIDO Result Order By",
       "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmFwdMppsDestination": {
       "title": "MPPS आगे भेजने का गंतव्य",
       "description": "MPPS N-CREATE RQ और N-SET RQ अनुरोधों को आगे भेजने का गंतव्य । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
       "title": "IAN आगे भेजने का गंतव्य",
       "description": "IAN N-CREATE RQ अनुरोधों को आगे भेजने का गंतव्य । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanTrigger": {
       "title": "IAN Trigger",
       "description": "Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send IAN on receiving studies",
@@ -505,7 +516,7 @@
       "title": "Accepted User Role",
       "description": "Roles of users from which web requests are accepted; any if absent.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -544,7 +555,9 @@
       "title": "MWL Worklist Label Filter",
       "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (MWL Query SOP Class) or dicomWeb (Modality Worklist Search Transaction) service for matching Modality Worklist items (MWL), if no matching key for this attribute is specified in the request. If multiple values are specified, MWL with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, MWL with any value of Worklist Label (0074,1202) will match.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSWorklistLabel": {
       "title": "UPS कार्यसूची लेबल",
@@ -555,7 +568,9 @@
       "title": "UPS Worklist Label Filter",
       "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (UPS Query SOP Class) or dicomWeb (Worklist Search Transaction) service for matching Unified Procedure Steps (UPS), if no matching key for this attribute is specified in the request. If multiple values are specified, UPS with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, UPS with any value of Worklist Label (0074,1202) will match.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSEventSCU": {
       "title": "UPS घटना SCU",
@@ -651,7 +666,9 @@
       "title": "स्टोरेज सिद्धकरण स्टोरेज की कई IDs",
       "description": "स्टोरेज सिद्धकरण की सफलता के लिए दृष्टांत का संचय किसी एक निर्दिष्ट स्टोरेज सिस्टम पे होने का संकेत करता है । यदि कॉन्फ़िगर न किया हो तो, किसी भी स्टोरेज सिस्टम पे स्टोरेज सिद्धकरण की सफलता काफी है ।प्रभावशाली नहीं होगा, यदि 'स्टोरेज सिद्धकरण नीति' का मूल्य DB_RECORD_EXISTS है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationInitialDelay": {
@@ -680,7 +697,9 @@
       "title": "HL7 प्रक्रिया स्थिति अपडेट प्राप्ति अनुप्रयोग",
       "description": "HL7 प्रक्रिया स्थिति अपडेट प्राप्त करनेवाले अनुप्रयोग के अनुप्रयोग और सुविधा का नाम । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "hl7ApplicationName"
     },
     "hl7PSUAction": {
@@ -699,7 +718,7 @@
       "title": "HL7 Procedure Status Update Trigger",
       "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send notification on receive of studies",
@@ -800,7 +819,9 @@
       "title": "मरीज़ के रेकॉर्ड के परस्पर विरोधी गुणों को अस्वीकार करें",
       "description": "प्राप्त हुए दृष्टांतों में मरीज़ के रेकॉर्ड के गुणों के DICOM टैग्स जिन्हे समान मरीज़ के ID के पिछले प्राप्त हुए दृष्टांतों के गुणों के मूल्यों के साथ स्वीकार होने के लिए मिलान करना है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
@@ -867,8 +888,8 @@
       "title": "निर्यात नियम",
       "description": "इस AE से सहेजे गए DICOM दृष्टांतों पे निर्यात नियम लागू करें । आर्काइव डिवाइस स्तर पे निर्दिष्ट निर्यात नियम पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportRule.schema.json"
       }
     },
@@ -876,8 +897,8 @@
       "title": "पूर्व स्टडीज निर्यात नियम",
       "description": "इस AE से सहेजे गए DICOM दृष्टांतों पे पूर्व स्टडीज निर्यात नियम लागू करें । आर्काइव डिवाइस स्तर पे निर्दिष्ट पूर्व स्टडीज निर्यात नियम पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportPriorsRule.schema.json"
       }
     },
@@ -885,8 +906,8 @@
       "title": "MPPS फॉरवर्ड नियम",
       "description": "MPPS फॉरवर्ड नियम जो इस AE द्वारा प्राप्त MPPS पर लागू होंगे । आर्काइव डिवाइस स्तर पे निर्दिष्ट पूर्व स्टडीज निर्यात नियम पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "mppsForwardRule.schema.json"
       }
     },
@@ -894,8 +915,8 @@
       "title": "RESTful फॉरवर्ड नियम",
       "description": "RESTful फॉरवर्ड नियम । आर्काइव डिवाइस स्तर पे निर्दिष्ट RESTful फॉरवर्ड नियम पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "rsForwardRule.schema.json"
       }
     },
@@ -903,8 +924,8 @@
       "title": "संपीड़न नियम",
       "description": "इस AE से सहेजे गए DICOM दृष्टांतों पे लागू किए गए संपीड़न नियम । आर्काइव डिवाइस स्तर पे निर्दिष्ट संपीड़न नियम पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveCompressionRule.schema.json"
       }
     },
@@ -912,8 +933,8 @@
       "title": "गुण नियंत्रण",
       "description": "इस AE से प्राप्त हुए या भेजे गए DIMSE पे लागू किए गए गुण नियंत्रण । आर्काइव डिवाइस स्तर पे निर्दिष्ट गुण नियंत्रण पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion.schema.json"
       }
     },
@@ -921,8 +942,8 @@
       "title": "Attribute Coercion (New)",
       "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
@@ -939,8 +960,8 @@
       "title": "संचय प्रवेश निरीक्षण ID नियम",
       "description": "संचय प्रवेश निरीक्षण ID नियम जो इस AE द्वारा सहेजे गए स्टडीज पे लागू होंगे । आर्काइव डिवाइस स्तर पे निर्दिष्ट संचय प्रवेश निरीक्षण ID नियम पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "storeAccessControlIDRule.schema.json"
       }
     },
@@ -948,8 +969,8 @@
       "title": "दृष्टांतों के सहेजने पे UPS नियम",
       "description": "इस AE से सहेजे गए DICOM दृष्टांतों पे दृष्टांतों के सहेजने पे UPS नियम लागू करें । आर्काइव डिवाइस स्तर पे निर्दिष्ट दृष्टांतों के सहेजने पे UPS नियम पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{dcmUPSOnStoreID}",
-      "items" : {
+      "titleKey": "{dcmUPSOnStoreID}",
+      "items": {
         "$ref": "upsOnStore.schema.json"
       }
     },

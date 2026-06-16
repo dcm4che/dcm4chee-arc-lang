@@ -56,9 +56,9 @@
     "dcmuiDiffCriteria": {
       "title": "UI アーカイブの 比較 基準",
       "description": "UI アーカイブの 比較 基準",
-      "titleKey":"{dcmuiDiffCriteriaTitle}",
+      "titleKey": "{dcmuiDiffCriteriaTitle}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiDiffCriteria.schema.json"
       }
     }

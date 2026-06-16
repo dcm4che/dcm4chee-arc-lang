@@ -46,7 +46,9 @@
       "title": "预取C-Store SCP",
       "description": "存储所选读取检查的C-Store SCP的AE标题。",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmDestinationCFindSCP": {
@@ -65,13 +67,17 @@
       "title": "条件",
       "description": "{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}格式的条件。示例:MSH-4=FORWARD或MSH-9=ORM\\^O01或PID-3[.3]=PIDIssuer或PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmEntitySelector": {
       "title": "实体选择器",
       "description": "指定用于选择预取检查的匹配密钥。 格式:{key}={value}[&{key}={value)]..., with {key} = 'priors' | 'StudyAge' | {attributeID},'$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]]格式的{value} 被来自触发了预期的被接收的HL7消息的指定HL7字段的值取代。如果未指定实体选择器,则将预取患者的所有检查。例如:'priors=2&StudyAge=-5Y&ModalitiesInStudy=$OBR-24' =>选择最多2个不超过5年的既往研究，包含至少一个OBR-24模式系列。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
@@ -88,7 +94,9 @@
       "title": "患者ID分配权限",
       "description": "如果患者ID分配的权限被设置为MATCHING或NOT_MATCHING，则将其与接收到的HL7消息的值进行匹配。格式:{Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]。",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "预取患者ID分配权限",
@@ -105,7 +113,7 @@
       "title": "Suppress Duplicate History Size",
       "description": "Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -124,7 +132,9 @@
       "title": "预取调度",
       "description": "在“预取日期时间”字段的基础上，延迟预取到指定的时间段。如果不指定“预取计划”，则根据配置的“预取日期时间”字段，为所选研究对象排队预取任务。格式:'hour=[0-23] dayOfWeek=[0-6]'（0=Sunday）",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     }
   }

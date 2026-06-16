@@ -25,7 +25,9 @@
       "title": "Attribute Tag",
       "description": "DICOM Tag as hex string",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmCustomAttribute1": {

@@ -220,7 +220,7 @@
       "title": "ऑडिट सप्रेस निकष",
       "description": "ऑडिट सप्रेस निकष.",
       "type": "array",
-      "titleKey":"{cn}",
+      "titleKey": "{cn}",
       "items": {
         "$ref": "auditSuppressCriteria.schema.json"
       }

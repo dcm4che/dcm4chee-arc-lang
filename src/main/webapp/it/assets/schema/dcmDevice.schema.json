@@ -24,7 +24,9 @@
       "title": "Limite di associazione per AE",
       "description": "Numero massimo di connessioni DICOM aperte avviate da una particolare entità dell'applicazione (AE) nel formato <ae-title>=<number>; rifiuta le richieste di associazione da quell'AE se il limite viene superato.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmLimitAssociationsInitiatedBy"
     },
     "dcmTrustStoreURL": {
@@ -94,8 +96,8 @@
       "title": "Applicazioni web",
       "description": "Applicazioni Web fornite dal dispositivo",
       "type": "array",
-      "titleKey":"{dcmWebAppName}",
-      "order":26,
+      "titleKey": "{dcmWebAppName}",
+      "order": 26,
       "items": {
         "$ref": "webApplication.schema.json"
       }
@@ -104,8 +106,8 @@
       "title": "Clienti Keycloak",
       "description": "Clienti Keycloak forniti dal dispositivo",
       "type": "array",
-      "titleKey":"{dcmKeycloakClientID}",
-      "order":27,
+      "titleKey": "{dcmKeycloakClientID}",
+      "order": 27,
       "items": {
         "$ref": "keycloakClient.schema.json"
       }
@@ -114,8 +116,8 @@
       "title": "Applicazioni HL7",
       "description": "Applicazioni HL7 fornite dal dispositivo",
       "type": "array",
-      "titleKey":"{hl7ApplicationName}",
-      "order":28,
+      "titleKey": "{hl7ApplicationName}",
+      "order": 28,
       "items": {
         "$ref": "hl7Application.schema.json"
       }
@@ -124,8 +126,8 @@
       "title": "Scrittori di immagini",
       "description": "Specifica gli scrittori java di immagini IO con parametri di scrittura utilizzati per la compressione delle immagini DICOM",
       "type": "array",
-      "titleKey":"{dicomTransferSyntax}",
-      "order":29,
+      "titleKey": "{dicomTransferSyntax}",
+      "order": 29,
       "items": {
         "$ref": "imageWriter.schema.json"
       }
@@ -134,8 +136,8 @@
       "title": "Lettori di immagini",
       "description": "Specifica i lettori java di immagini utilizzati per decomprimere immagini DICOM compresse",
       "type": "array",
-      "titleKey":"{dicomTransferSyntax}",
-      "order":30,
+      "titleKey": "{dicomTransferSyntax}",
+      "order": 30,
       "items": {
         "$ref": "imageReader.schema.json"
       }
@@ -143,10 +145,10 @@
     "dcmAuditLogger": {
       "title": "Audit Logger",
       "description": "Informazioni relative a Audit Logger",
-      "titleKey":"{cn}",
+      "titleKey": "{cn}",
       "type": "array",
-      "order":31,
-      "items" : {
+      "order": 31,
+      "items": {
         "$ref": "auditLogger.schema.json"
       }
     },
@@ -154,21 +156,21 @@
       "title": "Archivio delle registrazioni di controllo",
       "description": "Informazioni relative all'archivio delle registrazioni di controllo",
       "$ref": "auditRecordRepository.schema.json",
-      "order":32
+      "order": 32
     },
     "dcmArchiveDevice": {
       "title": "Dispositivo di archiviazione",
       "description": "Informazioni relative al dispositivo di archiviazione DICOM",
-      "order":33,
+      "order": 33,
       "$ref": "archiveDevice.schema.json"
     },
     "dcmuiConfig": {
       "title": "Configurazione dell'interfaccia utente",
       "description": "Configurazione dell'interfaccia utente",
-      "titleKey":"{dcmuiConfigName}",
+      "titleKey": "{dcmuiConfigName}",
       "type": "array",
-      "order":34,
-      "items" : {
+      "order": 34,
+      "items": {
         "$ref": "uiConfig.schema.json"
       }
     }

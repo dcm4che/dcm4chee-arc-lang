@@ -24,9 +24,9 @@
     "dcmuiLanguageProfileObjects": {
       "title": "Language Profile",
       "description": "Language profile for username, role or everyone",
-      "titleKey":"{dcmuiLanguageProfileName}",
+      "titleKey": "{dcmuiLanguageProfileName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiLanguageProfile.schema.json"
       }
     }

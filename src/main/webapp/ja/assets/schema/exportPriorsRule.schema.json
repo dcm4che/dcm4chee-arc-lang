@@ -18,7 +18,9 @@
       "title": "エクスポーター ID",
       "description": "エクスポーター ID",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmExporterID"
     },
     "dcmProperty": {
@@ -42,7 +44,9 @@
       "title": "エンティティ セレクタ",
       "description": "書き出し する 以前の 検査を 選択する ために 使用される 一致 する キーを 指定します。 形式: {key}={value}[&{key}={value}]..., ここは {key} = 'priors' | 'StudyAge' | {attributeID}。 '$'{attributeID} 形式で {value}は、 書き出しを トリガーした 受信 インスタンスからの 指定された 属性の 値に 置き換えられます。 エンティティ セレクタが 指定されて いない 場合、 患者の すべての 検査が 書き出しされます。 例: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => 少なくとも 1つの CT シリーズを 含む、 5年 以内の 最大 2つの 先行 検査を 選択します。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmDuration": {

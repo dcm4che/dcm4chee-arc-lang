@@ -2,10 +2,7 @@
   "title": "Uređaj",
   "description": "Informacije vezane za DICOM uređaj",
   "type": "object",
-  "required": [
-    "dicomDeviceName",
-    "dicomInstalled"
-  ],
+  "required": ["dicomDeviceName", "dicomInstalled"],
   "groups": {
     "Manufacturer Information": [
       "dicomManufacturer",
@@ -101,7 +98,7 @@
       "order": 9,
       "items": {
         "type": "string",
-        "enum": [
+        "enum":[
           "ARCHIVE|Archive",
           "COMP|Computation Server",
           "CAD|Computer Assisted Detection/Diagnosis",

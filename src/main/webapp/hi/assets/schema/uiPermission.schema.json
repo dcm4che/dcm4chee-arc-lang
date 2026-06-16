@@ -92,7 +92,7 @@
       "title": "UI क्रिया मापदण्ड",
       "description": "UI क्रिया मापदण्ड ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum":[
           "edit",
@@ -113,7 +113,7 @@
       "title": "स्वीकृत उपभोक्ता की भूमिका",
       "description": "स्वीकृत उपभोक्ता की भूमिका ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     }

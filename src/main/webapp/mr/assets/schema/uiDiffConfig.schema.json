@@ -56,9 +56,9 @@
     "dcmuiDiffCriteria": {
       "title": "UI तुलना मापदंड",
       "description": "UI तुलना मापदंड.",
-      "titleKey":"{dcmuiDiffCriteriaTitle}",
+      "titleKey": "{dcmuiDiffCriteriaTitle}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiDiffCriteria.schema.json"
       }
     }

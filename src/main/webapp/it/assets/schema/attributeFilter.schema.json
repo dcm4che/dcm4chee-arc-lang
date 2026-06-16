@@ -25,7 +25,9 @@
       "title": "Attributo Tag",
       "description": "Tag DICOM come stringa esadecimale",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmCustomAttribute1": {

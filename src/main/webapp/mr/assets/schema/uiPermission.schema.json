@@ -92,7 +92,7 @@
       "title": "UI क्रिया मापदंड",
       "description": "UI क्रिया मापदंड.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum":[
           "edit",
@@ -113,7 +113,7 @@
       "title": "स्वीकृत वापरकर्त्याची भूमिका",
       "description": "स्वीकृत वापरकर्त्याची भूमिका.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     }

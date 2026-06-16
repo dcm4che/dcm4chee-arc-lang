@@ -243,8 +243,8 @@
       "title": "HL7 फॉरवर्ड नियम",
       "description": "HL7 फॉरवर्ड नियम । आर्काइव डिवाइस स्तर पे निर्दिष्ट फॉरवर्ड नियम पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -252,8 +252,8 @@
       "title": "HL7 निर्यात नियम",
       "description": "निर्यात नियम जो किसी भी HL7 अनुप्रयोग से प्राप्त हुए HL7 संदेशों पे लागू होंगे । आर्काइव डिवाइस स्तर पे निर्दिष्ट निर्यात नियम पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -270,8 +270,8 @@
       "title": "HL7 प्रीफ़ेच नियम",
       "description": "प्रीफ़ेच नियम जो किसी भी HL7 अनुप्रयोग से प्राप्त हुए HL7 संदेशों पे लागू होंगे । आर्काइव डिवाइस स्तर पे निर्दिष्ट प्रीफ़ेच नियम पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -279,8 +279,8 @@
       "title": "HL7 स्टडी धारण नीति",
       "description": "HL7 स्टडी धारण नीतियाँ जो किसी भी HL7 अनुप्रयोग से प्राप्त हुए HL7 संदेशों पे लागू होंगे । आर्काइव डिवाइस स्तर पे निर्दिष्ट स्टडी धारण नीतियाँ पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -288,8 +288,8 @@
       "title": "HL7 ऑर्डर के लिए अनुसूचित स्टेशन",
       "description": "चुने गए MWL HL7 ऑर्डर फीड पे अनुसूचित स्टेशन । आर्काइव डिवाइस स्तर पे निर्दिष्ट HL7 ऑर्डर के लिए अनुसूचित स्टेशन पूरक होंगे ।",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
@@ -297,8 +297,8 @@
       "title": "HL7 ऑर्डर के लिए एसपीएस स्थिति",
       "description": "प्राप्त हुए HL7 ORM^O01, OMI^O23, OMG^O19 संदेशों पे निर्माण की गए या अपडेट हुए DICOM MWL आइटम्स के एसपीएस स्थिति को निर्दिष्ट करता है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",
       "type": "array",
-      "titleKey":"{dcmSPSStatus}",
-      "items" : {
+      "titleKey": "{dcmSPSStatus}",
+      "items": {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     }

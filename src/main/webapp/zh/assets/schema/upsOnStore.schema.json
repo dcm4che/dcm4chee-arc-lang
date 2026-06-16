@@ -87,7 +87,7 @@
     },
     "dcmUPSIncludeInputInformation": {
       "title": "包含输入信息",
-      "description": "指示创建的UPS是否需要引用输入信息序列（0040,4021）中接收的对象。 ",
+      "description": "指示创建的UPS是否需要引用输入信息序列（0040,4021）中接收的对象。",
       "type": "string",
       "default": "APPEND_OR_CREATE",
       "enum": [

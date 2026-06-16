@@ -39,7 +39,7 @@
       "title": "RESTful कार्य",
       "description": "इतर आर्काइव्हसवर RESTful विनंत्या फॉरवर्ड करण्यासाठी RESTful कार्यांचे नाव.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "CreatePatient",

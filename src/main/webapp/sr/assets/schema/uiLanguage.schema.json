@@ -12,11 +12,11 @@
       "description": "Ime Language Config-a",
       "type": "string"
     },
-    "dcmLanguages": {
-      "title": "Dostupni jezici",
-      "description": "Postavi jezike koji treba da budu dostupni u UI-ju (JSON fajlovi za te jezike moraju postojati u kodu, ako ne postoje otvorite Issue na github-u",
+    "dcmLanguages":{
+      "title": "Available languages",
+      "description": "Set languages that should be available in the UI (The JSON-files to those language must exist in the code, if they don't exist open an Issue in github",
       "type": "array",
-      "items": {
+      "items":{
         "type": "string"
       },
       "format": "dcmLanguageChooser"

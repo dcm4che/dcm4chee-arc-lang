@@ -1,7 +1,7 @@
 hl7ExportRule:HL7 pravilo izvoza|HL7 Export pravilo
 hl7ExportRule.cn:Ime|Proizvoljno/Smisleno ime HL7 Export pravila
 hl7ExportRule.dcmExporterID:ID izvoznika|ID izvoznika
-hl7ExportRule.dcmProperty:Uslovi|Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Example: MSH-4=FORWARD or MSH-9=ORM\\^O01 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType
+hl7ExportRule.dcmProperty:Uslovi|Uslovi u formatu {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Primer: MSH-4=FORWARD ili MSH-9=ORM\\^O01 ili PID-3[.3]=PIDIssuer ili PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType
 hl7ExportRule.dcmEntitySelector:Birač entiteta|Specificira ključeve podudaranja korišćene za selekciju studija za izvoz. Format: {key}={value}[&{key}={value)]..., sa {key} = 'StudyAge' | {attributeID}. {value} u formatu '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] se zamenjuje vrednošću navedenog HL7 polja iz primljene HL7 poruke koja je okinula izvoz. Ako nije naveden Entity Selector, izvešće se sve studije za pacijenta. Primer: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => selektiraj najviše 2 prethodne studije ne starije od 5 godina koje sadrže barem jednu CT seriju.
 hl7ExportRule.dcmNullifyIssuerOfPatientID:Ignoriši izdavaoca autoriteta ID-a pacijenta|Uslovno ignoriši Assigning Authority of Patient ID (PID-3.4) u primljenoj HL7 poruci koja je okinula izvoz za selekciju studija pacijenta.
 hl7ExportRule.dcmIssuerOfPatientID:Izdavalac autoriteta ID-a pacijenta|Assigning Authority Patient ID-a se podudara sa vrednostima u primljenoj HL7 poruci, ako je Assigning Authority of Patient ID postavljen na MATCHING ili NOT_MATCHING. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].

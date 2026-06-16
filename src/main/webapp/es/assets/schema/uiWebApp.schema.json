@@ -33,7 +33,7 @@
       "description": "Aplicación Web",
       "format": "webApp",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -41,7 +41,7 @@
       "title": "Rol de Usuario Aceptado",
       "description": "Defina los roles para los cuales esta configuración debe estar disponible, use 'user' para estar disponible para todos los roles (Debe definir un nombre de usuario (siguiente atributo) o rol de usuario (este atributo ))",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -49,7 +49,7 @@
       "title": "Nombre de Usuario Aceptado",
       "description": "Defina el nombre de usuario para el que esta configuración debe estar disponible (Debe definir un nombre de usuario (este atributo) o un rol de usuario (atributo anterior))",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     }

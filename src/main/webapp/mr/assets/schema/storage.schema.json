@@ -75,7 +75,7 @@
       "title": "File Open Option(s)",
       "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "CREATE_NEW|Create a new file, failing if the file already exists",
@@ -236,7 +236,7 @@
       "title": "डिलीटर थ्रेड्स",
       "description": "साठवण सिस्टममधून दृष्टांते हटवण्यासाठी वापरलेल्या थ्रेड्सची संख्या.",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -299,7 +299,7 @@
       "title": "पुनर्प्राप्त कॅश कमाल समांतर",
       "description": "दृष्टांतांच्या पुनर्प्राप्तीवर कॅश साठवणावर समांतरपणे कॉपी करण्याची कमाल संख्या. केवळ प्रभावी जर 'पुनर्प्राप्त कॅश साठवण ID' सुद्धा कॉन्फीगर्ड आहे.",
       "type": "integer",
-      "default" : 10,
+      "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },

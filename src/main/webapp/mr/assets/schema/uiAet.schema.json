@@ -33,7 +33,7 @@
       "description": "UI क्रिया घटक.",
       "format": "dcmAETitle",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -41,7 +41,7 @@
       "title": "स्वीकारलेली वापरकर्ता भूमिका",
       "description": "या कॉन्फिगरेशनसाठी उपलब्ध असलेल्या भूमिका निश्चित करा, सर्व भूमिकांसाठी उपलब्ध होण्यासाठी 'user' वापरा.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     }

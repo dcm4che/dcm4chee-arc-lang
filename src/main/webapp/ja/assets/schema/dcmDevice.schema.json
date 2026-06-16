@@ -24,7 +24,9 @@
       "title": "AEの 関連付け 制限",
       "description": "<ae-title>=<number> 形式で 特定の アプリケーション エンティティ (AE)に よって 開始された 開いて いる DICOM 接続の 最大数; 制限を 超えた 場合、 その AEからの関連付け 要求を 拒否します。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmLimitAssociationsInitiatedBy"
     },
     "dcmTrustStoreURL": {
@@ -94,8 +96,8 @@
       "title": "ウェブ アプリケーション",
       "description": "デバイスに よって 提供される ウェブ アプリケーション",
       "type": "array",
-      "titleKey":"{dcmWebAppName}",
-      "order":26,
+      "titleKey": "{dcmWebAppName}",
+      "order": 26,
       "items": {
         "$ref": "webApplication.schema.json"
       }
@@ -104,8 +106,8 @@
       "title": "キークローク クライアント",
       "description": "デバイスに よって 提供される キークローク クライアント",
       "type": "array",
-      "titleKey":"{dcmKeycloakClientID}",
-      "order":27,
+      "titleKey": "{dcmKeycloakClientID}",
+      "order": 27,
       "items": {
         "$ref": "keycloakClient.schema.json"
       }
@@ -114,8 +116,8 @@
       "title": "HL7 アプリケーション",
       "description": "デバイスに よって 提供される HL7 アプリケーション",
       "type": "array",
-      "titleKey":"{hl7ApplicationName}",
-      "order":28,
+      "titleKey": "{hl7ApplicationName}",
+      "order": 28,
       "items": {
         "$ref": "hl7Application.schema.json"
       }
@@ -124,8 +126,8 @@
       "title": "画像 ライター",
       "description": "DICOM 画像の 圧縮に 使用される 書き込み パラメーターを 持つ Java 画像 IO 画像 ライターを 指定します",
       "type": "array",
-      "titleKey":"{dicomTransferSyntax}",
-      "order":29,
+      "titleKey": "{dicomTransferSyntax}",
+      "order": 29,
       "items": {
         "$ref": "imageWriter.schema.json"
       }
@@ -134,8 +136,8 @@
       "title": "画像 リーダー",
       "description": "圧縮された DICOM 画像の 解凍に 使用される Java 画像 IO 画像 リーダーを 指定します",
       "type": "array",
-      "titleKey":"{dicomTransferSyntax}",
-      "order":30,
+      "titleKey": "{dicomTransferSyntax}",
+      "order": 30,
       "items": {
         "$ref": "imageReader.schema.json"
       }
@@ -143,10 +145,10 @@
     "dcmAuditLogger": {
       "title": "監査 ロガー",
       "description": "監査 ロガー 関連 情報",
-      "titleKey":"{cn}",
+      "titleKey": "{cn}",
       "type": "array",
-      "order":31,
-      "items" : {
+      "order": 31,
+      "items": {
         "$ref": "auditLogger.schema.json"
       }
     },
@@ -154,21 +156,21 @@
       "title": "監査 記録 リポジトリ",
       "description": "監査 記録 リポジトリ 関連 情報",
       "$ref": "auditRecordRepository.schema.json",
-      "order":32
+      "order": 32
     },
     "dcmArchiveDevice": {
       "title": "アーカイブ デバイス",
       "description": "DICOM アーカイブ デバイス 関連 情報",
-      "order":33,
+      "order": 33,
       "$ref": "archiveDevice.schema.json"
     },
     "dcmuiConfig": {
       "title": "UI 構成",
       "description": "UI 構成",
-      "titleKey":"{dcmuiConfigName}",
+      "titleKey": "{dcmuiConfigName}",
       "type": "array",
-      "order":34,
-      "items" : {
+      "order": 34,
+      "items": {
         "$ref": "uiConfig.schema.json"
       }
     }

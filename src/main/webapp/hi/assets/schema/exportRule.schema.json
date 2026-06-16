@@ -29,7 +29,9 @@
       "title": "निर्यातक ID",
       "description": "निर्यातक ID ।",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmExporterID"
     },
     "dicomDeviceName": {

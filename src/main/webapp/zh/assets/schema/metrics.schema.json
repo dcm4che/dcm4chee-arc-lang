@@ -21,7 +21,7 @@
       "title": "度量保留期",
       "description": "以分钟为单位的度量保留期",
       "type": "integer",
-      "default" : 60,
+      "default": 60,
       "minimum": 1
     },
     "dcmUnit": {

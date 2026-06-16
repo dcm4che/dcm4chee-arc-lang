@@ -9,7 +9,7 @@ upsOnStore.dcmUPSInputReadinessState:准备输入状态|准备输入状态值（
 upsOnStore.dcmUPSStartDateTimeDelay:计划的过程步骤开始时间的延迟|在创建的UPS中,以PnDTnHnMn.nS格式,从接收到计划的过程步骤开始日期和时间的时间开始的延迟（0040,4005）。如果不存在,则无延迟。
 upsOnStore.dcmUPSCompletionDateTimeDelay:预期完成时间延迟|从PnDTnHnMn.nS格式创建的UPS中的预期完成时间接收时间起的延迟（0040,4011）。 如果不存在,则不会设置完成预期日期和时间。
 upsOnStore.dcmUPSInstanceUIDBasedOnName:基于名称的UPS实例UID|用于在创建的UPS中（0008,0018）生成基于名称的SOP实例UID的值。 该值通常包含{StudyInstanceUID},{SeriesInstanceUID}或{SOPInstanceUID},以便为接收的每个检验,系列或实例创建不同的UPS。 如果不存在,则使用（0008,0018）随机生成的SOP实例UID。
-upsOnStore.dcmUPSIncludeInputInformation:包含输入信息|指示创建的UPS是否需要引用输入信息序列（0040,4021）中接收的对象。 
+upsOnStore.dcmUPSIncludeInputInformation:包含输入信息|指示创建的UPS是否需要引用输入信息序列（0040,4021）中接收的对象。
 upsOnStore.dcmUPSIncludePatient:UPS Include Patient|Indicates if patient (associated with created UPS) is created using patient attributes in received object; true if absent.
 upsOnStore.dcmDestinationAE:目标AE|将要存储实例的DICOM应用程序实体的标题。
 upsOnStore.dcmEntity:累积范围|累积范围

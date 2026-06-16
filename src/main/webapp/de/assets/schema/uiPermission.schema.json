@@ -92,7 +92,7 @@
       "title": "UI Action Parameter",
       "description": "UI Action Parameter",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum":[
           "edit",
@@ -113,7 +113,7 @@
       "title": "Accepted User Role",
       "description": "Accepted User Role",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     }

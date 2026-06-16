@@ -220,7 +220,7 @@
       "title": "ऑडिट अधीन मानदण्ड",
       "description": "ऑडिट अधीन मानदण्ड ।",
       "type": "array",
-      "titleKey":"{cn}",
+      "titleKey": "{cn}",
       "items": {
         "$ref": "auditSuppressCriteria.schema.json"
       }

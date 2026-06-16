@@ -75,7 +75,7 @@
       "title": "File Open Option(s)",
       "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "CREATE_NEW|Create a new file, failing if the file already exists",
@@ -236,7 +236,7 @@
       "title": "Deleter Threads",
       "description": "Number of Threads used for deletion of objects from the Storage System.",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -299,7 +299,7 @@
       "title": "Retrieve Cache Max Parallel",
       "description": "Maximal number of parallel copies to cache storage on retrieve. Only effective if a Retrieve Cache Storage ID is configured.",
       "type": "integer",
-      "default" : 10,
+      "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },

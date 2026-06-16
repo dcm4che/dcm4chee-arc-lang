@@ -25,7 +25,9 @@
       "title": "属性标签",
       "description": "十六进制字符串的DICOM标签",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmCustomAttribute1": {

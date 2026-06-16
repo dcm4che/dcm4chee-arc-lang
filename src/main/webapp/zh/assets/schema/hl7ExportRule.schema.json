@@ -18,20 +18,26 @@
       "title": "Exporter ID",
       "description": "Exporter ID",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmExporterID"
     },
     "dcmProperty": {
       "title": "条件",
       "description": "{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][！]={regEx}格式的条件。例如：MSH-4=FORWARD或MSH-9=ORM\\^O01或PID-3[.3]=PIDIssuer或PID-3[.3[.2]]=PIDIssuer通用实体ID类型",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmEntitySelector": {
       "title": "实体选择器",
       "description": "指定用于选择要导出的检查的匹配key。格式： {key}={value}[&{key}={value)]..., with {key} = 'StudyAge' | {attributeID},格式为 '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]]的{value}被来自触发了导出的接收的HL7消息的指定HL7字段值取代。 如果未指定实体选择器， 将会导出患者所有的检查。 例如： 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => 选择最多2个不超过5年并且包含最少一个CT序列的既往检查。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
@@ -48,7 +54,9 @@
       "title": "分配患者ID的权限",
       "description": "如果患者ID分配的权限被设置为MATCHING 或者 NOT_MATCHING，患者ID分配的权限与接受的HL7消息中的值要匹配。格式：{Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]。",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "用于分配患者ID权限的导出",
@@ -65,7 +73,7 @@
       "title": "Suppress Duplicate History Size",
       "description": "Maximum number of HL7 messages with distinct PID-3 triggering this rule to remember on the history list.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     }

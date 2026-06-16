@@ -14,9 +14,9 @@
     "dcmuiElasticsearchURLObjects": {
       "title": "URL de UI Elasticsearch",
       "description": "URL de UI Elasticsearch.",
-      "titleKey":"{dcmuiElasticsearchURLName}",
+      "titleKey": "{dcmuiElasticsearchURLName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiElasticsearchURL.schema.json"
       }
     }

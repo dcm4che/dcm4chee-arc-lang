@@ -12,9 +12,9 @@
       "description": "Ime UI Dashboard konfiguracije",
       "type": "string"
     },
-    "dcmuiShowStarBlock": {
-      "title": "Prikaži Star blok",
-      "description": "Prikaži Star Block - zadaci bez definisanog deviceName",
+    "dcmuiShowStarBlock":{
+      "title": "Show Star Block",
+      "description": "Show Star Block - tasks without defined deviceName",
       "type": "boolean",
       "default": true
     },
@@ -25,7 +25,7 @@
       "items": {
         "type": "string"
       },
-      "format": "dcmQueueName"
+      "format" : "dcmQueueName"
     },
     "dcmuiExportName": {
       "title": "ID-ovi izvoznika",
@@ -34,7 +34,7 @@
       "items": {
         "type": "string"
       },
-      "format": "dcmExporterID"
+      "format" : "dcmExporterID"
     },
     "dicomuiDeviceName": {
       "title": "Imena uređaja",

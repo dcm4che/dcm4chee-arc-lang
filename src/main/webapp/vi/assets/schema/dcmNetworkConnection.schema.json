@@ -24,12 +24,12 @@
       "type": "string",
       "default": "DICOM",
       "enum": [
-          "DICOM",
-          "HL7",
-          "HL7_MLLP2",
-          "SYSLOG_TLS",
-          "SYSLOG_UDP",
-          "HTTP"
+        "DICOM",
+        "HL7",
+        "HL7_MLLP2",
+        "SYSLOG_TLS",
+        "SYSLOG_UDP",
+        "HTTP"
       ]
     },
     "dcmHTTPProxy": {
@@ -46,9 +46,11 @@
     "dcmTLSProtocol": {
       "title": "TLS Protocol",
       "description": "The Supported TLS Protocols.",
-      "default": ["TLSv1.2"],
+      "default": [
+        "TLSv1.2"
+      ],
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "TLSv1.3",
@@ -63,7 +65,10 @@
       "title": "TLS Endpoint Identification Algorithm",
       "description": "Indicates the endpoint identification or verification procedures during TLS handshaking.",
       "type": "string",
-      "enum": [ "HTTPS", "LDAPS"]
+      "enum": [
+        "HTTPS",
+        "LDAPS"
+       ]
     },
     "dcmTCPBacklog": {
       "title": "TCP Backlog",

@@ -16,7 +16,7 @@
       "title": "डिफ़ॉल्ट भाषा",
       "description": "UI के लिए डिफ़ॉल्ट भाषा चुने ।",
       "type": "string",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmDefaultLanguage"
@@ -25,7 +25,7 @@
       "title": "भूमिका",
       "description": "उपभोक्ता की भूमिकाएँ जिनपे यह भाषा प्रोफ़ाइल लागू होंगी ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },

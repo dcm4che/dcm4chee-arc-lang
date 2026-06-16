@@ -39,10 +39,7 @@
       "title": "Entitet upita",
       "description": "Ukazuje da li se C-FIND SCP upituje za pojedinog pacijenta ili za studije pojedinog pacijenta. Efikasno samo za DICOM PDQ usluge (URI: pdq-dicom:{AETitle}).",
       "type": "string",
-      "enum": [
-        "Patient",
-        "Study"
-      ],
+      "enum": [ "Patient", "Study" ],
       "default": "Patient"
     },
     "dcmProperty": {

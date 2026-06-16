@@ -25,7 +25,9 @@
       "title": "गुण का टैग",
       "description": "हेक्स स्ट्रिंग के रूप में DICOM टैग ।",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmCustomAttribute1": {

@@ -18,20 +18,26 @@
       "title": "エクスポーター ID",
       "description": "エクスポーター ID",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmExporterID"
     },
     "dcmProperty": {
       "title": "条件",
       "description": "{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx} 形式で 条件。 例: MSH-4=FORWARD または MSH-9=ORM\\^O01 または PID-3[.3]=PIDIssuer または PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmEntitySelector": {
       "title": "エンティティ セレクタ",
       "description": "書き出し する 検査の 選択に 使用された 一致 する キーを 指定します。 形式: {key}={value}[&{key}={value)]..., ここは {key} = 'StudyAge' | {attributeID}。 '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] 形式で {value}は、書き出しを トリガーした 受信した  HL7 メッセージからの 指定された HL7 フィールドの 値に 置き換えられます。 エンティティ セレクタが 指定されて いない 場合、 患者の すべての 検査が 書き出しされます。 例: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => 少なくとも 1つの CT シリーズを 含む、 5年 以内の 最大 2つの 先行 検査を 選択します。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
@@ -48,7 +54,9 @@
       "title": "患者 IDの 割り当て 権限",
       "description": "「患者 IDの 割り当て 権限」が MATCHING または NOT_MATCHINGに 設定されて いる 場合、 受信した HL7 メッセージの その 値と 照合されます。 形式: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "患者 IDの 割り当て 権限の ために 書き出し",
@@ -65,7 +73,7 @@
       "title": "重複を 書き出し しない ための 履歴 サイズ",
       "description": "この 規則を トリガーして 履歴 リストに 記憶 する、 個別の PID-3 を 持つ HL7 メッセージの 最大数。",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     }

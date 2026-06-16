@@ -58,14 +58,14 @@
       "type": "boolean",
       "default": false
     },
-    "uid": {
-      "title": "ID korisnika",
-      "description": "User ID. Obavezno ako je grant type = password.",
+    "uid":  {
+      "title": "User ID",
+      "description": "User ID. Required if grant type = password.",
       "type": "string"
     },
-    "userPassword": {
-      "title": "Korisnička lozinka",
-      "description": "User Password. Obavezno ako je grant type = password.",
+    "userPassword":  {
+      "title": "User Password",
+      "description": "User Password. Required if grant type = password.",
       "type": "string"
     }
   }

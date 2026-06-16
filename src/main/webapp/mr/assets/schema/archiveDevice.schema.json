@@ -135,7 +135,7 @@
       "title": "फजी अल्गोरिथम वर्ग",
       "description": "फजी अल्गोरिथम कार्यान्वयन वर्ग निर्दिष्ट करते.",
       "type": "string",
-      "enum":[
+      "enum": [
         "org.dcm4che3.soundex.Soundex|Classic Soundex phonetic algorithm that encodes names into a 4-character code based on English pronunciation so similarly sounding names match despite spelling differences",
         "org.dcm4che3.soundex.ESoundex|Extended Soundex variant that produces variable-length phonetic codes (instead of fixed 4 characters) to improve matching accuracy for longer words",
         "org.dcm4che3.soundex.ESoundex9|Extended Soundex variant that generates phonetic codes up to 9 characters long for higher precision fuzzy matching than standard Soundex",
@@ -148,7 +148,7 @@
       "title": "Store Implementation Version Name",
       "description": "Indicates to include Implementation Version Name (0002,0012) in the File Meta Information of stored DICOM objects.",
       "type": "boolean",
-      "default" : true
+      "default": true
     },
     "dcmBulkDataDescriptorID": {
       "title": "बल्क डेटा वर्णनकर्ता ID",
@@ -172,7 +172,7 @@
       "title": "अभ्यासाचे मापाची गणनाचे प्राप्तीचे माप",
       "description": "एका डेटाबेस क्वेरीमध्ये अज्ञात मापाचे अभ्यासांचे निकाल सेट ला सीमित करण्याची संख्या.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -180,13 +180,13 @@
       "title": "प्राप्ति विशेषतांची गणना",
       "description": "कॉन्फीगर केलेल्या 'अभ्यासाचे मापाची गणनाचे विलंब' आणि 'अभ्यासाचे मापाची गणनाचे पोलिंग मध्यांतर' च्या अनुसार प्राप्ति विशेषतांची स्वयंचलित गणना करण्याचे संकेत करते.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmSeriesMetadataStorageID": {
       "title": "मालिका मेटाडेटा साठवण ID",
       "description": "साठवणचे ID ज्यामध्ये प्रत्येक मालिकाचे सर्व दृष्टांतांच्या एकत्रित मेटाडेटा ला ज़िप फाइलच्या रूपात साठवले जातील. एकाधिक साठवण सिस्टम्स कॉन्फ़िगर केले जाऊ शकते. अनुपस्थित असल्यास, एकत्रित मालिका मेटाडेटा साठवले जाणार नाही.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -201,7 +201,7 @@
       "title": "Update Series Metadata",
       "description": "Indicates to update aggregated Series Metadata on attributes update.",
       "type": "boolean",
-      "default" : true
+      "default": true
     },
     "dcmSeriesMetadataPollingInterval": {
       "title": "अद्यतन मालिका मेटाडेटा पोलिंग मध्यांतर",
@@ -213,7 +213,7 @@
       "title": "अद्यतन मालिका मेटाडेटा प्राप्तीचे माप",
       "description": "एका डेटाबेस क्वेरीमध्ये प्राप्त झालेल्या अनुसूचित मालिकाचे मेटाडेटा अद्यतनाची कमाल संख्या.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -221,7 +221,7 @@
       "title": "अद्यतन मालिका मेटाडेटा थ्रेड्स",
       "description": "मालिका मेटाडेटाचे निर्माण आणि अद्यतननावध्ये वापरलेले थ्रेड्सची संख्या.",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -242,7 +242,7 @@
       "title": "Purge(d) Instance Records",
       "description": "Indicates to purge instance records from DB. Also indicates to explicitly query series metadata zip files to check for purged instances for subsequent processing of archive functions. Set to 'True' if 'Purge Instance Records Delay' is configured.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmPurgeInstanceRecordsDelay": {
       "title": "दृष्टांतांचे रेकॉर्डसला हटवण्याचे विलंब",
@@ -260,7 +260,7 @@
       "title": "दृष्टांतांच्या रेकॉर्डसला हटवण्याचे प्राप्तीचे माप",
       "description": "एका डेटाबेस क्वेरीमध्ये प्राप्त झालेल्या अनुसूचित झालेले मालिकाचे दृष्टांतांच्या रेकॉर्ड्सला डेटाबेसमधून हटवण्याची कमाल संख्या. फक्त प्रभावित असेल जर, 'दृष्टांतांच्या रेकॉर्डस् हटवा = हो'.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -274,7 +274,7 @@
       "title": "MWL प्राप्तीचे माप",
       "description": "एक डेटाबेस ट्रांसेक्शनमध्ये MWL आयटम्सचे अद्यतन किंवा हटवण्याची कमाल संख्या.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -288,7 +288,9 @@
       "title": "MWL ला हटवण्याचे विलंब",
       "description": "MWL आयटम्स हटवण्यासाठी ISO-8601 कालावधि PnDTnHnMn.nS प्रारूपात विलंब, whose updated_time is older than the specified delay. स्थिती विशिष्ट विलंब उपसर्गाद्वारे निर्दिष्ट केले जाऊ शकते 'SCHEDULED:', 'ARRIVED:', 'READY:', 'STARTED:', 'DEPARTED:', 'CANCELED:', 'DISCONTINUED:', 'COMPLETED:'. उदाहरण : PT5M किंवा CANCELED: PT10M. अनुपस्थित असल्यास, MWL आयटम्स हटवले जाणार नाही.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmDeleteUPSPollingInterval": {
       "title": "UPS ला हटवण्याचे पोलिंग मध्यांतर",
@@ -300,7 +302,7 @@
       "title": "UPS ला हटवण्याचे प्राप्तीचे माप",
       "description": "एका डेटाबेस क्वेरीमध्ये प्राप्त झालेल्या एकीकृत प्रक्रिया स्टेप्स (UPS) ला हटवण्याची कमाल संख्या.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -390,7 +392,7 @@
       "title": "MWL SCP द्वारे या स्थितींमध्ये SPS लपवा",
       "description": "MWL SCP वरून न पाठवलेले MWL आयटम्सचे अनुसूचित प्रक्रिया स्टेप कोड. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -408,7 +410,7 @@
       "title": "MWL RS द्वारे या स्थितींमध्ये SPS लपवा",
       "description": "MWL RS वरून न पाठवलेले MWL आयटम्सचे अनुसूचित प्रक्रिया स्टेप कोड. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -426,7 +428,7 @@
       "title": "JSON क्रमांक म्हणून एन्कोड करा",
       "description": "VR ला JSON नंबर म्हणून एन्कोड करा. कॉन्फीगर्ड केले नसल्यास, IS, DS, SV आणि UV च्या मूल्यांना JSON स्ट्रिंग म्हणून एन्कोड केले जाईल. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी पूरक होतील.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "DS|Decimal String",
@@ -486,14 +488,18 @@
       "title": "WADO समर्थित SR वर्ग",
       "description": "WADO प्राप्तीसाठी समर्थित SR SOP वर्ग.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSOPClass"
     },
     "dcmWadoSupportedPRClasses": {
       "title": "WADO समर्थित PR वर्ग",
       "description": "WADO प्राप्तीसाठी समर्थित PR SOP वर्ग.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSOPClass"
     },
     "dcmWadoSR2HtmlTemplateURI": {
@@ -578,27 +584,33 @@
       "title": "QIDO Result Order By",
       "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmFwdMppsDestination": {
       "title": "MPPS अग्रेषित गंतव्य",
       "description": "MPPS N-CREATE RQ आणि N-SET RQ विनंत्यांना अग्रेषित करण्यासाठी गंतव्य. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
       "title": "IAN गंतव्य",
       "description": "IAN N-CREATE RQ विनंत्यांना अग्रेषित करण्यासाठी गंतव्य. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanTrigger": {
       "title": "IAN Trigger",
       "description": "Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send IAN on receiving studies",
@@ -890,7 +902,7 @@
       "title": "DB Read Only",
       "description": "Indicates read-only access to the database, preventing DB updates on query/retrieve.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmMaxAccessTimeStaleness": {
       "title": "एक्सेस वेळेचे कमाल शिळेपणा",
@@ -1478,7 +1490,9 @@
       "title": "साठवण सत्यापनाचे अनेक साठवण IDs",
       "description": "साठवण सत्यापनाच्या यशासाठी दृष्टांताचे साठवण किमान कुठल्याही एका निर्दिष्ट साठवण सिस्टमवर आवश्यक असण्याचे संकेत करते. अनुपस्थित असल्यास, कुठल्याही साठवण सिस्टमवर यशस्वी साठवण सत्यापन पुरेसे आहे. प्रभावशाली नसेल, जर 'साठवण सत्यापन धोरण' चे मूल्य DB_RECORD_EXISTS आहे. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationAETitle": {
@@ -1530,7 +1544,7 @@
       "title": "साठवण सत्यापन प्राप्तीचे माप",
       "description": "एका डेटाबेस क्वेरीमध्ये प्राप्त झालेल्या अनुसूचित केलेले मालिकाचे साठवण सत्यापनाची कमाल संख्या.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1562,7 +1576,7 @@
       "title": "संकुचन थ्रेड्स",
       "description": "संकुचनामध्ये वापरलेले थ्रेड्सची संख्या.",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1579,7 +1593,7 @@
       "title": "संकुचन प्राप्तीचे माप",
       "description": "एका डेटाबेस क्वेरीमध्ये प्राप्त झालेल्या संकुचनसाठी मालिकाची कमाल संख्या.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1611,7 +1625,7 @@
       "title": "रुग्णाच्या रेकॉर्डचे सत्यापनासाठी प्राप्तीचे माप",
       "description": "रुग्णाच्या रेकॉर्डचे सत्यापनासाठी एका डेटाबेस क्वेरीमध्ये प्राप्त झालेल्या रुग्णांच्या रेकॉर्ड्सची कमाल संख्या.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1619,7 +1633,7 @@
       "title": "रुग्णाच्या रेकॉर्डचे सत्यापनासाठी रुग्णाच्या ID चे जारीकर्ताचे समायोजन",
       "description": "रुग्णाच्या ID चे जारीकर्ताला PDQ सेवेद्वारे परत केलेले मूल्याने समायोजन करण्याचे संकेत करते.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmPatientVerificationPeriod": {
       "title": "रुग्णाच्या रेकॉर्डचे सत्यापनासाठी कालावधी",
@@ -1683,7 +1697,9 @@
       "title": "HL7 ADT प्राप्त करणारा अनुप्रयोग",
       "description": "प्रक्रिया केलेले रुग्णाच् माहितीचे अद्यतनला HL7 ADT संदेशांनी बाह्य सिस्टम्सला सूचित करणाऱ्या प्राप्त करणारा अनुप्रयोगाचे अनुप्रयोग आणि सुविधाचे नाव. अनुपस्थित असल्यास, बाह्य सिस्टम्सला HL7 ADT संदेशांनी सूचित केले जाणार नाही.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "hl7ApplicationName"
     },
     "hl7PSUSendingApplication": {
@@ -1696,7 +1712,9 @@
       "title": "HL7 प्रक्रिया स्थिती अद्यतन प्राप्त करणारा अनुप्रयोग",
       "description": "HL7 प्रक्रिया स्थिती अद्यतन प्राप्त करणारा अनुप्रयोगाचे अनुप्रयोग आणि सुविधाचे नाव. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "hl7ApplicationName"
     },
     "hl7PSUTaskPollingInterval": {
@@ -1729,7 +1747,7 @@
       "title": "HL7 Procedure Status Update Trigger",
       "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send notification on receive of studies",
@@ -1975,34 +1993,36 @@
       "title": "अनुसूचक किमान प्रारंभ विलंब",
       "description": "सिस्टम चालू होण्यावर अनुसूचकांना सुरु करण्याचे सेकंदात किमान विलंब.",
       "type": "integer",
-      "default" : 60,
+      "default": 60,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRejectConflictingPatientAttribute": {
       "title": "रुग्णाचे रेकॉर्डचे परस्पर विरोधी विशेषतांना अस्वीकार करा",
       "description": "प्राप्त झालेल्या दृष्टांतांमध्ये रुग्णाचे रेकॉर्डचे विशेषतांचे DICOM टैग्स ज्यांना समान रुग्णाच्या ID चे मागच्या प्राप्त झालेल्या दृष्टांतांच्या विशेषतांचे मूल्यांनसोबत स्वीकार होण्यासाठी जुळणी करायचे आहे. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
-      "type": "array",
-      "items" : { "type": "string" },
+      "type": "array", 
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
       "title": "STOW निवृत्त हस्तांतरण वाक्यरचना",
       "description": "प्राप्त झालेल्या JPEG फुल प्रोग्रेशन, नॉन-हैरारकिअल JPEG प्रतिमांना DICOM प्रतिमांमध्ये तदनुसार (निवृत्त) हस्तांतरण वाक्यरचना UID १.२.८४०.१०००८.१.२.४.५५  सोबत साठवा. किंवा साठवलेले DICOM प्रतिमाला १.२.८४०.१०००८.१.२.४.५० (= JPEG Baseline) किंवा १.२.८४०.१०००८.१.२.४.५१ (= JPEG Extended) हस्तांतरण वाक्यरचना UID म्हणून संच करा, JPEG Baseline किंवा JPEG Extended मध्ये ट्रांसकोड न करता, पण JPEG प्रतिमाला प्राप्त झालेल्या रूपात समाविष्ट करा. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmStowExcludeAPPMarkers": {
       "title": "STOW अनुप्रयोग मार्कर वगळा",
       "description": "STOW-RS मेटाडेटा आणि बल्कडाटा विनंत्यांमधील JPEG प्रतिमांमधील ऍप (APP) मार्करना तयार केलेल्या DICOM च्या दृष्टांतांमध्ये समाविष्ट केलेल्या JPEG बिट स्ट्रीम्समधून वगळण्यात येईल असे दर्शविते. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmStowQuicktime2MP4": {
       "title": "STOW क्विकटाइम पासून MP4",
       "description": "STOW-RS मेटाडेटा आणि बल्कडेटा विनंत्यांद्वारे प्राप्त झालेल्या क्विकटाइम कंटेनरांना निर्माण केलेल्या DICOM दृष्टांतांमध्ये MP4 कंटेनरांमध्ये रूपांतरण करून एनकेप्सुलेट करण्याचे संकेत करते. हे रूपांतरण यशस्वी होण्यासाठी आवश्यक आहे की ffmpeg यूटिलिटी सिस्टम वर स्थापित असले पाहिजे आणि ffmpeg CLI यूटिलिटी सिस्टमच्या PATH वेरिएबलमध्ये उपलब्ध असले पाहिजे. किंवा साठवलेले DICOM दृष्टांत वेरबाटिममध्ये क्विकटाइम कंटेनरांना घोषित MPEG-4 हस्तांतरण वाक्यरचनाने (जे कंटेनरमध्ये वीडियो स्ट्रीमचे एन्कोडिंगला दर्शविते, पण वास्तविक कंटेनर प्रारूपाचे खंडन करते) एनकेप्सुलेट केले जातील. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmStowMaxFragmentLength": {
       "title": "STOW Maximum Fragment Length",
@@ -2024,13 +2044,13 @@
       "title": "रुग्णाच्या ID जारीकर्ता द्वारे फिल्टर करा",
       "description": "रुग्णाच्या ID साठी कोणतीही जुळणारी की नमूद केलेली नसली तरीही रुग्णाच्या ID च्या जारीकर्ता द्वारे फिल्टर करा. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "boolean",
-      "default" : true
+      "default": true
     },
     "dcmMatchSOPClassOnInstanceLevel": {
       "title": "Match SOP Class on Instance level",
       "description": "Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmKeyValueRetentionPollingInterval": {
       "title": "Key Value Retention Polling Interval",
@@ -2042,7 +2062,7 @@
       "title": "Key Value Retention Fetch Size",
       "description": "Limit result set of DB query for Key Value pairs which retention period expired; 100 if absent",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -2056,13 +2076,13 @@
       "title": "UPS Update Without Transaction UID",
       "description": "Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmUPS2MWLCFindSCP": {
       "title": "UPS 2 MWL C-Find SCP",
       "description": "Indicates to feed Modality Worklist C-FIND SCP service from managed list of Unified Procedure Step (UPS) instances mapped to MWL items. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmUPS2MWLScheduledStationNameCode": {
       "title": "UPS 2 MWL Scheduled Station Name Code",
@@ -2076,7 +2096,7 @@
       "title": "UPS 2 MWL Scheduled Station Name Code Value as AE Title",
       "description": "Indicates to map Code Value (0008,0101) - instead Code Meaning (0008,0104) - of Scheduled Station Name Code Sequence (0040,4025) items of Unified Procedure Step (UPS) instances to Scheduled Station AE Titles (0040,0001) of MWL C-FIND RQ/RSPs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmQStarVerificationStorageID": {
       "title": "QStar Verification Storage ID",
@@ -2094,7 +2114,7 @@
       "title": "QStar Verification Fetch Size",
       "description": "Limit result set of DB query for Verification of Access State of objects stored on QStar Tape File System; 100 if absent.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": 0
     },
@@ -2127,7 +2147,7 @@
       "title": "Trusted Patient ID Pattern",
       "description": "Regular Expression identifying trusted Patient IDs in HL7 v2 CX format: {Patient ID}^^^{Issuer of Patient ID}&{Universal Entity ID}&{Universal Entity ID Type} in received DICOM objects and HL7 messages. Only Patient IDs matching one of the specified patterns or Patient IDs qualified by an Assigning Authority matching one of the configured 'Trusted Issuers of Patient IDs' will be used for identifying the Patient. If neither this attribute nor any 'Trusted Issuers of Patient ID' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2135,7 +2155,7 @@
       "title": "Trusted Issuer of Patient ID",
       "description": "Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. Only Patient IDs qualified by an Assigning Authority matching one of the specified values or Patient IDs matching one of the configured 'Trusted Patient ID Patterns' will be used for identifying the Patient. If neither this attribute nor dcmTrustedPatientIDPattern is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2143,7 +2163,7 @@
       "title": "FHIR Preferred Assigning Authority of Patient ID",
       "description": "Assigning Authority of Patient IDs included in outgoing FHIR messages. If absent, all Patient IDs of the Patient are included. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2156,7 +2176,7 @@
       "title": "FHIR System of Patient ID",
       "description": "Specifies if the 'Issuer of Patient ID' (= Local Namespace Entity ID) or the 'Universal Entity ID' shall be used as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages. If both are specified, the 'Issuer of Patient ID' will only be used if there is no the 'Universal Entity ID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "LocalNamespaceEntityID|Use IssuerOfPatientID as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages",
@@ -2168,7 +2188,7 @@
       "title": "FHIR System by Issuer of Patient ID",
       "description": "Specifies mapping of 'Issuer of Patient ID' to namespace (system) of the Patient ID in outgoing FHIR messages. Format: {Issuer of Patient ID}={system}. Required if 'FHIR System of Patient ID' includes 'LocalNamespaceEntityID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2186,7 +2206,7 @@
       "title": "FHIR System of Accession Number",
       "description": "Specifies if the 'Local Namespace Entity ID' or the 'Universal Entity ID' shall be used as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. If both are specified, the 'Local Namespace Entity ID' will only be used if there is no 'Universal Entity ID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "LocalNamespaceEntityID|Use IssuerOfAccessionNumberSequence.LocalNamespaceEntityID as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages",
@@ -2198,7 +2218,7 @@
       "title": "FHIR System by Local Namespace Entity ID of Accession Number",
       "description": "Specifies Mapping of 'Local Namespace Entity ID' to namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. Format: {Local Namespace Entity ID}={system}. Required if 'FHIR System of Accession Number' includes 'LocalNamespaceEntityID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2211,8 +2231,8 @@
       "title": "विशेषता फ़िल्टर",
       "description": "डेटाबेसमध्ये साठवलेले विशेषता.",
       "type": "array",
-      "titleKey":"{dcmEntity}",
-      "items" : {
+      "titleKey": "{dcmEntity}",
+      "items": {
         "$ref": "attributeFilter.schema.json"
       }
     },
@@ -2220,8 +2240,8 @@
       "title": "विशेषता Set",
       "description": "QIDO-RS आणि WADO-RS मेटाडेटाच्या विनंत्यांचे 'includefields' प्राप्ति मापदंड आणि DIFF-RS विनंतीचे 'comparefield' प्राप्ति मापदंड, यांचा नामित विशेषता सेट.",
       "type": "array",
-      "titleKey":"{dcmAttributeSetType}:{dcmAttributeSetID}",
-      "items" : {
+      "titleKey": "{dcmAttributeSetType}:{dcmAttributeSetID}",
+      "items": {
         "$ref": "attributeSet.schema.json"
       }
     },
@@ -2229,8 +2249,8 @@
       "title": "बल्कडेटा वर्णनकर्ता",
       "description": "आर्काइव्ह केलेले दृष्टांतांच्या मेटाडेटा प्रधान करणाऱ्या सेवांद्वारे लागू केलेले बल्कडेटा वर्णनकर्तांना निर्दिष्ट करते.",
       "type": "array",
-      "titleKey":"{dcmBulkDataDescriptorID}",
-      "items" : {
+      "titleKey": "{dcmBulkDataDescriptorID}",
+      "items": {
         "$ref": "bulkData.schema.json"
       }
     },
@@ -2238,8 +2258,8 @@
       "title": "साठवण वर्णनकर्ता",
       "description": "साठवण सिस्टम निर्दिष्ट करते.",
       "type": "array",
-      "titleKey":"{dcmStorageID}",
-      "items" : {
+      "titleKey": "{dcmStorageID}",
+      "items": {
         "$ref": "storage.schema.json"
       }
     },
@@ -2247,8 +2267,8 @@
       "title": "प्राप्ति पुनर्प्राप्ती व्ह्यू",
       "description": "अस्वीकृति नोट साठवण्यावर वर्तणूक सूचित करते.",
       "type": "array",
-      "titleKey":"{dcmQueryRetrieveViewID}",
-      "items" : {
+      "titleKey": "{dcmQueryRetrieveViewID}",
+      "items": {
         "$ref": "queryRetrieveView.schema.json"
       }
     },
@@ -2256,8 +2276,8 @@
       "title": "रांग",
       "description": "व्यवस्थापित टास्क रांग.",
       "type": "array",
-      "titleKey":"{dcmQueueName}",
-      "items" : {
+      "titleKey": "{dcmQueueName}",
+      "items": {
         "$ref": "queue.schema.json"
       }
     },
@@ -2265,8 +2285,8 @@
       "title": "मेट्रिक्स वर्णनकर्ता",
       "description": "सक्रिय असलेले मेट्रिक्स",
       "type": "array",
-      "titleKey":"{dcmMetricsName}",
-      "items" : {
+      "titleKey": "{dcmMetricsName}",
+      "items": {
         "$ref": "metrics.schema.json"
       }
     },
@@ -2274,8 +2294,8 @@
       "title": "PDQ सेवा वर्णनकर्ता",
       "description": "Patient Demographics Query सेवा वर्णनकर्ता.",
       "type": "array",
-      "titleKey":"{dcmPDQServiceID}",
-      "items" : {
+      "titleKey": "{dcmPDQServiceID}",
+      "items": {
         "$ref": "pdqService.schema.json"
       }
     },
@@ -2283,8 +2303,8 @@
       "title": "निर्यातक वर्णनकर्ता",
       "description": "निर्यातक वर्णनकर्ता.",
       "type": "array",
-      "titleKey":"{dcmExporterID}",
-      "items" : {
+      "titleKey": "{dcmExporterID}",
+      "items": {
         "$ref": "exporter.schema.json"
       }
     },
@@ -2292,8 +2312,8 @@
       "title": "निर्यात नियम",
       "description": "कोणत्याही AE द्वारे प्राप्त झालेल्या DICOM दृष्टांतांवर निर्यात नियम लागू करा. आर्काइव्ह नेटवर्क AE स्तरावर कॉन्फीगर केलेले निर्यात नियम पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportRule.schema.json"
       }
     },
@@ -2301,8 +2321,8 @@
       "title": "पूर्व अभ्यास निर्यात नियम",
       "description": "कोणत्याही AE द्वारे प्राप्त झालेल्या DICOM दृष्टांतांवर पूर्व अभ्यास निर्यात नियम लागू करा. आर्काइव्ह नेटवर्क AE स्तरावर कॉन्फीगर केलेले पूर्व अभ्यास निर्यात नियम पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportPriorsRule.schema.json"
       }
     },
@@ -2310,8 +2330,8 @@
       "title": "MPPS फॉरवर्ड नियम",
       "description": "MPPS फॉरवर्ड नियम जे कोणत्याही AE द्वारे प्राप्त MPPS वर लागू होतील. आर्काइव्ह नेटवर्क AE स्तरावर कॉन्फीगर केलेले RESTful फॉरवर्ड नियम पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "mppsForwardRule.schema.json"
       }
     },
@@ -2319,8 +2339,8 @@
       "title": "RESTful फॉरवर्ड नियम",
       "description": "RESTful फॉरवर्ड नियम. आर्काइव्ह नेटवर्क AE स्तरावर कॉन्फीगर केलेले RESTful फॉरवर्ड नियम पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "rsForwardRule.schema.json"
       }
     },
@@ -2328,8 +2348,8 @@
       "title": "संकुचन नियम",
       "description": "कोणत्याही AE द्वारे प्राप्त झालेल्या DICOM दृष्टांतांवर लागू केलेले संकुचन नियम. आर्काइव्ह नेटवर्क AE स्तरावर कॉन्फीगर केलेले संकुचन नियम पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveCompressionRule.schema.json"
       }
     },
@@ -2337,8 +2357,8 @@
       "title": "विशेषता बळजबरी",
       "description": "कोणत्याही AE द्वारे प्राप्त झालेल्या किंवा पाठवलेल्या DIMSE वर लागू केलेले विशेषता बळजबरी. आर्काइव्ह नेटवर्क AE स्तरावर कॉन्फीगर केलेले विशेषता बळजबरी पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion.schema.json"
       }
     },
@@ -2346,8 +2366,8 @@
       "title": "Attribute Coercion (New)",
       "description": "Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
@@ -2355,8 +2375,8 @@
       "title": "अस्वीकृति नोट",
       "description": "अस्वीकृति नोट साठवण्यावर वर्तणूक निर्दिष्ट करते.",
       "type": "array",
-      "titleKey":"{dcmRejectionNoteLabel}",
-      "items" : {
+      "titleKey": "{dcmRejectionNoteLabel}",
+      "items": {
         "$ref": "rejectionNote.schema.json"
       }
     },
@@ -2364,8 +2384,8 @@
       "title": "अभ्यास धारणा धोरण",
       "description": "अभ्यास धारणा धोरणा जे कोणत्याही AE द्वारे प्राप्त झालेल्या अभ्यासांवर लागू होतील. आर्काइव्ह नेटवर्क AE स्तरावर कॉन्फीगर केलेले अभ्यास धारण धोरणा पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "studyRetentionPolicy.schema.json"
       }
     },
@@ -2373,8 +2393,8 @@
       "title": "साठवण प्रवेश निरीक्षण ID नियम",
       "description": "साठवण प्रवेश निरीक्षण ID नियम जे कोणत्याही AE द्वारे प्राप्त झालेल्या अभ्यासांवर लागू होतील. आर्काइव्ह नेटवर्क AE स्तरावर कॉन्फीगर केलेले साठवण प्रवेश निरीक्षण ID नियम पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "storeAccessControlIDRule.schema.json"
       }
     },
@@ -2382,8 +2402,8 @@
       "title": "Change Access Control Rules",
       "description": "Change Access Control Rules applied to received Studies or Series.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "changeAccessControlIDRule.schema.json"
       }
     },
@@ -2436,8 +2456,8 @@
       "title": "ID जनरेटर",
       "description": "ID जनरेटर.",
       "type": "array",
-      "titleKey":"{dcmIDGeneratorName}",
-      "items" : {
+      "titleKey": "{dcmIDGeneratorName}",
+      "items": {
         "$ref": "idGenerator.schema.json"
       }
     },
@@ -2445,8 +2465,8 @@
       "title": "MWL Import",
       "description": "MWL Import",
       "type": "array",
-      "titleKey":"{dcmMWLImportID}",
-      "items" : {
+      "titleKey": "{dcmMWLImportID}",
+      "items": {
         "$ref": "mwlImport.schema.json"
       }
     },
@@ -2454,8 +2474,8 @@
       "title": "MWL निष्क्रिय वेळ नियम",
       "description": "MWL निष्क्रिय वेळ नियम.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "mwlIdleTimeout.schema.json"
       }
     },
@@ -2463,8 +2483,8 @@
       "title": "HL7 फॉरवर्ड नियम",
       "description": "HL7 फॉरवर्ड नियम. आर्काइव्ह HL7 अनुप्रयोगावर कॉन्फीगर केलेल्या फॉरवर्ड नियम पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -2472,8 +2492,8 @@
       "title": "HL7 निर्यात नियम",
       "description": "निर्यात नियम जे कोणत्याही HL7 अनुप्रयोगावरून प्राप्त झालेले  HL7 संदेशांवर लागू होतील. आर्काइव्ह HL7 अनुप्रयोगावर कॉन्फीगर केलेल्या निर्यात नियम पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -2481,8 +2501,8 @@
       "title": "HL7 प्रीफेच नियम",
       "description": "प्रीफेच नियम जे कोणत्याही HL7 अनुप्रयोगावरून प्राप्त झालेले  HL7 संदेशांवर लागू होतील. आर्काइव्ह HL7 अनुप्रयोगावर कॉन्फीगर केलेल्या प्रीफेच नियम पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -2490,8 +2510,8 @@
       "title": "HL7 अभ्यास धारणा धोरण",
       "description": "HL7 अभ्यास धारणा धोरणा जे कोणत्याही HL7 अनुप्रयोगावरून प्राप्त झालेले HL7 संदेशांवर लागू होतील. आर्काइव्ह HL7 अनुप्रयोगावर कॉन्फीगर केलेल्या अभ्यास धारणा धोरणा पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -2499,8 +2519,8 @@
       "title": "HL7 ऑर्डरसाठी अनुसूचित स्टेशन",
       "description": "निवडलेल्या MWL HL7 ऑर्डर फीडसाठी अनुसूचित स्टेशन. आर्काइव्ह HL7 अनुप्रयोगावर कॉन्फीगर केलेल्या HL7 ऑर्डरसाठी अनुसूचित स्टेशन पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
@@ -2508,8 +2528,8 @@
       "title": "HL7 ऑर्डरसाठी SPS स्थिती",
       "description": "प्राप्त झालेल्या HL7 ORM^O01, OMI^O23, OMG^O19 संदेशांवर निर्माण केलेल्या किंवा अद्यतन झालेल्या DICOM MWL आयटम्सचे SPS स्थिती निर्दिष्ट करते. विशिष्ट आर्काइव्ह HL7 अनुप्रयोगासाठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
       "type": "array",
-      "titleKey":"{dcmSPSStatus}",
-      "items" : {
+      "titleKey": "{dcmSPSStatus}",
+      "items": {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     },

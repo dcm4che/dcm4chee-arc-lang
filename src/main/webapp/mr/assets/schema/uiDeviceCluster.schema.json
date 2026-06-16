@@ -22,7 +22,9 @@
       "title": "डिव्हाइसेससाठी वेब अनुप्रयोग",
       "description": "संबंधित डिव्हाइसेस वापरण्यासाठी कॉन्फिगर केलेले वेब अनुप्रयोग निवडा.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "webApp"
     },
     "dcmuiClusterWebApp": {

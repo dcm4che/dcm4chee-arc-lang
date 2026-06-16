@@ -15,7 +15,7 @@
       "title": "Username",
       "description": "Username to which this set should be available",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -23,7 +23,7 @@
       "title": "Role",
       "description": "Username role that can use this Set ( If you set the username, the role will be ignored )",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -41,9 +41,9 @@
     "dcmuiTableColumnConfigObjects": {
       "title": "Table Columns",
       "description": "Define Table Columns",
-      "titleKey":"{dcmuiColumnName}",
+      "titleKey": "{dcmuiColumnName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiTableColumns.schema.json"
       }
     }

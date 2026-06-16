@@ -92,7 +92,7 @@
       "title": "UI アクション パラメータ",
       "description": "UI アクション パラメータ",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum":[
           "edit",
@@ -113,7 +113,7 @@
       "title": "承認された ユーザー 役割",
       "description": "承認された ユーザー 役割",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     }

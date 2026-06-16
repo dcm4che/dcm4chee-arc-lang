@@ -16,7 +16,7 @@
       "title": "Idioma por defecto",
       "description": "Seleccionar idioma por defecto para la UI.",
       "type": "string",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmDefaultLanguage"
@@ -25,7 +25,7 @@
       "title": "Rol",
       "description": "Rol de usuario al que se aplicará este perfil de idioma.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },

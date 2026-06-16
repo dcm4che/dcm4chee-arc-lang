@@ -46,7 +46,9 @@
       "title": "Prebúsqueda de C-Store SCP",
       "description": "AE Título de C-STORE SCP en el que se recuperan los estudios seleccionados.",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmDestinationCFindSCP": {
@@ -65,13 +67,17 @@
       "title": "Condiciones",
       "description": "Condiciones en formato {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Ejemplo: MSH-4=FORWARD o MSH-9=ORM\\^O01 o PID-3[.3]=PIDIssuer o PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmEntitySelector": {
       "title": "Selector de entidad",
       "description": "Especifica las claves de coincidencia utilizadas para seleccionar los estudios que se van a precargar. Formato: {key}={value}[&{key}={value)]..., con {key} = 'priors' | 'StudyAge' | {attributeID}. {value} en el formato '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] se sustituyen por el valor del campo HL7 especificado del mensaje HL7 recibido que activó la búsqueda previa. Si no se especifica ningún selector de entidad, se precargarán todos los estudios del paciente. Ejemplo: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=$OBR-24' => selecciona como máximo 2 Estudios previos no más antiguos de 5 años que contengan al menos una Serie con Modalidad de OBR-24.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
@@ -88,7 +94,9 @@
       "title": "Autoridad Asignadora del ID del Paciente",
       "description": "Se comparan los valores de la Autoridad Asignadora del ID del Paciente con los del mensaje HL7 recibido, si la Autoridad Asignadora del ID del Paciente está configurada como COINCIDENTE o NO COINCIDENTE. Formato: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "Prebúsqueda para Asignar Autoridad de ID de Paciente",
@@ -105,7 +113,7 @@
       "title": "Suprimir tamaño de historial duplicado",
       "description": "Número máximo de mensajes HL7 con PID-3 distintos que activan esta regla para recordar en la lista de historial.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -124,7 +132,9 @@
       "title": "Horario de pre-búsqueda",
       "description": "Retrasa la precarga a los periodos de tiempo especificados además del campo Fecha/Hora de pre-búsqueda configurada. Si no se especifica ningún horario de pre-búsqueda previa, se pone en cola una tarea de búsqueda previa para los estudios seleccionados del paciente basándose en el campo Prefetch Date Time configurado. Formato: hora=[0-23] díaDeLaSemana=[0-6]' (0=domingo).",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     }
   }

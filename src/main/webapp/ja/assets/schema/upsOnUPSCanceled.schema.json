@@ -31,7 +31,7 @@
       "title": "Requires other UPS canceled",
       "description": "Specifies Query Parameters for other UPS referring the same request (= Study Instance UID), which must be already be canceled for creating this UPS. Format: {attributeID}={value}[&...]",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },

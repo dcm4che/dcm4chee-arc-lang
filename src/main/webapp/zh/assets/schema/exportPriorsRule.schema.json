@@ -18,7 +18,9 @@
       "title": "导出ID",
       "description": "导出ID",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmExporterID"
     },
     "dcmProperty": {
@@ -42,7 +44,9 @@
       "title": "实体选择器",
       "description": "指定用于选择要导出的先前研究的匹配键。 格式: {key}={value}[&{key}={value}]...,这里{key} = 'priors' | 'StudyAge' | {attributeID}。 在\"$\"{attributeID}格式中,{value}将替换为触发导出的传入实例中指定属性的值。如果未指定实体选择器,则导出患者的所有检查。 例如: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' =>",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmDuration": {

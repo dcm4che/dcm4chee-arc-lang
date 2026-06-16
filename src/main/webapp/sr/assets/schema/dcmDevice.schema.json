@@ -37,7 +37,7 @@
     "dcmTrustStoreType": {
       "title": "Tip Trust Store-a",
       "description": "Key Store Type Trust Store-a navedenog u dcmTrustStoreURL.",
-      "type": "string",
+      "type":"string",
       "enum": [
         "JKS|Java KeyStore",
         "PKCS12|Public-Key Cryptography Standards #12"

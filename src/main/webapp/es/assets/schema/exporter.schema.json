@@ -88,14 +88,18 @@
       "title": "Destino Ian",
       "description": "Destino para enviar IAN N-CREATE RQ",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmRetrieveAET": {
       "title": "Recuperar Título AE",
       "description": "Título AE asociado con AE de red.",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmArchiveAETitle"
     },
     "dcmRetrieveLocationUID": {
@@ -119,14 +123,18 @@
       "title": "Horario de exportación",
       "description": "Retrasa la exportación a los periodos de tiempo especificados. Si no especifica ningún calendario de exportación, la tarea de exportación se pondrá en cola para ser procesada inmediatamente. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     },
     "dcmProperty": {
       "title": "Propiedad del exportador",
       "description": "Especifique las propiedades del exportador en formato {name}={value}. Consulte varios <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties\" target=\"_blank\">Propiedades del exportador</a> que pueden configurarse en función del tipo de exportador.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     }
   }
 }

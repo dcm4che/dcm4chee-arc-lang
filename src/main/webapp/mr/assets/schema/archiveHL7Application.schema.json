@@ -243,8 +243,8 @@
       "title": "HL7 फॉरवर्ड नियम",
       "description": "HL7 फॉरवर्ड नियम. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -252,8 +252,8 @@
       "title": "HL7 निर्यात नियम",
       "description": "निर्यात नियम जे या HL7 अनुप्रयोगावरून प्राप्त झालेले  HL7 संदेशांवर लागू होतील. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -270,8 +270,8 @@
       "title": "HL7 प्रीफेच नियम",
       "description": "प्रीफेच नियम जे या HL7 अनुप्रयोगावरून प्राप्त झालेले  HL7 संदेशांवर लागू होतील. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -279,8 +279,8 @@
       "title": "HL7 अभ्यास धारणा धोरण",
       "description": "HL7 अभ्यास धारणा धोरणा जे या HL7 अनुप्रयोगावरून प्राप्त झालेले HL7 संदेशांवर लागू होतील. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -288,8 +288,8 @@
       "title": "HL7 ऑर्डरसाठी अनुसूचित स्टेशन",
       "description": "निवडलेल्या MWL HL7 ऑर्डर फीडसाठी अनुसूचित स्टेशन. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य पूरक होतील.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
@@ -297,8 +297,8 @@
       "title": "HL7 ऑर्डरसाठी SPS स्थिती",
       "description": "प्राप्त झालेल्या HL7 ORM^O01, OMI^O23, OMG^O19 संदेशांवर निर्माण केलेल्या किंवा अपडेट झालेल्या DICOM MWL आयटम्सचे SPS स्थिती निर्दिष्ट करते. डिव्हाइस स्तरावर निर्दिष्ट केलेले मूल्य अधिलिखित होतील.",
       "type": "array",
-      "titleKey":"{dcmSPSStatus}",
-      "items" : {
+      "titleKey": "{dcmSPSStatus}",
+      "items": {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     }

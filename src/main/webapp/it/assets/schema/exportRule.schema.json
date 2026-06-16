@@ -29,7 +29,9 @@
       "title": "ID esportatore",
       "description": "ID esportatore",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmExporterID"
     },
     "dicomDeviceName": {

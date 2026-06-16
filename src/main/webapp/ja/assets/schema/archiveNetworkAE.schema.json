@@ -11,7 +11,7 @@
       "title": "オブジェクト 格納 ID",
       "description": "受信した DICOM 複合 オブジェクトが 保存されて いる 格納 システムの ID。 複数の 格納 システムを 構成できます。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -27,7 +27,7 @@
       "title": "メタデータ 格納 ID",
       "description": "メタデータが JSON 形式で 保存される 格納の ID - 完全な DICOM 複合 オブジェクトに 加えて。 複数の 格納 システムを 構成できます。 存在しない 場合、 メタデータは 追加で 保存されません。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -53,19 +53,24 @@
     "dcmStoreAccessControlID": {
       "title": "保存 アクセス 制御 ID",
       "description": "この AEが 受け取った 検査に 割り当てられた アクセス 制御 ID",
-      "items": { "type": "string" }
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmAccessControlID": {
       "title": "アクセス 制御 ID",
       "description": "この AEが 受信した クエリ / 読み出し 要求に 割り当てられた アクセス 制御 ID。",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmAcceptedMoveDestination": {
       "title": "承認された 移動先",
       "description": "C-MOVE 要求で 受け入れられた 移動先; 存在しない 場合、任意の 移動先。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -131,7 +136,7 @@
       "title": "MWL SCP から SPS ステータスを 非表示 する",
       "description": "MWL SCPに よって 返されない MWL アイテムの 予定された 手順 ステップ ステータス コード。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -149,7 +154,7 @@
       "title": "MWL RS から SPS ステータスを 非表示 する",
       "description": "MWL RSに よって 返されない MWL アイテムの 予定された 手順 ステップ ステータス コード。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -185,7 +190,7 @@
       "title": "JSON 番号として エンコード する",
       "description": "JSON 番号として エンコードされた VR。 構成されていない 場合、 IS、 DS、 SVと UVの 値は JSON 文字列として エンコードされます。 デバイス レベルで 指定された 値を 補足します。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "DS|Decimal String",
@@ -304,27 +309,33 @@
       "title": "QIDO Result Order By",
       "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmFwdMppsDestination": {
       "title": "MPPS 転送 宛先",
       "description": "MPPS N-CREATE RQと N-SET RQを転送 する 宛先。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
       "title": "IAN 宛先",
       "description": "IAN N-CREATE RQの 宛先。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanTrigger": {
       "title": "IAN Trigger",
       "description": "Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send IAN on receiving studies",
@@ -505,7 +516,7 @@
       "title": "Accepted User Role",
       "description": "Roles of users from which web requests are accepted; any if absent.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -544,7 +555,9 @@
       "title": "MWL Worklist Label Filter",
       "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (MWL Query SOP Class) or dicomWeb (Modality Worklist Search Transaction) service for matching Modality Worklist items (MWL), if no matching key for this attribute is specified in the request. If multiple values are specified, MWL with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, MWL with any value of Worklist Label (0074,1202) will match.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSWorklistLabel": {
       "title": "UPS ワークリスト ラベル",
@@ -555,7 +568,9 @@
       "title": "UPS Worklist Label Filter",
       "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (UPS Query SOP Class) or dicomWeb (Worklist Search Transaction) service for matching Unified Procedure Steps (UPS), if no matching key for this attribute is specified in the request. If multiple values are specified, UPS with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, UPS with any value of Worklist Label (0074,1202) will match.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSEventSCU": {
       "title": "UPS イベント SCU",
@@ -651,7 +666,9 @@
       "title": "格納 検証 格納 IDs",
       "description": "格納 検証を 正常に 行うには オブジェクトを 1つの 指定した 格納 システムに 格納 する 必要が ある ことを 示します。 「格納 検証 ポリシー」= 「DB_RECORD_EXISTS」 では 無効です。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationInitialDelay": {
@@ -680,7 +697,9 @@
       "title": "HL7 手順 ステータス 更新 受け取り アプリケーション",
       "description": "HL7 手順 ステータス 更新の 受け取り アプリケーションの 「アプリケーション | 施設」。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "hl7ApplicationName"
     },
     "hl7PSUAction": {
@@ -699,7 +718,7 @@
       "title": "HL7 Procedure Status Update Trigger",
       "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send notification on receive of studies",
@@ -800,7 +819,9 @@
       "title": "矛盾 患者 属性を 拒否 する",
       "description": "以前に 受信した オブジェクトの 患者 IDと 一致 する 患者 IDを 持つ オブジェクトの 指定された 患者 属性の 値と 一致 しないの 場合 DICOM オブジェクトを 拒否します。 デバイス レベルで 指定された 値を 上書きします。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
@@ -867,8 +888,8 @@
       "title": "書き出し 規則",
       "description": "この AEに よって 受信された DICOM オブジェクトに 適用される 書き出し 規則。 デバイス レベルで 指定された 書き出し 規則を 上補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportRule.schema.json"
       }
     },
@@ -876,8 +897,8 @@
       "title": "事前 エンティティの 書き出し 規則",
       "description": "この AEに よって 受信された DICOM オブジェクトに 適用される 事前 エンティティの 書き出し 規則。 デバイス レベルで 指定された 事前 エンティティの 書き出し 規則を 上補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportPriorsRule.schema.json"
       }
     },
@@ -885,8 +906,8 @@
       "title": "MPPS 転送 規則",
       "description": "この AEに よって 受信した MPPS に 適用される MPPS 転送 規則。 デバイス レベルで 指定された MPPS 転送 規則を 上補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "mppsForwardRule.schema.json"
       }
     },
@@ -894,8 +915,8 @@
       "title": "RESTful 転送 規則",
       "description": "RESTful 転送 規則。 デバイス レベルで 指定された RESTful 転送 規則を 上補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "rsForwardRule.schema.json"
       }
     },
@@ -903,8 +924,8 @@
       "title": "圧縮 規則",
       "description": "圧縮 規則。 デバイス レベルで 指定された 圧縮 規則を 上補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveCompressionRule.schema.json"
       }
     },
@@ -912,8 +933,8 @@
       "title": "属性 強制",
       "description": "受信 / 送信された DIMSEの 属性 強制。 デバイス レベルで 指定された 属性 強制を 上補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion.schema.json"
       }
     },
@@ -921,8 +942,8 @@
       "title": "Attribute Coercion (New)",
       "description": "Attribute Coercion of received/sent DIMSE. Supplements Attribute Coercions specified on Device level.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
@@ -939,8 +960,8 @@
       "title": "保存 アクセス 制御 ID 規則",
       "description": "この AEに よって 受信された 検査に 適用される 保存 アクセス 制御 ID 規則。 デバイス レベルで 指定された 保存 アクセス 制御 ID 規則を 上補足します。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "storeAccessControlIDRule.schema.json"
       }
     },
@@ -948,8 +969,8 @@
       "title": "格納に よって 作成された UPS",
       "description": "この AEに よって 受信された DICOM オブジェクトに 適用される 格納に よって 作成された UPS。 デバイス レベルで 指定された 格納に よって 作成された UPSを 上補足します。",
       "type": "array",
-      "titleKey":"{dcmUPSOnStoreID}",
-      "items" : {
+      "titleKey": "{dcmUPSOnStoreID}",
+      "items": {
         "$ref": "upsOnStore.schema.json"
       }
     },

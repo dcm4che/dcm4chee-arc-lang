@@ -23,7 +23,7 @@
       "title": "Rule Priority",
       "description": "If the condition of several Compression rules matches for a received image, the rule with the highest priority will get applied. If there are several matching rules with equal priority it is undefined which rule get applied.",
       "type": "integer",
-      "default" : 0,
+      "default": 0,
       "minimum": 0
     },
     "dcmProperty": {

@@ -92,7 +92,7 @@
       "title": "Parametro di azione dell'UI",
       "description": "Parametro di azione dell'UI",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum":[
           "edit",
@@ -113,7 +113,7 @@
       "title": "Ruolo utente accettato",
       "description": "Ruolo utente accettato",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     }

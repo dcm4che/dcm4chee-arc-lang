@@ -16,7 +16,9 @@
       "title": "Atributo Etiqueta",
       "description": "Etiqueta IDCOM como cadena hexadecimal que se incluirá en esta plantilla de diálogo.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dicomDescription": {

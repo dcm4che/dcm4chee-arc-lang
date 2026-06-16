@@ -23,7 +23,7 @@
       "title": "Prioridad de la regla",
       "description": "Si la condición de varias reglas de compresión coincide para una imagen recibida, se aplicará la regla con la prioridad más alta. Si hay varias reglas coincidentes con la misma prioridad, no se define qué regla se aplicará.",
       "type": "integer",
-      "default" : 0,
+      "default": 0,
       "minimum": 0
     },
     "dcmProperty": {

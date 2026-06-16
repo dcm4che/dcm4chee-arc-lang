@@ -220,7 +220,7 @@
       "title": "Criteri di soppressione dell'audit",
       "description": "Criteri di soppressione dell'audit",
       "type": "array",
-      "titleKey":"{cn}",
+      "titleKey": "{cn}",
       "items": {
         "$ref": "auditSuppressCriteria.schema.json"
       }

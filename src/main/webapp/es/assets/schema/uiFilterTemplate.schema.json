@@ -37,7 +37,7 @@
       "title": "Filtros",
       "description": "Filtros por defecto en esta plantilla, filtro pare key=value (ejemplo LocalAET=DCM4CHEE). Para el filtro de fecha puede utilizar las palabras clave predefinidas ( hoy, ayer, esta_semana, este_mes, ultima_semana, ultimo_mes, este_trimestre, ultimo_trimestre, este_año, ultimo_año) para que se puedan generar los valores dinámicos de los filtros.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },

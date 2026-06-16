@@ -24,9 +24,9 @@
     "dcmuiLanguageProfileObjects": {
       "title": "言語 プロファイル",
       "description": "ユーザー名、役割 または 全員の 言語 プロファイル。",
-      "titleKey":"{dcmuiLanguageProfileName}",
+      "titleKey": "{dcmuiLanguageProfileName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiLanguageProfile.schema.json"
       }
     }

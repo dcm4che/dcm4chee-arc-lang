@@ -30,7 +30,7 @@
     "dcmuiClusterWebApp": {
       "title": "Veb aplikacija",
       "description": "Web aplikacija sa klasom QIDO-RS",
-      "type": "string",
+      "type":  "string",
       "format": "webApp"
     },
     "dcmuiDeviceClusterInstalled": {

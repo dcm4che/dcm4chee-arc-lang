@@ -35,13 +35,17 @@
       "title": "Processing Property",
       "description": "UPS Processor dependent property in format <name>=<value>",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmSchedule": {
       "title": "Processing Schedule",
       "description": "Delay processing to specified time periods. If no Processing Schedule is specified, process Workitems at their Scheduled Procedure Step Start Date Time (0040,4005). Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     },
     "dcmMaxThreads": {

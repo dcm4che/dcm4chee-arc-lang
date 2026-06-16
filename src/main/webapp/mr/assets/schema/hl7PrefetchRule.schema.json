@@ -46,7 +46,9 @@
       "title": "प्रीफेच C-STORE SCP",
       "description": "C-STORE SCP AE चे शीर्षक जिथे निवडलेल्या अभ्यासांच्या पुनर्प्राप्ती केले जातील.",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmDestinationCFindSCP": {
@@ -65,13 +67,17 @@
       "title": "अटी",
       "description": "अटी या स्वरूपात {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. उदाहरणे: MSH-4=FORWARD किंवा MSH-9=ORM\\^O01 किंवा PID-3[.3]=PIDIssuer किंवा PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmEntitySelector": {
       "title": "घटक निवडकर्ता",
       "description": "पुनर्प्राप्ती करण्यासाठी अभ्यास निवडण्यासाठी वापरलेल्या जुळणार्‍या की निर्दिष्ट करते या स्वरूपात : {की}={मूल्य}[&{की}={मूल्य)]..., जिथे {की} = 'StudyAge' | {attributeID}. या स्वरूपात '$'{SEG}-{Seq#}[.{Comp#}[.{SubComp#}]] जे {मूल्य} आहेत, ते HL7 संदेश, ज्याने पुनर्प्राप्ती ट्रिगर झाले, त्याच्या HL7 फील्डच्या मूल्याबरोबर पुनर्स्थित केले जाईल. कोणताही घटक निवडकर्ता निर्दिष्ट न केल्यास, रुग्णाचे सर्व अभ्यास पुनर्प्राप्ती केले जातील. उदाहरण : 'priors=2&StudyAge=-5Y&ModalitiesInStudy=$OBR-24' => जास्तीत जास्त २ पूर्व अभ्यास जे ५ वर्षापेक्षा जास्त जुन्यानसून आणि ज्यात OBR-24 फील्डच्या मूल्यामध्ये असलेले किमान एक मोडॅलिटीचे मालिका आहे.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmNullifyIssuerOfPatientID": {
@@ -88,7 +94,9 @@
       "title": "रुग्ण ID चे नियुक्त करणारा अधिकार",
       "description": "प्राप्त झालेले HL7 संदेशामध्ये रुग्णच्या ID च्या जारीकर्ता चे मूल्यासोबत जुळणाऱ्या रुग्णच्या ID च्या जारीकर्ता चे मूल्य, जर रुग्णच्या ID च्या जारीकर्ताला MATCHING किंवा NOT_MATCHING संच केले असेल. स्वरूप: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmPrefetchForIssuerOfPatientID": {
       "title": "रुग्ण ID चे नियुक्त करणारा अधिकारासाठी प्रीफेच",
@@ -105,7 +113,7 @@
       "title": "डुप्लिकेट प्रीफेच न करण्यासाठी इतिहास यादीचे माप",
       "description": "इतिहास यादीमध्ये नोट केलेल्या, या नियमाला ट्रिगर करणाऱ्या विशिष्ट PID-3 असलेले HL7 संदेशांची अधिकतम संख्या.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -124,7 +132,9 @@
       "title": "प्रीफेच वेळापत्रक",
       "description": "कॉन्फीगर केलेल्या 「प्रीफेच तारीख फील्ड」 सोबत दर्शविलेल्या वेळापत्रकांनुसार प्रीफेच विलंबित करा. कोणतेही प्रीफेच वेळापत्रक निर्दिष्ट केलेले नसल्यास, रुग्णाच्या निवडलेल्या अभ्यासांसाठी प्रीफेच कार्य कॉन्फीगर केलेल्या 「प्रीफेच तारीख फील्ड」नुसार रांगेत ठेवा. प्रारूप: 'hour=[0-23] dayOfWeek=[0-6]' (0=रविवार)",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     }
   }

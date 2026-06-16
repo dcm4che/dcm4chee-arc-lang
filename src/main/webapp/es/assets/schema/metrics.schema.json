@@ -21,7 +21,7 @@
       "title": "Periodo de retención de métricas",
       "description": "Periodo de retención de métricas en minutos.",
       "type": "integer",
-      "default" : 60,
+      "default": 60,
       "minimum": 1
     },
     "dcmUnit": {

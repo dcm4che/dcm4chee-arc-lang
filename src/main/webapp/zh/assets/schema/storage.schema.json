@@ -75,7 +75,7 @@
       "title": "File Open Option(s)",
       "description": "Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "CREATE_NEW|Create a new file, failing if the file already exists",
@@ -236,7 +236,7 @@
       "title": "删除线程",
       "description": "用于从存储系统中删除对象的线程数。",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -299,7 +299,7 @@
       "title": "读高速缓存最大并行数",
       "description": "读时高速缓存存储中并行副本的最大数量。仅当设置了\"读缓存存储ID\"时才有效。",
       "type": "integer",
-      "default" : 10,
+      "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
     },

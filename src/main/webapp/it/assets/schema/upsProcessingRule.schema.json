@@ -35,13 +35,17 @@
       "title": "Processing Property",
       "description": "Proprietà dipendente dal processore UPS nel formato <name>=<value>",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmSchedule": {
       "title": "Calendario Lavorazioni",
       "description": "Ritarda l'elaborazione a periodi di tempo specificati. Se non viene specificata alcuna pianificazione di elaborazione, elaborare gli elementi di lavoro alla data di inizio del passaggio della procedura pianificata (0040,4005). Formato: 'hour=[0-23] dayOfWeek=[0-6]' (0=Domenica)",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     },
     "dcmMaxThreads": {

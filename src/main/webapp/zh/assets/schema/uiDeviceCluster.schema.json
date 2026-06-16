@@ -22,7 +22,9 @@
       "title": "设备的Web应用程序",
       "description": "选择用于访问相应设备的预配置Web应用程序",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "webApp"
     },
     "dcmuiClusterWebApp": {

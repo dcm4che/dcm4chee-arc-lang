@@ -33,7 +33,7 @@
       "description": "UI Action Parameter",
       "format": "dcmAETitle",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -41,7 +41,7 @@
       "title": "Accepted User Role",
       "description": "Define the roles for which this config should be available, use 'user' to be available for all roles",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     }

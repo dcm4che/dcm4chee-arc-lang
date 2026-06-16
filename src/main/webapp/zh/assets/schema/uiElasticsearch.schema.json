@@ -14,9 +14,9 @@
     "dcmuiElasticsearchURLObjects": {
       "title": "UI搜索引擎URL",
       "description": "UI搜索引擎URL",
-      "titleKey":"{dcmuiElasticsearchURLName}",
+      "titleKey": "{dcmuiElasticsearchURLName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiElasticsearchURL.schema.json"
       }
     }

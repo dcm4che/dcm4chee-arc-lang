@@ -37,44 +37,44 @@
       "title": "Nombre del dispositivo",
       "description": "Un nombre único para este dispositivo.",
       "type": "string",
-      "order":1
+      "order": 1
     },
     "dicomDescription": {
       "title": "Descripción del dispositivo",
       "description": "Descripción en texto sin restricciones del dispositivo.",
       "type": "string",
-      "order":2
+      "order": 2
     },
-    "dicomVendorData":{
+    "dicomVendorData": {
       "title": "Vendor Device Data",
       "description": "Device specific vendor configuration information",
       "type": "boolean",
-      "order":2
+      "order": 2
     },
     "dicomDeviceUID": {
       "title": "UID del dispositivo",
       "description": "Identificador único del dispositivo.",
       "type": "string",
       "pattern": "^[0-2]((\\.0)|(\\.[1-9][0-9]*))*$",
-      "order":3
+      "order": 3
     },
     "dicomManufacturer": {
       "title": "Fabricante",
       "description": "Fabricante del dispositivo. Valor por defecto de Fabricante (0008,0070) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerción de atributo de archivo en un dispositivo de archivo para complementar este atributo desde este dispositivo</a> cuando falta en las Instancias SOP creadas por el dispositivo de archivo invocador.",
       "type": "string",
-      "order":4
+      "order": 4
     },
     "dicomManufacturerModelName": {
       "title": "Nombre del modelo del fabricante",
       "description": "Nombre del modelo del fabricante del dispositivo. Valor por defecto de Nombre de modelo de fabricante (0008,1090) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributo de archivo en un dispositivo de archivo para complementar este atributo desde este dispositivo</a> cuando falta en las Instancias SOP creadas por el dispositivo de archivo invocador.",
       "type": "string",
-      "order":5
+      "order": 5
     },
     "dicomSoftwareVersion": {
       "title": "Versión de software",
       "description": "Versiones de software del dispositivo. Valores por defecto de Versiones de Software (0018,1020) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar este atributo desde este dispositivo</a> cuando falta en las Instancias SOP creadas por el dispositivo de archivo invocador.",
       "type": "array",
-      "order":6,
+      "order": 6,
       "items": {
         "type": "string"
       }
@@ -83,20 +83,20 @@
       "title": "Nombre de estación",
       "description": "Nombre de estación del dispositivo. Valor por defecto de Nombre de estación (0008,1010) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerción de atributo de archivo en un dispositivo de archivo para complementar este atributo desde este dispositivo</a> cuando falta en las Instancias SOP creadas por el dispositivo de archivo invocador.",
       "type": "string",
-      "order":7
+      "order": 7
     },
     "dicomDeviceSerialNumber": {
       "title": "Número de serie del dispositivo",
       "description": "Número de serie del dispositivo. Valor por defecto del Número de serie del dispositivo (0018,1000) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar este atributo desde este dispositivo</a> cuando falta en las Instancias SOP creadas por el dispositivo de archivo invocador.",
       "type": "string",
-      "order":8
+      "order": 8
     },
     "dicomPrimaryDeviceType": {
       "title": "Tipo de dispositivo primario",
       "description": "Representa el tipo de dispositivo y es más aplicable a las modalidades de adquisición.",
       "type": "array",
-      "order":9,
-      "items" : {
+      "order": 9,
+      "items": {
         "type": "string",
         "enum":[
           "ARCHIVE|Archive",
@@ -157,7 +157,7 @@
       "title": "Nombre de la institución",
       "description": "Nombre de la institución del dispositivo. Valor por defecto de Nombre de la institución (0008,0080) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar este atributo desde este dispositivo</a> cuando falta en las Instancias SOP creadas por el dispositivo de archivo invocador. Sólo se utiliza el primer valor configurado mediante la coerción complementaria, ya que el campo tiene un único valor según <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8\" target=\"_blank\">Atributos del módulo de equipamiento general</a>.La posibilidad multivaluada para este campo aquí es cumplir el requisito en <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3\" target=\"_blank\">DICOM Part 15 - Perfiles de seguridad y gestión del sistema - Esquema LDAP para objetos y atributos</a>.",
       "type": "array",
-      "order":10,
+      "order": 10,
       "items": {
         "type": "string"
       }
@@ -166,7 +166,7 @@
       "title": "Código de Institución",
       "description": "Código de Institución del dispositivo. Valor por defecto de la Secuencia de Códigos de Institución (0008,0082) en formato (CV, CSD, \"CM\") en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar este atributo desde este dispositivo</a> cuando falta en las Instancias SOP creadas por el dispositivo de archivo invocador.Sólo se utiliza el primer valor configurado mediante la coerción complementaria, ya que el campo tiene un único valor según <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8\" target=\"_blank\">Atributos generales del módulo de equipamiento</a>. La posibilidad multivaluada para este campo aquí es cumplir el requisito en <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3\" target=\"_blank\">DICOM Part 15 - Perfiles de seguridad y gestión del sistema - Esquema LDAP para objetos y atributos</a>.",
       "type": "array",
-      "order":11,
+      "order": 11,
       "items": {
         "type": "string"
       }
@@ -175,7 +175,7 @@
       "title": "Dirección de Institución",
       "description": "Dirección de Institución del dispositivo. Valor por defecto de la Dirección de la Institución (0008,0081) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\"> invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar este atributo desde este dispositivo </a> cuando falta en las Instancias SOP creadas por el dispositivo de archivo invocador. Sólo se utiliza el primer valor configurado mediante la coerción complementaria, ya que el campo tiene un único valor según <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8\" target=\"_blank\">Atributos generales del módulo de equipamiento</a>. La posibilidad multivaluada para este campo aquí es cumplir el requisito en <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3\" target=\"_blank\">DICOM Part 15 - Perfiles de seguridad y gestión del sistema - Esquema LDAP para objetos y atributos</a>.",
       "type": "array",
-      "order":12,
+      "order": 12,
       "items": {
         "type": "string"
       }
@@ -184,7 +184,7 @@
       "title": "Nombre del departamento institucional",
       "description": "Nombre del departamento institucional del dispositivo. Valor predeterminado de Nombre de departamento institucional (0008,1040) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar este atributo desde este dispositivo</a> cuando falta en las Instancias SOP creadas por el dispositivo de archivo invocador. Sólo se utiliza el primer valor configurado mediante la coerción complementaria, ya que el campo es de valor único según <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8\" target=\"_blank\">Atributos generales del módulo de equipamiento</a>. La posibilidad multivaluada para este campo aquí es cumplir el requisito en <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3\" target=\"_blank\">DICOM Part 15 - Perfiles de seguridad y gestión del sistema - Esquema LDAP para objetos y atributos</a>.",
       "type": "array",
-      "order":13,
+      "order": 13,
       "items": {
         "type": "string"
       }
@@ -193,55 +193,55 @@
       "title": "Emisor de ID de paciente",
       "description": "Valor por defecto para el Emisor de ID de paciente (0010,0021), y opcionalmente también valores por defecto para el ID de entidad universal (0040,0032) y el Tipo de ID de entidad universal (0040,0033) del Elemento de la Secuencia de calificadores del emisor de ID de paciente (0010,0024) para las Instancias SOP creadas por este dispositivo cuando falta el ID de paciente (0010,0020); puede anularse con valores recibidos en una lista de trabajo u otra fuente. También se utiliza en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar desde este dispositivo</a> cuando falta la autoridad de asignación de ID de paciente (0010,0020) : <br>- en la recepción y creación de instancias SOP por el dispositivo de archivo invocador<br>- en la recepción y creación de MPPS por el dispositivo de archivo invocador<br>- en DICOM (MWl) Solicitudes C-FIND de sistemas externos al dispositivo de archivo invocador<br>- en DICOM (MWl) Solicitudes C-FIND del dispositivo de archivo invocador a sistemas externos <br>- en DICOM (MWl) Respuestas C-FIND de sistemas externos al dispositivo de archivo invocador. <br>Formato: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":14
+      "order": 14
     },
     "dicomIssuerOfAccessionNumber": {
       "title": "Emisor del número de adhesión",
       "description": "Valores por defecto para el ID de entidad del espacio de nombres local (0040,0031), el ID de entidad universal (0040,0032) y el tipo de ID de entidad universal (0040,0033) del elemento de la secuencia del emisor del número de adhesión (0008,0051) para los elementos de la lista de trabajo de la modalidad creados o actualizados por este dispositivo cuando falta el número de adhesión (0008,0050); puede anularse con valores recibidos en una lista de trabajo u otra fuente. También se utiliza en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar desde este dispositivo</a> cuando falta la autoridad de asignación de Número de Adhesión (0008,0050): <br>- dentro de la secuencia de atributos de solicitud (0040,0275) atributos de elemento y de nivel raíz en la recepción y creación de instancias SOP por el dispositivo de archivo invocador.<br>- dentro de la secuencia de atributos de pasos programados (0040,0270) y atributos de nivel raíz en la recepción y creación de MPPS por el dispositivo de archivo invocador<br>- dentro de la secuencia de atributos de solicitud (0040,0275) y atributos de nivel raíz en DICOM (MWl) Solicitudes C-FIND de sistemas externos al dispositivo de archivo invocador<br>- dentro de la secuencia de atributos de solicitud (0040,0275) elemento y atributos de nivel raíz en DICOM (MWl) Solicitudes C-FIND del dispositivo de archivo invocador a sistemas externos<br>- dentro de la secuencia de atributos de solicitud (0040,0275) elemento y atributos de nivel raíz en DICOM (MWl) Respuestas C-FIND de sistemas externos al dispositivo de archivo invocador. <br>Formato: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":15
+      "order": 15
     },
     "dicomOrderPlacerIdentifier": {
       "title": "Identificador del colocador de pedidos",
       "description": "Valores por defecto para el identificador de entidad del espacio de nombres local (0040,0031), el identificador de entidad universal (0040,0032) y el tipo de identificador de entidad universal (0040,0033) del elemento de la secuencia del identificador del colocador de pedidos (0040,0026) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">falta la invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar desde este dispositivo</a> cuando se asigna autoridad de Número de orden de colocación / Solicitud de servicio de imágenes (0040,2016) : <br>- dentro de la Secuencia de Atributos de Petición (0040,0275) elemento en la recepción y creación de instancias SOP por el dispositivo de archivo invocador<br>- dentro de la Secuencia de Atributos de Paso Programado (0040,0270) en la recepción y creación de MPPS por el dispositivo de archivo invocador<br>- dentro de la secuencia de atributos de solicitud (0040,0275) elemento en DICOM C-FIND / atributos de nivel raíz en solicitudes DICOM MWL C-FIND respectivamente, desde sistemas externos al dispositivo de archivo invocador.<br>- dentro de la secuencia de atributos de solicitud (0040,0275) en DICOM C-FIND / atributos de nivel raíz en solicitudes DICOM MWL C-FIND respectivamente, desde el dispositivo de archivo invocador a sistemas externos <br>- dentro de la secuencia de atributos de solicitud (0040,0275) en DICOM C-FIND / atributos de nivel raíz en respuestas DICOM MWL C-FIND respectivamente, desde sistemas externos al dispositivo de archivo invocador. <br>Pueden ser anulados por los valores recibidos en una lista de trabajo u otra fuente. Formato: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":16
+      "order": 16
     },
     "dicomOrderFillerIdentifier": {
       "title": "Identificador de cumplimentación de pedido",
       "description": "Valores por defecto para el identificador de entidad de espacio de nombres local (0040,0031), el identificador de entidad universal (0040,0032) y el tipo de identificador de entidad universal (0040,0033) del elemento de la secuencia de identificador de cumplimentación de pedido (0040,0027) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">falta la invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar desde este dispositivo</a> cuando se asigna autoridad de Número de orden de relleno / Solicitud de servicio de imágenes (0040,2017): <br>- dentro de la Secuencia de Atributos de Petición (0040,0275) elemento en la recepción y creación de instancias SOP por el dispositivo de archivo invocador<br>- dentro de la Secuencia de Atributos de Paso Programado (0040,0270) en la recepción y creación de MPPS por el dispositivo de archivo invocador<br>- dentro de la Secuencia de Atributos de Petición (0040,0275) en DICOM C-FIND / atributos de nivel raíz en peticiones DICOM MWL C-FIND respectivamente, desde sistemas externos al dispositivo de archivo invocador<br>- dentro de la Secuencia de Atributos de Petición (0040,0275) en DICOM C-FIND / atributos de nivel raíz en las solicitudes DICOM MWL C-FIND respectivamente, desde el dispositivo de archivo invocador a los sistemas externos <br>- dentro del elemento Secuencia de atributos de solicitud (0040,0275) en DICOM C-FIND / atributos de nivel raíz en las respuestas DICOM MWL C-FIND respectivamente, desde los sistemas externos al dispositivo de archivo invocador. <br>Puede ser anulado por los valores recibidos en una lista de trabajo u otra fuente. Formato: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":17
+      "order": 17
     },
     "dicomIssuerOfAdmissionID": {
       "title": "ID de emisor de admisión",
       "description": "Valores por defecto para el ID de entidad del espacio de nombres local (0040,0031), el ID de entidad universal (0040,0032) y el tipo de ID de entidad universal (0040,0033) del elemento de la secuencia de ID de emisor de admisión (0038,0014) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar desde este dispositivo</a> cuando falta la autoridad de asignación de ID de admisión (0038,0010): <br>- en la recepción y creación de instancias SOP por el dispositivo de archivo invocador<br>- en la recepción y creación de MPPS por el dispositivo de archivo invocador<br>- en las solicitudes DICOM (MWl) C-FIND desde sistemas externos al dispositivo de archivo invocador<br>- en las solicitudes DICOM (MWl) C-FIND desde el dispositivo de archivo invocador a sistemas externos<br>- en DICOM (MWl) C-FIND respuestas de sistemas externos al dispositivo de archivo invocador. <br>Pueden ser anulados por los valores recibidos en una lista de trabajo u otra fuente. Formato: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":18
+      "order": 18
     },
     "dicomIssuerOfServiceEpisodeID": {
       "title": "Identificador del Episodio de Servicio del Emisor",
       "description": "Valores por defecto para el Identificador de Entidad del Espacio de Nombres Local (0040,0031), el Identificador de Entidad Universal (0040,0032) y el Tipo de Identificador de Entidad Universal (0040,0033) del Elemento de la Secuencia del Identificador del Episodio de Servicio del Emisor (0038,0064) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar desde este dispositivo</a> cuando falta la asignación de autoridad de ID de episodio de servicio (0038,0060): <br>- en la recepción y creación de instancias SOP por el dispositivo de archivo invocador<br>- en la recepción y creación de MPPS por el dispositivo de archivo invocador<br>- en DICOM (MWl) solicitudes C-FIND desde sistemas externos al dispositivo de archivo invocador<br>- en DICOM (MWl) solicitudes C-FIND desde el dispositivo de archivo invocador a sistemas externos <br>- en las respuestas DICOM (MWl) C-FIND de sistemas externos al dispositivo de archivo invocador. <br>Pueden ser anulados por los valores recibidos en una lista de trabajo u otra fuente. Formato: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":19
+      "order": 19
     },
     "dicomIssuerOfContainerIdentifier": {
       "title": "Emisor del identificador del contenedor",
       "description": "Valores por defecto para el identificador de entidad del espacio de nombres local (0040,0031), el identificador de entidad universal (0040,0032) y el tipo de identificador de entidad universal (0040,0033) del elemento de la secuencia del emisor del identificador del contenedor (0040,0513) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar desde este dispositivo</a> cuando falta la autoridad de asignación de Identificador de Contenedor (0040,0512) : <br>- en la recepción y creación de instancias SOP por el dispositivo de archivo invocador<br>- en la recepción y creación de MPPS por el dispositivo de archivo invocador<br>- en DICOM (MWl) Solicitudes C-FIND de sistemas externos al dispositivo de archivo invocador<br>- en DICOM (MWl) Solicitudes C-FIND del dispositivo de archivo invocador a sistemas externos <br>- en DICOM (MWl) Respuestas C-FIND de sistemas externos al dispositivo de archivo invocador. <br>Puede ser anulado por los valores recibidos en una lista de trabajo u otra fuente. Formato: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":20
+      "order": 20
     },
     "dicomIssuerOfSpecimenIdentifier": {
       "title": "Emisor del identificador de espécimen",
       "description": "Valores por defecto para el identificador de entidad del espacio de nombres local (0040,0031), el identificador de entidad universal (0040,0032) y el tipo de identificador de entidad universal (0040,0033) del elemento de la secuencia del emisor del identificador de espécimen (0040,0562) en <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">invocación por coerciones de atributos de archivo en un dispositivo de archivo para complementar desde este dispositivo</a> cuando falta la autoridad de asignación de Identificador de Espécimen (0040,0551) : <br>- en la recepción y creación de instancias SOP por el dispositivo de archivo invocador<br>- en la recepción y creación de MPPS por el dispositivo de archivo invocador<br>- en DICOM (MWl) Solicitudes C-FIND de sistemas externos al dispositivo de archivo invocador<br>- en DICOM (MWl) Solicitudes C-FIND desde el dispositivo de archivo invocador a sistemas externos <br>- en DICOM (MWl) Respuestas C-FIND de sistemas externos al dispositivo de archivo invocador. <br>Pueden ser anulados por los valores recibidos en una lista de trabajo u otra fuente. Formato: {LocalNamespaceEntityID}[&{UniversalEntityID}&{UniversalEntityIDType}]",
       "type": "string",
-      "order":21
+      "order": 21
     },
     "dicomAuthorizedNodeCertificateReference": {
       "title": "Referencia de certificado de nodo autorizado",
       "description": "Los DN de los certificados de los nodos que están autorizados a conectarse a este dispositivo.",
       "type": "array",
-      "order":22,
+      "order": 22,
       "items": {
         "type": "string"
       }
@@ -250,7 +250,7 @@
       "title": "Esta referencia de certificado de nodo",
       "description": "Los DN de los certificados públicos de este nodo.",
       "type": "array",
-      "order":23,
+      "order": 23,
       "items": {
         "type": "string"
       }
@@ -259,15 +259,15 @@
       "title": "instalado",
       "description": "Boolean para indicar si este dispositivo está instalado actualmente en la red.",
       "type": "boolean",
-      "order":24,
+      "order": 24,
       "default": true
     },
     "dicomNetworkConnection": {
       "title": "Conexiones de red",
       "description": "Conexiones de red del dispositivo.",
       "type": "array",
-      "order":25,
-      "titleKey":"{dicomHostname}:{dicomPort} {cn}",
+      "order": 25,
+      "titleKey": "{dicomHostname}:{dicomPort} {cn}",
       "items": {
         "$ref": "networkConnection.schema.json"
       }
@@ -276,8 +276,8 @@
       "title": "Red AEs",
       "description": "Entidad de aplicación proporcionada por el dispositivo.",
       "type": "array",
-      "titleKey":"{dicomAETitle}",
-      "order":26,
+      "titleKey": "{dicomAETitle}",
+      "order": 26,
       "items": {
         "$ref": "networkAE.schema.json"
       }
@@ -286,7 +286,7 @@
       "title": "Extensión del dispositivo",
       "description": "dcm4che propietaria Atributos del dispositivo.",
       "$ref": "dcmDevice.schema.json",
-      "order":27
+      "order": 27
     }
   }
 }

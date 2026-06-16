@@ -135,7 +135,7 @@
       "title": "模糊算法类",
       "description": "指定模糊算法实现类。",
       "type": "string",
-      "enum":[
+      "enum": [
         "org.dcm4che3.soundex.Soundex|Classic Soundex phonetic algorithm that encodes names into a 4-character code based on English pronunciation so similarly sounding names match despite spelling differences",
         "org.dcm4che3.soundex.ESoundex|Extended Soundex variant that produces variable-length phonetic codes (instead of fixed 4 characters) to improve matching accuracy for longer words",
         "org.dcm4che3.soundex.ESoundex9|Extended Soundex variant that generates phonetic codes up to 9 characters long for higher precision fuzzy matching than standard Soundex",
@@ -148,7 +148,7 @@
       "title": "Store Implementation Version Name",
       "description": "Indicates to include Implementation Version Name (0002,0012) in the File Meta Information of stored DICOM objects.",
       "type": "boolean",
-      "default" : true
+      "default": true
     },
     "dcmBulkDataDescriptorID": {
       "title": "批量数据描述符ID",
@@ -172,7 +172,7 @@
       "title": "检查大小计算提取大小",
       "description": "限制单个DB查询中未知大小的检查结果集。",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -180,13 +180,13 @@
       "title": "查询属性计算",
       "description": "指示查询属性的计算是通过配置\"检查大小计算延迟\"和\"检查大小计算轮询间隔\"来执行的。",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmSeriesMetadataStorageID": {
       "title": "系列元数据存储ID",
       "description": "存储包含系列所有实例的聚合元数据的ZIP归档文件的存储ID。可以配置多个存储系统。如果不存在,则不存储聚合系列元数据。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -201,7 +201,7 @@
       "title": "Update Series Metadata",
       "description": "Indicates to update aggregated Series Metadata on attributes update.",
       "type": "boolean",
-      "default" : true
+      "default": true
     },
     "dcmSeriesMetadataPollingInterval": {
       "title": "系列元数据更新轮询间隔",
@@ -213,7 +213,7 @@
       "title": "更新系列元数据提取大小",
       "description": "查询提取的计划系列元数据更新的最大数量。",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -221,7 +221,7 @@
       "title": "更新系列元数据线程",
       "description": "用于创建和更新系列元数据的线程数。",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -242,7 +242,7 @@
       "title": "Purge(d) Instance Records",
       "description": "Indicates to purge instance records from DB. Also indicates to explicitly query series metadata zip files to check for purged instances for subsequent processing of archive functions. Set to 'True' if 'Purge Instance Records Delay' is configured.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmPurgeInstanceRecordsDelay": {
       "title": "清除实例记录的延迟",
@@ -260,7 +260,7 @@
       "title": "清除实例记录提取大小",
       "description": "计划从查询提取的DB中清除实例记录的最大系列数。仅当\"清除例程记录\"=\"真\"时有效。",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -274,7 +274,7 @@
       "title": "MWL提取大小",
       "description": "事务中要更新或删除的最大MWL项数。",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -288,7 +288,9 @@
       "title": "要删除的MWL延迟",
       "description": "要删除MWL项的ISO-8601周期PnDTnHnMnS延迟, whose updated_time is older than the specified delay。状态特定延迟可以是前缀SCHEDULED:,ARRIVED:,READY:,STARTED:,DEPARTED:,CANCELED:,DISCONTINUED:,COMPLETED:。例如:PT5M或CANCELED:PT10M。如果不存在,则不会删除MWL项目。",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmDeleteUPSPollingInterval": {
       "title": "删除UPS的轮询间隔",
@@ -300,7 +302,7 @@
       "title": "要删除UPS的读取大小",
       "description": "事务中要删除统一步骤(UPS)的最大数目。",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -390,7 +392,7 @@
       "title": "Hide SPS with Status by MWL SCP",
       "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -408,7 +410,7 @@
       "title": "Hide SPS with Status by MWL RS",
       "description": "Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL RS. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -426,7 +428,7 @@
       "title": "编码为JSON编号",
       "description": "编码为JSON编号的VR。否则,IS,DS,SV和UV值将编码为JSON字符串。可以通过为特定存档网络AE配置的值进行补充。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "DS|Decimal String",
@@ -486,14 +488,18 @@
       "title": "WADO支持的SR类",
       "description": "WADO读取支持的SR SOP类",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSOPClass"
     },
     "dcmWadoSupportedPRClasses": {
       "title": "WADO支持的PR类",
       "description": "WADO读取支持的PR SOP类",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSOPClass"
     },
     "dcmWadoSR2HtmlTemplateURI": {
@@ -578,27 +584,33 @@
       "title": "QIDO Result Order By",
       "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmFwdMppsDestination": {
       "title": "MPPS Forward Destination",
       "description": "Destination to forward MPPS N-CREATE RQ and N-SET RQ. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
       "title": "IAN Destination",
       "description": "Destination to send IAN N-CREATE RQ. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanTrigger": {
       "title": "IAN Trigger",
       "description": "Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send IAN on receiving studies",
@@ -890,7 +902,7 @@
       "title": "DB Read Only",
       "description": "Indicates read-only access to the database, preventing DB updates on query/retrieve.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmMaxAccessTimeStaleness": {
       "title": "最大访问时间过期",
@@ -1478,7 +1490,9 @@
       "title": "存储验证存储IDs",
       "description": "指示对象必须存储在一个指定的存储系统中,才能成功执行存储验证。如果不存在,则在任何存储系统上成功验证存储即可。存储验证策略=DB_RECORD_EXISTS无效。某些存档网络AE的配置值可能会覆盖这些值。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationAETitle": {
@@ -1530,7 +1544,7 @@
       "title": "存储验证提取大小",
       "description": "在单个查询中提取的存储验证预定系列的最大数量。",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1562,7 +1576,7 @@
       "title": "压缩线程",
       "description": "用于压缩的线程数。",
       "type": "integer",
-      "default" : 1,
+      "default": 1,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1579,7 +1593,7 @@
       "title": "压缩提取大小",
       "description": "为单个查询压缩而提取的最大系列数。",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1611,7 +1625,7 @@
       "title": "患者验证提取大小",
       "description": "在单个查询中提取用于患者验证的最大患者数。",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -1619,7 +1633,7 @@
       "title": "患者验证调整患者ID发布者",
       "description": "指示是否将患者ID发布者调整为PDQ服务返回的值。",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmPatientVerificationPeriod": {
       "title": "患者验证周期",
@@ -1683,7 +1697,9 @@
       "title": "HL7 ADT Receiving Application",
       "description": "Application|Facility name of Receiving Application for HL7 ADT messages to synchronize external systems about performed Patient Information updates. If absent, synchronization of external systems by HL7 ADT messages is disabled.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "hl7ApplicationName"
     },
     "hl7PSUSendingApplication": {
@@ -1696,7 +1712,9 @@
       "title": "HL7过程状态更新接收应用程序",
       "description": "HL7过程状态更新接收应用程序的应用程序设施。某些存档网络AE的配置值可能会覆盖这些值。",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "hl7ApplicationName"
     },
     "hl7PSUTaskPollingInterval": {
@@ -1729,7 +1747,7 @@
       "title": "HL7 Procedure Status Update Trigger",
       "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. May be overwritten by configured values for particular Archive Network AEs.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send notification on receive of studies",
@@ -1975,34 +1993,36 @@
       "title": "调度程序最小启动延迟",
       "description": "系统启动时调度程序启动的最小秒延迟。",
       "type": "integer",
-      "default" : 60,
+      "default": 60,
       "minimum": 0,
       "exclusiveMinimum": true
     },
     "dcmRejectConflictingPatientAttribute": {
       "title": "拒绝冲突的患者属性",
       "description": "如果患者ID与先前接收对象的患者ID匹配的对象的指定患者属性值不匹配,则拒绝DICOM对象。某些存档网络AE设置可能会覆盖这些设置。",
-      "type": "array",
-      "items" : { "type": "string" },
+      "type": "array", 
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
       "title": "STOW退休传输语法",
       "description": "接收到的JPEG完全编程和非层次JPEG图像将以相应的（退休）传输语法UID 1.2.840.10008.1.2.4.55 DICOM图像存储。否则,将保存的DICOM图像的传输语法UID设置为1.2.840.10008.1.2.4.50（=JPEG Baseline）或1.2.840.10008.1.2.4.51（=JPEG Extended）,但不使用“JPEG Baseline”或“JPEG Extended”进行转码,而是包含接收到的JPEG图像。某些存档网络AE的配置值可能会覆盖这些值。",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmStowExcludeAPPMarkers": {
       "title": "排除STOW应用程序标记器",
       "description": "STOW-RS元数据和Bulkdata请求中接收的JPEG图像的APP标记器是否从封装在创建的DICOM实例中的JPEG位流中排除。某些存档网络AE设置可能会覆盖这些设置。",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmStowQuicktime2MP4": {
       "title": "STOW-Quicktime2MP4",
       "description": "STOW-RS指示在元数据和批量数据请求中接收的Quicktime容器是否转换为封装在创建的DICOM实例中的MP4容器。要进行转换,必须安装ffmpeg,并且必须在PATH中启用ffmpeg CLI实用程序。否则,Quicktime容器将按原样封装在保存的DICOM对象中,使用声明的DICOM MPEG-4传输语法反映容器中视频流的编码,但与实际容器格式不一致。某些存档网络AE的配置值可能会覆盖这些值。",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmStowMaxFragmentLength": {
       "title": "STOW Maximum Fragment Length",
@@ -2024,13 +2044,13 @@
       "title": "Filter by Issuer of Patient ID",
       "description": "Filter by Issuer of Patient ID even if no matching key for Patient ID is specified. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : true
+      "default": true
     },
     "dcmMatchSOPClassOnInstanceLevel": {
       "title": "Match SOP Class on Instance level",
       "description": "Indicates to consider the SOP Class UID on Instance level for calculation of matches with SOP Classes in Study (0008,0062); otherwise rely on stored SOP Class UID on Series level, which may result in missing matches if one Series includes Instances of different SOP Classes. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmKeyValueRetentionPollingInterval": {
       "title": "Key Value Retention Polling Interval",
@@ -2042,7 +2062,7 @@
       "title": "Key Value Retention Fetch Size",
       "description": "Limit result set of DB query for Key Value pairs which retention period expired; 100 if absent",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": true
     },
@@ -2056,13 +2076,13 @@
       "title": "UPS Update Without Transaction UID",
       "description": "Indicates to permit an UPS Pull SCU or UPS-RS Web client to update or change the state of an UPS workitem in state IN PROCESS without specifying a Transaction UID. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmUPS2MWLCFindSCP": {
       "title": "UPS 2 MWL C-Find SCP",
       "description": "Indicates to feed Modality Worklist C-FIND SCP service from managed list of Unified Procedure Step (UPS) instances mapped to MWL items. May be overwritten by configured value for particular Archive Network AEs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmUPS2MWLScheduledStationNameCode": {
       "title": "UPS 2 MWL Scheduled Station Name Code",
@@ -2076,7 +2096,7 @@
       "title": "UPS 2 MWL Scheduled Station Name Code Value as AE Title",
       "description": "Indicates to map Code Value (0008,0101) - instead Code Meaning (0008,0104) - of Scheduled Station Name Code Sequence (0040,4025) items of Unified Procedure Step (UPS) instances to Scheduled Station AE Titles (0040,0001) of MWL C-FIND RQ/RSPs.",
       "type": "boolean",
-      "default" : false
+      "default": false
     },
     "dcmQStarVerificationStorageID": {
       "title": "QStar Verification Storage ID",
@@ -2094,7 +2114,7 @@
       "title": "QStar Verification Fetch Size",
       "description": "Limit result set of DB query for Verification of Access State of objects stored on QStar Tape File System; 100 if absent.",
       "type": "integer",
-      "default" : 100,
+      "default": 100,
       "minimum": 0,
       "exclusiveMinimum": 0
     },
@@ -2127,7 +2147,7 @@
       "title": "Trusted Patient ID Pattern",
       "description": "Regular Expression identifying trusted Patient IDs in HL7 v2 CX format: {Patient ID}^^^{Issuer of Patient ID}&{Universal Entity ID}&{Universal Entity ID Type} in received DICOM objects and HL7 messages. Only Patient IDs matching one of the specified patterns or Patient IDs qualified by an Assigning Authority matching one of the configured 'Trusted Issuers of Patient IDs' will be used for identifying the Patient. If neither this attribute nor any 'Trusted Issuers of Patient ID' is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2135,7 +2155,7 @@
       "title": "Trusted Issuer of Patient ID",
       "description": "Trusted Assigning Authority of Patient IDs in received DICOM objects and HL7 messages. Only Patient IDs qualified by an Assigning Authority matching one of the specified values or Patient IDs matching one of the configured 'Trusted Patient ID Patterns' will be used for identifying the Patient. If neither this attribute nor dcmTrustedPatientIDPattern is configured, all Patient IDs in received DICOM Objects and HL7 messages will be used for identifying the Patient. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2143,7 +2163,7 @@
       "title": "FHIR Preferred Assigning Authority of Patient ID",
       "description": "Assigning Authority of Patient IDs included in outgoing FHIR messages. If absent, all Patient IDs of the Patient are included. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}].",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2156,7 +2176,7 @@
       "title": "FHIR System of Patient ID",
       "description": "Specifies if the 'Issuer of Patient ID' (= Local Namespace Entity ID) or the 'Universal Entity ID' shall be used as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages. If both are specified, the 'Issuer of Patient ID' will only be used if there is no the 'Universal Entity ID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "LocalNamespaceEntityID|Use IssuerOfPatientID as namespace (system) of the Patient ID in logical references of Patients in outgoing FHIR messages",
@@ -2168,7 +2188,7 @@
       "title": "FHIR System by Issuer of Patient ID",
       "description": "Specifies mapping of 'Issuer of Patient ID' to namespace (system) of the Patient ID in outgoing FHIR messages. Format: {Issuer of Patient ID}={system}. Required if 'FHIR System of Patient ID' includes 'LocalNamespaceEntityID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2186,7 +2206,7 @@
       "title": "FHIR System of Accession Number",
       "description": "Specifies if the 'Local Namespace Entity ID' or the 'Universal Entity ID' shall be used as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. If both are specified, the 'Local Namespace Entity ID' will only be used if there is no 'Universal Entity ID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "LocalNamespaceEntityID|Use IssuerOfAccessionNumberSequence.LocalNamespaceEntityID as namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages",
@@ -2198,7 +2218,7 @@
       "title": "FHIR System by Local Namespace Entity ID of Accession Number",
       "description": "Specifies Mapping of 'Local Namespace Entity ID' to namespace (system) of the Accession Number in logical references of Service Requests in outgoing FHIR messages. Format: {Local Namespace Entity ID}={system}. Required if 'FHIR System of Accession Number' includes 'LocalNamespaceEntityID'.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -2211,8 +2231,8 @@
       "title": "属性过滤器",
       "description": "指定存储在数据库中的属性。",
       "type": "array",
-      "titleKey":"{dcmEntity}",
-      "items" : {
+      "titleKey": "{dcmEntity}",
+      "items": {
         "$ref": "attributeFilter.schema.json"
       }
     },
@@ -2220,8 +2240,8 @@
       "title": "属性集",
       "description": "由QIDO-RS和WADO-RS元数据查询参数\"includefields\"或DIFF-RS请求查询参数\"comparefield\"使用的命名属性集",
       "type": "array",
-      "titleKey":"{dcmAttributeSetType}:{dcmAttributeSetID}",
-      "items" : {
+      "titleKey": "{dcmAttributeSetType}:{dcmAttributeSetID}",
+      "items": {
         "$ref": "attributeSet.schema.json"
       }
     },
@@ -2229,8 +2249,8 @@
       "title": "批量数据描述符",
       "description": "指定由提供归档实例元数据的服务应用的批量数据描述符。",
       "type": "array",
-      "titleKey":"{dcmBulkDataDescriptorID}",
-      "items" : {
+      "titleKey": "{dcmBulkDataDescriptorID}",
+      "items": {
         "$ref": "bulkData.schema.json"
       }
     },
@@ -2238,8 +2258,8 @@
       "title": "存储描述符",
       "description": "指定存储系统",
       "type": "array",
-      "titleKey":"{dcmStorageID}",
-      "items" : {
+      "titleKey": "{dcmStorageID}",
+      "items": {
         "$ref": "storage.schema.json"
       }
     },
@@ -2247,8 +2267,8 @@
       "title": "查询/读取视图",
       "description": "指定保存的拒绝注释的行为",
       "type": "array",
-      "titleKey":"{dcmQueryRetrieveViewID}",
-      "items" : {
+      "titleKey": "{dcmQueryRetrieveViewID}",
+      "items": {
         "$ref": "queryRetrieveView.schema.json"
       }
     },
@@ -2256,8 +2276,8 @@
       "title": "队列",
       "description": "受管理的JMS队列",
       "type": "array",
-      "titleKey":"{dcmQueueName}",
-      "items" : {
+      "titleKey": "{dcmQueueName}",
+      "items": {
         "$ref": "queue.schema.json"
       }
     },
@@ -2265,8 +2285,8 @@
       "title": "度量",
       "description": "激活的度量",
       "type": "array",
-      "titleKey":"{dcmMetricsName}",
-      "items" : {
+      "titleKey": "{dcmMetricsName}",
+      "items": {
         "$ref": "metrics.schema.json"
       }
     },
@@ -2274,8 +2294,8 @@
       "title": "PDQ服务描述符",
       "description": "Patient Demographics Query服务描述符",
       "type": "array",
-      "titleKey":"{dcmPDQServiceID}",
-      "items" : {
+      "titleKey": "{dcmPDQServiceID}",
+      "items": {
         "$ref": "pdqService.schema.json"
       }
     },
@@ -2283,8 +2303,8 @@
       "title": "Export描述符",
       "description": "Export描述符",
       "type": "array",
-      "titleKey":"{dcmExporterID}",
-      "items" : {
+      "titleKey": "{dcmExporterID}",
+      "items": {
         "$ref": "exporter.schema.json"
       }
     },
@@ -2292,8 +2312,8 @@
       "title": "导出规则",
       "description": "应用于任何AE接收的DICOM对象的导出规则。某些情况下,可以通过为特定存档网络AE配置的导出规则进行补充。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportRule.schema.json"
       }
     },
@@ -2301,8 +2321,8 @@
       "title": "预实体导出规则",
       "description": "应用于任何AE接收的DICOM对象的预实体导出规则。某些归档网络AE的预配置实体导出规则可能会提供补充。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportPriorsRule.schema.json"
       }
     },
@@ -2310,8 +2330,8 @@
       "title": "MPPS Forward Rule",
       "description": "MPPS Forward Rules applied to MPPS received by any AE. May be supplemented by configured MPPS Forward Rules for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "mppsForwardRule.schema.json"
       }
     },
@@ -2319,8 +2339,8 @@
       "title": "REST风格的传输规则",
       "description": "某些归档网络AE的配置REST风格的传输规则可能会对此进行补充。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "rsForwardRule.schema.json"
       }
     },
@@ -2328,8 +2348,8 @@
       "title": "Compression rule",
       "description": "Compression rules applied to DICOM objects received by any AE. May be supplemented by configured Compression Rules for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveCompressionRule.schema.json"
       }
     },
@@ -2337,8 +2357,8 @@
       "title": "属性强制",
       "description": "应用于任何AE接收/发送的DIMSE的属性强制。某些存档网络AE的已配置属性强制可能会提供补充。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion.schema.json"
       }
     },
@@ -2346,8 +2366,8 @@
       "title": "Attribute Coercion (New)",
       "description": "Attribute Coercion applied to DIMSE received/sent by any AE. May be supplemented by configured Attribute Coercions for particular Archive Network AEs.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
@@ -2355,8 +2375,8 @@
       "title": "拒绝注释",
       "description": "指定保存的拒绝注释的行为",
       "type": "array",
-      "titleKey":"{dcmRejectionNoteLabel}",
-      "items" : {
+      "titleKey": "{dcmRejectionNoteLabel}",
+      "items": {
         "$ref": "rejectionNote.schema.json"
       }
     },
@@ -2364,8 +2384,8 @@
       "title": "CHECK保留策略",
       "description": "适用于任何AE接收的CHECK的CHECK保留策略。某些存档网络AE的配置检查保留策略可能会对其进行补充。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "studyRetentionPolicy.schema.json"
       }
     },
@@ -2373,8 +2393,8 @@
       "title": "保存访问控制ID规则",
       "description": "应用于任何AE接收的检查的保存访问控制ID规则。可以通过为特定存档网络AE配置的存储访问控制ID规则进行补充。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "storeAccessControlIDRule.schema.json"
       }
     },
@@ -2382,8 +2402,8 @@
       "title": "Change Access Control Rules",
       "description": "Change Access Control Rules applied to received Studies or Series.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "changeAccessControlIDRule.schema.json"
       }
     },
@@ -2436,8 +2456,8 @@
       "title": "ID生成器",
       "description": "ID生成器。",
       "type": "array",
-      "titleKey":"{dcmIDGeneratorName}",
-      "items" : {
+      "titleKey": "{dcmIDGeneratorName}",
+      "items": {
         "$ref": "idGenerator.schema.json"
       }
     },
@@ -2445,8 +2465,8 @@
       "title": "MWL Import",
       "description": "MWL Import",
       "type": "array",
-      "titleKey":"{dcmMWLImportID}",
-      "items" : {
+      "titleKey": "{dcmMWLImportID}",
+      "items": {
         "$ref": "mwlImport.schema.json"
       }
     },
@@ -2454,8 +2474,8 @@
       "title": "MWL空闲超时",
       "description": "MWL空闲超时",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "mwlIdleTimeout.schema.json"
       }
     },
@@ -2463,8 +2483,8 @@
       "title": "HL7转发规则",
       "description": "应用于由任何HL7应用程序接收的HL7消息的转发规则。 某些归档HL7应用程序配置的HL7传输规则可能会对其进行补充。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ForwardRule.schema.json"
       }
     },
@@ -2472,8 +2492,8 @@
       "title": "HL7导出规则",
       "description": "应用于由任何HL7应用程序接收的HL7消息的导出规则。 某些归档HL7应用程序配置的HL7导出规则可能会对其进行补充。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7ExportRule.schema.json"
       }
     },
@@ -2481,8 +2501,8 @@
       "title": "HL7 Prefetch Rule",
       "description": "HL7 Prefetch Rules applied to HL7 messages received by any HL7 Application. May be supplemented by configured HL7 Prefetch Rules for particular HL7 Application.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7PrefetchRule.schema.json"
       }
     },
@@ -2490,8 +2510,8 @@
       "title": "HL7验证保留策略",
       "description": "由任何HL7应用程序接收的HL7消息触发的HL7验证保留策略。可以使用针对特定HL7应用程序配置的验证保留策略进行补充。",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7StudyRetentionPolicy.schema.json"
       }
     },
@@ -2499,8 +2519,8 @@
       "title": "Scheduled Station for HL7 Order",
       "description": "Scheduled Station selected on MWL HL7 Order Feed received by any HL7 Application. May be supplemented by configured values for particular HL7 Applications.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "hl7OrderScheduledStation.schema.json"
       }
     },
@@ -2508,8 +2528,8 @@
       "title": "HL7订单的SPS状态",
       "description": "指定在收到的HL7 ORM^O01,OMI^O23,OMG^O19消息中创建/更新的DICOM MWL项目的SPS状态。某些归档HL7应用程序的配置值可能会覆盖这些值。",
       "type": "array",
-      "titleKey":"{dcmSPSStatus}",
-      "items" : {
+      "titleKey": "{dcmSPSStatus}",
+      "items": {
         "$ref": "hl7OrderSPSStatus.schema.json"
       }
     },

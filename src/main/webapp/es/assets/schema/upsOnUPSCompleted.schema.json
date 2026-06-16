@@ -31,7 +31,7 @@
       "title": "Requiere otra UPS completada",
       "description": "Especifica los parámetros de consulta para otra UPS que hace referencia a la misma solicitud (= UID de Instancia de Estudio), que ya debe estar completada para crear esta UPS. Formato: {attributeID}={value}[&...].",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },

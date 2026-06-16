@@ -24,29 +24,29 @@
       "title": "Redosled",
       "description": "Redosled Compare strane",
       "type": "integer",
-      "default": 0,
-      "enum": [
-        0,
-        1
+      "default":0,
+      "enum":[
+         0,
+         1
       ]
     },
     "dcmuiCompareSideCluster": {
       "title": "Klaster",
       "description": "Izaberi klaster",
       "type": "string",
-      "format": "dcmuiDeviceClusterObject"
+      "format":"dcmuiDeviceClusterObject"
     },
     "dcmuiCompareSideElasticsearch": {
       "title": "Elasticsearch",
       "description": "Izaberi Elasticsearch URL",
       "type": "string",
-      "format": "dcmuiElasticsearchConfig"
+      "format":"dcmuiElasticsearchConfig"
     },
     "dcmuiCompareSideQueueName": {
       "title": "Red",
       "description": "Izaberi QueueName koji treba koristiti za stranu poređenja",
       "type": "string",
-      "format": "dcmQueueName"
+      "format":"dcmQueueName"
     },
     "dcmuiCompareSideInstalled": {
       "title": "Instaliran",

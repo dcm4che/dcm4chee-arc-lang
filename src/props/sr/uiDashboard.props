@@ -1,6 +1,6 @@
 uiDashboard:Konfiguracija UI kontrolne table|Konfiguracija UI kontrolne table
 uiDashboard.dcmuiDashboardConfigName:Ime UI konfiguracije kontrolne table|Ime UI Dashboard konfiguracije
-uiDashboard.dcmuiShowStarBlock:Prikaži Star blok|Prikaži Star Block - zadaci bez definisanog deviceName
+uiDashboard.dcmuiShowStarBlock:Show Star Block|Show Star Block - tasks without defined deviceName
 uiDashboard.dcmuiQueueName:Redovi|Imena redova za UI Dashboard konfiguraciju korišćenu u bloku redova
 uiDashboard.dcmuiExportName:ID-ovi izvoznika|Exporter ID-ovi za UI Dashboard konfiguraciju korišćenu u bloku reda i poređenja
 uiDashboard.dicomuiDeviceName:Imena uređaja|Imena uređaja za UI Dashboard konfiguraciju korišćenu za generisanje Retrieve i Export bloka

@@ -220,7 +220,7 @@
       "title": "監査 抑制 基準",
       "description": "監査 抑制 基準",
       "type": "array",
-      "titleKey":"{cn}",
+      "titleKey": "{cn}",
       "items": {
         "$ref": "auditSuppressCriteria.schema.json"
       }

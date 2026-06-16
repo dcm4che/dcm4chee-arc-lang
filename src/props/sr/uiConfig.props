@@ -1,7 +1,7 @@
 uiConfig:UI konfiguracija|UI konfiguracija
 uiConfig.dcmuiConfigName:Ime UI konfiguracije|Ime UI konfiguracije
 uiConfig.dcmuiModalities:Statistički modaliteti|Preselektovani modaliteti koji treba da se prikažu na stranici statistike
-uiConfig.dcmuiLanguageConfig:Konfiguracija jezika|Konfiguracija jezika UI-ja
+uiConfig.dcmuiLanguageConfig:Language Config|Config the languages of the UI
 uiConfig.dcmuiWidgetAets:Widget AET-ovi|Selektuj AET-ove koje želiš da vidite u AET widget-u, gde možete selektovati u kojima od njih novododati AET treba da bude kao `Accepted Calling AE Title`
 uiConfig.dcmuiHideOtherPatientIDs:Sakrij ostale ID-ove pacijenata|Ukazuje da li drugi identifikatori pacijenta prisutni u Other Patient IDs Sequence (0010,1002) treba da budu skriveni. Podrazumevano, svi identifikatori pacijenta su prikazani razdvojeni zarezom.
 uiConfig.dcmuiDateTimeFormat:Format datuma i vremena|Ovde možete formatirati datum i vreme u UI-ju koristeći 'yyyy' za godinu, 'MM' za mesec, 'dd' za dan, 'HH' za sat, 'mm' za minute, 'ss' za sekunde i 'SSS' za milisekunde. Za formatiranje datuma, vremena i datuma-vremena koristite `DATE`, `TIME` i `DATE-TIME` na primer ovako: `DATE=yyyy-MM-dd, TIME=HH:mm, DATE-TIME=yyyy-MM-dd HH:mm`

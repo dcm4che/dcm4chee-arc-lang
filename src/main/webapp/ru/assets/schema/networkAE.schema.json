@@ -14,7 +14,7 @@
       "description": "Unique AE title for this Network AE",
       "type": "string",
       "maxLength": 16,
-      "order":1,
+      "order": 1,
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmSpanningCFindSCPRetrieveAET[*]",
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackCMoveSCPDestination",
@@ -53,7 +53,7 @@
       "title": "Network Connection Reference",
       "description": "JSON Pointers to the Network Connection objects for this AE",
       "type": "array",
-      "order":2,
+      "order": 2,
       "items": {
         "type": "string"
       }
@@ -63,26 +63,26 @@
       "description": "True if the Network AE can initiate associations.",
       "type": "boolean",
       "default": true,
-      "order":3
+      "order": 3
     },
     "dicomAssociationAcceptor": {
       "title": "Association Acceptor",
       "description": "True if the Network AE can accept associations.",
       "type": "boolean",
       "default": true,
-      "order":4
+      "order": 4
     },
     "dicomDescription": {
       "title": "AE Description",
       "description": "Unconstrained text description of the application entity",
       "type": "string",
-      "order":5
+      "order": 5
     },
     "dicomApplicationCluster": {
       "title": "Application Cluster",
       "description": "Locally defined names for a subset of related applications",
       "type": "array",
-      "order":6,
+      "order": 6,
       "items": {
         "type": "string"
       }
@@ -91,7 +91,7 @@
       "title": "Preferred Called AE Title",
       "description": "AE Title(s) that are preferred for initiating associations",
       "type": "array",
-      "order":7,
+      "order": 7,
       "items": {
         "type": "string"
       }
@@ -100,7 +100,7 @@
       "title": "Preferred Calling AE Title",
       "description": "AE Title(s) that are preferred for accepting associations",
       "type": "array",
-      "order":8,
+      "order": 8,
       "items": {
         "type": "string"
       }
@@ -109,7 +109,7 @@
       "title": "Supported Character Set",
       "description": "Character Set(s) supported by the Network AE for data sets it receives",
       "type": "array",
-      "order":9,
+      "order": 9,
       "items": {
         "type": "string"
       },
@@ -118,15 +118,15 @@
     "dicomInstalled": {
       "title": "installed",
       "description": "True if the AE is installed on network. If not present, information about the installed status of the AE is inherited from the device",
-      "order":10,
+      "order": 10,
       "type": "boolean"
     },
     "dicomTransferCapability": {
       "title": "Transfer Capabilities",
       "description": "Transfer capabilities provided by the application entity",
       "type": "array",
-      "order":11,
-      "titleKey":"{cn}",
+      "order": 11,
+      "titleKey": "{cn}",
       "items": {
         "$ref": "transferCapability.schema.json"
       }
@@ -135,7 +135,7 @@
       "title": "Network AE Extension",
       "description": "dcm4che proprietary Attributes of Network AE",
       "$ref": "dcmNetworkAE.schema.json",
-      "order":12
+      "order": 12
     }
   }
 }

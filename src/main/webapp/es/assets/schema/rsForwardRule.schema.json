@@ -39,7 +39,7 @@
       "title": "Operación RESTful",
       "description": "Nombre de la operación RESTful que se reenviará a otra instancia de archivo.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "CreatePatient",

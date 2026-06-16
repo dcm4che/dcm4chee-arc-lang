@@ -33,7 +33,7 @@
       "description": "UI アクション パラメータ",
       "format": "dcmAETitle",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -41,7 +41,7 @@
       "title": "承認された ユーザー 役割",
       "description": "この 構成を 使用 できる 役割を 定義し、すべての 役割で 使用できるように 'ユーザー' を 使用 します。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     }

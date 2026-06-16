@@ -18,7 +18,9 @@
       "title": "ID del exportador",
       "description": "ID del exportador.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmExporterID"
     },
     "dcmProperty": {
@@ -42,7 +44,9 @@
       "title": "Selector de Entidades",
       "description": "Especifica las claves de coincidencia utilizadas para seleccionar los Estudios previos a exportar. Formato: {key}={value}[&{key}={value}]..., with {key} = 'priors' | 'StudyAge' | {attributeID}. {value} en el formato '$'{attributeID} se sustituyen por el valor del atributo especificado del objeto recibido que desencadenó la exportación. Si no se especifica ningún selector de entidad, se exportarán todos los estudios previos del paciente. Por ejemplo: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => selecciona como máximo 2 Estudios previos no más antiguos de 5 años que contengan al menos una Serie CT.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmEntitySelector"
     },
     "dcmDuration": {

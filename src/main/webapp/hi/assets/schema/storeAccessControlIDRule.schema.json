@@ -17,7 +17,9 @@
       "title": "संचय प्रवेश निरीक्षण ID",
       "description": "सारे गुणों के नियम मिलने पे स्टडीज पे निरूपण किया गया प्रवेश निरीक्षण ID ।",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmEntity": {
       "title": "Entity",

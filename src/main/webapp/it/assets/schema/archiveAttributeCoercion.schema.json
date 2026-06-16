@@ -23,7 +23,7 @@
       "title": "Priorità delle regole",
       "description": "Se la condizione di più coercizioni di attributi di archivio (legacy) corrisponde per un'immagine ricevuta, viene applicata la coercizione con priorità più alta. Se ci sono più coercizioni corrispondenti con la stessa priorità, non è definito quale coercizione venga applicata.",
       "type": "integer",
-      "default" : 0,
+      "default": 0,
       "minimum": 0
     },
     "dcmDIMSE": {
@@ -124,16 +124,16 @@
       "title": "Merge Local MWL Worklist Label",
       "description": "Only consider MWL items with one of the specified values of its Worklist Label (0074,1202) in the Archive DB to coerce request attributes of received objects. If absent, the Archive DB is queried for matching MWL items with any Worklist Label (0074,1202).",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmMWLWorklistLabel"
     },
-    "dcmMergeLocalMWLWithStatus" : {
+    "dcmMergeLocalMWLWithStatus": {
       "title": "Merge Local MWL With Status",
       "description": "Only consider MWL items with one of the specified Scheduled Procedure Step Status codes. If absent, MWL items with any Scheduled Procedure Step Status are considered.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -190,7 +190,9 @@
       "title": "Nullify Attribute Tag",
       "description": "Tag DICOM dell'attributo da annullare come stringa esadecimale",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmMergeAttribute": {

@@ -16,7 +16,7 @@
       "title": "デフォルト 言語",
       "description": "UIの デフォルト 言語を 選択 する。",
       "type": "string",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmDefaultLanguage"
@@ -25,7 +25,7 @@
       "title": "役割",
       "description": "この 言語 プロファイルを 適用 する 必要が ある ユーザー名 役割。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },

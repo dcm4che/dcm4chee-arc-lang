@@ -11,7 +11,7 @@
       "title": "Almacenamiento de objetos ID",
       "description": "ID del sistema de almacenamiento en el que se almacenan los objetos compuestos DICOM recibidos. Se pueden configurar varios sistemas de almacenamiento.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -27,7 +27,7 @@
       "title": "ID de almacenamiento de metadatos",
       "description": "ID del almacenamiento en el que se almacenan los metadatos en formato JSON - adicionalmente al objeto compuesto DICOM completo. Pueden configurarse varios sistemas de almacenamiento. Si está ausente, los metadatos no se almacenan adicionalmente.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmStorageID"
@@ -53,19 +53,24 @@
     "dcmStoreAccessControlID": {
       "title": "Almacenar ID de Control de Acceso",
       "description": "ID de Control de Acceso asignado a los Estudios recibidos por este AE",
-      "items": { "type": "string" }
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "dcmAccessControlID": {
       "title": "ID de control de acceso",
       "description": "ID de control de acceso asignado a las solicitudes de consulta/recuperación recibidas por este AE.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmAcceptedMoveDestination": {
       "title": "Destino de Movimiento Aceptado",
       "description": "Destino de Movimiento Aceptado en peticiones C-MOVE; cualquiera si no existe.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -131,7 +136,7 @@
       "title": "Ocultar SPS con Estado por SCP MWL",
       "description": "Códigos de Estado de Paso de Procedimiento Programado de elementos MWL que no serán devueltos por el SCP MWL. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -149,7 +154,7 @@
       "title": "Ocultar SPS con Estado por MWL RS",
       "description": "Paso de Procedimiento Programado Códigos de estado de los elementos MWL que no serán devueltos por MWL RS. Sobrescribe el valor especificado a nivel de Dispositivo.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -185,7 +190,7 @@
       "title": "Codificar como número JSON",
       "description": "VR codificado como número JSON. Si no se indican, los valores IS, DS, SV y UV se codifican como cadenas JSON. Complementa los valores especificados a nivel de dispositivo.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "DS|Decimal String",
@@ -304,27 +309,33 @@
       "title": "QIDO Result Order By",
       "description": "Specifies order of matching results returned by QIDO-RS, UPS-RS and proprietary Search Services, if not specified by query parameter orderby. Format: {service}:[-]{attributeID}[,...], with {service} is patients, studies, series, instances, workitems, mwlitems or mpps. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmFwdMppsDestination": {
       "title": "Destino de reenvío de MPPS",
       "description": "Destino para reenviar MPPS N-CREATE RQ y N-SET RQ. Sobrescribe el valor especificado en Device level.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanDestination": {
       "title": "Destino IAN",
       "description": "Destino para enviar IAN N-CREATE RQ. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmIanTrigger": {
       "title": "IAN Trigger",
       "description": "Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send IAN on receiving studies",
@@ -505,7 +516,7 @@
       "title": "Rol de usuario aceptado",
       "description": "Roles de los usuarios de los que se aceptan solicitudes web; cualquiera si está ausente.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -544,7 +555,9 @@
       "title": "MWL Worklist Label Filter",
       "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (MWL Query SOP Class) or dicomWeb (Modality Worklist Search Transaction) service for matching Modality Worklist items (MWL), if no matching key for this attribute is specified in the request. If multiple values are specified, MWL with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, MWL with any value of Worklist Label (0074,1202) will match.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSWorklistLabel": {
       "title": "Etiqueta de la lista de trabajo de la UPS",
@@ -555,7 +568,9 @@
       "title": "UPS Worklist Label Filter",
       "description": "Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (UPS Query SOP Class) or dicomWeb (Worklist Search Transaction) service for matching Unified Procedure Steps (UPS), if no matching key for this attribute is specified in the request. If multiple values are specified, UPS with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, UPS with any value of Worklist Label (0074,1202) will match.",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmUPSEventSCU": {
       "title": "SCU de eventos UPS",
@@ -651,7 +666,9 @@
       "title": "Verificación de almacenamiento ID de almacenamiento",
       "description": "Sólo acepta la verificación de almacenamiento si la validación del almacenamiento del objeto en uno de los sistemas de almacenamiento especificados es correcta. No es efectivo con la Política de Verificación de Almacenamiento: *EXISTE_REGISTRO_BD. Sobrescribe los valores especificados en el nivel Dispositivo.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmStorageID"
     },
     "dcmStorageVerificationInitialDelay": {
@@ -680,7 +697,9 @@
       "title": "Actualización de estado de procedimiento HL7 Aplicación receptora",
       "description": "Aplicación|Nombre de la aplicación receptora para la actualización de estado de procedimiento HL7. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "hl7ApplicationName"
     },
     "hl7PSUAction": {
@@ -699,7 +718,7 @@
       "title": "HL7 Procedure Status Update Trigger",
       "description": "Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. Overwrites value specified on Device level.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "STUDY_RECEIVED|Send notification on receive of studies",
@@ -800,7 +819,9 @@
       "title": "Rechazar atributo del paciente en conflicto",
       "description": "Etiqueta IDCOM del atributo del paciente que debe coincidir en los objetos recibidos con el valor de los objetos recibidos anteriormente con el mismo ID de paciente para ser aceptado. Sobrescribe el valor especificado en el nivel de dispositivo.",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmStowRetiredTransferSyntax": {
@@ -867,8 +888,8 @@
       "title": "Regla de exportación",
       "description": "Reglas de exportación aplicadas a los objetos DICOM recibidos por este AE. Complementa las reglas de exportación especificadas en el nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportRule.schema.json"
       }
     },
@@ -876,8 +897,8 @@
       "title": "Regla de Prioridades de Exportación",
       "description": "Reglas de Prioridades de Exportación aplicadas a los objetos DICOM recibidos por este AE. Complementa las reglas de exportación especificadas en el nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "exportPriorsRule.schema.json"
       }
     },
@@ -885,8 +906,8 @@
       "title": "Regla de reenvío MPPS",
       "description": "Reglas de reenvío MPPS aplicadas a los MPPS recibidos por este AE. Complementa las reglas de transmisión MPPS especificadas en el nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "mppsForwardRule.schema.json"
       }
     },
@@ -894,8 +915,8 @@
       "title": "Regla de reenvío RESTful",
       "description": "Reglas de reenvío RESTful. Complementa las reglas de reenvío RESTful especificadas en el nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "rsForwardRule.schema.json"
       }
     },
@@ -903,8 +924,8 @@
       "title": "Regla de compresión",
       "description": "Reglas de compresión. Complementa las reglas de compresión especificadas en el nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveCompressionRule.schema.json"
       }
     },
@@ -912,8 +933,8 @@
       "title": "Coerción de atributos (Legado)",
       "description": "Coerción de atributos de DIMSE recibidos/enviados. Complementa las coerciones de atributos especificadas en el nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion.schema.json"
       }
     },
@@ -921,8 +942,8 @@
       "title": "Coerción de atributos (nuevo)",
       "description": "Coerción de atributos de DIMSE recibidos/enviados. Complementa las coerciones de atributos especificadas en el nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "archiveAttributeCoercion2.schema.json"
       }
     },
@@ -939,8 +960,8 @@
       "title": "Reglas de control de acceso al almacén",
       "description": "Reglas de control de acceso al almacén aplicadas a los estudios recibidos por este AE. Complementa las reglas de control de acceso al almacén especificadas en el nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{cn}",
-      "items" : {
+      "titleKey": "{cn}",
+      "items": {
         "$ref": "storeAccessControlIDRule.schema.json"
       }
     },
@@ -948,8 +969,8 @@
       "title": "Regla UPS en almacén",
       "description": "Reglas UPS en almacén aplicadas a los objetos DICOM recibidos por este AE. Complementa las reglas UPS on Store especificadas a nivel de dispositivo.",
       "type": "array",
-      "titleKey":"{dcmUPSOnStoreID}",
-      "items" : {
+      "titleKey": "{dcmUPSOnStoreID}",
+      "items": {
         "$ref": "upsOnStore.schema.json"
       }
     },

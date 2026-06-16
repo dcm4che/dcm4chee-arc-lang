@@ -16,16 +16,16 @@
       "title": "स्टेटिस्टिक मोडेलिटीज़",
       "description": "पूर्व चुने हुए मोडेलिटीज़ जो स्टेटिस्टिक पेज में दिखने चाहिए",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
     "dcmuiLanguageConfig":{
       "title": "Language Config",
       "description": "Config the languages of the UI",
-      "titleKey":"{dcmuiLanguageConfigName}",
+      "titleKey": "{dcmuiLanguageConfigName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiLanguage.schema.json"
       }
     },
@@ -33,7 +33,7 @@
       "title": "विजेट AET",
       "description": "उन AET को चुने जो AET विजेट में दिखने चाहिए, जिसमें कौनसे नए जोड़े गए AET को स्वीकृत आह्वान AET के रूप में इस्तमाल किया जाए, यह आप चुन सकते है ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmAETitle"
@@ -69,7 +69,7 @@
       "title": "डिफ़ॉल्ट विजेट AET",
       "description": "उन AET का चयन करें, जिन्हें विजेट AET पर पूर्व चुने जाने चाहिए ।",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmAETitle"
@@ -78,7 +78,7 @@
       "title": "MWL Worklist Label",
       "description": "Selectable values for MWL Worklist Label",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "use": [
@@ -102,7 +102,7 @@
       "title": "Institution Names",
       "description": "This will be used in combination with the previous field 'Institution Name Filter Type' to prefill the Dropdown of the Filter Institution Names in the Navigation Page",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -110,7 +110,7 @@
       "title": "Issuer of Patient ID Sequence",
       "description": "This will be used to show a dropdown in the Patient Identifier widget instead of the Issuer of Patient ID, Issuer of Patient ID Qualifiers Sequence - Universal Entity ID and Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type input fields. You can use the & character between the strings to mark the different fields like: 'issuerOfP&ipIDQuSeUniversalEntityID&ipIDQuSeUniversalEntityIDType'",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -118,7 +118,7 @@
       "title": "Issuer of Accession Number Sequence",
       "description": "This will be used to show a dropdown in the Accession Number widget instead of the \"Local Namespace Entity ID\", \"Universal Entity ID\" and \"Universal Entity ID Type\" input fields. You can use the ^ character between the strings to mark the different fields like: 'dummylNamespace^uEntityID^uEntityIDType'",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
@@ -126,97 +126,97 @@
       "title": "Issuer of Admission ID Sequence",
       "description": "This will be used to show a dropdown in the Admission ID widget instead of the \"Local Namespace Entity ID\",\"Universal Entity ID\" and \"Universal Entity ID Type\" input fields. You can use the & character between the strings to mark the different fields like: 'dummylNamespace&uEntityID&uEntityIDType'",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },
     "dcmuiAetConfig": {
       "title": "AET की सूची",
       "description": "UI में AET की सूची के शीर्ष पर जो AET दिखने चाहिए, परिभाषित करें ।",
-      "titleKey":"{dcmuiAetListName}",
+      "titleKey": "{dcmuiAetListName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiAet.schema.json"
       }
     },
     "dcmuiWebAppConfig": {
       "title": "वेब अनुप्रयोगों की सूची",
       "description": "UI में वेब अनुप्रयोगों की सूची के शीर्ष पर जो वेब अनुप्रयोग दिखने चाहिए, परिभाषित करें ।",
-      "titleKey":"{dcmuiWebAppListName}",
+      "titleKey": "{dcmuiWebAppListName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiWebApp.schema.json"
       }
     },
     "dcmuiPermission": {
       "title": "अनुमति",
       "description": "अनुमति ।",
-      "titleKey":"{dcmuiPermissionName}",
+      "titleKey": "{dcmuiPermissionName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiPermission.schema.json"
       }
     },
     "dcmuiFilterTemplateObject": {
       "title": "UI Filter Template",
       "description": "Defined filter template",
-      "titleKey":"{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
+      "titleKey": "{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiFilterTemplate.schema.json"
       }
     },
     "dcmuiDiffConfig": {
       "title": "स्टडी तुलना विन्यास",
       "description": "स्टडी तुलना विन्यास ।",
-      "titleKey":"{dcmuiDiffConfigName}",
+      "titleKey": "{dcmuiDiffConfigName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiDiffConfig.schema.json"
       }
     },
     "dcmuiTableConfig": {
       "title": "UI Table Configuration",
       "description": "Configuration of table",
-      "titleKey":"{dcmuiTableConfigName}",
+      "titleKey": "{dcmuiTableConfigName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiTable.schema.json"
       }
     },
     "dcmuiElasticsearchConfig": {
       "title": "UI इलास्टिकसर्च विन्यास",
       "description": "प्रो संस्करण के लिए इलास्टिकसर्च विन्यास ।",
-      "titleKey":"{dcmuiElasticsearchConfigName}",
+      "titleKey": "{dcmuiElasticsearchConfigName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiElasticsearch.schema.json"
       }
     },
     "dcmuiDeviceClusterObject": {
       "title": "UI क्लस्टर विन्यास",
       "description": "डिवाइसेस को क्लस्टर में समूहित करें ।",
-      "titleKey":"{dcmuiDeviceClusterName}",
+      "titleKey": "{dcmuiDeviceClusterName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiDeviceCluster.schema.json"
       }
     },
     "dcmuiDashboardConfig": {
       "title": "UI डैशबोर्ड विन्यास",
       "description": "UI डैशबोर्ड विन्यास ।",
-      "titleKey":"{dcmuiDashboardConfigName}",
+      "titleKey": "{dcmuiDashboardConfigName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiDashboard.schema.json"
       }
     },
     "dcmuiCreateDialogTemplate": {
       "title": "UI Create-Dialog Template",
       "description": "Template that will be used on the create-dialogs while crating MWL or Patient",
-      "titleKey":"{dcmuiTemplateName}",
+      "titleKey": "{dcmuiTemplateName}",
       "type": "array",
-      "items" : {
+      "items": {
         "$ref": "uiDialogTemplate.schema.json"
       }
     }

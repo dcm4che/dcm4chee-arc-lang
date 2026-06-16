@@ -23,7 +23,7 @@
       "title": "Prioridad de regla",
       "description": "Si la condición de varias coerciones de atributos de archivo (legado) coincide para una imagen recibida, se aplica la coerción de mayor prioridad. Si hay varias coerciones coincidentes con la misma prioridad, no se define qué coerción se aplica.",
       "type": "integer",
-      "default" : 0,
+      "default": 0,
       "minimum": 0
     },
     "dcmDIMSE": {
@@ -124,16 +124,16 @@
       "title": "Fusionar etiqueta de lista de trabajo MWL local",
       "description": "SOlo considerar elementos MWL con uno de los valores especificados de su etiqueta de lista de trabajo (0074,1202) en el Archive DB para coaccionar los atributos de solicitud de los objetos recibidos. Si está ausente, el Archive DB se consulta en busca de elementos MWL coincidentes con cualquier etiqueta de lista de trabajo (0074,1202).",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmMWLWorklistLabel"
     },
-    "dcmMergeLocalMWLWithStatus" : {
+    "dcmMergeLocalMWLWithStatus": {
       "title": "Merge Local MWL With Status",
       "description": "Only consider MWL items with one of the specified Scheduled Procedure Step Status codes. If absent, MWL items with any Scheduled Procedure Step Status are considered.",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string",
         "enum": [
           "SCHEDULED",
@@ -190,7 +190,9 @@
       "title": "Anular etiqueta de atributo",
       "description": "Etiqueta DICOM del atributo que debe anularse como cadena hexadecimal",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmMergeAttribute": {

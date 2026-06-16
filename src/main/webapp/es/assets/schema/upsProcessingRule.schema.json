@@ -35,13 +35,17 @@
       "title": "Propiedad de procesamiento",
       "description": "Propiedad dependiente del procesador UPS en formato <name>=<value>",
       "type": "array",
-      "items": { "type": "string" }
+      "items": {
+        "type": "string"
+      }
     },
     "dcmSchedule": {
       "title": "Horario de procesamiento",
       "description": "Retrasa el procesamiento a los periodos de tiempo especificados. Si no se especifica un Horario de Procesamiento, procesa los elementos de trabajo se procesan a la hora de inicio de la etapa de procedimiento programada (0040,4005). Formato: 'hour=[0-23] díaDeLaSemana=[0-6]' (0=domingo).",
       "type": "array",
-      "items": { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmSchedule"
     },
     "dcmMaxThreads": {

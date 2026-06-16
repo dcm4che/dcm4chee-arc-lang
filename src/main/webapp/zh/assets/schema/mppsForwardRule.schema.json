@@ -16,7 +16,9 @@
       "title": "MPPS Forward Destination",
       "description": "转发MPPS N-CREATE RQ and N-SET目标",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmAETitle"
     },
     "dcmProperty": {

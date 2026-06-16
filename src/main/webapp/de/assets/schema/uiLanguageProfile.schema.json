@@ -16,7 +16,7 @@
       "title": "Default language",
       "description": "Select default language for the UI",
       "type": "string",
-      "items" : {
+      "items": {
         "type": "string"
       },
       "format": "dcmDefaultLanguage"
@@ -25,7 +25,7 @@
       "title": "Role",
       "description": "Username role that this language profile should apply to",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },

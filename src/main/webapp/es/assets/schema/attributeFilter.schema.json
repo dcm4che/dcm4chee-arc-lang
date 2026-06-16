@@ -25,7 +25,9 @@
       "title": "Atributo Etiqueta",
       "description": "DICOM Etiqueta como cadena hexadecimal",
       "type": "array",
-      "items" : { "type": "string" },
+      "items": {
+        "type": "string"
+      },
       "format": "dcmTag"
     },
     "dcmCustomAttribute1": {

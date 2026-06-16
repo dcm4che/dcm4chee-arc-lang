@@ -31,7 +31,7 @@
       "title": "需要其他已完成的UPS",
       "description": "为引用相同请求的其他UPS指定查询参数(=Study Instance UID)，该参数必须已经为创建该UPS完成。",
       "type": "array",
-      "items" : {
+      "items": {
         "type": "string"
       }
     },

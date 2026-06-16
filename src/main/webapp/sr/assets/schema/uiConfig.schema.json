@@ -20,9 +20,9 @@
         "type": "string"
       }
     },
-    "dcmuiLanguageConfig": {
-      "title": "Konfiguracija jezika",
-      "description": "Konfiguracija jezika UI-ja",
+    "dcmuiLanguageConfig":{
+      "title": "Language Config",
+      "description": "Config the languages of the UI",
       "titleKey": "{dcmuiLanguageConfigName}",
       "type": "array",
       "items": {

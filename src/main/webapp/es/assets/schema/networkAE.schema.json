@@ -14,7 +14,7 @@
       "description": "Título único de AE para este AE de red.",
       "type": "string",
       "maxLength": 16,
-      "order":1,
+      "order": 1,
       "use": [
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmSpanningCFindSCPRetrieveAET[*]",
         "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackCMoveSCPDestination",
@@ -53,7 +53,7 @@
       "title": "Referencia de conexión de red",
       "description": "Punteros JSON a los objetos de conexión de red para este AE.",
       "type": "array",
-      "order":2,
+      "order": 2,
       "items": {
         "type": "string"
       }
@@ -63,26 +63,26 @@
       "description": "Verdadero si el AE de red puede iniciar asociaciones.",
       "type": "boolean",
       "default": true,
-      "order":3
+      "order": 3
     },
     "dicomAssociationAcceptor": {
       "title": "Aceptador de asociaciones",
       "description": "Verdadero si el AE de red puede aceptar asociaciones.",
       "type": "boolean",
       "default": true,
-      "order":4
+      "order": 4
     },
     "dicomDescription": {
       "title": "Descripción AE",
       "description": "Descripción de texto sin restricciones de la entidad de aplicación.",
       "type": "string",
-      "order":5
+      "order": 5
     },
     "dicomApplicationCluster": {
       "title": "Grupo de aplicaciones",
       "description": "nombres definidos localmente para un subconjunto de aplicaciones relacionadas.",
       "type": "array",
-      "order":6,
+      "order": 6,
       "items": {
         "type": "string"
       }
@@ -91,7 +91,7 @@
       "title": "Título preferido de la AE que llama",
       "description": "Título(s) preferido(s) de la AE que inicia la asociación.",
       "type": "array",
-      "order":7,
+      "order": 7,
       "items": {
         "type": "string"
       }
@@ -100,7 +100,7 @@
       "title": "Título preferido del AE llamante",
       "description": "Título(s) del AE preferido(s) para aceptar asociaciones.",
       "type": "array",
-      "order":8,
+      "order": 8,
       "items": {
         "type": "string"
       }
@@ -109,7 +109,7 @@
       "title": "Juego de caracteres admitido",
       "description": "Juego(s) de caracteres admitido(s) por el AE de red para los conjuntos de datos que recibe.",
       "type": "array",
-      "order":9,
+      "order": 9,
       "items": {
         "type": "string"
       },
@@ -118,15 +118,15 @@
     "dicomInstalled": {
       "title": "instalado",
       "description": "Verdadero si el AE está instalado en la red. Si no está presente, la información sobre el estado instalado del AE se hereda del dispositivo.",
-      "order":10,
+      "order": 10,
       "type": "boolean"
     },
     "dicomTransferCapability": {
       "title": "Capacidades de transferencia",
       "description": "Capacidades de transferencia proporcionadas por la entidad de aplicación.",
       "type": "array",
-      "order":11,
-      "titleKey":"{cn}",
+      "order": 11,
+      "titleKey": "{cn}",
       "items": {
         "$ref": "transferCapability.schema.json"
       }
@@ -135,7 +135,7 @@
       "title": "Extensión AE de red",
       "description": "dcm4che atributos propietarios de AE de red.",
       "$ref": "dcmNetworkAE.schema.json",
-      "order":12
+      "order": 12
     }
   }
 }

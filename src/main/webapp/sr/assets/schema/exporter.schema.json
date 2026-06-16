@@ -41,7 +41,7 @@
       "title": "Ime reda",
       "description": "Ime reda zadataka",
       "type": "string",
-      "format": "dcmQueueName"
+      "format":"dcmQueueName"
     },
     "dicomDescription": {
       "title": "Opis izvoznika",
