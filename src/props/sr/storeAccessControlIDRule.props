@@ -1,0 +1,6 @@
+storeAccessControlIDRule:Pravilo ID-a kontrole pristupa skladištu|Store Access Control ID pravilo
+storeAccessControlIDRule.cn:Ime|Proizvoljno/Smisleno ime Store Access Control ID pravila
+storeAccessControlIDRule.dcmStoreAccessControlID:ID kontrole pristupa skladištu|Access Control ID-ovi dodeljeni celim studijama ili pojedinačnim serijama čiji atributi ispunjavaju sve uslove.
+storeAccessControlIDRule.dcmEntity:Entitet|Ukazuje da li Access Control ID treba dodeliti celim studijama ili pojedinačnim serijama.
+storeAccessControlIDRule.dcmRulePriority:Prioritet pravila|Ako se stanje više Store Access Control ID pravila podudara za primljenu sliku, primenjuje se pravilo višeg prioriteta. Ako postoji više podudarnih pravila sa jednakim prioritetom, nedefinisano je koja pravila se primenjuju.
+storeAccessControlIDRule.dcmProperty:Uslovi|Uslovi u formatu {key}[!]={value}. Pogledajte <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">primenljivost, format i primere.</a>

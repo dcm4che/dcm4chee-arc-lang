@@ -1,0 +1,10 @@
+exportRule:Pravilo izvoza|Export pravilo
+exportRule.cn:Ime|Proizvoljno/Smisleno ime Export pravila
+exportRule.dcmEntity:Entitet izvoza|Entitet izvoza
+exportRule.dcmExporterID:ID izvoznika|ID izvoznika
+exportRule.dicomDeviceName:Ime uređaja izvoznika|Specificira uređaj na kojem će Export Task(ovi) biti planirani. Ako nije navedeno, Export Task(ovi) se planiraju na uređaju koji je primio objekte. Pažnja: navedeni uređaj mora (takođe) imati Exporters sa navedenim ID-ovima konfigurisane!
+exportRule.dcmExportPreviousEntity:Entitet izvoza prethodnih|Specificira da li prethodni entitet zamenjene instance treba takođe biti izvezen.
+exportRule.dcmProperty:Uslovi|Uslovi u formatu {key}[!]={value}. Pogledajte <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">primenljivost, format i primere.</a>
+exportRule.dcmSchedule:Vremenski uslovi|Primeni ovo pravilo samo u navedenim vremenskim opsezima.
+exportRule.dcmDuration:Kašnjenje izvoza|Odgodi izvoz entiteta radi akumuliranja više okidačkih događaja u jedan zadatak izvoza.
+exportRule.dcmExportReoccurredInstances:Izvezi ponovo pojavljene instance|Ukazuje da li entitet treba izvesti pri naknadnom pojavljivanju instanci

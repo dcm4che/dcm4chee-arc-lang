@@ -1,0 +1,24 @@
+dcmDevice:Ekstenzija uređaja|dcm4che vlasnički atributi uređaja
+dcmDevice.dcmRoleSelectionNegotiationLenient:Popustljiv pregovor izbora uloga|Ukazuje na onemogućavanje provere potrebne SCP/SCU role selection negocijacije pri slanju DIMSE-RQ-ova. Može biti prepisano konfigurisanim vrednostima za pojedine Archive Network AE.
+dcmDevice.dcmLimitOpenAssociations:Limit asocijacija|Maksimalan broj otvorenih DICOM konekcija; odbija Association zahteve ako se ograničenje prekorači; 0 = neograničeno.
+dcmDevice.dcmLimitAssociationsInitiatedBy:Limit asocijacija za AE|Maksimalan broj otvorenih DICOM konekcija pokrenutih od strane pojedinog Application Entity (AE) u formatu <ae-title>=<number>; odbija Association zahteve od tog AE-a ako je limit premašen.
+dcmDevice.dcmTrustStoreURL:URL Trust Store-a|URL Trust Store-a sa sertifikatima za DICOM čvorove koji su ovlašćeni da se povežu na ovaj čor; prepisuje dicomAuthorizedNodeCertificateReference
+dcmDevice.dcmTrustStoreType:Tip Trust Store-a|Key Store Type Trust Store-a navedenog u dcmTrustStoreURL.
+dcmDevice.dcmTrustStorePin:PIN Trust Store-a|Key Store Password Trust Store-a navedenog u Trust Store URL
+dcmDevice.dcmTrustStorePinProperty:Svojstvo PIN-a Trust Store-a|System property Key Store Password Trust Store-a navedenog u Trust Store URL
+dcmDevice.dcmKeyStoreURL:URL Key Store-a|URL Key Store-a sa privatnim ključem i sertifikatom korišćenim za identifikaciju ovog DICOM čvora u TLS konekcijama
+dcmDevice.dcmKeyStoreType:Tip Key Store-a|Key Store Type Key Store-a navedenog u Key Store URL.
+dcmDevice.dcmKeyStorePin:PIN Key Store-a|Key Store Password Key Store-a navedenog u Key Store URL
+dcmDevice.dcmKeyStorePinProperty:Svojstvo PIN-a Key Store-a|System property Key Store Password Key Store-a navedenog u Key Store URL
+dcmDevice.dcmKeyStoreKeyPin:PIN ključa Key Store-a|Key Password Key Store-a navedenog u Key Store URL
+dcmDevice.dcmKeyStoreKeyPinProperty:Svojstvo PIN-a ključa Key Store-a|System property Key Password Key Store-a navedenog u Key Store URL
+dcmDevice.dcmTimeZoneOfDevice:Vremenska zona uređaja|Time Zone ID uređaja; odgovara Java TimeZone ID-u
+dcmDevice.dcmWebApp:Veb aplikacije|Web aplikacije koje pruža uređaj
+dcmDevice.dcmKeycloakClient:Keycloak klijenti|Keycloak klijenti koje pruža uređaj
+dcmDevice.hl7Application:HL7 aplikacije|HL7 aplikacije koje pruža uređaj
+dcmDevice.dcmImageWriter:Image Writer-i|Specificira Java Image IO Image Writers sa Write Parameters korišćenim za kompresiju DICOM slika
+dcmDevice.dcmImageReader:Image Reader-i|Zadaje Java Image IO Image Reader-e korišćene za dekompresiju kompresovanih DICOM slika
+dcmDevice.dcmAuditLogger:Logger revizije|Informacije povezane sa Logger-om revizije
+dcmDevice.dcmAuditRecordRepository:Repozitorijum zapisa revizije|Informacije povezane sa repozitorijumom zapisa revizije
+dcmDevice.dcmArchiveDevice:Arhivski uređaj|Informacije povezane sa DICOM arhivskim uređajem
+dcmDevice.dcmuiConfig:UI konfiguracija|UI konfiguracija

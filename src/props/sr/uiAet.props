@@ -1,0 +1,6 @@
+uiAet:Padajuća lista AET-ova|Padajuća lista AET
+uiAet.dcmuiAetListName:Ime liste|Definišite ime za ovu konfiguraciju
+uiAet.dcmuiAetListDescription:Opis|Opis AET liste
+uiAet.dcmuiMode:Režim liste AET-ova|Definiši u kom modu treba da bude ova konfiguracija dostupna u 'internal' ( archive sopstveni AET-ovi, na nekim mestima takođe zvani 'Home AET' ili 'Local AET' ) ili 'external' ( ili na nekim mestima takođe zvani 'Remote AET' ) aet padajućoj listi, da bi bila dostupna za oba nemojte selektovati nijedan
+uiAet.dcmuiAets:AET-ovi|Parametar UI akcije
+uiAet.dcmAcceptedUserRole:Prihvaćena korisnička uloga|Definiši uloge za koje ova konfiguracija treba da bude dostupna, koristi 'user' da bude dostupna za sve uloge

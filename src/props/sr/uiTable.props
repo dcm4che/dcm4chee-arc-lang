@@ -1,0 +1,7 @@
+uiTable:Konfiguracija UI tabele|Konfiguracija Study tabele za pro verziju
+uiTable.dcmuiTableConfigName:Ime konfiguracije|Ime UI Table konfiguracije
+uiTable.dcmuiTableConfigUsername:Korisničko ime|Korisničko ime kojem ovaj skup treba biti dostupan
+uiTable.dcmuiTableConfigRoles:Uloga|Korisnička uloga koja može koristiti ovaj skup (Ako postavite korisničko ime, uloga će biti ignorisana)
+uiTable.dcmuiTableID:ID tabele|ID tabele u UI-ju za koju konfiguracija treba da bude na snazi
+uiTable.dcmuiTableConfigIsDefault:Podrazumevano|Postavi ovaj Column-Set kao podrazumevani. (Uverite se da je samo jedan od Set - siblings child postavljen kao podrazumevani).
+uiTable.dcmuiTableColumnConfigObjects:Kolone tabele|Definiši kolone tabele

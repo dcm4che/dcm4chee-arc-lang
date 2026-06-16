@@ -1,0 +1,5 @@
+uiLanguageProfile:Konfiguracija UI Elasticsearch URL-a|Elasticsearch URL
+uiLanguageProfile.dcmuiLanguageProfileName:Ime|Ime jezičkog profila
+uiLanguageProfile.dcmDefaultLanguage:Podrazumevani jezik|Izaberi podrazumevani jezik za UI
+uiLanguageProfile.dcmuiLanguageProfileRole:Uloga|Korisnička uloga na koju se ovaj jezički profil primenjuje
+uiLanguageProfile.dcmuiLanguageProfileUsername:Korisničko ime|Korisničko ime za jezički profil

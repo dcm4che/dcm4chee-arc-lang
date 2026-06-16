@@ -1,0 +1,9 @@
+rejectionNote:Napomena o odbacivanju|Zadaje ponašanje pri sačuvavanju napomene o odbacivanju
+rejectionNote.dcmRejectionNoteLabel:Oznaka napomene o odbacivanju|Oznaka napomene o odbacivanju
+rejectionNote.dcmRejectionNoteType:Tip napomene o odbacivanju|Tip Rejection Note-a.
+rejectionNote.dcmRejectionNoteCode:Kôd napomene o odbacivanju|Specificira Document Title Rejection Note-a u formatu (CV, CSD, 'CM')
+rejectionNote.dcmAcceptPreviousRejectedInstance:Prihvati prethodno odbijenu instancu|Specificira ponašanje pri naknadnom pojavljivanju instanci odbijenih pojedinim Rejection Note-om.
+rejectionNote.dcmOverwritePreviousRejection:Prepiši prethodno odbacivanje|Specificira Document Title prethodnog Rejection Note-a u formatu (CV, CSD, 'CM') koji može biti prepisan tim Rejection Note-om
+rejectionNote.dcmAcceptRejectionBeforeStorage:Prihvati odbacivanje pre skladištenja|Vremenski interval u ISO-8601 formatu trajanja PnDTnHnMn.nS nakon prijema Rejection Note-a, u kojem se primljeni objekti referencirani ovim Rejection Note-om tretiraju kao odbijeni. Referencirani objekti primljeni nakon toga se tretiraju kao naknadno pojavljivanje već odbijene instance. Ako nije navedeno, Rejection Notes koji referišu još ne primljene objekte neće biti prihvaćeni.
+rejectionNote.dcmDeleteRejectedInstanceDelay:Kašnjenje brisanja odbijene instance|Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS nakon kojeg se instance odbijene pojedinim Rejection Note-om brišu. Beskonačno ako nije navedeno.
+rejectionNote.dcmDeleteRejectionNoteDelay:Kašnjenje brisanja napomene o odbacivanju|Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS nakon kojeg se pojedine Rejection Notes brišu. Beskonačno ako nije navedeno.

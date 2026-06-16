@@ -1,0 +1,10 @@
+uiDashboard:Konfiguracija UI kontrolne table|Konfiguracija UI kontrolne table
+uiDashboard.dcmuiDashboardConfigName:Ime UI konfiguracije kontrolne table|Ime UI Dashboard konfiguracije
+uiDashboard.dcmuiShowStarBlock:Prikaži Star blok|Prikaži Star Block - zadaci bez definisanog deviceName
+uiDashboard.dcmuiQueueName:Redovi|Imena redova za UI Dashboard konfiguraciju korišćenu u bloku redova
+uiDashboard.dcmuiExportName:ID-ovi izvoznika|Exporter ID-ovi za UI Dashboard konfiguraciju korišćenu u bloku reda i poređenja
+uiDashboard.dicomuiDeviceName:Imena uređaja|Imena uređaja za UI Dashboard konfiguraciju korišćenu za generisanje Retrieve i Export bloka
+uiDashboard.dicomuiIgnoreParams:Parametri ignorisanja događaja revizije|Postavi Elasticsearch parametre koji treba da budu ignorisani u Audit Events. Npr. Source.UserID=TESTVALUE
+uiDashboard.dcmuiCountWebApp:Broj veb aplikacija|Izabrana Web App, koristiće se za dobijanje broja studija na kontrolnoj tabli
+uiDashboard.dcmuiCompareSideObjects:Strane upoređivanja|Strane poređenja
+uiDashboard.dicomuiDockerContainer:Mrežni Docker uređaji|Imena mrežnih uređaja u docker kontejnerima korišćenim na hardware stranici.

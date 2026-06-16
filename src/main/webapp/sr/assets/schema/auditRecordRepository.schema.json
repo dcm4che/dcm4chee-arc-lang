@@ -1,0 +1,24 @@
+{
+  "title": "Repozitorijum zapisa revizije",
+  "description": "Informacije povezane sa repozitorijumom zapisa revizije",
+  "type": "object",
+  "required": [
+    "dicomNetworkConnectionReference"
+  ],
+  "properties": {
+    "dicomNetworkConnectionReference": {
+      "title": "Referenca mrežne konekcije",
+      "description": "JSON Pointers na Network Connection objekte ovog Audit Record Repository-ja",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dicomDeviceName"
+    },
+    "dicomInstalled": {
+      "title": "instaliran",
+      "description": "Tačno ako je ARR instaliran na mreži. Ako nije navedeno, informacija o statusu instalacije ARR se nasleđuje od uređaja",
+      "type": "boolean"
+    }
+  }
+}

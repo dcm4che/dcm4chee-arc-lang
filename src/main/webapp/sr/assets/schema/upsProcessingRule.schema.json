@@ -1,0 +1,170 @@
+{
+  "title": "Pravilo UPS obrade",
+  "description": "Obradi podudarne Workitem-e u objedinjenoj Worklist",
+  "type": "object",
+  "required": [
+    "dcmUPSProcessingRuleID",
+    "dcmUPSInputReadinessState",
+    "dcmURI",
+    "dicomAETitle",
+    "dcmUPSPerformedWorkitemCode",
+    "dcmUPSPerformedStationNameCode",
+    "dcmRetryDelay",
+    "dcmRetryDelayMultiplier",
+    "dcmMaxRetries",
+    "dcmMaxThreads"
+  ],
+  "properties": {
+    "dcmUPSProcessingRuleID": {
+      "title": "ID pravila UPS obrade",
+      "description": "ID UPS Processing pravila",
+      "type": "string"
+    },
+    "dicomAETitle": {
+      "title": "Naslov aplikacionog entiteta (AE)",
+      "description": "Naslov aplikacionog entiteta (AE)",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmURI": {
+      "title": "URI UPS procesora",
+      "description": "Identifikuje UPS Processor za obradu podudarnih Workitem-a",
+      "type": "string"
+    },
+    "dcmProperty": {
+      "title": "Svojstvo obrade",
+      "description": "UPS Processor zavisno svojstvo u formatu <name>=<value>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmSchedule": {
+      "title": "Zakazana obrada",
+      "description": "Odgodi obradu u navedene vremenske periode. Ako nije naveden Processing Schedule, obradi Workitem-e u njihovom Scheduled Procedure Step Start Date Time (0040,4005). Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSchedule"
+    },
+    "dcmMaxThreads": {
+      "title": "Maksimalan broj niti",
+      "description": "Maksimalan broj thread-ova korišćenih za obradu poklapajućih Workitems.",
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "dcmUPSInputReadinessState": {
+      "title": "Stanje spremnosti unosa",
+      "description": "Obradi Workitem-e sa podudarnim Input Readiness State (0040,4041).",
+      "type": "string",
+      "default": "READY",
+      "enum": [
+        "INCOMPLETE",
+        "UNAVAILABLE",
+        "READY"
+      ]
+    },
+    "dcmUPSPriority": {
+      "title": "Prioritet",
+      "description": "Obradi Workitem-e sa podudarnim Scheduled Procedure Step Priority (0074,1200). Ako nije navedeno, obradi Workitem-e bilo kog prioriteta, ali uređi obradu prema njihovom prioritetu.",
+      "type": "string",
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "dcmUPSLabel": {
+      "title": "Oznaka koraka procedure",
+      "description": "Obradi Workitem-e sa podudarnim Procedure Step Label (0074,1204). Ako nije navedeno, obradi Workitem-e sa bilo kojim Procedure Step Label-om.",
+      "type": "string"
+    },
+    "dcmUPSWorklistLabel": {
+      "title": "Oznaka Worklist-e",
+      "description": "Obradi Workitem-e sa podudarnim Worklist Label (0074,1202). Ako nije navedeno, obradi Workitem-e sa bilo kojim Worklist Label-om.",
+      "type": "string"
+    },
+    "dcmUPSScheduledWorkitemCode": {
+      "title": "Kôd zakazanog Workitem-a",
+      "description": "Obradi Workitem-e sa podudarnim kodom u Scheduled Workitem Code Sequence (0040,4018) u formatu (CV, CSD, \"CM\"). Ako nije navedeno, obradi Workitem-e sa bilo kojim Scheduled Workitem Code-om.",
+      "type": "string"
+    },
+    "dcmUPSScheduledStationNameCode": {
+      "title": "Kôd imena zakazane stanice",
+      "description": "Obradi Workitem-e sa podudarnim kodom u Scheduled Station Name Code Sequence (0040,4025) u formatu (CV, CSD, \"CM\"). Ako nije navedeno, obradi Workitem-e sa bilo kojim Scheduled Station Name Code-om.",
+      "type": "string"
+    },
+    "dcmUPSScheduledStationClassCode": {
+      "title": "Kôd klase zakazane stanice",
+      "description": "Obradi Workitem-e sa podudarnim kodom u Scheduled Station Name Class Sequence (0040,4026) u formatu (CV, CSD, \"CM\"). Ako nije navedeno, obradi Workitem-e sa bilo kojim Scheduled Station Class Code-om.",
+      "type": "string"
+    },
+    "dcmUPSScheduledStationLocationCode": {
+      "title": "Kôd geografske lokacije zakazane stanice",
+      "description": "Obradi Workitem-e sa podudarnim kodom u Scheduled Station Geographic Location Class Sequence (0040,4027) u formatu (CV, CSD, \"CM\"). Ako nije navedeno, obradi Workitem-e sa bilo kojim Scheduled Station Geographic Location Code-om.",
+      "type": "string"
+    },
+    "dcmUPSPerformedWorkitemCode": {
+      "title": "Kôd izvršenog Workitem-a",
+      "description": "Stavka Performed Workitem Code Sequence (0040,4019) u obrađenom UPS-u u formatu (CV, CSD, \"CM\").",
+      "type": "string",
+      "default": "(NO_WORKITEM_CODE, 99DCM4CHEE, \"Workitem Code\")"
+    },
+    "dcmUPSPerformedStationNameCode": {
+      "title": "Kôd imena izvršne stanice",
+      "description": "Stavka Performed Station Name Code Sequence (0040,4028) u obrađenom UPS-u u formatu (CV, CSD, \"CM\").",
+      "type": "string",
+      "default": "(NO_STATION_NAME, 99DCM4CHEE, \"No Station Name specified\")"
+    },
+    "dcmUPSIgnoreDiscontinuationReasonCode": {
+      "title": "Ignoriši kôd razloga prekida",
+      "description": "Specificira Discontinuation Reason Code u formatu (CV, CSD, \"CM\") za ignorisanje i promenu UPS State u COMPLETED - umesto CANCELED.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSRescheduleDiscontinuationReasonCode": {
+      "title": "Kôd razloga prekida preraspodele",
+      "description": "Specificira Discontinuation Reason Code u formatu (CV, CSD, \"CM\") za preplaniranje otkazanog UPS-a. Ako nije navedeno, UPS otkazan sa bilo kojim Discontinuation Reason Code-om će biti preplaniran prema navedenom Maximum Number of Rescheduling.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSTemplateID": {
+      "title": "Kreiraj UPS pri otkazivanju",
+      "description": "Specificira UPS Template Workitem Instance UID za kreiranje UPS-a ako obrada nije uspela i ponovni pokušaj više nije planiran. Ako nije navedeno, neće biti kreiran UPS pri neuspesima.",
+      "type": "string"
+    },
+    "dcmMaxRetries": {
+      "title": "Maksimalan broj preraspodela",
+      "description": "Maksimalan broj puta koliko se Workitem čija obrada nije uspela ponovo zakazuje.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmRetryDelay": {
+      "title": "Kašnjenje preraspodele",
+      "description": "Kašnjenje preplaniranja Workitem-a čija obrada nije uspela u ISO-8601 formatu trajanja PnDTnHnMn.nS.",
+      "type": "string",
+      "default": "PT1M",
+      "format": "dcmDuration"
+    },
+    "dcmMaxRetryDelay": {
+      "title": "Maksimalno kašnjenje preraspodele",
+      "description": "Maksimalno kašnjenje preplaniranja Workitem-a čija obrada nije uspela u ISO-8601 formatu trajanja PnDTnHnMn.nS. Beskonačno ako nije navedeno.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmRetryDelayMultiplier": {
+      "title": "Množilac kašnjenja preraspodele",
+      "description": "Multiplikator u % koji će se primeniti na vrhu Reschedule Delay sa Maximum Reschedule Delay koji se uzima u obzir.",
+      "type": "integer",
+      "minimum": 100,
+      "default": 100
+    }
+  }
+}

@@ -1,0 +1,17 @@
+exporter:Deskriptor izvoznika|Deskriptor izvoznika
+exporter.dcmExporterID:ID izvoznika|ID izvoznika
+exporter.dcmURI:URI izvoznika|RFC2079: Uniform Resource Identifier. Pogledajte različite <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties" target="_blank">Exporter URI</a> koji se mogu konfigurisati na osnovu tipa izvoznika.
+exporter.dcmQueueName:Ime reda|Ime reda zadataka
+exporter.dicomDescription:Opis izvoznika|Nesputani tekstualni opis izvoznika
+exporter.dicomAETitle:Naslov arhivskog aplikacionog entiteta (AE)|Archive Application Entity (AE) naslov
+exporter.dcmExportAsSourceAE:Izvezi kao izvorni aplikacioni entitet (AE)|Maskiraj Archive Application Entity (AE) title title-om Application Entity (AE) od kojeg je serija primljena pri uspostavljanju Association-a sa Destination Application Entity (AE).
+exporter.dcmDeleteStudyFromStorageID:Obriši studiju iz ID-a skladišta|ID Storage System sa kojeg će objekti izveženog Study biti obrisani. Efikasno samo za Export Tasks na nivou Study.
+exporter.dcmRejectForDataRetentionExpiry:Entitet odbacivanja za istek zadržavanja podataka|Odbij entitet za Data Retention Expiry nakon izvoza pri završetku Export Task-a.
+exporter.dcmCheckIfAlreadyExistsOnDestination:Proveri da li već postoji na odredištu|Ukazuje na izvoz objekta samo ako već ne postoji objekat sa takvim Storage Path na odredišnom skladištu.
+exporter.dcmStgCmtSCP:AE naslov Storage Commitment SCP-a|AE Title eksternog Storage Commitment SCP-a korišćenog za verifikaciju izvoza u drugu arhivu.
+exporter.dcmIanDestination:Odredište IAN-a|Odredište za slanje IAN N-CREATE RQ
+exporter.dcmRetrieveAET:AE naslov preuzimanja|AE Title povezan sa Network AE
+exporter.dcmRetrieveLocationUID:UID lokacije preuzimanja|Retrieve Location UID.
+exporter.dcmInstanceAvailability:Dostupnost instance|Dostupnost instance.
+exporter.dcmSchedule:Zakazani izvoz|Odgodi izvoz u navedene vremenske periode. Ako nije naveden Export Schedule, stavi zadatak izvoza u red za obradu odmah. Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
+exporter.dcmProperty:Svojstvo izvoznika|Navedite svojstva izvoznika u formatu {name}={value}. Pogledajte različite <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Exporter-Properties" target="_blank">Exporter Properties</a> koje se mogu konfigurisati na osnovu tipa izvoznika.

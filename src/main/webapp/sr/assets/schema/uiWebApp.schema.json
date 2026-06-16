@@ -1,0 +1,57 @@
+{
+  "title": "Padajuća lista veb aplikacija",
+  "description": "Padajuća lista Web App",
+  "type": "object",
+  "required": [
+    "dcmuiWebAppListName",
+    "dcmuiWebApps",
+    "dcmuiMode"
+  ],
+  "properties": {
+    "dcmuiWebAppListName": {
+      "title": "Ime liste",
+      "description": "Definišite ime za ovu konfiguraciju",
+      "type": "string"
+    },
+    "dcmuiWebAppListDescription": {
+      "title": "Opis",
+      "description": "Opis liste Web aplikacija",
+      "type": "string"
+    },
+    "dcmuiMode": {
+      "title": "Režim liste",
+      "description": "Imate dve mogućnosti kako da prikažete definisanu listu: 1.) Na vrhu iznad ostatka liste 'separated' sa linijom, 2.) Prikaži samo ovde definisane ( 'exclusive' ).",
+      "type": "string",
+      "default": "separated",
+      "enum": [
+        "separated",
+        "exclusive"
+      ]
+    },
+    "dcmuiWebApps": {
+      "title": "Veb aplikacije",
+      "description": "Veb aplikacija",
+      "format": "webApp",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAcceptedUserRole": {
+      "title": "Prihvaćena korisnička uloga",
+      "description": "Definiši uloge za koje ova konfiguracija treba da bude dostupna, koristi 'user' da bude dostupna za sve uloge ( Treba da definišete ili korisničko ime ( sledeći atribut ) ili korisničku ulogu ( ovaj atribut ))",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAcceptedUserName": {
+      "title": "Prihvaćeno korisničko ime",
+      "description": "Definiši korisničko ime za koje ova konfiguracija treba da bude dostupna ( Treba da definišete ili korisničko ime ( ovaj atribut ) ili korisničku ulogu ( prethodni atribut ))",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

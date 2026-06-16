@@ -1,0 +1,27 @@
+uiConfig:UI konfiguracija|UI konfiguracija
+uiConfig.dcmuiConfigName:Ime UI konfiguracije|Ime UI konfiguracije
+uiConfig.dcmuiModalities:Statistički modaliteti|Preselektovani modaliteti koji treba da se prikažu na stranici statistike
+uiConfig.dcmuiLanguageConfig:Konfiguracija jezika|Konfiguracija jezika UI-ja
+uiConfig.dcmuiWidgetAets:Widget AET-ovi|Selektuj AET-ove koje želiš da vidite u AET widget-u, gde možete selektovati u kojima od njih novododati AET treba da bude kao `Accepted Calling AE Title`
+uiConfig.dcmuiHideOtherPatientIDs:Sakrij ostale ID-ove pacijenata|Ukazuje da li drugi identifikatori pacijenta prisutni u Other Patient IDs Sequence (0010,1002) treba da budu skriveni. Podrazumevano, svi identifikatori pacijenta su prikazani razdvojeni zarezom.
+uiConfig.dcmuiDateTimeFormat:Format datuma i vremena|Ovde možete formatirati datum i vreme u UI-ju koristeći 'yyyy' za godinu, 'MM' za mesec, 'dd' za dan, 'HH' za sat, 'mm' za minute, 'ss' za sekunde i 'SSS' za milisekunde. Za formatiranje datuma, vremena i datuma-vremena koristite `DATE`, `TIME` i `DATE-TIME` na primer ovako: `DATE=yyyy-MM-dd, TIME=HH:mm, DATE-TIME=yyyy-MM-dd HH:mm`
+uiConfig.dcmuiHideClock:Sakrij sat|Postavi na true ako želiš da sakriješ sat u UI-ju
+uiConfig.dcmuiPageTitle:Naslov stranice|Ako je postavljeno, koristiće se kao naslov UI stranice (tekst prikazan u tabu pregledača)
+uiConfig.dcmuiPersonNameFormat:Format imena osobe|Ovde možete formatirati ime osobe u UI-ju koristeći:{FAMILY-NAME}, {GIVEN-NAME}, {MIDDLE-NAME}, {NAME-PREFIX}, {NAME-SUFFIX} za Alphabetic, ili dodavanjem 'I_' za Ideographic i 'P_' za Phonetic verziju kao {P_FAMILY-NAME}, {I_NAME-SUFFIX}
+uiConfig.dcmuiDefaultWidgetAets:Podrazumevani Widget AET-ovi|Izaberi AET-ove koji treba da budu preselektovani na Widget AET-ovima
+uiConfig.dcmuiMWLWorklistLabel:MWL oznaka Worklist-e|Moguće vrednosti za MWL Worklist Label
+uiConfig.dcmuiInstitutionNameFilterType:Tip filtera imena institucije|Ovo će definisati kako filter Institution Name korišćen na Navigation stranici treba da bude prikazan i da li treba da bude pre-popunjena padajuća lista i odakle da se dobave ti podaci
+uiConfig.dcmuiInstitutionName:Imena institucija|Ovo će se koristiti u kombinaciji sa prethodnim poljem 'Institution Name Filter Type' za pre-popunjavanje padajuće liste Filter Institution Names na Navigation stranici
+uiConfig.dcmuiIssuerOfPatientIDSequence:Sekvenca izdavaoca ID-a pacijenta|Ovo će se koristiti za prikaz padajućeg menija u Patient Identifier widgetu umesto Issuer of Patient ID, Issuer of Patient ID Qualifiers Sequence - Universal Entity ID i Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type input polja. Možete koristiti & znak između stringova za označavanje različitih polja kao što je: 'issuerOfP&ipIDQuSeUniversalEntityID&ipIDQuSeUniversalEntityIDType'
+uiConfig.dcmuiIssuerOfAccessionNumberSequence:Sekvenca izdavaoca pristupnog broja|Ovo će se koristiti za prikaz padajućeg menija u Accession Number widgetu umesto "Local Namespace Entity ID", "Universal Entity ID" i "Universal Entity ID Type" input polja. Možete koristiti ^ znak između stringova za označavanje različitih polja kao što je: 'dummylNamespace^uEntityID^uEntityIDType'
+uiConfig.dcmuiIssuerOfAdmissionIDSequence:Issuer of Admission ID Sequence|Ovo će se koristiti za prikaz padajućeg menija u Admission ID widgetu umesto "Local Namespace Entity ID", "Universal Entity ID" i "Universal Entity ID Type" input polja. Možete koristiti & znak između stringova za označavanje različitih polja kao što je: 'dummylNamespace&uEntityID&uEntityIDType'
+uiConfig.dcmuiAetConfig:Padajuća lista AET-ova|Definiši koje AET-ove treba videti u padajućim listama u UI-ju
+uiConfig.dcmuiWebAppConfig:Padajuća lista veb aplikacija|Definiši koje WebApps treba da budu vidljive na vrhu padajuće liste u UI-ju
+uiConfig.dcmuiPermission:Dozvola|Dozvola
+uiConfig.dcmuiFilterTemplateObject:Šablon UI filtera|Definisani šablon filtera
+uiConfig.dcmuiDiffConfig:Konfiguracija Study Diff-a|Study Diff konfiguracija
+uiConfig.dcmuiTableConfig:Konfiguracija UI tabele|Konfiguracija tabele
+uiConfig.dcmuiElasticsearchConfig:Konfiguracija UI Elasticsearch-a|Elasticsearch konfiguracija za pro verziju
+uiConfig.dcmuiDeviceClusterObject:Konfiguracija UI klastera|Grupiši uređaje u klastere
+uiConfig.dcmuiDashboardConfig:Konfiguracija UI kontrolne table|Konfiguracija UI kontrolne table
+uiConfig.dcmuiCreateDialogTemplate:Šablon UI dijaloga|Konfiguracija UI Create Dialog šablona

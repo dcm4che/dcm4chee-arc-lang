@@ -1,0 +1,306 @@
+{
+  "title": "Arhivska HL7 aplikacija",
+  "description": "Informacije povezane sa DICOM arhivskom HL7 aplikacijom",
+  "type": "object",
+  "required": [
+    "dicomAETitle"
+  ],
+  "properties": {
+    "dicomAETitle": {
+      "title": "AE naslov",
+      "description": "Archive AE Title povezan sa ovom HL7 aplikacijom.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmRecordAttributeModification": {
+      "title": "Beleži izmene atributa",
+      "description": "Ukazuje da li se izmene atributa uskladištenih objekata ove HL7 aplikacije zapisuju u stavkama Original Attributes Sequence. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmMWLWorklistLabel": {
+      "title": "MWL oznaka Worklist-e",
+      "description": "Vrednost Worklist Label (0074,1202) kreiranih MWL stavki pri prijemu HL7 Order poruka. Ako nije navedeno, kreirane MWL stavke nisu vezane za pojedinačni MWL Worklist i pružaju ih svi Archive AE sa MWL SCP Transfer Capability.",
+      "type": "string",
+      "format": "dcmMWLWorklistLabel"
+    },
+    "dcmMWLAccessionNumberGenerator": {
+      "title": "Generator pristupnog broja MWL",
+      "description": "Identifikuje ID Generator za dopunu nedostajućih Accession Numbers Scheduled Procedures Steps kreiranih pri prijemu HL7 Order poruka. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmIDGenerator"
+    },
+    "dcmMWLRequestedProcedureIDGenerator": {
+      "title": "Generator ID-a traženog postupka MWL",
+      "description": "Identifikuje ID Generator za dopunu nedostajućih Requested Procedure IDs Scheduled Procedures Steps kreiranih pri prijemu HL7 Order poruka. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmIDGenerator"
+    },
+    "dcmMWLScheduledProcedureStepIDGenerator": {
+      "title": "Generator ID-a zakazanog koraka procedure MWL",
+      "description": "Identifikuje ID Generator za dopunu nedostajućih Scheduled Procedure Step IDs Scheduled Procedures Steps kreiranih pri prijemu HL7 Order poruka. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmIDGenerator"
+    },
+    "dcmAuditHL7MsgLimit": {
+      "title": "Limit HL7 poruka revizije",
+      "description": "Ograniči dužinu HL7 poruka uključenih u emitovane Audit Records. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "integer"
+    },
+    "hl7ORUAction": {
+      "title": "HL7 ORU akcija",
+      "description": "Specificira akciju pri prijemu HL7 ORU^R01 poruke. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "IMPORT_REPORT|Transcode received HL7 ORU^R01 to DICOM SR or PDF or CDA",
+          "MWL_COMPLETED|Set Status of matching MWL items to COMPLETED"
+        ]
+      }
+    },
+    "hl7PatientUpdateTemplateURI": {
+      "title": "URI šablona HL7 ažuriranja pacijenta",
+      "description": "Specificira URI style sheet-a koji koristi HL7v2 Patient Update usluga. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "hl7ImportReportTemplateURI": {
+      "title": "URI šablona HL7 uvoza izveštaja",
+      "description": "Specificira URI style sheet-a za transkodiranje primljenih HL7 ORU^R01 u DICOM SR. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "hl7ImportReportTemplateParam": {
+      "title": "Parametar šablona HL7 uvoza izveštaja",
+      "description": "XSLT parametri prosleđeni style sheet-u navedenom u HL7 Import Report Template URI. Format: {name}={value}. Npr.: 'langCodeValue=et', 'langCodingSchemeDesignator=RFC5646', 'langCodeMeaning=Estonian'. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hl7ScheduleProcedureTemplateURI": {
+      "title": "URI šablona HL7 zakazivanja postupka",
+      "description": "Specificira URI style sheet-a za transkodiranje primljenih HL7 ORM^O01, OMI^O23, OMG^O19 u DICOM MWL stavke. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "hl7ScheduledProtocolCodeInOrder": {
+      "title": "HL7 kôd protokola zakazivanja u nalogu",
+      "description": "Specificira lokaciju Scheduled Protocol Code u primljenoj HL7 Order poruci. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "OBR_4_1|HL7 Schedule Protocol Code in Order in OBR.4.1 to OBR.4.3",
+        "OBR_4_4|HL7 Schedule Protocol Code in Order in OBR.4.4 to OBR.4.6"
+      ]
+    },
+    "hl7ScheduledStationAETInOrder": {
+      "title": "HL7 AET stanice zakazivanja u nalogu",
+      "description": "Specificira lokaciju Scheduled Station AE Title u primljenoj HL7 Order poruci. Ne bi trebalo konfigurisati za HL7 v2.5.1 OMI^O23 sa IPC segmentom. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "ORC_18|HL7 Schedule Station AET in Order in ORC.18"
+      ]
+    },
+    "hl7LogFilePattern": {
+      "title": "Obrazac HL7 log fajla",
+      "description": "Putanja do HL7 poruka koje će biti snimljene tačno onako kako su primljene. Ako nije navedeno, nema logovanja. Prepisuje vrednost navedenu na nivou uređaja. npr. ${jboss.server.data.dir}/hl7/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "type": "string"
+    },
+    "hl7ErrorLogFilePattern": {
+      "title": "Obrazac HL7 log fajla grešaka",
+      "description": "Putanja do HL7 poruka koje će biti snimljene tačno onako kako su primljene, kada obrada HL7 poruka ne uspe. Ako nije navedeno, nema logovanja. Prepisuje vrednost navedenu na nivou uređaja. npr. ${jboss.server.data.dir}/hl7-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "type": "string"
+    },
+    "hl7OutgoingLogFilePattern": {
+      "title": "Obrazac HL7 odlaznog log fajla",
+      "description": "Putanja do HL7 poruka koje će biti snimljene tačno onako kako su poslate. Ako nije navedeno, nema logovanja. Može biti prepisano konfigurisanim vrednostima za pojedine Archive HL7 Application. npr. ${jboss.server.data.dir}/hl7-out/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "type": "string"
+    },
+    "hl7OutgoingErrorLogFilePattern": {
+      "title": "Obrazac HL7 odlaznog log fajla grešaka",
+      "description": "Putanja do HL7 poruka koje će biti snimljene tačno onako kako su poslate, kada obrada poslatih HL7 poruka ne uspe. Ako nije navedeno, nema logovanja. Može biti prepisano konfigurisanim vrednostima za pojedine Archive HL7 Application. npr. ${jboss.server.data.dir}/hl7-out-error/${date,yyyy/MM/dd}/${SerialNo}-${MSH-9}.hl7",
+      "type": "string"
+    },
+    "hl7NoPatientCreateMessageType": {
+      "title": "HL7 tip poruke o nepostojanju kreiranja pacijenta",
+      "description": "Tip(ovi) poruke (MessageType^TriggerEvent) HL7 poruka koje se obrađuju samo ako već postoji zapis pacijenta u bazi podataka čiji Patient ID odgovara Patient ID-u u PID ili MRG segmentu poruke. Dakle neće biti kreiran novi zapis pacijenta porukama navedenih tipova. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hl7NoPatientUpdateMessageType": {
+      "title": "HL7 tip poruke o nepostojanju ažuriranja pacijenta",
+      "description": "Zapis pacijenta se neće ažurirati HL7 porukama navedenog tipa poruke (MessageType^TriggerEvent). Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hl7PatientArrivalMessageType": {
+      "title": "HL7 tip poruke o dolasku pacijenta",
+      "description": "Message Type HL7 poruka koje pokreću promenu statusa Scheduled Procedure Steps povezanih sa Patient iz SCHEDULED u ARRIVED. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "ADT^A10|Patient Arriving / Tracking"
+      ]
+    },
+    "hl7UseNullValue": {
+      "title": "Koristi HL7 null vrednost",
+      "description": "Specificira da li se HL7 v2 null vrednosti (specificirane u polju segmenta kao |\"\"|) koriste u poslatim HL7 porukama za nepostojeće ili prazne atribute entiteta. Potrebno za poništavanje atributa entiteta kod udaljene HL7 aplikacije. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "hl7VeterinaryUsePatientName": {
+      "title": "HL7 veterinarsko korišćenje imena pacijenta",
+      "description": "Ukazuje na prisilno veterinarsko korišćenje Patient Names pri mapiranju HL7 PID polja u DICOM atribute: koristi samo prve dve komponente PID.5 kao DICOM Patient Name; ako PID.5 sadrži samo jednu komponentu, koristi tu vrednost kao given name, a prvu komponentu PID.9 kao family name DICOM Patient Name. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "hl7PrimaryAssigningAuthorityOfPatientID": {
+      "title": "HL7 primarni izdavalac autoriteta ID-a pacijenta",
+      "description": "Assigning Authority Patient ID-a u primljenoj HL7 poruci korišćen za pretragu primarnog kvalifikovanog identifikatora pacijenta u listi identifikatora u PID-3 / MRG.1. Ovaj kvalifikovani identifikator pacijenta se koristi na root dataset-u. Ako nije navedeno, podrazumevano se prvi par identifikatora pacijenta u PID-3 / MRG.1 koristi kao primarni identifikator pacijenta na root dataset-u. Ako nijedan od kvalifikovanih identifikatora pacijenta u listi ne odgovara konfigurisanom issuer-u, log arhive servera će sadržati log INFO poruku i podrazumevano će se koristiti prvi kvalifikovani identifikator pacijenta u PID-3 / MRG.1. Format: {Issuer of Patient ID}[&{UniversalEntityID}&{UniversalEntityIDType}]. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "hl7OtherPatientIDs": {
+      "title": "HL7 ostali ID-ovi pacijenata",
+      "description": "Specificira politiku uključivanja identifikatora pacijenta u PID-3 / MRG-1 HL7 poruke u Other Patient IDs Sequence (0010,1002). Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "ALL|Include all patient identifiers in PID.3 / MRG.1, including patient identifier on root dataset in Other Patient IDs Sequence (0010,1002)",
+        "NONE|Include no patient identifiers from PID.3 / MRG.1 in Other Patient IDs Sequence (0010,1002)",
+        "OTHER|Include all patient identifiers in PID.3 / MRG.1, except patient identifier on root dataset in Other Patient IDs Sequence (0010,1002)"
+      ]
+    },
+    "hl7OrderMissingStudyIUIDPolicy": {
+      "title": "Politika HL7 naloga bez Study Instance UID-a",
+      "description": "Specificira politiku za nedostajući Study Instance UID u dolaznim HL7 Order porukama. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "REJECT|Reject HL7 Order Messages with missing Study Instance UID in ZDS.1 / IPC.3",
+        "GENERATE|Generate random Study Instance UID if missing in HL7 Order Messages in ZDS.1 / IPC.3",
+        "ACCESSION_BASED|Generate Study Instance UID based on Accession Number present in OBR.18 / IPC.1 if Study Instance UID missing in HL7 Order Messages in ZDS.1 / IPC.3"
+      ]
+    },
+    "hl7OrderMissingAdmissionIDPolicy": {
+      "title": "Politika HL7 naloga bez ID-a prijema",
+      "description": "Specificira politiku za dolazne HL7 Order poruke bez vrednosti za PID-18 Patient Account Number niti polje PV1-19 Visit Number. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "ACCEPT|Accept HL7 Order Messages with missing Admission ID in PV1.19 / PID.18",
+        "REJECT|Reject HL7 Order Messages with missing Admission ID in PV1.19 / PID.18",
+        "ACCESSION_AS_ADMISSION|Use Accession Number present in OBR.18 / IPC.1 as Admission ID if it is missing in HL7 Order Message in PV1.19 / PID.18"
+      ]
+    },
+    "hl7ImportReportMissingStudyIUIDPolicy": {
+      "title": "Politika HL7 uvoza izveštaja bez Study Instance UID-a",
+      "description": "Specificira politiku za nedostajući Study Instance UID u dolaznim HL7 Import Report (ORU) porukama. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "REJECT|Reject HL7 ORU^R01 message with missing Study Instance UID in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study'",
+        "GENERATE|Generate random Study Instance UID if it is missing in HL7 ORU^R01 Message in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study'",
+        "ACCESSION_BASED|Generate Study Instance UID based on Accession Number present in OBR.18 if Study Instance UID missing in HL7 ORU^R01 Messages in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study'"
+      ]
+    },
+    "hl7ImportReportMissingAdmissionIDPolicy": {
+      "title": "Politika HL7 uvoza izveštaja bez ID-a prijema",
+      "description": "Specificira politiku za dolazne HL7 ImportReport (ORU) poruke bez vrednosti za PID-18 Patient Account Number niti polje PV1-19 Visit Number. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "ACCEPT|Accept HL7 ORU^R01 Messages with missing Admission ID in PV1.19 / PID.18",
+        "REJECT|Reject HL7 ORU^R01 Messages with missing Admission ID in PV1.19 / PID.18",
+        "ACCESSION_AS_ADMISSION|Use Accession Number present in OBR.18 as Admission ID if it is missing in HL7 ORU^R01 Message in PV1.19 / PID.18"
+      ]
+    },
+    "hl7ImportReportMissingStudyIUIDCFindSCP": {
+      "title": "C-FIND SCP za HL7 uvoz izveštaja bez Study Instance UID-a",
+      "description": "AE Title eksternog C-FIND SCP-a za upit za nedostajući Study Instance UID u dolaznim HL7 Import Report (ORU) porukama po datom Accession Number-u. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "hl7ImportReportAdjustIUID": {
+      "title": "HL7 uvoz izveštaja prilagođava UID instance",
+      "description": "Specificira podešavanje Series i SOP Instances UID-ova vraćenih od XSLT-a na dolaznim HL7 Import Report (ORU) porukama. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "NONE|No adjustment done to Study / Series / SOP IUIDs",
+        "APPEND_HASH_OF_STUDY_INSTANCE_UID|Hash of Study Instance UID appended as suffix to Study / Series / SOP IUIDs"
+      ]
+    },
+    "hl7ReferredMergedPatientPolicy": {
+      "title": "Politika HL7 upućenog spojenog pacijenta",
+      "description": "Specificira politiku za dolazne HL7 poruke koje referišu već spojenog pacijenta. Pogledajte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/HL7-Referred-Merged-Patient-Policy\" target=\"_blank\">značenja HL7 Referred Merged Patient Policy</a>. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "REJECT|Reject any incoming HL7 messages referring an already merged Patient",
+        "IGNORE|Ignore any incoming HL7 messages referring an already merged Patient",
+        "IGNORE_DUPLICATE_MERGE|Ignore only duplicate incoming HL7 Patient Merge (ADT^A40) messages referring an already merged Patient. Reject any other incoming HL7 messages referring an already merged Patient.",
+        "ACCEPT_INVERSE_MERGE|Accept any incoming inverse HL7 Patient Merge (ADT^A40) messages referring an already merged Patient, optionally allowing inverse merging of patient records if clients send duplicated ADT^A40 patient merge messages repeatedly, just reversing the patient identifier values in PID / MRG segments."
+      ]
+    },
+    "hl7DicomCharacterSet": {
+      "title": "HL7 DICOM skup znakova",
+      "description": "Ukazuje na korišćenje navedene vrednosti Specific Character Set (0008,0005) u Data Sets transkodiranim iz primljenih HL7 poruka. Koristi vrednost koja odgovara Character Set-u HL7 poruke navedenom u MSH-18 ako nije navedeno.",
+      "type": "string",
+      "format": "dcmCharset"
+    },
+    "hl7ForwardRule": {
+      "title": "HL7 pravilo prosleđivanja",
+      "description": "HL7 Forward pravilo. Dopunjuje vrednosti navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "hl7ForwardRule.schema.json"
+      }
+    },
+    "hl7ExportRule": {
+      "title": "HL7 pravilo izvoza",
+      "description": "Export pravila primenjena na HL7 poruke primljene od ove HL7 aplikacije. Dopunjuje HL7 Export Rules navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "hl7ExportRule.schema.json"
+      }
+    },
+    "hl7UPSOnHL7": {
+      "title": "UPS pravila na HL7",
+      "description": "UPS on HL7 pravila primenjena na HL7 poruke primljene od bilo koje HL7 aplikacije. Dopunjuje UPS on HL7 Rules navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{hl7UPSOnHL7ID}",
+      "items": {
+        "$ref": "upsOnHL7.schema.json"
+      }
+    },
+    "hl7PrefetchRule": {
+      "title": "HL7 pravilo preduzimanja",
+      "description": "Prefetch pravila primenjena na HL7 poruke primljene od ove HL7 aplikacije. Dopunjuje HL7 Prefetch Rules navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "hl7PrefetchRule.schema.json"
+      }
+    },
+    "hl7StudyRetentionPolicy": {
+      "title": "HL7 politika zadržavanja studije",
+      "description": "HL7 Study Retention politike okinute HL7 porukama primljenim od ove HL7 aplikacije. Dopunjuje vrednosti navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "hl7StudyRetentionPolicy.schema.json"
+      }
+    },
+    "hl7OrderScheduledStation": {
+      "title": "Zakazana stanica za HL7 nalog",
+      "description": "Scheduled Station selektovana na MWL HL7 Order Feed-u. Dopunjuje vrednosti navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "hl7OrderScheduledStation.schema.json"
+      }
+    },
+    "hl7OrderSPSStatus": {
+      "title": "SPS status za HL7 nalog",
+      "description": "Specificira SPS Status DICOM MWL stavki kreiranih/ažuriranih na primljenim HL7 ORM^O01, OMI^O23, OMG^O19 porukama. Prepisuje vrednosti navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{dcmSPSStatus}",
+      "items": {
+        "$ref": "hl7OrderSPSStatus.schema.json"
+      }
+    }
+  }
+}

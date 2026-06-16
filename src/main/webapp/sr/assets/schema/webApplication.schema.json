@@ -1,0 +1,110 @@
+{
+  "title": "Veb aplikacija",
+  "description": "Informacije o Web aplikaciji",
+  "type": "object",
+  "required": [
+    "dcmWebAppName",
+    "dcmWebServicePath",
+    "dcmWebServiceClass"
+  ],
+  "properties": {
+    "dcmWebAppName": {
+      "title": "Ime veb aplikacije",
+      "description": "Ime veb aplikacije",
+      "type": "string",
+      "use": [
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmFallbackWadoURIWebAppName",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmExternalWadoRSWebAppName",
+        "$.dcmDevice.dcmArchiveDevice.dcmFallbackWadoURIWebAppName",
+        "$.dcmDevice.dcmArchiveDevice.dcmExternalWadoRSWebAppName"
+      ]
+    },
+    "dicomNetworkConnectionReference": {
+      "title": "Mrežna konekcija veb aplikacije",
+      "description": "Network Connection(s) na kojima su usluge Web aplikacije dostupne",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomDescription": {
+      "title": "Opis veb aplikacije",
+      "description": "Nesputani tekstualni opis Web Application",
+      "type": "string"
+    },
+    "dcmWebServicePath": {
+      "title": "Putanja veb servisa",
+      "description": "HTTP putanja usluga Web aplikacije",
+      "type": "string"
+    },
+    "dcmWebServiceClass": {
+      "title": "Klasa veb servisa",
+      "description": "Web Service klase koje pruža Web aplikacija",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "QIDO_RS",
+          "AI_CHAT",
+          "DOCUMENTATION",
+          "STOW_RS",
+          "WADO_RS",
+          "WADO_URI",
+          "UPS_RS",
+          "MWL_RS",
+          "MPPS_RS",
+          "QIDO_COUNT",
+          "DCM4CHEE_ARC",
+          "DCM4CHEE_ARC_AET",
+          "DCM4CHEE_ARC_AET_DIFF",
+          "PAM",
+          "REJECT",
+          "MOVE",
+          "MOVE_MATCHING",
+          "UPS_MATCHING",
+          "ELASTICSEARCH",
+          "PROMETHEUS",
+          "GRAFANA",
+          "XDS_RS",
+          "AGFA_BLOB",
+          "J4C_ROUTER",
+          "FHIR",
+          "WORKFLOW_MANAGER"
+        ]
+      }
+    },
+    "dcmKeycloakClientID": {
+      "title": "ID Keycloak klijenta",
+      "description": "Keycloak Client ID za Web aplikaciju",
+      "type": "string",
+      "format": "dcmKeycloakClient"
+    },
+    "dicomAETitle": {
+      "title": "AE naslov",
+      "description": "AE title Network AE povezanog sa ovom Web aplikacijom",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dicomApplicationCluster": {
+      "title": "Klaster aplikacija",
+      "description": "Lokalno definisana imena za podskup srodnih aplikacija",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmProperty": {
+      "title": "Svojstvo veb aplikacije",
+      "description": "Svojstvo Web aplikacije u formatu {name}={value}. Pogledajte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties\" target=\"_blank\">Web Application Properties</a> primere konfiguracije na osnovu use case-ova.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomInstalled": {
+      "title": "instaliran",
+      "description": "Tačno ako je Web aplikacija instalirana na mreži. Ako nije navedeno, informacija o statusu instalacije Web aplikacije se nasleđuje od uređaja",
+      "type": "boolean"
+    }
+  }
+}

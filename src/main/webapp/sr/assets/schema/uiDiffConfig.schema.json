@@ -1,0 +1,66 @@
+{
+  "title": "Konfiguracija UI Diff-a",
+  "description": "UI Diff konfiguracija",
+  "type": "object",
+  "required": [
+    "dcmuiDiffConfigName"
+  ],
+  "properties": {
+    "dcmuiDiffConfigName": {
+      "title": "Ime UI Diff konfiguracije",
+      "description": "Ime UI Diff konfiguracije",
+      "type": "string"
+    },
+    "dcmuiDiffCallingAET": {
+      "title": "Diff pozivajući AET",
+      "description": "Diff Calling AET",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmuiDiffPrimaryCFindSCP": {
+      "title": "UI Diff primarni C-FIND SCP",
+      "description": "UI Diff primarni C-FIND SCP",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffPrimaryCMoveSCP": {
+      "title": "UI Diff primarni C-MOVE SCP",
+      "description": "UI Diff primarni C-MOVE SCP",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffPrimaryCStoreSCP": {
+      "title": "UI Diff primarni C-STORE SCP",
+      "description": "UI Diff primarni C-STORE SCP",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffSecondaryCFindSCP": {
+      "title": "UI Diff sekundarni C-FIND SCP",
+      "description": "UI Diff sekundarni C-FIND SCP",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffSecondaryCMoveSCP": {
+      "title": "UI Diff sekundarni C-MOVE SCP",
+      "description": "UI Diff sekundarni C-MOVE SCP",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffSecondaryCStoreSCP": {
+      "title": "UI Diff sekundarni C-STORE SCP",
+      "description": "UI Diff sekundarni C-STORE SCP",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmuiDiffCriteria": {
+      "title": "Kriterijumi UI diff-a",
+      "description": "Kriterijumi UI diff-a",
+      "titleKey": "{dcmuiDiffCriteriaTitle}",
+      "type": "array",
+      "items": {
+        "$ref": "uiDiffCriteria.schema.json"
+      }
+    }
+  }
+}

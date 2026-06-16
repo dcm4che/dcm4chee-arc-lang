@@ -1,0 +1,10 @@
+uiDiffConfig:Konfiguracija UI Diff-a|UI Diff konfiguracija
+uiDiffConfig.dcmuiDiffConfigName:Ime UI Diff konfiguracije|Ime UI Diff konfiguracije
+uiDiffConfig.dcmuiDiffCallingAET:Diff pozivajući AET|Diff Calling AET
+uiDiffConfig.dcmuiDiffPrimaryCFindSCP:UI Diff primarni C-FIND SCP|UI Diff primarni C-FIND SCP
+uiDiffConfig.dcmuiDiffPrimaryCMoveSCP:UI Diff primarni C-MOVE SCP|UI Diff primarni C-MOVE SCP
+uiDiffConfig.dcmuiDiffPrimaryCStoreSCP:UI Diff primarni C-STORE SCP|UI Diff primarni C-STORE SCP
+uiDiffConfig.dcmuiDiffSecondaryCFindSCP:UI Diff sekundarni C-FIND SCP|UI Diff sekundarni C-FIND SCP
+uiDiffConfig.dcmuiDiffSecondaryCMoveSCP:UI Diff sekundarni C-MOVE SCP|UI Diff sekundarni C-MOVE SCP
+uiDiffConfig.dcmuiDiffSecondaryCStoreSCP:UI Diff sekundarni C-STORE SCP|UI Diff sekundarni C-STORE SCP
+uiDiffConfig.dcmuiDiffCriteria:Kriterijumi UI diff-a|Kriterijumi UI diff-a

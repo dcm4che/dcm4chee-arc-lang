@@ -1,0 +1,29 @@
+{
+  "title": "Generator ID-a",
+  "description": "Generator ID-a",
+  "type": "object",
+  "required": [
+    "dcmIDGeneratorName",
+    "dcmIDGeneratorFormat",
+    "dcmIDGeneratorInitialValue"
+  ],
+  "properties": {
+    "dcmIDGeneratorName": {
+      "title": "Ime generatora ID-a",
+      "description": "Ime ID Generatora.",
+      "type": "string"
+    },
+    "dcmIDGeneratorFormat": {
+      "title": "Format generatora ID-a",
+      "description": "Format string koji koristi ovaj ID Generator. %0<width>d će biti zamenjen sekvencijalnim brojem sa vodećim nulama prema navedenoj širini",
+      "type": "string"
+    },
+    "dcmIDGeneratorInitialValue": {
+      "title": "Početna vrednost generatora ID-a",
+      "description": "Početna vrednost za sekvenca koju koristi ovaj ID Generator.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 1
+    }
+  }
+}

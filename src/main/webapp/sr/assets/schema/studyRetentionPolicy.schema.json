@@ -1,0 +1,72 @@
+{
+  "title": "Politika zadržavanja studije",
+  "description": "Study Retention politika",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmRetentionPeriod",
+    "dcmRulePriority",
+    "dcmExpireSeriesIndividually",
+    "dcmStartRetentionPeriodOnStudyDate",
+    "dcmFreezeExpirationDate",
+    "dcmRevokeExpiration"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime Study Retention politike",
+      "type": "string"
+    },
+    "dcmRetentionPeriod": {
+      "title": "Period zadržavanja studije",
+      "description": "Study Retention Period u ISO-8601 formatu perioda PnYnMnD ili PnW",
+      "type": "string",
+      "format": "dcmPeriod"
+    },
+    "dcmRulePriority": {
+      "title": "Prioritet pravila",
+      "description": "Ako se stanje više Study Retention politika podudara za primljenu sliku, primenjuje se politika višeg prioriteta. Ako postoji više podudarnih politika sa jednakim prioritetom, nedefinisano je koja se politika primenjuje.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmProperty": {
+      "title": "Uslovi",
+      "description": "Uslovi u formatu {key}[!]={value}. Pogledajte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">primenljivost, format i primere.</a>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmExpireSeriesIndividually": {
+      "title": "Ističi serije pojedinačno",
+      "description": "Ukazuje da li serije treba da isteknu pojedinačno ili ne.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmStartRetentionPeriodOnStudyDate": {
+      "title": "Počni period zadržavanja od datuma studije",
+      "description": "Ukazuje da li period zadržavanja treba početi na Study Date umesto na prijemu objekta studije",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmExporterID": {
+      "title": "Izvezi isteklu studiju",
+      "description": "Izvezi istekle Study/Series koristeći navedeni Exporter",
+      "type": "string",
+      "format": "dcmExporterID"
+    },
+    "dcmFreezeExpirationDate": {
+      "title": "Zamrzni datum isteka",
+      "description": "Ukazuje na onemogućavanje promena Expiration Date-a od strane naknadnih događaja.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmRevokeExpiration": {
+      "title": "Opozovi datum isteka",
+      "description": "Ukazuje na opoziv prethodno postavljenog Expiration Date-a i zaštitu studije trajnim zamrzavanjem. Efikasno samo ako je 'Freeze Expiration Date' takođe konfigurisan.",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

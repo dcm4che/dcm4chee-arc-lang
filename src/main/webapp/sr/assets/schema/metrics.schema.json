@@ -1,0 +1,33 @@
+{
+  "title": "Deskriptor metrike",
+  "description": "Deskriptor metrike",
+  "type": "object",
+  "required": [
+    "dcmMetricsName",
+    "dcmMetricsRetentionPeriod"
+  ],
+  "properties": {
+    "dcmMetricsName": {
+      "title": "Ime metrike",
+      "description": "Ime metrike",
+      "type": "string"
+    },
+    "dicomDescription": {
+      "title": "Opis metrike",
+      "description": "Nesputani tekstualni opis metrike",
+      "type": "string"
+    },
+    "dcmMetricsRetentionPeriod": {
+      "title": "Period zadržavanja metrike",
+      "description": "Period zadržavanja metrika u minutima",
+      "type": "integer",
+      "default": 60,
+      "minimum": 1
+    },
+    "dcmUnit": {
+      "title": "Jedinica metrike",
+      "description": "Jedinica podataka metrike",
+      "type": "string"
+    }
+  }
+}

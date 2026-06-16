@@ -1,0 +1,57 @@
+{
+  "title": "PDQ servis",
+  "description": "Deskriptor servisa upita demografskih podataka pacijenata",
+  "type": "object",
+  "required": [
+    "dcmPDQServiceID",
+    "dcmURI",
+    "dcmEntity"
+  ],
+  "properties": {
+    "dcmPDQServiceID": {
+      "title": "ID PDQ servisa",
+      "description": "Patient Demographics Query Service ID",
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmPatientVerificationPDQServiceID"
+      ]
+    },
+    "dcmURI": {
+      "title": "URI servisa upita demografskih podataka pacijenata",
+      "description": "PDQ Service URI, npr. 'pdq-dicom:FINDSCP' ili 'pdq-hl7:SendingApplication/SendingFacility:ReceivingApplication/ReceivingFacility' ili pdq-fhir:HL7-FHIR-R4-WebApplication.",
+      "type": "string"
+    },
+    "dicomDescription": {
+      "title": "Opis PDQ servisa",
+      "description": "Nesputani tekstualni opis Patient Demographics Query Service",
+      "type": "string"
+    },
+    "dcmTag": {
+      "title": "Atributi pacijenta",
+      "description": "Atributi pacijenta koji se upituju - ako nije navedeno, upitaće se svi dostupni atributi pacijenta. Primjenjivo samo za 'pdq-dicom' PDQ uslugu",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmTag"
+    },
+    "dcmEntity": {
+      "title": "Entitet upita",
+      "description": "Ukazuje da li se C-FIND SCP upituje za pojedinog pacijenta ili za studije pojedinog pacijenta. Efikasno samo za DICOM PDQ usluge (URI: pdq-dicom:{AETitle}).",
+      "type": "string",
+      "enum": [
+        "Patient",
+        "Study"
+      ],
+      "default": "Patient"
+    },
+    "dcmProperty": {
+      "title": "Svojstvo PDQ servisa",
+      "description": "Svojstvo u formatu <name>=<value>, npr. 'LocalAET=DCM4CHEE' za URI sa šemom pdq-dicom ili 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/hl7-adt2dcm.xsl' za URI sa šemom pdq-hl7 ili 'XSLStylesheetURI=${jboss.server.temp.url}/dcm4chee-arc/fhir-pat2dcm.xsl' za URI sa šemom pdq-fhir. Dodatna svojstva za URI sa šemom pdq-fhir mogu se postaviti npr. 'search._format=xml', 'search.identifier.system={issuer}'. Za kompletnu listu svojstava, pogledajte https://github.com/dcm4che/dcm4chee-arc-light/issues/3307",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

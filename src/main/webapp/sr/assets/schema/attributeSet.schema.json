@@ -1,0 +1,67 @@
+{
+  "title": "Skup atributa",
+  "description": "Imenovani skup atributa za parametar upita 'includefields' QIDO-RS i WADO-RS metapodataka ili za parametar upita 'comparefield' DIFF-RS zahteva.",
+  "type": "object",
+  "required": [
+    "dcmAttributeSetType",
+    "dcmAttributeSetID",
+    "dcmTag",
+    "dicomInstalled"
+  ],
+  "properties": {
+    "dicomDescription": {
+      "title": "Opis skupa atributa",
+      "description": "Nesputani tekstualni opis ovog Attribute Set",
+      "type": "string"
+    },
+    "dcmAttributeSetType": {
+      "title": "Tip skupa atributa",
+      "description": "Specificira upotrebu ovog Attribute Set Type-a.",
+      "type": "string",
+      "enum": [
+        "QIDO_RS|Attribute Set is used by Query Parameter 'includefields' of QIDO-RS requests",
+        "WADO_RS|Attribute Set is used by Query Parameter 'includefields' of WADO-RS requests",
+        "DIFF_RS|Attribute Set is used by Query Parameter 'comparefields' of DIFF-RS requests",
+        "LEADING_CFIND_SCP|Attribute Set is used by Leading C-FIND SCP coercion"
+      ]
+    },
+    "dcmAttributeSetID": {
+      "title": "ID skupa atributa",
+      "description": "ID koji koristi Query Parameter 'includefields' QIDO-RS i WADO-RS Metadata zahteva i Query Parameter 'comparefield' DIFF-RS zahteva za referenciranje ovog Attribute Set-a.",
+      "type": "string"
+    },
+    "dcmAttributeSetTitle": {
+      "title": "Naslov skupa atributa",
+      "description": "Naslov ovog skupa atributa.",
+      "type": "string"
+    },
+    "dcmAttributeSetNumber": {
+      "title": "Broj skupa atributa",
+      "description": "Broj korišćen za sortiranje Attribute Sets.",
+      "type": "integer"
+    },
+    "dicomInstalled": {
+      "title": "instaliran",
+      "description": "Bulova vrednost koja ukazuje da li je ovaj skup atributa trenutno instaliran na archive uređaju",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmTag": {
+      "title": "Oznaka atributa",
+      "description": "DICOM oznaka kao heksadecimalni string",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmTag"
+    },
+    "dcmProperty": {
+      "title": "Svojstvo",
+      "description": "Svojstvo u formatu <name>=<value>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

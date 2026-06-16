@@ -1,0 +1,43 @@
+{
+  "title": "Deskriptor Bulk Data",
+  "description": "Deskriptor Bulk Data",
+  "type": "object",
+  "required": [
+    "dcmBulkDataDescriptorID",
+    "dcmBulkDataExcludeDefaults"
+  ],
+  "properties": {
+    "dcmBulkDataDescriptorID": {
+      "title": "ID deskriptora Bulk Data",
+      "description": "ID deskriptora Bulk Data",
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmBulkDataDescriptorID"
+      ]
+    },
+    "dcmBulkDataExcludeDefaults": {
+      "title": "Isključi podrazumevane",
+      "description": "Ukazuje da li atributi specificirani 'Composite Instance Retrieve Without Bulk Data Service Class'-om treba implicitno da se tretiraju kao Bulk Data (=false) ili ne (=true).",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmAttributeSelector": {
+      "title": "Birač atributa",
+      "description": "Specificira pojedinačne atribute tretirane kao Bulk Data putem XPath-a (npr. 'DicomAttribute[@tag=\"54000100\"]/Item/DicomAttribute[@tag=\"54001010\"]').",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAttributeSelector"
+    },
+    "dcmBulkDataVRLengthThreshold": {
+      "title": "Prag dužine VR",
+      "description": "Specificira da tretira sve atribute sa pojedinim Value Representation (VR) čija dužina vrednosti premašuje navedeni prag kao Bulk Data. Format: <VR>=<length-threshold>.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmBulkDataVRLengthThreshold"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+idGenerator:Generator ID-a|Generator ID-a
+idGenerator.dcmIDGeneratorName:Ime generatora ID-a|Ime ID Generatora.
+idGenerator.dcmIDGeneratorFormat:Format generatora ID-a|Format string koji koristi ovaj ID Generator. %0<width>d će biti zamenjen sekvencijalnim brojem sa vodećim nulama prema navedenoj širini
+idGenerator.dcmIDGeneratorInitialValue:Početna vrednost generatora ID-a|Početna vrednost za sekvenca koju koristi ovaj ID Generator.

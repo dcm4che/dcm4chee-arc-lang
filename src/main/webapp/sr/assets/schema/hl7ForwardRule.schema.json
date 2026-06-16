@@ -1,0 +1,33 @@
+{
+  "title": "HL7 pravilo prosleđivanja",
+  "description": "HL7 Forward pravilo",
+  "type": "object",
+  "required": [
+    "cn",
+    "hl7FwdApplicationName"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime HL7 Forward pravila",
+      "type": "string"
+    },
+    "hl7FwdApplicationName": {
+      "title": "Ime HL7 aplikacije prosleđivanja",
+      "description": "HL7 Forward Destination Application i Facility ime (Application|Facility)",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "hl7ApplicationName"
+    },
+    "dcmProperty": {
+      "title": "Uslovi",
+      "description": "Uslovi u formatu {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Primeri: MSH-4=FORWARD ili MSH-9=ADT\\^A28\\^ADT_A05 ili PID-3[.3]=PIDIssuer ili PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,996 @@
+{
+  "title": "Arhivski mrežni AE",
+  "description": "Informacije povezane sa DICOM arhivskim mrežnim AE-om",
+  "type": "object",
+  "required": [
+    "dcmQueryRetrieveViewID",
+    "dcmObjectStorageCount"
+  ],
+  "properties": {
+    "dcmObjectStorageID": {
+      "title": "ID skladišta objekata",
+      "description": "ID Storage System na koji se primljeni DICOM kompozitni objekti uskladišćuju. Može biti konfigurisano više Storage Systems.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmStorageID"
+    },
+    "dcmObjectStorageCount": {
+      "title": "Broj skladišta objekata",
+      "description": "Broj Storage Systems koji se pune paralelno.",
+      "type": "integer",
+      "default": 1,
+      "minimum": 1
+    },
+    "dcmMetadataStorageID": {
+      "title": "ID skladišta metapodataka",
+      "description": "ID Storage na kojem se Metadata čuvaju u JSON formatu - dodatno uz kompletan DICOM kompozitni objekat. Može biti konfigurisano više Storage Systems. Ako nije navedeno, metapodaci se ne čuvaju dodatno.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmStorageID"
+    },
+    "dcmBulkDataDescriptorID": {
+      "title": "ID deskriptora Bulk Data",
+      "description": "ID Bulk Data Descriptor koji primenjuju sve usluge ovog Archive Network AE koje pružaju Metadata arhiviranih instanci. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmBulkDataDescriptorID"
+    },
+    "dcmSeriesMetadataDelay": {
+      "title": "Kašnjenje agregacije metapodataka serije",
+      "description": "Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS za skladištenje agregiranih Series Metadata pri skladištenju objekata primljenih od ovog AE-a. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmPurgeInstanceRecordsDelay": {
+      "title": "Kašnjenje brisanja zapisa instanci",
+      "description": "Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS za brisanje Instance Records iz DB koje je primio ovaj AE. Prepisuje vrednost navedenu na nivou uređaja. Efikasno samo ako je Purge Instance Records on Device Level = true.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmStoreAccessControlID": {
+      "title": "ID kontrole pristupa skladištu",
+      "description": "Access Control ID-ovi dodeljeni studijama primljenim od ovog AE",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAccessControlID": {
+      "title": "ID kontrole pristupa",
+      "description": "Access Control ID-ovi dodeljeni Query/Retrieve zahtevima primljenim od ovog AE.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAcceptedMoveDestination": {
+      "title": "Prihvaćeno odredište Move",
+      "description": "Prihvaćeno Move Destination u C-MOVE zahtevima; bilo koje ako nije navedeno.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmOverwritePolicy": {
+      "title": "Politika prepisivanja",
+      "description": "Specificira ponašanje pri prijemu objekata ovim AE-om, čiji SOP Instance UID odgovara prethodno primljenom objektu. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "NEVER|Never overwrite previous received object on receive of object with matching SOP Instance UID",
+        "ALWAYS|Always overwrite previous received object on receive of object with matching SOP Instance UID and if instance location digest is unequal",
+        "SAME_SOURCE|Overwrite previous received object on receive of object with matching SOP Instance UID if it is from same source (Calling AET)",
+        "EVEN_WITH_EQUAL_DIGEST|Overwrite previous received object on receive of object with matching SOP Instance UID even if instance location digest is equal"
+      ]
+    },
+    "dcmRelationalMismatchPolicy": {
+      "title": "Politika relacijske nesagledivosti",
+      "description": "Specificira ponašanje pri prijemu objekata ovim AE-om, čiji SOP Instance UID odgovara prethodno primljenom objektu koji pripada drugoj seriji. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "IGNORE|Silently ignores the received object",
+        "REJECT|Reject the received object with error status A77BH",
+        "OVERWRITE|Replace previous received object by new one belonging to other Series (\"poor-man IOCM\")",
+        "STORE_ADDITIONALLY|Store received object, retaining the previous received object, replacing the value SAME_SOURCE of config field Overwrite Policy"
+      ]
+    },
+    "dcmRecordAttributeModification": {
+      "title": "Beleži izmene atributa",
+      "description": "Ukazuje da li se izmene atributa uskladištenih objekata ovog AE zapisuju u stavkama Original Attributes Sequence. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmAcceptMissingPatientID": {
+      "title": "Prihvati nedostajući ID pacijenta",
+      "description": "Ukazuje da li objekti bez Patient ID-ova treba da budu prihvaćeni i da li treba kreirati Patient ID. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "YES|Accept missing Patient ID (0010,0020) in DICOM dataset",
+        "NO|Do not accept missing Patient ID (0010,0020) in DICOM dataset",
+        "CREATE|Create patient identifier if missing Patient ID (0010,0020) in DICOM dataset"
+      ]
+    },
+    "dcmAcceptConflictingPatientID": {
+      "title": "Prihvati konfliktni ID pacijenta",
+      "description": "Ukazuje da li objekti sa Patient ID-ovima koji se razlikuju od Patient ID-a u prethodno primljenim objektima studije treba biti prihvaćen. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "YES|Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
+        "NO|Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
+        "MERGED|Accept patient identifier in DICOM dataset if already merged with another patient identifier"
+      ]
+    },
+    "dcmQueryRetrieveViewID": {
+      "title": "ID pregleda upita/preuzimanja",
+      "description": "Query/Retrieve View identifikator.",
+      "type": "string",
+      "format": "dcmQueryRetrieveViewID"
+    },
+    "dcmBulkDataSpoolDirectory": {
+      "title": "Direktorijum spool-a Bulk Data",
+      "description": "Putanja do Bulk Data Spool direktorijuma. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmHideSPSWithStatusFromMWL": {
+      "title": "Sakrij SPS sa statusom po MWL SCP-u",
+      "description": "Scheduled Procedure Step Status kodovi MWL stavki koje ne treba da vrati MWL SCP. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "SCHEDULED",
+          "ARRIVED",
+          "READY",
+          "STARTED",
+          "DEPARTED",
+          "CANCELED",
+          "DISCONTINUED",
+          "COMPLETED"
+        ]
+      }
+    },
+    "dcmHideSPSWithStatusFromMWLRS": {
+      "title": "Sakrij SPS sa statusom po MWL RS-u",
+      "description": "Scheduled Procedure Step Status kodovi MWL stavki koje ne treba da vrati MWL RS. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "SCHEDULED",
+          "ARRIVED",
+          "READY",
+          "STARTED",
+          "DEPARTED",
+          "CANCELED",
+          "DISCONTINUED",
+          "COMPLETED"
+        ]
+      }
+    },
+    "dcmMWLAccessionNumberGenerator": {
+      "title": "Generator pristupnog broja MWL",
+      "description": "Identifikuje ID Generator za dopunu nedostajućih Accession Numbers Scheduled Procedures Steps kreiranih putem RESTful usluge. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmIDGenerator"
+    },
+    "dcmMWLRequestedProcedureIDGenerator": {
+      "title": "Generator ID-a traženog postupka MWL",
+      "description": "Identifikuje ID Generator za dopunu nedostajućih Requested Procedure IDs Scheduled Procedures Steps kreiranih putem RESTful usluge. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmIDGenerator"
+    },
+    "dcmMWLScheduledProcedureStepIDGenerator": {
+      "title": "Generator ID-a zakazanog koraka procedure MWL",
+      "description": "Identifikuje ID Generator za dopunu nedostajućih Scheduled Procedure Step IDs Scheduled Procedures Steps kreiranih putem RESTful usluge. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmIDGenerator"
+    },
+    "dcmEncodeAsJSONNumber": {
+      "title": "Kodiraj kao JSON broj",
+      "description": "VR kodiran kao JSON Number. Ako nije navedeno, IS, DS, SV i UV vrednosti se kodiraju kao JSON Strings. Dopunjuje vrednosti navedene na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "DS|Decimal String",
+          "IS|Integer String",
+          "SV|Signed 64-bit Very Long",
+          "UV|Unsigned 64-bit Very Long"
+        ]
+      }
+    },
+    "dcmValidateCallingAEHostname": {
+      "title": "Verifikuj ime hosta pozivajućeg AE",
+      "description": "Validira Calling AE Hostname ili IP Address Association requestors za ovaj AE. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmUserIdentityNegotiation": {
+      "title": "Pregovor o identitetu korisnika",
+      "description": "Specificira da ignoriše User Identity Negotiation Sub-Item u Association zahtevima (=NOT_SUPPORTED), da verifikuje prosleđeno korisničko ime i lozinku ili JSON Web Token protiv Keycloak servera (=SUPPORTS), ili da odbije Association zahteve bez važećeg korisničkog imena i lozinke ili JSON Web Token-a u njegovom Identity Negotiation Sub-Item-u (=REQUIRED). Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "NOT_SUPPORTED|Ignore User Identity Negotiation Sub-Item in Association requests",
+        "SUPPORTS|Verify passed Username and password or JSON Web Token are against a Keycloak server",
+        "REQUIRED|Reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item"
+      ]
+    },
+    "dcmUserIdentityNegotiationRole": {
+      "title": "Uloga pregovora o identitetu korisnika",
+      "description": "Ograniči prihvaćene User Identity Negotiation zahteve na korisnike sa navedenom ulogom. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmUserIdentityNegotiationKeycloakClientID": {
+      "title": "ID Keycloak klijenta pregovora o identitetu korisnika",
+      "description": "Keycloak Client ID koji se odnosi na Keycloak konfiguraciju konekcije za verifikaciju prosleđenog korisničkog imena i lozinke ili JSON Web Token. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmKeycloakClient"
+    },
+    "dcmPersonNameComponentOrderInsensitiveMatching": {
+      "title": "Poređenje imena osobe neosetljivo na redosled komponenti",
+      "description": "Ukazuje da li se na fuzzy semantičko podudaranje imena osoba ovog AE primenjuje podudaranje neosetljivo na redosled komponenti imena. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmSendPendingCGet": {
+      "title": "Pošalji pending C-GET",
+      "description": "Omogućava pending C-GET odgovore. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmSendPendingCMoveInterval": {
+      "title": "Interval slanja pending C-MOVE",
+      "description": "Interval pending C-MOVE odgovora u ISO-8601 formatu trajanja PnDTnHnMn.nS. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmWadoSR2HtmlTemplateURI": {
+      "title": "URI WADO SR2HTML šablona",
+      "description": "Specificira URI style sheet-a korišćenog za renderovanje strukturisanih izveštaja u html. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmWadoSR2TextTemplateURI": {
+      "title": "URI WADO SR2Text šablona",
+      "description": "Specificira URI style sheet-a korišćenog za renderovanje strukturisanih izveštaja u običan tekst. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmWadoCDA2HtmlTemplateURI": {
+      "title": "URI šablona WADO CDA u HTML",
+      "description": "URL do XSL style sheet-a umetnutog kao <?xml-stylesheet type=\"text/xsl\" href=\"<url>\" > u CDA dokumente vraćene od WADO-URI usluge. Ako nije navedeno, ugrađeni CDI dokument se vraća doslovno. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmWadoThumbnailViewport": {
+      "title": "Wado viewport sličice",
+      "description": "Dimenzije Thumbnails koje vraća WADO preuzimanje Instance Thumbnailsa, ako Viewport nije naveden u zahtevu. Format: <width>,<height>. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmWadoThumbnailViewport"
+    },
+    "dcmWadoZIPEntryNameFormat": {
+      "title": "Format imena WADO ZIP stavke",
+      "description": "Format imena unosa u ZIP arhivi vraćenoj od WADO-RS. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmWadoIgnorePresentationLUTShape": {
+      "title": "WADO ignoriši Presentation LUT Shape",
+      "description": "Ukazuje na ignorisanje (2050,0020) Presentation LUT Shape, ali daje prioritet vrednosti (0028,0004) Photometric Interpretation radi određivanja da li minimalna vrednost uzorka treba da bude prikazana kao bela (=MONCHROME1) ili kao crna (=MONCHROME2) pri preuzimanju renderovanih DICOM slika od strane WADO-RS ili WADO-URI usluga. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmWadoMetadataExcludePrivate": {
+      "title": "WADO metapodaci isključuju privatno",
+      "description": "Ukazuje na isključivanje Private Data Elements iz Metadata vraćenih WADO-RS Retrieve Transaction-om. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmWadoVideoAcceptRanges": {
+      "title": "WADO video prihvata opsege",
+      "description": "Ukazuje da li su Range Requests koji pristupaju enkapsuliranim video zapisima putem WADO-URI ili WADO-RS Rendered Instance podržani. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "YES|HTTP Range Requests supported",
+        "NO|HTTP Range Requests not supported",
+        "KNOWN_TOTAL_LENGTH|HTTP Range Requests supported if Encapsulated Pixel Data Value Total Length is known"
+      ]
+    },
+    "dcmQueryMaxNumberOfResults": {
+      "title": "Maksimalan broj rezultata upita",
+      "description": "Maksimalan broj povratnih rezultata od strane C-FIND SCP. Ako broj poklapanja prekorači ograničenje, C-FIND zahtev će biti odbijen. 0 = bez ograničenja. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "dcmQidoMaxNumberOfResults": {
+      "title": "Maksimalan broj QIDO rezultata",
+      "description": "Maksimalan broj povratnih rezultata od strane QIDO-RS Service. 0 = neograničeno. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "integer",
+      "minimum": 0
+    },
+    "dcmQidoETag": {
+      "title": "QIDO ETag",
+      "description": "Ukazuje na vraćanje Last-Modified i ETag za Search Series ili Instances studije. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmQidoResultOrderBy": {
+      "title": "QIDO redosled rezultata po",
+      "description": "Specificira redosled podudarnih rezultata vraćenih od QIDO-RS, UPS-RS i proprietary Search usluga, ako nije navedeno query parametrom orderby. Format: {service}:[-]{attributeID}[,...], sa {service} je patients, studies, series, instances, workitems, mwlitems ili mpps. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmFwdMppsDestination": {
+      "title": "Odredište MPPS prosleđivanja",
+      "description": "Odredište za prosleđivanje MPPS N-CREATE RQ i N-SET RQ Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmIanDestination": {
+      "title": "Odredište IAN-a",
+      "description": "Odredište za slanje IAN N-CREATE RQ Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmIanTrigger": {
+      "title": "IAN okidač",
+      "description": "Događaji koji okidaju slanje IAN N-CREATE RQ-a Application Entity-jima konfigurisanim u IAN Destination. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "STUDY_RECEIVED|Send IAN on receiving studies",
+          "MPPS_RECEIVED|Send IAN on receiving MPPS",
+          "REJECTION_NOTE_RECEIVED|Send IAN on IOCM trigger",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED|Send IAN on receiving first object of study"
+        ]
+      }
+    },
+    "dcmIanDelay": {
+      "title": "IAN kašnjenje",
+      "description": "Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS nakon kojeg se IAN za primljenu studiju šalje konfigurisanim IAN odredištima. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmIanTimeout": {
+      "title": "IAN istek vremena",
+      "description": "Timeout u ISO-8601 formatu trajanja PnDTnHnMn.nS za čekanje na prijem instanci referenciranih u MPPS. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmIanOnTimeout": {
+      "title": "IAN pri isteku vremena",
+      "description": "Specificira da li se IAN šalje ako timeout za čekanje prijema referenciranih instanci istekne. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmSpanningCFindSCP": {
+      "title": "Obuhvatajući C-FIND SCP",
+      "description": "AE Title eksternog C-FIND SCP-a za prosleđivanje C-FIND RQ-ova i povratnih odgovora prema konfigurisanoj Spanning C-Find SCP Policy-ju. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmSpanningCFindSCPPolicy": {
+      "title": "Politika obuhvatajućeg C-FIND SCP-a",
+      "description": "Specificira politiku za kombinovanje podudaranja vraćenih od konfigurisanog Spanning C-Find SCP-a sa podudarnim stavkama iz archive DB-a. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "SUPPLEMENT|Returns local matches before additional matches from Spanning C-Find SCP",
+        "MERGE|Returns matches from Spanning C-Find SCP before additional local matches",
+        "REPLACE|Returns only matches from Spanning C-Find SCP"
+      ]
+    },
+    "dcmSpanningCFindSCPRetrieveAET": {
+      "title": "AE naslov preuzimanja obuhvatajućeg C-FIND SCP-a",
+      "description": "Specificira Retrieve AE Title(s) u vraćenim podudaranjima od Spanning C-Find SCP-a. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmFallbackCMoveSCP": {
+      "title": "Rezervni C-MOVE SCP",
+      "description": "AE Title eksternog C-MOVE SCP-a za prosleđivanje C-MOVE RQ-ova ako traženi entiteti nisu upravljani ovom arhivom. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmFallbackCMoveSCPStudyOlderThan": {
+      "title": "Studija starija od rezervnog C-MOVE SCP-a",
+      "description": "Specificira prag za Study Date u formatu YYYYMMDD za označavanje primljenih studija kao (potencijalno) nepotpunih radi provoćenja preuzimanja sa konfigurisanog dcmFallbackCMoveSCP. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmFallbackCMoveSCPDestination": {
+      "title": "Odredište rezervnog C-MOVE SCP-a",
+      "description": "AE Title lokalnog C-STORE-SCP-a koji se postavlja kao Move Destination u C-MOVE RQ-ovima prosleđenim eksternom C-MOVE SCP navedenom u dcmFallbackCMoveSCP Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmFallbackCMoveSCPLeadingCFindSCP": {
+      "title": "Vodeći C-FIND SCP rezervnog C-MOVE SCP-a",
+      "description": "AE Title eksternog C-FIND SCP-a za verifikaciju broja instanci preuzetih sa eksternog C-MOVE SCP navedenog u dcmFallbackCMoveSCP. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmFallbackCMoveSCPRetries": {
+      "title": "Ponovni pokušaji rezervnog C-MOVE SCP-a",
+      "description": "Maksimalan broj pokušaja preuzimanja nedostupnih objekata sa C-MOVE SCP konfigurisanog sa dcmFallbackCMoveSCP. -1 = zauvek. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "integer"
+    },
+    "dcmFallbackWadoURIWebAppName": {
+      "title": "Ime rezervne WADO-URI veb aplikacije",
+      "description": "Ime eksterne Web aplikacije za preusmeravanje WADO-URI zahteva ako traženi objekat nije dostupan u ovoj arhivi. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "webApp"
+    },
+    "dcmFallbackWadoURIHttpStatusCode": {
+      "title": "HTTP statusni kôd rezervnog WADO-URI-ja",
+      "description": "HTTP Status kod Redirect odgovora konfigurisan sa Fallback WADO-URI Web Application Name. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "integer",
+      "enum": [
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
+      ]
+    },
+    "dcmFallbackWadoURIRedirectOnNotFound": {
+      "title": "Preusmeravanje rezervnog WADO-URI-ja pri nepronalaženju",
+      "description": "Ukazuje da li se WADO-URI zahtevi preusmeravaju na konfigurisani Fallback WADO-URI Web Application Name čak i ako objekat nije pronađen ili - ako je postavljeno na false - samo ako objekat više nije dostupan na ovom archive. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmExternalWadoRSWebAppName": {
+      "title": "Ime eksterne WADO-RS veb aplikacije",
+      "description": "Ime eksterne Web aplikacije za preusmeravanje WADO-RS zahteva ako traženi objekat nije dostupan u ovoj arhivi. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "webApp"
+    },
+    "dcmExternalWadoRSHttpStatusCode": {
+      "title": "HTTP statusni kôd eksternog WADO-RS-a",
+      "description": "HTTP Status kod Redirect odgovora konfigurisan sa External WADO-RS Web Application Name. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "integer",
+      "enum": [
+        "301|Moved Permanently",
+        "302|Found",
+        "303|See Other",
+        "307|Temporary Redirect"
+      ]
+    },
+    "dcmExternalWadoRSRedirectOnNotFound": {
+      "title": "Preusmeravanje eksternog WADO-RS-a pri nepronalaženju",
+      "description": "Ukazuje da li se WADO-RS zahtevi preusmeravaju na konfigurisani External WADO-RS Web Application Name čak i ako traženi objekti nisu pronađeni ili - ako je postavljeno na false - samo ako neki od traženih objekata više nisu dostupni na ovom archive. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmFallbackCMoveSCPCallingAET": {
+      "title": "Pozivajući AE naslov rezervnog C-MOVE SCP-a",
+      "description": "Calling AE Title korišćen u A-ASSOCIATE-RQ za konfigurisani Fallback C-MOVE SCP. Ako nije navedeno, koristi se AE Title eksternog C-MOVE SCU-a. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmAltCMoveSCP": {
+      "title": "Alternativni C-MOVE SCP",
+      "description": "AE Title alternativnog C-MOVE SCP-a za prosleđivanje C-MOVE RQ-ova ako traženi entiteti nisu locirani na lokalno povezanom skladištu Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmStorePermissionServiceURL": {
+      "title": "URL servisa dozvola skladištenja",
+      "description": "URL Store Permission Service-a koji će biti pozvan pri prijemu prvog objekta studije. {<dicomTag>} će biti zamenjeno vrednošću atributa u objektu. Npr. http(s)://<store-permission-service-provider-host>:<store-permission-service-provider-port>/storage-permission/study/{0020000D}?patientId={00100020}&patientIdIssuer={00100021}&studyDescription={00081030,urlencoded}. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmStorePermissionServiceResponse": {
+      "title": "Odgovor servisa dozvola skladištenja",
+      "description": "Emuliraj Store Permission Service odgovor pri prijemu prvog objekta studije. {<dicomTag>} će biti zamenjeno vrednošću atributa u objektu. Efikasno samo ako nije konfigurisan Store Permission Service Response. Primer: patientID={00100020},patientName={00100010},errorCode=0110H,errorComment=errorMessage. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmStorePermissionServiceResponsePattern": {
+      "title": "Obrazac odgovora servisa dozvola skladištenja",
+      "description": "Regularni izraz primenjen na odgovore od Store Permission Service radi određivanja saglasnosti za storage. Npr. \"validation\"\\s*:\\s*\"true\" ili '(?<=patientName=)[^null].*?(?=,)'. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmStorePermissionServiceErrorCommentPattern": {
+      "title": "Obrazac komentara greške servisa dozvola skladištenja",
+      "description": "Regularni izraz primenjen na odgovore od Store Permission Service radi izdvajanja Error Comment. Npr. \"errorcomment\"\\s*:\\s*\"(.*)\". Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmStorePermissionServiceErrorCodePattern": {
+      "title": "Obrazac koda greške servisa dozvola skladištenja",
+      "description": "Regularni izraz primenjen na odgovore od Store Permission Service radi izdvajanja Error Code u heksadecimalnom formatu. Npr. \"errorcode\"\\s*:\\s*\"(\\p{XDigit}{4})\". Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmStorePermissionServiceExpirationDatePattern": {
+      "title": "Obrazac datuma isteka servisa dozvola skladištenja",
+      "description": "Regularni izraz primenjen na odgovore od Store Permission Service radi izdvajanja početnog Study Expiration Date. Npr. \"expirationdate\"\\s*:\\s*\"([0-9]{8})\". Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmAllowRejectionForDataRetentionPolicyExpired": {
+      "title": "Dozvoli odbacivanje za isteklu politiku zadržavanja podataka",
+      "description": "Dozvoli odbijanje za Data Retention Policy isteklih. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "NEVER|Never allow rejection for Data Retention Policy Expired",
+        "ALWAYS|Always allow rejection for Data Retention Policy Expired",
+        "EXPIRED_UNSET|Allow rejection for Data Retention Policy Expired for expired studies or studies with no expiration date",
+        "ONLY_EXPIRED|Allow rejection for Data Retention Policy Expired only for expired studies"
+      ]
+    },
+    "dcmAcceptedUserRole": {
+      "title": "Prihvaćena korisnička uloga",
+      "description": "Uloge korisnika od kojih se prihvataju web zahtevi; bilo koje ako nije navedeno.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAllowDeleteStudyPermanently": {
+      "title": "Dozvoli trajno brisanje studije",
+      "description": "Dozvoli trajno brisanje studije. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "ALWAYS|Always allow delete study permanently",
+        "REJECTED|Allow delete study permanently only for study with all objects rejected"
+      ]
+    },
+    "dcmAllowDeletePatient": {
+      "title": "Dozvoli brisanje pacijenta",
+      "description": "Dozvoli trajno brisanje pacijenata. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "NEVER|Never allow delete patient permanently",
+        "ALWAYS|Always allow delete patient permanently",
+        "WITHOUT_STUDIES|Allow delete patient permanently only for patient without studies"
+      ]
+    },
+    "dcmDefaultCharacterSet": {
+      "title": "Podrazumevani skup znakova",
+      "description": "Vrednost Specific Character Set (0008,0005) dodata Data Sets C-STORE RQ-ova i pending C-FIND RSP-ova bez atributa Specific Character Set (0008,0005) koje je primio ovaj Network AE. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmCharset"
+    },
+    "dcmMWLWorklistLabel": {
+      "title": "MWL oznaka Worklist-e",
+      "description": "Vrednost Worklist Label (0074,1202) kreiranih MWL stavki ovog AE-a pri prijemu Create Scheduled Procedure Step REST API-ja ako Worklist Label (0074,1202) nedostaje ili je prazan u request payload. Ako nije navedenno konfigurisana vrednost, kreirane MWL stavke nisu vezane za pojedinačni MWL Worklist i pružaju ih svi Archive AE sa MWL SCP Transfer Capability.",
+      "type": "string",
+      "format": "dcmMWLWorklistLabel"
+    },
+    "dcmMWLWorklistLabelFilter": {
+      "title": "Filter MWL oznake Worklist-e",
+      "description": "Vrednost Worklist Label (0074,1202) koja se koristi kao matching Key od strane ovog AE-a pri obradi upita od strane DIMSE (MWL Query SOP Class) ili dicomWeb (Modality Worklist Search Transaction) usluge za poklapanje Modality Worklist stavki (MWL), ako matching key za ovaj atribut nije naveden u zahtevu. Ako je navedeno više vrednosti, MWL sa bilo kojom od navedenih vrednosti Worklist Label (0074,1202) se poklapa. Ako vrednost nije navedena, MWL sa bilo kojom vrednošću Worklist Label (0074,1202) će se poklopiti.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSWorklistLabel": {
+      "title": "UPS oznaka Worklist-e",
+      "description": "Vrednost Worklist Label (0074,1202) kreiranih UPS-a ovog Network AE, ako UPS Push SCU ili UPS-RS User Agent ne pruži vrednost za ovaj atribut. Ako nije navedeno, koristiće se AE Title prijemnog AE. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "dcmUPSWorklistLabelFilter": {
+      "title": "Filter UPS oznake Worklist-e",
+      "description": "Vrednost Worklist Label (0074,1202) koja se koristi kao matching Key od strane ovog AE-a pri obradi upita od strane DIMSE (UPS Query SOP Class) ili dicomWeb (Worklist Search Transaction) usluge za poklapanje Unified Procedure Steps (UPS), ako matching key za ovaj atribut nije naveden u zahtevu. Ako je navedeno više vrednosti, UPS sa bilo kojom od navedenih vrednosti Worklist Label (0074,1202) se poklapa. Ako vrednost nije navedena, UPS sa bilo kojom vrednošću Worklist Label (0074,1202) će se poklopiti.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSEventSCU": {
+      "title": "UPS Event SCU",
+      "description": "AE Title UPS Event SOP Class SCU-a kojem se šalju UPS Event Reports za pretplate kreirane na ovom Network AE-u - nezavisno da li je pretplata kreirana putem N-ACTION DIMSE usluge ili odgovarajuće UPS RESTful usluge. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmUPSEventSCUKeepAlive": {
+      "title": "UPS Event SCU održavanje veze",
+      "description": "Timeout u ms za održavanje associations ka UPS Event SCUs živim. Ako nije navedeno, associations se neće ponovo koristiti za slanje više UPS Event Reports jednom UPS Event SCU. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "integer",
+      "minimum": 100
+    },
+    "dcmRetrieveAET": {
+      "title": "AE naslov preuzimanja",
+      "description": "Specificira Retrieve AE Title-ove povezane sa DICOM objektima primljenim od ovog Network AE-a. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmReturnRetrieveAET": {
+      "title": "Vrati AE naslov preuzimanja",
+      "description": "Retrieve AE Title vraćen u C-FIND i QIDO odgovorima. Ako nije navedeno, vraća se Retrieve AET povezan sa arhiviranim entitetom. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmMultipleStoreAssociations": {
+      "title": "Višestruke Store asocijacije",
+      "description": "Broj Storage Associations korišćenih za preuzimanje Composite Objects. C-STORE SCP specifični brojevi mogu se navesti prefiksom '<AETitle>:'. Primeri: 2 ili STORESCP:3 Dopunjuje Multiple Store Associations navedene na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmMultipleStoreAssociations"
+    },
+    "dcmExternalRetrieveAEDestination": {
+      "title": "Odredište eksternog AE-a preuzimanja",
+      "description": "AE Title lokalnog C-STORE-SCP-a koji se postavlja kao Move Destination u C-MOVE RQ-ovima prosleđenim eksternom retrieve AE-u. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmCopyMoveUpdatePolicy": {
+      "title": "Politika ažuriranja kopiranja/pomeranja",
+      "description": "Specificira politiku ažuriranja za atribute odredišne studije pri Copy/Move instanci iz druge studije. Ako nije navedeno, atributi se neće ažurirati. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values",
+        "REPLACE|The attributes will be completely overwritten"
+      ]
+    },
+    "dcmLinkMWLEntryUpdatePolicy": {
+      "title": "Politika ažuriranja MWL stavke veze",
+      "description": "Specificira politiku ažuriranja za Study atribute pri Link-u instanci druge studije sa MWL stavkom koja referiše postojeću studiju. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values",
+        "REPLACE|The attributes will be completely overwritten"
+      ]
+    },
+    "dcmStorageVerificationPolicy": {
+      "title": "Politika verifikacije skladišta",
+      "description": "Policy koja se primenjuje pri storage verification studija. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "DB_RECORD_EXISTS|Only check for existence of DB records",
+        "OBJECT_EXISTS|Check if object exists on Storage System",
+        "OBJECT_SIZE|Check size of object on Storage System",
+        "OBJECT_FETCH|Fetch object from Storage System",
+        "OBJECT_CHECKSUM|Recalculate checksum of object on Storage System",
+        "S3_MD5SUM|Check MD5 checksum of object on S3 Storage System"
+      ]
+    },
+    "dcmStorageVerificationUpdateLocationStatus": {
+      "title": "Ažuriranje statusa lokacije verifikacije skladišta",
+      "description": "Ukazuje da li će Status Location DB zapisa biti ažuriran pri Storage Verification u skladu sa tim. Nije efikasno sa Storage Verification Policy: DB_RECORD_EXISTS. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmStorageVerificationStorageID": {
+      "title": "Storage Verification Storage IDs",
+      "description": "Prihvati Storage Verification samo ako je validacija skladištenja objekta na jednom od navedenih Storage System-a uspešna. Nije efikasno sa Storage Verification Policy: DB_RECORD_EXISTS. Prepisuje vrednosti navedene na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmStorageID"
+    },
+    "dcmStorageVerificationInitialDelay": {
+      "title": "Početno kašnjenje verifikacije skladišta",
+      "description": "Kašnjenje u ISO-8601 formatu trajanja PnYnMnD ili PnW za prvu Storage Verification serije nakon što je primljena. Prepisuje vrednosti navedene na nivou uređaja.",
+      "type": "string",
+      "format": "dcmPeriod"
+    },
+    "dcmUpdateLocationStatusOnRetrieve": {
+      "title": "Ažuriraj status lokacije pri preuzimanju",
+      "description": "Ukazuje da li će Status Location DB zapisa biti ažuriran za objekte koji nisu uspešno preuzeti sa storage-a pri retrieve-u na MISSING_OBJECT ili FAILED_TO_FETCH_OBJECT. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmStorageVerificationOnRetrieve": {
+      "title": "Verifikacija skladišta pri preuzimanju",
+      "description": "Ukazuje da li neuspesi preuzimanja objekta sa skladišta pri retrieve-u treba da okinu Storage Verification cele serije. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "hl7PSUSendingApplication": {
+      "title": "Aplikacija slanja HL7 ažuriranja statusa postupka",
+      "description": "Application|Facility ime Sending Application za HL7 Procedure Status Update. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "hl7ApplicationName"
+    },
+    "hl7PSUReceivingApplication": {
+      "title": "Aplikacija prijema HL7 ažuriranja statusa postupka",
+      "description": "Application|Facility ime Receiving Application za HL7 Procedure Status Update. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "hl7ApplicationName"
+    },
+    "hl7PSUAction": {
+      "title": "Akcija HL7 ažuriranja statusa postupka",
+      "description": "Zadaje akciju HL7 ažuriranja statusa postupka. Može biti prepisano konfigurisanim vrednostima za određene arhivske mrežne AE-ove.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "SEND_NOTIFICATION|Send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications",
+          "UPDATE_MWL_STATUS|Set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED"
+        ]
+      }
+    },
+    "hl7PSUTrigger": {
+      "title": "Okidač HL7 ažuriranja statusa postupka",
+      "description": "Specificira okidačke događaja za slanje HL7 Procedure Status Update obaveštenja HL7 Receivers konfigurisanim u HL7 Procedure Status Update Receiving Application. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "STUDY_RECEIVED|Send notification on receive of studies",
+          "MPPS_RECEIVED|Send notification on receive of MPPS",
+          "REJECTION_NOTE_RECEIVED|Send notification on receive of IOCM KO",
+          "FIRST_OBJECT_OF_STUDY_RECEIVED|Send notification on receive of first object of study"
+        ]
+      }
+    },
+    "hl7PSUDelay": {
+      "title": "Kašnjenje HL7 ažuriranja statusa postupka",
+      "description": "Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS nakon kojeg se HL7 Procedure Status Update za primljenu studiju šalje konfigurisanim HL7 prijemnicima. Ako nije navedeno, HL7 Procedure Status Update se okida primljenim MPPS-om. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUStudyTemplateURI": {
+      "title": "URI šablona studije HL7 ažuriranja statusa postupka",
+      "description": "URL XSL style sheet-a za kreiranje HL7v2 poruke za obaveštavanje konfigurisanih HL7 prijemnika o promenama Status-a traženih procedura okinutih primljenom studijom. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "hl7PSUTimeout": {
+      "title": "Istek vremena HL7 ažuriranja statusa postupka",
+      "description": "Timeout u ISO-8601 formatu trajanja PnDTnHnMn.nS za čekanje na prijem instanci referenciranih u MPPS. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "hl7PSUOnTimeout": {
+      "title": "HL7 ažuriranje statusa postupka pri isteku vremena",
+      "description": "Specificira da li se HL7 Procedure Status Update šalje ako timeout za čekanje prijema referenciranih instanci istekne. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "hl7PSUMppsTemplateURI": {
+      "title": "URI MPPS šablona HL7 ažuriranja statusa postupka",
+      "description": "URL XSL style sheet-a za kreiranje HL7v2 poruke za obaveštavanje konfigurisanih HL7 prijemnika o promenama Status-a traženih procedura okinutih MPPS-om. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string"
+    },
+    "hl7PSUCondition": {
+      "title": "Uslovi HL7 ažuriranja statusa postupka",
+      "description": "Ograniči obaveštavanje konfigurisanih HL7 Procedure Status Update Receiving Applications o Procedure Status Update uslovima na atribute primljenog kompozitnog objekta u formatu {key}[!]={value}. Pogledajte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">primenljivost, format i neke primere</a>. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hl7PSUForRequestedProcedure": {
+      "title": "HL7 ažuriranje statusa postupka za traženi postupak",
+      "description": "Ograniči obaveštavanje konfigurisanih HL7 Procedure Status Update Receiving Applications o Procedure Status Update na postojanje Scheduled Procedure Steps of a Requested Procedure (MWL stavki u DB-u) sa podudarnim Study Instance UID-om. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "hl7PSUTemplateParam": {
+      "title": "Parametri šablona HL7 ažuriranja statusa postupka",
+      "description": "XSLT parametri u formatu {attributeID}={value} prosleđeni style sheet-u navedenom u HL7 Procedure Status Update MPPS Template URI ili HL7 Procedure Status Update Study Template URI. {attributeID} unutar {value} će biti zamenjeno vrednošću tog atributa u originalnom dataset-u. Npr.: 'RequestedProcedureID={StudyInstanceUID}' ili 'AccessionNumber={0020000D}'. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hl7PSUMessageType": {
+      "title": "Tip poruke HL7 ažuriranja statusa postupka",
+      "description": "Tip poruke HL7 Procedure Status Update poruke. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "OMG_O19|Eyecare Order Message",
+        "ORU_R01|Unsolicited Observation Message",
+        "OMI_O23|Clinical Order Message"
+      ]
+    },
+    "hl7PSUPIDPV1": {
+      "title": "HL7 ažuriranje statusa postupka PID PV1",
+      "description": "Ukazuje na uključivanje Patient Identification (PID) i Patient Visit (PV1) segmenta u HL7 Procedure Status Update poruci. Implicitno postavljeno ako je HL7 Procedure Status Message Type = ORU_R01. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "hl7PSUMWLMatchingKey": {
+      "title": "MWL ključ podudaranja HL7 ažuriranja statusa postupka",
+      "description": "Specificira atribut primljenog objekta za pronalaženje MWL stavke čiji status treba ažurirati na COMPLETED. Primjenjivo samo ako je 'HL7 Procedure Status Update MWL' konfigurisan ili implicitno postavljen na true. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "enum": [
+        "AccessionNumber|Use Accession Number (0008,0050) for matching MWL",
+        "StudyInstanceUID|Use Study Instance UID (0020,000D) for matching MWL"
+      ]
+    },
+    "dcmRelationalQueryNegotiationLenient": {
+      "title": "Popustljiv pregovor relacijskog upita",
+      "description": "Ukazuje na prihvatanje C-FIND RQ-ova bez jedinstvenih ključeva za nivoe iznad nivoa upita čak i ako podrška za relational-queries nije bila pregovarana. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmRelationalRetrieveNegotiationLenient": {
+      "title": "Popustljiv pregovor relacijskog preuzimanja",
+      "description": "Ukazuje na prihvatanje C-MOVE i C-GET RQ-ova bez jedinstvenih ključeva za nivoe iznad nivoa upita čak i ako podrška za relational-queries nije bila pregovarana. Prepisuje vrednost navedenu na nivou uređaja. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmRestrictRetrieveSilently": {
+      "title": "Ograniči preuzimanje tiho",
+      "description": "Ukazuje da li će skup traženih objekata za preuzimanje biti tiho (=bez brojanja neprenesenih objekata kao neuspeha) ograničen prema Transfer Capabilities Retrieve Destination-a. U suprotnom, broj traženih objekata za koje nije konfigurisan nijedan Transfer Capability za Retrieve Destination i stoga nisu preuzeti se računa kao neuspeci. Efikasno samo ako je Retrieve Destination konfigurisan sa barem jednim Transfer Capability sa SCP ulogom. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmRejectConflictingPatientAttribute": {
+      "title": "Odbaci konfliktni atribut pacijenta",
+      "description": "DICOM oznaka atributa pacijenta koja mora da se podudara u primljenim objektima sa vrednošću u prethodno primljenim objektima sa jednakim Patient ID-om da bi bili prihvaćeni. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmTag"
+    },
+    "dcmStowRetiredTransferSyntax": {
+      "title": "STOW penzionisana Transfer Syntax",
+      "description": "Čuvanje primljenih JPEG Full Progression, Non-Hierarchical JPEG slika u DICOM slikama sa odgovarajućim (povučenim) Transfer Syntax UID 1.2.840.10008.1.2.4.55. U suprotnom, postavlja 1.2.840.10008.1.2.4.50 (= JPEG Baseline) ili 1.2.840.10008.1.2.4.51 (= JPEG Extended) kao Transfer Syntax UID uskladišćene DICOM slike, bez transkodiranja u JPEG Baseline ili JPEG Extended, ali uključujući JPEG sliku onako kako je primljena. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmStowExcludeAPPMarkers": {
+      "title": "STOW isključi markere aplikacije",
+      "description": "Ukazuje da li APP markeri u JPEG slikama primljenim u STOW-RS Metadata i Bulkdata zahtevima treba da budu isključeni iz JPEG bit streamova enkapsuliranih u kreiranim DICOM instancama. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmStowQuicktime2MP4": {
+      "title": "STOW Quicktime u MP4",
+      "description": "Ukazuje da li QuickTime kontejneri primljeni u STOW-RS Metadata i Bulkdata zahtevima treba da budu konvertovani u MP4 kontejnere enkapsulirane u kreiranim DICOM instancama. Konverzija zahteva da je ffmpeg instaliran i da je ffmpeg CLI uslužni program dostupan u PATH-u. U suprotnom, Quicktime kontejneri će biti enkapsulirani u uskladištenom DICOM objektu verbatim, sa deklarisanim DICOM MPEG-4 Transfer Syntax koji odražava enkodiranje video streama u kontejneru, ali protivreči stvarnom formatu kontejnera. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmStowMaxFragmentLength": {
+      "title": "STOW maksimalna dužina fragmenta",
+      "description": "Maksimalna dužina fragmenata podataka enkapsuliranog JPEG/MPEG stream-a u uskladištenom DICOM objektu. Ako primljeni JPEG/MPEG stream premaši tu vrednost, biće podeljen u više fragmenata koristeći Fragmentable Encapsulated Transfer Syntax. Važeći opseg: 1024..4294967294. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "integer",
+      "minimum": 1024,
+      "exclusiveMinimum": false,
+      "maximum": 4294967294,
+      "exclusiveMaximum": false
+    },
+    "dcmRetrieveTaskWarningOnNoMatch": {
+      "title": "Upozorenje zadatka preuzimanja pri bez podudaranja",
+      "description": "Ukazuje da li će result status Retrieve Tasks biti postavljen na WARNING ako nijedan od traženih objekata nije pronađen na C-MOVE SCP. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmRetrieveTaskWarningOnWarnings": {
+      "title": "Upozorenje zadatka preuzimanja pri upozorenjima",
+      "description": "Ukazuje da li će result status Retrieve Tasks biti postavljen na WARNING ako postoje Warning Sub-Operations, čak i ako je preuzimanje svih objekata bilo uspešno. Prepisuje vrednost navedenu na nivou uređaja",
+      "type": "boolean"
+    },
+    "dcmChangeRequesterAET": {
+      "title": "Promeni AET podnosioca zahteva",
+      "description": "Ukazuje na change requester AET u odbijanjima koja je pokrenuo archive. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmFilterByIssuerOfPatientID": {
+      "title": "Filtriraj po izdavaocu ID-a pacijenta",
+      "description": "Filtriraj po Issuer of Patient ID čak i ako nije naveden matching key za Patient ID. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmMatchSOPClassOnInstanceLevel": {
+      "title": "Podudi SOP klasu na nivou instance",
+      "description": "Ukazuje na uzimanje u obzir SOP Class UID na Instance nivou za izračunavanje poklapanja sa SOP Classes in Study (0008,0062); u suprotnom se oslanja na uskladišćeni SOP Class UID na Series nivou, što može dovesti do nedostajućih poklapanja ako jedna Series uključuje Instances različitih SOP Classes. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmUPSUpdateWithoutTransactionUID": {
+      "title": "UPS ažuriranje bez Transaction UID-a",
+      "description": "Ukazuje na dozvolu UPS Pull SCU ili UPS-RS Web klijentu da ažurira ili promeni status UPS workitem-a u stanju IN PROCESS bez navođenja Transaction UID-a. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmUPS2MWLCFindSCP": {
+      "title": "UPS u MWL C-FIND SCP",
+      "description": "Ukazuje na napajanje Modality Worklist C-FIND SCP usluge iz kontrolisane liste Unified Procedure Step (UPS) instanci mapiranih u MWL stavke. Prepisuje vrednost navedenu na nivou uređaja.",
+      "type": "boolean"
+    },
+    "dcmExportRule": {
+      "title": "Pravilo izvoza",
+      "description": "Export pravila primenjena na DICOM objekte primljene od ovog AE-a. Dopunjuje Export Rules navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "exportRule.schema.json"
+      }
+    },
+    "dcmExportPriorsRule": {
+      "title": "Pravilo izvoza prethodnih",
+      "description": "Export Priors pravila primenjena na DICOM objekte primljene od ovog AE-a. Dopunjuje Export Priors Rules navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "exportPriorsRule.schema.json"
+      }
+    },
+    "dcmMPPSForwardRule": {
+      "title": "Pravilo MPPS prosleđivanja",
+      "description": "MPPS Forward pravila primenjena na MPPS primljen od ovog AE-a. Dopunjuje MPPS Forward Rules navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "mppsForwardRule.schema.json"
+      }
+    },
+    "dcmRSForwardRule": {
+      "title": "RESTful pravilo prosleđivanja",
+      "description": "RESTful Forward pravila. Dopunjuje RESTful Forward pravila navedena na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "rsForwardRule.schema.json"
+      }
+    },
+    "dcmArchiveCompressionRule": {
+      "title": "Pravilo kompresije",
+      "description": "Pravila kompresije. Dopunjuje Compression rules navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "archiveCompressionRule.schema.json"
+      }
+    },
+    "dcmArchiveAttributeCoercion": {
+      "title": "Coercion atributa (Legacy)",
+      "description": "Attribute Coercion primljenog/poslatog DIMSE-a. Dopunjuje Attribute Coercions navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "archiveAttributeCoercion.schema.json"
+      }
+    },
+    "dcmArchiveAttributeCoercion2": {
+      "title": "Coercion atributa (New)",
+      "description": "Attribute Coercion primljenog/poslatog DIMSE-a. Dopunjuje Attribute Coercions navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "archiveAttributeCoercion2.schema.json"
+      }
+    },
+    "dcmStudyRetentionPolicy": {
+      "title": "Politika zadržavanja studije",
+      "description": "Study Retention politike. Dopunjuje Study Retention Policies navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "studyRetentionPolicy.schema.json"
+      }
+    },
+    "dcmStoreAccessControlIDRule": {
+      "title": "Pravila kontrole pristupa skladištu",
+      "description": "Store Access Control pravila primenjena na studije primljene od ovog AE-a. Dopunjuje Store Access Control Rules navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{cn}",
+      "items": {
+        "$ref": "storeAccessControlIDRule.schema.json"
+      }
+    },
+    "dcmUPSOnStore": {
+      "title": "UPS pravilo na skladištenje",
+      "description": "UPS on Store pravila primenjena na DICOM objekte primljene od ovog AE-a. Dopunjuje UPS on Store Rules navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{dcmUPSOnStoreID}",
+      "items": {
+        "$ref": "upsOnStore.schema.json"
+      }
+    },
+    "dcmUPSOnUPSCompleted": {
+      "title": "UPS pravila na UPS završeno",
+      "description": "UPS on UPS Completed pravila primenjena na UPS kojima upravlja ovaj AE. Dopunjuje UPS on UPS Completed Rules navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{dcmUPSOnUPSCompletedID}",
+      "items": {
+        "$ref": "upsOnUPSCompleted.schema.json"
+      }
+    },
+    "dcmUPSOnUPSCanceled": {
+      "title": "UPS pravila na UPS otkazano",
+      "description": "UPS on UPS Canceled pravila primenjena na UPS kojima upravlja bilo koji AE. Dopunjuje UPS on UPS Canceled Rules navedene na nivou uređaja.",
+      "type": "array",
+      "titleKey": "{dcmUPSOnUPSCanceledID}",
+      "items": {
+        "$ref": "upsOnUPSCanceled.schema.json"
+      }
+    }
+  }
+}

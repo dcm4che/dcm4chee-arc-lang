@@ -1,0 +1,8 @@
+uiCompareSide:Strana upoređivanja|Strana poređenja
+uiCompareSide.dcmuiCompareSideName:Ime|Ime strane poređenja
+uiCompareSide.dcmuiCompareSideDescription:Opis|Kratak opis ove grupe
+uiCompareSide.dcmuiCompareSideOrder:Redosled|Redosled Compare strane
+uiCompareSide.dcmuiCompareSideCluster:Klaster|Izaberi klaster
+uiCompareSide.dcmuiCompareSideElasticsearch:Elasticsearch|Izaberi Elasticsearch URL
+uiCompareSide.dcmuiCompareSideQueueName:Red|Izaberi QueueName koji treba koristiti za stranu poređenja
+uiCompareSide.dcmuiCompareSideInstalled:Instaliran|Ako je tačno, ova strana poređenja je aktivna na kontrolnoj tabli

@@ -1,0 +1,6 @@
+imageWriter:Image Writer|Specificira Java Image IO Image Writer i Write Parameter korišćene za kompresiju DICOM slika
+imageWriter.dicomTransferSyntax:Transfer Syntax|Transfer Syntax u koji kompresovati DICOM sliku
+imageWriter.dcmIIOFormatName:Ime formata Image IO Writer-a|Image IO Writer Format ime
+imageWriter.dcmJavaClassName:Ime Java klase|Potpuno kvalifikovana Java klasa Image IO Writer-a. Ako nije navedeno, koristi bilo koji Image Writer pronađen za navedeno Format ime
+imageWriter.dcmPatchJPEGLS:Zakrpa JPEG-LS|Patch JPEG-LS nakon kompresije
+imageWriter.dcmImageWriteParam:Parametar upisa slike|Image Write parametar(i) (name=value) postavljeni na Image Writer pre kompresije

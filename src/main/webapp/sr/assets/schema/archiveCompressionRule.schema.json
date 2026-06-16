@@ -1,0 +1,52 @@
+{
+  "title": "Pravilo arhivske kompresije",
+  "description": "Pravilo arhivske kompresije",
+  "type": "object",
+  "required": [
+    "cn",
+    "dicomTransferSyntax",
+    "dcmRulePriority"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Ime",
+      "description": "Proizvoljno/Smisleno ime Archive Compression pravila",
+      "type": "string"
+    },
+    "dicomTransferSyntax": {
+      "title": "DICOM Transfer Syntax UID",
+      "description": "Transfer Syntax u koji primljene slike treba kompresovati",
+      "type": "string",
+      "format": "dcmTransferSyntax"
+    },
+    "dcmRulePriority": {
+      "title": "Prioritet pravila",
+      "description": "Ako se stanje više Compression pravila podudara za primljenu sliku, primeniće se pravilo sa najvišim prioritetom. Ako postoji više podudarnih pravila sa jednake prioriteta, nedefinisano je koje će se pravilo primeniti.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "dcmProperty": {
+      "title": "Uslovi",
+      "description": "Uslovi u formatu {key}[!]={value}. Pogledajte <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">primenljivost, format i primere.</a>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmImageWriteParam": {
+      "title": "Parametar upisa slike",
+      "description": "Image Write parametar(i) (name=value) postavljeni na Image Writer pre kompresije",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmCompressionDelay": {
+      "title": "Kašnjenje kompresije",
+      "description": "Kašnjenje kompresije u ISO-8601 formatu trajanja PnDTnHnMn.nS. Kompresuje se pri prijemu ako nedostaje.",
+      "type": "string",
+      "format": "dcmDuration"
+    }
+  }
+}

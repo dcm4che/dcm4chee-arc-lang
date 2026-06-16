@@ -1,0 +1,43 @@
+{
+  "title": "Pregled upita/preuzimanja",
+  "description": "Zadaje ponašanje pri sačuvavanju napomene o odbacivanju",
+  "type": "object",
+  "required": [
+    "dcmQueryRetrieveViewID",
+    "dcmHideNotRejectedInstances"
+  ],
+  "properties": {
+    "dcmQueryRetrieveViewID": {
+      "title": "ID pregleda upita/preuzimanja",
+      "description": "Query/Retrieve View identifikator",
+      "type": "string",
+      "use": [
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmQueryRetrieveViewID"
+      ]
+    },
+    "dcmShowInstancesRejectedByCode": {
+      "title": "Prikaži instance odbijene po kodu",
+      "description": "Ukazuje da li Q/R usluge treba da prikažu instance odbijene navedenim kodom u formatu (CV, CSD, 'CM')",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmRejectionNoteCode"
+    },
+    "dcmHideRejectionNoteWithCode": {
+      "title": "Sakrij napomenu o odbacivanju sa kodom",
+      "description": "Ukazuje da li Q/R usluge treba da sakriju Rejection Notes sa navedenim kodom u formatu (CV, CSD, 'CM')",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmRejectionNoteCode"
+    },
+    "dcmHideNotRejectedInstances": {
+      "title": "Sakrij instance koje nisu odbijene",
+      "description": "Ukazuje da li Q/R usluge treba da sakriju instance koje nisu odbijene iz bilo kog razloga.",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

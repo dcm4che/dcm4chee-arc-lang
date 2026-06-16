@@ -1,0 +1,78 @@
+{
+  "title": "Ekstenzija Transfer Capability-ja",
+  "description": "dcm4che vlasnički atributi Transfer Capability-ja",
+  "type": "object",
+  "required": [
+    "dcmRelationalQueries",
+    "dcmCombinedDateTimeMatching",
+    "dcmFuzzySemanticMatching",
+    "dcmTimezoneQueryAdjustment"
+  ],
+  "properties": {
+    "dcmPreferredTransferSyntax": {
+      "title": "Preferirana Transfer Syntax",
+      "description": "Preferred Transfer Syntax za izbor Transfer Syntax unutar Presentation Context, sortirano po prioritetu. Prepisuje vrednosti navedene na AE nivou.",
+      "type": "array",
+      "format": "dcmTransferSyntax",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmRelationalQueries": {
+      "title": "Relacijski upiti",
+      "description": "Omogući/onemogući relacione upite.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmCombinedDateTimeMatching": {
+      "title": "Kombinovano podudaranje datuma i vremena",
+      "description": "Omogući/onemogući kombinovano podudaranje datuma i vremena.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmFuzzySemanticMatching": {
+      "title": "Približno semantičko podudaranje",
+      "description": "Omogući/onemogući fuzzy semantičko podudaranje imena osoba.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmTimezoneQueryAdjustment": {
+      "title": "Podešavanje vremenske zone upita",
+      "description": "Omogući/onemogući podešavanje vremenske zone u upitima",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmStorageConformance": {
+      "title": "Saglasnost skladištenja",
+      "description": "Ukazuje na nivo Conformance-a Storage SCP-a",
+      "type": "integer",
+      "enum": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "dcmDigitalSignatureSupport": {
+      "title": "Podrška za digitalni potpis",
+      "description": "Ukazuje na nivo Digital Signature podrške Storage SCP-a",
+      "type": "integer",
+      "enum": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    "dcmDataElementCoercion": {
+      "title": "Coercion elementa podataka",
+      "description": "Ukazuje na koerciju Data Elements-a Storage SCP-a",
+      "type": "integer",
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    }
+  }
+}

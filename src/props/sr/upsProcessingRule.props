@@ -1,0 +1,24 @@
+upsProcessingRule:Pravilo UPS obrade|Obradi podudarne Workitem-e u objedinjenoj Worklist
+upsProcessingRule.dcmUPSProcessingRuleID:ID pravila UPS obrade|ID UPS Processing pravila
+upsProcessingRule.dicomAETitle:Naslov aplikacionog entiteta (AE)|Naslov aplikacionog entiteta (AE)
+upsProcessingRule.dcmURI:URI UPS procesora|Identifikuje UPS Processor za obradu podudarnih Workitem-a
+upsProcessingRule.dcmProperty:Svojstvo obrade|UPS Processor zavisno svojstvo u formatu <name>=<value>
+upsProcessingRule.dcmSchedule:Zakazana obrada|Odgodi obradu u navedene vremenske periode. Ako nije naveden Processing Schedule, obradi Workitem-e u njihovom Scheduled Procedure Step Start Date Time (0040,4005). Format: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
+upsProcessingRule.dcmMaxThreads:Maksimalan broj niti|Maksimalan broj thread-ova korišćenih za obradu poklapajućih Workitems.
+upsProcessingRule.dcmUPSInputReadinessState:Stanje spremnosti unosa|Obradi Workitem-e sa podudarnim Input Readiness State (0040,4041).
+upsProcessingRule.dcmUPSPriority:Prioritet|Obradi Workitem-e sa podudarnim Scheduled Procedure Step Priority (0074,1200). Ako nije navedeno, obradi Workitem-e bilo kog prioriteta, ali uređi obradu prema njihovom prioritetu.
+upsProcessingRule.dcmUPSLabel:Oznaka koraka procedure|Obradi Workitem-e sa podudarnim Procedure Step Label (0074,1204). Ako nije navedeno, obradi Workitem-e sa bilo kojim Procedure Step Label-om.
+upsProcessingRule.dcmUPSWorklistLabel:Oznaka Worklist-e|Obradi Workitem-e sa podudarnim Worklist Label (0074,1202). Ako nije navedeno, obradi Workitem-e sa bilo kojim Worklist Label-om.
+upsProcessingRule.dcmUPSScheduledWorkitemCode:Kôd zakazanog Workitem-a|Obradi Workitem-e sa podudarnim kodom u Scheduled Workitem Code Sequence (0040,4018) u formatu (CV, CSD, "CM"). Ako nije navedeno, obradi Workitem-e sa bilo kojim Scheduled Workitem Code-om.
+upsProcessingRule.dcmUPSScheduledStationNameCode:Kôd imena zakazane stanice|Obradi Workitem-e sa podudarnim kodom u Scheduled Station Name Code Sequence (0040,4025) u formatu (CV, CSD, "CM"). Ako nije navedeno, obradi Workitem-e sa bilo kojim Scheduled Station Name Code-om.
+upsProcessingRule.dcmUPSScheduledStationClassCode:Kôd klase zakazane stanice|Obradi Workitem-e sa podudarnim kodom u Scheduled Station Name Class Sequence (0040,4026) u formatu (CV, CSD, "CM"). Ako nije navedeno, obradi Workitem-e sa bilo kojim Scheduled Station Class Code-om.
+upsProcessingRule.dcmUPSScheduledStationLocationCode:Kôd geografske lokacije zakazane stanice|Obradi Workitem-e sa podudarnim kodom u Scheduled Station Geographic Location Class Sequence (0040,4027) u formatu (CV, CSD, "CM"). Ako nije navedeno, obradi Workitem-e sa bilo kojim Scheduled Station Geographic Location Code-om.
+upsProcessingRule.dcmUPSPerformedWorkitemCode:Kôd izvršenog Workitem-a|Stavka Performed Workitem Code Sequence (0040,4019) u obrađenom UPS-u u formatu (CV, CSD, "CM").
+upsProcessingRule.dcmUPSPerformedStationNameCode:Kôd imena izvršne stanice|Stavka Performed Station Name Code Sequence (0040,4028) u obrađenom UPS-u u formatu (CV, CSD, "CM").
+upsProcessingRule.dcmUPSIgnoreDiscontinuationReasonCode:Ignoriši kôd razloga prekida|Specificira Discontinuation Reason Code u formatu (CV, CSD, "CM") za ignorisanje i promenu UPS State u COMPLETED - umesto CANCELED.
+upsProcessingRule.dcmUPSRescheduleDiscontinuationReasonCode:Kôd razloga prekida preraspodele|Specificira Discontinuation Reason Code u formatu (CV, CSD, "CM") za preplaniranje otkazanog UPS-a. Ako nije navedeno, UPS otkazan sa bilo kojim Discontinuation Reason Code-om će biti preplaniran prema navedenom Maximum Number of Rescheduling.
+upsProcessingRule.dcmUPSTemplateID:Kreiraj UPS pri otkazivanju|Specificira UPS Template Workitem Instance UID za kreiranje UPS-a ako obrada nije uspela i ponovni pokušaj više nije planiran. Ako nije navedeno, neće biti kreiran UPS pri neuspesima.
+upsProcessingRule.dcmMaxRetries:Maksimalan broj preraspodela|Maksimalan broj puta koliko se Workitem čija obrada nije uspela ponovo zakazuje.
+upsProcessingRule.dcmRetryDelay:Kašnjenje preraspodele|Kašnjenje preplaniranja Workitem-a čija obrada nije uspela u ISO-8601 formatu trajanja PnDTnHnMn.nS.
+upsProcessingRule.dcmMaxRetryDelay:Maksimalno kašnjenje preraspodele|Maksimalno kašnjenje preplaniranja Workitem-a čija obrada nije uspela u ISO-8601 formatu trajanja PnDTnHnMn.nS. Beskonačno ako nije navedeno.
+upsProcessingRule.dcmRetryDelayMultiplier:Množilac kašnjenja preraspodele|Multiplikator u % koji će se primeniti na vrhu Reschedule Delay sa Maximum Reschedule Delay koji se uzima u obzir.

@@ -1,0 +1,51 @@
+{
+  "title": "Konfiguracija kolona tabele UI studija",
+  "description": "Kolone Study tabele",
+  "type": "object",
+  "required": [
+    "dcmuiColumnName",
+    "dcmuiValuePath",
+    "dcmuiValueType"
+  ],
+  "properties": {
+    "dcmuiColumnName": {
+      "title": "Ime kolone",
+      "description": "Ime kolone u Study tabeli",
+      "type": "string"
+    },
+    "dcmuiColumnId": {
+      "title": "ID kolone",
+      "description": "Svaka moguća kolona koja se koristi u UI-ju ima ID; korišćenjem ID-a možete promeniti neka od svojstava te kolone, kao što su ime, opis, redosled ili širina",
+      "type": "string"
+    },
+    "dcmuiColumnTitle": {
+      "title": "Opis kolone",
+      "description": "Opis kolone, prikazan pri prelasku miša",
+      "type": "string"
+    },
+    "dcmuiValuePath": {
+      "title": "Putanja vrednosti",
+      "description": "Value (json-Object) putanja kolone (npr.: '00100010.Value[0].Alphabetic' za ime pacijenta ili '00100020.Value[0]' za Patient ID",
+      "type": "string"
+    },
+    "dcmuiValueType": {
+      "title": "Tip vrednosti",
+      "description": "Tip kolone kako dobiti vrednost, podrazumevano treba biti 'value'",
+      "type": "string",
+      "enum": [
+        "value",
+        "pipe"
+      ]
+    },
+    "dcmuiColumnWidth": {
+      "title": "Širina kolone u težini",
+      "description": "Širina kolone u težini ( x > 0.1 - x < beskonačno ) podrazumevano 1",
+      "type": "string"
+    },
+    "dcmuiColumnOrder": {
+      "title": "Redosled kolone",
+      "description": "Redosled Column-e",
+      "type": "number"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Filter atributa",
+  "description": "Atributi uskladišteni u bazi podataka",
+  "type": "object",
+  "required": [
+    "dcmEntity",
+    "dcmTag"
+  ],
+  "properties": {
+    "dcmEntity": {
+      "title": "Entitet atributa",
+      "description": "Entitet Attribute Filter-a ili Export pravila ('Patient', 'Study', 'Series', 'Instance', 'MPPS', 'MWL', 'UPS').",
+      "type": "string",
+      "enum": [
+        "Patient",
+        "Study",
+        "Series",
+        "Instance",
+        "MPPS",
+        "MWL",
+        "UPS"
+      ]
+    },
+    "dcmTag": {
+      "title": "Oznaka atributa",
+      "description": "DICOM oznaka kao heksadecimalni string",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmTag"
+    },
+    "dcmCustomAttribute1": {
+      "title": "Proizvoljni atribut 1",
+      "description": "Konfiguriši bilo koji atribut iz DICOM objekta koji treba da bude umetnut u bazu podataka kao Custom Attribute 1. Primjenjivo samo za Patient / Study / Series / Instance entitete. Npr. DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] ili za Private atribut DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "type": "string"
+    },
+    "dcmCustomAttribute2": {
+      "title": "Proizvoljni atribut 2",
+      "description": "Konfiguriši bilo koji atribut iz DICOM objekta koji treba da bude umetnut u bazu podataka kao Custom Attribute 2. Primjenjivo samo za Patient / Study / Series / Instance entitete. Npr. DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] ili za Private atribut DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "type": "string"
+    },
+    "dcmCustomAttribute3": {
+      "title": "Proizvoljni atribut 3",
+      "description": "Konfiguriši bilo koji atribut iz DICOM objekta koji treba da bude umetnut u bazu podataka kao Custom Attribute 3. Primjenjivo samo za Patient / Study / Series / Instance entitete. Npr. DicomAttribute[@tag=\"00200070\"]/Value[@number=\"1\"] ili za Private atribut DicomAttribute[@tag=\"00E10024\" and @privateCreator=\"ELSCINT1\"]/Value[@number=\"1\"]",
+      "type": "string"
+    },
+    "dcmAttributeUpdatePolicy": {
+      "title": "Politika ažuriranja atributa",
+      "description": "Specificira politiku ažuriranja za ekstraktovane atribute u DB na nivou Series, Study & Patient pri prijemu daljih instanci entiteta.",
+      "type": "string",
+      "default": "PRESERVE",
+      "enum": [
+        "PRESERVE|The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified",
+        "SUPPLEMENT|The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added",
+        "MERGE|The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values",
+        "OVERWRITE|The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values",
+        "REPLACE|The attributes will be completely overwritten"
+      ]
+    }
+  }
+}

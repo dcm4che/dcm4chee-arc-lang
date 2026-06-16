@@ -1,0 +1,8 @@
+uiFilterTemplate:Šablon UI filtera|Definisani šablon filtera
+uiFilterTemplate.dcmuiFilterTemplateGroupName:Ime|Ime šablona
+uiFilterTemplate.dcmuiFilterTemplateID:ID|ID filtera gde se ovaj šablon može primeniti
+uiFilterTemplate.dcmuiFilterTemplateDescription:Opis|Opis šablona filtera
+uiFilterTemplate.dcmuiFilterTemplateUsername:Korisničko ime|Korisničko ime koje može koristiti ovaj šablon
+uiFilterTemplate.dcmuiFilterTemplateRole:Uloga|Korisnička uloga koja može koristiti ovaj šablon
+uiFilterTemplate.dcmuiFilterTemplateFilters:Filteri|Podrazumevani filteri u ovom šablonu, filter parametar key=value (primer LocalAET=DCM4CHEE). Za datum filter možete koristiti predefinisane ključne reči (today, yesterday, this_week, this_month, last_week, last_month, this_quarter, last_quarter, this_year, last_year) tako da se dinamičke vrednosti filtera mogu generisati.
+uiFilterTemplate.dcmuiFilterTemplateDefault:Podrazumevano|Koristi ovaj šablon kao podrazumevani

@@ -1,0 +1,116 @@
+{
+  "title": "HL7 aplikacija",
+  "description": "Informacije o HL7 aplikaciji",
+  "type": "object",
+  "required": [
+    "hl7ApplicationName",
+    "dicomNetworkConnectionReference",
+    "hl7DefaultCharacterSet",
+    "hl7SendingCharacterSet"
+  ],
+  "properties": {
+    "hl7ApplicationName": {
+      "title": "Ime HL7 aplikacije",
+      "description": "HL7 Application i Facility ime (Application|Facility)",
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.hl7ADTSendingApplication",
+        "$.dcmDevice.dcmArchiveDevice.hl7ADTReceivingApplication[*]",
+        "$.dcmDevice.dcmArchiveDevice.hl7PSUSendingApplication",
+        "$.dcmDevice.dcmArchiveDevice.hl7PSUReceivingApplication[*]",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.hl7PSUSendingApplication",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.hl7PSUReceivingApplication[*]",
+        "$.dicomNetworkAE[*].dcmNetworkAE.hl7ApplicationName",
+        "$.dcmDevice.dcmArchiveDevice.hl7ForwardRule[*].hl7FwdApplicationName[*]",
+        "$.dcmDevice.hl7Application[*].dcmArchiveHL7Application.hl7ForwardRule[*].hl7FwdApplicationName[*]"
+      ]
+    },
+    "dicomNetworkConnectionReference": {
+      "title": "Referenca mrežne konekcije",
+      "description": "JSON Pointers na Network Connection objekte za ovu HL7 aplikaciju",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hl7AcceptedSendingApplication": {
+      "title": "Prihvaćena aplikacija slanja",
+      "description": "Application|Facility ime prihvaćenih Sending Application-a; bilo koje ako nije navedeno",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hl7OtherApplicationName": {
+      "title": "Drugo ime HL7 aplikacije",
+      "description": "Dodatno HL7 Application i Facility ime (Application|Facility) - prihvatit će i HL7 poruke sa takvim Receiving Application i Facility imenom",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hl7AcceptedMessageType": {
+      "title": "Prihvaćeni tip poruke",
+      "description": "Tip(ovi) poruke (MessageType^TriggerEvent) prihvaćenih poruka",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "hl7DefaultCharacterSet": {
+      "title": "Podrazumevani skup znakova",
+      "description": "Skup znakova korišćen za dekodiranje primljenih poruka ako nije naveden u MSH-18.",
+      "type": "string",
+      "default": "ASCII",
+      "format": "hl7Charset"
+    },
+    "hl7SendingCharacterSet": {
+      "title": "Skup znakova slanja",
+      "description": "Skup znakova korišćen za kodiranje HL7 poruka poslatih iz arhive.",
+      "type": "string",
+      "default": "ASCII",
+      "format": "hl7Charset"
+    },
+    "hl7OptionalMSHField": {
+      "title": "Opciono MSH polje",
+      "description": "Prihvati HL7 poruke sa vrednostima koje nedostaju za navedena MSH polja, čak i ako su obavezne prema <a href=\"https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43\" target=\"_blank\">IHE RAD TF Vol 2 Message Control zahtevima</a>.",
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "enum": [
+          "3|Sending Application",
+          "4|Sending Facility",
+          "5|Receiving Application",
+          "6|Receiving Facility",
+          "7|Date/Time of Message",
+          "10|Message Control ID",
+          "11|Processing ID",
+          "12|Version ID"
+        ]
+      }
+    },
+    "dicomDescription": {
+      "title": "HL7 opis",
+      "description": "Nesputani tekstualni opis HL7 Application",
+      "type": "string"
+    },
+    "dicomApplicationCluster": {
+      "title": "Klaster aplikacija",
+      "description": "Lokalno definisana imena za podskup srodnih aplikacija",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomInstalled": {
+      "title": "instaliran",
+      "description": "Tačno ako je HL7 aplikacija instalirana na mreži. Ako nije navedeno, informacija o statusu instalacije HL7 aplikacije se nasleđuje od uređaja",
+      "type": "boolean"
+    },
+    "dcmArchiveHL7Application": {
+      "title": "Arhivska HL7 aplikacija",
+      "description": "Informacije povezane sa DICOM arhivskom HL7 aplikacijom",
+      "$ref": "archiveHL7Application.schema.json"
+    }
+  }
+}

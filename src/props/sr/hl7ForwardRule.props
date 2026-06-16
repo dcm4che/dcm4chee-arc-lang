@@ -1,0 +1,4 @@
+hl7ForwardRule:HL7 pravilo prosleđivanja|HL7 Forward pravilo
+hl7ForwardRule.cn:Ime|Proizvoljno/Smisleno ime HL7 Forward pravila
+hl7ForwardRule.hl7FwdApplicationName:Ime HL7 aplikacije prosleđivanja|HL7 Forward Destination Application i Facility ime (Application|Facility)
+hl7ForwardRule.dcmProperty:Uslovi|Conditions in format {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Examples: MSH-4=FORWARD or MSH-9=ADT\\^A28\\^ADT_A05 or PID-3[.3]=PIDIssuer or PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType
