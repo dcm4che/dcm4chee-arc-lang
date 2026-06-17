@@ -68,7 +68,7 @@
       "enum": [
         "HTTPS",
         "LDAPS"
-       ]
+      ]
     },
     "dcmTCPBacklog": {
       "title": "TCP Backlog",
