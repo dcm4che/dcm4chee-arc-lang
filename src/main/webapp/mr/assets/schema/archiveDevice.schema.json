@@ -724,7 +724,7 @@
         "302|Found",
         "303|See Other",
         "307|Temporary Redirect"
-       ]
+      ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
       "title": "Fallback WADO-URI Redirect On Not Found",
@@ -748,7 +748,7 @@
         "302|Found",
         "303|See Other",
         "307|Temporary Redirect"
-       ]
+      ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {
       "title": "External WADO-RS Redirect On Not Found",
@@ -1298,11 +1298,11 @@
       "type": "string",
       "default": "WITHOUT_STUDIES",
       "enum": [
-          "NEVER|Never allow delete patient permanently",
-          "ALWAYS|Always allow delete patient permanently",
-          "WITHOUT_STUDIES|अभ्यासाशिवाय रुग्णाचा रेकॉर्ड हटवण्याची परवानगी द्या"
-        ]
-      },
+        "NEVER|Never allow delete patient permanently",
+        "ALWAYS|Always allow delete patient permanently",
+        "WITHOUT_STUDIES|अभ्यासाशिवाय रुग्णाचा रेकॉर्ड हटवण्याची परवानगी द्या"
+      ]
+    },
     "dcmPurgeStgCmtCompletedDelay": {
       "title": "संपूर्ण साठवण वचनबद्धता हटवण्याचे विलंब",
       "description": "ISO-8601 कालावधि PnDTnHnMnS प्रारूपात विलंब ज्यानंतर संपूर्ण साठवण वचनबद्धता विनंत्यांचे प्रतिसादांना हटवले जातील. अनुपस्थित असल्यास, कुठलेही संपूर्ण साठवण वचनबद्धता हटवले जाणार नाही.",

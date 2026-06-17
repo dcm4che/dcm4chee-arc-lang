@@ -724,7 +724,7 @@
         "302|Found",
         "303|See Other",
         "307|Temporary Redirect"
-       ]
+      ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
       "title": "Fallback WADO-URI Redirect On Not Found",
@@ -748,7 +748,7 @@
         "302|Found",
         "303|See Other",
         "307|Temporary Redirect"
-       ]
+      ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {
       "title": "External WADO-RS Redirect On Not Found",
@@ -1298,11 +1298,11 @@
       "type": "string",
       "default": "WITHOUT_STUDIES",
       "enum": [
-          "NEVER|मरीज़ के रेकॉर्ड को मिटाने की अनुमति कभी नहीं दे",
-          "ALWAYS|मरीज़ के रेकॉर्ड को मिटाने की अनुमति हमेशा दे",
-          "WITHOUT_STUDIES|मरीज़ के रेकॉर्ड को मिटाने की अनुमति मरीज़ रेकॉर्ड बिना स्टडीज को दे"
-        ]
-      },
+        "NEVER|मरीज़ के रेकॉर्ड को मिटाने की अनुमति कभी नहीं दे",
+        "ALWAYS|मरीज़ के रेकॉर्ड को मिटाने की अनुमति हमेशा दे",
+        "WITHOUT_STUDIES|मरीज़ के रेकॉर्ड को मिटाने की अनुमति मरीज़ रेकॉर्ड बिना स्टडीज को दे"
+      ]
+    },
     "dcmPurgeStgCmtCompletedDelay": {
       "title": "संपूर्ण स्टोरेज प्रतिबद्धता परिष्करण विलम्ब",
       "description": "ISO-8601 कालावधि प्रारूप PnDTnHnMnS में विलम्ब जिसके बाद संपूर्ण स्टोरेज प्रतिबद्धता अनुरोधों के प्रतिक्रियाओं का परिष्करण होगा । यदि कॉन्फ़िगर न किया हो तो, कोई परिष्करण नहीं होगा ।",

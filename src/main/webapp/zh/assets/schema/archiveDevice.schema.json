@@ -724,7 +724,7 @@
         "302|Found",
         "303|See Other",
         "307|Temporary Redirect"
-       ]
+      ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
       "title": "Fallback WADO-URI Redirect On Not Found",
@@ -748,7 +748,7 @@
         "302|Found",
         "303|See Other",
         "307|Temporary Redirect"
-       ]
+      ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {
       "title": "External WADO-RS Redirect On Not Found",
@@ -1298,11 +1298,11 @@
       "type": "string",
       "default": "WITHOUT_STUDIES",
       "enum": [
-          "NEVER|Never allow delete patient permanently",
-          "ALWAYS|Always allow delete patient permanently",
-          "WITHOUT_STUDIES|允许完全删除患者 - 未检查"
-        ]
-      },
+        "NEVER|Never allow delete patient permanently",
+        "ALWAYS|Always allow delete patient permanently",
+        "WITHOUT_STUDIES|允许完全删除患者 - 未检查"
+      ]
+    },
     "dcmPurgeStgCmtCompletedDelay": {
       "title": "延迟清除已完成的存储承诺",
       "description": "ISO-8601期间PnDTnHnMnS格式延迟后清除已完成的存储承诺请求的结果。如果不存在,则不存在删除。",
@@ -2551,3 +2551,4 @@
     }
   }
 }
+qq

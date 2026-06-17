@@ -724,7 +724,7 @@
         "302|Found",
         "303|See Other",
         "307|Temporary Redirect"
-       ]
+      ]
     },
     "dcmFallbackWadoURIRedirectOnNotFound": {
       "title": "Redirección WADO-URI en caso de fallo",
@@ -748,7 +748,7 @@
         "302|Found",
         "303|See Other",
         "307|Temporary Redirect"
-       ]
+      ]
     },
     "dcmExternalWadoRSRedirectOnNotFound": {
       "title": "Redirección externa WADO-RS en no encontrado",
@@ -1298,11 +1298,11 @@
       "type": "string",
       "default": "WITHOUT_STUDIES",
       "enum": [
-          "NEVER|Never allow delete patient permanently",
-          "ALWAYS|Always allow delete patient permanently",
-          "WITHOUT_STUDIES|Permitir Borrar Paciente sólo Pacientes sin Estudios."
-        ]
-      },
+        "NEVER|Never allow delete patient permanently",
+        "ALWAYS|Always allow delete patient permanently",
+        "WITHOUT_STUDIES|Permitir Borrar Paciente sólo Pacientes sin Estudios."
+      ]
+    },
     "dcmPurgeStgCmtCompletedDelay": {
       "title": "Retraso de purga de compromiso de almacenamiento completado",
       "description": "Retraso en formato de duración ISO-8601 PnDTnHnMnS tras el cual se purgan los resultados de las solicitudes de compromiso de almacenamiento completadas. Si está ausente, no hay purga.",
