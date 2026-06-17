@@ -33,7 +33,7 @@
       "title": "空闲MWL状态",
       "description": "将空闲调度步骤的状态更改为指定的值。",
       "type": "string",
-      "enum":[
+      "enum": [
         "CANCELED",
         "DISCONTINUED",
         "COMPLETED"

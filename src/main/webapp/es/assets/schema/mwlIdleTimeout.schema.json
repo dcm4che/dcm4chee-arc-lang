@@ -33,7 +33,7 @@
       "title": "Estado MWL en Espera",
       "description": "Cambia el estado de los Pasos de Procedimiento Programados en espera al valor especificado.",
       "type": "string",
-      "enum":[
+      "enum": [
         "CANCELED",
         "DISCONTINUED",
         "COMPLETED"

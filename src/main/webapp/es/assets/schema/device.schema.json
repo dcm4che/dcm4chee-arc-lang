@@ -98,7 +98,7 @@
       "order": 9,
       "items": {
         "type": "string",
-        "enum":[
+        "enum": [
           "ARCHIVE|Archive",
           "COMP|Computation Server",
           "CAD|Computer Assisted Detection/Diagnosis",

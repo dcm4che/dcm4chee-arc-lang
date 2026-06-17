@@ -25,7 +25,7 @@
       "description": "पक्षों की तुलना का क्रम ।",
       "type": "integer",
       "default":0,
-      "enum":[
+      "enum": [
          0,
          1
       ]

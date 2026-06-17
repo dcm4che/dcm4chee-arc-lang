@@ -33,7 +33,7 @@
       "title": "MWL status pri neaktivnosti",
       "description": "Promena statusa neaktivnih Scheduled Procedure Steps u navedenu vrednost.",
       "type": "string",
-      "enum":[
+      "enum": [
         "CANCELED",
         "DISCONTINUED",
         "COMPLETED"

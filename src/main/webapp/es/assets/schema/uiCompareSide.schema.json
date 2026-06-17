@@ -25,7 +25,7 @@
       "description": "Orden del lado de comparación.",
       "type": "integer",
       "default":0,
-      "enum":[
+      "enum": [
          0,
          1
       ]

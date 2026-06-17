@@ -94,7 +94,7 @@
       "type": "array",
       "items": {
         "type": "string",
-        "enum":[
+        "enum": [
           "edit",
           "create",
           "delete",

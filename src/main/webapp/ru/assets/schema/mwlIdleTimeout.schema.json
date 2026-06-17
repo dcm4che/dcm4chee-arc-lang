@@ -33,7 +33,7 @@
       "title": "MWL Status on Idle",
       "description": "Change Status of idle Scheduled Procedure Steps to specified value.",
       "type": "string",
-      "enum":[
+      "enum": [
         "CANCELED",
         "DISCONTINUED",
         "COMPLETED"

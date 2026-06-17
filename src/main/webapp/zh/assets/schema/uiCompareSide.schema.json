@@ -25,7 +25,7 @@
       "description": "比较顺序",
       "type": "integer",
       "default":0,
-      "enum":[
+      "enum": [
          0,
          1
       ]

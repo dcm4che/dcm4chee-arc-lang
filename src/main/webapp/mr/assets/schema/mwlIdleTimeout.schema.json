@@ -33,7 +33,7 @@
       "title": "निष्क्रिय होण्यावर MWL ची स्थिती",
       "description": "निष्क्रिय अनुसूची प्रक्रियेच्या स्टेप्सची स्थिती दर्शविलेल्या मूल्याने बदला.",
       "type": "string",
-      "enum":[
+      "enum": [
         "CANCELED",
         "DISCONTINUED",
         "COMPLETED"

@@ -33,7 +33,7 @@
       "title": "アイドル時の MWL ステータス",
       "description": "アイドル 予定 手順 ステップの ステータスを 指定した 値に 変更します。",
       "type": "string",
-      "enum":[
+      "enum": [
         "CANCELED",
         "DISCONTINUED",
         "COMPLETED"

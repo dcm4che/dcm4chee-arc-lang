@@ -33,7 +33,7 @@
       "title": "निष्क्रिय होने पे MWL की स्थिति",
       "description": "निष्क्रिय अनुसूचित प्रक्रिया स्टेप्स की स्थिति को निर्दिष्ट मूल्य से बदले ।",
       "type": "string",
-      "enum":[
+      "enum": [
         "CANCELED",
         "DISCONTINUED",
         "COMPLETED"

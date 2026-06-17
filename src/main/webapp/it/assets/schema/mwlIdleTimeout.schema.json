@@ -33,7 +33,7 @@
       "title": "Stato MWL in inattivo",
       "description": "Modificare lo stato dei passaggi della procedura pianificata inattiva al valore specificato.",
       "type": "string",
-      "enum":[
+      "enum": [
         "CANCELED",
         "DISCONTINUED",
         "COMPLETED"
