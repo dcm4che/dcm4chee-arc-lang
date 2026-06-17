@@ -8,3 +8,6 @@ exportRule.dcmProperty:विशेषता अटी|विशेषता अ
 exportRule.dcmSchedule:वेळ अटी|हा नियम केवळ निर्दिष्ट कालावधी दरम्यान लागू करा.
 exportRule.dcmDuration:निर्यात विलंब|एका निर्यात कार्यामध्ये एकाधिक ट्रिगर इव्हेंट जमा करण्यासाठी घटकांची निर्यात विलंब.
 exportRule.dcmExportReoccurredInstances:पुन्हा प्राप्त झालेले दृष्टांते निर्यात करा|सूचित करते की प्राप्त झालेले दृष्टांते पुन्हा प्राप्त झाल्यावर घटक निर्यात करा.
+exportRule.dcmExportReoccurredInstances.NEVER:Never export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.ALWAYS:Always export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.REPLACE:Export entity only on reoccurrence of replaced instances

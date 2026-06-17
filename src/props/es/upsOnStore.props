@@ -10,6 +10,11 @@ upsOnStore.dcmUPSStartDateTimeDelay:Retraso de la Hora de Inicio del Paso del Pr
 upsOnStore.dcmUPSCompletionDateTimeDelay:FechaHora de Finalización Esperada Retraso|Retraso de la FechaHora de Finalización Esperada (0040,4011) en el SAI creado a partir de la hora de recepción en formato PnDTnHnMn.nS. Si no existe, no se establecerá ninguna Fecha y Hora de Finalización Esperada.
 upsOnStore.dcmUPSInstanceUIDBasedOnName:UID Instancia UPS basada en nombre|Valor utilizado para generar el UID Instancia SOP basado en nombre (0008,0018) en la UPS creada. Normalmente, el valor incluirá {StudyInstanceUID}, {SeriesInstanceUID} o {SOPInstanceUID} para crear una UPS diferente para cada Estudio, Serie u Objeto recibido. Si no existe, se utilizará un UID de instancia SOP generado aleatoriamente (0008,0018).
 upsOnStore.dcmUPSIncludeInputInformation:Incluir información de entrada|Indica si los objetos recibidos se referenciarán en la secuencia de información de entrada (0040,4021) en las UPS creadas.
+upsOnStore.dcmUPSIncludeInputInformation.NO:Do not include Input Information Sequence
+upsOnStore.dcmUPSIncludeInputInformation.SINGLE:no actualizar la UPS existente
+upsOnStore.dcmUPSIncludeInputInformation.APPEND:actualizar la UPS existente en estado SCHEDULED
+upsOnStore.dcmUPSIncludeInputInformation.SINGLE_OR_CREATE:si la UPS ya existe, crear una nueva UPS con UID derivado
+upsOnStore.dcmUPSIncludeInputInformation.APPEND_OR_CREATE:si la UPS existente ya no está en estado SCHEDULED, crear una nueva UPS con UID derivado
 upsOnStore.dcmUPSIncludePatient:La UPS incluye al paciente|Indica si el paciente (asociado a la UPS creada) se crea utilizando los atributos del paciente en el objeto recibido; es verdadero si no existe.
 upsOnStore.dcmDestinationAE:AE de Destino|Título de una Entidad de Aplicación DICOM en la que se almacenarán las Instancias.
 upsOnStore.dcmEntity:Ámbito de Acumulación|Ámbito de Acumulación.

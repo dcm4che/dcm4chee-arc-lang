@@ -10,6 +10,11 @@ upsOnStore.dcmUPSStartDateTimeDelay:Kašnjenje datuma/vremena početka zakazanog
 upsOnStore.dcmUPSCompletionDateTimeDelay:Kašnjenje očekivanog datuma/vremena završetka|Kašnjenje Expected Completion DateTime (0040,4011) u kreiranom UPS-u od vremena prijema u formatu PnDTnHnMn.nS. Ako nije navedeno, neće se postaviti Expected Completion Date i Time.
 upsOnStore.dcmUPSInstanceUIDBasedOnName:UID UPS instance na osnovu imena|Vrednost koja se koristi za generisanje name based SOP Instance UID (0008,0018) u kreiranom UPS-u. Tipično će vrednost uključivati {StudyInstanceUID}, {SeriesInstanceUID} ili {SOPInstanceUID} da bi se kreirao različit UPS za svaki primljeni Study, Series ili Object. Ako nije navedeno, koristiće se random generisan SOP Instance UID (0008,0018).
 upsOnStore.dcmUPSIncludeInputInformation:Uključi ulazne informacije|Ukazuje da li primljeni objekti treba da budu referencirani u Input Information Sequence (0040,4021) kreiranog UPS-a.
+upsOnStore.dcmUPSIncludeInputInformation.NO:Do not include Input Information Sequence
+upsOnStore.dcmUPSIncludeInputInformation.SINGLE:Do not updating existing UPS
+upsOnStore.dcmUPSIncludeInputInformation.APPEND:Update existing UPS in state SCHEDULED
+upsOnStore.dcmUPSIncludeInputInformation.SINGLE_OR_CREATE:If UPS already exists, create new UPS with derived UID
+upsOnStore.dcmUPSIncludeInputInformation.APPEND_OR_CREATE:If existing UPS is no longer in state SCHEDULED, create new UPS with derived UID
 upsOnStore.dcmUPSIncludePatient:UPS uključi pacijenta|Ukazuje da li je pacijent (povezan sa kreiranim UPS) kreiran korišćenjem atributa pacijenta u primljenom objektu; tačno ako nije navedeno.
 upsOnStore.dcmDestinationAE:Odredišni AE|Naslov DICOM aplikacionog entiteta u koji će instance biti sačuvane.
 upsOnStore.dcmEntity:Obim akumulacije|Obim akumulacije

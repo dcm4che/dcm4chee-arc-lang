@@ -3,12 +3,66 @@ auditSuppressCriteria.cn:Nombre|Nombre arbitrario/significativo del criterio de 
 auditSuppressCriteria.dcmAuditEventID:Identificación del evento de auditoría|DICOM PS 3.15 A.5 Código de identificación del evento de auditoría y nombre del sistema de códigos en formato (CV, CSD, "CM").
 auditSuppressCriteria.dcmAuditEventTypeCode:Código de tipo de evento de auditoría|DICOM PS 3.15 A.5 Código de tipo de evento de auditoría en formato (CV, CSD, "CM").
 auditSuppressCriteria.dcmAuditEventActionCode:Código de acción del evento|DICOM PS 3.15 A.5 Código del tipo de acción del evento de auditoría.
+auditSuppressCriteria.dcmAuditEventActionCode.C:Create
+auditSuppressCriteria.dcmAuditEventActionCode.R:Read
+auditSuppressCriteria.dcmAuditEventActionCode.U:Update
+auditSuppressCriteria.dcmAuditEventActionCode.D:Delete
+auditSuppressCriteria.dcmAuditEventActionCode.E:Execute
 auditSuppressCriteria.dcmAuditEventOutcomeIndicator:Indicador de resultado del evento|DICOM PS 3.15 A.5 Indicador de resultado del evento de auditoría.
+auditSuppressCriteria.dcmAuditEventOutcomeIndicator.0:Success
+auditSuppressCriteria.dcmAuditEventOutcomeIndicator.4:Minor Failure
+auditSuppressCriteria.dcmAuditEventOutcomeIndicator.8:Major Failure
+auditSuppressCriteria.dcmAuditEventOutcomeIndicator.12:Serious Failure
 auditSuppressCriteria.dcmAuditUserID:Identificación de usuario|ID de usuario del participante activo de la auditoría PS 3.15 A.5.
 auditSuppressCriteria.dcmAuditAlternativeUserID:Identificación de usuario alternativa|DICOM PS 3.15 A.5 Identificación de usuario alternativo del participante activo en la auditoría.
 auditSuppressCriteria.dcmAuditUserRoleIDCode:Código de identificación de la función del usuario|DICOM PS 3.15 A.5 Código de identificación de la función del usuario del participante activo en formato de auditoría (CV, CSD, "CM").
 auditSuppressCriteria.dcmAuditNetworkAccessPointID:Identificación del punto de acceso a la red|DICOM PS 3.15 A.5 Identificación del punto de acceso a la red del participante activo en la auditoría.
 auditSuppressCriteria.dcmAuditUserIsRequestor:El usuario es el solicitante|Indica si el participante activo es el iniciador/solicitante del evento de auditoría, tal como se especifica en DICOM PS 3.15 A.5.
 auditSuppressCriteria.dcmParticipantObjectTypeCode:Código de tipo de objeto de participante|DICOM PS 3.15 A.5 Código de tipo de objeto de participante.
+auditSuppressCriteria.dcmParticipantObjectTypeCode.1:Person
+auditSuppressCriteria.dcmParticipantObjectTypeCode.2:System Object
+auditSuppressCriteria.dcmParticipantObjectTypeCode.3:Organization
+auditSuppressCriteria.dcmParticipantObjectTypeCode.4:Other
 auditSuppressCriteria.dcmParticipantObjectTypeCodeRole:Código de tipo de objeto de participante Función|DICOM PS 3.15 A.5 Código de tipo de objeto de participante Función.
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.1:Patient
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.2:Location
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.3:Report
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.4:Resource
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.5:Master File
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.6:User
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.7:List
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.8:Doctor
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.9:Subscriber
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.10:Guarantor
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.11:Security User Entity
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.12:Security User Group
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.13:Security Resource
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.14:Security Granualarity Definition
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.15:Provider
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.16:Report Destination
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.17:Report Library
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.18:Schedule
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.19:Customeer
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.20:Job
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.21:Job Stream
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.22:Table
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.23:Routing Criteria
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.24:Query
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.25:Data Source
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.26:Processing Element
 auditSuppressCriteria.dcmParticipantObjectDataLifeCycle:Ciclo de vida de los datos del objeto participante|DICOM PS 3.15 A.5 Ciclo de vida de los datos del objeto participante.
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.1:Origination Creation
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.2:Import Copy From Original
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.3:Amendment
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.4:Verification
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.5:Translation
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.6:Access Use
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.7:DeIdentification
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.8:Aggregation Summarization Derivation
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.9:Report
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.10:Export Copy To Target
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.11:Disclosure
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.12:Receipt Of Disclosure
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.13:Archiving
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.14:Logical Deletion
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.15:Permanent Erasure Physical Destruction

@@ -4,18 +4,34 @@ storage.dcmURI:URI di archiviazione|RFC2079: Uniform Resource Identifier
 storage.dcmArchiveSeriesAsTAR:Archive Series as TAR|Indicates that binary DICOM objects of one Series are packed in one TAR archive on this Storage System; false if absent.
 storage.dcmStoragePathFormat:Storage Path Format|Format of file path of DICOM binary objects or metadata in JSON format or of ZIP archives containing metadata in JSON format for each DICOM object of one Series, written to this Storage System. '{now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}', if absent.
 storage.dcmOnStoragePathAlreadyExists:Already Exists on Storage Path|Specifies behavior if an object already exists on the storage path on the storage system, assembled according to the configured 'Storage Path Format'. Default behaviour 'RANDOM_PATH'. (hover on options to see their descriptions)
+storage.dcmOnStoragePathAlreadyExists.FAILURE:Signals failure writing the new object
+storage.dcmOnStoragePathAlreadyExists.NOOP:Proceed without writing the new object
+storage.dcmOnStoragePathAlreadyExists.RANDOM_PATH:Replace last path element be random 8 hex digit number and try again
 storage.dcmRetryCreateDirectories:Retry Create Directories|Specifies number of retries to create parent directories of the storage file path - may workaround issues concerning NFS; 0 if absent.
 storage.dcmAltCreateDirectories:Alt Create Directories|Indicate to not rely on 'createDirectories' function in 'java.nio.file.Files' Java class, to create all nonexistent parent directories first, but instead explicitly create parent directories if NoSuchFileException is thrown. May workaround issues concerning NFS.
 storage.dcmCheckMountFilePath:Check Mount File Path|Indicates to check if a mounted file system did not get detached from its mount point, by specifying the path of a file relative to the path of the Storage URI, which is shadowed by the mount, so its visibility signals that the mount failed. If the file becomes visible, the write operation to the storage fails, preventing to store objects on the file system of the mount point directory.
 storage.dcmCheckExistFilePath:Check Exist File Path|Indicates to check if the specified file on the storage file system exists. If the file becomes inaccessible, the write operation to the storage fails, preventing to store objects on the file system.
 storage.dcmFileOpenOption:File Open Option(s)|Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)
+storage.dcmFileOpenOption.CREATE_NEW:Create a new file, failing if the file already exists
+storage.dcmFileOpenOption.DSYNC:Requires that every update to the file's content be written synchronously to the underlying storage device
+storage.dcmFileOpenOption.SYNC:Requires that every update to the file's content or metadata be written synchronously to the underlying storage device
 storage.dcmLocationStatus:Location Status|Initial Location Status of DICOM files written to this Storage System. Default behaviour 'OK'. (hover on options to see their descriptions)
+storage.dcmLocationStatus.OK:Indicates access state of stored objects is stable
+storage.dcmLocationStatus.VERIFY_QSTAR_ACCESS_STATE:Indicates to verify access state of stored objects from QStar Tape File System
 storage.dcmCountLocationsByStatus:Count Locations by Status|Indicate to include counts of locations with status != 0 (=OK) for this Storage System by RESTful service to list Storage Systems; false if absent.
 storage.dcmDigestAlgorithm:Algoritmo per il Digest|Algoritmo per la generazione dei checksum.
+storage.dcmDigestAlgorithm.MD5:Message-digest algorithm
+storage.dcmDigestAlgorithm.SHA-1:Secure Hash Algorithm 1
+storage.dcmDigestAlgorithm.SHA-265:Secure Hash Algorithm 256
 storage.dcmMaxRetries:Numero massimo di tentativi|Numero massimo di tentativi per memorizzare un oggetto nel sistema di archiviazione.
 storage.dcmRetryDelay:Intervallo tra i tentativi:|Ritardo per riprovare a memorizzare un oggetto sul sistema di archiviazione nel formato di durata ISO-8601 PnDTnHnMn.nS. Riprova immediatamente se assente.
 storage.dcmInstanceAvailability:Disponibilità dell'istanza|Disponibilità dell'istanza.
+storage.dcmInstanceAvailability.ONLINE:DICOM objects available on ONLINE storage
+storage.dcmInstanceAvailability.NEARLINE:DICOM objects available on NEARLINE storage
 storage.dcmStorageDuration:Tempo di conservazione|Indica se l'archivio viene utilizzato come archivio permanente (= PERMANENT), cache (= CACHE) o temporaneo (= TEMPORARY). Gli oggetti vengono eliminati dalla cache e dall'archiviazione temporanea in base alle soglie di eliminazione configurate oppure, se non viene specificata alcuna soglia di eliminazione e non sono configurati periodi di conservazione, tutti gli oggetti nell'archiviazione verranno eliminati. In caso di archiviazione temporanea, vengono eliminati dal database anche gli studi di cui sono stati eliminati gli oggetti.
+storage.dcmStorageDuration.PERMANENT:Permanent storage
+storage.dcmStorageDuration.CACHE:Cache storage
+storage.dcmStorageDuration.TEMPORARY:Temporary storage
 storage.dcmReadOnly:Sola lettura|Indica se un sistema di archiviazione è di sola lettura.
 storage.dcmStorageClusterID:ID cluster di archiviazione|Identifica uno CACHE spazio di archiviazione che appartiene a un cluster di archiviazione. Gli oggetti di uno studio possono essere distribuiti sui sistemi di archiviazione di un cluster di archiviazione. Utilizzato dalla cancellazione attivata dalla soglia.
 storage.dcmStorageThreshold:Soglia di archiviazione|Spazio utilizzabile minimo sul sistema di archiviazione. Se lo spazio utilizzabile scende al di sotto di tale valore, il sistema di archiviazione verrà contrassegnato come pieno impostando la soglia di archiviazione oltre l'ora corrente e, se la soglia di archiviazione viene superata in modo permanente, il sistema di archiviazione verrà rimosso dall'elenco dei sistemi di archiviazione configurati del Network AE relativo al sistema di archiviazione. Formato nnn (MB | GB | MiB | GiB)

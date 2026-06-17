@@ -9,6 +9,57 @@ device.dicomSoftwareVersion:Software Version|Should be the same as the values of
 device.dicomStationName:Station Name|Should be the same as the value of Station Name (0008,1010) in SOP instances created by this device
 device.dicomDeviceSerialNumber:Device Serial Number|Should be the same as the value of Device Serial Number (0018,1000) in SOP instances created by this device
 device.dicomPrimaryDeviceType:Primary Device Type|Represents the kind of device and is most applicable for acquisition modalities
+device.dicomPrimaryDeviceType.ARCHIVE:Archive
+device.dicomPrimaryDeviceType.COMP:Computation Server
+device.dicomPrimaryDeviceType.CAD:Computer Assisted Detection/Diagnosis
+device.dicomPrimaryDeviceType.DSS:Department System Scheduler
+device.dicomPrimaryDeviceType.FILMD:Film Digitizer
+device.dicomPrimaryDeviceType.M3D:3D Manufacturing Modeling System
+device.dicomPrimaryDeviceType.MCD:Media Creation Device
+device.dicomPrimaryDeviceType.PRINT:Hard Copy Print Server
+device.dicomPrimaryDeviceType.CAPTURE:Image Capture
+device.dicomPrimaryDeviceType.LOG:Procedure Logging
+device.dicomPrimaryDeviceType.RT:Radiation Therapy Device
+device.dicomPrimaryDeviceType.WSD:Workstation
+device.dicomPrimaryDeviceType.AR:Autorefraction
+device.dicomPrimaryDeviceType.BMD:Bone Mineral Densitometry
+device.dicomPrimaryDeviceType.BDUS:Ultrasound Bone Densitometry
+device.dicomPrimaryDeviceType.EPS:Cardiac Electrophysiology
+device.dicomPrimaryDeviceType.CR:Computed Radiography
+device.dicomPrimaryDeviceType.CT:Computed Tomography
+device.dicomPrimaryDeviceType.DX:Digital Radiography
+device.dicomPrimaryDeviceType.ECG:Electrocardiography
+device.dicomPrimaryDeviceType.ES:Endoscopy
+device.dicomPrimaryDeviceType.XC:External-camera Photography
+device.dicomPrimaryDeviceType.GM:General Microscopy
+device.dicomPrimaryDeviceType.HD:Hemodynamic
+device.dicomPrimaryDeviceType.IO:Intra-oral Radiography
+device.dicomPrimaryDeviceType.IVOCT:Intravascular Optical Coherence Tomography
+device.dicomPrimaryDeviceType.IVUS:Intravascular Ultrasound
+device.dicomPrimaryDeviceType.KER:Keratometry
+device.dicomPrimaryDeviceType.LEN:Lensometry
+device.dicomPrimaryDeviceType.MR:Magnetic Resonance
+device.dicomPrimaryDeviceType.MG:Mammography
+device.dicomPrimaryDeviceType.NM:Nuclear Medicine
+device.dicomPrimaryDeviceType.OAM:Ophthalmic Axial Measurements
+device.dicomPrimaryDeviceType.OCT:Optical Coherence Tomography
+device.dicomPrimaryDeviceType.OPM:Ophthalmic Mapping
+device.dicomPrimaryDeviceType.OP:Ophthalmic Photography
+device.dicomPrimaryDeviceType.OPR:Ophthalmic Refraction
+device.dicomPrimaryDeviceType.OPT:Ophthalmic Tomography
+device.dicomPrimaryDeviceType.OPTBSV:Ophthalmic Tomography B-scan Volume Analysis
+device.dicomPrimaryDeviceType.OPTENF:Ophthalmic Tomography En Face
+device.dicomPrimaryDeviceType.OPV:Ophthalmic Visual Field
+device.dicomPrimaryDeviceType.OSS:Optical Surface Scanner
+device.dicomPrimaryDeviceType.PX:Panoramic X-Ray
+device.dicomPrimaryDeviceType.PT:Positron emission tomography
+device.dicomPrimaryDeviceType.RF:Radiofluoroscopy
+device.dicomPrimaryDeviceType.RG:Radiographic imaging
+device.dicomPrimaryDeviceType.SM:Slide Microscopy
+device.dicomPrimaryDeviceType.SRF:Subjective Refraction
+device.dicomPrimaryDeviceType.US:Ultrasound
+device.dicomPrimaryDeviceType.VA:Visual Acuity
+device.dicomPrimaryDeviceType.XA:X-Ray Angiography
 device.dicomInstitutionName:Institution Name|Should be the same as the value of Institution Name (0008,0080) in SOP Instances created by this device
 device.dicomInstitutionCode:Institution Code|Should be the same as the value of Institution Code(s) in format (CV, CSD, "CM") in SOP Instances created by this device
 device.dicomInstitutionAddress:Institution Address|Should be the same as the value of Institution Address (0008,0081) attribute in SOP Instances created by this device

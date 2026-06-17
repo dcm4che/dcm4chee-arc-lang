@@ -8,3 +8,6 @@ exportRule.dcmProperty:属性条件|(SendingHostname|SendingApplicationEntityTit
 exportRule.dcmSchedule:时间条件|仅在指定的时间范围内应用此规则。
 exportRule.dcmDuration:导出延迟|延迟实体导出,并在单个导出任务中累积多个触发事件。
 exportRule.dcmExportReoccurredInstances:导出重复实例|是否在实例的后续出现时导出实体
+exportRule.dcmExportReoccurredInstances.NEVER:Never export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.ALWAYS:Always export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.REPLACE:Export entity only on reoccurrence of replaced instances

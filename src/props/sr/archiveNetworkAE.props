@@ -9,10 +9,24 @@ archiveNetworkAE.dcmStoreAccessControlID:ID kontrole pristupa skladištu|Access 
 archiveNetworkAE.dcmAccessControlID:ID kontrole pristupa|Access Control ID-ovi dodeljeni Query/Retrieve zahtevima primljenim od ovog AE.
 archiveNetworkAE.dcmAcceptedMoveDestination:Prihvaćeno odredište Move|Prihvaćeno Move Destination u C-MOVE zahtevima; bilo koje ako nije navedeno.
 archiveNetworkAE.dcmOverwritePolicy:Politika prepisivanja|Specificira ponašanje pri prijemu objekata ovim AE-om, čiji SOP Instance UID odgovara prethodno primljenom objektu. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmOverwritePolicy.NEVER:Never overwrite previous received object on receive of object with matching SOP Instance UID
+archiveNetworkAE.dcmOverwritePolicy.ALWAYS:Always overwrite previous received object on receive of object with matching SOP Instance UID and if instance location digest is unequal
+archiveNetworkAE.dcmOverwritePolicy.SAME_SOURCE:Overwrite previous received object on receive of object with matching SOP Instance UID if it is from same source (Calling AET)
+archiveNetworkAE.dcmOverwritePolicy.EVEN_WITH_EQUAL_DIGEST:Overwrite previous received object on receive of object with matching SOP Instance UID even if instance location digest is equal
 archiveNetworkAE.dcmRelationalMismatchPolicy:Politika relacijske nesagledivosti|Specificira ponašanje pri prijemu objekata ovim AE-om, čiji SOP Instance UID odgovara prethodno primljenom objektu koji pripada drugoj seriji. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmRelationalMismatchPolicy.IGNORE:Silently ignores the received object
+archiveNetworkAE.dcmRelationalMismatchPolicy.REJECT:Reject the received object with error status A77BH
+archiveNetworkAE.dcmRelationalMismatchPolicy.OVERWRITE:Replace previous received object by new one belonging to other Series ("poor-man IOCM")
+archiveNetworkAE.dcmRelationalMismatchPolicy.STORE_ADDITIONALLY:Store received object, retaining the previous received object, replacing the value SAME_SOURCE of config field Overwrite Policy
 archiveNetworkAE.dcmRecordAttributeModification:Beleži izmene atributa|Ukazuje da li se izmene atributa uskladištenih objekata ovog AE zapisuju u stavkama Original Attributes Sequence. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmAcceptMissingPatientID:Prihvati nedostajući ID pacijenta|Ukazuje da li objekti bez Patient ID-ova treba da budu prihvaćeni i da li treba kreirati Patient ID. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmAcceptMissingPatientID.YES:Accept missing Patient ID (0010,0020) in DICOM dataset
+archiveNetworkAE.dcmAcceptMissingPatientID.NO:Do not accept missing Patient ID (0010,0020) in DICOM dataset
+archiveNetworkAE.dcmAcceptMissingPatientID.CREATE:Create patient identifier if missing Patient ID (0010,0020) in DICOM dataset
 archiveNetworkAE.dcmAcceptConflictingPatientID:Prihvati konfliktni ID pacijenta|Ukazuje da li objekti sa Patient ID-ovima koji se razlikuju od Patient ID-a u prethodno primljenim objektima studije treba biti prihvaćen. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmAcceptConflictingPatientID.YES:Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study
+archiveNetworkAE.dcmAcceptConflictingPatientID.NO:Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study
+archiveNetworkAE.dcmAcceptConflictingPatientID.MERGED:Accept patient identifier in DICOM dataset if already merged with another patient identifier
 archiveNetworkAE.dcmQueryRetrieveViewID:ID pregleda upita/preuzimanja|Query/Retrieve View identifikator.
 archiveNetworkAE.dcmBulkDataSpoolDirectory:Direktorijum spool-a Bulk Data|Putanja do Bulk Data Spool direktorijuma. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmHideSPSWithStatusFromMWL:Sakrij SPS sa statusom po MWL SCP-u|Scheduled Procedure Step Status kodovi MWL stavki koje ne treba da vrati MWL SCP. Prepisuje vrednost navedenu na nivou uređaja.
@@ -21,8 +35,15 @@ archiveNetworkAE.dcmMWLAccessionNumberGenerator:Generator pristupnog broja MWL|I
 archiveNetworkAE.dcmMWLRequestedProcedureIDGenerator:Generator ID-a traženog postupka MWL|Identifikuje ID Generator za dopunu nedostajućih Requested Procedure IDs Scheduled Procedures Steps kreiranih putem RESTful usluge. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmMWLScheduledProcedureStepIDGenerator:Generator ID-a zakazanog koraka procedure MWL|Identifikuje ID Generator za dopunu nedostajućih Scheduled Procedure Step IDs Scheduled Procedures Steps kreiranih putem RESTful usluge. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmEncodeAsJSONNumber:Kodiraj kao JSON broj|VR kodiran kao JSON Number. Ako nije navedeno, IS, DS, SV i UV vrednosti se kodiraju kao JSON Strings. Dopunjuje vrednosti navedene na nivou uređaja.
+archiveNetworkAE.dcmEncodeAsJSONNumber.DS:Decimal String
+archiveNetworkAE.dcmEncodeAsJSONNumber.IS:Integer String
+archiveNetworkAE.dcmEncodeAsJSONNumber.SV:Signed 64-bit Very Long
+archiveNetworkAE.dcmEncodeAsJSONNumber.UV:Unsigned 64-bit Very Long
 archiveNetworkAE.dcmValidateCallingAEHostname:Verifikuj ime hosta pozivajućeg AE|Validira Calling AE Hostname ili IP Address Association requestors za ovaj AE. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmUserIdentityNegotiation:Pregovor o identitetu korisnika|Specificira da ignoriše User Identity Negotiation Sub-Item u Association zahtevima (=NOT_SUPPORTED), da verifikuje prosleđeno korisničko ime i lozinku ili JSON Web Token protiv Keycloak servera (=SUPPORTS), ili da odbije Association zahteve bez važećeg korisničkog imena i lozinke ili JSON Web Token-a u njegovom Identity Negotiation Sub-Item-u (=REQUIRED). Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmUserIdentityNegotiation.NOT_SUPPORTED:Ignore User Identity Negotiation Sub-Item in Association requests
+archiveNetworkAE.dcmUserIdentityNegotiation.SUPPORTS:Verify passed Username and password or JSON Web Token are against a Keycloak server
+archiveNetworkAE.dcmUserIdentityNegotiation.REQUIRED:Reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item
 archiveNetworkAE.dcmUserIdentityNegotiationRole:Uloga pregovora o identitetu korisnika|Ograniči prihvaćene User Identity Negotiation zahteve na korisnike sa navedenom ulogom. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmUserIdentityNegotiationKeycloakClientID:ID Keycloak klijenta pregovora o identitetu korisnika|Keycloak Client ID koji se odnosi na Keycloak konfiguraciju konekcije za verifikaciju prosleđenog korisničkog imena i lozinke ili JSON Web Token. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmPersonNameComponentOrderInsensitiveMatching:Poređenje imena osobe neosetljivo na redosled komponenti|Ukazuje da li se na fuzzy semantičko podudaranje imena osoba ovog AE primenjuje podudaranje neosetljivo na redosled komponenti imena. Prepisuje vrednost navedenu na nivou uređaja.
@@ -36,6 +57,9 @@ archiveNetworkAE.dcmWadoZIPEntryNameFormat:Format imena WADO ZIP stavke|Format i
 archiveNetworkAE.dcmWadoIgnorePresentationLUTShape:WADO ignoriši Presentation LUT Shape|Ukazuje na ignorisanje (2050,0020) Presentation LUT Shape, ali daje prioritet vrednosti (0028,0004) Photometric Interpretation radi određivanja da li minimalna vrednost uzorka treba da bude prikazana kao bela (=MONCHROME1) ili kao crna (=MONCHROME2) pri preuzimanju renderovanih DICOM slika od strane WADO-RS ili WADO-URI usluga. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmWadoMetadataExcludePrivate:WADO metapodaci isključuju privatno|Ukazuje na isključivanje Private Data Elements iz Metadata vraćenih WADO-RS Retrieve Transaction-om. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmWadoVideoAcceptRanges:WADO video prihvata opsege|Ukazuje da li su Range Requests koji pristupaju enkapsuliranim video zapisima putem WADO-URI ili WADO-RS Rendered Instance podržani. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmWadoVideoAcceptRanges.YES:HTTP Range Requests supported
+archiveNetworkAE.dcmWadoVideoAcceptRanges.NO:HTTP Range Requests not supported
+archiveNetworkAE.dcmWadoVideoAcceptRanges.KNOWN_TOTAL_LENGTH:HTTP Range Requests supported if Encapsulated Pixel Data Value Total Length is known
 archiveNetworkAE.dcmQueryMaxNumberOfResults:Maksimalan broj rezultata upita|Maksimalan broj povratnih rezultata od strane C-FIND SCP. Ako broj poklapanja prekorači ograničenje, C-FIND zahtev će biti odbijen. 0 = bez ograničenja. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmQidoMaxNumberOfResults:Maksimalan broj QIDO rezultata|Maksimalan broj povratnih rezultata od strane QIDO-RS Service. 0 = neograničeno. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmQidoETag:QIDO ETag|Ukazuje na vraćanje Last-Modified i ETag za Search Series ili Instances studije. Prepisuje vrednost navedenu na nivou uređaja.
@@ -43,11 +67,18 @@ archiveNetworkAE.dcmQidoResultOrderBy:QIDO redosled rezultata po|Specificira red
 archiveNetworkAE.dcmFwdMppsDestination:Odredište MPPS prosleđivanja|Odredište za prosleđivanje MPPS N-CREATE RQ i N-SET RQ Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmIanDestination:Odredište IAN-a|Odredište za slanje IAN N-CREATE RQ Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmIanTrigger:IAN okidač|Događaji koji okidaju slanje IAN N-CREATE RQ-a Application Entity-jima konfigurisanim u IAN Destination. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmIanTrigger.STUDY_RECEIVED:Send IAN on receiving studies
+archiveNetworkAE.dcmIanTrigger.MPPS_RECEIVED:Send IAN on receiving MPPS
+archiveNetworkAE.dcmIanTrigger.REJECTION_NOTE_RECEIVED:Send IAN on IOCM trigger
+archiveNetworkAE.dcmIanTrigger.FIRST_OBJECT_OF_STUDY_RECEIVED:Send IAN on receiving first object of study
 archiveNetworkAE.dcmIanDelay:IAN kašnjenje|Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS nakon kojeg se IAN za primljenu studiju šalje konfigurisanim IAN odredištima. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmIanTimeout:IAN istek vremena|Timeout u ISO-8601 formatu trajanja PnDTnHnMn.nS za čekanje na prijem instanci referenciranih u MPPS. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmIanOnTimeout:IAN pri isteku vremena|Specificira da li se IAN šalje ako timeout za čekanje prijema referenciranih instanci istekne. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmSpanningCFindSCP:Obuhvatajući C-FIND SCP|AE Title eksternog C-FIND SCP-a za prosleđivanje C-FIND RQ-ova i povratnih odgovora prema konfigurisanoj Spanning C-Find SCP Policy-ju. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmSpanningCFindSCPPolicy:Politika obuhvatajućeg C-FIND SCP-a|Specificira politiku za kombinovanje podudaranja vraćenih od konfigurisanog Spanning C-Find SCP-a sa podudarnim stavkama iz archive DB-a. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmSpanningCFindSCPPolicy.SUPPLEMENT:Returns local matches before additional matches from Spanning C-Find SCP
+archiveNetworkAE.dcmSpanningCFindSCPPolicy.MERGE:Returns matches from Spanning C-Find SCP before additional local matches
+archiveNetworkAE.dcmSpanningCFindSCPPolicy.REPLACE:Returns only matches from Spanning C-Find SCP
 archiveNetworkAE.dcmSpanningCFindSCPRetrieveAET:AE naslov preuzimanja obuhvatajućeg C-FIND SCP-a|Specificira Retrieve AE Title(s) u vraćenim podudaranjima od Spanning C-Find SCP-a. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmFallbackCMoveSCP:Rezervni C-MOVE SCP|AE Title eksternog C-MOVE SCP-a za prosleđivanje C-MOVE RQ-ova ako traženi entiteti nisu upravljani ovom arhivom. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmFallbackCMoveSCPStudyOlderThan:Studija starija od rezervnog C-MOVE SCP-a|Specificira prag za Study Date u formatu YYYYMMDD za označavanje primljenih studija kao (potencijalno) nepotpunih radi provoćenja preuzimanja sa konfigurisanog dcmFallbackCMoveSCP. Prepisuje vrednost navedenu na nivou uređaja.
@@ -56,9 +87,17 @@ archiveNetworkAE.dcmFallbackCMoveSCPLeadingCFindSCP:Vodeći C-FIND SCP rezervnog
 archiveNetworkAE.dcmFallbackCMoveSCPRetries:Ponovni pokušaji rezervnog C-MOVE SCP-a|Maksimalan broj pokušaja preuzimanja nedostupnih objekata sa C-MOVE SCP konfigurisanog sa dcmFallbackCMoveSCP. -1 = zauvek. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmFallbackWadoURIWebAppName:Ime rezervne WADO-URI veb aplikacije|Ime eksterne Web aplikacije za preusmeravanje WADO-URI zahteva ako traženi objekat nije dostupan u ovoj arhivi. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmFallbackWadoURIHttpStatusCode:HTTP statusni kôd rezervnog WADO-URI-ja|HTTP Status kod Redirect odgovora konfigurisan sa Fallback WADO-URI Web Application Name. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmFallbackWadoURIHttpStatusCode.301:Moved Permanently
+archiveNetworkAE.dcmFallbackWadoURIHttpStatusCode.302:Found
+archiveNetworkAE.dcmFallbackWadoURIHttpStatusCode.303:See Other
+archiveNetworkAE.dcmFallbackWadoURIHttpStatusCode.307:Temporary Redirect
 archiveNetworkAE.dcmFallbackWadoURIRedirectOnNotFound:Preusmeravanje rezervnog WADO-URI-ja pri nepronalaženju|Ukazuje da li se WADO-URI zahtevi preusmeravaju na konfigurisani Fallback WADO-URI Web Application Name čak i ako objekat nije pronađen ili - ako je postavljeno na false - samo ako objekat više nije dostupan na ovom archive. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmExternalWadoRSWebAppName:Ime eksterne WADO-RS veb aplikacije|Ime eksterne Web aplikacije za preusmeravanje WADO-RS zahteva ako traženi objekat nije dostupan u ovoj arhivi. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmExternalWadoRSHttpStatusCode:HTTP statusni kôd eksternog WADO-RS-a|HTTP Status kod Redirect odgovora konfigurisan sa External WADO-RS Web Application Name. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmExternalWadoRSHttpStatusCode.301:Moved Permanently
+archiveNetworkAE.dcmExternalWadoRSHttpStatusCode.302:Found
+archiveNetworkAE.dcmExternalWadoRSHttpStatusCode.303:See Other
+archiveNetworkAE.dcmExternalWadoRSHttpStatusCode.307:Temporary Redirect
 archiveNetworkAE.dcmExternalWadoRSRedirectOnNotFound:Preusmeravanje eksternog WADO-RS-a pri nepronalaženju|Ukazuje da li se WADO-RS zahtevi preusmeravaju na konfigurisani External WADO-RS Web Application Name čak i ako traženi objekti nisu pronađeni ili - ako je postavljeno na false - samo ako neki od traženih objekata više nisu dostupni na ovom archive. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmFallbackCMoveSCPCallingAET:Pozivajući AE naslov rezervnog C-MOVE SCP-a|Calling AE Title korišćen u A-ASSOCIATE-RQ za konfigurisani Fallback C-MOVE SCP. Ako nije navedeno, koristi se AE Title eksternog C-MOVE SCU-a. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmAltCMoveSCP:Alternativni C-MOVE SCP|AE Title alternativnog C-MOVE SCP-a za prosleđivanje C-MOVE RQ-ova ako traženi entiteti nisu locirani na lokalno povezanom skladištu Prepisuje vrednost navedenu na nivou uređaja.
@@ -69,9 +108,18 @@ archiveNetworkAE.dcmStorePermissionServiceErrorCommentPattern:Obrazac komentara 
 archiveNetworkAE.dcmStorePermissionServiceErrorCodePattern:Obrazac koda greške servisa dozvola skladištenja|Regularni izraz primenjen na odgovore od Store Permission Service radi izdvajanja Error Code u heksadecimalnom formatu. Npr. "errorcode"\\s*:\\s*"(\\p{XDigit}{4})". Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmStorePermissionServiceExpirationDatePattern:Obrazac datuma isteka servisa dozvola skladištenja|Regularni izraz primenjen na odgovore od Store Permission Service radi izdvajanja početnog Study Expiration Date. Npr. "expirationdate"\\s*:\\s*"([0-9]{8})". Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmAllowRejectionForDataRetentionPolicyExpired:Dozvoli odbacivanje za isteklu politiku zadržavanja podataka|Dozvoli odbijanje za Data Retention Policy isteklih. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmAllowRejectionForDataRetentionPolicyExpired.NEVER:Never allow rejection for Data Retention Policy Expired
+archiveNetworkAE.dcmAllowRejectionForDataRetentionPolicyExpired.ALWAYS:Always allow rejection for Data Retention Policy Expired
+archiveNetworkAE.dcmAllowRejectionForDataRetentionPolicyExpired.EXPIRED_UNSET:Allow rejection for Data Retention Policy Expired for expired studies or studies with no expiration date
+archiveNetworkAE.dcmAllowRejectionForDataRetentionPolicyExpired.ONLY_EXPIRED:Allow rejection for Data Retention Policy Expired only for expired studies
 archiveNetworkAE.dcmAcceptedUserRole:Prihvaćena korisnička uloga|Uloge korisnika od kojih se prihvataju web zahtevi; bilo koje ako nije navedeno.
 archiveNetworkAE.dcmAllowDeleteStudyPermanently:Dozvoli trajno brisanje studije|Dozvoli trajno brisanje studije. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmAllowDeleteStudyPermanently.ALWAYS:Always allow delete study permanently
+archiveNetworkAE.dcmAllowDeleteStudyPermanently.REJECTED:Allow delete study permanently only for study with all objects rejected
 archiveNetworkAE.dcmAllowDeletePatient:Dozvoli brisanje pacijenta|Dozvoli trajno brisanje pacijenata. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmAllowDeletePatient.NEVER:Never allow delete patient permanently
+archiveNetworkAE.dcmAllowDeletePatient.ALWAYS:Always allow delete patient permanently
+archiveNetworkAE.dcmAllowDeletePatient.WITHOUT_STUDIES:Allow delete patient permanently only for patient without studies
 archiveNetworkAE.dcmDefaultCharacterSet:Podrazumevani skup znakova|Vrednost Specific Character Set (0008,0005) dodata Data Sets C-STORE RQ-ova i pending C-FIND RSP-ova bez atributa Specific Character Set (0008,0005) koje je primio ovaj Network AE. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmMWLWorklistLabel:MWL oznaka Worklist-e|Vrednost Worklist Label (0074,1202) kreiranih MWL stavki ovog AE-a pri prijemu Create Scheduled Procedure Step REST API-ja ako Worklist Label (0074,1202) nedostaje ili je prazan u request payload. Ako nije navedenno konfigurisana vrednost, kreirane MWL stavke nisu vezane za pojedinačni MWL Worklist i pružaju ih svi Archive AE sa MWL SCP Transfer Capability.
 archiveNetworkAE.dcmMWLWorklistLabelFilter:Filter MWL oznake Worklist-e|Vrednost Worklist Label (0074,1202) koja se koristi kao matching Key od strane ovog AE-a pri obradi upita od strane DIMSE (MWL Query SOP Class) ili dicomWeb (Modality Worklist Search Transaction) usluge za poklapanje Modality Worklist stavki (MWL), ako matching key za ovaj atribut nije naveden u zahtevu. Ako je navedeno više vrednosti, MWL sa bilo kojom od navedenih vrednosti Worklist Label (0074,1202) se poklapa. Ako vrednost nije navedena, MWL sa bilo kojom vrednošću Worklist Label (0074,1202) će se poklopiti.
@@ -84,8 +132,24 @@ archiveNetworkAE.dcmReturnRetrieveAET:Vrati AE naslov preuzimanja|Retrieve AE Ti
 archiveNetworkAE.dcmMultipleStoreAssociations:Višestruke Store asocijacije|Broj Storage Associations korišćenih za preuzimanje Composite Objects. C-STORE SCP specifični brojevi mogu se navesti prefiksom '<AETitle>:'. Primeri: 2 ili STORESCP:3 Dopunjuje Multiple Store Associations navedene na nivou uređaja.
 archiveNetworkAE.dcmExternalRetrieveAEDestination:Odredište eksternog AE-a preuzimanja|AE Title lokalnog C-STORE-SCP-a koji se postavlja kao Move Destination u C-MOVE RQ-ovima prosleđenim eksternom retrieve AE-u. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmCopyMoveUpdatePolicy:Politika ažuriranja kopiranja/pomeranja|Specificira politiku ažuriranja za atribute odredišne studije pri Copy/Move instanci iz druge studije. Ako nije navedeno, atributi se neće ažurirati. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmCopyMoveUpdatePolicy.PRESERVE:The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified
+archiveNetworkAE.dcmCopyMoveUpdatePolicy.SUPPLEMENT:The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added
+archiveNetworkAE.dcmCopyMoveUpdatePolicy.MERGE:The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values
+archiveNetworkAE.dcmCopyMoveUpdatePolicy.OVERWRITE:The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values
+archiveNetworkAE.dcmCopyMoveUpdatePolicy.REPLACE:The attributes will be completely overwritten
 archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy:Politika ažuriranja MWL stavke veze|Specificira politiku ažuriranja za Study atribute pri Link-u instanci druge studije sa MWL stavkom koja referiše postojeću studiju. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy.PRESERVE:The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified
+archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy.SUPPLEMENT:The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added
+archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy.MERGE:The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values
+archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy.OVERWRITE:The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values
+archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy.REPLACE:The attributes will be completely overwritten
 archiveNetworkAE.dcmStorageVerificationPolicy:Politika verifikacije skladišta|Policy koja se primenjuje pri storage verification studija. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.dcmStorageVerificationPolicy.DB_RECORD_EXISTS:Only check for existence of DB records
+archiveNetworkAE.dcmStorageVerificationPolicy.OBJECT_EXISTS:Check if object exists on Storage System
+archiveNetworkAE.dcmStorageVerificationPolicy.OBJECT_SIZE:Check size of object on Storage System
+archiveNetworkAE.dcmStorageVerificationPolicy.OBJECT_FETCH:Fetch object from Storage System
+archiveNetworkAE.dcmStorageVerificationPolicy.OBJECT_CHECKSUM:Recalculate checksum of object on Storage System
+archiveNetworkAE.dcmStorageVerificationPolicy.S3_MD5SUM:Check MD5 checksum of object on S3 Storage System
 archiveNetworkAE.dcmStorageVerificationUpdateLocationStatus:Ažuriranje statusa lokacije verifikacije skladišta|Ukazuje da li će Status Location DB zapisa biti ažuriran pri Storage Verification u skladu sa tim. Nije efikasno sa Storage Verification Policy: DB_RECORD_EXISTS. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmStorageVerificationStorageID:Storage Verification Storage IDs|Prihvati Storage Verification samo ako je validacija skladištenja objekta na jednom od navedenih Storage System-a uspešna. Nije efikasno sa Storage Verification Policy: DB_RECORD_EXISTS. Prepisuje vrednosti navedene na nivou uređaja.
 archiveNetworkAE.dcmStorageVerificationInitialDelay:Početno kašnjenje verifikacije skladišta|Kašnjenje u ISO-8601 formatu trajanja PnYnMnD ili PnW za prvu Storage Verification serije nakon što je primljena. Prepisuje vrednosti navedene na nivou uređaja.
@@ -94,7 +158,13 @@ archiveNetworkAE.dcmStorageVerificationOnRetrieve:Verifikacija skladišta pri pr
 archiveNetworkAE.hl7PSUSendingApplication:Aplikacija slanja HL7 ažuriranja statusa postupka|Application|Facility ime Sending Application za HL7 Procedure Status Update. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.hl7PSUReceivingApplication:Aplikacija prijema HL7 ažuriranja statusa postupka|Application|Facility ime Receiving Application za HL7 Procedure Status Update. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.hl7PSUAction:Akcija HL7 ažuriranja statusa postupka|Zadaje akciju HL7 ažuriranja statusa postupka. Može biti prepisano konfigurisanim vrednostima za određene arhivske mrežne AE-ove.
+archiveNetworkAE.hl7PSUAction.SEND_NOTIFICATION:Send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications
+archiveNetworkAE.hl7PSUAction.UPDATE_MWL_STATUS:Set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED
 archiveNetworkAE.hl7PSUTrigger:Okidač HL7 ažuriranja statusa postupka|Specificira okidačke događaja za slanje HL7 Procedure Status Update obaveštenja HL7 Receivers konfigurisanim u HL7 Procedure Status Update Receiving Application. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.hl7PSUTrigger.STUDY_RECEIVED:Send notification on receive of studies
+archiveNetworkAE.hl7PSUTrigger.MPPS_RECEIVED:Send notification on receive of MPPS
+archiveNetworkAE.hl7PSUTrigger.REJECTION_NOTE_RECEIVED:Send notification on receive of IOCM KO
+archiveNetworkAE.hl7PSUTrigger.FIRST_OBJECT_OF_STUDY_RECEIVED:Send notification on receive of first object of study
 archiveNetworkAE.hl7PSUDelay:Kašnjenje HL7 ažuriranja statusa postupka|Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS nakon kojeg se HL7 Procedure Status Update za primljenu studiju šalje konfigurisanim HL7 prijemnicima. Ako nije navedeno, HL7 Procedure Status Update se okida primljenim MPPS-om. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.hl7PSUStudyTemplateURI:URI šablona studije HL7 ažuriranja statusa postupka|URL XSL style sheet-a za kreiranje HL7v2 poruke za obaveštavanje konfigurisanih HL7 prijemnika o promenama Status-a traženih procedura okinutih primljenom studijom. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.hl7PSUTimeout:Istek vremena HL7 ažuriranja statusa postupka|Timeout u ISO-8601 formatu trajanja PnDTnHnMn.nS za čekanje na prijem instanci referenciranih u MPPS. Prepisuje vrednost navedenu na nivou uređaja.
@@ -104,8 +174,13 @@ archiveNetworkAE.hl7PSUCondition:Uslovi HL7 ažuriranja statusa postupka|Ograni�
 archiveNetworkAE.hl7PSUForRequestedProcedure:HL7 ažuriranje statusa postupka za traženi postupak|Ograniči obaveštavanje konfigurisanih HL7 Procedure Status Update Receiving Applications o Procedure Status Update na postojanje Scheduled Procedure Steps of a Requested Procedure (MWL stavki u DB-u) sa podudarnim Study Instance UID-om. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.hl7PSUTemplateParam:Parametri šablona HL7 ažuriranja statusa postupka|XSLT parametri u formatu {attributeID}={value} prosleđeni style sheet-u navedenom u HL7 Procedure Status Update MPPS Template URI ili HL7 Procedure Status Update Study Template URI. {attributeID} unutar {value} će biti zamenjeno vrednošću tog atributa u originalnom dataset-u. Npr.: 'RequestedProcedureID={StudyInstanceUID}' ili 'AccessionNumber={0020000D}'. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.hl7PSUMessageType:Tip poruke HL7 ažuriranja statusa postupka|Tip poruke HL7 Procedure Status Update poruke. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.hl7PSUMessageType.OMG_O19:Eyecare Order Message
+archiveNetworkAE.hl7PSUMessageType.ORU_R01:Unsolicited Observation Message
+archiveNetworkAE.hl7PSUMessageType.OMI_O23:Clinical Order Message
 archiveNetworkAE.hl7PSUPIDPV1:HL7 ažuriranje statusa postupka PID PV1|Ukazuje na uključivanje Patient Identification (PID) i Patient Visit (PV1) segmenta u HL7 Procedure Status Update poruci. Implicitno postavljeno ako je HL7 Procedure Status Message Type = ORU_R01. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.hl7PSUMWLMatchingKey:MWL ključ podudaranja HL7 ažuriranja statusa postupka|Specificira atribut primljenog objekta za pronalaženje MWL stavke čiji status treba ažurirati na COMPLETED. Primjenjivo samo ako je 'HL7 Procedure Status Update MWL' konfigurisan ili implicitno postavljen na true. Prepisuje vrednost navedenu na nivou uređaja.
+archiveNetworkAE.hl7PSUMWLMatchingKey.AccessionNumber:Use Accession Number (0008,0050) for matching MWL
+archiveNetworkAE.hl7PSUMWLMatchingKey.StudyInstanceUID:Use Study Instance UID (0020,000D) for matching MWL
 archiveNetworkAE.dcmRelationalQueryNegotiationLenient:Popustljiv pregovor relacijskog upita|Ukazuje na prihvatanje C-FIND RQ-ova bez jedinstvenih ključeva za nivoe iznad nivoa upita čak i ako podrška za relational-queries nije bila pregovarana. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmRelationalRetrieveNegotiationLenient:Popustljiv pregovor relacijskog preuzimanja|Ukazuje na prihvatanje C-MOVE i C-GET RQ-ova bez jedinstvenih ključeva za nivoe iznad nivoa upita čak i ako podrška za relational-queries nije bila pregovarana. Prepisuje vrednost navedenu na nivou uređaja. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmRestrictRetrieveSilently:Ograniči preuzimanje tiho|Ukazuje da li će skup traženih objekata za preuzimanje biti tiho (=bez brojanja neprenesenih objekata kao neuspeha) ograničen prema Transfer Capabilities Retrieve Destination-a. U suprotnom, broj traženih objekata za koje nije konfigurisan nijedan Transfer Capability za Retrieve Destination i stoga nisu preuzeti se računa kao neuspeci. Efikasno samo ako je Retrieve Destination konfigurisan sa barem jednim Transfer Capability sa SCP ulogom. Prepisuje vrednost navedenu na nivou uređaja.

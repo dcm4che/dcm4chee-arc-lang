@@ -9,6 +9,57 @@ device.dicomSoftwareVersion:软件版本|必须与此设备创建的SOP实例的
 device.dicomStationName:Station Name|必须与此设备创建的SOP实例的Station Name（0018,1010）属性的值相同
 device.dicomDeviceSerialNumber:设备序列号|必须与此设备创建的SOP实例的设备序列号（0018,1000）属性的值相同
 device.dicomPrimaryDeviceType:主设备类型|表示设备类型,最适合检索模态
+device.dicomPrimaryDeviceType.ARCHIVE:Archive
+device.dicomPrimaryDeviceType.COMP:Computation Server
+device.dicomPrimaryDeviceType.CAD:Computer Assisted Detection/Diagnosis
+device.dicomPrimaryDeviceType.DSS:Department System Scheduler
+device.dicomPrimaryDeviceType.FILMD:Film Digitizer
+device.dicomPrimaryDeviceType.M3D:3D Manufacturing Modeling System
+device.dicomPrimaryDeviceType.MCD:Media Creation Device
+device.dicomPrimaryDeviceType.PRINT:Hard Copy Print Server
+device.dicomPrimaryDeviceType.CAPTURE:Image Capture
+device.dicomPrimaryDeviceType.LOG:Procedure Logging
+device.dicomPrimaryDeviceType.RT:Radiation Therapy Device
+device.dicomPrimaryDeviceType.WSD:Workstation
+device.dicomPrimaryDeviceType.AR:Autorefraction
+device.dicomPrimaryDeviceType.BMD:Bone Mineral Densitometry
+device.dicomPrimaryDeviceType.BDUS:Ultrasound Bone Densitometry
+device.dicomPrimaryDeviceType.EPS:Cardiac Electrophysiology
+device.dicomPrimaryDeviceType.CR:Computed Radiography
+device.dicomPrimaryDeviceType.CT:Computed Tomography
+device.dicomPrimaryDeviceType.DX:Digital Radiography
+device.dicomPrimaryDeviceType.ECG:Electrocardiography
+device.dicomPrimaryDeviceType.ES:Endoscopy
+device.dicomPrimaryDeviceType.XC:External-camera Photography
+device.dicomPrimaryDeviceType.GM:General Microscopy
+device.dicomPrimaryDeviceType.HD:Hemodynamic
+device.dicomPrimaryDeviceType.IO:Intra-oral Radiography
+device.dicomPrimaryDeviceType.IVOCT:Intravascular Optical Coherence Tomography
+device.dicomPrimaryDeviceType.IVUS:Intravascular Ultrasound
+device.dicomPrimaryDeviceType.KER:Keratometry
+device.dicomPrimaryDeviceType.LEN:Lensometry
+device.dicomPrimaryDeviceType.MR:Magnetic Resonance
+device.dicomPrimaryDeviceType.MG:Mammography
+device.dicomPrimaryDeviceType.NM:Nuclear Medicine
+device.dicomPrimaryDeviceType.OAM:Ophthalmic Axial Measurements
+device.dicomPrimaryDeviceType.OCT:Optical Coherence Tomography
+device.dicomPrimaryDeviceType.OPM:Ophthalmic Mapping
+device.dicomPrimaryDeviceType.OP:Ophthalmic Photography
+device.dicomPrimaryDeviceType.OPR:Ophthalmic Refraction
+device.dicomPrimaryDeviceType.OPT:Ophthalmic Tomography
+device.dicomPrimaryDeviceType.OPTBSV:Ophthalmic Tomography B-scan Volume Analysis
+device.dicomPrimaryDeviceType.OPTENF:Ophthalmic Tomography En Face
+device.dicomPrimaryDeviceType.OPV:Ophthalmic Visual Field
+device.dicomPrimaryDeviceType.OSS:Optical Surface Scanner
+device.dicomPrimaryDeviceType.PX:Panoramic X-Ray
+device.dicomPrimaryDeviceType.PT:Positron emission tomography
+device.dicomPrimaryDeviceType.RF:Radiofluoroscopy
+device.dicomPrimaryDeviceType.RG:Radiographic imaging
+device.dicomPrimaryDeviceType.SM:Slide Microscopy
+device.dicomPrimaryDeviceType.SRF:Subjective Refraction
+device.dicomPrimaryDeviceType.US:Ultrasound
+device.dicomPrimaryDeviceType.VA:Visual Acuity
+device.dicomPrimaryDeviceType.XA:X-Ray Angiography
 device.dicomInstitutionName:机构名称|必须与此设备创建的SOP实例的机构名称（0008,0080）属性的值相同
 device.dicomInstitutionCode:机构代码|Should be the same as the value of Institution Code(s) in format （CV,CSD,"CM"）形式的机构代码 in SOP Instances created by this device
 device.dicomInstitutionAddress:代理地址|必须与此设备创建的SOP实例的代理地址（0008,0081）属性的值相同

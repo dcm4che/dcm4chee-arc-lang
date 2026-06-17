@@ -8,3 +8,6 @@ exportRule.dcmProperty:Attribute Conditions|Attribute Conditions in format (Send
 exportRule.dcmSchedule:Time Conditions|Apply this rule only within specified time ranges.
 exportRule.dcmDuration:Export Delay|Delay export of entities to accumulate multiple trigger events to one export task.
 exportRule.dcmExportReoccurredInstances:Export Reoccurred Instances|Indicates if the entity shall be exported on subsequent occurrence of instances
+exportRule.dcmExportReoccurredInstances.NEVER:Never export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.ALWAYS:Always export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.REPLACE:Export entity only on reoccurrence of replaced instances

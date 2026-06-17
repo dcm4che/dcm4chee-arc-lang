@@ -4,10 +4,14 @@ dcmDevice.dcmLimitOpenAssociations:Limite di associazione|Numero massimo di conn
 dcmDevice.dcmLimitAssociationsInitiatedBy:Limite di associazione per AE|Numero massimo di connessioni DICOM aperte avviate da una particolare entità dell'applicazione (AE) nel formato <ae-title>=<number>; rifiuta le richieste di associazione da quell'AE se il limite viene superato.
 dcmDevice.dcmTrustStoreURL:URL del Trust Store|URL di Trust Store con certificati per i nodi DICOM autorizzati a connettersi a questo nodo; sostituisce dicomAuthorizedNodeCertificateReference
 dcmDevice.dcmTrustStoreType:Tipo di archivio attendibile|Tipo Key Store di Trust Store specificato da dcmTrustStoreURL.
+dcmDevice.dcmTrustStoreType.JKS:Java KeyStore
+dcmDevice.dcmTrustStoreType.PKCS12:Public-Key Cryptography Standards #12
 dcmDevice.dcmTrustStorePin:Pin del Trust Store|Key Store Password del Trust Store specificata dall'URL di Trust Store
 dcmDevice.dcmTrustStorePinProperty:Proprietà del Pin del Trust Store|Proprietà di sistema di Key Store Password di Trust Store specificata dall'URL di Trust Store
 dcmDevice.dcmKeyStoreURL:URL archivio chiavi|URL dell'archivio chiavi con chiave privata e certificato utilizzato per identificare questo nodo DICOM nelle connessioni TLS
 dcmDevice.dcmKeyStoreType:Tipo di archivio chiavi|Tipo di Archivio chiavi dell'archivio chiavi specificato dall'URL dell'archivio chiavi.
+dcmDevice.dcmKeyStoreType.JKS:Java KeyStore
+dcmDevice.dcmKeyStoreType.PKCS12:Public-Key Cryptography Standards #12
 dcmDevice.dcmKeyStorePin:Pin del Archivio chiavi|Key Store Password dell'archivio chiavi specificata dall'URL dell'archivio chiavi
 dcmDevice.dcmKeyStorePinProperty:Proprietà del pin dell'archivio delle chiavi|Proprietà di sistema della password dell'archivio chiavi specificata dall'URL dell'archivio chiavi
 dcmDevice.dcmKeyStoreKeyPin:Pin del Archivio chiavi|Password chiave dell'archivio chiavi specificata dall'URL dell'archivio chiavi

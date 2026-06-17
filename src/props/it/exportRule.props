@@ -8,3 +8,6 @@ exportRule.dcmProperty:Condizioni degli attributi|Condizioni attributo nel forma
 exportRule.dcmSchedule:Condizioni dei tempi|Applica questa regola solo entro intervalli di tempo specificati.
 exportRule.dcmDuration:Ritardo di esportazione|Ritarda l'esportazione di entità per accumulare più eventi di attivazione in un'unica attività di esportazione.
 exportRule.dcmExportReoccurredInstances:Esporta istanze ricorrenti|Indica se l'entità deve essere esportata al successivo verificarsi delle istanze
+exportRule.dcmExportReoccurredInstances.NEVER:Never export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.ALWAYS:Always export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.REPLACE:Export entity only on reoccurrence of replaced instances

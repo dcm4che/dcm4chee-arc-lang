@@ -4,18 +4,34 @@ storage.dcmURI:存储URI|RFC2079：统一资源标识符
 storage.dcmArchiveSeriesAsTAR:Archive Series as TAR|Indicates that binary DICOM objects of one Series are packed in one TAR archive on this Storage System; false if absent.
 storage.dcmStoragePathFormat:Storage Path Format|Format of file path of DICOM binary objects or metadata in JSON format or of ZIP archives containing metadata in JSON format for each DICOM object of one Series, written to this Storage System. '{now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}', if absent.
 storage.dcmOnStoragePathAlreadyExists:Already Exists on Storage Path|Specifies behavior if an object already exists on the storage path on the storage system, assembled according to the configured 'Storage Path Format'. Default behaviour 'RANDOM_PATH'. (hover on options to see their descriptions)
+storage.dcmOnStoragePathAlreadyExists.FAILURE:Signals failure writing the new object
+storage.dcmOnStoragePathAlreadyExists.NOOP:Proceed without writing the new object
+storage.dcmOnStoragePathAlreadyExists.RANDOM_PATH:Replace last path element be random 8 hex digit number and try again
 storage.dcmRetryCreateDirectories:Retry Create Directories|Specifies number of retries to create parent directories of the storage file path - may workaround issues concerning NFS; 0 if absent.
 storage.dcmAltCreateDirectories:Alt Create Directories|Indicate to not rely on 'createDirectories' function in 'java.nio.file.Files' Java class, to create all nonexistent parent directories first, but instead explicitly create parent directories if NoSuchFileException is thrown. May workaround issues concerning NFS.
 storage.dcmCheckMountFilePath:Check Mount File Path|Indicates to check if a mounted file system did not get detached from its mount point, by specifying the path of a file relative to the path of the Storage URI, which is shadowed by the mount, so its visibility signals that the mount failed. If the file becomes visible, the write operation to the storage fails, preventing to store objects on the file system of the mount point directory.
 storage.dcmCheckExistFilePath:Check Exist File Path|Indicates to check if the specified file on the storage file system exists. If the file becomes inaccessible, the write operation to the storage fails, preventing to store objects on the file system.
 storage.dcmFileOpenOption:File Open Option(s)|Options specifying how the file is opened for writing. Default behaviour 'CREATE_NEW'. (hover on options to see their descriptions)
+storage.dcmFileOpenOption.CREATE_NEW:Create a new file, failing if the file already exists
+storage.dcmFileOpenOption.DSYNC:Requires that every update to the file's content be written synchronously to the underlying storage device
+storage.dcmFileOpenOption.SYNC:Requires that every update to the file's content or metadata be written synchronously to the underlying storage device
 storage.dcmLocationStatus:Location Status|Initial Location Status of DICOM files written to this Storage System. Default behaviour 'OK'. (hover on options to see their descriptions)
+storage.dcmLocationStatus.OK:Indicates access state of stored objects is stable
+storage.dcmLocationStatus.VERIFY_QSTAR_ACCESS_STATE:Indicates to verify access state of stored objects from QStar Tape File System
 storage.dcmCountLocationsByStatus:Count Locations by Status|Indicate to include counts of locations with status != 0 (=OK) for this Storage System by RESTful service to list Storage Systems; false if absent.
 storage.dcmDigestAlgorithm:摘要算法|用于生成校验和的算法。
+storage.dcmDigestAlgorithm.MD5:Message-digest algorithm
+storage.dcmDigestAlgorithm.SHA-1:Secure Hash Algorithm 1
+storage.dcmDigestAlgorithm.SHA-265:Secure Hash Algorithm 256
 storage.dcmMaxRetries:最大重试次数|将对象保存到存储系统的最大重试次数。
 storage.dcmRetryDelay:重试延迟|ISO-8601周期格式PnDTnHnMn.nS重试以将对象存储在存储系统中的延迟。如果不存在,请立即重试。
 storage.dcmInstanceAvailability:实例可用性|实例可用性。
+storage.dcmInstanceAvailability.ONLINE:DICOM objects available on ONLINE storage
+storage.dcmInstanceAvailability.NEARLINE:DICOM objects available on NEARLINE storage
 storage.dcmStorageDuration:存储持续时间|指示存储是否被用作永久（=PERMANENT）,高速缓存（=CACHE）或者临时（=TEMPORARY）存储。对象将根据配置的删除门槛值从缓存和临时存储中删除。或者,如果未指定删除门槛值且未配置保留期,则删除存储中的所有对象。对于临时存储,还会从数据库中删除哪些对象已被清除的检查。
+storage.dcmStorageDuration.PERMANENT:Permanent storage
+storage.dcmStorageDuration.CACHE:Cache storage
+storage.dcmStorageDuration.TEMPORARY:Temporary storage
 storage.dcmReadOnly:只读|指示存储系统是否为只读。
 storage.dcmStorageClusterID:存储群集ID|标识属于存储群集的CACHE存储。一个检查对象可以分布在一个存储集群的存储系统中。用于门槛值触发的删除。
 storage.dcmStorageThreshold:存储阈值|存储系统上的最小可用空间。如果可用空间小于该值,则将存储阈值设置为当前时间,并将存储系统标记为已满。此外,如果将永远超过存储门槛设置为“真”,则该存储系统将从请求该存储系统的网络AE的已配置存储系统列表中删除。格式nnn（MB|GB|MiB|GiB）

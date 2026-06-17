@@ -1,3 +1,11 @@
 hl7OrderSPSStatus:Estado SPS para Orden HL7|Especifica el Estado SPS de los ítems DICOM MWL creados/actualizados en los mensajes HL7 ORM^O01, OMI^O23, OMG^O19 recibidos.
 hl7OrderSPSStatus.dcmSPSStatus:Código de estado de paso de procedimiento programado|Código de estado de paso de procedimiento programado.
 hl7OrderSPSStatus.hl7OrderControlStatus:Combinaciones HL7 de Estado de Control de Pedidos|HL7 Código de Estado de Control de Pedidos. Estas combinaciones se refieren a valores presentes en ORC-1_ORC-5.
+hl7OrderSPSStatus.hl7OrderControlStatus.NW_SC:ORC.1 = NW & ORC.5 = SC => SPSStatus = SCHEDULED
+hl7OrderSPSStatus.hl7OrderControlStatus.NW_IP:ORC.1 = NW & ORC.5 = IP => SPSStatus = SCHEDULED
+hl7OrderSPSStatus.hl7OrderControlStatus.CA_CA:ORC.1 = CA & ORC.5 = CA => SPSStatus = CANCELED
+hl7OrderSPSStatus.hl7OrderControlStatus.DC_CA:ORC.1 = DC & ORC.5 = CA => SPSStatus = DISCONTINUED
+hl7OrderSPSStatus.hl7OrderControlStatus.XO_SC:ORC.1 = XO & ORC.5 = SC => SPSStatus = SCHEDULED
+hl7OrderSPSStatus.hl7OrderControlStatus.XO_CM:ORC.1 = XO & ORC.5 = CM => SPSStatus = COMPLETED
+hl7OrderSPSStatus.hl7OrderControlStatus.SC_CM:ORC.1 = SC & ORC.5 = CM => SPSStatus = COMPLETED
+hl7OrderSPSStatus.hl7OrderControlStatus.SC_A:ORC.1 = SC & ORC.5 = A => SPSStatus = COMPLETED

@@ -3,4 +3,8 @@ imageReader.dicomTransferSyntax:Transfer Syntax|Transfer Syntax kompresovane DIC
 imageReader.dcmIIOFormatName:Ime formata Image IO Reader-a|Image IO Reader Format ime
 imageReader.dcmJavaClassName:Ime Java klase|Potpuno kvalifikovana Java klasa Image IO Reader-a. Ako nije navedeno, koristi bilo koji Image Reader pronađen za navedeno Format ime
 imageReader.dcmPatchJPEGLS:Zakrpa JPEG-LS|Patch JPEG-LS pre dekompresije
+imageReader.dcmPatchJPEGLS.JAI2ISO:Patch faulty JPEG-LS streams created by JAI-ImageIO CLibImageWriter, so the resulting JPEG-LS stream can be decoded by JPEG-LS compliant decoders
+imageReader.dcmPatchJPEGLS.JAI2ISO_IF_NO_APP_OR_COM:Amend JPEG-LS Coding parameters actually used by JAI-ImageIO, but only if the stream does NOT contain APPn or COM segments and is therefore more likely to have been actually created by JAI-ImageIO.
+imageReader.dcmPatchJPEGLS.ISO2JAI:Patch correct JPEG-LS streams, so they can be decompressed by the faulty JAI-ImageIOCLibImageReader. The resulting stream will still be correct JPEG-LS and can also be decoded by other decoders.
+imageReader.dcmPatchJPEGLS.ISO2JAI_IF_APP_OR_COM:Amend default JPEG-LS Coding parameters (for streams that do not contain them yet), but only if the stream contains APPn or COM segments - so it was certainly not created by JAI-ImageIO.
 imageReader.dcmImageReadParam:Parametar čitanja slike|Image Read parametar(i) (name=value)

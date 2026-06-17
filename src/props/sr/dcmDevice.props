@@ -4,10 +4,14 @@ dcmDevice.dcmLimitOpenAssociations:Limit asocijacija|Maksimalan broj otvorenih D
 dcmDevice.dcmLimitAssociationsInitiatedBy:Limit asocijacija za AE|Maksimalan broj otvorenih DICOM konekcija pokrenutih od strane pojedinog Application Entity (AE) u formatu <ae-title>=<number>; odbija Association zahteve od tog AE-a ako je limit premašen.
 dcmDevice.dcmTrustStoreURL:URL Trust Store-a|URL Trust Store-a sa sertifikatima za DICOM čvorove koji su ovlašćeni da se povežu na ovaj čor; prepisuje dicomAuthorizedNodeCertificateReference
 dcmDevice.dcmTrustStoreType:Tip Trust Store-a|Key Store Type Trust Store-a navedenog u dcmTrustStoreURL.
+dcmDevice.dcmTrustStoreType.JKS:Java KeyStore
+dcmDevice.dcmTrustStoreType.PKCS12:Public-Key Cryptography Standards #12
 dcmDevice.dcmTrustStorePin:PIN Trust Store-a|Key Store Password Trust Store-a navedenog u Trust Store URL
 dcmDevice.dcmTrustStorePinProperty:Svojstvo PIN-a Trust Store-a|System property Key Store Password Trust Store-a navedenog u Trust Store URL
 dcmDevice.dcmKeyStoreURL:URL Key Store-a|URL Key Store-a sa privatnim ključem i sertifikatom korišćenim za identifikaciju ovog DICOM čvora u TLS konekcijama
 dcmDevice.dcmKeyStoreType:Tip Key Store-a|Key Store Type Key Store-a navedenog u Key Store URL.
+dcmDevice.dcmKeyStoreType.JKS:Java KeyStore
+dcmDevice.dcmKeyStoreType.PKCS12:Public-Key Cryptography Standards #12
 dcmDevice.dcmKeyStorePin:PIN Key Store-a|Key Store Password Key Store-a navedenog u Key Store URL
 dcmDevice.dcmKeyStorePinProperty:Svojstvo PIN-a Key Store-a|System property Key Store Password Key Store-a navedenog u Key Store URL
 dcmDevice.dcmKeyStoreKeyPin:PIN ključa Key Store-a|Key Password Key Store-a navedenog u Key Store URL

@@ -10,6 +10,11 @@ upsOnStore.dcmUPSStartDateTimeDelay:Scheduled Procedure Step Start DateTime Dela
 upsOnStore.dcmUPSCompletionDateTimeDelay:Expected Completion DateTime Delay|Delay of Expected Completion DateTime (0040,4011) in created UPS from receive time in format PnDTnHnMn.nS. If absent, no Expected Completion Date and Time will be set.
 upsOnStore.dcmUPSInstanceUIDBasedOnName:UPS Instance UID based on name|Value used to generate name based SOP Instance UID (0008,0018) in created UPS. Typically, the value will include {StudyInstanceUID}, {SeriesInstanceUID} or {SOPInstanceUID} to create a different UPS for each received Study, Series or Object. If absent, a random generated SOP Instance UID (0008,0018) will be used.
 upsOnStore.dcmUPSIncludeInputInformation:Include Input Information|Indicates if received objects shall be referenced in the Input Information Sequence (0040,4021) in created UPS.
+upsOnStore.dcmUPSIncludeInputInformation.NO:Do not include Input Information Sequence
+upsOnStore.dcmUPSIncludeInputInformation.SINGLE:Do not updating existing UPS
+upsOnStore.dcmUPSIncludeInputInformation.APPEND:Update existing UPS in state SCHEDULED
+upsOnStore.dcmUPSIncludeInputInformation.SINGLE_OR_CREATE:If UPS already exists, create new UPS with derived UID
+upsOnStore.dcmUPSIncludeInputInformation.APPEND_OR_CREATE:If existing UPS is no longer in state SCHEDULED, create new UPS with derived UID
 upsOnStore.dcmUPSIncludePatient:UPS Include Patient|Indicates if patient (associated with created UPS) is created using patient attributes in received object; true if absent.
 upsOnStore.dcmDestinationAE:Destination AE|Title of a DICOM Application Entity to which Instances will be stored.
 upsOnStore.dcmEntity:Scope of Accumulation|Scope of Accumulation

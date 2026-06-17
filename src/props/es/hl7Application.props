@@ -7,6 +7,14 @@ hl7Application.hl7AcceptedMessageType:Tipo de mensaje aceptado|Tipo(s) de mensaj
 hl7Application.hl7DefaultCharacterSet:Juego de caracteres predeterminado|Juego de caracteres utilizado para descodificar los mensajes recibidos si no lo especifica MSH-18.
 hl7Application.hl7SendingCharacterSet:Juego de caracteres de envío|Juego de caracteres utilizado para codificar los mensajes HL7 enviados desde el archivo.
 hl7Application.hl7OptionalMSHField:Optional MSH Field|Aceptar mensajes HL7 en los que falten valores para los campos MSH especificados, aunque sean obligatorios según <a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43" target="_blank">IHE RAD TF Vol 2 requisitos de control de mensajes</a>.
+hl7Application.hl7OptionalMSHField.3:Sending Application
+hl7Application.hl7OptionalMSHField.4:Sending Facility
+hl7Application.hl7OptionalMSHField.5:Receiving Application
+hl7Application.hl7OptionalMSHField.6:Receiving Facility
+hl7Application.hl7OptionalMSHField.7:Date/Time of Message
+hl7Application.hl7OptionalMSHField.10:Message Control ID
+hl7Application.hl7OptionalMSHField.11:Processing ID
+hl7Application.hl7OptionalMSHField.12:Version ID
 hl7Application.dicomDescription:Descripción HL7|Descripción de texto sin restricciones de la aplicación HL7.
 hl7Application.dicomApplicationCluster:Grupo de aplicaciones|Nombres definidos localmente para un subconjunto de aplicaciones relacionadas.
 hl7Application.dicomInstalled:instalado|Verdadero si la aplicación HL7 está instalada en la red. Si no está presente, la información sobre el estado de instalación de la aplicación HL7 se hereda del dispositivo.

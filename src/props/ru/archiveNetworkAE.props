@@ -9,10 +9,24 @@ archiveNetworkAE.dcmStoreAccessControlID:Store Access Control ID|Access Control 
 archiveNetworkAE.dcmAccessControlID:Access Control ID|Access Control IDs assigned to Query/Retrieve requests received by this AE.
 archiveNetworkAE.dcmAcceptedMoveDestination:Accepted Move Destination|Accepted Move Destination in C-MOVE requests; any if absent.
 archiveNetworkAE.dcmOverwritePolicy:Overwrite Policy|Overwrite Policy for Objects received by this AE. Overwrites value specified on Device level.
+archiveNetworkAE.dcmOverwritePolicy.NEVER:Never overwrite previous received object on receive of object with matching SOP Instance UID
+archiveNetworkAE.dcmOverwritePolicy.ALWAYS:Always overwrite previous received object on receive of object with matching SOP Instance UID and if instance location digest is unequal
+archiveNetworkAE.dcmOverwritePolicy.SAME_SOURCE:Overwrite previous received object on receive of object with matching SOP Instance UID if it is from same source (Calling AET)
+archiveNetworkAE.dcmOverwritePolicy.EVEN_WITH_EQUAL_DIGEST:Overwrite previous received object on receive of object with matching SOP Instance UID even if instance location digest is equal
 archiveNetworkAE.dcmRelationalMismatchPolicy:Relational Mismatch Policy|Specifies behavior on receive of objects by this AE, which SOP Instance UID matches a previous received object belonging to a different Series. Overwrites value specified on Device level.
+archiveNetworkAE.dcmRelationalMismatchPolicy.IGNORE:Silently ignores the received object
+archiveNetworkAE.dcmRelationalMismatchPolicy.REJECT:Reject the received object with error status A77BH
+archiveNetworkAE.dcmRelationalMismatchPolicy.OVERWRITE:Replace previous received object by new one belonging to other Series ("poor-man IOCM")
+archiveNetworkAE.dcmRelationalMismatchPolicy.STORE_ADDITIONALLY:Store received object, retaining the previous received object, replacing the value SAME_SOURCE of config field Overwrite Policy
 archiveNetworkAE.dcmRecordAttributeModification:Record Attribute Modification|Indicates if modifications of attributes of stored objects by this AE are recorded in Items of the Original Attributes Sequence. Overwrites value specified on Device level.
 archiveNetworkAE.dcmAcceptMissingPatientID:Accept Missing Patient ID|Indicates if objects without Patient IDs shall be accepted and if a Patient ID shall be created. Overwrites value specified on Device level.
+archiveNetworkAE.dcmAcceptMissingPatientID.YES:Accept missing Patient ID (0010,0020) in DICOM dataset
+archiveNetworkAE.dcmAcceptMissingPatientID.NO:Do not accept missing Patient ID (0010,0020) in DICOM dataset
+archiveNetworkAE.dcmAcceptMissingPatientID.CREATE:Create patient identifier if missing Patient ID (0010,0020) in DICOM dataset
 archiveNetworkAE.dcmAcceptConflictingPatientID:Accept Conflicting Patient ID|Indicates if objects with a Patient IDs which differs from the Patient ID in previous received objects of the Study shall be accepted. Overwrites value specified on Device level.
+archiveNetworkAE.dcmAcceptConflictingPatientID.YES:Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study
+archiveNetworkAE.dcmAcceptConflictingPatientID.NO:Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study
+archiveNetworkAE.dcmAcceptConflictingPatientID.MERGED:Accept patient identifier in DICOM dataset if already merged with another patient identifier
 archiveNetworkAE.dcmQueryRetrieveViewID:Query/Retrieve View ID|Query/Retrieve View Identifier.
 archiveNetworkAE.dcmBulkDataSpoolDirectory:Bulk Data Spool Directory|Path to Bulk Data Spool Directory. Overwrites value specified on Device level.
 archiveNetworkAE.dcmHideSPSWithStatusFromMWL:Hide SPS with Status by MWL SCP|Scheduled Procedure Step Status codes of MWL items which shall not be returned by the MWL SCP. Overwrites value specified on Device level.
@@ -21,8 +35,15 @@ archiveNetworkAE.dcmMWLAccessionNumberGenerator:MWL Accession Number Generator|I
 archiveNetworkAE.dcmMWLRequestedProcedureIDGenerator:MWL Requested Procedure ID Generator|Identifies ID Generator to supplement missing Requested Procedure IDs of Scheduled Procedures Steps created by RESTful service. Overwrites value specified on Device level.
 archiveNetworkAE.dcmMWLScheduledProcedureStepIDGenerator:MWL Scheduled Procedure Step ID Generator|Identifies ID Generator to supplement missing Scheduled Procedure Step IDs of Scheduled Procedures Steps created by RESTful service. Overwrites value specified on Device level.
 archiveNetworkAE.dcmEncodeAsJSONNumber:Encode as JSON Number|VR encoded as JSON Number. If not listed, IS, DS, SV and UV values are encoded as JSON Strings. Supplements values specified on Device level.
+archiveNetworkAE.dcmEncodeAsJSONNumber.DS:Decimal String
+archiveNetworkAE.dcmEncodeAsJSONNumber.IS:Integer String
+archiveNetworkAE.dcmEncodeAsJSONNumber.SV:Signed 64-bit Very Long
+archiveNetworkAE.dcmEncodeAsJSONNumber.UV:Unsigned 64-bit Very Long
 archiveNetworkAE.dcmValidateCallingAEHostname:Validate Calling AE Hostname|Validate Calling AE Hostname or IP Address of Association requestors for this AE. Overwrites value specified on Device level.
 archiveNetworkAE.dcmUserIdentityNegotiation:User Identity Negotiation|Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). Overwrites value specified on Device level.
+archiveNetworkAE.dcmUserIdentityNegotiation.NOT_SUPPORTED:Ignore User Identity Negotiation Sub-Item in Association requests
+archiveNetworkAE.dcmUserIdentityNegotiation.SUPPORTS:Verify passed Username and password or JSON Web Token are against a Keycloak server
+archiveNetworkAE.dcmUserIdentityNegotiation.REQUIRED:Reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item
 archiveNetworkAE.dcmUserIdentityNegotiationRole:User Identity Negotiation Role|Constrain accepted User Identity Negotiation requests to users with specified role. Overwrites value specified on Device level.
 archiveNetworkAE.dcmUserIdentityNegotiationKeycloakClientID:User Identity Negotiation Keycloak Client ID|Keycloak Client ID referring Keycloak connection configuration for verifying passed username and password or JSON Web Token. Overwrites value specified on Device level.
 archiveNetworkAE.dcmPersonNameComponentOrderInsensitiveMatching:Person Name Component Order Insensitive Matching|Indicates if name component order insensitive matching is performed on fuzzy semantic matching of person names by this AE. Overwrites value specified on Device level.
@@ -36,6 +57,9 @@ archiveNetworkAE.dcmWadoZIPEntryNameFormat:Wado ZIP Entry Name Format|Format of 
 archiveNetworkAE.dcmWadoIgnorePresentationLUTShape:Wado Ignore Presentation LUT Shape|Indicates to ignore (2050,0020) Presentation LUT Shape, but prioritize value of (0028,0004) Photometric Interpretation to determine if minimum sample value is intended to be displayed as white (=MONCHROME1) or as black (=MONCHROME2) on retrieve of rendered DICOM images by WADO-RS or WADO-URI services. Overwrites value specified on Device level.
 archiveNetworkAE.dcmWadoMetadataExcludePrivate:Wado Metadata Exclude Private|Indicates to exclude Private Data Elements from Metadata returned by WADO-RS Retrieve Transaction. Overwrites value specified on Device level.
 archiveNetworkAE.dcmWadoVideoAcceptRanges:Wado Video Accept Ranges|Indicates if Range Requests accessing encapsulated videos by WADO-URI or WADO-RS Rendered Instance are supported. Overwrites value specified on Device level.
+archiveNetworkAE.dcmWadoVideoAcceptRanges.YES:HTTP Range Requests supported
+archiveNetworkAE.dcmWadoVideoAcceptRanges.NO:HTTP Range Requests not supported
+archiveNetworkAE.dcmWadoVideoAcceptRanges.KNOWN_TOTAL_LENGTH:HTTP Range Requests supported if Encapsulated Pixel Data Value Total Length is known
 archiveNetworkAE.dcmQueryMaxNumberOfResults:Query Max Number Of Results|Maximal number of return results by C-FIND SCP. If the number of matches extends the limit, the C-FIND request will be refused. 0 = no limitation. Overwrites value specified on Device level.
 archiveNetworkAE.dcmQidoMaxNumberOfResults:QIDO Max Number Of Results|Maximal number of return results by QIDO-RS Service. 0 = unlimited. Overwrites value specified on Device level.
 archiveNetworkAE.dcmQidoETag:QIDO ETag|Indicates to return Last-Modified and ETag for Search Series or Instances of a Study. Overwrites value specified on Device level.
@@ -43,11 +67,18 @@ archiveNetworkAE.dcmQidoResultOrderBy:QIDO Result Order By|Specifies order of ma
 archiveNetworkAE.dcmFwdMppsDestination:MPPS Forward Destination|Destination to forward MPPS N-CREATE RQ and N-SET RQ. Overwrites value specified on Device level.
 archiveNetworkAE.dcmIanDestination:IAN Destination|Destination to send IAN N-CREATE RQ. Overwrites value specified on Device level.
 archiveNetworkAE.dcmIanTrigger:IAN Trigger|Events triggering to send an IAN N-CREATE RQ to Application Entities configured by IAN Destination. Overwrites value specified on Device level.
+archiveNetworkAE.dcmIanTrigger.STUDY_RECEIVED:Send IAN on receiving studies
+archiveNetworkAE.dcmIanTrigger.MPPS_RECEIVED:Send IAN on receiving MPPS
+archiveNetworkAE.dcmIanTrigger.REJECTION_NOTE_RECEIVED:Send IAN on IOCM trigger
+archiveNetworkAE.dcmIanTrigger.FIRST_OBJECT_OF_STUDY_RECEIVED:Send IAN on receiving first object of study
 archiveNetworkAE.dcmIanDelay:IAN Delay|Delay in ISO-8601 duration format PnDTnHnMn.nS after which an IAN for a received study is sent to configured IAN destinations. Overwrites value specified on Device level.
 archiveNetworkAE.dcmIanTimeout:IAN Timeout|Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS. Overwrites value specified on Device level.
 archiveNetworkAE.dcmIanOnTimeout:IAN On Timeout|Specifies if the IAN is sent if the timeout for waiting on receive of instances referenced is exceeded. Overwrites value specified on Device level.
 archiveNetworkAE.dcmSpanningCFindSCP:Spanning C-Find SCP|AE Title of external C-FIND SCP to forward C-FIND RQs and backward responses according configured Spanning C-Find SCP Policy. Overwrites value specified on Device level.
 archiveNetworkAE.dcmSpanningCFindSCPPolicy:Spanning C-Find SCP Policy|Specifies policy for combining matches returned from configured Spanning C-Find SCP with matching entries from the archive DB. Overwrites value specified on Device level.
+archiveNetworkAE.dcmSpanningCFindSCPPolicy.SUPPLEMENT:Returns local matches before additional matches from Spanning C-Find SCP
+archiveNetworkAE.dcmSpanningCFindSCPPolicy.MERGE:Returns matches from Spanning C-Find SCP before additional local matches
+archiveNetworkAE.dcmSpanningCFindSCPPolicy.REPLACE:Returns only matches from Spanning C-Find SCP
 archiveNetworkAE.dcmSpanningCFindSCPRetrieveAET:Spanning C-Find SCP Retrieve AE Title|Specifies Retrieve AE Title(s) in returned matches from Spanning C-Find SCP. Overwrites value specified on Device level.
 archiveNetworkAE.dcmFallbackCMoveSCP:Fallback C-Move SCP|AE Title of external C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not managed by this archive. Overwrites value specified on Device level.
 archiveNetworkAE.dcmFallbackCMoveSCPStudyOlderThan:Fallback C-Move SCP Study Older Than|Specifies threshold for Study Date in format YYYYMMDD for marking received Studies as (potential) incomplete to enforce the retrieve from configured dcmFallbackCMoveSCP. Overwrites value specified on Device level.
@@ -56,9 +87,17 @@ archiveNetworkAE.dcmFallbackCMoveSCPLeadingCFindSCP:Fallback C-Move SCP Leading 
 archiveNetworkAE.dcmFallbackCMoveSCPRetries:Fallback C-Move SCP Retries|Maximal number of retries to retrieve not available objects from C-MOVE SCP configured by dcmFallbackCMoveSCP. -1 = forever. Overwrites value specified on Device level.
 archiveNetworkAE.dcmFallbackWadoURIWebAppName:Fallback WADO-URI Web Application Name|Name of external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. Overwrites value specified on Device level.
 archiveNetworkAE.dcmFallbackWadoURIHttpStatusCode:Fallback WADO-URI HTTP Status Code|HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level.
+archiveNetworkAE.dcmFallbackWadoURIHttpStatusCode.301:Moved Permanently
+archiveNetworkAE.dcmFallbackWadoURIHttpStatusCode.302:Found
+archiveNetworkAE.dcmFallbackWadoURIHttpStatusCode.303:See Other
+archiveNetworkAE.dcmFallbackWadoURIHttpStatusCode.307:Temporary Redirect
 archiveNetworkAE.dcmFallbackWadoURIRedirectOnNotFound:Fallback WADO-URI Redirect On Not Found|Indicates if WADO-URI requests are redirected to configured Fallback WADO-URI Web Application Name even if the object was not found or - if set to false - only if the object is no longer accessible on this archive. Overwrites value specified on Device level.
 archiveNetworkAE.dcmExternalWadoRSWebAppName:External WADO-RS Web Application Name|Name of external Web Application to redirect WADO URI requests if the requested Object is not available by this archive. Overwrites value specified on Device level.
 archiveNetworkAE.dcmExternalWadoRSHttpStatusCode:External WADO-RS HTTP Status Code|HTTP Status code of Redirect Response configured by Fallback WADO-URI Web Application Name. Overwrites value specified on Device level.
+archiveNetworkAE.dcmExternalWadoRSHttpStatusCode.301:Moved Permanently
+archiveNetworkAE.dcmExternalWadoRSHttpStatusCode.302:Found
+archiveNetworkAE.dcmExternalWadoRSHttpStatusCode.303:See Other
+archiveNetworkAE.dcmExternalWadoRSHttpStatusCode.307:Temporary Redirect
 archiveNetworkAE.dcmExternalWadoRSRedirectOnNotFound:External WADO-RS Redirect On Not Found|Indicates if WADO-RS requests are redirected to configured External WADO-RS Web Application Name even if the requested objects were not found or - if set to false - only if some of the requested objects are no longer accessible on this archive. Overwrites value specified on Device level.
 archiveNetworkAE.dcmFallbackCMoveSCPCallingAET:Fallback C-Move SCP Calling AE title|Calling AE Title used in A-ASSOCIATE-RQ to configured Fallback C-MOVE SCP. If absent, the AE Title of the external C-MOVE SCU is used. Overwrites value specified on Device level.
 archiveNetworkAE.dcmAltCMoveSCP:Alternative C-Move SCP|AE Title of alternative C-MOVE SCP to forward C-MOVE RQs if the requested Entities are not located on a local attached Storage. Overwrites value specified on Device level.
@@ -69,9 +108,18 @@ archiveNetworkAE.dcmStorePermissionServiceErrorCommentPattern:Store Permission S
 archiveNetworkAE.dcmStorePermissionServiceErrorCodePattern:Store Permission Service Error Code Pattern|Regular Expression applied to responses from Store Permission Service to extract Error Code in hexadecimal. E.g. "errorcode"\\s*:\\s*"(\\p{XDigit}{4})". Overwrites value specified on Device level.
 archiveNetworkAE.dcmStorePermissionServiceExpirationDatePattern:Store Permission Service Expiration Date Pattern|Regular Expression applied to responses from Store Permission Service to extract the initial Study Expiration Date. E.g. "expirationdate"\\s*:\\s*"([0-9]{8})". Overwrites value specified on Device level.
 archiveNetworkAE.dcmAllowRejectionForDataRetentionPolicyExpired:Allow Rejection For Data Retention Policy Expired|Allow Rejection For Data Retention Policy Expired. Overwrites value specified on Device level.
+archiveNetworkAE.dcmAllowRejectionForDataRetentionPolicyExpired.NEVER:Never allow rejection for Data Retention Policy Expired
+archiveNetworkAE.dcmAllowRejectionForDataRetentionPolicyExpired.ALWAYS:Always allow rejection for Data Retention Policy Expired
+archiveNetworkAE.dcmAllowRejectionForDataRetentionPolicyExpired.EXPIRED_UNSET:Allow rejection for Data Retention Policy Expired for expired studies or studies with no expiration date
+archiveNetworkAE.dcmAllowRejectionForDataRetentionPolicyExpired.ONLY_EXPIRED:Allow rejection for Data Retention Policy Expired only for expired studies
 archiveNetworkAE.dcmAcceptedUserRole:Accepted User Role|Roles of users from which web requests are accepted; any if absent.
 archiveNetworkAE.dcmAllowDeleteStudyPermanently:Allow Delete Study permanently|Allow to delete Study permanently. Overwrites value specified on Device level.
+archiveNetworkAE.dcmAllowDeleteStudyPermanently.ALWAYS:Always allow delete study permanently
+archiveNetworkAE.dcmAllowDeleteStudyPermanently.REJECTED:Allow delete study permanently only for study with all objects rejected
 archiveNetworkAE.dcmAllowDeletePatient:Allow Delete Patient|Allow permanent deletion of Patients. Overwrites value specified on Device level.
+archiveNetworkAE.dcmAllowDeletePatient.NEVER:Never allow delete patient permanently
+archiveNetworkAE.dcmAllowDeletePatient.ALWAYS:Always allow delete patient permanently
+archiveNetworkAE.dcmAllowDeletePatient.WITHOUT_STUDIES:Allow delete patient permanently only for patient without studies
 archiveNetworkAE.dcmDefaultCharacterSet:Default Character Set|Value of Specific Character Set (0008,0005) added to Data Sets of C-STORE RQs and pending C-FIND RSPs without Specific Character Set (0008,0005) attribute received by this Network AE. Overwrites value specified on Device level.
 archiveNetworkAE.dcmMWLWorklistLabel:MWL Worklist Label|Value of Worklist Label (0074,1202) of created MWL items by this AE on receive of Create Scheduled Procedure Step REST API if Worklist Label (0074,1202) is missing or empty in request payload. If absentno value is configured, created MWL items are not bound to a particular MWL Worklist and are provided by all Archive AEs with MWL SCP Transfer Capability.
 archiveNetworkAE.dcmMWLWorklistLabelFilter:MWL Worklist Label Filter|Value of Worklist Label (0074,1202) used as matching Key by this AE on processing queries by DIMSE (MWL Query SOP Class) or dicomWeb (Modality Worklist Search Transaction) service for matching Modality Worklist items (MWL), if no matching key for this attribute is specified in the request. If multiple values are specified, MWL with any of the specified values of Worklist Label (0074,1202) matches. If no value is specified, MWL with any value of Worklist Label (0074,1202) will match.
@@ -84,8 +132,24 @@ archiveNetworkAE.dcmReturnRetrieveAET:Return Retrieve AE Title|Retrieve AE Title
 archiveNetworkAE.dcmMultipleStoreAssociations:Multiple Store Associations|Number of Storage Associations used for retrieve of Composite Objects. C-STORE SCP specific numbers can be specified by prefix '<AETitle>:'. Examples : 2 or STORESCP:3 Supplements Multiple Store Associations specified on Device level.
 archiveNetworkAE.dcmExternalRetrieveAEDestination:External Retrieve AE Destination|AE Title of local C-STORE-SCP to be set as Move Destination in C-MOVE RQs forwarded to external retrieve AE. Overwrites value specified on Device level.
 archiveNetworkAE.dcmCopyMoveUpdatePolicy:Copy Move Update Policy|Specifies update policy for attributes of the destination Study on Copy/Move of Instances from another Study. If absent, the attributes will not be updated. Overwrites value specified on Device level.
+archiveNetworkAE.dcmCopyMoveUpdatePolicy.PRESERVE:The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified
+archiveNetworkAE.dcmCopyMoveUpdatePolicy.SUPPLEMENT:The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added
+archiveNetworkAE.dcmCopyMoveUpdatePolicy.MERGE:The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values
+archiveNetworkAE.dcmCopyMoveUpdatePolicy.OVERWRITE:The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values
+archiveNetworkAE.dcmCopyMoveUpdatePolicy.REPLACE:The attributes will be completely overwritten
 archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy:Link MWL Entry Update Policy|Specifies update policy for Study attributes on Link of Instances of another Study with a MWL Entry referring an existing Study. Overwrites value specified on Device level.
+archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy.PRESERVE:The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified
+archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy.SUPPLEMENT:The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added
+archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy.MERGE:The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values
+archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy.OVERWRITE:The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values
+archiveNetworkAE.dcmLinkMWLEntryUpdatePolicy.REPLACE:The attributes will be completely overwritten
 archiveNetworkAE.dcmStorageVerificationPolicy:Storage Verification Policy|Policy applied on storage verification of studies. Overwrites value specified on Device level.
+archiveNetworkAE.dcmStorageVerificationPolicy.DB_RECORD_EXISTS:Only check for existence of DB records
+archiveNetworkAE.dcmStorageVerificationPolicy.OBJECT_EXISTS:Check if object exists on Storage System
+archiveNetworkAE.dcmStorageVerificationPolicy.OBJECT_SIZE:Check size of object on Storage System
+archiveNetworkAE.dcmStorageVerificationPolicy.OBJECT_FETCH:Fetch object from Storage System
+archiveNetworkAE.dcmStorageVerificationPolicy.OBJECT_CHECKSUM:Recalculate checksum of object on Storage System
+archiveNetworkAE.dcmStorageVerificationPolicy.S3_MD5SUM:Check MD5 checksum of object on S3 Storage System
 archiveNetworkAE.dcmStorageVerificationUpdateLocationStatus:Storage Verification Update Location Status|Indicates if the Status of the Location DB record shall be updated on Storage Verification accordingly. Not effective with Storage Verification Policy: DB_RECORD_EXISTS. Overwrites value specified on Device level.
 archiveNetworkAE.dcmStorageVerificationStorageID:Storage Verification Storage IDs|Only accept Storage Verification if the validation of the storage of the object on one of the specified Storage Systems is successful. Not effective with Storage Verification Policy: DB_RECORD_EXISTS. Overwrites values specified on Device level.
 archiveNetworkAE.dcmStorageVerificationInitialDelay:Storage Verification Initial Delay|Delay in ISO-8601 duration format PnYnMnD or PnW of first Storage Verification of a Series after it was received. Overwrites values specified on Device level.
@@ -94,7 +158,13 @@ archiveNetworkAE.dcmStorageVerificationOnRetrieve:Storage Verification on Retrie
 archiveNetworkAE.hl7PSUSendingApplication:HL7 Procedure Status Update Sending Application|Application|Facility name of Sending Application for HL7 Procedure Status Update. Overwrites value specified on Device level.
 archiveNetworkAE.hl7PSUReceivingApplication:HL7 Procedure Status Update Receiving Application|Application|Facility name of Receiving Application for HL7 Procedure Status Update. Overwrites value specified on Device level.
 archiveNetworkAE.hl7PSUAction:HL7 Procedure Status Update Action|Specifies HL7 Procedure Status Update action. Overwrites value specified on Device level.
+archiveNetworkAE.hl7PSUAction.SEND_NOTIFICATION:Send HL7 Procedure Status Update Notification message to configured HL7 Procedure Status Update Receiving Applications
+archiveNetworkAE.hl7PSUAction.UPDATE_MWL_STATUS:Set Scheduled Procedure Step Status of MWL Items associated to STUDY to COMPLETED
 archiveNetworkAE.hl7PSUTrigger:HL7 Procedure Status Update Trigger|Specifies trigger events to send a HL7 Procedure Status Update notification to HL7 Receivers configured by HL7 Procedure Status Update Receiving Application. Overwrites value specified on Device level.
+archiveNetworkAE.hl7PSUTrigger.STUDY_RECEIVED:Send notification on receive of studies
+archiveNetworkAE.hl7PSUTrigger.MPPS_RECEIVED:Send notification on receive of MPPS
+archiveNetworkAE.hl7PSUTrigger.REJECTION_NOTE_RECEIVED:Send notification on receive of IOCM KO
+archiveNetworkAE.hl7PSUTrigger.FIRST_OBJECT_OF_STUDY_RECEIVED:Send notification on receive of first object of study
 archiveNetworkAE.hl7PSUDelay:HL7 Procedure Status Update Delay|Delay in ISO-8601 duration format PnDTnHnMn.nS after which an HL7 Procedure Status Update for a received study is sent to configured HL7 receivers. If absent, HL7 Procedure Status Update is triggered by received MPPS. Overwrites value specified on Device level.
 archiveNetworkAE.hl7PSUStudyTemplateURI:HL7 Procedure Status Update Study Template URI|URL of XSL style sheet to create HL7v2 message to notify configured HL7 receivers about changes of the Status of requested Procedures triggered by received Study. Overwrites value specified on Device level.
 archiveNetworkAE.hl7PSUTimeout:HL7 Procedure Status Update Timeout|Timeout in ISO-8601 duration format PnDTnHnMn.nS for waiting on receive of instances referenced in MPPS. Overwrites value specified on Device level.
@@ -104,8 +174,13 @@ archiveNetworkAE.hl7PSUCondition:HL7 Procedure Status Update Attribute Condition
 archiveNetworkAE.hl7PSUForRequestedProcedure:HL7 Procedure Status Update for Requested Procedure|Restrict notification of configured HL7 Procedure Status Update Receiving Applications about Procedure Status Update to existence of Scheduled Procedure Steps of a Requested Procedure (MWL Items in the DB) with matching Study Instance UID. Overwrites value specified on Device level.
 archiveNetworkAE.hl7PSUTemplateParam:HL7 Procedure Status Update Template Parameters|XSLT parameters in format {attributeID}={value} passed to style sheet specified by HL7 Procedure Status Update MPPS Template URI or HL7 Procedure Status Update Study Template URI. {attributeID} inside of {value} will be replaced by the value of that attribute in the original dataset. E.g.: 'RequestedProcedureID={StudyInstanceUID}' or 'AccessionNumber={0020000D}'. Overwrites value specified on Device level.
 archiveNetworkAE.hl7PSUMessageType:HL7 Procedure Status Message Type|Message Type of HL7 Procedure Status Update message. Overwrites value specified on Device level.
+archiveNetworkAE.hl7PSUMessageType.OMG_O19:Eyecare Order Message
+archiveNetworkAE.hl7PSUMessageType.ORU_R01:Unsolicited Observation Message
+archiveNetworkAE.hl7PSUMessageType.OMI_O23:Clinical Order Message
 archiveNetworkAE.hl7PSUPIDPV1:HL7 Procedure Status Update PID PV1|Indicates to include a Patient Identification (PID) and a Patient Visit (PV1) segment in the HL7 Procedure Status Update message. Implicitly set, if HL7 Procedure Status Message Type = ORU_R01. Overwrites value specified on Device level.
 archiveNetworkAE.hl7PSUMWLMatchingKey:HL7 Procedure Status Update MWL Matching Key|Specifies attribute of received object to lookup MWL Item whose status is to be updated to COMPLETED. Only applicable is 'HL7 Procedure Status Update MWL' is configured as or implicitly set to true. Overwrites value specified on Device level.
+archiveNetworkAE.hl7PSUMWLMatchingKey.AccessionNumber:Use Accession Number (0008,0050) for matching MWL
+archiveNetworkAE.hl7PSUMWLMatchingKey.StudyInstanceUID:Use Study Instance UID (0020,000D) for matching MWL
 archiveNetworkAE.dcmRelationalQueryNegotiationLenient:Relational Query Negotiation Lenient|Indicates to accept C-FIND RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. Overwrites value specified on Device level.
 archiveNetworkAE.dcmRelationalRetrieveNegotiationLenient:Relational Retrieve Negotiation Lenient|Indicates to accept C-MOVE and C-GET RQs without unique keys for levels above the query level also if support for relational-queries was not negotiated. Overwrites value specified on Device level. Overwrites value specified on Device level.
 archiveNetworkAE.dcmRestrictRetrieveSilently:Restrict Retrieve Silently|Indicates if the set of requested objects to retrieve shall be silently (=without counting not transferred object as failures) restricted according the Transfer Capabilities of the Retrieve Destination. Otherwise the number of requested objects for which no Transfer Capability is configured for the Retrieve Destination and therefore are not retrieved is counted as failures. Only effective, if the Retrieve Destination has configured at least one Transfer Capability with SCP role. Overwrites value specified on Device level.

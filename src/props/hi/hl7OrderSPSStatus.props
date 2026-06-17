@@ -1,3 +1,11 @@
 hl7OrderSPSStatus:HL7 ऑर्डर की SPS स्थिति|प्राप्त हुए HL7 ORM^O01, OMI^O23, OMG^O19 संदेशों पे निर्माण किये या अपडेट हुए DICOM MWL आइटम की SPS स्थिति ।
 hl7OrderSPSStatus.dcmSPSStatus:अनुसूचित प्रक्रिया स्टेप स्थिति कोड|अनुसूचित प्रक्रिया स्टेप स्थिति कोड ।
 hl7OrderSPSStatus.hl7OrderControlStatus:HL7 ऑर्डर निरीक्षण स्थिति|HL7 ऑर्डर निरीक्षण स्थिति कोड संयोजन । ये संयोजन ORC-1_ORC-5 में मौजूद मूल्यों को संदर्भित करते हैं।
+hl7OrderSPSStatus.hl7OrderControlStatus.NW_SC:ORC.1 = NW & ORC.5 = SC => SPSStatus = SCHEDULED
+hl7OrderSPSStatus.hl7OrderControlStatus.NW_IP:ORC.1 = NW & ORC.5 = IP => SPSStatus = SCHEDULED
+hl7OrderSPSStatus.hl7OrderControlStatus.CA_CA:ORC.1 = CA & ORC.5 = CA => SPSStatus = CANCELED
+hl7OrderSPSStatus.hl7OrderControlStatus.DC_CA:ORC.1 = DC & ORC.5 = CA => SPSStatus = DISCONTINUED
+hl7OrderSPSStatus.hl7OrderControlStatus.XO_SC:ORC.1 = XO & ORC.5 = SC => SPSStatus = SCHEDULED
+hl7OrderSPSStatus.hl7OrderControlStatus.XO_CM:ORC.1 = XO & ORC.5 = CM => SPSStatus = COMPLETED
+hl7OrderSPSStatus.hl7OrderControlStatus.SC_CM:ORC.1 = SC & ORC.5 = CM => SPSStatus = COMPLETED
+hl7OrderSPSStatus.hl7OrderControlStatus.SC_A:ORC.1 = SC & ORC.5 = A => SPSStatus = COMPLETED

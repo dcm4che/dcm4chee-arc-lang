@@ -8,3 +8,6 @@ exportRule.dcmProperty:属性 条件|(SendingHostname|SendingApplicationEntityTi
 exportRule.dcmSchedule:時間 条件|指定された 時間 範囲内でのみ この 規則を 適用します。
 exportRule.dcmDuration:書き出し 遅延|エンティティの 書き出しを 遅延して、 1つの 書き出し タスクに 複数の トリガー イベントを 蓄積します。
 exportRule.dcmExportReoccurredInstances:再発した インスタンスの 書き出し|インスタンスの 後続の 発生時に エンティティを 書き出すか どうかを 示します
+exportRule.dcmExportReoccurredInstances.NEVER:Never export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.ALWAYS:Always export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.REPLACE:Export entity only on reoccurrence of replaced instances

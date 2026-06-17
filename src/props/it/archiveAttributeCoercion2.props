@@ -4,12 +4,25 @@ archiveAttributeCoercion2.dicomDescription:Attribute Coercion Description|Uncons
 archiveAttributeCoercion2.dcmURI:Attribute Coercion URI|Identifies Attribute Coercion by Uniform Resource Identifier (e.g. 'merge-mwl:${jboss.server.temp.url}/dcm4chee-arc/mwl2series.xsl')
 archiveAttributeCoercion2.dcmCoercionSufficient:Attribute Coercion Sufficient|Do not apply other matching Attribute Coercions of lesser priority, if this Attribute Coercion was applied effectively.
 archiveAttributeCoercion2.dcmCoercionOnFailure:Attribute Coercion on Failure|Behavior on failure applying this Attribute Coercion. RETHROW (= propagate failure to operation applying this Attribute Coercion), CONTINUE (= continue to apply other matching Attribute Coercions of lesser priority) or SUFFICIENT (= do not apply other matching Attribute Coercions of lesser priority).
+archiveAttributeCoercion2.dcmCoercionOnFailure.RETHROW:Propagates failure to operation which applied this (current) Attribute Coercion
+archiveAttributeCoercion2.dcmCoercionOnFailure.CONTINUE:Continues applying other matching attribute coercions of lesser priority
+archiveAttributeCoercion2.dcmCoercionOnFailure.SUFFICIENT:Does not apply other matching attribute coercions of lesser priority
 archiveAttributeCoercion2.dcmRulePriority:Attribute Coercion Priority|Se la condizione di più coercizioni di attributi di archivio (nuovi) corrisponde per un'immagine ricevuta, la coercizione a priorità più alta ha la precedenza. Se ci sono più coercizioni corrispondenti con la stessa priorità, non è definito quale coercizione abbia la precedenza.
 archiveAttributeCoercion2.dcmDIMSE:DIMSE|DICOM Message Element on which this Attribute Coercion shall be applied
+archiveAttributeCoercion2.dcmDIMSE.N_CREATE_RQ:Applicable to MPPS N-CREATE request datasets
+archiveAttributeCoercion2.dcmDIMSE.C_STORE_RQ:Applicable to objects stored / retrieved using C_STORE / C-MOVE / STOW / WADO-RS
+archiveAttributeCoercion2.dcmDIMSE.C_FIND_RQ:Applicable to C-FIND / QIDO request datasets
+archiveAttributeCoercion2.dcmDIMSE.C_FIND_RSP:Applicable to C-FIND / QIDO response datasets
 archiveAttributeCoercion2.dicomTransferRole:DICOM Transfer Role|DICOM Transfer Role of peer DICOM AE.
+archiveAttributeCoercion2.dicomTransferRole.SCU:Service Class User
+archiveAttributeCoercion2.dicomTransferRole.SCP:Service Class Provider
 archiveAttributeCoercion2.dcmSOPClass:SOP Class UID|UID of SOP Class for which this Attribute Coercion shall be applied. Apply on any if absent.
 archiveAttributeCoercion2.dcmProperty:Condition|Conditions in format (SendingHostname|SendingApplicationEntityTitle|ReceivingHostname|ReceivingApplicationEntityTitle|{AttributeTagOrKeyword[number]}|{SequenceTagOrKeyword.AttributeTagOrKeyword})[!]={regEx}. More than one value can be specified for a given attribute by separating them with a | symbol. Examples: SendingApplicationEntityTitle=FORWARD or Modality=MR|CT or ProcedureCodeSequence.CodeValue=MRProcedure or 00180015=KNEE or 00321034.00080100=RequestingServiceCode or ImageType[3]=LOCALIZER
 archiveAttributeCoercion2.dcmAttributeUpdatePolicy:Attribute Update Policy|Applied Attribute Update Policy. Only effective for coerce from Leading C-FIND SCP coercion type. Refer <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy" target="_blank">Attribute Update Policies' meanings</a>
+archiveAttributeCoercion2.dcmAttributeUpdatePolicy.PRESERVE:The attributes will be preserved. Nullify attributes in the new dataset which are not present in the original dataset. Any extra attributes will be nullified
+archiveAttributeCoercion2.dcmAttributeUpdatePolicy.SUPPLEMENT:The attributes will be overwritten. Attributes not present in original dataset will be supplemented. Any extra attributes with not null values will be added
+archiveAttributeCoercion2.dcmAttributeUpdatePolicy.MERGE:The attributes will be overwritten. Attribute values will be written from new dataset. Any attributes with not null values, shall not be overwritten by attributes with null values
+archiveAttributeCoercion2.dcmAttributeUpdatePolicy.OVERWRITE:The attributes will be overwritten. Attribute values if null in new dataset, will be nullified in original dataset. Any attributes with not null values, shall be overwritten by attributes with null values
 archiveAttributeCoercion2.dcmSupplementFromDeviceReference:Device Name Coercion Parameter|Device Name Coercion Parameter. Only effective for particular Attribute Coercions.
 archiveAttributeCoercion2.dcmMergeAttribute:DICOM Attribute Coercion Parameter|DICOM Attribute Coercion Parameters in format {attributeID}={value}. {attributeID} inside of {value} may be replaced by the value of that attribute in the original dataset. Only effective for merging attributes coercion type. Refer <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/DICOM-Attribute-Coercion-Parameters" target="_blank">DICOM Attribute Coercion Parameters</a> for formatting options and examples.
 archiveAttributeCoercion2.dcmCoercionParam:Other Coercion Parameter|Other Attribute Coercion specific Parameters.

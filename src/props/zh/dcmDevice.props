@@ -4,10 +4,14 @@ dcmDevice.dcmLimitOpenAssociations:关联限制|打开DICOM连接的最大数量
 dcmDevice.dcmLimitAssociationsInitiatedBy:AE关联限制|由特定应用实体(AE)以<ae-title>=<number>的形式启动的打开DICOM连接的最大数目； 如果超出限制,则拒绝来自AE的关联请求。
 dcmDevice.dcmTrustStoreURL:信任存储URL|信任存储URL，包含允许连接到此节点的DICOM节点的证书； 覆盖dicomAuthorizedNodeCertificateReference。
 dcmDevice.dcmTrustStoreType:信任存储库类型|信任存储库URL中指定的信任存储库密钥库类型。
+dcmDevice.dcmTrustStoreType.JKS:Java KeyStore
+dcmDevice.dcmTrustStoreType.PKCS12:Public-Key Cryptography Standards #12
 dcmDevice.dcmTrustStorePin:TrustStore Pin|TrustStore URL中指定的TrustStore密钥库密码
 dcmDevice.dcmTrustStorePinProperty:信任存储区pin属性|信任存储区URL中指定的信任存储区密钥库密码系统属性
 dcmDevice.dcmKeyStoreURL:Key Store URL|包含用于在TLS连接中标识此DICOM节点的私钥和证书
 dcmDevice.dcmKeyStoreType:Key Store类型|keystore URL中指定的keystore类型。
+dcmDevice.dcmKeyStoreType.JKS:Java KeyStore
+dcmDevice.dcmKeyStoreType.PKCS12:Public-Key Cryptography Standards #12
 dcmDevice.dcmKeyStorePin:keystore pin|keystore URL中指定的keystore密码
 dcmDevice.dcmKeyStorePinProperty:keystore pin属性|keystore URL中指定的keystore密码的系统属性
 dcmDevice.dcmKeyStoreKeyPin:钥匙库钥匙密钥|keystore URL中指定的keystore key password

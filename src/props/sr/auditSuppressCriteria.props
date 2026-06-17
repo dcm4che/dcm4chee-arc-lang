@@ -3,12 +3,66 @@ auditSuppressCriteria.cn:Ime|Proizvoljno/Smisleno ime Audit Suppress kriterijuma
 auditSuppressCriteria.dcmAuditEventID:ID događaja revizije|DICOM PS 3.15 A.5 Audit Event ID kod i codeSystemName u formatu (CV, CSD, "CM").
 auditSuppressCriteria.dcmAuditEventTypeCode:Kôd vrste događaja revizije|DICOM PS 3.15 A.5 Audit Event Type kod u formatu (CV, CSD, "CM").
 auditSuppressCriteria.dcmAuditEventActionCode:Kôd akcije događaja|DICOM PS 3.15 A.5 Audit Event Action Type kod.
+auditSuppressCriteria.dcmAuditEventActionCode.C:Create
+auditSuppressCriteria.dcmAuditEventActionCode.R:Read
+auditSuppressCriteria.dcmAuditEventActionCode.U:Update
+auditSuppressCriteria.dcmAuditEventActionCode.D:Delete
+auditSuppressCriteria.dcmAuditEventActionCode.E:Execute
 auditSuppressCriteria.dcmAuditEventOutcomeIndicator:Indikator ishoda događaja|DICOM PS 3.15 A.5 Audit Event Outcome Indicator.
+auditSuppressCriteria.dcmAuditEventOutcomeIndicator.0:Success
+auditSuppressCriteria.dcmAuditEventOutcomeIndicator.4:Minor Failure
+auditSuppressCriteria.dcmAuditEventOutcomeIndicator.8:Major Failure
+auditSuppressCriteria.dcmAuditEventOutcomeIndicator.12:Serious Failure
 auditSuppressCriteria.dcmAuditUserID:ID korisnika|DICOM PS 3.15 A.5 Audit Active Participant User ID.
 auditSuppressCriteria.dcmAuditAlternativeUserID:Alternativni ID korisnika|DICOM PS 3.15 A.5 Audit Active Participant Alternative User ID.
 auditSuppressCriteria.dcmAuditUserRoleIDCode:Kôd ID-a uloge korisnika|DICOM PS 3.15 A.5 Audit Active Participant User Role ID kod u formatu (CV, CSD, "CM").
 auditSuppressCriteria.dcmAuditNetworkAccessPointID:ID mrežne pristupne tačke|DICOM PS 3.15 A.5 Audit Active Participant Network Access Point ID.
 auditSuppressCriteria.dcmAuditUserIsRequestor:Korisnik je podnosilac|Ukazuje da li je Active Participant inicijator/tražilac Audit Event-a kao što je specificirano u DICOM PS 3.15 A.5
 auditSuppressCriteria.dcmParticipantObjectTypeCode:Kôd vrste objekta učesnika|DICOM PS 3.15 A.5 Participant Object Type Code.
+auditSuppressCriteria.dcmParticipantObjectTypeCode.1:Person
+auditSuppressCriteria.dcmParticipantObjectTypeCode.2:System Object
+auditSuppressCriteria.dcmParticipantObjectTypeCode.3:Organization
+auditSuppressCriteria.dcmParticipantObjectTypeCode.4:Other
 auditSuppressCriteria.dcmParticipantObjectTypeCodeRole:Uloga koda vrste objekta učesnika|DICOM PS 3.15 A.5 Participant Object Type Code Role.
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.1:Patient
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.2:Location
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.3:Report
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.4:Resource
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.5:Master File
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.6:User
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.7:List
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.8:Doctor
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.9:Subscriber
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.10:Guarantor
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.11:Security User Entity
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.12:Security User Group
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.13:Security Resource
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.14:Security Granualarity Definition
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.15:Provider
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.16:Report Destination
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.17:Report Library
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.18:Schedule
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.19:Customeer
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.20:Job
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.21:Job Stream
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.22:Table
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.23:Routing Criteria
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.24:Query
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.25:Data Source
+auditSuppressCriteria.dcmParticipantObjectTypeCodeRole.26:Processing Element
 auditSuppressCriteria.dcmParticipantObjectDataLifeCycle:Životni ciklus podataka objekta učesnika|DICOM PS 3.15 A.5 Participant Object Data Life Cycle.
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.1:Origination Creation
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.2:Import Copy From Original
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.3:Amendment
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.4:Verification
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.5:Translation
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.6:Access Use
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.7:DeIdentification
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.8:Aggregation Summarization Derivation
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.9:Report
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.10:Export Copy To Target
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.11:Disclosure
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.12:Receipt Of Disclosure
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.13:Archiving
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.14:Logical Deletion
+auditSuppressCriteria.dcmParticipantObjectDataLifeCycle.15:Permanent Erasure Physical Destruction

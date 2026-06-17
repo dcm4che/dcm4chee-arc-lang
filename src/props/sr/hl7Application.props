@@ -7,6 +7,14 @@ hl7Application.hl7AcceptedMessageType:Prihvaćeni tip poruke|Tip(ovi) poruke (Me
 hl7Application.hl7DefaultCharacterSet:Podrazumevani skup znakova|Skup znakova korišćen za dekodiranje primljenih poruka ako nije naveden u MSH-18.
 hl7Application.hl7SendingCharacterSet:Skup znakova slanja|Skup znakova korišćen za kodiranje HL7 poruka poslatih iz arhive.
 hl7Application.hl7OptionalMSHField:Opciono MSH polje|Prihvati HL7 poruke sa vrednostima koje nedostaju za navedena MSH polja, čak i ako su obavezne prema <a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43" target="_blank">IHE RAD TF Vol 2 Message Control zahtevima</a>.
+hl7Application.hl7OptionalMSHField.3:Sending Application
+hl7Application.hl7OptionalMSHField.4:Sending Facility
+hl7Application.hl7OptionalMSHField.5:Receiving Application
+hl7Application.hl7OptionalMSHField.6:Receiving Facility
+hl7Application.hl7OptionalMSHField.7:Date/Time of Message
+hl7Application.hl7OptionalMSHField.10:Message Control ID
+hl7Application.hl7OptionalMSHField.11:Processing ID
+hl7Application.hl7OptionalMSHField.12:Version ID
 hl7Application.dicomDescription:HL7 opis|Nesputani tekstualni opis HL7 Application
 hl7Application.dicomApplicationCluster:Klaster aplikacija|Lokalno definisana imena za podskup srodnih aplikacija
 hl7Application.dicomInstalled:instaliran|Tačno ako je HL7 aplikacija instalirana na mreži. Ako nije navedeno, informacija o statusu instalacije HL7 aplikacije se nasleđuje od uređaja

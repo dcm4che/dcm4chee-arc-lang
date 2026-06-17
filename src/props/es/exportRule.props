@@ -8,3 +8,6 @@ exportRule.dcmProperty:Condiciones|Condiciones en formato {key}[!]={value}. Ver 
 exportRule.dcmSchedule:Condiciones temporales|Aplique esta regla sólo dentro de los intervalos de tiempo especificados.
 exportRule.dcmDuration:Retraso de exportación|Retrasa la exportación de entidades para acumular varios eventos de activación en una tarea de exportación.
 exportRule.dcmExportReoccurredInstances:Exportar Instancias Reocurridas|Indica si la entidad debe ser exportada en la ocurrencia subsecuente de instancias.
+exportRule.dcmExportReoccurredInstances.NEVER:Never export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.ALWAYS:Always export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.REPLACE:Export entity only on reoccurrence of replaced instances

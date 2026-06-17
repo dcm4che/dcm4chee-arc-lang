@@ -6,3 +6,6 @@ exportPriorsRule.dcmSchedule:Vremenski uslovi|Primeni ovo pravilo samo u naveden
 exportPriorsRule.dcmEntitySelector:Birač entiteta|Specificira ključeve podudaranja korišćene za selekciju prethodnih studija za izvoz. Format: {key}={value}[&{key}={value}]..., sa {key} = 'priors' | 'StudyAge' | {attributeID}. {value} u formatu '$'{attributeID} se zamenjuje vrednošću navedenog atributa iz primljenog objekta koji je okinuo izvoz. Ako nije naveden Entity Selector, izvešće se sve prethodne studije za pacijenta. Primer: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => selektiraj najviše 2 prethodne studije ne starije od 5 godina koje sadrže barem jednu CT seriju.
 exportPriorsRule.dcmDuration:Interval suzbijanja duplog izvoza|Suzbij izvoz studija već izvezenih ne ranije od navedenog intervala radi izbegavanja duplih izvoza.
 exportPriorsRule.dcmExportReoccurredInstances:Izvezi ponovo pojavljene instance|Ukazuje da li prethodne studije treba izvesti pri naknadnom pojavljivanju instanci
+exportPriorsRule.dcmExportReoccurredInstances.NEVER:Never export prior Studies on reoccurrence of instances
+exportPriorsRule.dcmExportReoccurredInstances.ALWAYS:Always export prior Studies on reoccurrence of instances
+exportPriorsRule.dcmExportReoccurredInstances.REPLACE:Export prior Studies only on reoccurrence of replaced instances

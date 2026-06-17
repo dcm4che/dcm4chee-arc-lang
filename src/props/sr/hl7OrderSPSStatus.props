@@ -1,3 +1,11 @@
 hl7OrderSPSStatus:SPS status za HL7 nalog|Specificira SPS Status DICOM MWL stavki kreiranih/ažuriranih na primljenim HL7 ORM^O01, OMI^O23, OMG^O19 porukama
 hl7OrderSPSStatus.dcmSPSStatus:Kôd statusa zakazanog koraka procedure|Status kod Scheduled Procedure Step-a
 hl7OrderSPSStatus.hl7OrderControlStatus:Status HL7 kontrole naloga|Kombinacije HL7 Order Control Status Code-a. Ove kombinacije se referišu na vrednosti prisutne u ORC-1_ORC-5.
+hl7OrderSPSStatus.hl7OrderControlStatus.NW_SC:ORC.1 = NW & ORC.5 = SC => SPSStatus = SCHEDULED
+hl7OrderSPSStatus.hl7OrderControlStatus.NW_IP:ORC.1 = NW & ORC.5 = IP => SPSStatus = SCHEDULED
+hl7OrderSPSStatus.hl7OrderControlStatus.CA_CA:ORC.1 = CA & ORC.5 = CA => SPSStatus = CANCELED
+hl7OrderSPSStatus.hl7OrderControlStatus.DC_CA:ORC.1 = DC & ORC.5 = CA => SPSStatus = DISCONTINUED
+hl7OrderSPSStatus.hl7OrderControlStatus.XO_SC:ORC.1 = XO & ORC.5 = SC => SPSStatus = SCHEDULED
+hl7OrderSPSStatus.hl7OrderControlStatus.XO_CM:ORC.1 = XO & ORC.5 = CM => SPSStatus = COMPLETED
+hl7OrderSPSStatus.hl7OrderControlStatus.SC_CM:ORC.1 = SC & ORC.5 = CM => SPSStatus = COMPLETED
+hl7OrderSPSStatus.hl7OrderControlStatus.SC_A:ORC.1 = SC & ORC.5 = A => SPSStatus = COMPLETED

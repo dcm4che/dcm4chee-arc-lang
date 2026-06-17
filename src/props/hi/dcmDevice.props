@@ -4,10 +4,14 @@ dcmDevice.dcmLimitOpenAssociations:सहयोजन की सीमा|खु
 dcmDevice.dcmLimitAssociationsInitiatedBy:AE के लिए सहयोजन की सीमा|किसी विशिष्ट अनुप्रयोग तत्त्व (AE) द्वारा आरंभ किए हुए खुले DICOM संपर्कों की अधिकतम संख्या; इस प्रारूप में <ae-title>=<number>; सीमा पार हो जाए तो उस AE द्वारा सहयोजन अनुरोध अस्वीकृत किए जाएंगे ।
 dcmDevice.dcmTrustStoreURL:ट्रस्टस्टोर URL|DICOM नोड्स को इस नोड के साथ संपर्क प्राधिकृत करनेवाला प्रमाणपत्र के साथ ट्रस्टस्टोर का URL; डिवाइस स्तर पे 'अधिकृत नोड प्रमाण पत्र संदर्भ' का मूल्य अधिलेखित होगा ।
 dcmDevice.dcmTrustStoreType:ट्रस्टस्टोर प्रकार|ट्रस्टस्टोर URL द्वारा निर्दिष्ट ट्रस्टस्टोर का कीस्टोर प्रकार ।
+dcmDevice.dcmTrustStoreType.JKS:Java KeyStore
+dcmDevice.dcmTrustStoreType.PKCS12:Public-Key Cryptography Standards #12
 dcmDevice.dcmTrustStorePin:ट्रस्टस्टोर पिन|ट्रस्टस्टोर URL द्वारा निर्दिष्ट ट्रस्टस्टोर का कुंजी पासवर्ड ।
 dcmDevice.dcmTrustStorePinProperty:ट्रस्टस्टोर पिन गुण|ट्रस्टस्टोर URL द्वारा निर्दिष्ट ट्रस्टस्टोर के कुंजी पासवर्ड का सिस्टम गुण ।
 dcmDevice.dcmKeyStoreURL:कीस्टोर URL|TLS संपर्कों में इस DICOM नोड की पहचान करनेवाला निजी कुंजी और प्रमाणपत्र के साथ कीस्टोर का URL ।
 dcmDevice.dcmKeyStoreType:कीस्टोर प्रकार|कीस्टोर URL द्वारा निर्दिष्ट कीस्टोर का कीस्टोर प्रकार ।
+dcmDevice.dcmKeyStoreType.JKS:Java KeyStore
+dcmDevice.dcmKeyStoreType.PKCS12:Public-Key Cryptography Standards #12
 dcmDevice.dcmKeyStorePin:कीस्टोर पिन|कीस्टोर URL द्वारा निर्दिष्ट कीस्टोर के पासवर्ड को निर्दिष्ट करता है ।
 dcmDevice.dcmKeyStorePinProperty:कीस्टोर पिन गुण|कीस्टोर URL द्वारा निर्दिष्ट कीस्टोर के पासवर्ड के सिस्टम गुण को निर्दिष्ट करता है ।
 dcmDevice.dcmKeyStoreKeyPin:कीस्टोर की पिन|कीस्टोर URL द्वारा निर्दिष्ट कीस्टोर का कुंजी पासवर्ड ।

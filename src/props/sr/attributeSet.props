@@ -1,6 +1,10 @@
 attributeSet:Skup atributa|Imenovani skup atributa za parametar upita 'includefields' QIDO-RS i WADO-RS metapodataka ili za parametar upita 'comparefield' DIFF-RS zahteva.
 attributeSet.dicomDescription:Opis skupa atributa|Nesputani tekstualni opis ovog Attribute Set
 attributeSet.dcmAttributeSetType:Tip skupa atributa|Specificira upotrebu ovog Attribute Set Type-a.
+attributeSet.dcmAttributeSetType.QIDO_RS:Attribute Set is used by Query Parameter 'includefields' of QIDO-RS requests
+attributeSet.dcmAttributeSetType.WADO_RS:Attribute Set is used by Query Parameter 'includefields' of WADO-RS requests
+attributeSet.dcmAttributeSetType.DIFF_RS:Attribute Set is used by Query Parameter 'comparefields' of DIFF-RS requests
+attributeSet.dcmAttributeSetType.LEADING_CFIND_SCP:Attribute Set is used by Leading C-FIND SCP coercion
 attributeSet.dcmAttributeSetID:ID skupa atributa|ID koji koristi Query Parameter 'includefields' QIDO-RS i WADO-RS Metadata zahteva i Query Parameter 'comparefield' DIFF-RS zahteva za referenciranje ovog Attribute Set-a.
 attributeSet.dcmAttributeSetTitle:Naslov skupa atributa|Naslov ovog skupa atributa.
 attributeSet.dcmAttributeSetNumber:Broj skupa atributa|Broj korišćen za sortiranje Attribute Sets.

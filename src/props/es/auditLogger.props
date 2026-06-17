@@ -6,10 +6,58 @@ auditLogger.dcmAuditSourceID:Identificación de la Fuente|RFC 3881 Identificaci�
 auditLogger.dcmAuditEnterpriseSiteID:Identificación del sitio de la empresa|RFC 3881 Identificación del sitio de la empresa de auditoría; el valor 'dicomInstitutionName' se sustituye por el nombre de la institución del dispositivo DICOM.
 auditLogger.dcmAuditSourceTypeCode:Código de tipo de fuente|RFC 3881 Código de tipo de fuente de auditoría; el valor 'dicomPrimaryDeviceType' se sustituye por el tipo primario del dispositivo DICOM.
 auditLogger.dcmAuditFacility:Instalación de Syslog|RFC 5424 Valor de cadena de la instalación de Syslog del mensaje de auditoría.
+auditLogger.dcmAuditFacility.kern:kernel messages
+auditLogger.dcmAuditFacility.user:user-level messages
+auditLogger.dcmAuditFacility.mail:mail system messages
+auditLogger.dcmAuditFacility.daemon:system daemons' messages
+auditLogger.dcmAuditFacility.auth:authorization messages
+auditLogger.dcmAuditFacility.syslog:messages generated internally by syslogd
+auditLogger.dcmAuditFacility.lpr:line printer subsystem messages
+auditLogger.dcmAuditFacility.news:network news subsystem messages
+auditLogger.dcmAuditFacility.uucp:UUCP subsystem messages
+auditLogger.dcmAuditFacility.cron:clock daemon messages
+auditLogger.dcmAuditFacility.authpriv:security/authorization messages
+auditLogger.dcmAuditFacility.ftp:ftp daemon messages
+auditLogger.dcmAuditFacility.ntp:NTP subsystem messages
+auditLogger.dcmAuditFacility.audit:audit messages
+auditLogger.dcmAuditFacility.console:console messages
+auditLogger.dcmAuditFacility.cron2:clock daemon messages
 auditLogger.dcmAuditSuccessSeverity:Severidad Syslog - Éxito|RFC 5424 Valor de cadena de Severidad Syslog del mensaje de auditoría con Indicador de Resultado de Evento 0 (Éxito).
+auditLogger.dcmAuditSuccessSeverity.emerg:emergency; system is unusable
+auditLogger.dcmAuditSuccessSeverity.alert:action must be taken immediately
+auditLogger.dcmAuditSuccessSeverity.crit:critical condition
+auditLogger.dcmAuditSuccessSeverity.err:error condition
+auditLogger.dcmAuditSuccessSeverity.warning:warning condition
+auditLogger.dcmAuditSuccessSeverity.notice:normal but significant condition
+auditLogger.dcmAuditSuccessSeverity.info:informational message
+auditLogger.dcmAuditSuccessSeverity.debug:debug-level messages
 auditLogger.dcmAuditMinorFailureSeverity:Severidad Syslog - Fallo|RFC 5424 Valor de cadena de Severidad Syslog de mensaje de auditoría con Indicador de Resultado de Suceso 4 (Fallo menor).
+auditLogger.dcmAuditMinorFailureSeverity.emerg:emergency; system is unusable
+auditLogger.dcmAuditMinorFailureSeverity.alert:action must be taken immediately
+auditLogger.dcmAuditMinorFailureSeverity.crit:critical condition
+auditLogger.dcmAuditMinorFailureSeverity.err:error condition
+auditLogger.dcmAuditMinorFailureSeverity.warning:warning condition
+auditLogger.dcmAuditMinorFailureSeverity.notice:normal but significant condition
+auditLogger.dcmAuditMinorFailureSeverity.info:informational message
+auditLogger.dcmAuditMinorFailureSeverity.debug:debug-level messages
 auditLogger.dcmAuditSeriousFailureSeverity:Severidad Syslog - Fallo|RFC 5424 Valor de cadena de Severidad Syslog de mensaje de auditoría con Indicador de Resultado de Suceso 8 (Fallo grave).
+auditLogger.dcmAuditSeriousFailureSeverity.emerg:emergency; system is unusable
+auditLogger.dcmAuditSeriousFailureSeverity.alert:action must be taken immediately
+auditLogger.dcmAuditSeriousFailureSeverity.crit:critical condition
+auditLogger.dcmAuditSeriousFailureSeverity.err:error condition
+auditLogger.dcmAuditSeriousFailureSeverity.warning:warning condition
+auditLogger.dcmAuditSeriousFailureSeverity.notice:normal but significant condition
+auditLogger.dcmAuditSeriousFailureSeverity.info:informational message
+auditLogger.dcmAuditSeriousFailureSeverity.debug:debug-level messages
 auditLogger.dcmAuditMajorFailureSeverity:Severidad Syslog - Mayor|RFC 5424 Valor de cadena de Severidad Syslog de mensaje de auditoría con Indicador de Resultado de Evento 12 (Fallo Mayor).
+auditLogger.dcmAuditMajorFailureSeverity.emerg:emergency; system is unusable
+auditLogger.dcmAuditMajorFailureSeverity.alert:action must be taken immediately
+auditLogger.dcmAuditMajorFailureSeverity.crit:critical condition
+auditLogger.dcmAuditMajorFailureSeverity.err:error condition
+auditLogger.dcmAuditMajorFailureSeverity.warning:warning condition
+auditLogger.dcmAuditMajorFailureSeverity.notice:normal but significant condition
+auditLogger.dcmAuditMajorFailureSeverity.info:informational message
+auditLogger.dcmAuditMajorFailureSeverity.debug:debug-level messages
 auditLogger.dcmAuditApplicationName:Nombre de aplicación de Syslog|RFC 5424 APP-NAME de Syslog del mensaje de auditoría; ID de fuente de auditoría si no existe.
 auditLogger.dcmAuditMessageID:Identificación de mensaje Syslog|RFC 5424 Syslog MSGID del mensaje de auditoría.
 auditLogger.dcmAuditMessageEncoding:Codificación de mensaje|Codificación de caracteres de la parte RFC 5424 Syslog MSG del mensaje de auditoría.

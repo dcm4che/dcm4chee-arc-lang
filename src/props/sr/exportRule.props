@@ -8,3 +8,6 @@ exportRule.dcmProperty:Uslovi|Uslovi u formatu {key}[!]={value}. Pogledajte <a h
 exportRule.dcmSchedule:Vremenski uslovi|Primeni ovo pravilo samo u navedenim vremenskim opsezima.
 exportRule.dcmDuration:Kašnjenje izvoza|Odgodi izvoz entiteta radi akumuliranja više okidačkih događaja u jedan zadatak izvoza.
 exportRule.dcmExportReoccurredInstances:Izvezi ponovo pojavljene instance|Ukazuje da li entitet treba izvesti pri naknadnom pojavljivanju instanci
+exportRule.dcmExportReoccurredInstances.NEVER:Never export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.ALWAYS:Always export entity on reoccurrence of instances
+exportRule.dcmExportReoccurredInstances.REPLACE:Export entity only on reoccurrence of replaced instances
