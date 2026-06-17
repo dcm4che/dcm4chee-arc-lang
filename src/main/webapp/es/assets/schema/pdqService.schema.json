@@ -39,7 +39,10 @@
       "title": "Entidad de consulta",
       "description": "Indica si el SCP C-FIND se consulta para un paciente concreto o para los estudios de un paciente concreto. Sólo es efectivo para servicios PDQ DICOM (URI: pdq-dicom:{AETitle}).",
       "type": "string",
-      "enum": [ "Patient", "Study" ],
+      "enum": [
+        "Patient",
+        "Study"
+      ],
       "default": "Patient"
     },
     "dcmProperty": {

@@ -39,7 +39,10 @@
       "title": "Query Entity",
       "description": "Indicates if the C-FIND SCP is queried for a particular Patient or for Studies of a particular Patient. Only effective for DICOM PDQ Services (URI: pdq-dicom:{AETitle}).",
       "type": "string",
-      "enum": [ "Patient", "Study" ],
+      "enum": [
+        "Patient",
+        "Study"
+      ],
       "default": "Patient"
     },
     "dcmProperty": {

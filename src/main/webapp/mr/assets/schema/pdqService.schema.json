@@ -39,7 +39,10 @@
       "title": "घटक प्राप्ति",
       "description": "C-FIND SCP वरून रुग्णाचे रेकॉर्ड किंवा रुग्णाच्या रेकॉर्डचे अभ्यासांची प्राप्ती सूचित करते. फक्त DICOM PDQ सेवेंसाठी प्रभावी ('PDQ सेवा URI': pdq-dicom:{AETitle})",
       "type": "string",
-      "enum": [ "Patient", "Study" ],
+      "enum": [
+        "Patient",
+        "Study"
+      ],
       "default": "Patient"
     },
     "dcmProperty": {

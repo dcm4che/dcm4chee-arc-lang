@@ -39,7 +39,10 @@
       "title": "クエリ エンティティ",
       "description": "特定の 患者 または 特定の 患者の 検査に 対して C-FIND SCPが クエリされるか どうかを 示します。 DICOM PDQ サービスに 対してのみ 有効 (URI: pdq-dicom:{AETitle})",
       "type": "string",
-      "enum": [ "Patient", "Study" ],
+      "enum": [
+        "Patient",
+        "Study"
+      ],
       "default": "Patient"
     },
     "dcmProperty": {

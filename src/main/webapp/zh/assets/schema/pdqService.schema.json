@@ -39,7 +39,10 @@
       "title": "查询实体",
       "description": "指示是否为特定患者或特定患者的检查查询C-FIND SCP。仅对DICOM PDQ服务有效(URI: pdq-dicom:{AETitle}).",
       "type": "string",
-      "enum": [ "Patient", "Study" ],
+      "enum": [
+        "Patient",
+        "Study"
+      ],
       "default": "Patient"
     },
     "dcmProperty": {
