@@ -2519,7 +2519,7 @@
     "task_created": "Zadaci uspešno kreirani!",
     "task_delete_question": "Da li ste sigurni da želite da obrišete sve zadatke ove grupe?",
     "task_deleted": "Zadatak uspešno obrisan!",
-    "task_deleted_param": "{$tasks} zadataka uspešno obrisano!",
+    "task_deleted_param": "{$taskid} zadataka uspešno obrisano!",
     "task_id": "ID zadatka",
     "task_marked_for_export": "Zadatak uspešno označen za izvoz!",
     "task_marked_for_export_param": "Zadatak {$taskid} uspešno označen za izvoz!",
