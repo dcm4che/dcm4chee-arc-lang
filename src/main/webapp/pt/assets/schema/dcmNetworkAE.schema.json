@@ -60,7 +60,7 @@
     },
     "dcmShareTransferCapabilitiesFromAETitle": {
       "title": "Share Transfer Capabilities from AE Title",
-      "description": "Indicates that this Network AE supports the Transfer Capabilities specified for another Network AE of the same Device.",
+      "description": "Indicates that this Network AE supports the Transfer Capabilities specified for another Archive Network AE of the same Archive Device.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },

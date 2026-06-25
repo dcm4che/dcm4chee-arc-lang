@@ -6,6 +6,6 @@ dcmNetworkAE.dcmNoAsyncModeCalledAETitle:No Async Mode Called AE Title|Blacklist
 dcmNetworkAE.dcmMasqueradeCalledAETitle:Masquerade Called AE Title|Called AE Title used for initiating network associations, masquerading the configured AE Title of the remote Network AE. Format <Configured AE Title>:<Used Called AE Title>.
 dcmNetworkAE.dcmMasqueradeCallingAETitle:正在调用伪装的AE标题|AE标题用于发起网络关联，掩盖本网络的实际AE标题 -- 可选前缀[<Called AE Title>]限制伪装与特定AE标题的关联
 dcmNetworkAE.dcmPreferredTransferSyntax:优选的传输语法|表示上下文中选择传输语法的首选传输语法，按优先级排序。 如果没有，则将选择提供的表示上下文中的第一个可接受的迁移语法。可被此AE的特定传输能力的配置值覆盖。
-dcmNetworkAE.dcmShareTransferCapabilitiesFromAETitle:Share Transfer Capabilities from AE Title|Indicates that this Network AE supports the Transfer Capabilities specified for another Network AE of the same Device.
+dcmNetworkAE.dcmShareTransferCapabilitiesFromAETitle:Share Transfer Capabilities from AE Title|Indicates that this Network AE supports the Transfer Capabilities specified for another Archive Network AE of the same Archive Device.
 dcmNetworkAE.hl7ApplicationName:HL7应用程序名称|与此AE关联的HL7应用程序和设施名称（应用程序设施）
 dcmNetworkAE.dcmArchiveNetworkAE:Archive Network AE|DICOM Archive Network AE相关信息

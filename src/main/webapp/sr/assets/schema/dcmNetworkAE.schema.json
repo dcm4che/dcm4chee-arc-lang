@@ -60,7 +60,7 @@
     },
     "dcmShareTransferCapabilitiesFromAETitle": {
       "title": "Deljenje Transfer Capability-ja sa AE naslova",
-      "description": "Ukazuje da ovaj Network AE podržava Transfer Capabilities specificirane za drugi Network AE istog uređaja.",
+      "description": "Ukazuje da ovaj Network AE podržava Transfer Capabilities specificirane za drugi Archive Network AE istog Archive uređaja.",
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
