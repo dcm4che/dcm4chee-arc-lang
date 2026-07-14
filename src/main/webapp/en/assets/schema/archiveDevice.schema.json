@@ -64,6 +64,7 @@
     "dcmAuditSpoolDirectory",
     "dcmStorePermissionCacheSize",
     "dcmMergeMWLCacheSize",
+    "dcmMergeDelayedMWLMatchingKey",
     "dcmStoreUpdateDBMaxRetries",
     "dcmStoreUpdateDBMinRetryDelay",
     "dcmStoreUpdateDBMaxRetryDelay",
@@ -1248,6 +1249,16 @@
       "default": 10,
       "minimum": 0,
       "exclusiveMinimum": true
+    },
+    "dcmMergeDelayedMWLMatchingKey": {
+      "title": "Merge Delayed MWL Matching Key",
+      "description": "Specifies attribute of requested procedure to lookup already stored study and its series whose attributes is updated with MWL Item attributes.",
+      "type": "string",
+      "default": "StudyInstanceUID",
+      "enum": [
+        "AccessionNumber|Use Accession Number (0008,0050) from MWL for matching Study",
+        "StudyInstanceUID|Use Study Instance UID (0020,000D) from MWL for matching Study"
+      ]
     },
     "dcmStoreUpdateDBMaxRetries": {
       "title": "Store Update DB Maximum Number of Retries",
