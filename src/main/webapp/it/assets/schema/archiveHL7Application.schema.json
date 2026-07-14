@@ -187,6 +187,15 @@
         "ACCESSION_AS_ADMISSION|Use Accession Number present in OBR.18 / IPC.1 as Admission ID if it is missing in HL7 Order Message in PV1.19 / PID.18"
       ]
     },
+    "hl7MergeCompositeObjectMatchingKey": {
+      "title": "HL7 Merge Composite Object Matching Key",
+      "description": "Specifies attribute of MWL to lookup already stored DICOM composite objects whose study and series attributes are updated with MWL attributes. Overwrites value specified on Device level.",
+      "type": "string",
+      "enum": [
+        "AccessionNumber|Use Accession Number (0008,0050) from MWL for matching composite objects",
+        "StudyInstanceUID|Use Study Instance UID (0020,000D) from MWL for matching composite objects"
+      ]
+    },
     "hl7ImportReportMissingStudyIUIDPolicy": {
       "title": "Politica usata per l'UID dell'importazione di un report HL7 in un istanza con studio mancante",
       "description": "Specifica la politica per l'UID dell'istanza di studio mancante nei messaggi ORU (Report di importazione HL7) in arrivo. Sovrascrive i valori specificati a livello del dispositivo.",

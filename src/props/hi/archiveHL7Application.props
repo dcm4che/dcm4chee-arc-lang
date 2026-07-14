@@ -41,6 +41,9 @@ archiveHL7Application.hl7OrderMissingAdmissionIDPolicy:HL7 Order Missing Admissi
 archiveHL7Application.hl7OrderMissingAdmissionIDPolicy.ACCEPT:Accept HL7 Order Messages with missing Admission ID in PV1.19 / PID.18
 archiveHL7Application.hl7OrderMissingAdmissionIDPolicy.REJECT:Reject HL7 Order Messages with missing Admission ID in PV1.19 / PID.18
 archiveHL7Application.hl7OrderMissingAdmissionIDPolicy.ACCESSION_AS_ADMISSION:Use Accession Number present in OBR.18 / IPC.1 as Admission ID if it is missing in HL7 Order Message in PV1.19 / PID.18
+archiveHL7Application.hl7MergeCompositeObjectMatchingKey:HL7 Merge Composite Object Matching Key|Specifies attribute of MWL to lookup already stored DICOM composite objects whose study and series attributes are updated with MWL attributes. Overwrites value specified on Device level.
+archiveHL7Application.hl7MergeCompositeObjectMatchingKey.AccessionNumber:Use Accession Number (0008,0050) from MWL for matching composite objects
+archiveHL7Application.hl7MergeCompositeObjectMatchingKey.StudyInstanceUID:Use Study Instance UID (0020,000D) from MWL for matching composite objects
 archiveHL7Application.hl7ImportReportMissingStudyIUIDPolicy:HL7 आयातित रिपोर्ट अनुपस्थित स्टडी दृष्टांत UID नीति|आने वाले HL7 आयातित रिपोर्ट (ORU) संदेशों में अनुपस्थित स्टडी दृष्टांत UID के नीति को निर्दिष्ट करता है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।
 archiveHL7Application.hl7ImportReportMissingStudyIUIDPolicy.REJECT:Reject HL7 ORU^R01 message with missing Study Instance UID in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study'
 archiveHL7Application.hl7ImportReportMissingStudyIUIDPolicy.GENERATE:Generate random Study Instance UID if it is missing in HL7 ORU^R01 Message in OBX.5 for OBX segment with OBX.3 as 'Study Instance UID' / 'DICOM Study'

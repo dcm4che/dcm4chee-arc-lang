@@ -64,7 +64,6 @@
     "dcmAuditSpoolDirectory",
     "dcmStorePermissionCacheSize",
     "dcmMergeMWLCacheSize",
-    "dcmMergeDelayedMWLMatchingKey",
     "dcmStoreUpdateDBMaxRetries",
     "dcmStoreUpdateDBMinRetryDelay",
     "dcmStoreUpdateDBMaxRetryDelay",
@@ -126,6 +125,7 @@
     "hl7OtherPatientIDs",
     "hl7OrderMissingStudyIUIDPolicy",
     "hl7OrderMissingAdmissionIDPolicy",
+    "hl7MergeCompositeObjectMatchingKey",
     "hl7ImportReportMissingStudyIUIDPolicy",
     "hl7ImportReportMissingAdmissionIDPolicy",
     "hl7ImportReportAdjustIUID",
@@ -1250,16 +1250,6 @@
       "minimum": 0,
       "exclusiveMinimum": true
     },
-    "dcmMergeDelayedMWLMatchingKey": {
-      "title": "Merge Delayed MWL Matching Key",
-      "description": "Specifies attribute of requested procedure to lookup already stored study and its series whose attributes is updated with MWL Item attributes.",
-      "type": "string",
-      "default": "StudyInstanceUID",
-      "enum": [
-        "AccessionNumber|Use Accession Number (0008,0050) from MWL for matching Study",
-        "StudyInstanceUID|Use Study Instance UID (0020,000D) from MWL for matching Study"
-      ]
-    },
     "dcmStoreUpdateDBMaxRetries": {
       "title": "Store Update DB Maximum Number of Retries",
       "description": "Maximum number of retries to update the database on storage.",
@@ -1899,6 +1889,16 @@
         "ACCEPT|Accept HL7 Order Messages with missing Admission ID in PV1.19 / PID.18",
         "REJECT|Reject HL7 Order Messages with missing Admission ID in PV1.19 / PID.18",
         "ACCESSION_AS_ADMISSION|Use Accession Number present in OBR.18 / IPC.1 as Admission ID if it is missing in HL7 Order Message in PV1.19 / PID.18"
+      ]
+    },
+    "hl7MergeCompositeObjectMatchingKey": {
+      "title": "HL7 Merge Composite Object Matching Key",
+      "description": "Specifies attribute of MWL to lookup already stored DICOM composite objects whose study and series attributes are updated with MWL attributes. May be overwritten by configured values for particular Archive HL7 Application.",
+      "type": "string",
+      "default": "StudyInstanceUID",
+      "enum": [
+        "AccessionNumber|Use Accession Number (0008,0050) from MWL for matching composite objects",
+        "StudyInstanceUID|Use Study Instance UID (0020,000D) from MWL for matching composite objects"
       ]
     },
     "hl7ImportReportMissingStudyIUIDPolicy": {
