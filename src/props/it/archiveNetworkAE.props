@@ -7,6 +7,7 @@ archiveNetworkAE.dcmSeriesMetadataDelay:Ritardo metadati serie aggregata|Ritardo
 archiveNetworkAE.dcmPurgeInstanceRecordsDelay:Ritardo nell'Eliminazione dei record di istanza|Ritardo nel formato di durata ISO-8601 PnDTnHnMn.nS per l'eliminazione dei record di istanza ricevuti da questo AE dal database. Sovrascrive i valori specificati a livello del dispositivo. Efficace solo se Elimina record istanza a livello di dispositivo = true.
 archiveNetworkAE.dcmStoreAccessControlID:ID controllo accesso all'archivio|ID controllo accesso assegnato agli studi ricevuti da questo AE
 archiveNetworkAE.dcmAccessControlID:ID Controllo accesso|ID di controllo dell'accesso assegnati alle richieste di query/recupero ricevute da questo AE.
+archiveNetworkAE.dcmGrantAccessPrevStudiesOfPatient:Grant Access Previous Studies of Patient|Provide Access to all Studies of a particular Patient, if there is one Study for that Patient provided by this Archive AE not older than the time interval specified in ISO-8601 duration format PnYnMnD or PnW.
 archiveNetworkAE.dcmAcceptedMoveDestination:Destinazione di spostamento accettata|Destinazione di spostamento accettata nelle richieste C-MOVE; qualsiasi se assente.
 archiveNetworkAE.dcmOverwritePolicy:Politica di sovrascrittura|Politica di sovrascrittura per oggetti ricevuti da questo AE. Sovrascrive i valori specificati a livello del dispositivo.
 archiveNetworkAE.dcmOverwritePolicy.NEVER:Never overwrite previous received object on receive of object with matching SOP Instance UID

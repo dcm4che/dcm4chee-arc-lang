@@ -7,6 +7,7 @@ archiveNetworkAE.dcmSeriesMetadataDelay:Retraso de metadatos de serie agregados|
 archiveNetworkAE.dcmPurgeInstanceRecordsDelay:Retraso en la purga de registros de instancia|Retraso en formato de duración ISO-8601 PnDTnHnMn.nS para la purga de registros de instancia de la base de datos recibidos por este AE. Sobrescribe el valor especificado a nivel de Dispositivo. Sólo es efectivo si Purgar Registros de Instancia a Nivel de Dispositivo = verdadero.
 archiveNetworkAE.dcmStoreAccessControlID:Almacenar ID de Control de Acceso|ID de Control de Acceso asignado a los Estudios recibidos por este AE
 archiveNetworkAE.dcmAccessControlID:ID de control de acceso|ID de control de acceso asignado a las solicitudes de consulta/recuperación recibidas por este AE.
+archiveNetworkAE.dcmGrantAccessPrevStudiesOfPatient:Grant Access Previous Studies of Patient|Provide Access to all Studies of a particular Patient, if there is one Study for that Patient provided by this Archive AE not older than the time interval specified in ISO-8601 duration format PnYnMnD or PnW.
 archiveNetworkAE.dcmAcceptedMoveDestination:Destino de Movimiento Aceptado|Destino de Movimiento Aceptado en peticiones C-MOVE; cualquiera si no existe.
 archiveNetworkAE.dcmOverwritePolicy:Política de sobrescritura|Política de sobrescritura para objetos recibidos por este AE. Sobrescribe el valor especificado en el nivel de dispositivo.
 archiveNetworkAE.dcmOverwritePolicy.NEVER:Never overwrite previous received object on receive of object with matching SOP Instance UID

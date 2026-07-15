@@ -7,6 +7,7 @@ archiveNetworkAE.dcmSeriesMetadataDelay:Kašnjenje agregacije metapodataka serij
 archiveNetworkAE.dcmPurgeInstanceRecordsDelay:Kašnjenje brisanja zapisa instanci|Kašnjenje u ISO-8601 formatu trajanja PnDTnHnMn.nS za brisanje Instance Records iz DB koje je primio ovaj AE. Prepisuje vrednost navedenu na nivou uređaja. Efikasno samo ako je Purge Instance Records on Device Level = true.
 archiveNetworkAE.dcmStoreAccessControlID:ID kontrole pristupa skladištu|Access Control ID-ovi dodeljeni studijama primljenim od ovog AE
 archiveNetworkAE.dcmAccessControlID:ID kontrole pristupa|Access Control ID-ovi dodeljeni Query/Retrieve zahtevima primljenim od ovog AE.
+archiveNetworkAE.dcmGrantAccessPrevStudiesOfPatient:Grant Access Previous Studies of Patient|Provide Access to all Studies of a particular Patient, if there is one Study for that Patient provided by this Archive AE not older than the time interval specified in ISO-8601 duration format PnYnMnD or PnW.
 archiveNetworkAE.dcmAcceptedMoveDestination:Prihvaćeno odredište Move|Prihvaćeno Move Destination u C-MOVE zahtevima; bilo koje ako nije navedeno.
 archiveNetworkAE.dcmOverwritePolicy:Politika prepisivanja|Specificira ponašanje pri prijemu objekata ovim AE-om, čiji SOP Instance UID odgovara prethodno primljenom objektu. Prepisuje vrednost navedenu na nivou uređaja.
 archiveNetworkAE.dcmOverwritePolicy.NEVER:Never overwrite previous received object on receive of object with matching SOP Instance UID

@@ -7,6 +7,7 @@ archiveNetworkAE.dcmSeriesMetadataDelay:एकत्रित मालिका
 archiveNetworkAE.dcmPurgeInstanceRecordsDelay:दृष्टांतांचे रेकॉर्डसला हटवण्याचे विलंब|डेटाबेसमधून दृष्टांतांचे रेकॉर्ड्सला हटवण्यासाठी ISO-8601 कालावधि PnDTnHnMnS प्रारूपात विलंब. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील. फक्त प्रभावित असेल जर, 'दृष्टांतांच्या रेकॉर्डस् हटवा = हो'.
 archiveNetworkAE.dcmStoreAccessControlID:साठवण प्रवेश नियंत्रण ID|या AE द्वारे साठवलेले अभ्यासांवर नियुक्त प्रवेश निरीक्षण ID चे मूल्य.
 archiveNetworkAE.dcmAccessControlID:प्रवेश निरीक्षण ID|या AE द्वारे प्राप्त झालेल्या प्राप्ति किंवा पुनर्प्राप्ती विनंत्यांवर नियुक्त प्रवेश निरीक्षण ID चे मूल्य.
+archiveNetworkAE.dcmGrantAccessPrevStudiesOfPatient:Grant Access Previous Studies of Patient|Provide Access to all Studies of a particular Patient, if there is one Study for that Patient provided by this Archive AE not older than the time interval specified in ISO-8601 duration format PnYnMnD or PnW.
 archiveNetworkAE.dcmAcceptedMoveDestination:स्वीकारलेले मूव गंतव्य|C-MOVE विनंत्यांमध्ये स्वीकारलेले मूव गंतव्य. अनुपस्थित असल्यास, कुठलेही गंतव्य स्वीकारा.
 archiveNetworkAE.dcmOverwritePolicy:अधिलिखित धोरण|अधिलिखित धोरण. आर्काइव्ह डिव्हाइस स्तरावर निर्दिष्ट केलेल्या मूल्य अधिलिखित होतील.
 archiveNetworkAE.dcmOverwritePolicy.NEVER:Never overwrite previous received object on receive of object with matching SOP Instance UID

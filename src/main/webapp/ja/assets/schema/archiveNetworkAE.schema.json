@@ -66,6 +66,12 @@
         "type": "string"
       }
     },
+    "dcmGrantAccessPrevStudiesOfPatient": {
+      "title": "Grant Access Previous Studies of Patient",
+      "description": "Provide Access to all Studies of a particular Patient, if there is one Study for that Patient provided by this Archive AE not older than the time interval specified in ISO-8601 duration format PnYnMnD or PnW.",
+      "type": "string",
+      "format": "dcmPeriod"
+    },
     "dcmAcceptedMoveDestination": {
       "title": "承認された 移動先",
       "description": "C-MOVE 要求で 受け入れられた 移動先; 存在しない 場合、任意の 移動先。",

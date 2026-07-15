@@ -66,6 +66,12 @@
         "type": "string"
       }
     },
+    "dcmGrantAccessPrevStudiesOfPatient": {
+      "title": "Grant Access Previous Studies of Patient",
+      "description": "Provide Access to all Studies of a particular Patient, if there is one Study for that Patient provided by this Archive AE not older than the time interval specified in ISO-8601 duration format PnYnMnD or PnW.",
+      "type": "string",
+      "format": "dcmPeriod"
+    },
     "dcmAcceptedMoveDestination": {
       "title": "批准的目标",
       "description": "C-MOVE请求接受的目标； 如果不存在,则任意目标。",

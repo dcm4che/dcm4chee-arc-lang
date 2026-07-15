@@ -7,6 +7,7 @@ archiveNetworkAE.dcmSeriesMetadataDelay:Aggregate Series Metadata Delay|Delay in
 archiveNetworkAE.dcmPurgeInstanceRecordsDelay:Purge Instance Records Delay|Delay in ISO-8601 duration format PnDTnHnMn.nS for purging Instance Records from the DB received by this AE. Overwrites value specified on Device level. Only effective, if Purge Instance Records on Device Level = true.
 archiveNetworkAE.dcmStoreAccessControlID:Store Access Control ID|Access Control IDs assigned to Studies received by this AE
 archiveNetworkAE.dcmAccessControlID:Access Control ID|Access Control IDs assigned to Query/Retrieve requests received by this AE.
+archiveNetworkAE.dcmGrantAccessPrevStudiesOfPatient:Grant Access Previous Studies of Patient|Provide Access to all Studies of a particular Patient, if there is one Study for that Patient provided by this Archive AE not older than the time interval specified in ISO-8601 duration format PnYnMnD or PnW.
 archiveNetworkAE.dcmAcceptedMoveDestination:Accepted Move Destination|Accepted Move Destination in C-MOVE requests; any if absent.
 archiveNetworkAE.dcmOverwritePolicy:Overwrite Policy|Specifies behavior on receive of objects by this AE, which SOP Instance UID matches a previous received object. Overwrites value specified on Device level.
 archiveNetworkAE.dcmOverwritePolicy.NEVER:Never overwrite previous received object on receive of object with matching SOP Instance UID

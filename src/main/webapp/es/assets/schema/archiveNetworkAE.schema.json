@@ -66,6 +66,12 @@
         "type": "string"
       }
     },
+    "dcmGrantAccessPrevStudiesOfPatient": {
+      "title": "Grant Access Previous Studies of Patient",
+      "description": "Provide Access to all Studies of a particular Patient, if there is one Study for that Patient provided by this Archive AE not older than the time interval specified in ISO-8601 duration format PnYnMnD or PnW.",
+      "type": "string",
+      "format": "dcmPeriod"
+    },
     "dcmAcceptedMoveDestination": {
       "title": "Destino de Movimiento Aceptado",
       "description": "Destino de Movimiento Aceptado en peticiones C-MOVE; cualquiera si no existe.",
