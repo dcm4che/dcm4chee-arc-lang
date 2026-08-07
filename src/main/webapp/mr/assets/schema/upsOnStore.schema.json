@@ -209,6 +209,11 @@
       "description": "तयार केलेल्या UPS मधील संदर्भित विनंती क्रम (००४०,ए३७०) च्या आयटममध्ये विनंती करणाऱ्या प्रक्रिया वर्णन (००३२,१०६०) चे मूल्य. प्राप्त झालेल्या डेटासेटमधील {attributeID} च्या मूल्याने बदलले जाईल. उदाहरण : {StudyDescription}.",
       "type": "string"
     },
+    "dcmRequestedProcedureCode": {
+      "title": "Requested Procedure Code Sequence",
+      "description": "Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Item of Requested Procedure Code Sequence (0032,1064) in Item of Referenced Request Sequence (0040,A370) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, \"&lt;CodeMeaning&gt;\")",
+      "type": "string"
+    },
     "dcmRequestingPhysician": {
       "title": "विनंती करणारा वैद्य",
       "description": "तयार केलेल्या UPS मधील संदर्भित विनंती क्रम (००४०,ए३७०) च्या आयटममध्ये विनंती करणारा वैद्य (००३२,१०३२) चे मूल्य. प्राप्त झालेल्या डेटासेटमधील {attributeID} च्या मूल्याने बदलले जाईल. उदाहरण : {PerformingPhysicianName}.",

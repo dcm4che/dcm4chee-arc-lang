@@ -209,6 +209,11 @@
       "description": "创建的UPS中引用请求序列（0040,A370）的项中请求过程描述（0032,1060）的值。{attributeID}将替换为传入数据集中该属性的值。示例：{StudyDescription}。",
       "type": "string"
     },
+    "dcmRequestedProcedureCode": {
+      "title": "Requested Procedure Code Sequence",
+      "description": "Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Item of Requested Procedure Code Sequence (0032,1064) in Item of Referenced Request Sequence (0040,A370) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, \"&lt;CodeMeaning&gt;\")",
+      "type": "string"
+    },
     "dcmRequestingPhysician": {
       "title": "请求医生",
       "description": "在创建的UPS中,请求医生（0032,1032）的值在参考请求序列（0040,A370）的项中。{attributeID}将替换为传入数据集中该属性的值。示例：{PerformingPhysicianName}。",

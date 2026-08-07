@@ -209,6 +209,11 @@
       "description": "Valor de la descripción del procedimiento solicitado (0032,1060) en el elemento de la secuencia de solicitud referenciada (0040,A370) en el UPS creado. {attributeID} se sustituirá por el valor de ese atributo en el conjunto de datos recibido. Ejemplo: {StudyDescription}",
       "type": "string"
     },
+    "dcmRequestedProcedureCode": {
+      "title": "Requested Procedure Code Sequence",
+      "description": "Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Item of Requested Procedure Code Sequence (0032,1064) in Item of Referenced Request Sequence (0040,A370) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, \"&lt;CodeMeaning&gt;\")",
+      "type": "string"
+    },
     "dcmRequestingPhysician": {
       "title": "Médico solicitante",
       "description": "Valor del médico solicitante (0032,1032) en el elemento de la secuencia de solicitud referenciada (0040,A370) en el UPS creado. {attributeID} se sustituirá por el valor de ese atributo en el conjunto de datos recibido. Ejemplo: {PerformingPhysicianName}",

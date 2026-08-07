@@ -209,6 +209,11 @@
       "description": "Vrednost Requested Procedure Description (0032,1060) u stavci Referenced Request Sequence (0040,A370) u kreiranom UPS-u. {attributeID} će biti zamenjeno vrednošću tog atributa u primljenom datasetu. Primer: {StudyDescription}",
       "type": "string"
     },
+    "dcmRequestedProcedureCode": {
+      "title": "Requested Procedure Code Sequence",
+      "description": "Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Item of Requested Procedure Code Sequence (0032,1064) in Item of Referenced Request Sequence (0040,A370) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, \"&lt;CodeMeaning&gt;\")",
+      "type": "string"
+    },
     "dcmRequestingPhysician": {
       "title": "Lekar koji traži",
       "description": "Vrednost Requesting Physician (0032,1032) u stavci Referenced Request Sequence (0040,A370) u kreiranom UPS-u. {attributeID} će biti zamenjeno vrednošću tog atributa u primljenom datasetu. Primer: {PerformingPhysicianName}",
