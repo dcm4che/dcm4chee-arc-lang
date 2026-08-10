@@ -21,7 +21,7 @@ upsOnUPSCompleted.dcmUPSScheduledHumanPerformerCode:预定人类执行者代码|
 upsOnUPSCompleted.dcmUPSScheduledHumanPerformerName:计划的人类执行者名称|创建的UPS中计划的人类执行者序列的（0040,4034）项中的人类执行者名称的值（0040,4037）。{attributeID}将替换为先前UPS数据集中该属性的值。示例：{PerformingPhysicianName}。
 upsOnUPSCompleted.dcmUPSScheduledHumanPerformerOrganization:计划人类执行者组织|在创建的UPS中计划人类执行者序列的（0040,4034）项中人类执行者组织的值（0040,4036）。{attributeID}将替换为先前UPS数据集中该属性的值。例如：{ResponsibleOrganization}。
 upsOnUPSCompleted.dcmAdmissionID:许可编号|创建的UPS中的许可编号（0038,0010）的值。{attributeID}将替换为先前UPS数据集中该属性的值。例如：{AdmissionID}。
-upsOnUPSCompleted.dicomIssuerOfAdmissionID:许可号发布者|创建的UPS中许可号发布者序列中项目的本地命名空间实体ID（0040,0031）,通用实体ID和（0040,0032）通用实体ID类型（0040,0033）的值。格式：<Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
+upsOnUPSCompleted.dicomIssuerOfAdmissionID:许可号发布者|创建的UPS中许可号发布者序列中项目的本地命名空间实体ID（0040,0031）,通用实体ID和（0040,0032）通用实体ID类型（0040,0033）的值。格式：&lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]
 upsOnUPSCompleted.dcmUPSIncludeStudyInstanceUID:包含验证实例UID|指示是否在创建的UPS中包含（0020,000D）以前UPS对象的验证实例UID。
 upsOnUPSCompleted.dcmUPSIncludeReferencedRequest:包括引用请求|指示在创建的UPS中,引用请求序列（0040,A370）项是否包括先前UPS的校验实例UID（0020,000D）,响应编号（0008,0050）,请求过程ID（0040,1001）和请求服务（0032,1033）。否则,它包含一个空的引用请求序列（0040,A370）。
 upsOnUPSCompleted.dcmURI:XSL样式表URI|指定XSL样式表的URI,该URI将对收到的HL7消息进行转码,以便在创建的UPS中包含其他属性。

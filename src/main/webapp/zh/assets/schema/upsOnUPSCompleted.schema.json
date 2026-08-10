@@ -171,7 +171,7 @@
     },
     "dicomIssuerOfAdmissionID": {
       "title": "许可号发布者",
-      "description": "创建的UPS中许可号发布者序列中项目的本地命名空间实体ID（0040,0031）,通用实体ID和（0040,0032）通用实体ID类型（0040,0033）的值。格式：<Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "创建的UPS中许可号发布者序列中项目的本地命名空间实体ID（0040,0031）,通用实体ID和（0040,0032）通用实体ID类型（0040,0033）的值。格式：&lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
       "type": "string"
     },
     "dcmUPSIncludeStudyInstanceUID": {

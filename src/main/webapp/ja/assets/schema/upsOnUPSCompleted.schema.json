@@ -171,7 +171,7 @@
     },
     "dicomIssuerOfAdmissionID": {
       "title": "アドミッション 番号の 発行者",
-      "description": "作成された UPSの 中で, アドミッション 番号の 発行者の シーケンスの アイテムの ローカル 名前空間 エンティティ ID（0040,0031）、ユニバーサル エンティティ IDと（0040,0032）ユニバーサル エンティティ ID タイプ（0040,0033) の 値。 形式 : <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "作成された UPSの 中で, アドミッション 番号の 発行者の シーケンスの アイテムの ローカル 名前空間 エンティティ ID（0040,0031）、ユニバーサル エンティティ IDと（0040,0032）ユニバーサル エンティティ ID タイプ（0040,0033) の 値。 形式 : &lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
       "type": "string"
     },
     "dcmUPSIncludeStudyInstanceUID": {

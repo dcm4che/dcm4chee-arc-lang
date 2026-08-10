@@ -174,7 +174,7 @@
     },
     "dicomIssuerOfAdmissionID": {
       "title": "Emittente dell'ID di ammissione",
-      "description": "Valore dell'ID entità spazio dei nomi locale (0040,0031), ID entità universale (0040,0032) e tipo ID entità universale (0040,0033) dell'articolo della sequenza ID emittente di ammissione (0038,0014) nell'UPS creato. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "Valore dell'ID entità spazio dei nomi locale (0040,0031), ID entità universale (0040,0032) e tipo ID entità universale (0040,0033) dell'articolo della sequenza ID emittente di ammissione (0038,0014) nell'UPS creato. Formato: &lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
       "type": "string"
     },
     "dcmUPSIncludeStudyInstanceUID": {
@@ -196,7 +196,7 @@
     },
     "dicomIssuerOfAccessionNumber": {
       "title": "Emittente del numero di accesso",
-      "description": "Valore dell'ID entità spazio dei nomi locale (0040,0031), ID entità universale (0040,0032) e tipo ID entità universale (0040,0033) nell'elemento della sequenza del numero di Accesso dell'emittente (0008,0051) nell'elemento della sequenza della richiesta di riferimento ( 0040, A370) nell'UPS creato. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "Valore dell'ID entità spazio dei nomi locale (0040,0031), ID entità universale (0040,0032) e tipo ID entità universale (0040,0033) nell'elemento della sequenza del numero di Accesso dell'emittente (0008,0051) nell'elemento della sequenza della richiesta di riferimento ( 0040, A370) nell'UPS creato. Formato: &lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
       "type": "string"
     },
     "dcmRequestedProcedureID": {

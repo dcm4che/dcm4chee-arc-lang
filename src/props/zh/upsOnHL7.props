@@ -21,9 +21,9 @@ upsOnHL7.dcmUPSIncludeStudyInstanceUID:包含验证实例UID|指示是否在创�
 upsOnHL7.dcmUPSIncludeReferencedRequest:包含引用的请求|在创建的UPS中,指示引用请求序列（0040,A370）项是否包含接收对象的验证实例UID（0020,000D）、会话号（0008,0050）和请求过程ID（0040,1001）以及所请求的服务（0032,1033）。否则,它包含一个空的引用请求序列（0040,A370）。
 upsOnHL7.dcmStudyInstanceUID:验证实例UID|在创建的UPS中,验证实例UID（0020,000D）在引用请求序列（0040,A370）的项中的值。{<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。
 upsOnHL7.dcmAdmissionID:许可号|创建的UPS中许可号（0038,0010）的值。{<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。例如:MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。
-upsOnHL7.dicomIssuerOfAdmissionID:许可号的发布者|本地命名空间实体ID（0040,0031）,通用实体ID（0040,0032）和通用实体ID类型（0040,0033）在创建的UPS中的许可号的发布者序列（0038,0014）项中的值。格式:<Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]。
+upsOnHL7.dicomIssuerOfAdmissionID:许可号的发布者|本地命名空间实体ID（0040,0031）,通用实体ID（0040,0032）和通用实体ID类型（0040,0033）在创建的UPS中的许可号的发布者序列（0038,0014）项中的值。格式:&lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]。
 upsOnHL7.dcmAccessionNumber:注册号|创建的UPS中引用请求序列（0040,A370）项中AccessionNumber（0008,0050）的值。{<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。例如：MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。
-upsOnHL7.dicomIssuerOfAccessionNumber:注册号的发布者|在创建的UPS中的引用请求序列（0040,A370）的项目中本地命名空间实体ID(0040,0031)，通用实体的ID (0040,0032)以及通用实体ID类型(0040,0033)的值。格式: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
+upsOnHL7.dicomIssuerOfAccessionNumber:注册号的发布者|在创建的UPS中的引用请求序列（0040,A370）的项目中本地命名空间实体ID(0040,0031)，通用实体的ID (0040,0032)以及通用实体ID类型(0040,0033)的值。格式: &lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]
 upsOnHL7.dcmRequestedProcedureID:请求过程ID|创建的UPS中引用请求序列（0040,A370）的项中请求过程ID（0040,1001）的值。{<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。例如：MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。
 upsOnHL7.dcmRequestedProcedureDescription:请求的过程描述|创建的UPS中引用请求序列（0040,A370）的项中请求过程描述（0032,1060）的值。{<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。例如：MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。
 upsOnHL7.dcmRequestingPhysician:请求医生|在创建的UPS中,请求医生（0032,1032）的值在参考请求序列（0040,A370）的项中。{<SEG>-<Seq#>[.<Comp#>[.<SubComp#>]]}将替换为收到的HL7消息中该字段的值。例如：MSH-9或ORC-1[.1]或ORC-10[.2[.1]]。

@@ -174,7 +174,7 @@
     },
     "dicomIssuerOfAdmissionID": {
       "title": "Izdavalac ID-a prijema",
-      "description": "Vrednost Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) i Universal Entity ID Type (0040,0033) stavke Issuer of Admission ID Sequence (0038,0014) u kreiranom UPS-u. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "Vrednost Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) i Universal Entity ID Type (0040,0033) stavke Issuer of Admission ID Sequence (0038,0014) u kreiranom UPS-u. Format: &lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
       "type": "string"
     },
     "dcmUPSIncludeStudyInstanceUID": {
@@ -196,7 +196,7 @@
     },
     "dicomIssuerOfAccessionNumber": {
       "title": "Izdavalac pristupnog broja",
-      "description": "Vrednost Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) i Universal Entity ID Type (0040,0033) u stavki Issuer of Accession Number Sequence (0008,0051) u stavci Referenced Request Sequence (0040,A370) u kreiranom UPS-u. Format: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "Vrednost Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) i Universal Entity ID Type (0040,0033) u stavki Issuer of Accession Number Sequence (0008,0051) u stavci Referenced Request Sequence (0040,A370) u kreiranom UPS-u. Format: &lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
       "type": "string"
     },
     "dcmRequestedProcedureID": {

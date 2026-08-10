@@ -160,7 +160,7 @@
     },
     "dicomIssuerOfAdmissionID": {
       "title": "アドミッション 番号の 発行者",
-      "description": "作成された UPSの 中で 「アドミッション 番号の 発行者 シーケンス (0038,0014)」アイテムの  中で「ローカル 名前空間 エンティティ ID (0040,0031)」、「ユニバーサル エンティティ ID (0040,0032)」と 「ユニバーサル エンティティ ID タイプ (0040,0033)」の 値。 形式: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "作成された UPSの 中で 「アドミッション 番号の 発行者 シーケンス (0038,0014)」アイテムの  中で「ローカル 名前空間 エンティティ ID (0040,0031)」、「ユニバーサル エンティティ ID (0040,0032)」と 「ユニバーサル エンティティ ID タイプ (0040,0033)」の 値。 形式: &lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
       "type": "string"
     },
     "dcmAccessionNumber": {
@@ -170,7 +170,7 @@
     },
     "dicomIssuerOfAccessionNumber": {
       "title": "アクセッション 番号の 発行者",
-      "description": "作成された UPSの 中で, 参照 要求 シーケンス (0040,A370) の 中で アクセッション 番号 発行者 シーケンス (0008,0051) アイテムの 中で, ローカル 名前空間 エンティティ ID（0040,0031）、ユニバーサル エンティティ ID（0040,0032）と ユニバーサル エンティティ ID タイプ（0040,0033) の 値。 形式: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]",
+      "description": "作成された UPSの 中で, 参照 要求 シーケンス (0040,A370) の 中で アクセッション 番号 発行者 シーケンス (0008,0051) アイテムの 中で, ローカル 名前空間 エンティティ ID（0040,0031）、ユニバーサル エンティティ ID（0040,0032）と ユニバーサル エンティティ ID タイプ（0040,0033) の 値。 形式: &lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
       "type": "string"
     },
     "dcmRequestedProcedureID": {

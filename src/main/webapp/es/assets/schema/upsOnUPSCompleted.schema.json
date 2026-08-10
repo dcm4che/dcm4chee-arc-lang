@@ -171,7 +171,7 @@
     },
     "dicomIssuerOfAdmissionID": {
       "title": "ID de Emisor de Admisión",
-      "description": "Valor del ID de Entidad del Espacio de Nombres Local (0040,0031), ID de Entidad Universal (0040,0032) y Tipo de ID de Entidad Universal (0040,0033) del Elemento de la Secuencia ID de Emisor de Admisión (0038,0014) en el UPS creado. Formato: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>].",
+      "description": "Valor del ID de Entidad del Espacio de Nombres Local (0040,0031), ID de Entidad Universal (0040,0032) y Tipo de ID de Entidad Universal (0040,0033) del Elemento de la Secuencia ID de Emisor de Admisión (0038,0014) en el UPS creado. Formato: &lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;].",
       "type": "string"
     },
     "dcmUPSIncludeStudyInstanceUID": {

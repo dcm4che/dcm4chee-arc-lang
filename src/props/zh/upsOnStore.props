@@ -26,11 +26,11 @@ upsOnStore.dcmUPSScheduledHumanPerformerCode:预定的人类执行者代码|在�
 upsOnStore.dcmUPSScheduledHumanPerformerName:预定的人类执行者名称|创建的UPS中预定的人类执行者序列的（0040,4034）项中的人类执行者名称的值（0040,4037）。 {attributeID}将被接收数据集中该属性的值替换。 示例:{PerformingPhysicianName}。
 upsOnStore.dcmUPSScheduledHumanPerformerOrganization:预定的人类执行者组织|创建的UPS中预定的人类执行者序列的（0040,4034）项中的人类执行者组织的值（0040,4036）。 {attributeID}将被接收数据集中该属性的值替换。 例如:{ResponsibleOrganization}。
 upsOnStore.dcmAdmissionID:许可号|创建的UPS中许可号（0038,0010）的值。 {attributeID}将被接收数据集中该属性的值替换。 例如:{AdmissionID}。
-upsOnStore.dicomIssuerOfAdmissionID:许可号的发布者|本地命名空间实体ID（0040,0031）","通用实体ID（0040,0032）"和"通用实体ID类型（0040,0033）"在创建的UPS中的"许可号的发布者序列（0038,0014）"项中的值。 格式：<Local Namespace Entity ID>[‘&’<Universal Entity ID>‘&’<Universal Entity ID Type>]
+upsOnStore.dicomIssuerOfAdmissionID:许可号的发布者|本地命名空间实体ID（0040,0031）","通用实体ID（0040,0032）"和"通用实体ID类型（0040,0033）"在创建的UPS中的"许可号的发布者序列（0038,0014）"项中的值。 格式：&lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]
 upsOnStore.dcmUPSIncludeStudyInstanceUID:包含验证实例UID|指示是否在创建的UPS中包含（0020,000D）接收到的对象的验证实例UID。
 upsOnStore.dcmUPSIncludeReferencedRequest:包含引用的请求|指示在创建的UPS中,引用请求序列（0040,A370）项是否包含接收对象的校验实例UID（0020,000D）,响应号（0008,0050）,请求过程ID（0040,1001）和请求服务（0032,1033）。否则,它包含一个空的引用请求序列（0040,A370）。
 upsOnStore.dcmAccessionNumber:AccessionNumber|创建的UPS中引用请求序列（0040,A370）项中AccessionNumber（0008,0050）的值。{attributeID}将替换为传入数据集中该属性的值。示例：{AccessionNumber}。
-upsOnStore.dicomIssuerOfAccessionNumber:注册号发布人|创建的UPS中引用请求序列（0040,A370）的项中本地命名空间实体ID(0040,0031),通用实体的ID(0040,0032)以及通用实体ID类型(0040,0033)的值。格式为: <Local Namespace Entity ID>['&'<Universal Entity ID>'&'<Universal Entity ID Type>]
+upsOnStore.dicomIssuerOfAccessionNumber:注册号发布人|创建的UPS中引用请求序列（0040,A370）的项中本地命名空间实体ID(0040,0031),通用实体的ID(0040,0032)以及通用实体ID类型(0040,0033)的值。格式为: &lt;Local Namespace Entity ID&gt;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]
 upsOnStore.dcmRequestedProcedureID:请求过程ID|创建的UPS中引用请求序列（0040,A370）的项中请求过程ID（0040,1001）的值。{attributeID}将替换为传入数据集中该属性的值。例如：{StudyID}。
 upsOnStore.dcmRequestedProcedureDescription:请求的过程描述|创建的UPS中引用请求序列（0040,A370）的项中请求过程描述（0032,1060）的值。{attributeID}将替换为传入数据集中该属性的值。示例：{StudyDescription}。
 upsOnStore.dcmRequestedProcedureCode:Requested Procedure Code Sequence|Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Item of Requested Procedure Code Sequence (0032,1064) in Item of Referenced Request Sequence (0040,A370) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, "&lt;CodeMeaning&gt;")
