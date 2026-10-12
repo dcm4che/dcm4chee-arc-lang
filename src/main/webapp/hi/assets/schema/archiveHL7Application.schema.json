@@ -142,6 +142,11 @@
         "ADT^A10|Patient Arriving / Tracking"
       ]
     },
+    "hl7ValidateSendingApplicationHostname": {
+      "title": "Validate Sending HL7 Application Hostname",
+      "description": "Validate Hostname or IP Address of Sending HL7 Application. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "hl7UseNullValue": {
       "title": "HL7 अनुपस्थित मूल्य का इस्तमाल",
       "description": "HL7 संस्करण २ अनुपस्थित मूल्यों को (सेगमेंट फील्ड में |\"\"| इस तरह निर्दिष्ट होंगे) भेजे गए HL7 संदेशों में अनुपस्थित या खाली तत्त्व गुणों के लिए इस्तमाल किया जाएगा यह निर्दिष्ट करता है । दूरवर्ती HL7 अनुप्रयोग पे तत्त्व गुणों को अस्त न करने के लिए जरूरी है । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।",

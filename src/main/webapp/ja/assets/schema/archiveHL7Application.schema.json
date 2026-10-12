@@ -142,6 +142,11 @@
         "ADT^A10|Patient Arriving / Tracking"
       ]
     },
+    "hl7ValidateSendingApplicationHostname": {
+      "title": "Validate Sending HL7 Application Hostname",
+      "description": "Validate Hostname or IP Address of Sending HL7 Application. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "hl7UseNullValue": {
       "title": "HL7 ヌル 値を 使用 する",
       "description": "送信された HL7 メッセージで、 存在しない または 空の エンティティ 属性に 対して HL7 v2 ヌル 値 (セグメント フィールドで |\"\"| として 指定された) が 使用されるか どうかを 指定します。 リモート HL7 アプリケーションで エンティティ 属性を 設定 解除 する ために 必要です。 デバイス レベルで 指定された 値を 上書きします。",

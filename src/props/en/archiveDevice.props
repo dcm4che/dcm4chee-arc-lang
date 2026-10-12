@@ -62,6 +62,7 @@ archiveDevice.dcmEncodeAsJSONNumber.IS:Integer String
 archiveDevice.dcmEncodeAsJSONNumber.SV:Signed 64-bit Very Long
 archiveDevice.dcmEncodeAsJSONNumber.UV:Unsigned 64-bit Very Long
 archiveDevice.dcmValidateCallingAEHostname:Validate Calling AE Hostname|Validate Calling AE Hostname or IP Address of Association requestors. May be overwritten by configured values for particular Archive Network AEs.
+archiveDevice.hl7ValidateSendingApplicationHostname:Validate Sending HL7 Application Hostname|Validate Hostname or IP Address of Sending HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.
 archiveDevice.dcmUserIdentityNegotiation:User Identity Negotiation|Specifies to ignore User Identity Negotiation Sub-Item in Association requests (=NOT_SUPPORTED), to verify passed Username and password or JSON Web Token are against a Keycloak server (=SUPPORTS), or to reject Association requests without a valid Username and password or JSON Web Token in its Identity Negotiation Sub-Item (=REQUIRED). May be overwritten by configured values for particular Archive Network AEs.
 archiveDevice.dcmUserIdentityNegotiation.NOT_SUPPORTED:Ignore User Identity Negotiation Sub-Item in Association requests
 archiveDevice.dcmUserIdentityNegotiation.SUPPORTS:Verify passed Username and password or JSON Web Token are against a Keycloak server

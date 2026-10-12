@@ -142,6 +142,11 @@
         "ADT^A10|Patient Arriving / Tracking"
       ]
     },
+    "hl7ValidateSendingApplicationHostname": {
+      "title": "Validate Sending HL7 Application Hostname",
+      "description": "Validate Hostname or IP Address of Sending HL7 Application. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "hl7UseNullValue": {
       "title": "Koristi HL7 null vrednost",
       "description": "Specificira da li se HL7 v2 null vrednosti (specificirane u polju segmenta kao |\"\"|) koriste u poslatim HL7 porukama za nepostojeće ili prazne atribute entiteta. Potrebno za poništavanje atributa entiteta kod udaljene HL7 aplikacije. Prepisuje vrednost navedenu na nivou uređaja.",

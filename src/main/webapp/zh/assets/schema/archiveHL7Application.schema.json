@@ -142,6 +142,11 @@
         "ADT^A10|Patient Arriving / Tracking"
       ]
     },
+    "hl7ValidateSendingApplicationHostname": {
+      "title": "Validate Sending HL7 Application Hostname",
+      "description": "Validate Hostname or IP Address of Sending HL7 Application. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "hl7UseNullValue": {
       "title": "使用HL7空值",
       "description": "指定发送的HL7消息是否将HL7 v2空值（在段字段中指定为\"）用于不存在或空的实体属性。 在远程HL7应用程序中取消设置实体属性时需要。 覆盖在设备级别指定的值。",
