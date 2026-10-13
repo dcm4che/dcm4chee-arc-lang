@@ -23,6 +23,7 @@
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
     "dcmValidateCallingAEHostname",
+    "hl7ValidateSendingApplicationHostname",
     "dcmUserIdentityNegotiation",
     "dcmPersonNameComponentOrderInsensitiveMatching",
     "dcmSendPendingCGet",
@@ -120,7 +121,6 @@
     "hl7PSUPIDPV1",
     "hl7PSUTaskFetchSize",
     "hl7TrackChangedPatientID",
-    "hl7ValidateSendingApplicationHostname",
     "hl7UseNullValue",
     "hl7VeterinaryUsePatientName",
     "hl7OtherPatientIDs",
@@ -443,6 +443,12 @@
     "dcmValidateCallingAEHostname": {
       "title": "बोलावणाऱ्या AE चे होस्टनावाला मान्य करा",
       "description": "संपर्क निवेदनकर्ताचे बोलावणाऱ्या AE चे होस्टनाव किंवा IP एड्रेसला मान्य करा. विशिष्ट आर्काइव्ह नेटवर्क AE साठी कॉन्फिगर केलेल्या मूल्यांनी अधिलिखित केले जाऊ शकते.",
+      "type": "boolean",
+      "default": false
+    },
+    "hl7ValidateSendingApplicationHostname": {
+      "title": "Validate Sending HL7 Application Hostname",
+      "description": "Validate Hostname or IP Address of Sending HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "boolean",
       "default": false
     },
@@ -1841,12 +1847,6 @@
       "description": "HL7 ADT^A47 संदेश किंवा RESTful रुग्णाच्या रेकॉर्डचे अद्यतन सेवेद्वारे रुग्णाचे ID चे बदल होण्यावर मागच्या रुग्णाचे ID ला ट्रैक करणे सक्षम करा.",
       "type": "boolean",
       "default": true
-    },
-    "hl7ValidateSendingApplicationHostname": {
-      "title": "Validate Sending HL7 Application Hostname",
-      "description": "Validate Hostname or IP Address of Sending HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.",
-      "type": "boolean",
-      "default": false
     },
     "hl7UseNullValue": {
       "title": "HL7 निरर्थक मूल्य वापरा",

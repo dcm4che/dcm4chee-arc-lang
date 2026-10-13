@@ -23,6 +23,7 @@
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
     "dcmValidateCallingAEHostname",
+    "hl7ValidateSendingApplicationHostname",
     "dcmUserIdentityNegotiation",
     "dcmPersonNameComponentOrderInsensitiveMatching",
     "dcmSendPendingCGet",
@@ -120,7 +121,6 @@
     "hl7PSUPIDPV1",
     "hl7PSUTaskFetchSize",
     "hl7TrackChangedPatientID",
-    "hl7ValidateSendingApplicationHostname",
     "hl7UseNullValue",
     "hl7VeterinaryUsePatientName",
     "hl7OtherPatientIDs",
@@ -443,6 +443,12 @@
     "dcmValidateCallingAEHostname": {
       "title": "Convalida nome host AE chiamante",
       "description": "Convalida del nome host AE chiamante o dell'indirizzo IP dei richiedenti dell'associazione. Può essere sovrascritto da valori configurati per particolari AE della rete di archiviazione.",
+      "type": "boolean",
+      "default": false
+    },
+    "hl7ValidateSendingApplicationHostname": {
+      "title": "Validate Sending HL7 Application Hostname",
+      "description": "Validate Hostname or IP Address of Sending HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "boolean",
       "default": false
     },
@@ -1841,12 +1847,6 @@
       "description": "Abilitare per tenere traccia dell'ID paziente precedente in caso di modifica dell'ID paziente da parte di HL7 ADT ^ A47 o dal servizio di aggiornamento paziente RESTful.",
       "type": "boolean",
       "default": true
-    },
-    "hl7ValidateSendingApplicationHostname": {
-      "title": "Validate Sending HL7 Application Hostname",
-      "description": "Validate Hostname or IP Address of Sending HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.",
-      "type": "boolean",
-      "default": false
     },
     "hl7UseNullValue": {
       "title": "Usa valore nullo HL7",

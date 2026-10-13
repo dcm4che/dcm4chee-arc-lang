@@ -12,6 +12,11 @@
       "type": "string",
       "format": "dcmArchiveAETitle"
     },
+    "hl7ValidateSendingApplicationHostname": {
+      "title": "Validate Sending HL7 Application Hostname",
+      "description": "Validate Hostname or IP Address of Sending HL7 Application. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.",
+      "type": "boolean"
+    },
     "dcmRecordAttributeModification": {
       "title": "Record Attribute Modification",
       "description": "Indicates if modifications of attributes of stored objects by this HL7 Application are recorded in Items of the Original Attributes Sequence. Overwrites value specified on Device level.",
@@ -141,11 +146,6 @@
       "enum": [
         "ADT^A10|Patient Arriving / Tracking"
       ]
-    },
-    "hl7ValidateSendingApplicationHostname": {
-      "title": "Validate Sending HL7 Application Hostname",
-      "description": "Validate Hostname or IP Address of Sending HL7 Application. Required to unset entity attributes at the remote HL7 Application. Overwrites value specified on Device level.",
-      "type": "boolean"
     },
     "hl7UseNullValue": {
       "title": "Use HL7 Null Value",

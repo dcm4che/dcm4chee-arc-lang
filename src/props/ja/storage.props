@@ -23,6 +23,11 @@ storage.dcmDigestAlgorithm:ダイジェスト アルゴリズム|チェックサ
 storage.dcmDigestAlgorithm.MD5:Message-digest algorithm
 storage.dcmDigestAlgorithm.SHA-1:Secure Hash Algorithm 1
 storage.dcmDigestAlgorithm.SHA-265:Secure Hash Algorithm 256
+storage.dcmStorageVerificationPolicy:Storage Verification Policy|Policy applied to verify if an individual object was successfully written to this Storage System. If absent, no explicit verification of the storage is performed after the completion of the write operation without failure.
+storage.dcmStorageVerificationPolicy.OBJECT_EXISTS:Check if object exists on Storage System
+storage.dcmStorageVerificationPolicy.OBJECT_SIZE:Check size of object on Storage System
+storage.dcmStorageVerificationPolicy.OBJECT_FETCH:Fetch object from Storage System
+storage.dcmStorageVerificationPolicy.OBJECT_CHECKSUM:Recalculate checksum of object on Storage System
 storage.dcmMaxRetries:最大 再試行 回数|格納 システムに オブジェクトを 保存 する 最大 再試行 回数。
 storage.dcmRetryDelay:再試行 遅延|ISO-8601 期間 形式PnDTnHnMn.nSで オブジェクトを 格納 システムに 格納 する ために 再試行 するの 遅延。 存在しない 場合、 すぐに 再試行して ください。
 storage.dcmInstanceAvailability:インスタンスの 可用性|インスタンスの 可用性。

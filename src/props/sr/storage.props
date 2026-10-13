@@ -23,6 +23,11 @@ storage.dcmDigestAlgorithm:Algoritam digesta|Algoritam za generisanje kontrolnih
 storage.dcmDigestAlgorithm.MD5:Message-digest algorithm
 storage.dcmDigestAlgorithm.SHA-1:Secure Hash Algorithm 1
 storage.dcmDigestAlgorithm.SHA-265:Secure Hash Algorithm 256
+storage.dcmStorageVerificationPolicy:Storage Verification Policy|Policy applied to verify if an individual object was successfully written to this Storage System. If absent, no explicit verification of the storage is performed after the completion of the write operation without failure.
+storage.dcmStorageVerificationPolicy.OBJECT_EXISTS:Check if object exists on Storage System
+storage.dcmStorageVerificationPolicy.OBJECT_SIZE:Check size of object on Storage System
+storage.dcmStorageVerificationPolicy.OBJECT_FETCH:Fetch object from Storage System
+storage.dcmStorageVerificationPolicy.OBJECT_CHECKSUM:Recalculate checksum of object on Storage System
 storage.dcmMaxRetries:Maksimalan broj ponovnih pokušaja|Maksimalan broj pokušaja uskladišćenja objekta na storage system.
 storage.dcmRetryDelay:Kašnjenje ponovnog pokušaja|Kašnjenje ponovnog pokušaja skladištenja objekta na sistem skladištenja u ISO-8601 formatu trajanja PnDTnHnMn.nS. Pokušaj odmah ako nije navedeno.
 storage.dcmInstanceAvailability:Dostupnost instance|Dostupnost instance.

@@ -23,6 +23,7 @@
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
     "dcmValidateCallingAEHostname",
+    "hl7ValidateSendingApplicationHostname",
     "dcmUserIdentityNegotiation",
     "dcmPersonNameComponentOrderInsensitiveMatching",
     "dcmSendPendingCGet",
@@ -120,7 +121,6 @@
     "hl7PSUPIDPV1",
     "hl7PSUTaskFetchSize",
     "hl7TrackChangedPatientID",
-    "hl7ValidateSendingApplicationHostname",
     "hl7UseNullValue",
     "hl7VeterinaryUsePatientName",
     "hl7OtherPatientIDs",
@@ -443,6 +443,12 @@
     "dcmValidateCallingAEHostname": {
       "title": "Verifikuj ime hosta pozivajućeg AE",
       "description": "Validira Calling AE Hostname ili IP Address Association requestors. Može biti prepisano konfigurisanim vrednostima za pojedine Archive Network AE.",
+      "type": "boolean",
+      "default": false
+    },
+    "hl7ValidateSendingApplicationHostname": {
+      "title": "Validate Sending HL7 Application Hostname",
+      "description": "Validate Hostname or IP Address of Sending HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "boolean",
       "default": false
     },
@@ -1841,12 +1847,6 @@
       "description": "Omogući praćenje prethodnog Patient ID-a pri promeni Patient ID-a putem HL7 ADT^A47 ili RESTful Patient Update usluge.",
       "type": "boolean",
       "default": true
-    },
-    "hl7ValidateSendingApplicationHostname": {
-      "title": "Validate Sending HL7 Application Hostname",
-      "description": "Validate Hostname or IP Address of Sending HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.",
-      "type": "boolean",
-      "default": false
     },
     "hl7UseNullValue": {
       "title": "Koristi HL7 null vrednost",

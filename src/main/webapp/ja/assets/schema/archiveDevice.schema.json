@@ -23,6 +23,7 @@
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
     "dcmValidateCallingAEHostname",
+    "hl7ValidateSendingApplicationHostname",
     "dcmUserIdentityNegotiation",
     "dcmPersonNameComponentOrderInsensitiveMatching",
     "dcmSendPendingCGet",
@@ -120,7 +121,6 @@
     "hl7PSUPIDPV1",
     "hl7PSUTaskFetchSize",
     "hl7TrackChangedPatientID",
-    "hl7ValidateSendingApplicationHostname",
     "hl7UseNullValue",
     "hl7VeterinaryUsePatientName",
     "hl7OtherPatientIDs",
@@ -443,6 +443,12 @@
     "dcmValidateCallingAEHostname": {
       "title": "呼びかけて いる AE ホスト名を 検証 する",
       "description": "関連付け 要求の 呼びかけて いる AE ホスト名 または IP アドレスを 検証します。 特定の アーカイブ ネットワーク AEの 構成された 値に よって 上書きされる 場合が あります。",
+      "type": "boolean",
+      "default": false
+    },
+    "hl7ValidateSendingApplicationHostname": {
+      "title": "Validate Sending HL7 Application Hostname",
+      "description": "Validate Hostname or IP Address of Sending HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.",
       "type": "boolean",
       "default": false
     },
@@ -1841,12 +1847,6 @@
       "description": "HL7 ADT^A47 または RESTful 患者 更新 サービスに よる 患者 IDの 変更に ついて、 以前の 患者 IDを 追跡できる ように します。",
       "type": "boolean",
       "default": true
-    },
-    "hl7ValidateSendingApplicationHostname": {
-      "title": "Validate Sending HL7 Application Hostname",
-      "description": "Validate Hostname or IP Address of Sending HL7 Application. May be overwritten by configured values for particular Archive HL7 Application.",
-      "type": "boolean",
-      "default": false
     },
     "hl7UseNullValue": {
       "title": "HL7 ヌル 値を 使用 する",

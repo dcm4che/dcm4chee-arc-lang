@@ -23,6 +23,11 @@ storage.dcmDigestAlgorithm:摘要算法|用于生成校验和的算法。
 storage.dcmDigestAlgorithm.MD5:Message-digest algorithm
 storage.dcmDigestAlgorithm.SHA-1:Secure Hash Algorithm 1
 storage.dcmDigestAlgorithm.SHA-265:Secure Hash Algorithm 256
+storage.dcmStorageVerificationPolicy:Storage Verification Policy|Policy applied to verify if an individual object was successfully written to this Storage System. If absent, no explicit verification of the storage is performed after the completion of the write operation without failure.
+storage.dcmStorageVerificationPolicy.OBJECT_EXISTS:Check if object exists on Storage System
+storage.dcmStorageVerificationPolicy.OBJECT_SIZE:Check size of object on Storage System
+storage.dcmStorageVerificationPolicy.OBJECT_FETCH:Fetch object from Storage System
+storage.dcmStorageVerificationPolicy.OBJECT_CHECKSUM:Recalculate checksum of object on Storage System
 storage.dcmMaxRetries:最大重试次数|将对象保存到存储系统的最大重试次数。
 storage.dcmRetryDelay:重试延迟|ISO-8601周期格式PnDTnHnMn.nS重试以将对象存储在存储系统中的延迟。如果不存在,请立即重试。
 storage.dcmInstanceAvailability:实例可用性|实例可用性。

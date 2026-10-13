@@ -111,6 +111,17 @@
         "SHA-265|Secure Hash Algorithm 256"
       ]
     },
+    "dcmStorageVerificationPolicy": {
+      "title": "Storage Verification Policy",
+      "description": "Policy applied to verify if an individual object was successfully written to this Storage System. If absent, no explicit verification of the storage is performed after the completion of the write operation without failure.",
+      "type": "string",
+      "enum": [
+        "OBJECT_EXISTS|Check if object exists on Storage System",
+        "OBJECT_SIZE|Check size of object on Storage System",
+        "OBJECT_FETCH|Fetch object from Storage System",
+        "OBJECT_CHECKSUM|Recalculate checksum of object on Storage System"
+      ]
+    },
     "dcmMaxRetries": {
       "title": "पुनःपरीक्षण की अधिकतम संख्या",
       "description": "स्टोरेज सिस्टम पे दृष्टांतों को सहेजने के लिए पुनःपरीक्षण की अधिकतम संख्या ।",
