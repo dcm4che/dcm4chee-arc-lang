@@ -1,0 +1,72 @@
+auditLogger:Логгер ревизије|Информације повезане са Логгер-ом ревизије
+auditLogger.cn:Име|Произвољно/Смислено име за Audit Logger објекат
+auditLogger.dicomNetworkConnectionReference:Референца мрежне конекције|JSON Pointers на Network Connection објекте које користи овај Audit Logger
+auditLogger.dcmAuditRecordRepositoryDeviceName:Име уређаја репозиторијума записа ревизије|Име уређаја Audit Record Repository-ја којем се шаљу Audit Messages
+auditLogger.dcmAuditSourceID:ID извора|RFC 3881 Audit Source ID; име уређаја ако није наведено
+auditLogger.dcmAuditEnterpriseSiteID:ID сајта предузећа|RFC 3881 Audit Enterprise Site ID; вредност 'dicomInstitutionName' се замењује именом институције DICOM уређаја
+auditLogger.dcmAuditSourceTypeCode:Код врсте извора|RFC 3881 Audit Source Type Code; вредност 'dicomPrimaryDeviceType' се замењује примарним типом DICOM уређаја
+auditLogger.dcmAuditFacility:Syslog објекат|RFC 5424 Syslog Facility стринг вредност поруке ревизије.
+auditLogger.dcmAuditFacility.kern:kernel messages
+auditLogger.dcmAuditFacility.user:user-level messages
+auditLogger.dcmAuditFacility.mail:mail system messages
+auditLogger.dcmAuditFacility.daemon:system daemons' messages
+auditLogger.dcmAuditFacility.auth:authorization messages
+auditLogger.dcmAuditFacility.syslog:messages generated internally by syslogd
+auditLogger.dcmAuditFacility.lpr:line printer subsystem messages
+auditLogger.dcmAuditFacility.news:network news subsystem messages
+auditLogger.dcmAuditFacility.uucp:UUCP subsystem messages
+auditLogger.dcmAuditFacility.cron:clock daemon messages
+auditLogger.dcmAuditFacility.authpriv:security/authorization messages
+auditLogger.dcmAuditFacility.ftp:ftp daemon messages
+auditLogger.dcmAuditFacility.ntp:NTP subsystem messages
+auditLogger.dcmAuditFacility.audit:audit messages
+auditLogger.dcmAuditFacility.console:console messages
+auditLogger.dcmAuditFacility.cron2:clock daemon messages
+auditLogger.dcmAuditSuccessSeverity:Syslog озбиљност - успех|RFC 5424 Syslog Severity стринг вредност поруке ревизије са Event Outcome Indicator 0 (Суццесс).
+auditLogger.dcmAuditSuccessSeverity.emerg:emergency; system is unusable
+auditLogger.dcmAuditSuccessSeverity.alert:action must be taken immediately
+auditLogger.dcmAuditSuccessSeverity.crit:critical condition
+auditLogger.dcmAuditSuccessSeverity.err:error condition
+auditLogger.dcmAuditSuccessSeverity.warning:warning condition
+auditLogger.dcmAuditSuccessSeverity.notice:normal but significant condition
+auditLogger.dcmAuditSuccessSeverity.info:informational message
+auditLogger.dcmAuditSuccessSeverity.debug:debug-level messages
+auditLogger.dcmAuditMinorFailureSeverity:Syslog озбиљност - неуспех|RFC 5424 Syslog Severity стринг вредност поруке ревизије са Event Outcome Indicator 4 (Минор фаилуре).
+auditLogger.dcmAuditMinorFailureSeverity.emerg:emergency; system is unusable
+auditLogger.dcmAuditMinorFailureSeverity.alert:action must be taken immediately
+auditLogger.dcmAuditMinorFailureSeverity.crit:critical condition
+auditLogger.dcmAuditMinorFailureSeverity.err:error condition
+auditLogger.dcmAuditMinorFailureSeverity.warning:warning condition
+auditLogger.dcmAuditMinorFailureSeverity.notice:normal but significant condition
+auditLogger.dcmAuditMinorFailureSeverity.info:informational message
+auditLogger.dcmAuditMinorFailureSeverity.debug:debug-level messages
+auditLogger.dcmAuditSeriousFailureSeverity:Syslog озбиљност - неуспех|RFC 5424 Syslog Severity стринг вредност поруке ревизије са Event Outcome Indicator 8 (Сериоус фаилуре).
+auditLogger.dcmAuditSeriousFailureSeverity.emerg:emergency; system is unusable
+auditLogger.dcmAuditSeriousFailureSeverity.alert:action must be taken immediately
+auditLogger.dcmAuditSeriousFailureSeverity.crit:critical condition
+auditLogger.dcmAuditSeriousFailureSeverity.err:error condition
+auditLogger.dcmAuditSeriousFailureSeverity.warning:warning condition
+auditLogger.dcmAuditSeriousFailureSeverity.notice:normal but significant condition
+auditLogger.dcmAuditSeriousFailureSeverity.info:informational message
+auditLogger.dcmAuditSeriousFailureSeverity.debug:debug-level messages
+auditLogger.dcmAuditMajorFailureSeverity:Syslog озбиљност - велико|RFC 5424 Syslog Severity стринг вредност поруке ревизије са Event Outcome Indicator 12 (Мајор фаилуре).
+auditLogger.dcmAuditMajorFailureSeverity.emerg:emergency; system is unusable
+auditLogger.dcmAuditMajorFailureSeverity.alert:action must be taken immediately
+auditLogger.dcmAuditMajorFailureSeverity.crit:critical condition
+auditLogger.dcmAuditMajorFailureSeverity.err:error condition
+auditLogger.dcmAuditMajorFailureSeverity.warning:warning condition
+auditLogger.dcmAuditMajorFailureSeverity.notice:normal but significant condition
+auditLogger.dcmAuditMajorFailureSeverity.info:informational message
+auditLogger.dcmAuditMajorFailureSeverity.debug:debug-level messages
+auditLogger.dcmAuditApplicationName:Име Syslog апликације|RFC 5424 Syslog APP-NAME поруке ревизије; Audit Source ID ако није наведено
+auditLogger.dcmAuditMessageID:ID Syslog поруке|RFC 5424 Syslog MSGID поруке ревизије.
+auditLogger.dcmAuditMessageEncoding:Кодирање поруке|Кодирање знакова RFC 5424 Syslog MSG дела поруке ревизије.
+auditLogger.dcmAuditMessageBOM:BOM поруке|Омогући/онемогући Unicode BOM префикс RFC 5424 Syslog MSG дела поруке ревизије; укључи BOM ако није наведено
+auditLogger.dcmAuditTimestampInUTC:Временска ознака у UTC|Наведите да ли су RFC 5424 Syslog TIMESTAMP и Event Date/Тиме поруке ревизије наведени у Coordinated Universal Time. Подразумевано указује да ће бити у локалној временској зони.
+auditLogger.dcmAuditMessageFormatXML:Формат поруке XML|Наведите да ли је или не XML аудит порука форматирана са лине феедс и увлачењем.
+auditLogger.dcmAuditMessageSchemaURI:URI шеме поруке|URI DICOM Audit Message Сцхеме референциран у поруци ревизије
+auditLogger.dcmAuditIncludeInstanceUID:Укључи UID-ове инстанци|Указује да ли Audit Log Message треба да садржи опционе Instance UID-ове
+auditLogger.dcmAuditLoggerSpoolDirectoryURI:URI директоријума споол-а|URI споол директоријума коришћеног за складиштење порука које нису могле бити испоручене рецорд repository-ју; користи системски привремени директоријум ако није наведено.
+auditLogger.dcmAuditLoggerRetryInterval:Интервал поновног покушаја|Retry интервал у с за поновно слање порука које нису могле бити испоручене рецорд repository; ако није наведено, не покушавај поновно слање порука
+auditLogger.dicomInstalled:инсталиран|Тачно ако је Audit Logger инсталиран на мрежи. Ако није наведено, информација о статусу инсталације Audit Logger-а се наслеђује од уређаја
+auditLogger.dcmAuditSuppressCriteria:Критеријуми сузбијања ревизије|Критеријуми сузбијања ревизије

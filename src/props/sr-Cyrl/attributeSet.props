@@ -1,0 +1,13 @@
+attributeSet:Скуп атрибута|Именовани скуп атрибута за параметар упита 'includefields' QIDO-RS и WADO-RS метаподатака или за параметар упита 'comparefield' DIFF-RS захтева.
+attributeSet.dicomDescription:Опис скупа атрибута|Неспутани текстуални опис овог Attribute Set
+attributeSet.dcmAttributeSetType:Тип скупа атрибута|Специфицира употребу овог Attribute Set Type-а.
+attributeSet.dcmAttributeSetType.QIDO_RS:Attribute Set is used by Query Parameter 'includefields' of QIDO-RS requests
+attributeSet.dcmAttributeSetType.WADO_RS:Attribute Set is used by Query Parameter 'includefields' of WADO-RS requests
+attributeSet.dcmAttributeSetType.DIFF_RS:Attribute Set is used by Query Parameter 'comparefields' of DIFF-RS requests
+attributeSet.dcmAttributeSetType.LEADING_CFIND_SCP:Attribute Set is used by Leading C-FIND SCP coercion
+attributeSet.dcmAttributeSetID:ID скупа атрибута|ID који користи Query Parameter 'includefields' QIDO-RS и WADO-RS Metadata захтева и Query Parameter 'comparefield' DIFF-RS захтева за референцирање овог Attribute Set-а.
+attributeSet.dcmAttributeSetTitle:Наслов скупа атрибута|Наслов овог скупа атрибута.
+attributeSet.dcmAttributeSetNumber:Број скупа атрибута|Број коришћен за сортирање Attribute Sets.
+attributeSet.dicomInstalled:инсталиран|Булова вредност која указује да ли је овај скуп атрибута тренутно инсталиран на арцхиве уређају
+attributeSet.dcmTag:Ознака атрибута|DICOM ознака као хексадецимални стринг
+attributeSet.dcmProperty:Својство|Својство у формату <name>=<value>

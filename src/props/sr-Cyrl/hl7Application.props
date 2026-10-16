@@ -1,0 +1,21 @@
+hl7Application:HL7 апликација|Информације о HL7 апликацији
+hl7Application.hl7ApplicationName:Име HL7 апликације|HL7 Application и Facility име (Апплицатион|Facility)
+hl7Application.dicomNetworkConnectionReference:Референца мрежне конекције|JSON Pointers на Network Connection објекте за ову HL7 апликацију
+hl7Application.hl7AcceptedSendingApplication:Прихваћена апликација слања|Application|Facility име прихваћених Sending Application-а; било које ако није наведено
+hl7Application.hl7OtherApplicationName:Друго име HL7 апликације|Додатно HL7 Application и Facility име (Апплицатион|Facility) - прихватит ће и HL7 поруке са таквим Receiving Application и Facility именом
+hl7Application.hl7AcceptedMessageType:Прихваћени тип поруке|Тип(ови) поруке (MessageType^TriggerEvent) прихваћених порука
+hl7Application.hl7DefaultCharacterSet:Подразумевани скуп знакова|Скуп знакова коришћен за декодирање примљених порука ако није наведен у MSH-18.
+hl7Application.hl7SendingCharacterSet:Скуп знакова слања|Скуп знакова коришћен за кодирање HL7 порука послатих из архиве.
+hl7Application.hl7OptionalMSHField:Опционо MSH поље|Прихвати HL7 поруке са вредностима које недостају за наведена MSH поља, чак и ако су обавезне према <a href="https://www.ihe.net/uploadedFiles/Documents/Radiology/IHE_RAD_TF_Vol2.pdf#page=43" target="_blank">IHE RAD TF Vol 2 Message Control захтевима</a>.
+hl7Application.hl7OptionalMSHField.3:Sending Application
+hl7Application.hl7OptionalMSHField.4:Sending Facility
+hl7Application.hl7OptionalMSHField.5:Receiving Application
+hl7Application.hl7OptionalMSHField.6:Receiving Facility
+hl7Application.hl7OptionalMSHField.7:Date/Time of Message
+hl7Application.hl7OptionalMSHField.10:Message Control ID
+hl7Application.hl7OptionalMSHField.11:Processing ID
+hl7Application.hl7OptionalMSHField.12:Version ID
+hl7Application.dicomDescription:HL7 опис|Неспутани текстуални опис HL7 Application
+hl7Application.dicomApplicationCluster:Кластер апликација|Локално дефинисана имена за подскуп сродних апликација
+hl7Application.dicomInstalled:инсталиран|Тачно ако је HL7 апликација инсталирана на мрежи. Ако није наведено, информација о статусу инсталације HL7 апликације се наслеђује од уређаја
+hl7Application.dcmArchiveHL7Application:Архивска HL7 апликација|Информације повезане са DICOM архивском HL7 апликацијом

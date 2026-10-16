@@ -1,0 +1,42 @@
+{
+  "title": "Правило MPPS прослеђивања",
+  "description": "MPPS Forward правило",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmFwdMppsDestination"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Име",
+      "description": "Произвољно/Смислено име MPPS Forward правила",
+      "type": "string"
+    },
+    "dcmFwdMppsDestination": {
+      "title": "Одредиште MPPS прослеђивања",
+      "description": "Одредиште за прослеђивање MPPS N-CREATE RQ и N-SET RQ",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmProperty": {
+      "title": "Услови",
+      "description": "Услови у формату {key}[!]={value}. Погледајте <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">применљивост, формат и примере.</a>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmSchedule": {
+      "title": "Временски услови",
+      "description": "Примени ово правило само у наведеним временским опсезима.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSchedule"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "title": "Конфигурација UI Elasticsearch URL-а",
+  "description": "Elasticsearch URL",
+  "type": "object",
+  "required": [
+    "dcmuiElasticsearchURLName",
+    "dcmuiElasticsearchURL",
+    "dcmuiElasticsearchIsDefault",
+    "dcmuiElasticsearchInstalled"
+  ],
+  "properties": {
+    "dcmuiElasticsearchURLName": {
+      "title": "Име Elasticsearch URL-а",
+      "description": "Име UI Elasticsearch URL-а",
+      "type": "string"
+    },
+    "dcmuiElasticsearchWebApp": {
+      "title": "Elasticsearch WebApp",
+      "description": "Web апликација која ће се користити за екстракцију Elasticsearch URL-а и приступ Elasticsearch-у",
+      "type": "string",
+      "format": "webApp"
+    },
+    "dcmuiAuditEnterpriseSiteID": {
+      "title": "ID сајта предузећа ревизије",
+      "description": "Постави Audit Enterprise SiteID који треба користити у Elasticsearch упитима",
+      "type": "string"
+    },
+    "dcmuiElasticsearchIsDefault": {
+      "title": "Подразумевано",
+      "description": "Постави овај URL као подразумевани. (Уверите се да је само један од урл-ова - сиблингс цхилд постављен као подразумевани).",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiElasticsearchInstalled": {
+      "title": "Инсталиран",
+      "description": "Користи овај URL у UI-ју",
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

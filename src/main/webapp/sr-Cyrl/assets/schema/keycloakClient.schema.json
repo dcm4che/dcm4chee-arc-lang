@@ -1,0 +1,72 @@
+{
+  "title": "Keycloak клијент",
+  "description": "Keycloak клијент",
+  "type": "object",
+  "required": [
+    "dcmKeycloakClientID",
+    "dcmURI",
+    "dcmKeycloakRealm",
+    "dcmKeycloakGrantType",
+    "dcmTLSAllowAnyHostname",
+    "dcmTLSDisableTrustManager"
+  ],
+  "properties": {
+    "dcmKeycloakClientID": {
+      "title": "ID Keycloak клијента",
+      "description": "Client ID коришћен у захтевима за токен.",
+      "type": "string",
+      "use": [
+        "$.dcmWebApp[*].dcmKeycloakClientID",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmUserIdentityNegotiationKeycloakClientID",
+        "$.dcmDevice.dcmArchiveDevice.dcmUserIdentityNegotiationKeycloakClientID"
+      ]
+    },
+    "dcmURI": {
+      "title": "URL сервера",
+      "description": "Базни URL Keycloak сервера.",
+      "type": "string"
+    },
+    "dcmKeycloakRealm": {
+      "title": "Keycloak Realm",
+      "description": "Име реалм-а у захтевима за токен.",
+      "type": "string"
+    },
+    "dcmKeycloakGrantType": {
+      "title": "Тип Keycloak овлашћења",
+      "description": "Keycloak грант type коришћен у захтевима за токен.",
+      "type": "string",
+      "enum": [
+        "client_credentials",
+        "password"
+      ],
+      "default": "client_credentials"
+    },
+    "dcmKeycloakClientSecret": {
+      "title": "Тајна Keycloak клијента",
+      "description": "Keycloak цлиент сецрет. Обавезно ако је грант type = client_credentials.",
+      "type": "string"
+    },
+    "dcmTLSAllowAnyHostname": {
+      "title": "TLS дозволи било које име хоста",
+      "description": "Ако други сервер захтева HTTPS и ова конфигурациона опција је постављена на true, сертификат другог сервера се валидира путем трустсторе-а, али се валидација имена хоста не врши.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmTLSDisableTrustManager": {
+      "title": "TLS онемогући Trust Manager",
+      "description": "Ако други сервер захтева HTTPS и ова конфигурациона опција је постављена на true, не морате навести трустсторе",
+      "type": "boolean",
+      "default": false
+    },
+    "uid": {
+      "title": "User ID",
+      "description": "User ID. Required иф грант type = password.",
+      "type": "string"
+    },
+    "userPassword": {
+      "title": "User Password",
+      "description": "User Password. Required иф грант type = password.",
+      "type": "string"
+    }
+  }
+}

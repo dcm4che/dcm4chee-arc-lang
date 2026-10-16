@@ -1,0 +1,57 @@
+storage:Складиште|Дескриптор складишта
+storage.dcmStorageID:ID складишта|ID складишта
+storage.dcmURI:URI складишта|RFC2079: Uniform Resource Identifier
+storage.dcmArchiveSeriesAsTAR:Архивске серије као TAR|Указује да су бинарни DICOM објекти једне серије запаковани у један TAR архиву на овом Storage System-у; нетачно ако није наведено.
+storage.dcmStoragePathFormat:Формат путање складишта|Формат путање датотеке DICOM бинарних објеката или метадата у JSON формату или ZIP архива које садрже метадата у JSON формату за сваки DICOM објекат једне серије, записаних на овај Storage System. '{now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}', ако није наведено.
+storage.dcmOnStoragePathAlreadyExists:Већ постоји на путањи складишта|Специфицира понашање ако објекат већ постоји на путањи складишта на систему складиштења, састављеној према конфигурисаном 'Storage Path Format'. Подразумевано понашање 'RANDOM_PATH'. (пређите мишем преко опција да видите њихове описе)
+storage.dcmOnStoragePathAlreadyExists.FAILURE:Signals failure writing the new object
+storage.dcmOnStoragePathAlreadyExists.NOOP:Proceed without writing the new object
+storage.dcmOnStoragePathAlreadyExists.RANDOM_PATH:Replace last path element be random 8 hex digit number and try again
+storage.dcmRetryCreateDirectories:Понови креирање директоријума|Специфицира број покушаја креирања родитељских директоријума путање складишне датотеке - може заобићи проблеме везане за NFS; 0 ако није наведено.
+storage.dcmAltCreateDirectories:Алтернативно креирање директоријума|Указује да се не ослања на 'createDirectories' функцију у 'java.nio.file.Files' Јава класи за креирање свих непостојећих родитељских директоријума прво, већ да експлицитно креира родитељске директоријуме ако се баци NoSuchFileException. Може заобићи проблеме везане за NFS.
+storage.dcmCheckMountFilePath:Провери путању моунт фајла|Указује на проверу да ли се монтирани филе system није одвојио од своје моунт тачке, навођењем путање фајла релативно у односу на путању Storage URI, који је сенчен од стране моунт-а, тако да његова видљивост сигнализира да је моунт неуспео. Ако фајл постане видљив, операција писања на стораге не успева, спречавајући ускладишћење објеката на филе system моунт поинт директоријума.
+storage.dcmCheckExistFilePath:Провери путању постојања фајла|Указује на проверу да ли наведени фајл на стораге филе system постоји. Ако фајл постане недоступан, операција писања на стораге не успева, спречавајући ускладишћење објеката на филе system.
+storage.dcmFileOpenOption:Опције отварања фајла|Опције које специфицирају како се фајл отвара за писање. Подразумевано понашање 'CREATE_NEW'. (пређите мишем преко опција да видите њихове описе)
+storage.dcmFileOpenOption.CREATE_NEW:Create a new file, failing if the file already exists
+storage.dcmFileOpenOption.DSYNC:Requires that every update to the file's content be written synchronously to the underlying storage device
+storage.dcmFileOpenOption.SYNC:Requires that every update to the file's content or metadata be written synchronously to the underlying storage device
+storage.dcmLocationStatus:Статус локације|Почетни Location Status DICOM фајлова записаних на овај Storage System. Подразумевано понашање 'OK'. (пређите мишем преко опција да видите њихове описе)
+storage.dcmLocationStatus.OK:Indicates access state of stored objects is stable
+storage.dcmLocationStatus.VERIFY_QSTAR_ACCESS_STATE:Indicates to verify access state of stored objects from QStar Tape File System
+storage.dcmCountLocationsByStatus:Број локација по статусу|Указује на укључивање броја локација са статусом != 0 (=OK) за овај Storage System путем RESTful услуге за листање Storage System-а; нетачно ако није наведено.
+storage.dcmDigestAlgorithm:Алгоритам дигеста|Алгоритам за генерисање контролних сума.
+storage.dcmDigestAlgorithm.MD5:Message-digest algorithm
+storage.dcmDigestAlgorithm.SHA-1:Secure Hash Algorithm 1
+storage.dcmDigestAlgorithm.SHA-265:Secure Hash Algorithm 256
+storage.dcmMaxRetries:Максималан број поновних покушаја|Максималан број покушаја ускладишћења објекта на стораге system.
+storage.dcmRetryDelay:Кашњење поновног покушаја|Кашњење поновног покушаја складиштења објекта на систем складиштења у ISO-8601 формату трајања PnDTnHnMn.nS. Покушај одмах ако није наведено.
+storage.dcmInstanceAvailability:Доступност инстанце|Доступност инстанце.
+storage.dcmInstanceAvailability.ONLINE:DICOM objects available on ONLINE storage
+storage.dcmInstanceAvailability.NEARLINE:DICOM objects available on NEARLINE storage
+storage.dcmStorageDuration:Storage Duration|Указује на тип трајања складиштења. Објекти се прочишћавају из цацхе и привременог складишта према конфигурисаним делетер тхресхолд-овима или - ако није наведен ниједан делетер тхресхолд и нису конфигурисани Retention Periods - сви објекти на складишту ће бити прочишћени. У случају привременог складишта, студије чији су објекти прочишћени се такође бришу из базе података.
+storage.dcmStorageDuration.PERMANENT:Permanent storage
+storage.dcmStorageDuration.CACHE:Cache storage
+storage.dcmStorageDuration.TEMPORARY:Temporary storage
+storage.dcmReadOnly:Само за читање|Указује да ли је Storage System реад only.
+storage.dcmStorageClusterID:ID кластера складишта|Идентификује CACHE Storage који припада Storage Cluster-у. Објекти једне студије могу бити дистрибуирани преко Storage System-а једног Storage Cluster-а. Користи се за тхресхолд окинуто брисање.
+storage.dcmStorageThreshold:Праг складишта|Минималан користан простор на Storage System-у. Ако користан простор падне испод те вредности Storage System ће бити означен као пун постављањем Storage Threshold Exceeds на тренутно време и - ако је Storage Threshold Exceeds Permanently true - Storage System ће бити уклоњен из листе конфигурисаних Storage System-а Network AE-а који захтева тај Storage System. Формат ннн(MB|GB|MiB|GiB)
+storage.dcmStorageThresholdExceeded:Праг складишта прекорачен|Датум и време у формату YYYYMMDDHHMMSS.FFFFFF када је Storage Threshold премашен.
+storage.dcmStorageThresholdExceedsPermanently:Праг складишта трајно прекорачен|Указује на уклањање Storage System из листе конфигурисаних Storage Systems Network AE-а који захтева тај Storage System када Storage Threshold прекорачи.
+storage.dcmNoDeletionConstraint:No Deletion Constraint|Обриши студије са цацхе/temporary Storage System-а, ако није конфигурисан ниједан Deleter Threshold и ниједно друго ограничење брисања.
+storage.dcmDeleterMinStudyAccessTime:Минимално време приступа студији од стране Делетер-а|Време најдавнијег приступа студијама за брисање у формату YYYYMMDDHHMMSS.FFFFFF.
+storage.dcmDeleterThreshold:Праг Делетер-а|Минималан користан простор на Storage System-у за окидање брисања. Ако је наведено, студије се бришу са Storage System-а конфигурисаног за цацхе (Storage Duration = CACHE) или привремено (Storage Duration = TEMPORARY) складиште, ако користан простор падне испод те вредности. Формат [nn'['<schedule>']']ннн(MB|GB|MiB|GiB).
+storage.dcmDeleterThresholdMaxUsableSpace:Максимални употребљиви простор прага Делетер-а|Максималан користан простор на Storage System-у за окидање брисања. Ако је наведено, студије се бришу са Storage System-а конфигурисаног за цацхе (Storage Duration = CACHE) или привремено (Storage Duration = TEMPORARY) складиште, ако искоришћени простор на диску премаши ту вредност. Формат [nn'['<schedule>']']ннн(MB|GB|MiB|GiB).
+storage.dcmDeleterThresholdBlocksFilePath:Путања фајла блокова прага Делетер-а|Путања датотеке која садржи тренутно искоришћени простор на диску у блоковима (1024 бајта), повремено ажурирана од стране екстерне апликације.
+storage.dcmDeleteStudiesOlderThan:Обриши студије старије од|Обриши студије са Storage System-а конфигурисаног за цацхе (dcmStorageDuration=CACHE) или привремено (dcmStorageDuration=TEMPORARY) складиште, ако је њихов Study Date старији од наведене вредности у ISO-8601 формату периода. Формат [nn"["<schedule>"]"](PnYnMnD|PnW).
+storage.dcmDeleteStudiesReceivedBefore:Обриши студије примљене пре|Обриши студије са Storage System-а конфигурисаног за цацхе (dcmStorageDuration=CACHE) или привремено (dcmStorageDuration=TEMPORARY) складиште, ако су примљене пре више од наведене вредности у ISO-8601 формату периода. Формат [nn"["<schedule>"]"](PnYnMnD|PnW).
+storage.dcmDeleteStudiesNotUsedSince:Обриши студије некоришћене од|Обриши студије са Storage System-а конфигурисаног за цацхе (dcmStorageDuration=CACHE) или привремено (dcmStorageDuration=TEMPORARY) складиште, ако им је последњи приступ старији од наведене вредности у ISO-8601 формату периода. Формат [nn"["<schedule>"]"](PnYnMnD|PnW).
+storage.dcmDeleterThreads:Нити Делетер-а|Број Тхреад-ова коришћених за брисање објеката са Storage System.
+storage.dcmExternalRetrieveAET:Екстерни AET-ови преузимања|Ограничава брисање студија, додатно на конфигурисане делетер тхресхолд-ове и/или ограничења делетион ретентион период-а, са Storage System-а на студије чији су објекти преузмљиви коришћењем једног од AE-ова са екстерног C-MOVE SCP-а.
+storage.dcmExternalRetrieveInstanceAvailability:Доступност инстанце екстерног преузимања|Ажурира доступност инстанци при брисању студија за инстанце доступне на екстерном ретриеве архиву.
+storage.dcmExportStorageID:ID складишта извоза|Ограничава брисање студија, додатно на конфигурисане делетер тхресхолд-ове и/или ограничења делетион ретентион период-а, са Storage System-а на студије чији су објекти такође доступни са наведених других складишта.
+storage.dcmSingleExportStorageByStudy:Једно складиште извоза по студији|Указује да објекти једне студије НИСУ дистрибуирани преко више Export Стораге-ова.
+storage.dcmRetrieveCacheStorageID:ID складишта кеша преузимања|Специфицира друго складиште на које се објекти копирају паралелно при ретриеве-у ради повећања перформанси при приступу системима складиштења који пружају више пропусног опсега коришћењем више паралелних конекција.
+storage.dcmNoRetrieveCacheOnDestinationAETitle:Без кеша преузимања на одредишном AE наслову|Специфицира AE Титле C-STORE SCP-ова којима се објекти преузимају без копирања у конфигурисани Retrieve Cache Storage.
+storage.dcmNoRetrieveCacheOnPurgedInstanceRecords:Без кеша преузимања на очишћеним записима инстанци|Указује да се НЕ копирају преузети објекти у конфигурисани Retrieve Cache Storage, чији су одговарајући Instance Records већ прочишћени из DB-а.
+storage.dcmRetrieveCacheMaxParallel:Максимална паралелност кеша преузимања|Максималан број паралелних копија за cache storage при преузимању. Ефикасно само ако је конфигурисан Retrieve Cache Storage ID.
+storage.dcmProperty:Својство складишта|Наведите својства складиштења у формату {name}={value}. Погледајте различите <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Storage-Properties" target="_blank">Storage Properties</a> које се могу конфигурисати на основу типа складишта.

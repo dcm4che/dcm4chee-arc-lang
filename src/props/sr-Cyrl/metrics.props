@@ -1,0 +1,5 @@
+metrics:Дескриптор метрике|Дескриптор метрике
+metrics.dcmMetricsName:Име метрике|Име метрике
+metrics.dicomDescription:Опис метрике|Неспутани текстуални опис метрике
+metrics.dcmMetricsRetentionPeriod:Период задржавања метрике|Период задржавања метрика у минутима
+metrics.dcmUnit:Јединица метрике|Јединица података метрике

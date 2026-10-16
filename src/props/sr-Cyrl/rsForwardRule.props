@@ -1,0 +1,7 @@
+rsForwardRule:RESTful правило прослеђивања|RESTful Forward правило
+rsForwardRule.cn:Име|Произвољно/Смислено име RESTful Forward правила
+rsForwardRule.dcmWebAppName:Име веб апликације|Име веб апликације
+rsForwardRule.dcmURIPattern:Образац URL захтева|Само проследи захтеве који одговарају датом Regular Expression-у. Ако је префиксовано са !, само проследи захтеве који не одговарају датом Regular Expression-у.
+rsForwardRule.dcmHostnamePattern:Образац имена хоста|Само проследи захтеве примљене од клијената чије име хоста одговара датом Regular Expression-у. Ако је префиксовано са !, само проследи захтеве од клијената чије име хоста не одговара датом Regular Expression-у.
+rsForwardRule.dcmIPAddressPattern:Образац IP адресе|Само проследи захтеве примљене од клијената који одговарају датом Regular Expression-у. Ако је префиксовано са !, само проследи захтеве од клијената чија IP адреса не одговара датом Regular Expression-у.
+rsForwardRule.dcmRSOperation:RESTful Operation|Име RESTful операције која треба да буде прослеђена другој инстанци архиве.

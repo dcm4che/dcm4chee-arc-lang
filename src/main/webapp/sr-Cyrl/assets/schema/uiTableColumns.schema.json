@@ -1,0 +1,51 @@
+{
+  "title": "Конфигурација колона табеле UI студија",
+  "description": "Колоне Study табеле",
+  "type": "object",
+  "required": [
+    "dcmuiColumnName",
+    "dcmuiValuePath",
+    "dcmuiValueType"
+  ],
+  "properties": {
+    "dcmuiColumnName": {
+      "title": "Име колоне",
+      "description": "Име колоне у Study табели",
+      "type": "string"
+    },
+    "dcmuiColumnId": {
+      "title": "ID колоне",
+      "description": "Свака могућа колона која се користи у UI-ју има ID; коришћењем ID-а можете променити нека од својстава те колоне, као што су име, опис, редослед или ширина",
+      "type": "string"
+    },
+    "dcmuiColumnTitle": {
+      "title": "Опис колоне",
+      "description": "Опис колоне, приказан при преласку миша",
+      "type": "string"
+    },
+    "dcmuiValuePath": {
+      "title": "Путања вредности",
+      "description": "Валуе (јсон-Object) путања колоне (нпр.: '00100010.Value[0].Alphabetic' за име пацијента или '00100020.Value[0]' за Patient ID",
+      "type": "string"
+    },
+    "dcmuiValueType": {
+      "title": "Тип вредности",
+      "description": "Тип колоне како добити вредност, подразумевано треба бити 'value'",
+      "type": "string",
+      "enum": [
+        "value",
+        "pipe"
+      ]
+    },
+    "dcmuiColumnWidth": {
+      "title": "Ширина колоне у тежини",
+      "description": "Ширина колоне у тежини ( x > 0.1 - x < бесконачно ) подразумевано 1",
+      "type": "string"
+    },
+    "dcmuiColumnOrder": {
+      "title": "Редослед колоне",
+      "description": "Редослед Цолумн-е",
+      "type": "number"
+    }
+  }
+}

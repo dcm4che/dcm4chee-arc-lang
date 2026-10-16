@@ -1,0 +1,43 @@
+{
+  "title": "Конфигурација UI кластера",
+  "description": "Конфигурација Device URL-а за коришћење поред главног UI URL-а",
+  "type": "object",
+  "required": [
+    "dcmuiDeviceClusterName",
+    "dcmuiDeviceClusterDevices",
+    "dcmuiDeviceClusterInstalled"
+  ],
+  "properties": {
+    "dcmuiDeviceClusterName": {
+      "title": "Име",
+      "description": "Име кластера",
+      "type": "string"
+    },
+    "dcmuiDeviceClusterDescription": {
+      "title": "Опис",
+      "description": "Опис кластера",
+      "type": "string"
+    },
+    "dcmuiDeviceClusterDevices": {
+      "title": "Веб апликација за уређаје",
+      "description": "Изабери конфигурисане WebApps за приступ одговарајућим уређајима",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "webApp"
+    },
+    "dcmuiClusterWebApp": {
+      "title": "Веб апликација",
+      "description": "Web апликација са класом QIDO-RS",
+      "type": "string",
+      "format": "webApp"
+    },
+    "dcmuiDeviceClusterInstalled": {
+      "title": "Инсталиран",
+      "description": "Користи овај URL у UI-ју",
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

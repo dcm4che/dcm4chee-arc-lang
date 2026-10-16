@@ -1,0 +1,315 @@
+{
+  "title": "Складиште",
+  "description": "Дескриптор складишта",
+  "type": "object",
+  "required": [
+    "dcmStorageID",
+    "dcmURI"
+  ],
+  "properties": {
+    "dcmStorageID": {
+      "title": "ID складишта",
+      "description": "ID складишта",
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmSeriesMetadataStorageID[*]",
+        "$.dcmDevice.dcmArchiveDevice.dcmStorageVerificationStorageID[*]",
+        "$.dcmDevice.dcmArchiveDevice.dcmStorage[*].dcmExportStorageID[*]",
+        "$.dcmDevice.dcmArchiveDevice.dcmStorage[*].dcmRetrieveCacheStorageID",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmObjectStorageID[*]",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmMetadataStorageID[*]",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmStorageVerificationStorageID[*]"
+      ]
+    },
+    "dcmURI": {
+      "title": "URI складишта",
+      "description": "RFC2079: Uniform Resource Identifier",
+      "type": "string"
+    },
+    "dcmArchiveSeriesAsTAR": {
+      "title": "Архивске серије као TAR",
+      "description": "Указује да су бинарни DICOM објекти једне серије запаковани у један TAR архиву на овом Storage System-у; нетачно ако није наведено.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmStoragePathFormat": {
+      "title": "Формат путање складишта",
+      "description": "Формат путање датотеке DICOM бинарних објеката или метадата у JSON формату или ZIP архива које садрже метадата у JSON формату за сваки DICOM објекат једне серије, записаних на овај Storage System. '{now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}', ако није наведено.",
+      "type": "string",
+      "default": "{now,date,yyyy/MM/dd}/{0020000D,hash}/{0020000E,hash}/{00080018,hash}"
+    },
+    "dcmOnStoragePathAlreadyExists": {
+      "title": "Већ постоји на путањи складишта",
+      "description": "Специфицира понашање ако објекат већ постоји на путањи складишта на систему складиштења, састављеној према конфигурисаном 'Storage Path Format'. Подразумевано понашање 'RANDOM_PATH'. (пређите мишем преко опција да видите њихове описе)",
+      "type": "string",
+      "enum": [
+        "FAILURE|Signals failure writing the new object",
+        "NOOP|Proceed without writing the new object",
+        "RANDOM_PATH|Replace last path element be random 8 hex digit number and try again"
+      ],
+      "default": "RANDOM_PATH"
+    },
+    "dcmRetryCreateDirectories": {
+      "title": "Понови креирање директоријума",
+      "description": "Специфицира број покушаја креирања родитељских директоријума путање складишне датотеке - може заобићи проблеме везане за NFS; 0 ако није наведено.",
+      "type": "integer",
+      "default": 0
+    },
+    "dcmAltCreateDirectories": {
+      "title": "Алтернативно креирање директоријума",
+      "description": "Указује да се не ослања на 'createDirectories' функцију у 'java.nio.file.Files' Јава класи за креирање свих непостојећих родитељских директоријума прво, већ да експлицитно креира родитељске директоријуме ако се баци NoSuchFileException. Може заобићи проблеме везане за NFS.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmCheckMountFilePath": {
+      "title": "Провери путању моунт фајла",
+      "description": "Указује на проверу да ли се монтирани филе system није одвојио од своје моунт тачке, навођењем путање фајла релативно у односу на путању Storage URI, који је сенчен од стране моунт-а, тако да његова видљивост сигнализира да је моунт неуспео. Ако фајл постане видљив, операција писања на стораге не успева, спречавајући ускладишћење објеката на филе system моунт поинт директоријума.",
+      "type": "string"
+    },
+    "dcmCheckExistFilePath": {
+      "title": "Провери путању постојања фајла",
+      "description": "Указује на проверу да ли наведени фајл на стораге филе system постоји. Ако фајл постане недоступан, операција писања на стораге не успева, спречавајући ускладишћење објеката на филе system.",
+      "type": "string"
+    },
+    "dcmFileOpenOption": {
+      "title": "Опције отварања фајла",
+      "description": "Опције које специфицирају како се фајл отвара за писање. Подразумевано понашање 'CREATE_NEW'. (пређите мишем преко опција да видите њихове описе)",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "CREATE_NEW|Create a new file, failing if the file already exists",
+          "DSYNC|Requires that every update to the file's content be written synchronously to the underlying storage device",
+          "SYNC|Requires that every update to the file's content or metadata be written synchronously to the underlying storage device"
+        ]
+      },
+      "default": "CREATE_NEW"
+    },
+    "dcmLocationStatus": {
+      "title": "Статус локације",
+      "description": "Почетни Location Status DICOM фајлова записаних на овај Storage System. Подразумевано понашање 'OK'. (пређите мишем преко опција да видите њихове описе)",
+      "type": "string",
+      "enum": [
+        "OK|Indicates access state of stored objects is stable",
+        "VERIFY_QSTAR_ACCESS_STATE|Indicates to verify access state of stored objects from QStar Tape File System"
+      ],
+      "default": "OK"
+    },
+    "dcmCountLocationsByStatus": {
+      "title": "Број локација по статусу",
+      "description": "Указује на укључивање броја локација са статусом != 0 (=OK) за овај Storage System путем RESTful услуге за листање Storage System-а; нетачно ако није наведено.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmDigestAlgorithm": {
+      "title": "Алгоритам дигеста",
+      "description": "Алгоритам за генерисање контролних сума.",
+      "type": "string",
+      "enum": [
+        "MD5|Message-digest algorithm",
+        "SHA-1|Secure Hash Algorithm 1",
+        "SHA-265|Secure Hash Algorithm 256"
+      ]
+    },
+    "dcmMaxRetries": {
+      "title": "Максималан број поновних покушаја",
+      "description": "Максималан број покушаја ускладишћења објекта на стораге system.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmRetryDelay": {
+      "title": "Кашњење поновног покушаја",
+      "description": "Кашњење поновног покушаја складиштења објекта на систем складиштења у ISO-8601 формату трајања PnDTnHnMn.nS. Покушај одмах ако није наведено.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmInstanceAvailability": {
+      "title": "Доступност инстанце",
+      "description": "Доступност инстанце.",
+      "type": "string",
+      "default": "ONLINE",
+      "enum": [
+        "ONLINE|DICOM objects available on ONLINE storage",
+        "NEARLINE|DICOM objects available on NEARLINE storage",
+        "OFFLINE"
+      ]
+    },
+    "dcmStorageDuration": {
+      "title": "Storage Duration",
+      "description": "Указује на тип трајања складиштења. Објекти се прочишћавају из цацхе и привременог складишта према конфигурисаним делетер тхресхолд-овима или - ако није наведен ниједан делетер тхресхолд и нису конфигурисани Retention Periods - сви објекти на складишту ће бити прочишћени. У случају привременог складишта, студије чији су објекти прочишћени се такође бришу из базе података.",
+      "type": "string",
+      "default": "PERMANENT",
+      "enum": [
+        "PERMANENT|Permanent storage",
+        "CACHE|Cache storage",
+        "TEMPORARY|Temporary storage"
+      ]
+    },
+    "dcmReadOnly": {
+      "title": "Само за читање",
+      "description": "Указује да ли је Storage System реад only.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmStorageClusterID": {
+      "title": "ID кластера складишта",
+      "description": "Идентификује CACHE Storage који припада Storage Cluster-у. Објекти једне студије могу бити дистрибуирани преко Storage System-а једног Storage Cluster-а. Користи се за тхресхолд окинуто брисање.",
+      "type": "string"
+    },
+    "dcmStorageThreshold": {
+      "title": "Праг складишта",
+      "description": "Минималан користан простор на Storage System-у. Ако користан простор падне испод те вредности Storage System ће бити означен као пун постављањем Storage Threshold Exceeds на тренутно време и - ако је Storage Threshold Exceeds Permanently true - Storage System ће бити уклоњен из листе конфигурисаних Storage System-а Network AE-а који захтева тај Storage System. Формат ннн(MB|GB|МиБ|ГиБ)",
+      "type": "string"
+    },
+    "dcmStorageThresholdExceeded": {
+      "title": "Праг складишта прекорачен",
+      "description": "Датум и време у формату YYYYMMDDHHMMSS.FFFFFF када је Storage Threshold премашен.",
+      "type": "string"
+    },
+    "dcmStorageThresholdExceedsPermanently": {
+      "title": "Праг складишта трајно прекорачен",
+      "description": "Указује на уклањање Storage System из листе конфигурисаних Storage Systems Network AE-а који захтева тај Storage System када Storage Threshold прекорачи.",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmNoDeletionConstraint": {
+      "title": "No Deletion Constraint",
+      "description": "Обриши студије са цацхе/temporary Storage System-а, ако није конфигурисан ниједан Deleter Threshold и ниједно друго ограничење брисања.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmDeleterMinStudyAccessTime": {
+      "title": "Минимално време приступа студији од стране Делетер-а",
+      "description": "Време најдавнијег приступа студијама за брисање у формату YYYYMMDDHHMMSS.FFFFFF.",
+      "type": "string"
+    },
+    "dcmDeleterThreshold": {
+      "title": "Праг Делетер-а",
+      "description": "Минималан користан простор на Storage System-у за окидање брисања. Ако је наведено, студије се бришу са Storage System-а конфигурисаног за цацхе (Storage Duration = CACHE) или привремено (Storage Duration = TEMPORARY) складиште, ако користан простор падне испод те вредности. Формат [nn'['<schedule>']']ннн(MB|GB|МиБ|ГиБ).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmDeleterThresholdMaxUsableSpace": {
+      "title": "Максимални употребљиви простор прага Делетер-а",
+      "description": "Максималан користан простор на Storage System-у за окидање брисања. Ако је наведено, студије се бришу са Storage System-а конфигурисаног за цацхе (Storage Duration = CACHE) или привремено (Storage Duration = TEMPORARY) складиште, ако искоришћени простор на диску премаши ту вредност. Формат [nn'['<schedule>']']ннн(MB|GB|МиБ|ГиБ).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmDeleterThresholdBlocksFilePath": {
+      "title": "Путања фајла блокова прага Делетер-а",
+      "description": "Путања датотеке која садржи тренутно искоришћени простор на диску у блоковима (1024 бајта), повремено ажурирана од стране екстерне апликације.",
+      "type": "string"
+    },
+    "dcmDeleteStudiesOlderThan": {
+      "title": "Обриши студије старије од",
+      "description": "Обриши студије са Storage System-а конфигурисаног за цацхе (dcmStorageDuration=CACHE) или привремено (dcmStorageDuration=TEMPORARY) складиште, ако је њихов Study Date старији од наведене вредности у ISO-8601 формату периода. Формат [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmPeriod"
+    },
+    "dcmDeleteStudiesReceivedBefore": {
+      "title": "Обриши студије примљене пре",
+      "description": "Обриши студије са Storage System-а конфигурисаног за цацхе (dcmStorageDuration=CACHE) или привремено (dcmStorageDuration=TEMPORARY) складиште, ако су примљене пре више од наведене вредности у ISO-8601 формату периода. Формат [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmPeriod"
+    },
+    "dcmDeleteStudiesNotUsedSince": {
+      "title": "Обриши студије некоришћене од",
+      "description": "Обриши студије са Storage System-а конфигурисаног за цацхе (dcmStorageDuration=CACHE) или привремено (dcmStorageDuration=TEMPORARY) складиште, ако им је последњи приступ старији од наведене вредности у ISO-8601 формату периода. Формат [nn\"[\"<schedule>\"]\"](PnYnMnD|PnW).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmPeriod"
+    },
+    "dcmDeleterThreads": {
+      "title": "Нити Делетер-а",
+      "description": "Број Тхреад-ова коришћених за брисање објеката са Storage System.",
+      "type": "integer",
+      "default": 1,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
+    "dcmExternalRetrieveAET": {
+      "title": "Екстерни AET-ови преузимања",
+      "description": "Ограничава брисање студија, додатно на конфигурисане делетер тхресхолд-ове и/или ограничења делетион ретентион период-а, са Storage System-а на студије чији су објекти преузмљиви коришћењем једног од AE-ова са екстерног C-MOVE SCP-а.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmExternalRetrieveInstanceAvailability": {
+      "title": "Доступност инстанце екстерног преузимања",
+      "description": "Ажурира доступност инстанци при брисању студија за инстанце доступне на екстерном ретриеве архиву.",
+      "type": "string",
+      "enum": [
+        "ONLINE",
+        "NEARLINE",
+        "OFFLINE"
+      ]
+    },
+    "dcmExportStorageID": {
+      "title": "ID складишта извоза",
+      "description": "Ограничава брисање студија, додатно на конфигурисане делетер тхресхолд-ове и/или ограничења делетион ретентион период-а, са Storage System-а на студије чији су објекти такође доступни са наведених других складишта.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmStorageID"
+    },
+    "dcmSingleExportStorageByStudy": {
+      "title": "Једно складиште извоза по студији",
+      "description": "Указује да објекти једне студије НИСУ дистрибуирани преко више Export Стораге-ова.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmRetrieveCacheStorageID": {
+      "title": "ID складишта кеша преузимања",
+      "description": "Специфицира друго складиште на које се објекти копирају паралелно при ретриеве-у ради повећања перформанси при приступу системима складиштења који пружају више пропусног опсега коришћењем више паралелних конекција.",
+      "type": "string",
+      "format": "dcmStorageID"
+    },
+    "dcmNoRetrieveCacheOnDestinationAETitle": {
+      "title": "Без кеша преузимања на одредишном AE наслову",
+      "description": "Специфицира AE Титле C-STORE SCP-ова којима се објекти преузимају без копирања у конфигурисани Retrieve Cache Storage.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmNoRetrieveCacheOnPurgedInstanceRecords": {
+      "title": "Без кеша преузимања на очишћеним записима инстанци",
+      "description": "Указује да се НЕ копирају преузети објекти у конфигурисани Retrieve Cache Storage, чији су одговарајући Instance Records већ прочишћени из DB-а.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmRetrieveCacheMaxParallel": {
+      "title": "Максимална паралелност кеша преузимања",
+      "description": "Максималан број паралелних копија за cache storage при преузимању. Ефикасно само ако је конфигурисан Retrieve Cache Storage ID.",
+      "type": "integer",
+      "default": 10,
+      "minimum": 0,
+      "exclusiveMinimum": true
+    },
+    "dcmProperty": {
+      "title": "Својство складишта",
+      "description": "Наведите својства складиштења у формату {name}={value}. Погледајте различите <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Storage-Properties\" target=\"_blank\">Storage Properties</a> које се могу конфигурисати на основу типа складишта.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

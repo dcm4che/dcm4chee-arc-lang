@@ -1,0 +1,9 @@
+rejectionNote:Напомена о одбацивању|Задаје понашање при сачувавању напомене о одбацивању
+rejectionNote.dcmRejectionNoteLabel:Ознака напомене о одбацивању|Ознака напомене о одбацивању
+rejectionNote.dcmRejectionNoteType:Тип напомене о одбацивању|Тип Rejection Note-а.
+rejectionNote.dcmRejectionNoteCode:Код напомене о одбацивању|Специфицира Document Title Rejection Note-а у формату (CV, CSD, 'CM')
+rejectionNote.dcmAcceptPreviousRejectedInstance:Прихвати претходно одбијену инстанцу|Специфицира понашање при накнадном појављивању инстанци одбијених појединим Rejection Note-ом.
+rejectionNote.dcmOverwritePreviousRejection:Препиши претходно одбацивање|Специфицира Document Title претходног Rejection Note-а у формату (CV, CSD, 'CM') који може бити преписан тим Rejection Note-ом
+rejectionNote.dcmAcceptRejectionBeforeStorage:Прихвати одбацивање пре складиштења|Временски интервал у ISO-8601 формату трајања PnDTnHnMn.nS након пријема Rejection Note-а, у којем се примљени објекти референцирани овим Rejection Note-ом третирају као одбијени. Референцирани објекти примљени након тога се третирају као накнадно појављивање већ одбијене инстанце. Ако није наведено, Rejection Notes који реферишу још не примљене објекте неће бити прихваћени.
+rejectionNote.dcmDeleteRejectedInstanceDelay:Кашњење брисања одбијене инстанце|Кашњење у ISO-8601 формату трајања PnDTnHnMn.nS након којег се инстанце одбијене појединим Rejection Note-ом бришу. Бесконачно ако није наведено.
+rejectionNote.dcmDeleteRejectionNoteDelay:Кашњење брисања напомене о одбацивању|Кашњење у ISO-8601 формату трајања PnDTnHnMn.nS након којег се поједине Rejection Notes бришу. Бесконачно ако није наведено.

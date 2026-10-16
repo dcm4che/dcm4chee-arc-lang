@@ -1,0 +1,6 @@
+uiElasticsearchURL:Конфигурација UI Elasticsearch URL-а|Elasticsearch URL
+uiElasticsearchURL.dcmuiElasticsearchURLName:Име Elasticsearch URL-а|Име UI Elasticsearch URL-а
+uiElasticsearchURL.dcmuiElasticsearchWebApp:Elasticsearch WebApp|Web апликација која ће се користити за екстракцију Elasticsearch URL-а и приступ Elasticsearch-у
+uiElasticsearchURL.dcmuiAuditEnterpriseSiteID:ID сајта предузећа ревизије|Постави Audit Enterprise SiteID који треба користити у Elasticsearch упитима
+uiElasticsearchURL.dcmuiElasticsearchIsDefault:Подразумевано|Постави овај URL као подразумевани. (Уверите се да је само један од урл-ова - сиблингс цхилд постављен као подразумевани).
+uiElasticsearchURL.dcmuiElasticsearchInstalled:Инсталиран|Користи овај URL у UI-ју

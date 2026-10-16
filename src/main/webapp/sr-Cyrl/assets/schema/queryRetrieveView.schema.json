@@ -1,0 +1,43 @@
+{
+  "title": "Преглед упита/преузимања",
+  "description": "Задаје понашање при сачувавању напомене о одбацивању",
+  "type": "object",
+  "required": [
+    "dcmQueryRetrieveViewID",
+    "dcmHideNotRejectedInstances"
+  ],
+  "properties": {
+    "dcmQueryRetrieveViewID": {
+      "title": "ID прегледа упита/преузимања",
+      "description": "Query/Retrieve View идентификатор",
+      "type": "string",
+      "use": [
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmQueryRetrieveViewID"
+      ]
+    },
+    "dcmShowInstancesRejectedByCode": {
+      "title": "Прикажи инстанце одбијене по коду",
+      "description": "Указује да ли Q/R услуге треба да прикажу инстанце одбијене наведеним кодом у формату (CV, CSD, 'CM')",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmRejectionNoteCode"
+    },
+    "dcmHideRejectionNoteWithCode": {
+      "title": "Сакриј напомену о одбацивању са кодом",
+      "description": "Указује да ли Q/R услуге треба да сакрију Rejection Notes са наведеним кодом у формату (CV, CSD, 'CM')",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmRejectionNoteCode"
+    },
+    "dcmHideNotRejectedInstances": {
+      "title": "Сакриј инстанце које нису одбијене",
+      "description": "Указује да ли Q/R услуге треба да сакрију инстанце које нису одбијене из било ког разлога.",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

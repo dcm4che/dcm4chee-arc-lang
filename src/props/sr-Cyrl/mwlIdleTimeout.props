@@ -1,0 +1,6 @@
+mwlIdleTimeout:MWL време неактивности|MWL време неактивности
+mwlIdleTimeout.cn:Име|Произвољно/Смислено име MWL Idle Timeout-а.
+mwlIdleTimeout.dicomAETitle:AE наслов MWL SCP-а|Archive AE Title MWL SCP-а на који ће се применити MWL Idle Timeout.
+mwlIdleTimeout.dcmAETitle:AE наслов заказане станице|Scheduled Station AE Title(ови) Scheduled Procedure Steps-а за које се MWL Idle Timeout примењује. Ако ниједан није наведен, MWL Idle Timeout се примењује на све Scheduled Procedure Steps које пружа MWL SCP.
+mwlIdleTimeout.dcmMWLStatusOnIdle:MWL status при неактивности|Промена статуса неактивних Scheduled Procedure Steps у наведену вредност.
+mwlIdleTimeout.dcmDuration:Време неактивности|Тимеоут након којег се Статус поклапајућих Scheduled Procedure Steps мења у наведени коначни статус.

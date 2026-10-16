@@ -1,0 +1,7 @@
+networkConnection:Мрежна конекција|Описује један TCP/UDP порт на једном мрежном уређају.
+networkConnection.cn:Име|Произвољно/Смислено име за Network Connection објекат
+networkConnection.dicomHostname:Име хоста|DNS име за ову посебну конекцију
+networkConnection.dicomPort:Port|TCP/UDP порт на којем услуга слуша. Може недостајати ако се ова мрежна конекција користи само за одлазне конекције
+networkConnection.dicomTLSCipherSuite:TLS Ципхер Суите-ови|TLS CipherSuites које су подржане на овој посебној конекцији. Ако није наведено, TLS је онемогућен
+networkConnection.dicomInstalled:инсталиран|Тачно ако је Network Connection инсталиран на мрежи. Ако није наведено, информација о статусу инсталације Network Connection-а се наслеђује од уређаја
+networkConnection.dcmNetworkConnection:Екстензија мрежне конекције|dcm4che власнички атрибути мрежне конекције

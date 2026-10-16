@@ -1,0 +1,10 @@
+studyRetentionPolicy:Политика задржавања студије|Study Retention политика
+studyRetentionPolicy.cn:Име|Произвољно/Смислено име Study Retention политике
+studyRetentionPolicy.dcmRetentionPeriod:Период задржавања студије|Study Retention Period у ISO-8601 формату периода PnYnMnD или PnW
+studyRetentionPolicy.dcmRulePriority:Приоритет правила|Ако се стање више Study Retention политика подудара за примљену слику, примењује се политика вишег приоритета. Ако постоји више подударних политика са једнаким приоритетом, недефинисано је која се политика примењује.
+studyRetentionPolicy.dcmProperty:Услови|Услови у формату {key}[!]={value}. Погледајте <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">применљивост, формат и примере.</a>
+studyRetentionPolicy.dcmExpireSeriesIndividually:Истичи серије појединачно|Указује да ли серије треба да истекну појединачно или не.
+studyRetentionPolicy.dcmStartRetentionPeriodOnStudyDate:Почни период задржавања од датума студије|Указује да ли период задржавања треба почети на Study Date уместо на пријему објекта студије
+studyRetentionPolicy.dcmExporterID:Извези истеклу студију|Извези истекле Study/Series користећи наведени Exporter
+studyRetentionPolicy.dcmFreezeExpirationDate:Замрзни датум истека|Указује на онемогућавање промена Expiration Date-а од стране накнадних догађаја.
+studyRetentionPolicy.dcmRevokeExpiration:Опозови датум истека|Указује на опозив претходно постављеног Expiration Date-а и заштиту студије трајним замрзавањем. Ефикасно само ако је 'Freeze Expiration Date' такође конфигурисан.

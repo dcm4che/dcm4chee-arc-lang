@@ -1,0 +1,67 @@
+{
+  "title": "Скуп атрибута",
+  "description": "Именовани скуп атрибута за параметар упита 'includefields' QIDO-RS и WADO-RS метаподатака или за параметар упита 'comparefield' DIFF-RS захтева.",
+  "type": "object",
+  "required": [
+    "dcmAttributeSetType",
+    "dcmAttributeSetID",
+    "dcmTag",
+    "dicomInstalled"
+  ],
+  "properties": {
+    "dicomDescription": {
+      "title": "Опис скупа атрибута",
+      "description": "Неспутани текстуални опис овог Attribute Set",
+      "type": "string"
+    },
+    "dcmAttributeSetType": {
+      "title": "Тип скупа атрибута",
+      "description": "Специфицира употребу овог Attribute Set Type-а.",
+      "type": "string",
+      "enum": [
+        "QIDO_RS|Attribute Set is used by Query Parameter 'includefields' of QIDO-RS requests",
+        "WADO_RS|Attribute Set is used by Query Parameter 'includefields' of WADO-RS requests",
+        "DIFF_RS|Attribute Set is used by Query Parameter 'comparefields' of DIFF-RS requests",
+        "LEADING_CFIND_SCP|Attribute Set is used by Leading C-FIND SCP coercion"
+      ]
+    },
+    "dcmAttributeSetID": {
+      "title": "ID скупа атрибута",
+      "description": "ID који користи Query Parameter 'includefields' QIDO-RS и WADO-RS Metadata захтева и Query Parameter 'comparefield' DIFF-RS захтева за референцирање овог Attribute Set-а.",
+      "type": "string"
+    },
+    "dcmAttributeSetTitle": {
+      "title": "Наслов скупа атрибута",
+      "description": "Наслов овог скупа атрибута.",
+      "type": "string"
+    },
+    "dcmAttributeSetNumber": {
+      "title": "Број скупа атрибута",
+      "description": "Број коришћен за сортирање Attribute Sets.",
+      "type": "integer"
+    },
+    "dicomInstalled": {
+      "title": "инсталиран",
+      "description": "Булова вредност која указује да ли је овај скуп атрибута тренутно инсталиран на арцхиве уређају",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmTag": {
+      "title": "Ознака атрибута",
+      "description": "DICOM ознака као хексадецимални стринг",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmTag"
+    },
+    "dcmProperty": {
+      "title": "Својство",
+      "description": "Својство у формату <name>=<value>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

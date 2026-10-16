@@ -1,0 +1,201 @@
+{
+  "title": "UPS на UPS завршено",
+  "description": "Креирај Workitem у обједињеној Worklist при претходном UPS завршетку",
+  "type": "object",
+  "required": [
+    "dcmUPSOnUPSCompletedID",
+    "dcmUPSLabel",
+    "dcmUPSPriority",
+    "dcmUPSInputReadinessState",
+    "dcmUPSIncludeStudyInstanceUID",
+    "dcmUPSIncludeInputInformation",
+    "dcmUPSIncludePatient",
+    "dcmUPSIncludeReferencedRequest",
+    "dcmNoKeywords"
+  ],
+  "properties": {
+    "dcmUPSOnUPSCompletedID": {
+      "title": "ID правила UPS-а на UPS завршено",
+      "description": "ID UPS on UPS Completed правила",
+      "type": "string"
+    },
+    "dcmProperty": {
+      "title": "Услов",
+      "description": "Услови у формату {key}[!]={value}. Погледајте <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">применљивост, формат и примере.</a>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmRequiresOtherUPSCompleted": {
+      "title": "Захтева други UPS завршен",
+      "description": "Специфицира Query Parameters за друге UPS који реферишу исти захтев (= Study Instance UID), који морају већ бити завршени за креирање овог UPS-а. Формат: {attributeID}={value}[&...]",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSLabel": {
+      "title": "Ознака корака процедуре",
+      "description": "Вредност Procedure Step Label (0074,1204) у креираном UPS-у. {attributeID} ће бити замењено вредношћу тог атрибута у датасету претходног UPS-а. Пример: {StudyDescription}",
+      "type": "string"
+    },
+    "dcmUPSWorklistLabel": {
+      "title": "Ознака Worklist-е",
+      "description": "Вредност Worklist Label (0074,1202) у креираном UPS-у. {attributeID} ће бити замењено вредношћу тог атрибута у датасету претходног UPS-а. Пример: {StudyDescription}",
+      "type": "string"
+    },
+    "dcmUPSPriority": {
+      "title": "Приоритет",
+      "description": "Вредност Scheduled Procedure Step Priority (0074,1200) у креираном UPS-у.",
+      "type": "string",
+      "default": "MEDIUM",
+      "enum": [
+        "HIGH",
+        "MEDIUM",
+        "LOW"
+      ]
+    },
+    "dcmUPSInputReadinessState": {
+      "title": "Стање спремности уноса",
+      "description": "Вредност Input Readiness State (0040,4041) у креираном UPS-у",
+      "type": "string",
+      "default": "READY",
+      "enum": [
+        "INCOMPLETE",
+        "UNAVAILABLE",
+        "READY"
+      ]
+    },
+    "dcmUPSStartDateTimeDelay": {
+      "title": "Кашњење датума/времена почетка заказаног корака процедуре",
+      "description": "Кашњење Scheduled Procedure Step Start DateTime (0040,4005) у креираном UPS-у од времена пријема у формату PnDTnHnMn.nS. Без кашњења ако није наведено.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmUPSCompletionDateTimeDelay": {
+      "title": "Кашњење очекиваног датума/времена завршетка",
+      "description": "Кашњење Expected Completion DateTime (0040,4011) у креираном UPS-у од времена пријема у формату PnDTnHnMn.nS. Ако није наведено, неће се поставити Expected Completion Date и Тиме.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmUPSInstanceUIDBasedOnName": {
+      "title": "UID UPS instance на основу имена",
+      "description": "Вредност за генерисање наме басед SOP Instance UID (0008,0018) у креираном UPS-у. Ако није наведено, користиће се рандом генерисан SOP Instance UID (0008,0018).",
+      "type": "string"
+    },
+    "dcmUPSIncludeInputInformation": {
+      "title": "Укључи улазне информације",
+      "description": "Указује да ли се Input Information Sequence (0040,4021) или/и Output Information Sequence (0040,4033) у Unified Procedure Step Performed Procedure Sequence (0074,1216) претходног UPS-а укључује у Input Information Sequence (0040,4021) креираног UPS-а.",
+      "type": "string",
+      "default": "COPY_OUTPUT",
+      "enum": [
+        "NO",
+        "COPY_INPUT",
+        "COPY_OUTPUT"
+      ]
+    },
+    "dcmUPSIncludePatient": {
+      "title": "UPS укључи пацијента",
+      "description": "Указује да ли су атрибути пацијента копирани из претходног UPS-а.",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmDestinationAE": {
+      "title": "Одредишни AE",
+      "description": "Наслов DICOM апликационог ентитета у који ће инстанце бити сачуване.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmEntity": {
+      "title": "Обим акумулације",
+      "description": "Обим акумулације",
+      "type": "string",
+      "enum": [
+        "Study",
+        "Series",
+        "MPPS"
+      ]
+    },
+    "dcmUPSScheduledWorkitemCode": {
+      "title": "Код заказаног Workitem-а",
+      "description": "Ставка секвенце кода заказаног Workitem-а (0040,4018) у креираном UPS-у у формату (CV, CSD, \"CM\").",
+      "type": "string"
+    },
+    "dcmUPSScheduledStationNameCode": {
+      "title": "Код имена заказане станице",
+      "description": "Ставка секвенце кода имена заказане станице (0040,4025) у креираном UPS-у у формату (CV, CSD, \"CM\").",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSScheduledStationClassCode": {
+      "title": "Код класе заказане станице",
+      "description": "Ставка секвенце кода класе заказане станице (0040,4026) у креираном UPS-у у формату (CV, CSD, \"CM\").",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSScheduledStationLocationCode": {
+      "title": "Код географске локације заказане станице",
+      "description": "Ставка секвенце кода географске локације заказане станице (0040,4027) у креираном UPS-у у формату (CV, CSD, \"CM\").",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSScheduledHumanPerformerCode": {
+      "title": "Код заказаног људског извршиоца",
+      "description": "Ставка Human Performer Code Sequence (0040,4009) у ставци Scheduled Human Performers Sequence (0040,4034) у креираном UPS-у у формату (CV, CSD, \"CM\").",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmUPSScheduledHumanPerformerName": {
+      "title": "Име заказаног људског извршиоца",
+      "description": "Вредност Human Performer's Name (0040,4037) у ставци Scheduled Human Performers Sequence (0040,4034) у креираном UPS-у. {attributeID} ће бити замењено вредношћу тог атрибута у датасету претходног UPS-а. Пример: {PerformingPhysicianName}",
+      "type": "string"
+    },
+    "dcmUPSScheduledHumanPerformerOrganization": {
+      "title": "Организација заказаног људског извршиоца",
+      "description": "Вредност Human Performer's Organization (0040,4036) у ставци Scheduled Human Performers Sequence (0040,4034) у креираном UPS-у. {attributeID} ће бити замењено вредношћу тог атрибута у датасету претходног UPS-а. Пример: {ResponsibleOrganization}",
+      "type": "string"
+    },
+    "dcmAdmissionID": {
+      "title": "Број пријема",
+      "description": "Вредност Admission ID (0038,0010) у креираном UPS-у. {attributeID} ће бити замењено вредношћу тог атрибута у датасету претходног UPS-а. Пример: {AdmissionID}",
+      "type": "string"
+    },
+    "dicomIssuerOfAdmissionID": {
+      "title": "Издавалац ID-а пријема",
+      "description": "Вредност Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) и Universal Entity ID Type (0040,0033) ставке Issuer of Admission ID Sequence (0038,0014) у креираном UPS-у. Формат: &лт;Local Namespace Entity ID&гт;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
+      "type": "string"
+    },
+    "dcmUPSIncludeStudyInstanceUID": {
+      "title": "Укључи Study Instance UID",
+      "description": "Указује да ли Study Instance UID (0020,000D) претходног UPS објекта треба бити укључен у креирани UPS",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmUPSIncludeReferencedRequest": {
+      "title": "Укључи референцирани захтев",
+      "description": "Указује да ли је Referenced Request Sequence (0040,A370) претходног UPS-а укључена у креирани UPS. Иначе је укључена празна Referenced Request Sequence (0040,A370).",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmURI": {
+      "title": "URI XSL стилног листа",
+      "description": "Специфицира URI XSL style схеет-а за укључивање додатних атрибута у креирани UPS.",
+      "type": "string"
+    },
+    "dcmNoKeywords": {
+      "title": "Без кључне речи атрибута",
+      "description": "Означава да ли кључне речи атрибута треба изоставити у DICOM XML прослеђеном XSLT-у.",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

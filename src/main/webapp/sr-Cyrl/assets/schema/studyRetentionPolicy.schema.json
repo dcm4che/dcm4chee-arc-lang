@@ -1,0 +1,72 @@
+{
+  "title": "Политика задржавања студије",
+  "description": "Study Retention политика",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmRetentionPeriod",
+    "dcmRulePriority",
+    "dcmExpireSeriesIndividually",
+    "dcmStartRetentionPeriodOnStudyDate",
+    "dcmFreezeExpirationDate",
+    "dcmRevokeExpiration"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Име",
+      "description": "Произвољно/Смислено име Study Retention политике",
+      "type": "string"
+    },
+    "dcmRetentionPeriod": {
+      "title": "Период задржавања студије",
+      "description": "Study Retention Period у ISO-8601 формату периода PnYnMnD или PnW",
+      "type": "string",
+      "format": "dcmPeriod"
+    },
+    "dcmRulePriority": {
+      "title": "Приоритет правила",
+      "description": "Ако се стање више Study Retention политика подудара за примљену слику, примењује се политика вишег приоритета. Ако постоји више подударних политика са једнаким приоритетом, недефинисано је која се политика примењује.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmProperty": {
+      "title": "Услови",
+      "description": "Услови у формату {key}[!]={value}. Погледајте <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">применљивост, формат и примере.</a>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmExpireSeriesIndividually": {
+      "title": "Истичи серије појединачно",
+      "description": "Указује да ли серије треба да истекну појединачно или не.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmStartRetentionPeriodOnStudyDate": {
+      "title": "Почни период задржавања од датума студије",
+      "description": "Указује да ли период задржавања треба почети на Study Date уместо на пријему објекта студије",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmExporterID": {
+      "title": "Извези истеклу студију",
+      "description": "Извези истекле Study/Series користећи наведени Exporter",
+      "type": "string",
+      "format": "dcmExporterID"
+    },
+    "dcmFreezeExpirationDate": {
+      "title": "Замрзни датум истека",
+      "description": "Указује на онемогућавање промена Expiration Date-а од стране накнадних догађаја.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmRevokeExpiration": {
+      "title": "Опозови датум истека",
+      "description": "Указује на опозив претходно постављеног Expiration Date-а и заштиту студије трајним замрзавањем. Ефикасно само ако је 'Freeze Expiration Date' такође конфигурисан.",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

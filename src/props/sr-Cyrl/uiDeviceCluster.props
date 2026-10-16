@@ -1,0 +1,6 @@
+uiDeviceCluster:Конфигурација UI кластера|Конфигурација Device URL-а за коришћење поред главног UI URL-а
+uiDeviceCluster.dcmuiDeviceClusterName:Име|Име кластера
+uiDeviceCluster.dcmuiDeviceClusterDescription:Опис|Опис кластера
+uiDeviceCluster.dcmuiDeviceClusterDevices:Веб апликација за уређаје|Изабери конфигурисане WebApps за приступ одговарајућим уређајима
+uiDeviceCluster.dcmuiClusterWebApp:Веб апликација|Web апликација са класом QIDO-RS
+uiDeviceCluster.dcmuiDeviceClusterInstalled:Инсталиран|Користи овај URL у UI-ју

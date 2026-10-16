@@ -1,0 +1,5 @@
+mppsForwardRule:Правило MPPS прослеђивања|MPPS Forward правило
+mppsForwardRule.cn:Име|Произвољно/Смислено име MPPS Forward правила
+mppsForwardRule.dcmFwdMppsDestination:Одредиште MPPS прослеђивања|Одредиште за прослеђивање MPPS N-CREATE RQ и N-SET RQ
+mppsForwardRule.dcmProperty:Услови|Услови у формату {key}[!]={value}. Погледајте <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">применљивост, формат и примере.</a>
+mppsForwardRule.dcmSchedule:Временски услови|Примени ово правило само у наведеним временским опсезима.

@@ -1,0 +1,58 @@
+{
+  "title": "Страна упоређивања",
+  "description": "Страна поређења",
+  "type": "object",
+  "required": [
+    "dcmuiCompareSideName",
+    "dcmuiCompareSideCluster",
+    "dcmuiCompareSideElasticsearch",
+    "dcmuiCompareSideInstalled",
+    "dcmuiCompareSideOrder"
+  ],
+  "properties": {
+    "dcmuiCompareSideName": {
+      "title": "Име",
+      "description": "Име стране поређења",
+      "type": "string"
+    },
+    "dcmuiCompareSideDescription": {
+      "title": "Опис",
+      "description": "Кратак опис ове групе",
+      "type": "string"
+    },
+    "dcmuiCompareSideOrder": {
+      "title": "Редослед",
+      "description": "Редослед Цомпаре стране",
+      "type": "integer",
+      "default": 0,
+      "enum": [
+        0,
+        1
+      ]
+    },
+    "dcmuiCompareSideCluster": {
+      "title": "Кластер",
+      "description": "Изабери кластер",
+      "type": "string",
+      "format": "dcmuiDeviceClusterObject"
+    },
+    "dcmuiCompareSideElasticsearch": {
+      "title": "Elasticsearch",
+      "description": "Изабери Elasticsearch URL",
+      "type": "string",
+      "format": "dcmuiElasticsearchConfig"
+    },
+    "dcmuiCompareSideQueueName": {
+      "title": "Ред",
+      "description": "Изабери QueueName који треба користити за страну поређења",
+      "type": "string",
+      "format": "dcmQueueName"
+    },
+    "dcmuiCompareSideInstalled": {
+      "title": "Инсталиран",
+      "description": "Ако је тачно, ова страна поређења је активна на контролној табли",
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
