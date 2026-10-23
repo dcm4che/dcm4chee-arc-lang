@@ -37,5 +37,10 @@ upsOnStore.dcmRequestedProcedureCode:Requested Procedure Code Sequence|Value of 
 upsOnStore.dcmRequestedProcedureComments:Requested Procedure Comments|Value of Requested Procedure Comments (0040,1400) in Item of Referenced Request Sequence (0040,A370) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {StudyDescription}
 upsOnStore.dcmRequestingPhysician:请求医生|在创建的UPS中,请求医生（0032,1032）的值在参考请求序列（0040,A370）的项中。{attributeID}将替换为传入数据集中该属性的值。示例：{PerformingPhysicianName}。
 upsOnStore.dcmRequestingService:请求的服务|创建的UPS中引用的请求序列的（0040,A370）项的请求服务的（0032,1033）值。 {attributeID}将被接收数据集中该属性的值替换。 示例:{StudyDescription}。
+upsOnStore.dicomInstitutionName:Institution Name|Value of Institution Name (0008,0080) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionName}
+upsOnStore.dicomInstitutionCode:Institution Code Sequence|Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Institution Code Sequence (0008,0082) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, "&lt;CodeMeaning&gt;")
+upsOnStore.dicomInstitutionDepartmentName:Institutional Department Name|Value of Institutional Department Name (0008,1040) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionDepartmentName}
+upsOnStore.dcmInstitutionDepartmentCode:Institutional Department Type Code Sequence|Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Institutional Department Type Code Sequence (0008,1041) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, "&lt;CodeMeaning&gt;")
+upsOnStore.dicomInstitutionAddress:Institution Address|Value of Institution Address (0008,0081) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionAddress}
 upsOnStore.dcmURI:XSL样式表URI|指定XSL样式表的URI,该URI将对接收到的HL7消息进行代码转换,以便在创建的UPS中包括附加属性。
 upsOnStore.dcmNoKeywords:无属性关键字|指示传递到XSLT的DICOM XML是否省略属性关键字。

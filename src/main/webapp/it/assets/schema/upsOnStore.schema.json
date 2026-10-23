@@ -229,6 +229,31 @@
       "description": "Valore del servizio richiedente (0032,1033) nell'elemento della sequenza di richiesta referenziata (0040, A370) nell'UPS creato. {attributeID} verrà sostituito dal valore di tale attributo nel set di dati UPS precedente. Esempio: {StudyDescription}",
       "type": "string"
     },
+    "dicomInstitutionName": {
+      "title": "Institution Name",
+      "description": "Value of Institution Name (0008,0080) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionName}",
+      "type": "string"
+    },
+    "dicomInstitutionCode": {
+      "title": "Institution Code Sequence",
+      "description": "Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Institution Code Sequence (0008,0082) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, \"&lt;CodeMeaning&gt;\")",
+      "type": "string"
+    },
+    "dicomInstitutionDepartmentName": {
+      "title": "Institutional Department Name",
+      "description": "Value of Institutional Department Name (0008,1040) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionDepartmentName}",
+      "type": "string"
+    },
+    "dcmInstitutionDepartmentCode": {
+      "title": "Institutional Department Type Code Sequence",
+      "description": "Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Institutional Department Type Code Sequence (0008,1041) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, \"&lt;CodeMeaning&gt;\")",
+      "type": "string"
+    },
+    "dicomInstitutionAddress": {
+      "title": "Institution Address",
+      "description": "Value of Institution Address (0008,0081) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionAddress}",
+      "type": "string"
+    },
     "dcmURI": {
       "title": "URI del foglio di stile XSL",
       "description": "Specifica l'URI del foglio di stile XSL per includere attributi aggiuntivi nell'UPS creato.",

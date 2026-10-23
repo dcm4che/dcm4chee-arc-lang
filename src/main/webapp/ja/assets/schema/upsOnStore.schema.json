@@ -229,6 +229,31 @@
       "description": "作成された UPSの 中で 参照された 要求 シーケンスの（0040、A370）アイテムの 要求 サービスの（0032,1033）値。 {attributeID}は、受信した データセット 内の その 属性の 値に 置き換えられます。 例 : {StudyDescription}。",
       "type": "string"
     },
+    "dicomInstitutionName": {
+      "title": "Institution Name",
+      "description": "Value of Institution Name (0008,0080) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionName}",
+      "type": "string"
+    },
+    "dicomInstitutionCode": {
+      "title": "Institution Code Sequence",
+      "description": "Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Institution Code Sequence (0008,0082) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, \"&lt;CodeMeaning&gt;\")",
+      "type": "string"
+    },
+    "dicomInstitutionDepartmentName": {
+      "title": "Institutional Department Name",
+      "description": "Value of Institutional Department Name (0008,1040) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionDepartmentName}",
+      "type": "string"
+    },
+    "dcmInstitutionDepartmentCode": {
+      "title": "Institutional Department Type Code Sequence",
+      "description": "Value of Code Value (0008,0100), Coding Scheme Designator (0008,0102) and Code Meaning (0008,0104) in Institutional Department Type Code Sequence (0008,1041) in created UPS. Format: (&lt;CodeValue&gt;, &lt;CodingSchemeDesignator&gt;, \"&lt;CodeMeaning&gt;\")",
+      "type": "string"
+    },
+    "dicomInstitutionAddress": {
+      "title": "Institution Address",
+      "description": "Value of Institution Address (0008,0081) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionAddress}",
+      "type": "string"
+    },
     "dcmURI": {
       "title": "XSL スタイルシート URI",
       "description": "作成した UPSに 追加の 属性を 含めるために 受信した HL7 メッセージを トランスコード する XSL スタイルシートの URIを 指定します。",
