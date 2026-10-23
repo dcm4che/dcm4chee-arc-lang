@@ -28,6 +28,10 @@ archiveNetworkAE.dcmAcceptConflictingPatientID:परस्पर विरो�
 archiveNetworkAE.dcmAcceptConflictingPatientID.YES:Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study
 archiveNetworkAE.dcmAcceptConflictingPatientID.NO:Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study
 archiveNetworkAE.dcmAcceptConflictingPatientID.MERGED:Accept patient identifier in DICOM dataset if already merged with another patient identifier
+archiveNetworkAE.dcmAcceptNonUniquePatientIDs:Accept Non-Unique Patient IDs|Indicates if objects with multiple Patient IDs in in the root dataset and in items of the Other Patient ID sequence matching Patient IDs of different existing Patients in the archive will be accepted. Overwrites value specified on Device level.
+archiveNetworkAE.dcmAcceptNonUniquePatientIDs.NEVER:Reject such objects
+archiveNetworkAE.dcmAcceptNonUniquePatientIDs.UNIQUE_PATIENT_ATTRS:Only accept such objects if all attributes of one of the existing Patients matches
+archiveNetworkAE.dcmAcceptNonUniquePatientIDs.CREATE_NEW_PATIENT:Accept such objects and create a new Patient record with the Patient IDs in the received object
 archiveNetworkAE.dcmQueryRetrieveViewID:प्राप्ति व्यू ID|प्राप्ति व्यूव का पहचानकर्ता ।
 archiveNetworkAE.dcmBulkDataSpoolDirectory:अधिकांश डेटा स्पूल निर्देशिका|अधिकांश डेटा स्पूल निर्देशिका का पथ । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।
 archiveNetworkAE.dcmHideSPSWithStatusFromMWL:MWL SCP द्वारा इन स्थिति के एसपीएस को छिपाए|MWL SCP से न वापस की जानेवाले MWL आइटम्स के अनुसूचित प्रक्रिया स्टेप कोड । आर्काइव डिवाइस स्तर पे निर्दिष्ट मूल्य अधिलेखित होंगे ।

@@ -131,7 +131,6 @@
       "title": "Accept Non-Unique Patient IDs",
       "description": "Indicates if objects with multiple Patient IDs in in the root dataset and in items of the Other Patient ID sequence matching Patient IDs of different existing Patients in the archive will be accepted. Overwrites value specified on Device level.",
       "type": "string",
-      "default": "NEVER",
       "enum": [
         "NEVER|Reject such objects",
         "UNIQUE_PATIENT_ATTRS|Only accept such objects if all attributes of one of the existing Patients matches",

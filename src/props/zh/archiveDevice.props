@@ -51,6 +51,10 @@ archiveDevice.dcmAcceptConflictingPatientID:接受不一致的患者ID|是否接
 archiveDevice.dcmAcceptConflictingPatientID.YES:Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study
 archiveDevice.dcmAcceptConflictingPatientID.NO:Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study
 archiveDevice.dcmAcceptConflictingPatientID.MERGED:Accept patient identifier in DICOM dataset if already merged with another patient identifier
+archiveDevice.dcmAcceptNonUniquePatientIDs:Accept Non-Unique Patient IDs|Indicates if objects with multiple Patient IDs in in the root dataset and in items of the Other Patient ID sequence matching Patient IDs of different existing Patients in the archive will be accepted. May be overwritten by configured values for particular Archive Network AEs.
+archiveDevice.dcmAcceptNonUniquePatientIDs.NEVER:Reject such objects
+archiveDevice.dcmAcceptNonUniquePatientIDs.UNIQUE_PATIENT_ATTRS:Only accept such objects if all attributes of one of the existing Patients matches
+archiveDevice.dcmAcceptNonUniquePatientIDs.CREATE_NEW_PATIENT:Accept such objects and create a new Patient record with the Patient IDs in the received object
 archiveDevice.dcmIdentifyPatientByIDAndName:Identify Patient by ID and Name|Indicates to consider also the Patient Name on receive of DICOM objects to determine if they belongs to an already existing Patient in the archive.
 archiveDevice.dcmIdentifyPatientByAllAttributes:在所有属性中标识患者|如果患者ID或通用实体ID的发布者没有指定分配患者ID的权限,则是否使用接收对象的所有患者属性与存档中的现有患者相关联。注:禁用对接收对象中的旧患者属性的强制,并中断依赖于患者ID清晰度的患者管理功能。
 archiveDevice.dcmBulkDataSpoolDirectory:批量数据假脱机目录|批量数据假脱机目录的路径。 覆盖在设备级别指定的值。

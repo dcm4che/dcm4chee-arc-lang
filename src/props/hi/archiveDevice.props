@@ -51,6 +51,10 @@ archiveDevice.dcmAcceptConflictingPatientID:परस्पर विरोध�
 archiveDevice.dcmAcceptConflictingPatientID.YES:Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study
 archiveDevice.dcmAcceptConflictingPatientID.NO:Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study
 archiveDevice.dcmAcceptConflictingPatientID.MERGED:Accept patient identifier in DICOM dataset if already merged with another patient identifier
+archiveDevice.dcmAcceptNonUniquePatientIDs:Accept Non-Unique Patient IDs|Indicates if objects with multiple Patient IDs in in the root dataset and in items of the Other Patient ID sequence matching Patient IDs of different existing Patients in the archive will be accepted. May be overwritten by configured values for particular Archive Network AEs.
+archiveDevice.dcmAcceptNonUniquePatientIDs.NEVER:Reject such objects
+archiveDevice.dcmAcceptNonUniquePatientIDs.UNIQUE_PATIENT_ATTRS:Only accept such objects if all attributes of one of the existing Patients matches
+archiveDevice.dcmAcceptNonUniquePatientIDs.CREATE_NEW_PATIENT:Accept such objects and create a new Patient record with the Patient IDs in the received object
 archiveDevice.dcmIdentifyPatientByIDAndName:Identify Patient by ID and Name|Indicates to consider also the Patient Name on receive of DICOM objects to determine if they belongs to an already existing Patient in the archive.
 archiveDevice.dcmIdentifyPatientByAllAttributes:सभी विशेषताओं द्वारा मरीज़ की पहचान करें|इंगित करता है कि यदि मरीज़ की ID का समनुदेशन प्राधिकरण मरीज़ की ID या यूनिवर्सल एंटिटी ID के एक जारीकर्ता द्वारा निर्दिष्ट नहीं है, तो आर्काइव में पहले से मौजूद मरीज़ से सम्बंधित करने के लिए, प्राप्त दृष्टांतों के सभी मरीज़ विशेषताओं का उपयोग किया जाएगा । ध्यान रखे : प्राप्त दृष्टांतों में मरीज़ के पुराने विशेषताओं के नियंत्रण को अक्षम करता है और मरीज़ प्रबंधन कार्यों को मरीज़ की ID की अस्पष्टता पर निर्भर करता है ।
 archiveDevice.dcmBulkDataSpoolDirectory:अधिकांश डेटा स्पूल निर्देशिका|अधिकांश डेटा स्पूल निर्देशिका का पथ । किसी आर्काइव नेटवर्क AE पे कॉन्फ़िगर किए गए मूल्यों से अधिलेखित किया जा सकता है ।
