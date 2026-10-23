@@ -22,6 +22,7 @@
     "dcmIdentifyPatientByAllAttributes",
     "dcmAcceptMissingPatientID",
     "dcmAcceptConflictingPatientID",
+    "dcmAcceptNonUniquePatientIDs",
     "dcmValidateCallingAEHostname",
     "hl7ValidateSendingApplicationHostname",
     "dcmUserIdentityNegotiation",
@@ -370,6 +371,17 @@
         "YES|Accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
         "NO|Do not accept patient identifier in DICOM dataset differing from patient identifier in previous received objects of study",
         "MERGED|Accept patient identifier in DICOM dataset if already merged with another patient identifier"
+      ]
+    },
+    "dcmAcceptNonUniquePatientIDs": {
+      "title": "Accept Non-Unique Patient IDs",
+      "description": "Indicates if objects with multiple Patient IDs in in the root dataset and in items of the Other Patient ID sequence matching Patient IDs of different existing Patients in the archive will be accepted. May be overwritten by configured values for particular Archive Network AEs.",
+      "type": "string",
+      "default": "NEVER",
+      "enum": [
+        "NEVER|Reject such objects",
+        "UNIQUE_PATIENT_ATTRS|Only accept such objects if all attributes of one of the existing Patients matches",
+        "CREATE_NEW_PATIENT|Accept such objects and create a new Patient record with the Patient IDs in the received object"
       ]
     },
     "dcmIdentifyPatientByIDAndName": {
