@@ -1,0 +1,28 @@
+upsOnUPSCanceled:UPS на UPS отказано|Креирај Workitem у обједињеној Worklist при претходном UPS отказивању
+upsOnUPSCanceled.dcmUPSOnUPSCanceledID:ID правила UPS-а на UPS отказано|ID UPS on UPS Canceled правила
+upsOnUPSCanceled.dcmProperty:Услов|Услови у формату {key}[!]={value}. Погледајте <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">применљивост, формат и примере.</a>
+upsOnUPSCanceled.dcmRequiresOtherUPSCanceled:Захтева други UPS отказан|Специфицира Query Parameters за друге UPS који реферишу исти захтев (= Study Instance UID), који морају већ бити отказани за креирање овог UPS-а. Формат: {attributeID}={value}[&...]
+upsOnUPSCanceled.dcmUPSLabel:Ознака корака процедуре|Вредност Procedure Step Label (0074,1204) у креираном UPS-у. {attributeID} ће бити замењено вредношћу тог атрибута у датасету претходног UPS-а. Пример: {StudyDescription}
+upsOnUPSCanceled.dcmUPSWorklistLabel:Ознака Worklist-е|Вредност Worklist Label (0074,1202) у креираном UPS-у. {attributeID} ће бити замењено вредношћу тог атрибута у датасету претходног UPS-а. Пример: {StudyDescription}
+upsOnUPSCanceled.dcmUPSPriority:Приоритет|Вредност Scheduled Procedure Step Priority (0074,1200) у креираном UPS-у.
+upsOnUPSCanceled.dcmUPSInputReadinessState:Стање спремности уноса|Вредност Input Readiness State (0040,4041) у креираном UPS-у
+upsOnUPSCanceled.dcmUPSStartDateTimeDelay:Кашњење датума/времена почетка заказаног корака процедуре|Кашњење Scheduled Procedure Step Start DateTime (0040,4005) у креираном UPS-у од времена пријема у формату PnDTnHnMn.nS. Без кашњења ако није наведено.
+upsOnUPSCanceled.dcmUPSCompletionDateTimeDelay:Кашњење очекиваног датума/времена завршетка|Кашњење Expected Completion DateTime (0040,4011) у креираном UPS-у од времена пријема у формату PnDTnHnMn.nS. Ако није наведено, неће се поставити Expected Completion Date и Тиме.
+upsOnUPSCanceled.dcmUPSInstanceUIDBasedOnName:UID UPS instance на основу имена|Вредност за генерисање наме басед SOP Instance UID (0008,0018) у креираном UPS-у. Ако није наведено, користиће се рандом генерисан SOP Instance UID (0008,0018).
+upsOnUPSCanceled.dcmUPSIncludeInputInformation:Укључи улазне информације|Указује да ли се Input Information Sequence (0040,4021) или/и Output Information Sequence (0040,4033) у Unified Procedure Step Performed Procedure Sequence (0074,1216) претходног UPS-а укључује у Input Information Sequence (0040,4021) креираног UPS-а.
+upsOnUPSCanceled.dcmUPSIncludePatient:UPS укључи пацијента|Указује да ли су атрибути пацијента копирани из претходног UPS-а.
+upsOnUPSCanceled.dcmDestinationAE:Одредишни AE|Наслов DICOM апликационог ентитета у који ће инстанце бити сачуване.
+upsOnUPSCanceled.dcmEntity:Обим акумулације|Обим акумулације
+upsOnUPSCanceled.dcmUPSScheduledWorkitemCode:Код заказаног Workitem-а|Ставка секвенце кода заказаног Workitem-а (0040,4018) у креираном UPS-у у формату (CV, CSD, "CM").
+upsOnUPSCanceled.dcmUPSScheduledStationNameCode:Код имена заказане станице|Ставка секвенце кода имена заказане станице (0040,4025) у креираном UPS-у у формату (CV, CSD, "CM").
+upsOnUPSCanceled.dcmUPSScheduledStationClassCode:Код класе заказане станице|Ставка секвенце кода класе заказане станице (0040,4026) у креираном UPS-у у формату (CV, CSD, "CM").
+upsOnUPSCanceled.dcmUPSScheduledStationLocationCode:Код географске локације заказане станице|Ставка секвенце кода географске локације заказане станице (0040,4027) у креираном UPS-у у формату (CV, CSD, "CM").
+upsOnUPSCanceled.dcmUPSScheduledHumanPerformerCode:Код заказаног људског извршиоца|Ставка Human Performer Code Sequence (0040,4009) у ставци Scheduled Human Performers Sequence (0040,4034) у креираном UPS-у у формату (CV, CSD, "CM").
+upsOnUPSCanceled.dcmUPSScheduledHumanPerformerName:Име заказаног људског извршиоца|Вредност Human Performer's Name (0040,4037) у ставци Scheduled Human Performers Sequence (0040,4034) у креираном UPS-у. {attributeID} ће бити замењено вредношћу тог атрибута у датасету претходног UPS-а. Пример: {PerformingPhysicianName}
+upsOnUPSCanceled.dcmUPSScheduledHumanPerformerOrganization:Организација заказаног људског извршиоца|Вредност Human Performer's Organization (0040,4036) у ставци Scheduled Human Performers Sequence (0040,4034) у креираном UPS-у. {attributeID} ће бити замењено вредношћу тог атрибута у датасету претходног UPS-а. Пример: {ResponsibleOrganization}
+upsOnUPSCanceled.dcmAdmissionID:Број пријема|Вредност Admission ID (0038,0010) у креираном UPS-у. {attributeID} ће бити замењено вредношћу тог атрибута у датасету претходног UPS-а. Пример: {AdmissionID}
+upsOnUPSCanceled.dicomIssuerOfAdmissionID:Издавалац ID-а пријема|Вредност Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) и Universal Entity ID Type (0040,0033) ставке Issuer of Admission ID Sequence (0038,0014) у креираном UPS-у. Формат: &лт;Local Namespace Entity ID&гт;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]
+upsOnUPSCanceled.dcmUPSIncludeStudyInstanceUID:Укључи Study Instance UID|Указује да ли Study Instance UID (0020,000D) претходног UPS објекта треба бити укључен у креирани UPS
+upsOnUPSCanceled.dcmUPSIncludeReferencedRequest:Укључи референцирани захтев|Указује да ли је Referenced Request Sequence (0040,A370) претходног UPS-а укључена у креирани UPS. Иначе је укључена празна Referenced Request Sequence (0040,A370).
+upsOnUPSCanceled.dcmURI:URI XSL стилног листа|Специфицира URI XSL style схеет-а за укључивање додатних атрибута у креирани UPS.
+upsOnUPSCanceled.dcmNoKeywords:Без кључне речи атрибута|Означава да ли кључне речи атрибута треба изоставити у DICOM XML прослеђеном XSLT-у.

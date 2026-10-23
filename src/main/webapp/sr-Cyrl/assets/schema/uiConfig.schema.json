@@ -1,0 +1,224 @@
+{
+  "title": "UI конфигурација",
+  "description": "UI конфигурација",
+  "type": "object",
+  "required": [
+    "dcmuiConfigName",
+    "dcmuiHideOtherPatientIDs"
+  ],
+  "properties": {
+    "dcmuiConfigName": {
+      "title": "Име UI конфигурације",
+      "description": "Име UI конфигурације",
+      "type": "string"
+    },
+    "dcmuiModalities": {
+      "title": "Статистички модалитети",
+      "description": "Преселектовани модалитети који треба да се прикажу на страници статистике",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiLanguageConfig": {
+      "title": "Language Config",
+      "description": "Цонфиг тхе лангуагес оф тхе UI",
+      "titleKey": "{dcmuiLanguageConfigName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiLanguage.schema.json"
+      }
+    },
+    "dcmuiWidgetAets": {
+      "title": "Widget AET-ови",
+      "description": "Селектуј AET-ове које желиш да видите у AET widget-у, где можете селектовати у којима од њих новододати AET треба да буде као `Accepted Calling AE Title`",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiHideOtherPatientIDs": {
+      "title": "Сакриј остале ID-ове пацијената",
+      "description": "Указује да ли други идентификатори пацијента присутни у Other Patient IDs Sequence (0010,1002) треба да буду скривени. Подразумевано, сви идентификатори пацијента су приказани раздвојени зарезом.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiDateTimeFormat": {
+      "title": "Формат датума и времена",
+      "description": "Овде можете форматирати датум и време у UI-ју користећи 'yyyy' за годину, 'MM' за месец, 'dd' за дан, 'HH' за сат, 'mm' за минуте, 'ss' за секунде и 'SSS' за милисекунде. За форматирање датума, времена и датума-времена користите `DATE`, `TIME` и `DATE-TIME` на пример овако: `DATE=yyyy-MM-дд, TIME=HH:мм, DATE-TIME=yyyy-MM-дд HH:мм`",
+      "type": "string"
+    },
+    "dcmuiHideClock": {
+      "title": "Сакриј сат",
+      "description": "Постави на true ако желиш да сакријеш сат у UI-ју",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiPageTitle": {
+      "title": "Наслов странице",
+      "description": "Ако је постављено, користиће се као наслов UI странице (текст приказан у табу прегледача)",
+      "type": "string"
+    },
+    "dcmuiPersonNameFormat": {
+      "title": "Формат имена особе",
+      "description": "Овде можете форматирати име особе у UI-ју користећи:{FAMILY-NAME}, {GIVEN-NAME}, {MIDDLE-NAME}, {NAME-PREFIX}, {NAME-SUFFIX} за Алпхабетиц, или додавањем 'I_' за Идеограпхиц и 'P_' за Пхонетиц верзију као {P_FAMILY-NAME}, {I_NAME-SUFFIX}",
+      "type": "string"
+    },
+    "dcmuiDefaultWidgetAets": {
+      "title": "Подразумевани Widget AET-ови",
+      "description": "Изабери AET-ове који треба да буду преселектовани на Widget AET-овима",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmAETitle"
+    },
+    "dcmuiMWLWorklistLabel": {
+      "title": "MWL ознака Worklist-е",
+      "description": "Могуће вредности за MWL Worklist Label",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmMWLImport.dcmMWLWorklistLabel",
+        "$.dicomNetworkAE[*].dcmNetworkAE.dcmArchiveNetworkAE.dcmMWLWorklistLabel",
+        "$.dcmDevice.hl7Application[*].dcmArchiveHL7Application.dcmMWLWorklistLabel",
+        "$.dcmDevice.dcmArchiveDevice.dcmArchiveAttributeCoercion[*].dcmMergeLocalMWLWorklistLabel[*]"
+      ]
+    },
+    "dcmuiInstitutionNameFilterType": {
+      "title": "Тип филтера имена институције",
+      "description": "Ово ће дефинисати како филтер Institution Name коришћен на Навигатион страници треба да буде приказан и да ли треба да буде пре-попуњена падајућа листа и одакле да се добаве ти подаци",
+      "type": "string",
+      "enum": [
+        "simple_filed|Simple input field|Simple input field",
+        "ui_config|Dropdown by using this config ( See next field 'Institution Names' )|Dropdown by using this config",
+        "db|Dropdown will be prefilled with the strings coming by calling the service '../institutions'|Dropdown by querying the Database"
+      ]
+    },
+    "dcmuiInstitutionName": {
+      "title": "Имена институција",
+      "description": "Ово ће се користити у комбинацији са претходним пољем 'Institution Name Filter Type' за пре-попуњавање падајуће листе Filter Institution Names на Навигатион страници",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiIssuerOfPatientIDSequence": {
+      "title": "Секвенца издаваоца ID-а пацијента",
+      "description": "Ово ће се користити за приказ падајућег менија у Patient Identifier widgetu уместо Issuer of Patient ID, Issuer of Patient ID Qualifiers Sequence - Universal Entity ID и Issuer of Patient ID Qualifiers Sequence - Universal Entity ID Type инпут поља. Можете користити & знак између стрингова за означавање различитих поља као што је: 'issuerOfP&ipIDQuSeUniversalEntityID&ipIDQuSeUniversalEntityIDType'",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiIssuerOfAccessionNumberSequence": {
+      "title": "Секвенца издаваоца приступног броја",
+      "description": "Ово ће се користити за приказ падајућег менија у Accession Number widgetu уместо \"Local Namespace Entity ID\", \"Universal Entity ID\" и \"Universal Entity ID Type\" инпут поља. Можете користити ^ знак између стрингова за означавање различитих поља као што је: 'dummylNamespace^uEntityID^uEntityIDType'",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiIssuerOfAdmissionIDSequence": {
+      "title": "Issuer of Admission ID Sequence",
+      "description": "Ово ће се користити за приказ падајућег менија у Admission ID widgetu уместо \"Local Namespace Entity ID\", \"Universal Entity ID\" и \"Universal Entity ID Type\" инпут поља. Можете користити & знак између стрингова за означавање различитих поља као што је: 'dummylNamespace&uEntityID&uEntityIDType'",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiAetConfig": {
+      "title": "Падајућа листа AET-ова",
+      "description": "Дефиниши које AET-ове треба видети у падајућим листама у UI-ју",
+      "titleKey": "{dcmuiAetListName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiAet.schema.json"
+      }
+    },
+    "dcmuiWebAppConfig": {
+      "title": "Падајућа листа веб апликација",
+      "description": "Дефиниши које WebApps треба да буду видљиве на врху падајуће листе у UI-ју",
+      "titleKey": "{dcmuiWebAppListName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiWebApp.schema.json"
+      }
+    },
+    "dcmuiPermission": {
+      "title": "Дозвола",
+      "description": "Дозвола",
+      "titleKey": "{dcmuiPermissionName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiPermission.schema.json"
+      }
+    },
+    "dcmuiFilterTemplateObject": {
+      "title": "Шаблон UI филтера",
+      "description": "Дефинисани шаблон филтера",
+      "titleKey": "{dcmuiFilterTemplateGroupName} ( {dcmuiFilterTemplateID} )",
+      "type": "array",
+      "items": {
+        "$ref": "uiFilterTemplate.schema.json"
+      }
+    },
+    "dcmuiDiffConfig": {
+      "title": "Конфигурација Study Diff-а",
+      "description": "Study Diff конфигурација",
+      "titleKey": "{dcmuiDiffConfigName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiDiffConfig.schema.json"
+      }
+    },
+    "dcmuiTableConfig": {
+      "title": "Конфигурација UI табеле",
+      "description": "Конфигурација табеле",
+      "titleKey": "{dcmuiTableConfigName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiTable.schema.json"
+      }
+    },
+    "dcmuiElasticsearchConfig": {
+      "title": "Конфигурација UI Elasticsearch-а",
+      "description": "Elasticsearch конфигурација за про верзију",
+      "titleKey": "{dcmuiElasticsearchConfigName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiElasticsearch.schema.json"
+      }
+    },
+    "dcmuiDeviceClusterObject": {
+      "title": "Конфигурација UI кластера",
+      "description": "Групиши уређаје у кластере",
+      "titleKey": "{dcmuiDeviceClusterName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiDeviceCluster.schema.json"
+      }
+    },
+    "dcmuiDashboardConfig": {
+      "title": "Конфигурација UI контролне табле",
+      "description": "Конфигурација UI контролне табле",
+      "titleKey": "{dcmuiDashboardConfigName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiDashboard.schema.json"
+      }
+    },
+    "dcmuiCreateDialogTemplate": {
+      "title": "Шаблон UI дијалога",
+      "description": "Конфигурација UI Create Dialog шаблона",
+      "titleKey": "{dcmuiTemplateName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiDialogTemplate.schema.json"
+      }
+    }
+  }
+}

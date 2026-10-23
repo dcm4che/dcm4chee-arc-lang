@@ -1,0 +1,51 @@
+{
+  "title": "Шаблон UI филтера",
+  "description": "Дефинисани шаблон филтера",
+  "type": "object",
+  "required": [
+    "dcmuiFilterTemplateGroupName",
+    "dcmuiFilterTemplateID",
+    "dcmuiFilterTemplateFilters"
+  ],
+  "properties": {
+    "dcmuiFilterTemplateGroupName": {
+      "title": "Име",
+      "description": "Име шаблона",
+      "type": "string"
+    },
+    "dcmuiFilterTemplateID": {
+      "title": "ID",
+      "description": "ID филтера где се овај шаблон може применити",
+      "type": "string"
+    },
+    "dcmuiFilterTemplateDescription": {
+      "title": "Опис",
+      "description": "Опис шаблона филтера",
+      "type": "string"
+    },
+    "dcmuiFilterTemplateUsername": {
+      "title": "Корисничко име",
+      "description": "Корисничко име које може користити овај шаблон",
+      "type": "string"
+    },
+    "dcmuiFilterTemplateRole": {
+      "title": "Улога",
+      "description": "Корисничка улога која може користити овај шаблон",
+      "type": "string"
+    },
+    "dcmuiFilterTemplateFilters": {
+      "title": "Филтери",
+      "description": "Подразумевани филтери у овом шаблону, филтер параметар key=валуе (пример LocalAET=DCM4CHEE). За датум филтер можете користити предефинисане кључне речи (today, yesterday, this_week, this_month, last_week, last_month, this_quarter, last_quarter, this_year, last_year) тако да се динамичке вредности филтера могу генерисати.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiFilterTemplateDefault": {
+      "title": "Подразумевано",
+      "description": "Користи овај шаблон као подразумевани",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

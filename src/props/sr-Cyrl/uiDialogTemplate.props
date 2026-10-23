@@ -1,0 +1,5 @@
+uiDialogTemplate:Шаблон UI дијалога|Дефиниши Create Dialog шаблон
+uiDialogTemplate.dcmuiTemplateName:Име|Име шаблона дијалога
+uiDialogTemplate.dcmTag:Ознака атрибута|DICOM ознака као хексадецимални стринг која треба да буде укључена у овај шаблон дијалога
+uiDialogTemplate.dicomDescription:Опис|Опис шаблона дијалога
+uiDialogTemplate.dcmuiDialog:Функција дијалога|Специфицира функцију где ће се овај Dialog Template применити

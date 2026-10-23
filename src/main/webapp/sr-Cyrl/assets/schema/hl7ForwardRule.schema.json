@@ -1,0 +1,33 @@
+{
+  "title": "HL7 правило прослеђивања",
+  "description": "HL7 Forward правило",
+  "type": "object",
+  "required": [
+    "cn",
+    "hl7FwdApplicationName"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Име",
+      "description": "Произвољно/Смислено име HL7 Forward правила",
+      "type": "string"
+    },
+    "hl7FwdApplicationName": {
+      "title": "Име HL7 апликације прослеђивања",
+      "description": "HL7 Forward Destination Application и Facility име (Апплицатион|Facility)",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "hl7ApplicationName"
+    },
+    "dcmProperty": {
+      "title": "Услови",
+      "description": "Услови у формату {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Примери: MSH-4=FORWARD или MSH-9=ADT\\^A28\\^ADT_A05 или PID-3[.3]=PIDIssuer или PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

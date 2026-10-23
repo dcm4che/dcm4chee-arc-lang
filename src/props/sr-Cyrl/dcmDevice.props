@@ -1,0 +1,28 @@
+dcmDevice:Екстензија уређаја|dcm4che власнички атрибути уређаја
+dcmDevice.dcmRoleSelectionNegotiationLenient:Попустљив преговор избора улога|Указује на онемогућавање провере потребне SCP/SCU роле селецтион негоцијације при слању DIMSE-RQ-ова. Може бити преписано конфигурисаним вредностима за поједине Archive Network AE.
+dcmDevice.dcmLimitOpenAssociations:Лимит асоцијација|Максималан број отворених DICOM конекција; одбија Association захтеве ако се ограничење прекорачи; 0 = неограничено.
+dcmDevice.dcmLimitAssociationsInitiatedBy:Лимит асоцијација за AE|Максималан број отворених DICOM конекција покренутих од стране појединог Application Entity (AE) у формату <ae-title>=<number>; одбија Association захтеве од тог AE-а ако је лимит премашен.
+dcmDevice.dcmTrustStoreURL:URL Trust Store-а|URL Trust Store-а са сертификатима за DICOM чворове који су овлашћени да се повежу на овај чор; преписује dicomAuthorizedNodeCertificateReference
+dcmDevice.dcmTrustStoreType:Тип Trust Store-а|Key Store Type Trust Store-а наведеног у dcmTrustStoreURL.
+dcmDevice.dcmTrustStoreType.JKS:Java KeyStore
+dcmDevice.dcmTrustStoreType.PKCS12:Public-Key Cryptography Standards #12
+dcmDevice.dcmTrustStorePin:PIN Trust Store-а|Key Store Password Trust Store-а наведеног у Trust Store URL
+dcmDevice.dcmTrustStorePinProperty:Својство PIN-а Trust Store-а|System property Key Store Password Trust Store-а наведеног у Trust Store URL
+dcmDevice.dcmKeyStoreURL:URL Key Store-а|URL Key Store-а са приватним кључем и сертификатом коришћеним за идентификацију овог DICOM чвора у TLS конекцијама
+dcmDevice.dcmKeyStoreType:Тип Key Store-а|Key Store Type Key Store-а наведеног у Key Store URL.
+dcmDevice.dcmKeyStoreType.JKS:Java KeyStore
+dcmDevice.dcmKeyStoreType.PKCS12:Public-Key Cryptography Standards #12
+dcmDevice.dcmKeyStorePin:PIN Key Store-а|Key Store Password Key Store-а наведеног у Key Store URL
+dcmDevice.dcmKeyStorePinProperty:Својство PIN-а Key Store-а|System property Key Store Password Key Store-а наведеног у Key Store URL
+dcmDevice.dcmKeyStoreKeyPin:PIN кључа Key Store-а|Key Password Key Store-а наведеног у Key Store URL
+dcmDevice.dcmKeyStoreKeyPinProperty:Својство PIN-а кључа Key Store-а|System property Key Password Key Store-а наведеног у Key Store URL
+dcmDevice.dcmTimeZoneOfDevice:Временска зона уређаја|Time Zone ID уређаја; одговара Java TimeZone ID-у
+dcmDevice.dcmWebApp:Веб апликације|Web апликације које пружа уређај
+dcmDevice.dcmKeycloakClient:Keycloak клијенти|Keycloak клијенти које пружа уређај
+dcmDevice.hl7Application:HL7 апликације|HL7 апликације које пружа уређај
+dcmDevice.dcmImageWriter:Имаге Writer-и|Специфицира Java Image IO Image Writers са Write Parameters коришћеним за компресију DICOM слика
+dcmDevice.dcmImageReader:Имаге Реадер-и|Задаје Java Image IO Image Реадер-е коришћене за декомпресију компресованих DICOM слика
+dcmDevice.dcmAuditLogger:Логгер ревизије|Информације повезане са Логгер-ом ревизије
+dcmDevice.dcmAuditRecordRepository:Репозиторијум записа ревизије|Информације повезане са репозиторијумом записа ревизије
+dcmDevice.dcmArchiveDevice:Архивски уређај|Информације повезане са DICOM архивским уређајем
+dcmDevice.dcmuiConfig:UI конфигурација|UI конфигурација

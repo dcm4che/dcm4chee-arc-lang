@@ -1,0 +1,77 @@
+{
+  "title": "HL7 политика задржавања студије",
+  "description": "HL7 Study Retention политика",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmRulePriority",
+    "dicomAETitle",
+    "dcmStartRetentionPeriodOnStudyDate",
+    "dcmFreezeExpirationDate",
+    "dcmRevokeExpiration"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Име",
+      "description": "Произвољно/Смислено име HL7 Study Retention политике",
+      "type": "string"
+    },
+    "dicomAETitle": {
+      "title": "Наслов апликационог ентитета (AE)",
+      "description": "Наслов апликационог ентитета (AE)",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "dcmRetentionPeriod": {
+      "title": "Минимални период задржавања студије",
+      "description": "Минималан Study Retention Period у ISO-8601 формату периода PnYnMnD или PnW. Неефикасно ако је 'Maximal Study Retention Period' такође постављено.",
+      "type": "string",
+      "format": "dcmPeriod"
+    },
+    "dcmMaxRetentionPeriod": {
+      "title": "Максимални период задржавања студије",
+      "description": "Максималан Study Retention Period у ISO-8601 формату периода PnYnMnD или PnW",
+      "type": "string",
+      "format": "dcmPeriod"
+    },
+    "dcmRulePriority": {
+      "title": "Приоритет правила",
+      "description": "Ако се стање више HL7 Study Retention политика подудара за примљену HL7 поруку, примењује се политика вишег приоритета. Ако постоји више подударних политика са једнаким приоритетом, недефинисано је која се политика примењује.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmProperty": {
+      "title": "Услови",
+      "description": "Услови у формату {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Примери: MSH-4=FORWARD или MSH-9=ADT\\^A28\\^ADT_A05 или PID-3[.3]=PIDIssuer или PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmStartRetentionPeriodOnStudyDate": {
+      "title": "Почни период задржавања од датума студије",
+      "description": "Указује да ли период задржавања треба почети на појединачним Study Дате-овима уместо на пријему HL7 поруке која окида ово правило.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmExporterID": {
+      "title": "Извези истеклу студију",
+      "description": "Извези истекле Study/Series користећи наведени Exporter",
+      "type": "string",
+      "format": "dcmExporterID"
+    },
+    "dcmFreezeExpirationDate": {
+      "title": "Замрзни датум истека",
+      "description": "Указује на онемогућавање промена Expiration Date-а од стране накнадних догађаја.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmRevokeExpiration": {
+      "title": "Опозови датум истека",
+      "description": "Указује на опозив претходно постављеног Expiration Date-а.",
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

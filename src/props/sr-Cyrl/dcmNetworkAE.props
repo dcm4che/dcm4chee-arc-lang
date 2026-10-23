@@ -1,0 +1,11 @@
+dcmNetworkAE:Екстензија мрежног AE-а|dcm4che власнички атрибути мрежног AE-а
+dcmNetworkAE.dcmRoleSelectionNegotiationLenient:Попустљив преговор избора улога|Указује на онемогућавање провере потребне SCP/SCU роле селецтион негоцијације при слању DIMSE-RQ-ова. Преписује вредност наведену на нивоу уређаја.
+dcmNetworkAE.dcmAcceptedCallingAETitle:Прихваћени позивајући AE наслов|Забрани прихватање асоцијација од AE-ова који нису на листи. Ако није наведено, било који AE ће бити прихваћен
+dcmNetworkAE.dcmOtherAETitle:Други AE наслов|Додатни AE Title Network AE-а - прихватит ће и Association RQ-ове са таквим Called AE Title-ом
+dcmNetworkAE.dcmNoAsyncModeCalledAETitle:AE наслов позваног без Async режима|Стави на црну листу AE Title пеер Network AE-а као неспособног за исправно руковање Asynchronous Operations Window Negotiation-ом. Сузбиј укључивање одговарајућег Усер-дата суб-Итем-а у A-ASSOCIATE RQ-ове том Network AE-у.
+dcmNetworkAE.dcmMasqueradeCalledAETitle:Маскирани позвани AE наслов|Called AE Title коришћен за покретање мрежних асоцијација, маскирајући конфигурисани AE Title удаљеног Network AE-а. Формат <Configured AE Title>:<Used Called AE Title>.
+dcmNetworkAE.dcmMasqueradeCallingAETitle:Маскирани позивајући AE наслов|Calling AE Title коришћен за покретање мрежних асоцијација, маскирајући стварни AE Title за овај Network AE - опциони префикс [<Called AE Title>] ограничава маскирање на асоцијацију на поједини AE Title.
+dcmNetworkAE.dcmPreferredTransferSyntax:Преферирана Transfer Syntax|Preferred Transfer Syntax за избор Transfer Syntax унутар Presentation Context, сортирано по приоритету. Ако није наведено, изабраће се први прихватљиви Transfer Syntax у понуђеном Presentation Context. Може бити преписано конфигурисаним вредностима за поједине Transfer Capabilities овог AE.
+dcmNetworkAE.dcmShareTransferCapabilitiesFromAETitle:Дељење Transfer Capability-ја са AE наслова|Указује да овај Network AE подржава Transfer Capabilities специфициране за други Archive Network AE истог Арцхиве уређаја.
+dcmNetworkAE.hl7ApplicationName:Име HL7 апликације|HL7 Application и Facility име (Апплицатион|Facility) повезано са овим AE
+dcmNetworkAE.dcmArchiveNetworkAE:Архивски мрежни AE|Информације повезане са DICOM архивским мрежним AE-ом

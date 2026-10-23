@@ -1,0 +1,4 @@
+uiLanguage:UI конфигурација језика|UI Language конфигурација
+uiLanguage.dcmuiLanguageConfigName:Име конфигурације језика|Име Language Config-а
+uiLanguage.dcmLanguages:Available languages|Set languages that should be available in the UI (The JSON-files to those language must exist in the code, if they don't exist open an Issue in github
+uiLanguage.dcmuiLanguageProfileObjects:Профил језика|Језички профил за корисничко име, улогу или све

@@ -1,0 +1,109 @@
+{
+  "title": "Ред",
+  "description": "Управљани ред задатака",
+  "type": "object",
+  "required": [
+    "dcmQueueName",
+    "dcmMaxTasksParallel",
+    "dcmRetryDelay",
+    "dcmRetryOnWarning",
+    "dcmRetryDelayMultiplier",
+    "dcmMaxRetries",
+    "dicomInstalled"
+  ],
+  "properties": {
+    "dcmQueueName": {
+      "title": "Име реда",
+      "description": "Име реда задатака",
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiQueueName[*]",
+        "$.dcmDevice.dcmuiConfig[*].dcmuiDashboardConfig[*].dcmuiCompareSideObjects[*].dcmuiCompareSideQueueName"
+      ]
+    },
+    "dicomInstalled": {
+      "title": "инсталиран",
+      "description": "Ако је нетачно, обрада задатаака у овом реду је паузирана.",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmMaxTasksParallel": {
+      "title": "Максимално паралелних задатака",
+      "description": "Максималан број таск-ова обрађених паралелно.",
+      "type": "integer",
+      "minimum": 1,
+      "default": 1
+    },
+    "dicomDescription": {
+      "title": "DICOM опис",
+      "description": "Текстуални опис DICOM ентитета",
+      "type": "string"
+    },
+    "dcmMaxRetries": {
+      "title": "Максималан број поновних покушаја",
+      "description": "Максималан број покушаја обраде задатака заказаних у специфичном реду.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmRetryDelay": {
+      "title": "Кашњење поновног покушаја",
+      "description": "Кашњење поновног покушаја обраде задатаака планираних у поједином реду у ISO-8601 формату трајања PnDTnHnMn.nS.",
+      "type": "string",
+      "default": "PT1M",
+      "format": "dcmDuration"
+    },
+    "dcmMaxRetryDelay": {
+      "title": "Максимално кашњење поновног покушаја",
+      "description": "Максимално кашњење поновног покушаја обраде задатака планираних у поједином реду у ISO-8601 формату трајања PnDTnHnMn.nS. Бесконачно ако није наведено.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmRetryDelayMultiplier": {
+      "title": "Множилац кашњења поновног покушаја",
+      "description": "Мултипликатор у % који ће се применити на врху dcmRetryDelay са dcmMaxRetryDelay који се узима у обзир.",
+      "type": "integer",
+      "minimum": 100,
+      "default": 100
+    },
+    "dcmRetryOnWarning": {
+      "title": "Понови при упозорењу",
+      "description": "Омогућава поновне покушаје обраде задатаака не само при неуспеху већ и при warning статусу исхода у поједином реду.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmPurgeQueueMessageCompletedDelay": {
+      "title": "Кашњење брисања завршених задатака",
+      "description": "Кашњење у ISO-8601 формату трајања PnDTnHnMn.nS након којег се завршени задаци прочишћавају. Ако није наведено, нема брисања за тај поједини ред",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmPurgeQueueMessageFailedDelay": {
+      "title": "Кашњење брисања неуспелих задатака",
+      "description": "Кашњење у ISO-8601 формату трајања PnDTnHnMn.nS након којег се неуспели задаци прочишћавају. Ако није наведено, нема брисања за тај поједини ред",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmPurgeQueueMessageWarningDelay": {
+      "title": "Кашњење брисања задатака са упозорењем",
+      "description": "Кашњење у ISO-8601 формату трајања PnDTnHnMn.nS након којег се задаци са упозорењем прочишћавају. Ако није наведено, нема брисања за тај поједини ред",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmPurgeQueueMessageCanceledDelay": {
+      "title": "Кашњење брисања отказаних задатака",
+      "description": "Кашњење у ISO-8601 формату трајања PnDTnHnMn.nS након којег се отказани задаци прочишћавају. Ако није наведено, нема брисања за тај поједини ред",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmSchedule": {
+      "title": "Ограничи заказивање",
+      "description": "Ограничи планирање на наведене временске опсеге.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSchedule"
+    }
+  }
+}

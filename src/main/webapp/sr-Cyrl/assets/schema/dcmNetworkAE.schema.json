@@ -1,0 +1,79 @@
+{
+  "title": "Екстензија мрежног AE-а",
+  "description": "dcm4che власнички атрибути мрежног AE-а",
+  "type": "object",
+  "properties": {
+    "dcmRoleSelectionNegotiationLenient": {
+      "title": "Попустљив преговор избора улога",
+      "description": "Указује на онемогућавање провере потребне SCP/SCU роле селецтион негоцијације при слању DIMSE-RQ-ова. Преписује вредност наведену на нивоу уређаја.",
+      "type": "boolean"
+    },
+    "dcmAcceptedCallingAETitle": {
+      "title": "Прихваћени позивајући AE наслов",
+      "description": "Забрани прихватање асоцијација од AE-ова који нису на листи. Ако није наведено, било који AE ће бити прихваћен",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmOtherAETitle": {
+      "title": "Други AE наслов",
+      "description": "Додатни AE Title Network AE-а - прихватит ће и Association RQ-ове са таквим Called AE Title-ом",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmNoAsyncModeCalledAETitle": {
+      "title": "AE наслов позваног без Async режима",
+      "description": "Стави на црну листу AE Title пеер Network AE-а као неспособног за исправно руковање Asynchronous Operations Window Negotiation-ом. Сузбиј укључивање одговарајућег Усер-дата суб-Итем-а у A-ASSOCIATE RQ-ове том Network AE-у.",
+      "type": "array",
+      "format": "dcmAETitle",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmMasqueradeCalledAETitle": {
+      "title": "Маскирани позвани AE наслов",
+      "description": "Called AE Title коришћен за покретање мрежних асоцијација, маскирајући конфигурисани AE Title удаљеног Network AE-а. Формат <Configured AE Title>:<Used Called AE Title>.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmMasqueradeCallingAETitle": {
+      "title": "Маскирани позивајући AE наслов",
+      "description": "Calling AE Title коришћен за покретање мрежних асоцијација, маскирајући стварни AE Title за овај Network AE - опциони префикс [<Called AE Title>] ограничава маскирање на асоцијацију на поједини AE Title.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmPreferredTransferSyntax": {
+      "title": "Преферирана Transfer Syntax",
+      "description": "Preferred Transfer Syntax за избор Transfer Syntax унутар Presentation Context, сортирано по приоритету. Ако није наведено, изабраће се први прихватљиви Transfer Syntax у понуђеном Presentation Context. Може бити преписано конфигурисаним вредностима за поједине Transfer Capabilities овог AE.",
+      "type": "array",
+      "format": "dcmTransferSyntax",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmShareTransferCapabilitiesFromAETitle": {
+      "title": "Дељење Transfer Capability-ја са AE наслова",
+      "description": "Указује да овај Network AE подржава Transfer Capabilities специфициране за други Archive Network AE истог Арцхиве уређаја.",
+      "type": "string",
+      "format": "dcmArchiveAETitle"
+    },
+    "hl7ApplicationName": {
+      "title": "Име HL7 апликације",
+      "description": "HL7 Application и Facility име (Апплицатион|Facility) повезано са овим AE",
+      "type": "string",
+      "format": "hl7ApplicationName"
+    },
+    "dcmArchiveNetworkAE": {
+      "title": "Архивски мрежни AE",
+      "description": "Информације повезане са DICOM архивским мрежним AE-ом",
+      "$ref": "archiveNetworkAE.schema.json"
+    }
+  }
+}

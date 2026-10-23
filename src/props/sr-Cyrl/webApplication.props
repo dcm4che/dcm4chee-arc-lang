@@ -1,0 +1,11 @@
+webApplication:Веб апликација|Информације о Web апликацији
+webApplication.dcmWebAppName:Име веб апликације|Име веб апликације
+webApplication.dicomNetworkConnectionReference:Мрежна конекција веб апликације|Network Connection(с) на којима су услуге Web апликације доступне
+webApplication.dicomDescription:Опис веб апликације|Неспутани текстуални опис Web Application
+webApplication.dcmWebServicePath:Путања веб сервиса|HTTP путања услуга Web апликације
+webApplication.dcmWebServiceClass:Класа веб сервиса|Web Service класе које пружа Web апликација
+webApplication.dcmKeycloakClientID:ID Keycloak клијента|Keycloak Client ID за Web апликацију
+webApplication.dicomAETitle:AE наслов|AE титле Network AE повезаног са овом Web апликацијом
+webApplication.dicomApplicationCluster:Кластер апликација|Локално дефинисана имена за подскуп сродних апликација
+webApplication.dcmProperty:Својство веб апликације|Својство Web апликације у формату {name}={value}. Погледајте <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Web-Application-Properties" target="_blank">Web Application Properties</a> примере конфигурације на основу усе цасе-ова.
+webApplication.dicomInstalled:инсталиран|Тачно ако је Web апликација инсталирана на мрежи. Ако није наведено, информација о статусу инсталације Web апликације се наслеђује од уређаја

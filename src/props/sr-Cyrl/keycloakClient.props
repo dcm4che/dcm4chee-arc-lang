@@ -1,0 +1,10 @@
+keycloakClient:Keycloak клијент|Keycloak клијент
+keycloakClient.dcmKeycloakClientID:ID Keycloak клијента|Client ID коришћен у захтевима за токен.
+keycloakClient.dcmURI:URL сервера|Базни URL Keycloak сервера.
+keycloakClient.dcmKeycloakRealm:Keycloak Realm|Име реалм-а у захтевима за токен.
+keycloakClient.dcmKeycloakGrantType:Тип Keycloak овлашћења|Keycloak грант type коришћен у захтевима за токен.
+keycloakClient.dcmKeycloakClientSecret:Тајна Keycloak клијента|Keycloak цлиент сецрет. Обавезно ако је грант type = client_credentials.
+keycloakClient.dcmTLSAllowAnyHostname:TLS дозволи било које име хоста|Ако други сервер захтева HTTPS и ова конфигурациона опција је постављена на true, сертификат другог сервера се валидира путем трустсторе-а, али се валидација имена хоста не врши.
+keycloakClient.dcmTLSDisableTrustManager:TLS онемогући Trust Manager|Ако други сервер захтева HTTPS и ова конфигурациона опција је постављена на true, не морате навести трустсторе
+keycloakClient.uid:User ID|User ID. Required if grant type = password.
+keycloakClient.userPassword:User Password|User Password. Required if grant type = password.

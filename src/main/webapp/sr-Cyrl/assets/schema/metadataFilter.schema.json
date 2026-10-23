@@ -1,0 +1,25 @@
+{
+  "title": "Филтер метаподатака",
+  "description": "Именовани Attribute Filter за WADO-RS Metadata захтеве.",
+  "type": "object",
+  "required": [
+    "dcmMetadataFilterName",
+    "dcmTag"
+  ],
+  "properties": {
+    "dcmMetadataFilterName": {
+      "title": "Име филтера метаподатака",
+      "description": "Име Metadata Filter-а на које се реферише proprietary 'includefields' Query Parameter WADO-RS Metadata захтева.",
+      "type": "string"
+    },
+    "dcmTag": {
+      "title": "Ознака атрибута",
+      "description": "DICOM ознака као хексадецимални стринг",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmTag"
+    }
+  }
+}

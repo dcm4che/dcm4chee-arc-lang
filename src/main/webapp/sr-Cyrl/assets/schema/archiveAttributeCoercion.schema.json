@@ -1,0 +1,236 @@
+{
+  "title": "Архивско цоерцион атрибута - Legacy",
+  "description": "Архивско цоерцион атрибута примљених/послатих DIMSE",
+  "type": "object",
+  "required": [
+    "cn",
+    "dcmDIMSE",
+    "dicomTransferRole",
+    "dcmRulePriority",
+    "dcmRetrieveAsReceived",
+    "dcmNoKeywords",
+    "dcmMWLImportFilterBySCU",
+    "dcmAttributeUpdatePolicy",
+    "dcmTrimISO2022CharacterSet"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Име",
+      "description": "Произвољно/Смислено име архивског цоерцион-а атрибута",
+      "type": "string"
+    },
+    "dcmRulePriority": {
+      "title": "Приоритет правила",
+      "description": "Ако се стање више арцхиве аттрибуте цоерцион (legacy) подудара за примљену слику, примењује се цоерцион вишег приоритета. Ако постоји више подударних цоерцион-а са једнаким приоритетом, недефинисано је која се цоерцион примењује.",
+      "type": "integer",
+      "default": 0,
+      "minimum": 0
+    },
+    "dcmDIMSE": {
+      "title": "DIMSE",
+      "description": "DICOM Message Element на који се ова Attribute Coercion примењује. Такође <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#dimse\" target=\"_blank\">примењиво ако се захтеви примају преко web-а.</a>",
+      "type": "string",
+      "enum": [
+        "N_CREATE_RQ",
+        "C_STORE_RQ",
+        "C_FIND_RQ",
+        "C_FIND_RSP"
+      ]
+    },
+    "dicomTransferRole": {
+      "title": "DICOM улога преноса",
+      "description": "DICOM улога преноса пеер DICOM AE-а.",
+      "type": "string",
+      "enum": [
+        "SCU",
+        "SCP"
+      ]
+    },
+    "dcmSOPClass": {
+      "title": "SOP Class UID",
+      "description": "UID SOP класе за коју се овај цоерцион атрибута примењује. Ако недостаје, примењује се на било коју.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmSOPClass"
+    },
+    "dcmProperty": {
+      "title": "Услови",
+      "description": "Услови у формату {key}[!]={value}. Погледајте <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions\" target=\"_blank\">применљивост, формат и примере.</a>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmRetrieveAsReceived": {
+      "title": "Преузми као примљено",
+      "description": "Онемогућава спајање DB информација у преузети Composite Object, враћајући објекте као примљене. Ефикасно само са DIMSE = C_STORE_RQ и DICOM Transfer Role = SCP.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmDeIdentification": {
+      "title": "Де-идентификација",
+      "description": "Де-идентификуј објекте према Basic Application Level Confidentiality Profile специфицираном у DICOM PS3.15. Бирањем било које опције имплицитно се укључује Basic Application Level Confidentiality Profile.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "BasicApplicationConfidentialityProfile",
+          "RetainLongitudinalTemporalInformationFullDatesOption",
+          "RetainDeviceIdentityOption",
+          "RetainInstitutionIdentityOption",
+          "RetainUIDsOption",
+          "RetainPatientIDHashOption"
+        ]
+      }
+    },
+    "dcmURI": {
+      "title": "URI XSL стилног листа",
+      "description": "Специфицира URI XSL style схеет-а за Attribute Coercion",
+      "type": "string"
+    },
+    "dcmNoKeywords": {
+      "title": "Без кључне речи атрибута",
+      "description": "Указује да ли да кључне речи атрибута буду изостављене из DICOM XML прослеђеног XSLT-у",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmMergeMWLMatchingKey": {
+      "title": "Кључ подударања спајања MWL",
+      "description": "Специфицира атрибут примљеног објекта за проналажење MWL ставке коришћене за коерцију атрибута захтева. Ако није наведено, атрибути захтева примљених објеката се неће коирцирати. Погледајте <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-merging-from-mwl-coercion-type\" target=\"_blank\">применљивост мерге MWL матцхинг кључева.</a>",
+      "type": "string",
+      "enum": [
+        "PatientID",
+        "PatientIDOnly",
+        "PatientIDAccessionNumber",
+        "AccessionNumber",
+        "StudyInstanceUID",
+        "ScheduledProcedureStepID"
+      ]
+    },
+    "dcmMergeMWLTemplateURI": {
+      "title": "URI шаблона спајања MWL",
+      "description": "Специфицира URI style схеет-а за коерцију атрибута захтева примљених објеката из подударних DICOM MWL ставки. Ефикасно само ако је наведен dcmMergeMWLMatchingKey.",
+      "type": "string"
+    },
+    "dcmMergeMWLSCP": {
+      "title": "SCP спајања MWL",
+      "description": "AE Title екстерног MWL SCP-а коришћеног за проналажење MWL ставке за коерцију атрибута захтева примљених објеката. Ако је конфигурисано, екстерни MWL SCP се упитује позивањем C-FIND RQ-а DICOM MWL услуге и Мерге Local MWL SCP се игнорише.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmMergeLocalMWLWorklistLabel": {
+      "title": "Ознака локалне MWL Worklist-е за спајање",
+      "description": "Разматрај само MWL ставке са једном од наведених вредности његовог Worklist Label (0074,1202) у Archive DB за коерцију атрибута захтева примљених објеката. Ако није наведено, Archive DB се упитује за подударање MWL ставки са било којим Worklist Label (0074,1202).",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmMWLWorklistLabel"
+    },
+    "dcmMergeLocalMWLWithStatus": {
+      "title": "Споји локални MWL са статусом",
+      "description": "Разматрај само MWL ставке са једним од наведених Scheduled Procedure Step Status кодова. Ако није наведено, разматрају се MWL ставке са било којим Scheduled Procedure Step Status-ом.",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "SCHEDULED",
+          "ARRIVED",
+          "READY",
+          "STARTED",
+          "DEPARTED",
+          "CANCELED",
+          "DISCONTINUED",
+          "COMPLETED"
+        ]
+      }
+    },
+    "dcmMWLImportFilterBySCU": {
+      "title": "Филтер спајања MWL по SCU",
+      "description": "Означава да се наведени филтер примењује на подударања која врати екстерни MWL SCP.",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmLeadingCFindSCP": {
+      "title": "Водећи C-FIND SCP",
+      "description": "AE Title екстерног C-FIND SCP-а за Attribute Coercion са атрибутима пацијента и студије дохваћеним са овог AE-а. Ако није наведен појединачни Attribute Set за C-FIND SCP, дохватит ће се сви атрибути конфигурисаног Patient и Study Attribute Filter-а.",
+      "type": "string",
+      "format": "dcmAETitle"
+    },
+    "dcmAttributeUpdatePolicy": {
+      "title": "Политика ажурирања атрибута",
+      "description": "Специфицира како атрибути треба да буду ажурирани атрибутима дохваћеним са Leading C-FIND SCP-а. Погледајте <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Attribute-Update-Policy\" target=\"_blank\">значења Attribute Update Policies.</a>",
+      "type": "string",
+      "default": "MERGE",
+      "enum": [
+        "PRESERVE",
+        "SUPPLEMENT",
+        "MERGE",
+        "OVERWRITE"
+      ]
+    },
+    "dcmTrimISO2022CharacterSet": {
+      "title": "Скрати ISO 2022 скуп знакова",
+      "description": "Замени појединачни код за Сингле-Byte Character Sets са Code Extensions кодом за Сингле-Byte Character Sets без Code Extensions. Погледајте <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-trim-iso-2022-character-set-coercion-type\" target=\"_blank\">карактерне скупове на које се ова цоерцион примењује.</a>",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmUseCallingAETitleAs": {
+      "title": "Користи позивајући AE наслов као",
+      "description": "Идентификује атрибут који се поставља на вредност Calling AET-а ако је одсутан или празан. ScheduledStationAETitle (= Scheduled Station AE Title (0040,0001) у ставци Scheduled Procedure Step Sequence (0040,0100)), SendingApplicationEntityTitleOfSeries (= Sending Application Entity Title of Series (7777,xx37)).",
+      "type": "string",
+      "enum": [
+        "ScheduledStationAETitle",
+        "SendingApplicationEntityTitleOfSeries"
+      ]
+    },
+    "dcmNullifyTag": {
+      "title": "Поништи ознаку атрибута",
+      "description": "DICOM ознака атрибута који треба нуллификовати као хексадецимални стринг",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmTag"
+    },
+    "dcmMergeAttribute": {
+      "title": "Споји атрибут",
+      "description": "Merge DICOM атрибут у формату {attributeID}={value}. {attributeID} унутар {value} ће бити замењено вредношћу тог атрибута у оригиналном датасет-у. Погледајте <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-merge-attributes-coercion-type\" target=\"_blank\">применљивост, формате и неке примере.</a>",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmNullifyIssuerOfPatientID": {
+      "title": "Поништи издаваоца ID-а пацијента",
+      "description": "Условно нуллификуј Issuer of Patient ID (0010,0021) и Issuer of Patient ID Qualifiers Sequence (0010,0024) из примљених објеката",
+      "type": "string",
+      "enum": [
+        "ALWAYS",
+        "MATCHING",
+        "NOT_MATCHING"
+      ]
+    },
+    "dcmIssuerOfPatientID": {
+      "title": "Издавалац ID-а пацијента",
+      "description": "Issuer of Patient ID (0010,0021) и опционално и вредности за Universal Entity ID (0040,0032) и Universal Entity ID Type (0040,0033) ставке Issuer of Patient ID Qualifiers Sequence (0010,0024) се пореде са вредностима у примљеним објектима, ако је Nullify Issuer of Patient ID постављено на MATCHING или NOT_MATCHING. Наведите вредности у формату: {IssuerOfPatientID}[&{UniversalEntityID&UniversalEntityIDType}].",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmIssuerOfPatientIDFormat": {
+      "title": "Формат издаваоца ID-а пацијента",
+      "description": "Формат Issuer of Patient ID (0010,0021) изведен из других атрибута. Нпр. \"{00100010,hash}-{00100030}\": користи хасх вредност Patient Name и Birth Date раздвојене са \"-\". Погледајте <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-supplement-issuer-of-patient-id-format-coercion-type\" target=\"_blank\">применљивост овог поља и неке примере.</a>",
+      "type": "string"
+    },
+    "dcmSupplementFromDeviceReference": {
+      "title": "Допуни из уређаја",
+      "description": "Име уређаја са којег се допуњују Assigning Authorities и друге информације. Погледајте <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Legacy-Archive-Attribute-Coercion---Application-of-multiple-coercions-using-one-coercion-rule#configurations-specific-to-supplementing-from-device-coercion-type\" target=\"_blank\">применљивост на ентитете и информације допуњене са уређаја.</a>",
+      "type": "string",
+      "format": "dicomDeviceName"
+    }
+  }
+}

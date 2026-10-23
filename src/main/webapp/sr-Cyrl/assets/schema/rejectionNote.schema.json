@@ -1,0 +1,74 @@
+{
+  "title": "Напомена о одбацивању",
+  "description": "Задаје понашање при сачувавању напомене о одбацивању",
+  "type": "object",
+  "required": [
+    "dcmRejectionNoteLabel",
+    "dcmRejectionNoteCode",
+    "dcmAcceptPreviousRejectedInstance"
+  ],
+  "properties": {
+    "dcmRejectionNoteLabel": {
+      "title": "Ознака напомене о одбацивању",
+      "description": "Ознака напомене о одбацивању",
+      "type": "string",
+      "use": [
+        "$.dcmDevice.dcmArchiveDevice.dcmQueryRetrieveView[*].dcmShowInstancesRejectedByCode[*]"
+      ]
+    },
+    "dcmRejectionNoteType": {
+      "title": "Тип напомене о одбацивању",
+      "description": "Тип Rejection Note-а.",
+      "type": "string",
+      "enum": [
+        "REJECTED_FOR_QUALITY_REASONS",
+        "REJECTED_FOR_PATIENT_SAFETY_REASONS",
+        "INCORRECT_MODALITY_WORKLIST_ENTRY",
+        "DATA_RETENTION_POLICY_EXPIRED",
+        "REVOKE_REJECTION"
+      ]
+    },
+    "dcmRejectionNoteCode": {
+      "title": "Код напомене о одбацивању",
+      "description": "Специфицира Document Title Rejection Note-а у формату (CV, CSD, 'CM')",
+      "type": "string"
+    },
+    "dcmAcceptPreviousRejectedInstance": {
+      "title": "Прихвати претходно одбијену инстанцу",
+      "description": "Специфицира понашање при накнадном појављивању инстанци одбијених појединим Rejection Note-ом.",
+      "type": "string",
+      "default": "REJECT",
+      "enum": [
+        "REJECT",
+        "RESTORE",
+        "IGNORE"
+      ]
+    },
+    "dcmOverwritePreviousRejection": {
+      "title": "Препиши претходно одбацивање",
+      "description": "Специфицира Document Title претходног Rejection Note-а у формату (CV, CSD, 'CM') који може бити преписан тим Rejection Note-ом",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAcceptRejectionBeforeStorage": {
+      "title": "Прихвати одбацивање пре складиштења",
+      "description": "Временски интервал у ISO-8601 формату трајања PnDTnHnMn.nS након пријема Rejection Note-а, у којем се примљени објекти референцирани овим Rejection Note-ом третирају као одбијени. Референцирани објекти примљени након тога се третирају као накнадно појављивање већ одбијене инстанце. Ако није наведено, Rejection Notes који реферишу још не примљене објекте неће бити прихваћени.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmDeleteRejectedInstanceDelay": {
+      "title": "Кашњење брисања одбијене инстанце",
+      "description": "Кашњење у ISO-8601 формату трајања PnDTnHnMn.nS након којег се инстанце одбијене појединим Rejection Note-ом бришу. Бесконачно ако није наведено.",
+      "type": "string",
+      "format": "dcmDuration"
+    },
+    "dcmDeleteRejectionNoteDelay": {
+      "title": "Кашњење брисања напомене о одбацивању",
+      "description": "Кашњење у ISO-8601 формату трајања PnDTnHnMn.nS након којег се поједине Rejection Notes бришу. Бесконачно ако није наведено.",
+      "type": "string",
+      "format": "dcmDuration"
+    }
+  }
+}

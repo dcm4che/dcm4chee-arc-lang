@@ -1,0 +1,40 @@
+{
+  "title": "Шаблон UI дијалога",
+  "description": "Дефиниши Create Dialog шаблон",
+  "type": "object",
+  "required": [
+    "dcmuiTemplateName",
+    "dcmTag"
+  ],
+  "properties": {
+    "dcmuiTemplateName": {
+      "title": "Име",
+      "description": "Име шаблона дијалога",
+      "type": "string"
+    },
+    "dcmTag": {
+      "title": "Ознака атрибута",
+      "description": "DICOM ознака као хексадецимални стринг која треба да буде укључена у овај шаблон дијалога",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmTag"
+    },
+    "dicomDescription": {
+      "title": "Опис",
+      "description": "Опис шаблона дијалога",
+      "type": "string"
+    },
+    "dcmuiDialog": {
+      "title": "Функција дијалога",
+      "description": "Специфицира функцију где ће се овај Dialog Template применити",
+      "type": "string",
+      "enum": [
+        "mwl",
+        "patient"
+      ],
+      "default": "mwl"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "title": "Конфигурација UI табеле",
+  "description": "Конфигурација Study табеле за про верзију",
+  "type": "object",
+  "required": [
+    "dcmuiTableConfigName"
+  ],
+  "properties": {
+    "dcmuiTableConfigName": {
+      "title": "Име конфигурације",
+      "description": "Име UI Table конфигурације",
+      "type": "string"
+    },
+    "dcmuiTableConfigUsername": {
+      "title": "Корисничко име",
+      "description": "Корисничко име којем овај скуп треба бити доступан",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiTableConfigRoles": {
+      "title": "Улога",
+      "description": "Корисничка улога која може користити овај скуп (Ако поставите корисничко име, улога ће бити игнорисана)",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiTableID": {
+      "title": "ID табеле",
+      "description": "ID табеле у UI-ју за коју конфигурација треба да буде на снази",
+      "type": "string"
+    },
+    "dcmuiTableConfigIsDefault": {
+      "title": "Подразумевано",
+      "description": "Постави овај Цолумн-Сет као подразумевани. (Уверите се да је само један од Сет - сиблингс цхилд постављен као подразумевани).",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmuiTableColumnConfigObjects": {
+      "title": "Колоне табеле",
+      "description": "Дефиниши колоне табеле",
+      "titleKey": "{dcmuiColumnName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiTableColumns.schema.json"
+      }
+    }
+  }
+}

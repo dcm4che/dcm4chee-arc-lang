@@ -1,0 +1,7 @@
+archiveCompressionRule:Правило архивске компресије|Правило архивске компресије
+archiveCompressionRule.cn:Име|Произвољно/Смислено име Archive Compression правила
+archiveCompressionRule.dicomTransferSyntax:DICOM Transfer Syntax UID|Transfer Syntax у који примљене слике треба компресовати
+archiveCompressionRule.dcmRulePriority:Приоритет правила|Ако се стање више Цомпрессион правила подудара за примљену слику, примениће се правило са највишим приоритетом. Ако постоји више подударних правила са једнаке приоритета, недефинисано је које ће се правило применити.
+archiveCompressionRule.dcmProperty:Услови|Услови у формату {key}[!]={value}. Погледајте <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">применљивост, формат и примере.</a>
+archiveCompressionRule.dcmImageWriteParam:Параметар уписа слике|Image Write параметар(и) (наме=валуе) постављени на Image Writer пре компресије
+archiveCompressionRule.dcmCompressionDelay:Кашњење компресије|Кашњење компресије у ISO-8601 формату трајања PnDTnHnMn.nS. Компресује се при пријему ако недостаје.

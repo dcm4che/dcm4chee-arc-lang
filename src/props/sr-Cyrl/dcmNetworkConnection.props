@@ -1,0 +1,30 @@
+dcmNetworkConnection:Екстензија мрежне конекције|dcm4che власнички атрибути мрежне конекције
+dcmNetworkConnection.dcmProtocol:Протокол|Протокол Network Connection-а.
+dcmNetworkConnection.dcmHTTPProxy:HTTP proxy|HTTP Proxy: [user:password@]host:port
+dcmNetworkConnection.dcmTLSNeedClientAuth:TLS захтева аутентификацију клијента|Указује да ли је TLS аутентификација клијента обавезна.
+dcmNetworkConnection.dcmTLSProtocol:TLS протокол|Подржани TLS протоколи.
+dcmNetworkConnection.dcmTLSEndpointIdentificationAlgorithm:Алгоритам идентификације TLS крајње тачке|Указује на процедуре идентификације или верификације крајње тачке током TLS хандсхаке-а.
+dcmNetworkConnection.dcmTCPBacklog:TCP заостатак|Максимална дужина реда за долазне TCP конекције.
+dcmNetworkConnection.dcmTCPConnectTimeout:Истек TCP конекције|TCP connect тимеоут у мс; без тимеоут-а ако није наведено.
+dcmNetworkConnection.dcmTCPCloseDelay:Кашњење TCP затварања|TCP соцкет цлосе delay у мс након слања A-ASSOCIATE-RJ, A-RELEASE-RP или A-ABORT PDU.
+dcmNetworkConnection.dcmTCPSendBufferSize:Величина TCP бафера слања|TCP сенд буффер величина; користи системске подразумеване вредности ако није наведено
+dcmNetworkConnection.dcmTCPReceiveBufferSize:Величина TCP бафера пријема|TCP рецеиве буффер величина; користи системске подразумеване вредности ако није наведено
+dcmNetworkConnection.dcmTCPNoDelay:TCP без кашњења|Омогући/онемогући TCP_NODELAY (онемогући/омогући Нагле алгоритам).
+dcmNetworkConnection.dcmBindAddress:Адреса везивања|Бинд адреса слушног сокета; користи име хоста конекције ако није наведено
+dcmNetworkConnection.dcmClientBindAddress:Адреса везивања клијента|Бинд адреса одлазних конекција; користи име хоста конекције ако није наведено
+dcmNetworkConnection.dcmBlacklistedHostname:Црна листа имена хостова|на црној листи DNS имена хостова
+dcmNetworkConnection.dcmSendPDULength:Дужина PDU слања|Максимална дужина емитованих PDU-ова.
+dcmNetworkConnection.dcmReceivePDULength:Дужина PDU пријема|Максимална дужина примљених PDU-ова.
+dcmNetworkConnection.dcmMaxOpsPerformed:Макс. извршених операција|Максималан број операција за асинхроно извршавање; 0 = бесконачно.
+dcmNetworkConnection.dcmMaxOpsInvoked:Макс. позваних операција|Максималан број операција за асинхроно позивање; 0 = бесконачно.
+dcmNetworkConnection.dcmPackPDV:Паковање PDV|Омогући/онемогући паковање командних и податковних PDV-ова у један P-DATA-TF PDU.
+dcmNetworkConnection.dcmAARQTimeout:AA-RQ истек времена|Тимеоут у мс за пријем A-ASSOCIATE-RQ PDU након TCP connect; без тимеоут-а ако није наведено
+dcmNetworkConnection.dcmAAACTimeout:AA-AC истек времена|Тимеоут у мс за пријем A-ASSOCIATE-AC PDU након слања A-ASSOCIATE-RQ PDU; без тимеоут-а ако није наведено
+dcmNetworkConnection.dcmARRPTimeout:AR-RP истек времена|Тимеоут у мс за пријем A-RELEASE-RP PDU након слања A-RELEASE-RQ PDU; без тимеоут-а ако није наведено
+dcmNetworkConnection.dcmSendTimeout:Истек времена слања|Тимеоут у мс за слање других DIMSE RQ-ова осим C-STORE RQ-ова; без тимеоут-а ако није наведено
+dcmNetworkConnection.dcmStoreTimeout:Истек времена складиштења|Тимеоут у мс за слање C-STORE RQ-ова; без тимеоут-а ако није наведено
+dcmNetworkConnection.dcmResponseTimeout:Истек времена одговора|Тимеоут у мс за пријем оутстандинг <br>- DIMSE RSP-ова осим C-MOVE / C-GET RSP-ова <br>- одговора одлазних HL7 порука <br>- HTTP(С) одговора <br>Без тимеоут-а ако није наведено
+dcmNetworkConnection.dcmRetrieveTimeout:Истек времена преузимања|Тимеоут у мс за пријем оутстандинг C-GET или C-MOVE RSP-ова; без тимеоут-а ако није наведено
+dcmNetworkConnection.dcmRetrieveTimeoutTotal:Укупан истек времена преузимања|Указује да ли тајмер са наведеним тимеоут-ом за извршне C-GET и C-MOVE RSP-ове треба рестартовати при пријему пендинг RSP-ова (=false) или не (=true).
+dcmNetworkConnection.dcmIdleTimeout:Време неактивности|Указује на прекидање неактивних асоцијација након наведеног тимеоут-а у мс; без тимеоут-а ако није наведено
+dcmNetworkConnection.dcmAATimeout:A-ABORT истек времена|Тимеоут у мс за чекање завршетка слања било ког DIMSE пре слања A-ABORT PDU, покренут од стране апликације или истицањем конфигурисаног другог тимеоут-а ове Цоннецтион. Ако тимеоут истекне, TCP конекција ће бити затворена без слања A-ABORT.

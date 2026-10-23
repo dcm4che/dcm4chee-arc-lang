@@ -1,0 +1,57 @@
+{
+  "title": "Падајућа листа веб апликација",
+  "description": "Падајућа листа Web App",
+  "type": "object",
+  "required": [
+    "dcmuiWebAppListName",
+    "dcmuiWebApps",
+    "dcmuiMode"
+  ],
+  "properties": {
+    "dcmuiWebAppListName": {
+      "title": "Име листе",
+      "description": "Дефинишите име за ову конфигурацију",
+      "type": "string"
+    },
+    "dcmuiWebAppListDescription": {
+      "title": "Опис",
+      "description": "Опис листе Web апликација",
+      "type": "string"
+    },
+    "dcmuiMode": {
+      "title": "Режим листе",
+      "description": "Имате две могућности како да прикажете дефинисану листу: 1.) На врху изнад остатка листе 'separated' са линијом, 2.) Прикажи само овде дефинисане ( 'exclusive' ).",
+      "type": "string",
+      "default": "separated",
+      "enum": [
+        "separated",
+        "exclusive"
+      ]
+    },
+    "dcmuiWebApps": {
+      "title": "Веб апликације",
+      "description": "Веб апликација",
+      "format": "webApp",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAcceptedUserRole": {
+      "title": "Прихваћена корисничка улога",
+      "description": "Дефиниши улоге за које ова конфигурација треба да буде доступна, користи 'user' да буде доступна за све улоге ( Треба да дефинишете или корисничко име ( следећи атрибут ) или корисничку улогу ( овај атрибут ))",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmAcceptedUserName": {
+      "title": "Прихваћено корисничко име",
+      "description": "Дефиниши корисничко име за које ова конфигурација треба да буде доступна ( Треба да дефинишете или корисничко име ( овај атрибут ) или корисничку улогу ( претходни атрибут ))",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

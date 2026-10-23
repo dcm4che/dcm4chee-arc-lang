@@ -1,0 +1,80 @@
+{
+  "title": "Конфигурација UI контролне табле",
+  "description": "Конфигурација UI контролне табле",
+  "type": "object",
+  "required": [
+    "dcmuiDashboardConfigName",
+    "dcmuiCountWebApp"
+  ],
+  "properties": {
+    "dcmuiDashboardConfigName": {
+      "title": "Име UI конфигурације контролне табле",
+      "description": "Име UI Dashboard конфигурације",
+      "type": "string"
+    },
+    "dcmuiShowStarBlock": {
+      "title": "Show Star Block",
+      "description": "Show Star Block - таскс without дефинед deviceName",
+      "type": "boolean",
+      "default": true
+    },
+    "dcmuiQueueName": {
+      "title": "Редови",
+      "description": "Имена редова за UI Dashboard конфигурацију коришћену у блоку редова",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmQueueName"
+    },
+    "dcmuiExportName": {
+      "title": "ID-ови извозника",
+      "description": "Exporter ID-ови за UI Dashboard конфигурацију коришћену у блоку реда и поређења",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmExporterID"
+    },
+    "dicomuiDeviceName": {
+      "title": "Имена уређаја",
+      "description": "Имена уређаја за UI Dashboard конфигурацију коришћену за генерисање Ретриеве и Export блока",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dicomDeviceName"
+    },
+    "dicomuiIgnoreParams": {
+      "title": "Параметри игнорисања догађаја ревизије",
+      "description": "Постави Elasticsearch параметре који треба да буду игнорисани у Audit Events. Нпр. Source.UserID=TESTVALUE",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiCountWebApp": {
+      "title": "Број веб апликација",
+      "description": "Изабрана Web App, користиће се за добијање броја студија на контролној табли",
+      "type": "string",
+      "format": "webApp"
+    },
+    "dcmuiCompareSideObjects": {
+      "title": "Стране упоређивања",
+      "description": "Стране поређења",
+      "titleKey": "{dcmuiCompareSideName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiCompareSide.schema.json"
+      }
+    },
+    "dicomuiDockerContainer": {
+      "title": "Мрежни Docker уређаји",
+      "description": "Имена мрежних уређаја у доцкер контејнерима коришћеним на hardware страници.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

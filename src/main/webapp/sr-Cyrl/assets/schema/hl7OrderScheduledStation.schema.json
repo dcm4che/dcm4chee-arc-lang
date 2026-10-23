@@ -1,0 +1,38 @@
+{
+  "title": "Заказана станица за HL7 налог",
+  "description": "Scheduled Station селектована на MWL HL7 Order Feed-у",
+  "type": "object",
+  "required": [
+    "cn",
+    "hl7OrderScheduledStationDeviceName",
+    "dcmRulePriority"
+  ],
+  "properties": {
+    "cn": {
+      "title": "Име",
+      "description": "Произвољно/Смислено име за мапирање редоследа Scheduled Station",
+      "type": "string"
+    },
+    "hl7OrderScheduledStationDeviceName": {
+      "title": "Име уређаја заказане станице",
+      "description": "Име уређаја Scheduled Station коришћено за HL7 Order поруке.",
+      "type": "string",
+      "format": "dicomDeviceName"
+    },
+    "dcmRulePriority": {
+      "title": "Приоритет мапирања",
+      "description": "Ако се стање више Scheduled Station for HL7 Order правила подудара за примљену HL7 поруку и свако има различит приоритет, примењује се Scheduled Station Device Name највишег приоритета. Ако се стање више Scheduled Station for HL7 Order правила подудара за примљену HL7 поруку и свако има једнак приоритет, примењује се Scheduled Station Device Name сваког.",
+      "type": "integer",
+      "minimum": 0,
+      "default": 0
+    },
+    "dcmProperty": {
+      "title": "Услови",
+      "description": "Услови у формату {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Примери: MSH-4=FORWARD или MSH-9=ADT\\^A28\\^ADT_A05 или PID-3[.3]=PIDIssuer или PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

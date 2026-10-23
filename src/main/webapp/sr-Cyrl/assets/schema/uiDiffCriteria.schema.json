@@ -1,0 +1,66 @@
+{
+  "title": "Критеријуми UI diff-а",
+  "description": "Критеријуми UI diff-а",
+  "type": "object",
+  "required": [
+    "dcmuiDiffCriteriaTitle",
+    "dcmuiDiffIncludeMissing"
+  ],
+  "properties": {
+    "dcmuiDiffCriteriaTitle": {
+      "title": "Наслов UI Diff критеријума",
+      "description": "Наслов Дифф критеријума",
+      "type": "string"
+    },
+    "dicomDescription": {
+      "title": "Опис UI Diff критеријума",
+      "description": "Неспутани текстуални опис овог UI Diff Criteria",
+      "type": "string"
+    },
+    "dcmuiDiffCriteriaNumber": {
+      "title": "Број UI Diff критеријума",
+      "description": "Број скупа атрибута коришћен за уређивање скупова атрибута.",
+      "type": "integer",
+      "minimum": 1
+    },
+    "dcmuiDiffIncludeMissing": {
+      "title": "UI укључује недостајуће",
+      "description": "Указује да ли треба укључити студије које недостају",
+      "type": "boolean",
+      "default": false
+    },
+    "dcmAttributeSetID": {
+      "title": "ID скупа атрибута",
+      "description": "ID скупа атрибута који специфицира упоређене атрибуте",
+      "type": "string",
+      "format": "dcmAttributeSetID"
+    },
+    "dcmuiDiffGroupButton": {
+      "title": "Дугме UI Diff групе",
+      "description": "UI Diff Group дугме",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "synchronize",
+          "export",
+          "reject"
+        ]
+      }
+    },
+    "dcmuiDiffAction": {
+      "title": "UI Diff акција",
+      "description": "UI Diff акција",
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "patient-update",
+          "study-reject-export",
+          "study-reject",
+          "study-export"
+        ]
+      }
+    }
+  }
+}

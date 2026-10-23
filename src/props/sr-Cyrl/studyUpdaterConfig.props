@@ -1,0 +1,5 @@
+studyUpdaterConfig:Конфигурација Study Updater-а|Study Updater Configuration
+studyUpdaterConfig.studyUpdaterUpdaterURL:URL Упдатер-а|REST Endpoint URL for the external Updater service (f.e. Study Update CSV RS)
+studyUpdaterConfig.studyUpdaterUpdaterProperty:Својства Упдатер-а|Properties for Updater specific configuration in the form <name>=<value> - f.e. Seperator=,
+studyUpdaterConfig.studyUpdaterKeycloakClientID:ID Keycloak клијента|ID Keycloak клијента
+studyUpdaterConfig.studyUpdaterUpdaterWarningOnNoMatch:Упозорење при без подударања|Warning on No Match

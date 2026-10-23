@@ -1,0 +1,38 @@
+{
+  "title": "Конфигурација UI Elasticsearch URL-а",
+  "description": "Elasticsearch URL",
+  "type": "object",
+  "required": [
+    "dcmuiLanguageProfileName",
+    "dcmuiDefaultLanguage"
+  ],
+  "properties": {
+    "dcmuiLanguageProfileName": {
+      "title": "Име",
+      "description": "Име језичког профила",
+      "type": "string"
+    },
+    "dcmDefaultLanguage": {
+      "title": "Подразумевани језик",
+      "description": "Изабери подразумевани језик за UI",
+      "type": "string",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmDefaultLanguage"
+    },
+    "dcmuiLanguageProfileRole": {
+      "title": "Улога",
+      "description": "Корисничка улога на коју се овај језички профил примењује",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "dcmuiLanguageProfileUsername": {
+      "title": "Корисничко име",
+      "description": "Корисничко име за језички профил",
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "title": "UI конфигурација језика",
+  "description": "UI Language конфигурација",
+  "type": "object",
+  "required": [
+    "dcmLanguages",
+    "dcmuiLanguageConfigName"
+  ],
+  "properties": {
+    "dcmuiLanguageConfigName": {
+      "title": "Име конфигурације језика",
+      "description": "Име Language Config-а",
+      "type": "string"
+    },
+    "dcmLanguages": {
+      "title": "Аваилабле лангуагес",
+      "description": "Сет лангуагес тхат схоулд бе аваилабле ин тхе UI (The JSON-филес то тхосе лангуаге муст exist ин тхе цоде, иф they дон'т exist опен ан Иссуе ин гитхуб",
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "format": "dcmLanguageChooser"
+    },
+    "dcmuiLanguageProfileObjects": {
+      "title": "Профил језика",
+      "description": "Језички профил за корисничко име, улогу или све",
+      "titleKey": "{dcmuiLanguageProfileName}",
+      "type": "array",
+      "items": {
+        "$ref": "uiLanguageProfile.schema.json"
+      }
+    }
+  }
+}

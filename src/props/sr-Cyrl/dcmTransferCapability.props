@@ -1,0 +1,9 @@
+dcmTransferCapability:Екстензија Transfer Capability-ја|dcm4che власнички атрибути Transfer Capability-ја
+dcmTransferCapability.dcmPreferredTransferSyntax:Преферирана Transfer Syntax|Preferred Transfer Syntax за избор Transfer Syntax унутар Presentation Context, сортирано по приоритету. Преписује вредности наведене на AE нивоу.
+dcmTransferCapability.dcmRelationalQueries:Релацијски упити|Омогући/онемогући релационе упите.
+dcmTransferCapability.dcmCombinedDateTimeMatching:Комбиновано подударање датума и времена|Омогући/онемогући комбиновано подударање датума и времена.
+dcmTransferCapability.dcmFuzzySemanticMatching:Приближно семантичко подударање|Омогући/онемогући fuzzy семантичко подударање имена особа.
+dcmTransferCapability.dcmTimezoneQueryAdjustment:Подешавање временске зоне упита|Омогући/онемогући подешавање временске зоне у упитима
+dcmTransferCapability.dcmStorageConformance:Сагласност складиштења|Указује на ниво Цонформанце-а Storage SCP-а
+dcmTransferCapability.dcmDigitalSignatureSupport:Подршка за дигитални потпис|Указује на ниво Digital Signature подршке Storage SCP-а
+dcmTransferCapability.dcmDataElementCoercion:Цоерцион елемента података|Указује на коерцију Data Elements-а Storage SCP-а

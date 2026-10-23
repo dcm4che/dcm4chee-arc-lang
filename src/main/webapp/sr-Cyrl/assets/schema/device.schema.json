@@ -1,0 +1,295 @@
+{
+  "title": "Уређај",
+  "description": "Информације везане за DICOM уређај",
+  "type": "object",
+  "required": [
+    "dicomDeviceName",
+    "dicomInstalled"
+  ],
+  "groups": {
+    "Manufacturer Information": [
+      "dicomManufacturer",
+      "dicomManufacturerModelName",
+      "dicomSoftwareVersion",
+      "dicomDeviceSerialNumber"
+    ],
+    "Organisation": [
+      "dicomStationName",
+      "dicomInstitutionName",
+      "dicomInstitutionCode",
+      "dicomInstitutionAddress",
+      "dicomInstitutionDepartmentName"
+    ],
+    "Issuers": [
+      "dicomIssuerOfPatientID",
+      "dicomIssuerOfAccessionNumber",
+      "dicomOrderPlacerIdentifier",
+      "dicomOrderFillerIdentifier",
+      "dicomIssuerOfAdmissionID",
+      "dicomIssuerOfServiceEpisodeID",
+      "dicomIssuerOfContainerIdentifier",
+      "dicomIssuerOfSpecimenIdentifier"
+    ],
+    "Certificates": [
+      "dicomAuthorizedNodeCertificateReference",
+      "dicomThisNodeCertificateReference"
+    ]
+  },
+  "properties": {
+    "dicomDeviceName": {
+      "title": "Име уређаја",
+      "description": "Јединствено име за овај уређај",
+      "type": "string",
+      "order": 1
+    },
+    "dicomDescription": {
+      "title": "Опис уређаја",
+      "description": "Неспутани текстуални опис уређаја",
+      "type": "string",
+      "order": 2
+    },
+    "dicomVendorData": {
+      "title": "Подаци уређаја произвођача",
+      "description": "Информације о специфичној конфигурацији добављача уређаја",
+      "type": "boolean",
+      "order": 2
+    },
+    "dicomDeviceUID": {
+      "title": "UID уређаја",
+      "description": "Јединствени идентификатор уређаја",
+      "type": "string",
+      "pattern": "^[0-2]((\\.0)|(\\.[1-9][0-9]*))*$",
+      "order": 3
+    },
+    "dicomManufacturer": {
+      "title": "Произвођач",
+      "description": "Произвођач уређаја. Подразумевана вредност Мануфацтурер (0008,0070) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерционс на арцхиве уређају ради допуне овог атрибута из овог уређаја</a> када недостаје у SOP инстанцама креираним од стране позивајућег арцхиве уређаја.",
+      "type": "string",
+      "order": 4
+    },
+    "dicomManufacturerModelName": {
+      "title": "Име модела произвођача",
+      "description": "Manufacturer Model Name уређаја. Подразумевана вредност Manufacturer Model Name (0008,1090) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерционс на арцхиве уређају ради допуне овог атрибута из овог уређаја</a> када недостаје у SOP инстанцама креираним од стране позивајућег арцхиве уређаја.",
+      "type": "string",
+      "order": 5
+    },
+    "dicomSoftwareVersion": {
+      "title": "Верзија софтвера",
+      "description": "Software Versions уређаја. Подразумеване вредности Software Versions (0018,1020) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерционс на арцхиве уређају ради допуне овог атрибута из овог уређаја</a> када недостају у SOP инстанцама креираним од стране позивајућег арцхиве уређаја.",
+      "type": "array",
+      "order": 6,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomStationName": {
+      "title": "Име станице",
+      "description": "Station Name уређаја. Подразумевана вредност Station Name (0008,1010) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерционс на арцхиве уређају ради допуне овог атрибута из овог уређаја</a> када недостаје у SOP инстанцама креираним од стране позивајућег арцхиве уређаја.",
+      "type": "string",
+      "order": 7
+    },
+    "dicomDeviceSerialNumber": {
+      "title": "Серијски број уређаја",
+      "description": "Серијски број уређаја. Подразумевана вредност Device Serial Number (0018,1000) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерционс на арцхиве уређају ради допуне овог атрибута из овог уређаја</a> када недостаје у SOP инстанцама креираним од стране позивајућег арцхиве уређаја.",
+      "type": "string",
+      "order": 8
+    },
+    "dicomPrimaryDeviceType": {
+      "title": "Примарни тип уређаја",
+      "description": "Представља врсту уређаја и највише се примењује на аквизиционе модалитете",
+      "type": "array",
+      "order": 9,
+      "items": {
+        "type": "string",
+        "enum": [
+          "ARCHIVE|Archive",
+          "COMP|Computation Server",
+          "CAD|Computer Assisted Detection/Diagnosis",
+          "DSS|Department System Scheduler",
+          "FILMD|Film Digitizer",
+          "M3D|3D Manufacturing Modeling System",
+          "MCD|Media Creation Device",
+          "PRINT|Hard Copy Print Server",
+          "CAPTURE|Image Capture",
+          "LOG|Procedure Logging",
+          "RT|Radiation Therapy Device",
+          "WSD|Workstation",
+          "AR|Autorefraction",
+          "BMD|Bone Mineral Densitometry",
+          "BDUS|Ultrasound Bone Densitometry",
+          "EPS|Cardiac Electrophysiology",
+          "CR|Computed Radiography",
+          "CT|Computed Tomography",
+          "DX|Digital Radiography",
+          "ECG|Electrocardiography",
+          "ES|Endoscopy",
+          "XC|External-camera Photography",
+          "GM|General Microscopy",
+          "HD|Hemodynamic",
+          "IO|Intra-oral Radiography",
+          "IVOCT|Intravascular Optical Coherence Tomography",
+          "IVUS|Intravascular Ultrasound",
+          "KER|Keratometry",
+          "LEN|Lensometry",
+          "MR|Magnetic Resonance",
+          "MG|Mammography",
+          "NM|Nuclear Medicine",
+          "OAM|Ophthalmic Axial Measurements",
+          "OCT|Optical Coherence Tomography",
+          "OPM|Ophthalmic Mapping",
+          "OP|Ophthalmic Photography",
+          "OPR|Ophthalmic Refraction",
+          "OPT|Ophthalmic Tomography",
+          "OPTBSV|Ophthalmic Tomography B-scan Volume Analysis",
+          "OPTENF|Ophthalmic Tomography En Face",
+          "OPV|Ophthalmic Visual Field",
+          "OSS|Optical Surface Scanner",
+          "PX|Panoramic X-Ray",
+          "PT|Positron emission tomography",
+          "RF|Radiofluoroscopy",
+          "RG|Radiographic imaging",
+          "SM|Slide Microscopy",
+          "SRF|Subjective Refraction",
+          "US|Ultrasound",
+          "VA|Visual Acuity",
+          "XA|X-Ray Angiography"
+        ]
+      }
+    },
+    "dicomInstitutionName": {
+      "title": "Име институције",
+      "description": "Институцијско име уређаја. Подразумевана вредност Institution Name (0008,0080) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерционс на арцхиве уређају ради допуне овог атрибута из овог уређаја</a> када недостаје у SOP инстанцама креираним од стране позивајућег арцхиве уређаја. Само прва конфигурисана вредност се користи при допуњавајућој коерцији, пошто је поље једно-вредносно према <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8\" target=\"_blank\">General Equipment Module Attributes</a>. Вишевредносна могућност за ово поље овде је да испуни захтев у <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3\" target=\"_blank\">DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes</a>.",
+      "type": "array",
+      "order": 10,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomInstitutionCode": {
+      "title": "Код институције",
+      "description": "Институцијски код уређаја. Подразумевана вредност Institution Code Sequence (0008,0082) у формату (CV, CSD, \"CM\") при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерционс на арцхиве уређају ради допуне овог атрибута из овог уређаја</a> када недостаје у SOP инстанцама креираним од стране позивајућег арцхиве уређаја. Само прва конфигурисана вредност се користи при допуњавајућој коерцији, пошто је поље једно-вредносно према <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8\" target=\"_blank\">General Equipment Module Attributes</a>. Вишевредносна могућност за ово поље овде је да испуни захтев у <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3\" target=\"_blank\">DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes</a>.",
+      "type": "array",
+      "order": 11,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomInstitutionAddress": {
+      "title": "Адреса институције",
+      "description": "Институцијска адреса уређаја. Подразумевана вредност Institution Address (0008,0081) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерционс на арцхиве уређају ради допуне овог атрибута из овог уређаја</a> када недостаје у SOP инстанцама креираним од стране позивајућег арцхиве уређаја. Само прва конфигурисана вредност се користи при допуњавајућој коерцији, пошто је поље једно-вредносно према <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8\" target=\"_blank\">General Equipment Module Attributes</a>. Вишевредносна могућност за ово поље овде је да испуни захтев у <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3\" target=\"_blank\">DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes</a>.",
+      "type": "array",
+      "order": 12,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomInstitutionDepartmentName": {
+      "title": "Име одељења институције",
+      "description": "Институцијско име департмента уређаја. Подразумевана вредност Institutional Department Name (0008,1040) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерционс на арцхиве уређају ради допуне овог атрибута из овог уређаја</a> када недостаје у SOP инстанцама креираним од стране позивајућег арцхиве уређаја. Само прва конфигурисана вредност се користи при допуњавајућој коерцији, пошто је поље једно-вредносно према <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part03.html#table_C.7-8\" target=\"_blank\">General Equipment Module Attributes</a>. Вишевредносна могућност за ово поље овде је да испуни захтев у <a href=\"https://dicom.nema.org/medical/dicom/current/output/html/part15.html#sect_H.1.3\" target=\"_blank\">DICOM Part 15 - Security and System Management Profiles - LDAP Schema For Objects and Attributes</a>.",
+      "type": "array",
+      "order": 13,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomIssuerOfPatientID": {
+      "title": "Издавалац ID-а пацијента",
+      "description": "Подразумевана вредност за Issuer of Patient ID (0010,0021), и опционо и подразумеване вредности за Universal Entity ID (0040,0032) и Universal Entity ID Type (0040,0033) ставке Issuer of Patient ID Qualifiers Sequence (0010,0024) за SOP инстанце креиране овим уређајем када Patient ID (0010,0020) недостаје; може бити преписано вредностима примљеним у worklist-у или другом извору. Такође се користи при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерцион-а на арцхиве уређају за допуну са овог уређаја</a> када ассигнинг authority of Patient ID (0010,0020) недостаје : <br>- при пријему и креирању SOP инстанци од стране позивајућег арцхиве уређаја<br>- при пријему и креирању MPPS-а од стране позивајућег арцхиве уређаја<br>- на DICOM (MWl) C-FIND захтевима од екстерних система ка позивајућем арцхиве уређају<br>- на DICOM (MWl) C-FIND захтевима од позивајућег арцхиве уређаја ка екстерним системима <br>- на DICOM (MWl) C-FIND одговорима од екстерних система ка позивајућем арцхиве уређају. <br>Формат: &лт;Issuer of Patient ID&гт;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
+      "type": "string",
+      "order": 14
+    },
+    "dicomIssuerOfAccessionNumber": {
+      "title": "Издавалац приступног броја",
+      "description": "Подразумеване вредности за Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) и Universal Entity ID Type (0040,0033) ставке Issuer of Accession Number Sequence (0008,0051) за Modality Worklist ставке креиране или ажуриране овим уређајем када Accession Number (0008,0050) недостаје; може бити преписано вредностима примљеним у worklist-у или другом извору. Такође се користи при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерцион-а на арцхиве уређају за допуну са овог уређаја</a> када ассигнинг authority of Accession Number (0008,0050) недостаје : <br>- унутар Request Attributes Sequence (0040,0275) ставке и роот левел атрибута при пријему и креирању SOP инстанци од стране позивајућег арцхиве уређаја<br>- унутар Scheduled Step Attributes Sequence (0040,0270) ставке и роот левел атрибута при пријему и креирању MPPS-а од стране позивајућег арцхиве уређаја<br>- унутар Request Attributes Sequence (0040,0275) ставке и роот левел атрибута на DICOM (MWl) C-FIND захтевима од екстерних система ка позивајућем арцхиве уређају<br>- унутар Request Attributes Sequence (0040,0275) ставке и роот левел атрибута на DICOM (MWl) C-FIND захтевима од позивајућег арцхиве уређаја ка екстерним системима <br>- унутар Request Attributes Sequence (0040,0275) ставке и роот левел атрибута на DICOM (MWl) C-FIND одговорима од екстерних система ка позивајућем арцхиве уређају. <br>Формат: &лт;Local Namespace Entity ID&гт;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
+      "type": "string",
+      "order": 15
+    },
+    "dicomOrderPlacerIdentifier": {
+      "title": "Идентификатор постављача налога",
+      "description": "Подразумеване вредности за Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) и Universal Entity ID Type (0040,0033) ставке Order Placer Identifier Sequence (0040,0026) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерцион-а на арцхиве уређају за допуну са овог уређаја</a> када ассигнинг authority оф Placer Order Number / Imaging Service Request (0040,2016) недостаје : <br>- унутар Request Attributes Sequence (0040,0275) ставке при пријему и креирању SOP инстанци од стране позивајућег арцхиве уређаја<br>- унутар Scheduled Step Attributes Sequence (0040,0270) при пријему и креирању MPPS-а од стране позивајућег арцхиве уређаја<br>- унутар Request Attributes Sequence (0040,0275) ставке на DICOM C-FIND / роот левел атрибута на DICOM MWL C-FIND захтевима респективно, од екстерних система ка позивајућем арцхиве уређају<br>- унутар Request Attributes Sequence (0040,0275) ставке на DICOM C-FIND / роот левел атрибута на DICOM MWL C-FIND захтевима респективно, од позивајућег арцхиве уређаја ка екстерним системима <br>- унутар Request Attributes Sequence (0040,0275) ставке на DICOM C-FIND / роот левел атрибута на DICOM MWL C-FIND одговорима респективно, од екстерних система ка позивајућем арцхиве уређају. <br>Може бити преписано вредностима примљеним у worklist-у или другом извору. Формат: &лт;Local Namespace Entity ID&гт;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
+      "type": "string",
+      "order": 16
+    },
+    "dicomOrderFillerIdentifier": {
+      "title": "Идентификатор попуњавача налога",
+      "description": "Подразумеване вредности за Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) и Universal Entity ID Type (0040,0033) ставке Order Filler Identifier Sequence (0040,0027) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерцион-а на арцхиве уређају за допуну са овог уређаја</a> када ассигнинг authority оф Filler Order Number / Imaging Service Request (0040,2017) недостаје : <br>- унутар Request Attributes Sequence (0040,0275) ставке при пријему и креирању SOP инстанци од стране позивајућег арцхиве уређаја<br>- унутар Scheduled Step Attributes Sequence (0040,0270) при пријему и креирању MPPS-а од стране позивајућег арцхиве уређаја<br>- унутар Request Attributes Sequence (0040,0275) ставке на DICOM C-FIND / роот левел атрибута на DICOM MWL C-FIND захтевима респективно, од екстерних система ка позивајућем арцхиве уређају<br>- унутар Request Attributes Sequence (0040,0275) ставке на DICOM C-FIND / роот левел атрибута на DICOM MWL C-FIND захтевима респективно, од позивајућег арцхиве уређаја ка екстерним системима <br>- унутар Request Attributes Sequence (0040,0275) ставке на DICOM C-FIND / роот левел атрибута на DICOM MWL C-FIND одговорима респективно, од екстерних система ка позивајућем арцхиве уређају. <br>Може бити преписано вредностима примљеним у worklist-у или другом извору. Формат: &лт;Local Namespace Entity ID&гт;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
+      "type": "string",
+      "order": 17
+    },
+    "dicomIssuerOfAdmissionID": {
+      "title": "Издавалац ID-а пријема",
+      "description": "Подразумеване вредности за Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) и Universal Entity ID Type (0040,0033) ставке Issuer of Admission ID Sequence (0038,0014) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерцион-а на арцхиве уређају за допуну са овог уређаја</a> када ассигнинг authority of Admission ID (0038,0010) недостаје : <br>- при пријему и креирању SOP инстанци од стране позивајућег арцхиве уређаја<br>- при пријему и креирању MPPS-а од стране позивајућег арцхиве уређаја<br>- на DICOM (MWl) C-FIND захтевима од екстерних система ка позивајућем арцхиве уређају<br>- на DICOM (MWl) C-FIND захтевима од позивајућег арцхиве уређаја ка екстерним системима <br>- на DICOM (MWl) C-FIND одговорима од екстерних система ка позивајућем арцхиве уређају. <br>Може бити преписано вредностима примљеним у worklist-у или другом извору. Формат: &лт;Local Namespace Entity ID&гт;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
+      "type": "string",
+      "order": 18
+    },
+    "dicomIssuerOfServiceEpisodeID": {
+      "title": "Издавалац ID-а епизоде услуге",
+      "description": "Подразумеване вредности за Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) и Universal Entity ID Type (0040,0033) ставке Issuer of Service Episode ID Sequence (0038,0064) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерцион-а на арцхиве уређају за допуну са овог уређаја</a> када ассигнинг authority of Service Episode ID (0038,0060) недостаје : <br>- при пријему и креирању SOP инстанци од стране позивајућег арцхиве уређаја<br>- при пријему и креирању MPPS-а од стране позивајућег арцхиве уређаја<br>- на DICOM (MWl) C-FIND захтевима од екстерних система ка позивајућем арцхиве уређају<br>- на DICOM (MWl) C-FIND захтевима од позивајућег арцхиве уређаја ка екстерним системима <br>- на DICOM (MWl) C-FIND одговорима од екстерних система ка позивајућем арцхиве уређају. <br>Може бити преписано вредностима примљеним у worklist-у или другом извору. Формат: &лт;Local Namespace Entity ID&гт;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
+      "type": "string",
+      "order": 19
+    },
+    "dicomIssuerOfContainerIdentifier": {
+      "title": "Издавалац идентификатора контејнера",
+      "description": "Подразумеване вредности за Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) и Universal Entity ID Type (0040,0033) ставке Issuer of Container Identifier Sequence (0040,0513) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерцион-а на арцхиве уређају за допуну са овог уређаја</a> када ассигнинг authority of Container Identifier (0040,0512) недостаје : <br>- при пријему и креирању SOP инстанци од стране позивајућег арцхиве уређаја<br>- при пријему и креирању MPPS-а од стране позивајућег арцхиве уређаја<br>- на DICOM (MWl) C-FIND захтевима од екстерних система ка позивајућем арцхиве уређају<br>- на DICOM (MWl) C-FIND захтевима од позивајућег арцхиве уређаја ка екстерним системима <br>- на DICOM (MWl) C-FIND одговорима од екстерних система ка позивајућем арцхиве уређају. <br>Може бити преписано вредностима примљеним у worklist-у или другом извору. Формат: &лт;Local Namespace Entity ID&гт;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
+      "type": "string",
+      "order": 20
+    },
+    "dicomIssuerOfSpecimenIdentifier": {
+      "title": "Издавалац идентификатора узорка",
+      "description": "Подразумеване вредности за Local Namespace Entity ID (0040,0031), Universal Entity ID (0040,0032) и Universal Entity ID Type (0040,0033) ставке Issuer of Specimen Identifier Sequence (0040,0562) при <a href=\"https://github.com/dcm4che/dcm4chee-arc-light/wiki/Supplement-Dataset-Attributes-from-Device#overview\" target=\"_blank\">позиву арцхиве аттрибуте цоерцион-а на арцхиве уређају за допуну са овог уређаја</a> када ассигнинг authority of Specimen Identifier (0040,0551) недостаје : <br>- при пријему и креирању SOP инстанци од стране позивајућег арцхиве уређаја<br>- при пријему и креирању MPPS-а од стране позивајућег арцхиве уређаја<br>- на DICOM (MWl) C-FIND захтевима од екстерних система ка позивајућем арцхиве уређају<br>- на DICOM (MWl) C-FIND захтевима од позивајућег арцхиве уређаја ка екстерним системима <br>- на DICOM (MWl) C-FIND одговорима од екстерних система ка позивајућем арцхиве уређају. <br>Може бити преписано вредностима примљеним у worklist-у или другом извору. Формат: &лт;Local Namespace Entity ID&гт;['&'&lt;Universal Entity ID&gt;'&'&lt;Universal Entity ID Type&gt;]",
+      "type": "string",
+      "order": 21
+    },
+    "dicomAuthorizedNodeCertificateReference": {
+      "title": "Референца сертификата ауторизованог чвора",
+      "description": "DN-ови за сертификате чорова који су овлашћени да се повежу на овај уређај",
+      "type": "array",
+      "order": 22,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomThisNodeCertificateReference": {
+      "title": "This Node Certificate Reference",
+      "description": "DN-ови јавног сертификата за овај чор",
+      "type": "array",
+      "order": 23,
+      "items": {
+        "type": "string"
+      }
+    },
+    "dicomInstalled": {
+      "title": "инсталиран",
+      "description": "Булова вредност која указује да ли је овај уређај тренутно инсталиран на мрежи",
+      "type": "boolean",
+      "order": 24,
+      "default": true
+    },
+    "dicomNetworkConnection": {
+      "title": "Мрежне конекције",
+      "description": "мрежне конекције уређаја",
+      "type": "array",
+      "order": 25,
+      "titleKey": "{dicomHostname}:{dicomPort} {cn}",
+      "items": {
+        "$ref": "networkConnection.schema.json"
+      }
+    },
+    "dicomNetworkAE": {
+      "title": "Мрежни AE-ови",
+      "description": "Апликациони ентитет који пружа уређај",
+      "type": "array",
+      "titleKey": "{dicomAETitle}",
+      "order": 26,
+      "items": {
+        "$ref": "networkAE.schema.json"
+      }
+    },
+    "dcmDevice": {
+      "title": "Екстензија уређаја",
+      "description": "dcm4che власнички атрибути уређаја",
+      "$ref": "dcmDevice.schema.json",
+      "order": 27
+    }
+  }
+}

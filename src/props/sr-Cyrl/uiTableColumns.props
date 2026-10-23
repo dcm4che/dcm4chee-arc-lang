@@ -1,0 +1,8 @@
+uiTableColumns:Конфигурација колона табеле UI студија|Колоне Study табеле
+uiTableColumns.dcmuiColumnName:Име колоне|Име колоне у Study табели
+uiTableColumns.dcmuiColumnId:ID колоне|Свака могућа колона која се користи у UI-ју има ID; коришћењем ID-а можете променити нека од својстава те колоне, као што су име, опис, редослед или ширина
+uiTableColumns.dcmuiColumnTitle:Опис колоне|Опис колоне, приказан при преласку миша
+uiTableColumns.dcmuiValuePath:Путања вредности|Валуе (јсон-Object) путања колоне (нпр.: '00100010.Value[0].Alphabetic' за име пацијента или '00100020.Value[0]' за Patient ID
+uiTableColumns.dcmuiValueType:Тип вредности|Тип колоне како добити вредност, подразумевано треба бити 'value'
+uiTableColumns.dcmuiColumnWidth:Ширина колоне у тежини|Ширина колоне у тежини ( x > 0.1 - x < бесконачно ) подразумевано 1
+uiTableColumns.dcmuiColumnOrder:Редослед колоне|Редослед Цолумн-е

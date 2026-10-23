@@ -1,0 +1,3 @@
+metadataFilter:Филтер метаподатака|Именовани Attribute Filter за WADO-RS Metadata захтеве.
+metadataFilter.dcmMetadataFilterName:Име филтера метаподатака|Име Metadata Filter-а на које се реферише proprietary 'includefields' Query Parameter WADO-RS Metadata захтева.
+metadataFilter.dcmTag:Ознака атрибута|DICOM ознака као хексадецимални стринг

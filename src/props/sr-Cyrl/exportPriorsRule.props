@@ -1,0 +1,11 @@
+exportPriorsRule:Правило извоза претходних|Export Priors правило
+exportPriorsRule.cn:Име|Произвољно/Смислено име Export Priors правила
+exportPriorsRule.dcmExporterID:ID извозника|ID извозника
+exportPriorsRule.dcmProperty:Услови|Услови у формату {key}[!]={value}. Погледајте <a href="https://github.com/dcm4che/dcm4chee-arc-light/wiki/Conditions" target="_blank">применљивост, формат и примере.</a>
+exportPriorsRule.dcmSchedule:Временски услови|Примени ово правило само у наведеним временским опсезима.
+exportPriorsRule.dcmEntitySelector:Бирач ентитета|Специфицира кључеве подударања коришћене за селекцију претходних студија за извоз. Формат: {key}={value}[&{key}={value}]..., са {key} = 'priors' | 'StudyAge' | {attributeID}. {value} у формату '$'{attributeID} се замењује вредношћу наведеног атрибута из примљеног објекта који је окинуо извоз. Ако није наведен Entity Selector, извешће се све претходне студије за пацијента. Пример: 'priors=2&StudyAge=-5Y&ModalitiesInStudy=CT' => селектирај највише 2 претходне студије не старије од 5 година које садрже барем једну CT серију.
+exportPriorsRule.dcmDuration:Интервал сузбијања дуплог извоза|Сузбиј извоз студија већ извезених не раније од наведеног интервала ради избегавања дуплих извоза.
+exportPriorsRule.dcmExportReoccurredInstances:Извези поново појављене инстанце|Указује да ли претходне студије треба извести при накнадном појављивању инстанци
+exportPriorsRule.dcmExportReoccurredInstances.NEVER:Never export prior Studies on reoccurrence of instances
+exportPriorsRule.dcmExportReoccurredInstances.ALWAYS:Always export prior Studies on reoccurrence of instances
+exportPriorsRule.dcmExportReoccurredInstances.REPLACE:Export prior Studies only on reoccurrence of replaced instances

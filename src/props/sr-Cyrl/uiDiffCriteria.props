@@ -1,0 +1,8 @@
+uiDiffCriteria:Критеријуми UI diff-а|Критеријуми UI diff-а
+uiDiffCriteria.dcmuiDiffCriteriaTitle:Наслов UI Diff критеријума|Наслов Дифф критеријума
+uiDiffCriteria.dicomDescription:Опис UI Diff критеријума|Неспутани текстуални опис овог UI Diff Criteria
+uiDiffCriteria.dcmuiDiffCriteriaNumber:Број UI Diff критеријума|Број скупа атрибута коришћен за уређивање скупова атрибута.
+uiDiffCriteria.dcmuiDiffIncludeMissing:UI укључује недостајуће|Указује да ли треба укључити студије које недостају
+uiDiffCriteria.dcmAttributeSetID:ID скупа атрибута|ID скупа атрибута који специфицира упоређене атрибуте
+uiDiffCriteria.dcmuiDiffGroupButton:Дугме UI Diff групе|UI Diff Group дугме
+uiDiffCriteria.dcmuiDiffAction:UI Diff акција|UI Diff акција

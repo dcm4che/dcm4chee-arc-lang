@@ -1,0 +1,11 @@
+mwlImport:MWL увоз|Специфицира увоз Scheduled Procedure Step из екстерног MWL SCP-а
+mwlImport.dcmMWLImportID:ID MWL увоза|ID MWL увоза
+mwlImport.dicomAETitle:Позивајући AE наслов|Calling AE Title коришћен у A-ASSOCIATE-RQ за екстерни MWL SCP
+mwlImport.dcmMergeMWLSCP:Изворни MWL SCP|AE Title екстерног MWL SCP-а за упит за Scheduled Procedure Step за увоз.
+mwlImport.dcmMWLWorklistLabel:MWL ознака Worklist-е|Вредност Worklist Label (0074,1202) увезених MWL ставки преузетих са Source MWL SCP. Ако није наведено, увезене MWL ставке пружају сви MWL SCP Archive Network AE.
+mwlImport.dcmDuration:Увези не пре|Увоз Scheduled Procedure Steps из externog MWL SCP за Scheduled Procedure Steps заказане раније у будућности од наведеног интервала у ISO-8601 формату трајања PnDTnHnMn.nS; ако није наведено, увозе се сви Scheduled Procedure Steps који су заказани у будућности.
+mwlImport.dcmMWLImportNotOlder:Увези не старије од|Увоз Scheduled Procedure Steps из externog MWL SCP за Scheduled Procedure Steps заказане касније у прошлости од наведеног интервала у ISO-8601 формату трајања PnDTnHnMn.nS; ако није наведено, увозе се сви Scheduled Procedure Steps који су заказани у прошлости.
+mwlImport.dcmMWLImportFilterBySCU:Филтрирај по SCU|Означава да се наведени филтер примењује на подударања која врати екстерни MWL SCP.
+mwlImport.dcmMWLImportDeleteNotFound:Обриши непронађено|Указује на брисање Scheduled Procedure Steps из локалног MWL-а које није вратио екстерни MWL SCP.
+mwlImport.dcmProperty:Кључеви подударања|Филтер атрибути у формату ({AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword})={value}. Нпр: ScheduledProcedureStepSequence.ScheduledStationAETitle=MODALITY_XY
+mwlImport.dcmIncludeField:Кључеви враћања|Атрибути у формату (алл|{AttributeTagOrKeyword}|{SequenceTagOrKeyword.AttributeTagOrKeyword}) који се траже од екстерног MWL SCP-а додатно на атрибуте које MWL SCP-ови морају подржавати према DICOM-у. 'all' тражи све атрибуте конфигурисане у Patient и MWL Attribute Filter-у архиве.

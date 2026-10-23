@@ -1,0 +1,5 @@
+hl7OrderScheduledStation:Заказана станица за HL7 налог|Scheduled Station селектована на MWL HL7 Order Feed-у
+hl7OrderScheduledStation.cn:Име|Произвољно/Смислено име за мапирање редоследа Scheduled Station
+hl7OrderScheduledStation.hl7OrderScheduledStationDeviceName:Име уређаја заказане станице|Име уређаја Scheduled Station коришћено за HL7 Order поруке.
+hl7OrderScheduledStation.dcmRulePriority:Приоритет мапирања|Ако се стање више Scheduled Station for HL7 Order правила подудара за примљену HL7 поруку и свако има различит приоритет, примењује се Scheduled Station Device Name највишег приоритета. Ако се стање више Scheduled Station for HL7 Order правила подудара за примљену HL7 поруку и свако има једнак приоритет, примењује се Scheduled Station Device Name сваког.
+hl7OrderScheduledStation.dcmProperty:Услови|Услови у формату {SEG}-{Seq#}[.{Comp#}[.{SubComp#}]][!]={regEx}. Примери: MSH-4=FORWARD или MSH-9=ADT\\^A28\\^ADT_A05 или PID-3[.3]=PIDIssuer или PID-3[.3[.2]]=PIDIssuerUniversalEntityIDType

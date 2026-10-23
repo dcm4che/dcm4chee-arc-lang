@@ -1,0 +1,6 @@
+transferCapability:Transfer Capability|Свака трансфер capability специфицира SOP класу коју Network AE може да подржи, мод који може да користи (SCP или SCU), и Transfer Syntax(е) које може да користи
+transferCapability.cn:Име|Произвољно/Смислено име за Transfer Capability објекат
+transferCapability.dicomSOPClass:SOP класа|SOP Class UID
+transferCapability.dicomTransferRole:DICOM улога преноса|DICOM Transfer улога.
+transferCapability.dicomTransferSyntax:Transfer Syntax|Трансфер syntax(е) које могу бити захтеване као SCU или понуђене као SCP.
+transferCapability.dcmTransferCapability:Екстензија Transfer Capability-ја|dcm4che власнички атрибути Transfer Capability-ја

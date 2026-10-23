@@ -1,0 +1,24 @@
+upsProcessingRule:Правило UPS обраде|Обради подударне Workitem-е у обједињеној Worklist
+upsProcessingRule.dcmUPSProcessingRuleID:ID правила UPS обраде|ID UPS Processing правила
+upsProcessingRule.dicomAETitle:Наслов апликационог ентитета (AE)|Наслов апликационог ентитета (AE)
+upsProcessingRule.dcmURI:URI UPS процесора|Идентификује UPS Processor за обраду подударних Workitem-а
+upsProcessingRule.dcmProperty:Својство обраде|UPS Processor зависно својство у формату <name>=<value>
+upsProcessingRule.dcmSchedule:Заказана обрада|Одгоди обраду у наведене временске периоде. Ако није наведен Processing Schedule, обради Workitem-е у њиховом Scheduled Procedure Step Start Date Time (0040,4005). Формат: 'hour=[0-23] dayOfWeek=[0-6]' (0=Sunday)
+upsProcessingRule.dcmMaxThreads:Максималан број нити|Максималан број тхреад-ова коришћених за обраду поклапајућих Workitems.
+upsProcessingRule.dcmUPSInputReadinessState:Стање спремности уноса|Обради Workitem-е са подударним Input Readiness State (0040,4041).
+upsProcessingRule.dcmUPSPriority:Приоритет|Обради Workitem-е са подударним Scheduled Procedure Step Priority (0074,1200). Ако није наведено, обради Workitem-е било ког приоритета, али уређи обраду према њиховом приоритету.
+upsProcessingRule.dcmUPSLabel:Ознака корака процедуре|Обради Workitem-е са подударним Procedure Step Label (0074,1204). Ако није наведено, обради Workitem-е са било којим Procedure Step Label-ом.
+upsProcessingRule.dcmUPSWorklistLabel:Ознака Worklist-е|Обради Workitem-е са подударним Worklist Label (0074,1202). Ако није наведено, обради Workitem-е са било којим Worklist Label-ом.
+upsProcessingRule.dcmUPSScheduledWorkitemCode:Код заказаног Workitem-а|Обради Workitem-е са подударним кодом у Scheduled Workitem Code Sequence (0040,4018) у формату (CV, CSD, "CM"). Ако није наведено, обради Workitem-е са било којим Scheduled Workitem Code-ом.
+upsProcessingRule.dcmUPSScheduledStationNameCode:Код имена заказане станице|Обради Workitem-е са подударним кодом у Scheduled Station Name Code Sequence (0040,4025) у формату (CV, CSD, "CM"). Ако није наведено, обради Workitem-е са било којим Scheduled Station Name Code-ом.
+upsProcessingRule.dcmUPSScheduledStationClassCode:Код класе заказане станице|Обради Workitem-е са подударним кодом у Scheduled Station Name Class Sequence (0040,4026) у формату (CV, CSD, "CM"). Ако није наведено, обради Workitem-е са било којим Scheduled Station Class Code-ом.
+upsProcessingRule.dcmUPSScheduledStationLocationCode:Код географске локације заказане станице|Обради Workitem-е са подударним кодом у Scheduled Station Geographic Location Class Sequence (0040,4027) у формату (CV, CSD, "CM"). Ако није наведено, обради Workitem-е са било којим Scheduled Station Geographic Location Code-ом.
+upsProcessingRule.dcmUPSPerformedWorkitemCode:Код извршеног Workitem-а|Ставка Performed Workitem Code Sequence (0040,4019) у обрађеном UPS-у у формату (CV, CSD, "CM").
+upsProcessingRule.dcmUPSPerformedStationNameCode:Код имена извршне станице|Ставка Performed Station Name Code Sequence (0040,4028) у обрађеном UPS-у у формату (CV, CSD, "CM").
+upsProcessingRule.dcmUPSIgnoreDiscontinuationReasonCode:Игнориши код разлога прекида|Специфицира Discontinuation Reason Code у формату (CV, CSD, "CM") за игнорисање и промену UPS State у COMPLETED - уместо CANCELED.
+upsProcessingRule.dcmUPSRescheduleDiscontinuationReasonCode:Код разлога прекида прерасподеле|Специфицира Discontinuation Reason Code у формату (CV, CSD, "CM") за препланирање отказаног UPS-а. Ако није наведено, UPS отказан са било којим Discontinuation Reason Code-ом ће бити препланиран према наведеном Maximum Number of Rescheduling.
+upsProcessingRule.dcmUPSTemplateID:Креирај UPS при отказивању|Специфицира UPS Template Workitem Instance UID за креирање UPS-а ако обрада није успела и поновни покушај више није планиран. Ако није наведено, неће бити креиран UPS при неуспесима.
+upsProcessingRule.dcmMaxRetries:Максималан број прерасподела|Максималан број пута колико се Workitem чија обрада није успела поново заказује.
+upsProcessingRule.dcmRetryDelay:Кашњење прерасподеле|Кашњење препланирања Workitem-а чија обрада није успела у ISO-8601 формату трајања PnDTnHnMn.nS.
+upsProcessingRule.dcmMaxRetryDelay:Максимално кашњење прерасподеле|Максимално кашњење препланирања Workitem-а чија обрада није успела у ISO-8601 формату трајања PnDTnHnMn.nS. Бесконачно ако није наведено.
+upsProcessingRule.dcmRetryDelayMultiplier:Множилац кашњења прерасподеле|Мултипликатор у % који ће се применити на врху Reschedule Delay са Maximum Reschedule Delay који се узима у обзир.
