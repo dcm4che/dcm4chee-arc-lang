@@ -241,7 +241,7 @@
     },
     "dicomInstitutionDepartmentName": {
       "title": "Institutional Department Name",
-      "description": "Value of Institutional Department Name (0008,1040) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionDepartmentName}",
+      "description": "Value of Institutional Department Name (0008,1040) in created UPS. {attributeID} will be replaced by the value of that attribute in the received dataset. Example: {InstitutionalDepartmentName}",
       "type": "string"
     },
     "dcmInstitutionDepartmentCode": {
